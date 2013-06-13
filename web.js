@@ -11,12 +11,13 @@ var passport = require('passport'),
 		return crypto.createHash('sha1').update(d).digest('hex');
 	};
 
+var _dbUri = process.env.HEROKU_POSTGRESQL_COPPER_URL;
 
 passport.serializeUser(function(user, done) {
 	done(null, user.id);
 });
 passport.deserializeUser(function(id, done) {
-	pg.connect(process.env.DATABASE_URL, function(err, client) {
+	pg.connect(_dbUri, function(err, client) {
 		if(err) { return done(err, false); }
 
 		var query = client.query('select * from "user" where "id"=$1', [id]);
@@ -38,7 +39,7 @@ passport.deserializeUser(function(id, done) {
 passport.use(new LocalStrategy(
 	function(email, password, done) {
 		process.nextTick(function () {
-			pg.connect(process.env.DATABASE_URL, function(err, client) {
+			pg.connect(_dbUri, function(err, client) {
 				if(err) { return done(err); }
 
 				var query = client.query('select * from "user" where "email"=$1', [email]);
@@ -123,7 +124,7 @@ app.configure('development', function(){
 
 
 app.get('/', function(req, res){
-	pg.connect(process.env.DATABASE_URL, function(err, client) {
+	pg.connect(_dbUri, function(err, client) {
 		var query = client.query('select * from update order by timestamp desc limit 10');
 		var updates = [];
 		query.on('row', function(row) {
