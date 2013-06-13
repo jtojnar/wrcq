@@ -1,8 +1,11 @@
-<h2>{{title 'News'}}</h2>
+<h2>{{title 'News'}}{{#if identity}}<button class="btn btn-small" id="updates-add"><span class="glyphicon glyphicon-plus"></span></button>{{/if}}</h2>
 {{#if updates}}
-<dl class="dl-horizontal">
+<dl class="dl-horizontal news">
 {{#each updates}}
 <dt>{{date timestamp}}</dt><dd>{{text}}</dd>
 {{/each}}
 </dl>
 {{/if}}
+{{#extend 'bottom'}}
+<script src="/js/jquery.js"></script>
+{{/extend}}

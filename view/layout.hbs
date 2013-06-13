@@ -14,16 +14,28 @@
 	top: 0;
 	right: 0;
 }
-header {
-	text-align: center;
+header img {
+	position: absolute;
+	left: -70px;
+}
+header h1 {
+	position: relative;
+}
+.news dt {
+	width: 100px;
+}
+.news dd {
+	 margin-left: 120px;
+}
+.nowrap {
+	white-space: nowrap;
 }
 </style>
 </head>
 <body>
 <div class="container">
 	<header>
-		<img src="/irf-logo.png" alt="IRF" width="150" height="150">
-		<h1>WRC Manager's website</h1>
+		<h1><img src="/irf-logo.png" alt="" width="50" height="50">WRC Agenda</h1>
 	</header>
 	{{#if message}}
 	<p class="alert alert-error">{{message}}</p>
@@ -36,5 +48,6 @@ header {
 	<div class="user-panel"><a href="/login" title="Log in" class="btn btn-small btn-primary"><span class="glyphicon glyphicon-user"></span></a></div>
 	{{/if}}
 </div>
+{{block 'bottom'}}
 </body>
 </html>
