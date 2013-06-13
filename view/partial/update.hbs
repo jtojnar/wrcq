@@ -2,10 +2,15 @@
 {{#if updates}}
 <dl class="dl-horizontal news">
 {{#each updates}}
-<dt>{{date timestamp}}</dt><dd>{{text}}</dd>
+<dt>{{date timestamp}}</dt><dd>{{{text}}}</dd>
 {{/each}}
 </dl>
 {{/if}}
 {{#extend 'bottom'}}
 <script src="/js/jquery.js"></script>
+<script>
+$(function() {
+	$('#updates-add').click(function() {})
+})
+</script>
 {{/extend}}
