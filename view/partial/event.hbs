@@ -1,0 +1,10 @@
+{{#if events}}
+<table class="table table-striped table-bordered table-hover">
+<thead><tr><th>Name</th><th>Date</th><th>Location</th><th>Organizer</th><th>Media Coverage</th></tr></thead>
+<tbody>
+{{#each events}}
+<tr><td>{{#if website}}<a href="{{website}}">{{name}}</a>{{else}}{{name}}{{/if}}{{#if results}} (<a href="{{results}}">Results</a>){{/if}}</td><td>{{date start}}–{{date end}}</td><td>{{location}}</td><td>{{organizer}}</td><td>{{{media}}}</td></tr>
+{{/each}}
+</tbody>
+</table>
+{{/if}}

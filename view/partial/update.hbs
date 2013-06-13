@@ -1,0 +1,8 @@
+<h2>{{title 'News'}}</h2>
+{{#if updates}}
+<dl class="dl-horizontal">
+{{#each updates}}
+<dt>{{date timestamp}}</dt><dd>{{text}}</dd>
+{{/each}}
+</dl>
+{{/if}}

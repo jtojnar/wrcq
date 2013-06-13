@@ -1,15 +1,40 @@
 <!doctype html>
 <html>
 <head>
-<title>{{title}}</title>
+<title>{{block 'title'}}</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+<style>
+.container {
+	margin-top: 2em;
+}
+.user-panel {
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+header {
+	text-align: center;
+}
+</style>
 </head>
 <body>
 <div class="container">
-	<h1>{{title}}</h1>
+	<header>
+		<img src="/irf-logo.png" alt="IRF" width="150" height="150">
+		<h1>WRC Manager's website</h1>
+	</header>
+	{{#if message}}
+	<p class="alert alert-error">{{message}}</p>
+	{{/if}}
 	{{{body}}}
+
+	{{#if identity}}
+	<div class="user-panel"><a href="/logout" title="Log out" class="btn btn-small btn-danger"><span class="glyphicon glyphicon-user"></span></a></div>
+	{{else}}
+	<div class="user-panel"><a href="/login" title="Log in" class="btn btn-small btn-primary"><span class="glyphicon glyphicon-user"></span></a></div>
+	{{/if}}
 </div>
 </body>
 </html>
