@@ -30,12 +30,19 @@ header h1 {
 .nowrap {
 	white-space: nowrap;
 }
+.backtoirf {
+	color: #aaaaac;
+	font-size: 75%;
+}
+.backtoirf a {
+	color: inherit;
+}
 </style>
 </head>
 <body>
 <div class="container">
 	<header>
-		<h1><img src="/irf-logo.png" alt="" width="50" height="50">WRC Agenda</h1>
+		<h1><img src="/irf-logo.png" alt="" width="50" height="50">WRC Agenda <span class="backtoirf">(<a href="http://www.rogaining.org">back to IRF</a>)</span></h1>
 	</header>
 	{{#if message}}
 	<p class="alert alert-error">{{message}}</p>
