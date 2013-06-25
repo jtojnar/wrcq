@@ -1,0 +1,69 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="results">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="team" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="member" maxOccurs="5" minOccurs="2"><!-- 5 is for legacy reasons see http://wrcq.rogaining.cz/standard/results/0.1#member -->
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute type="xs:string" name="firstname" use="required"/>
+											<xs:attribute type="xs:string" name="lastname" use="required"/>
+											<xs:attribute name="country" use="required">
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+														<xs:pattern value="[A-Z]{3}" />
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute type="xs:integer" name="id" use="required" />
+						<xs:attribute type="xs:integer" name="score" use="required" />
+						<xs:attribute type="xs:time" name="time" use="required" />
+						<xs:attribute type="xs:integer" name="penalty" use="required" />
+						<xs:attribute name="length" default="24">
+							<xs:simpleType>
+								<xs:restriction base="xs:integer">
+									<xs:maxInclusive value="24" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="category" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="MO" /> 
+									<xs:enumeration value="XO" /> 
+									<xs:enumeration value="WO" /> 
+									<xs:enumeration value="MV" /> 
+									<xs:enumeration value="XV" /> 
+									<xs:enumeration value="WV" /> 
+									<xs:enumeration value="MSV" /> 
+									<xs:enumeration value="XSV" /> 
+									<xs:enumeration value="WSV" /> 
+									<xs:enumeration value="MUV" /> 
+									<xs:enumeration value="XUV" /> 
+									<xs:enumeration value="WUV" /> 
+									<xs:enumeration value="MJ" /> 
+									<xs:enumeration value="XJ" /> 
+									<xs:enumeration value="WJ" /> 
+									<xs:enumeration value="M20" /> 
+									<xs:enumeration value="X20" /> 
+									<xs:enumeration value="W20" /> 
+									<xs:enumeration value="M23" /> 
+									<xs:enumeration value="X23" /> 
+									<xs:enumeration value="W23" /> 
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
