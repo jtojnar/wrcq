@@ -2,7 +2,7 @@
 <thead><tr><th>Overall Place</th><th>Members</th><th>Category</th><th>Score</th><th>Time</th><th>Penalty</th><!-- weird category counters --></tr></thead>
 <tbody>
 {{#each results}}
-<tr><td>{{index @index}}</td><td>{{#each member}}{{$.lastname}} {{$.firstname}} ({{$.country}}){{#unless @last}}, {{/unless}}{{/each}}</td><td>{{$.category}}</td><td>{{$.score}}</td><td>{{$.time}}</td><td>{{$.penalty}}</td></tr>
+<tr><td>{{index @index}}</td><td>{{#each member}}{{$.lastname}} {{$.firstname}} ({{$.country}}){{#unless @last}}, {{/unless}}{{/each}}</td><td>{{genderclass $.gender}}{{ageclass $.age}}{{#if $.duration}}{{$.duration}}{{/if}}</td><td>{{$.score}}</td><td>{{$.time}}</td><td>{{$.penalty}}</td></tr>
 {{/each}}
 </tbody>
 </table>

@@ -27,37 +27,32 @@
 						<xs:attribute type="xs:integer" name="score" use="required" />
 						<xs:attribute type="xs:time" name="time" use="required" />
 						<xs:attribute type="xs:integer" name="penalty" use="required" />
-						<xs:attribute name="length" default="24">
+						<xs:attribute name="duration" default="24">
 							<xs:simpleType>
 								<xs:restriction base="xs:integer">
 									<xs:maxInclusive value="24" />
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="category" use="required">
+						<xs:attribute name="gender" use="required">
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
-									<xs:enumeration value="MO" /> 
-									<xs:enumeration value="XO" /> 
-									<xs:enumeration value="WO" /> 
-									<xs:enumeration value="MV" /> 
-									<xs:enumeration value="XV" /> 
-									<xs:enumeration value="WV" /> 
-									<xs:enumeration value="MSV" /> 
-									<xs:enumeration value="XSV" /> 
-									<xs:enumeration value="WSV" /> 
-									<xs:enumeration value="MUV" /> 
-									<xs:enumeration value="XUV" /> 
-									<xs:enumeration value="WUV" /> 
-									<xs:enumeration value="MJ" /> 
-									<xs:enumeration value="XJ" /> 
-									<xs:enumeration value="WJ" /> 
-									<xs:enumeration value="M20" /> 
-									<xs:enumeration value="X20" /> 
-									<xs:enumeration value="W20" /> 
-									<xs:enumeration value="M23" /> 
-									<xs:enumeration value="X23" /> 
-									<xs:enumeration value="W23" /> 
+									<xs:enumeration value="men" /> 
+									<xs:enumeration value="mixed" /> 
+									<xs:enumeration value="women" /> 
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="age" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="open" /> 
+									<xs:enumeration value="veteran" /> 
+									<xs:enumeration value="superveteran" /> 
+									<xs:enumeration value="ultraveteran" /> 
+									<xs:enumeration value="junior" /> 
+									<xs:enumeration value="under20" /> 
+									<xs:enumeration value="under23" /> 
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>

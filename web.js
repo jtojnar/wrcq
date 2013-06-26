@@ -96,6 +96,28 @@ hbs.registerHelper('index', function(index, context){
 	return index+1;
 });
 
+var genderclass = {
+	'men': 'M',
+	'women': 'W',
+	'mixed': 'X'
+};
+hbs.registerHelper('genderclass', function(gender, context){
+	return typeof genderclass[gender] === 'undefined' ? '' : genderclass[gender];
+});
+
+var ageclass = {
+	'under20': '20',
+	'under23': '23',
+	'junior': 'J',
+	'open': 'O',
+	'veteran': 'V',
+	'superveteran': 'SV',
+	'ultraveteran': 'UV'
+};
+hbs.registerHelper('ageclass', function(age, context){
+	return typeof ageclass[age] === 'undefined' ? '' : ageclass[age];
+});
+
 
 hbs.registerHelper('each', function(context, options) {
 	var fn = options.fn, inverse = options.inverse;
