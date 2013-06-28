@@ -53,7 +53,6 @@ passport.use(new LocalStrategy(
 
 				query.on('end', function(result) {
 					if(result.rowCount == 0) { return done(null, false, { message: 'Unknown user ' + email }); }
-					console.log(result);
 					var user = rows[0];
 					if(user.password != sha1(password+user.salt)) { return done(null, false, { message: 'Invalid password' }); }
 					return done(null, user);
@@ -136,7 +135,6 @@ hbs.registerHelper('each', function(context, options) {
 				} else {
 					data.last = false;
 				}
-				console.log(context[i]);
 				ret = ret + fn(context[i], {data: data});
 			}
 		} else {
@@ -206,7 +204,6 @@ app.get('/', function(req, res){
 		});
 
 		query.on('end', function(result) {
-			console.log(result.rowCount + ' news were received');
 			var query = client.query('select * from event order by start asc');
 			var events = [];
 			query.on('row', function(row) {
@@ -214,7 +211,6 @@ app.get('/', function(req, res){
 			});
 
 			query.on('end', function(result) {
-				console.log(result.rowCount + ' events were received');
 				res.render('index', {updates: updates, events: events, identity: req.user});
 			});
 		});
@@ -225,10 +221,37 @@ app.get('/events', function(req, res){
 	res.render('events', { identity: req.user });
 });
 
-app.get('/results', function(req, res){
-	fs.readFile(__dirname + '/results.xml', function(err, data) {
-		parseString(data, function (err, results) {
-			res.render('results', { results: results.results.team });
+app.get('/results', function(req, res) {
+	var event = {id: 3, name: 'WRC 1996'};
+	pg.connect(_dbUri, function(err, client) {
+		var query = client.query('select * from member where event_id=$1', [event.id]);
+		var members = [];
+		query.on('row', function(row) {
+			members.push(row);
+		});
+
+		query.on('end', function(result) {
+			var query = client.query('select * from team where event_id=$1', [event.id]);
+			var teams = [];
+			query.on('row', function(row) {
+				row.members = [];
+				var mcache = [];
+				for(var i = 0; i < members.length; i++) {
+					if(members[i].team_id == row.id) {
+						row.members.push(members[i]);
+						mcache.push(i);
+					}
+				};
+				for(var i = 0; i < mcache.length; i++) {
+					members.splice(mcache[i], 1);
+				};
+				mcache = [];
+				teams.push(row);
+			});
+
+			query.on('end', function(result) {
+				res.render('results', {title: 'Results of ' + event.name, event: event, teams: teams, identity: req.user});
+			});
 		});
 	});
 });
