@@ -160,7 +160,8 @@ hbs.registerHelper('each', function(context, options) {
 	return ret;
 });
 
-hbs.registerHelper('results', function(context, options) {
+hbs.registerHelper('eachresult', function(context, options) {
+	console.log(options);
 	var fn = options.fn, inverse = options.inverse;
 	var i = 0, ret = "", data, counters = {MO: 0, XO: 0, WO: 0, MV: 0, XV: 0, WV: 0, MSV: 0, XSV: 0, WSV: 0, MUV: 0, XUV: 0, WUV: 0, MJ: 0, XJ: 0, WJ: 0, M20: 0, X20: 0, W20: 0, M23: 0, X23: 0, W23: 0};
 
