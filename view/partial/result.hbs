@@ -1,8 +1,8 @@
 <table class="table table-striped table-bordered table-hover">
-<thead><tr><th>Overall Place</th><th>Members</th><th>Category</th><th>Score</th><th>Time</th><th>Penalty</th><!-- weird category counters --></tr></thead>
+<thead><tr><th>Overall Place</th><th>Members</th><th>Category</th><th>Score</th><th>Time</th><th>Penalty</th><!-- weird category counters --><th>MO</th><th>XO</th><th>WO</th><th>MV</th><th>XV</th><th>WV</th><th>MSV</th><th>XSV</th><th>WSV</th><th>MUV</th><th>XUV</th><th>WUV</th><th>MJ</th><th>XJ</th><th>WJ</th><th>M20</th><th>X20</th><th>W20</th><th>M23</th><th>X23</th><th>W23</th></tr></thead>
 <tbody>
-{{#each teams}}
-<tr><td>{{index @index}}</td><td>{{#each members}}{{lastname}} {{firstname}} ({{country_code}}){{#unless @last}}, {{/unless}}{{/each}}</td><td>{{genderclass gender}}{{ageclass age}}{{#if duration}}{{duration}}{{/if}}</td><td>{{score}}</td><td>{{time}}</td><td>{{penalty}}</td></tr>
-{{/each}}
+{{#results teams}}
+<tr><td>{{index @index}}</td><td>{{#each members}}{{lastname}} {{firstname}} ({{country_code}}){{#unless @last}}, {{/unless}}{{/each}}</td><td>{{genderclass gender}}{{ageclass age}}{{#if duration}}{{duration}}{{/if}}</td><td>{{score}}</td><td>{{time}}</td><td>{{penalty}}</td><td>{{MO}}</td><td>{{XO}}</td><td>{{WO}}</td><td>{{MV}}</td><td>{{XV}}</td><td>{{WV}}</td><td>{{MSV}}</td><td>{{XSV}}</td><td>{{WSV}}</td><td>{{MUV}}</td><td>{{XUV}}</td><td>{{WUV}}</td><td>{{MJ}}</td><td>{{XJ}}</td><td>{{WJ}}</td><td>{{M20}}</td><td>{{X20}}</td><td>{{W20}}</td><td>{{M23}}</td><td>{{X23}}</td><td>{{W23}}</td></tr>
+{{/results}}
 </tbody>
 </table>

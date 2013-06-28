@@ -117,7 +117,6 @@ hbs.registerHelper('ageclass', function(age, context) {
 	return typeof ageclass[age] === 'undefined' ? '' : ageclass[age];
 });
 
-
 hbs.registerHelper('each', function(context, options) {
 	var fn = options.fn, inverse = options.inverse;
 	var i = 0, ret = "", data;
@@ -151,6 +150,59 @@ hbs.registerHelper('each', function(context, options) {
 					i++;
 				}
 			}
+		}
+	}
+
+	if(i === 0) {
+		ret = inverse(this);
+	}
+
+	return ret;
+});
+
+hbs.registerHelper('results', function(context, options) {
+	var fn = options.fn, inverse = options.inverse;
+	var i = 0, ret = "", data, counters = {MO: 0, XO: 0, WO: 0, MV: 0, XV: 0, WV: 0, MSV: 0, XSV: 0, WSV: 0, MUV: 0, XUV: 0, WUV: 0, MJ: 0, XJ: 0, WJ: 0, M20: 0, X20: 0, W20: 0, M23: 0, X23: 0, W23: 0};
+
+	if(options.data) {
+		data = hbs.handlebars.createFrame(options.data);
+	}
+
+	if(context && typeof context === 'object') {
+		for(var j = context.length; i<j; i++) {
+			if(data) {data.index = i;}
+			if(i === (j-1)) {
+				data.last = true;
+			} else {
+				data.last = false;
+			}
+			if(context[i].duration == 24) {
+				context[i].duration = '';
+				
+				var gender = hbs.handlebars.helpers.genderclass(context[i].gender);
+				if(context[i].age == 'ultraveteran') {
+					context[i][gender+'UV'] = ++counters[gender+'UV'];
+					context[i][gender+'SV'] = ++counters[gender+'SV'];
+					context[i][gender+'V'] = ++counters[gender+'V'];
+					context[i][gender+'O'] = ++counters[gender+'O'];
+				} else if(context[i].age == 'superveteran') {
+					context[i][gender+'SV'] = ++counters[gender+'SV'];
+					context[i][gender+'V'] = ++counters[gender+'V'];
+					context[i][gender+'O'] = ++counters[gender+'O'];
+				} else if(context[i].age == 'veteran') {
+					context[i][gender+'V'] = ++counters[gender+'V'];
+					context[i][gender+'O'] = ++counters[gender+'O'];
+				} else if(context[i].age == 'open') {
+					context[i][gender+'O'] = ++counters[gender+'O'];
+				} else if(context[i].age == 'junior') {
+					context[i][gender+'J'] = ++counters[gender+'J'];
+				} else if(context[i].age == 'under23') {
+					context[i][gender+'23'] = ++counters[gender+'23'];
+				} else if(context[i].age == 'under20') {
+					context[i][gender+'20'] = ++counters[gender+'20'];
+				}
+			}
+			ret = ret + fn(context[i], {data: data});
 		}
 	}
 
@@ -222,7 +274,7 @@ app.get('/events', function(req, res) {
 });
 
 app.get('/results', function(req, res) {
-	var event = {id: 3, name: 'WRC 1996'};
+	var event = {id: 3, name: 'WRC 1998'};
 	pg.connect(_dbUri, function(err, client) {
 		var query = client.query('select * from member where event_id=$1', [event.id]);
 		var members = [];
