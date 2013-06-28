@@ -21,7 +21,7 @@ passport.serializeUser(function(user, done) {
 });
 passport.deserializeUser(function(id, done) {
 	pg.connect(_dbUri, function(err, client) {
-		if(err) { return done(err, false); }
+		if(err) {return done(err, false);}
 
 		var query = client.query('select * from "user" where "id"=$1', [id]);
 		var rows = [];
@@ -30,7 +30,7 @@ passport.deserializeUser(function(id, done) {
 		});
 
 		query.on('end', function(result) {
-			if(result.rowCount == 0) { return done(err, false); }
+			if(result.rowCount == 0) {return done(err, false);}
 			var user = rows[0];
 			return done(err, user);
 		});
@@ -43,7 +43,7 @@ passport.use(new LocalStrategy(
 	function(email, password, done) {
 		process.nextTick(function () {
 			pg.connect(_dbUri, function(err, client) {
-				if(err) { return done(err); }
+				if(err) {return done(err);}
 
 				var query = client.query('select * from "user" where "email"=$1', [email]);
 				var rows = [];
@@ -52,9 +52,9 @@ passport.use(new LocalStrategy(
 				});
 
 				query.on('end', function(result) {
-					if(result.rowCount == 0) { return done(null, false, { message: 'Unknown user ' + email }); }
+					if(result.rowCount == 0) {return done(null, false, {message: 'Unknown user ' + email});}
 					var user = rows[0];
-					if(user.password != sha1(password+user.salt)) { return done(null, false, { message: 'Invalid password' }); }
+					if(user.password != sha1(password+user.salt)) {return done(null, false, {message: 'Invalid password'});}
 					return done(null, user);
 				});
 			});
@@ -86,12 +86,12 @@ hbs.registerHelper('block', function(name) {
 	return val;
 });
 
-hbs.registerHelper('title', function(value, context){
+hbs.registerHelper('title', function(value, context) {
 	blocks.title = [value];
 	return value;
 });
 
-hbs.registerHelper('index', function(index, context){
+hbs.registerHelper('index', function(index, context) {
 	return index+1;
 });
 
@@ -100,7 +100,7 @@ var genderclass = {
 	'women': 'W',
 	'mixed': 'X'
 };
-hbs.registerHelper('genderclass', function(gender, context){
+hbs.registerHelper('genderclass', function(gender, context) {
 	return typeof genderclass[gender] === 'undefined' ? '' : genderclass[gender];
 });
 
@@ -113,7 +113,7 @@ var ageclass = {
 	'superveteran': 'SV',
 	'ultraveteran': 'UV'
 };
-hbs.registerHelper('ageclass', function(age, context){
+hbs.registerHelper('ageclass', function(age, context) {
 	return typeof ageclass[age] === 'undefined' ? '' : ageclass[age];
 });
 
@@ -122,14 +122,14 @@ hbs.registerHelper('each', function(context, options) {
 	var fn = options.fn, inverse = options.inverse;
 	var i = 0, ret = "", data;
 
-	if (options.data) {
+	if(options.data) {
 		data = hbs.handlebars.createFrame(options.data);
 	}
 
 	if(context && typeof context === 'object') {
-		if(context instanceof Array){
+		if(context instanceof Array) {
 			for(var j = context.length; i<j; i++) {
-				if (data) { data.index = i; }
+				if(data) {data.index = i;}
 				if(i === (j-1)) {
 					data.last = true;
 				} else {
@@ -141,7 +141,7 @@ hbs.registerHelper('each', function(context, options) {
 			var j = context.length;
 			for(var key in context) {
 				if(context.hasOwnProperty(key)) {
-					if(data) { data.key = key; }
+					if(data) {data.key = key;}
 					if(i === (j-1)) {
 						data.last = true;
 					} else {
@@ -154,7 +154,7 @@ hbs.registerHelper('each', function(context, options) {
 		}
 	}
 
-	if(i === 0){
+	if(i === 0) {
 		ret = inverse(this);
 	}
 
@@ -171,7 +171,7 @@ var publicDir = path.join(__dirname, 'public');
 var app = express();
 
 
-app.configure(function(){
+app.configure(function() {
 	app.set('views', path.join(__dirname, 'view'));
 	app.set('port', process.env.PORT || 5000);
 	app.set('view engine', 'hbs');
@@ -180,7 +180,7 @@ app.configure(function(){
 	app.use(express.cookieParser());
 	app.use(express.bodyParser());
 	app.use(express.methodOverride());
-	app.use(express.session({ secret: 'too much to bear' }));
+	app.use(express.session({secret: 'too much to bear'}));
 	app.use(flash());
 	app.use(passport.initialize());
 	app.use(passport.session());
@@ -190,12 +190,12 @@ app.configure(function(){
 	app.use(express.static(publicDir));
 });
 
-app.configure('development', function(){
+app.configure('development', function() {
 	app.use(express.logger());
 });
 
 
-app.get('/', function(req, res){
+app.get('/', function(req, res) {
 	pg.connect(_dbUri, function(err, client) {
 		var query = client.query('select * from update order by timestamp desc limit 10');
 		var updates = [];
@@ -217,8 +217,8 @@ app.get('/', function(req, res){
 	});
 });
 
-app.get('/events', function(req, res){
-	res.render('events', { identity: req.user });
+app.get('/events', function(req, res) {
+	res.render('events', {identity: req.user});
 });
 
 app.get('/results', function(req, res) {
@@ -256,20 +256,20 @@ app.get('/results', function(req, res) {
 	});
 });
 
-app.get('/login', function(req, res){
-	res.render('login', { identity: req.user, message: req.flash('error') });
+app.get('/login', function(req, res) {
+	res.render('login', {identity: req.user, message: req.flash('error')});
 });
 
-app.post('/login', passport.authenticate('local', { failureRedirect: '/login', failureFlash: true }), 	function(req, res) {
+app.post('/login', passport.authenticate('local', {failureRedirect: '/login', failureFlash: true}), 	function(req, res) {
 	res.redirect('/');
 });
 
-app.get('/logout', function(req, res){
+app.get('/logout', function(req, res) {
 	req.logout();
 	res.redirect('/');
 });
 
-app.get('/:deck', function(req, res){
+app.get('/:deck', function(req, res) {
 	var deck = null;
 	
 	if(deck) {
