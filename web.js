@@ -260,7 +260,7 @@ app.get('/login', function(req, res) {
 	res.render('login', {identity: req.user, message: req.flash('error')});
 });
 
-app.post('/login', passport.authenticate('local', {failureRedirect: '/login', failureFlash: true}), 	function(req, res) {
+app.post('/login', passport.authenticate('local', {failureRedirect: '/login', failureFlash: true}), function(req, res) {
 	res.redirect('/');
 });
 
