@@ -238,12 +238,13 @@ app.get('/results', function(req, res) {
 				row.members = [];
 				var mcache = [];
 				for(var i = 0; i < members.length; i++) {
+					console.log(members[i].team_id, row.id);
 					if(members[i].team_id == row.id) {
 						row.members.push(members[i]);
 						mcache.push(i);
 					}
 				};
-				for(var i = 0; i < mcache.length; i++) {
+				for(var i = mcache.length - 1; i >= 0; i--) {
 					members.splice(mcache[i], 1);
 				};
 				mcache = [];
