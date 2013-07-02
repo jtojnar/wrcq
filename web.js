@@ -163,7 +163,7 @@ hbs.registerHelper('each', function(context, options) {
 hbs.registerHelper('eachresult', function(context, options) {
 	console.log(options);
 	var fn = options.fn, inverse = options.inverse;
-	var i = 0, ret = "", data, counters = {MO: 0, XO: 0, WO: 0, MV: 0, XV: 0, WV: 0, MSV: 0, XSV: 0, WSV: 0, MUV: 0, XUV: 0, WUV: 0, MJ: 0, XJ: 0, WJ: 0, M20: 0, X20: 0, W20: 0, M23: 0, X23: 0, W23: 0};
+	var i = 0, ret = "", data;
 
 	if(options.data) {
 		data = hbs.handlebars.createFrame(options.data);
@@ -176,32 +176,6 @@ hbs.registerHelper('eachresult', function(context, options) {
 				data.last = true;
 			} else {
 				data.last = false;
-			}
-			if(context[i].duration == 24) {
-				context[i].duration = '';
-				
-				var gender = hbs.handlebars.helpers.genderclass(context[i].gender);
-				if(context[i].age == 'ultraveteran') {
-					context[i][gender+'UV'] = ++counters[gender+'UV'];
-					context[i][gender+'SV'] = ++counters[gender+'SV'];
-					context[i][gender+'V'] = ++counters[gender+'V'];
-					context[i][gender+'O'] = ++counters[gender+'O'];
-				} else if(context[i].age == 'superveteran') {
-					context[i][gender+'SV'] = ++counters[gender+'SV'];
-					context[i][gender+'V'] = ++counters[gender+'V'];
-					context[i][gender+'O'] = ++counters[gender+'O'];
-				} else if(context[i].age == 'veteran') {
-					context[i][gender+'V'] = ++counters[gender+'V'];
-					context[i][gender+'O'] = ++counters[gender+'O'];
-				} else if(context[i].age == 'open') {
-					context[i][gender+'O'] = ++counters[gender+'O'];
-				} else if(context[i].age == 'junior') {
-					context[i][gender+'J'] = ++counters[gender+'J'];
-				} else if(context[i].age == 'under23') {
-					context[i][gender+'23'] = ++counters[gender+'23'];
-				} else if(context[i].age == 'under20') {
-					context[i][gender+'20'] = ++counters[gender+'20'];
-				}
 			}
 			ret = ret + fn(context[i], {data: data});
 		}
@@ -286,6 +260,8 @@ app.get('/results', function(req, res) {
 		query.on('end', function(result) {
 			var query = client.query('select * from team where event_id=$1', [event.id]);
 			var teams = [];
+			var counters = {MO: 0, XO: 0, WO: 0, MV: 0, XV: 0, WV: 0, MSV: 0, XSV: 0, WSV: 0, MUV: 0, XUV: 0, WUV: 0, MJ: 0, XJ: 0, WJ: 0, M20: 0, X20: 0, W20: 0, M23: 0, X23: 0, W23: 0};
+
 			query.on('row', function(row) {
 				row.members = [];
 				var mcache = [];
@@ -300,10 +276,36 @@ app.get('/results', function(req, res) {
 				};
 				mcache = [];
 				teams.push(row);
+				if(row.duration == 24) {
+					row.duration = '';
+					var gender = hbs.handlebars.helpers.genderclass(row.gender);
+					
+					if(row.age == 'ultraveteran') {
+						row[gender+'UV'] = ++counters[gender+'UV'];
+						row[gender+'SV'] = ++counters[gender+'SV'];
+						row[gender+'V'] = ++counters[gender+'V'];
+						row[gender+'O'] = ++counters[gender+'O'];
+					} else if(row.age == 'superveteran') {
+						row[gender+'SV'] = ++counters[gender+'SV'];
+						row[gender+'V'] = ++counters[gender+'V'];
+						row[gender+'O'] = ++counters[gender+'O'];
+					} else if(row.age == 'veteran') {
+						row[gender+'V'] = ++counters[gender+'V'];
+						row[gender+'O'] = ++counters[gender+'O'];
+					} else if(row.age == 'open') {
+						row[gender+'O'] = ++counters[gender+'O'];
+					} else if(row.age == 'junior') {
+						row[gender+'J'] = ++counters[gender+'J'];
+					} else if(row.age == 'under23') {
+						row[gender+'23'] = ++counters[gender+'23'];
+					} else if(row.age == 'under20') {
+						row[gender+'20'] = ++counters[gender+'20'];
+					}
+				}
 			});
 
 			query.on('end', function(result) {
-				res.render('results', {title: 'Results of ' + event.name, event: event, teams: teams, identity: req.user});
+				res.render('results', {title: 'Results of ' + event.name, event: event, teams: teams, identity: req.user, isMO: counters.MO, isXO: counters.XO, isWO: counters.WO, isMV: counters.MV, isXV: counters.XV, isWV: counters.WV, isMSV: counters.MSV, isXSV: counters.XSV, isWSV: counters.WSV, isMUV: counters.MUV, isXUV: counters.XUV, isWUV: counters.WUV, isMJ: counters.MJ, isXJ: counters.XJ, isWJ: counters.WJ, isM20: counters.M20, isX20: counters.X20, isW20: counters.W20, isM23: counters.M23, isX23: counters.X23, isW23: counters.W23});
 			});
 		});
 	});
