@@ -160,34 +160,6 @@ hbs.registerHelper('each', function(context, options) {
 	return ret;
 });
 
-hbs.registerHelper('eachresult', function(context, options) {
-	console.log(options);
-	var fn = options.fn, inverse = options.inverse;
-	var i = 0, ret = "", data;
-
-	if(options.data) {
-		data = hbs.handlebars.createFrame(options.data);
-	}
-
-	if(context && typeof context === 'object') {
-		for(var j = context.length; i<j; i++) {
-			if(data) {data.index = i;}
-			if(i === (j-1)) {
-				data.last = true;
-			} else {
-				data.last = false;
-			}
-			ret = ret + fn(context[i], {data: data});
-		}
-	}
-
-	if(i === 0) {
-		ret = inverse(this);
-	}
-
-	return ret;
-});
-
 hbs.registerPartials(path.join(__dirname, 'view', 'partial'));
 
 var pg = require('pg');
