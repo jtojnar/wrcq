@@ -238,7 +238,6 @@ app.get('/results', function(req, res) {
 				row.members = [];
 				var mcache = [];
 				for(var i = 0; i < members.length; i++) {
-					console.log(members[i].team_id, row.id);
 					if(members[i].team_id == row.id) {
 						row.members.push(members[i]);
 						mcache.push(i);
