@@ -296,16 +296,6 @@ app.get('/logout', function(req, res) {
 	res.redirect('/');
 });
 
-app.get('/:deck', function(req, res) {
-	var deck = null;
-	
-	if(deck) {
-		res.render('card', {title: deck.name, deck: deck});
-	} else {
-		res.send(404);
-	}
-});
-
 app.listen(app.get('port'), function() {
 	console.log('Started app on port %d', app.get('port'));
 });
