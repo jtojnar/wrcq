@@ -1,4 +1,19 @@
 <h1>{{title title}}</h1>
+<div class="row">
+	<div class="col-lg-4">
+		<h2>Results MO</h2>
+		{{> resultlight mo}}
+	</div>
+	<div class="col-lg-4">
+		<h2>Results XO</h2>
+		{{> resultlight xo}}
+	</div>
+	<div class="col-lg-4">
+		<h2>Results WO</h2>
+		{{> resultlight wo}}
+	</div>
+</div> 
+<h2>Overall results</h2>
 {{> result}}
 {{#extend 'bottom'}}
 <script src="/js/jquery.js"></script>

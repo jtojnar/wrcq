@@ -277,7 +277,28 @@ app.get('/results', function(req, res) {
 			});
 
 			query.on('end', function(result) {
-				res.render('results', {title: 'Results of ' + event.name, event: event, teams: teams, identity: req.user, isMO: counters.MO, isXO: counters.XO, isWO: counters.WO, isMV: counters.MV, isXV: counters.XV, isWV: counters.WV, isMSV: counters.MSV, isXSV: counters.XSV, isWSV: counters.WSV, isMUV: counters.MUV, isXUV: counters.XUV, isWUV: counters.WUV, isMJ: counters.MJ, isXJ: counters.XJ, isWJ: counters.WJ, isM20: counters.M20, isX20: counters.X20, isW20: counters.W20, isM23: counters.M23, isX23: counters.X23, isW23: counters.W23});
+				res.render('results', {
+					title: 'Results of ' + event.name,
+					event: event,
+					teams: teams,
+					mo: {teams: [
+						{score: 400, time: '20:00:00', members: [{firstname: 'Petr', lastname: 'Novak', country_code: 'CZE'}]},
+						{score: 300, time: '20:00:00', members: [{firstname: 'Michal', lastname: 'Dvorak', country_code: 'CZE'}]},
+						{score: 200, time: '20:00:00', members: [{firstname: 'Jan', lastname: 'Novotny', country_code: 'CZE'}]}
+					]},
+					xo: {teams: [
+						{score: 340, time: '20:00:00', members: [{firstname: 'Mixr', lastname: 'Novak', country_code: 'CZE'}]},
+						{score: 310, time: '20:00:00', members: [{firstname: 'Mixal', lastname: 'Dvorak', country_code: 'CZE'}]},
+						{score: 300, time: '20:00:00', members: [{firstname: 'Mix', lastname: 'Novotny', country_code: 'CZE'}]}
+					]},
+					wo: {teams: [
+						{score: 200, time: '20:00:00', members: [{firstname: 'Petra', lastname: 'Novak', country_code: 'CZE'}]},
+						{score: 100, time: '19:00:00', members: [{firstname: 'Michala', lastname: 'Dvorak', country_code: 'CZE'}]},
+						{score: 100, time: '20:00:00', members: [{firstname: 'Jana', lastname: 'Novotny', country_code: 'CZE'}]}
+					]},
+					identity: req.user,
+					isMO: counters.MO, isXO: counters.XO, isWO: counters.WO, isMV: counters.MV, isXV: counters.XV, isWV: counters.WV, isMSV: counters.MSV, isXSV: counters.XSV, isWSV: counters.WSV, isMUV: counters.MUV, isXUV: counters.XUV, isWUV: counters.WUV, isMJ: counters.MJ, isXJ: counters.XJ, isWJ: counters.WJ, isM20: counters.M20, isX20: counters.X20, isW20: counters.W20, isM23: counters.M23, isX23: counters.X23, isW23: counters.W23
+				});
 			});
 		});
 	});
