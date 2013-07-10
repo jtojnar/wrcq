@@ -1,18 +1,14 @@
 {
 	"name": "wrcQ",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"dependencies": {
 		"express": "3.x",
-		"pg": "0.6.15",
+		"pg": "2.x",
 		"xml2js": "*",
 		"moment": "*",
-		"passport": ">= 0.0.0",
-		"passport-local": ">= 0.0.0",
-		"connect-flash": "~0.1.0",
+		"passport": "*",
+		"passport-local": "*",
+		"connect-flash": "*",
 		"hbs": "*"
-	},
-	"engines": {
-		"node": "0.8.x",
-		"npm": "1.1.x"
 	}
 }
