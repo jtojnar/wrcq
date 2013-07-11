@@ -21,7 +21,9 @@
 	</div> 
 </div>
 <div class="tab-pane" id="all">
-<h2>Overall results</h2>
+<h2 class="pull-left">Overall results</h2>
+<div class="pull-right"><form class="form-inline sort-form" action=""><select name="category" class="input-small" onchange="submit()"><option value=""{{#unless activeCategory}} selected="selected"{{/unless}}>all</option>{{#categories}}<option value="{{this}}"{{#equals ../activeCategory this}} selected="selected"{{/equals}}>{{this}}</option>{{/categories}}</select><noscript><button type="submit" class="btn btn-default btn-small">Filter</button></noscript></form></div>
+<br class="clearfix">
 {{> result}}
 </div>
 </div> 
@@ -32,10 +34,24 @@
 <script>
 $(document).ready(function(){
 	var overallShown = false;
-	$('#tabs a[href="#all"]').on('shown.bs.tab', function (e) {
+	$('#tabs a[href=#all]').on('shown.bs.tab', function (e) {
 		if(!overallShown) {
 			$('.table-fixed-header').fixedHeader();
 			overallShown = true;
+		}
+	});
+
+	var hash = document.location.hash;
+	if(hash) {
+		$('#tabs a[href='+hash+']').tab('show') ;
+	}
+
+	// With HTML5 history API, we can easily prevent scrolling!
+	$('#tabs a').on('shown.bs.tab', function(e) {
+		if(history.pushState) {
+			history.pushState(null, null, e.target.hash); 
+		} else {
+			document.location.hash = e.target.hash; //Polyfill for old browsers
 		}
 	});
 
@@ -60,6 +76,9 @@ thead {
 }
 .place3 {
 	background: #ba7810 !important;
+}
+.sort-form {
+	margin-top: 1.2em;
 }
 </style>
 {{/extend}}

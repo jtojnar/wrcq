@@ -148,6 +148,14 @@ hbs.registerHelper('each', function(context, options) {
 	return ret;
 });
 
+hbs.registerHelper('equals', function(primary, secondary, options) {
+	if(primary === secondary) {
+		return options.fn(this);
+	} else {
+		return options.inverse(this);
+	}
+});
+
 hbs.registerPartials(path.join(__dirname, 'view', 'partial'));
 
 var pg = require('pg');
@@ -209,6 +217,8 @@ function addMembers(members, row) {
 	// mcache = [];
 }
 
+var categories = {MO: {age: 'open', gender: 'men'}, XO: {age: 'open', gender: 'mixed'}, WO: {age: 'open', gender: 'women'}, MV: {age: 'veteran', gender: 'men'}, XV: {age: 'veteran', gender: 'mixed'}, WV: {age: 'veteran', gender: 'women'}, MSV: {age: 'superveteran', gender: 'men'}, XSV: {age: 'superveteran', gender: 'mixed'}, WSV: {age: 'superveteran', gender: 'women'}, MUV: {age: 'ultraveteran', gender: 'men'}, XUV: {age: 'ultraveteran', gender: 'mixed'}, WUV: {age: 'ultraveteran', gender: 'women'}, MJ: {age: 'junior', gender: 'men'}, XJ: {age: 'junior', gender: 'mixed'}, WJ: {age: 'junior', gender: 'women'}, M20: {age: 'under20', gender: 'men'}, X20: {age: 'under20', gender: 'mixed'}, W20: {age: 'under20', gender: 'women'}, M23: {age: 'under23', gender: 'men'}, X23: {age: 'under23', gender: 'mixed'}, W23: {age: 'under23', gender: 'women'}};
+
 app.get('/results', function(req, res) {
 	var event = {id: 3, name: 'WRC 1998'};
 	pg.connect(_dbUri, function(err, client) {
@@ -223,10 +233,10 @@ app.get('/results', function(req, res) {
 		var woquery = client.query('select * from team where event_id=$1 and gender=$2 and age=$3 limit 3', [event.id, 'women', 'open'], function() {});
 		woquery.on('row', function(row) {addMembers(members, row);});
 		await woquery.on('end', defer(var wo));
-		var teamquery = client.query('select * from team where event_id=$1', [event.id], function() {});
+		
+		var counters = {all: 0, MO: 0, XO: 0, WO: 0, MV: 0, XV: 0, WV: 0, MSV: 0, XSV: 0, WSV: 0, MUV: 0, XUV: 0, WUV: 0, MJ: 0, XJ: 0, WJ: 0, M20: 0, X20: 0, W20: 0, M23: 0, X23: 0, W23: 0};
 
-		var counters = {MO: 0, XO: 0, WO: 0, MV: 0, XV: 0, WV: 0, MSV: 0, XSV: 0, WSV: 0, MUV: 0, XUV: 0, WUV: 0, MJ: 0, XJ: 0, WJ: 0, M20: 0, X20: 0, W20: 0, M23: 0, X23: 0, W23: 0};
-		var time = Date.now();
+		var teamquery = client.query('select * from team where event_id=$1', [event.id]);
 		teamquery.on('row', function(row) {addMembers(members, row);});
 		teamquery.on('row', function(row, result) {
 			if(row.duration == 24) {
@@ -255,9 +265,27 @@ app.get('/results', function(req, res) {
 					row[gender+'20'] = ++counters[gender+'20'];
 				}
 			}
+			row['place'] = ++counters['all'];
+
+			if(!req.query.category || (req.query.category && categories[req.query.category].gender === row.gender && categories[req.query.category].age === row.age)) {
+				result.addRow(row);
+			}
 		});
 		await teamquery.on('end', defer(var teams));
-		console.log(Date.now() - time);
+
+		var validCategories = [], activeCategory = null;
+		for(var key in categories){
+			if(categories.hasOwnProperty(key) && counters[key] > 0) {
+				validCategories.push(key);
+				if(key === req.query.category) {
+					activeCategory = key;
+				}
+			}
+		}
+		if(req.query.category != activeCategory) {
+			res.redirect('/results');
+		}
+
 		res.render('results', {
 			title: 'Results of ' + event.name,
 			event: event,
@@ -266,7 +294,9 @@ app.get('/results', function(req, res) {
 			xo: {teams: xo.rows},
 			wo: {teams: wo.rows},
 			identity: req.user,
-			isMO: counters.MO, isXO: counters.XO, isWO: counters.WO, isMV: counters.MV, isXV: counters.XV, isWV: counters.WV, isMSV: counters.MSV, isXSV: counters.XSV, isWSV: counters.WSV, isMUV: counters.MUV, isXUV: counters.XUV, isWUV: counters.WUV, isMJ: counters.MJ, isXJ: counters.XJ, isWJ: counters.WJ, isM20: counters.M20, isX20: counters.X20, isW20: counters.W20, isM23: counters.M23, isX23: counters.X23, isW23: counters.W23
+			isMO: counters.MO, isXO: counters.XO, isWO: counters.WO, isMV: counters.MV, isXV: counters.XV, isWV: counters.WV, isMSV: counters.MSV, isXSV: counters.XSV, isWSV: counters.WSV, isMUV: counters.MUV, isXUV: counters.XUV, isWUV: counters.WUV, isMJ: counters.MJ, isXJ: counters.XJ, isWJ: counters.WJ, isM20: counters.M20, isX20: counters.X20, isW20: counters.W20, isM23: counters.M23, isX23: counters.X23, isW23: counters.W23,
+			activeCategory: activeCategory,
+			categories: validCategories
 		});
 	});
 });
