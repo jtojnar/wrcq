@@ -14,8 +14,8 @@ $.fn.fixedHeader = function(options) {
 
 		function processScroll() {
 			if(!o.is(':visible')) return;
-			if($('thead.header-copy').size()) {
-				$('thead.header-copy').width($('thead.header').width());
+			if($headCopy.size()) {
+				$headCopy.width($head.width());
 				var i, scrollTop = $win.scrollTop();
 			}
 			var t = $head.length && $head.offset().top - config.topOffset;
@@ -25,7 +25,7 @@ $.fn.fixedHeader = function(options) {
 			} else if(scrollTop <= headTop && isFixed) {
 				isFixed = 0;
 			}
-			isFixed ? $('thead.header-copy', o).offset({ left: $head.offset().left }).removeClass('hide') : $('thead.header-copy', o).addClass('hide');
+			isFixed ? $headCopy.offset({ left: $head.offset().left }).removeClass('hide') : $headCopy.addClass('hide');
 		}
 		$win.on('scroll', processScroll);
 
@@ -34,9 +34,9 @@ $.fn.fixedHeader = function(options) {
 			if(!isFixed) setTimeout(function() { $win.scrollTop($win.scrollTop() - 47) }, 10);
 		})
 
-		$head.clone().removeClass('header').addClass('header-copy header-fixed').appendTo(o);
+		var $headCopy = $head.clone().removeClass('header').addClass('header-copy header-fixed').appendTo(o);
 		var header_width = $head.width();
-		o.find('thead.header-copy').width(header_width);
+		$headCopy.width(header_width);
 		o.find('thead.header > tr:first > th').each(function(i, h){
 			var w = $(h).width();
 			o.find('thead.header-copy> tr > th:eq('+i+')').width(w)
