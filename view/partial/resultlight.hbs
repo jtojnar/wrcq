@@ -2,7 +2,7 @@
 <thead class="header"><tr><th>Place</th><th>Members</th><th>Score</th><th>Time</th></tr></thead>
 <tbody>
 {{#teams}}
-<tr><td>{{index @index}}</td><td>{{#each members}}{{lastname}} {{firstname}} ({{country_code}}){{#unless @last}}, {{/unless}}{{/each}}</td><td>{{score}}</td><td>{{time}}</td></tr>
+<tr><td>{{index @index}}</td><td>{{#each members}}{{lastname}} {{firstname}} ({{country_code}}){{#unless @last}}<br>{{/unless}}{{/each}}</td><td>{{score}}</td><td>{{time}}</td></tr>
 {{/teams}}
 </tbody>
 </table>
