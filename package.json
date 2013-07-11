@@ -9,6 +9,7 @@
 		"passport": "*",
 		"passport-local": "*",
 		"connect-flash": "*",
-		"hbs": "*"
+		"hbs": "*",
+		"tamejs": "*"
 	}
 }
