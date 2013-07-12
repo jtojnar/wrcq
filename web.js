@@ -345,9 +345,8 @@ var __tame_fn_0 = function (__tame_k) {
     }
     var categories = { MO : { age : 'open' , gender : 'men' } , XO : { age : 'open' , gender : 'mixed' } , WO : { age : 'open' , gender : 'women' } , MV : { age : 'veteran' , gender : 'men' } , XV : { age : 'veteran' , gender : 'mixed' } , WV : { age : 'veteran' , gender : 'women' } , MSV : { age : 'superveteran' , gender : 'men' } , XSV : { age : 'superveteran' , gender : 'mixed' } , WSV : { age : 'superveteran' , gender : 'women' } , MUV : { age : 'ultraveteran' , gender : 'men' } , XUV : { age : 'ultraveteran' , gender : 'mixed' } , WUV : { age : 'ultraveteran' , gender : 'women' } , MJ : { age : 'junior' , gender : 'men' } , XJ : { age : 'junior' , gender : 'mixed' } , WJ : { age : 'junior' , gender : 'women' } , M20 : { age : 'under20' , gender : 'men' } , X20 : { age : 'under20' , gender : 'mixed' } , W20 : { age : 'under20' , gender : 'women' } , M23 : { age : 'under23' , gender : 'men' } , X23 : { age : 'under23' , gender : 'mixed' } , W23 : { age : 'under23' , gender : 'women' } } ;
     
-    app . get ( '/results' ,
+    app . get ( '/events/:event/results' ,
     function  (req, res) {
-        var event = { id : 3 , name : 'WRC 1998' } ;
         pg . connect ( _dbUri ,
         function  (err, client) {
             var __tame_defer_cb = tame.findDeferCb ([err, client]);
@@ -355,22 +354,22 @@ var __tame_fn_0 = function (__tame_k) {
             var __tame_this = this;
             var __tame_fn_7 = function (__tame_k) {
                 tame.setActiveCb (__tame_defer_cb);
-                var row, members;
+                var row, eventdata;
                 var __tame_fn_8 = function (__tame_k) {
                     tame.setActiveCb (__tame_defer_cb);
                     var __tame_defers = new tame.Deferrals (__tame_k);
                     var __tame_fn_9 = function (__tame_k) {
                         tame.setActiveCb (__tame_defer_cb);
-                        client . query ( 'select * from member where event_id=$1' , [ event . id ] ,
+                        client . query ( 'select * from event where slug=$1 limit 1' , [ req . params . event ] ,
                         __tame_defers.defer ( { 
                             assign_fn : 
                                 function () {
                                     row = arguments[0];
-                                    members = arguments[1];
+                                    eventdata = arguments[1];
                                 }
                                 ,
                             parent_cb : __tame_defer_cb,
-                            line : 225,
+                            line : 224,
                             file : "web.tjs"
                         } )
                         ) ;
@@ -381,35 +380,28 @@ var __tame_fn_0 = function (__tame_k) {
                     __tame_defers._fulfill();
                     tame.setActiveCb (null);
                 };
-                var __tame_fn_31 = function (__tame_k) {
+                var __tame_fn_35 = function (__tame_k) {
                     tame.setActiveCb (__tame_defer_cb);
-                    members = members . rows ;
-                    var moquery = client . query ( 'select * from team where event_id=$1 and gender=$2 and age=$3 limit 3' , [ event . id , 'men' , 'open' ] ,
-                    function  () {
-                    }
-                    ) ;
-                    moquery . on ( 'row' ,
-                    function  (row) {
-                        addMembers ( members , row ) ;
-                    }
-                    ) ;
+                    console . log ( eventdata , row ) ;
+                    var event = eventdata . rows [ 0 ] ;
                     var __tame_fn_10 = function (__tame_k) {
                         tame.setActiveCb (__tame_defer_cb);
-                        var mo;
+                        var row, members;
                         var __tame_fn_11 = function (__tame_k) {
                             tame.setActiveCb (__tame_defer_cb);
                             var __tame_defers = new tame.Deferrals (__tame_k);
                             var __tame_fn_12 = function (__tame_k) {
                                 tame.setActiveCb (__tame_defer_cb);
-                                moquery . on ( 'end' ,
+                                client . query ( 'select * from member where event_id=$1' , [ event . id ] ,
                                 __tame_defers.defer ( { 
                                     assign_fn : 
                                         function () {
-                                            mo = arguments[0];
+                                            row = arguments[0];
+                                            members = arguments[1];
                                         }
                                         ,
                                     parent_cb : __tame_defer_cb,
-                                    line : 229,
+                                    line : 228,
                                     file : "web.tjs"
                                 } )
                                 ) ;
@@ -420,30 +412,31 @@ var __tame_fn_0 = function (__tame_k) {
                             __tame_defers._fulfill();
                             tame.setActiveCb (null);
                         };
-                        var __tame_fn_30 = function (__tame_k) {
+                        var __tame_fn_34 = function (__tame_k) {
                             tame.setActiveCb (__tame_defer_cb);
-                            var xoquery = client . query ( 'select * from team where event_id=$1 and gender=$2 and age=$3 limit 3' , [ event . id , 'mixed' , 'open' ] ,
+                            members = members . rows ;
+                            var moquery = client . query ( 'select * from team where event_id=$1 and gender=$2 and age=$3 limit 3' , [ event . id , 'men' , 'open' ] ,
                             function  () {
                             }
                             ) ;
-                            xoquery . on ( 'row' ,
+                            moquery . on ( 'row' ,
                             function  (row) {
                                 addMembers ( members , row ) ;
                             }
                             ) ;
                             var __tame_fn_13 = function (__tame_k) {
                                 tame.setActiveCb (__tame_defer_cb);
-                                var xo;
+                                var mo;
                                 var __tame_fn_14 = function (__tame_k) {
                                     tame.setActiveCb (__tame_defer_cb);
                                     var __tame_defers = new tame.Deferrals (__tame_k);
                                     var __tame_fn_15 = function (__tame_k) {
                                         tame.setActiveCb (__tame_defer_cb);
-                                        xoquery . on ( 'end' ,
+                                        moquery . on ( 'end' ,
                                         __tame_defers.defer ( { 
                                             assign_fn : 
                                                 function () {
-                                                    xo = arguments[0];
+                                                    mo = arguments[0];
                                                 }
                                                 ,
                                             parent_cb : __tame_defer_cb,
@@ -458,30 +451,30 @@ var __tame_fn_0 = function (__tame_k) {
                                     __tame_defers._fulfill();
                                     tame.setActiveCb (null);
                                 };
-                                var __tame_fn_29 = function (__tame_k) {
+                                var __tame_fn_33 = function (__tame_k) {
                                     tame.setActiveCb (__tame_defer_cb);
-                                    var woquery = client . query ( 'select * from team where event_id=$1 and gender=$2 and age=$3 limit 3' , [ event . id , 'women' , 'open' ] ,
+                                    var xoquery = client . query ( 'select * from team where event_id=$1 and gender=$2 and age=$3 limit 3' , [ event . id , 'mixed' , 'open' ] ,
                                     function  () {
                                     }
                                     ) ;
-                                    woquery . on ( 'row' ,
+                                    xoquery . on ( 'row' ,
                                     function  (row) {
                                         addMembers ( members , row ) ;
                                     }
                                     ) ;
                                     var __tame_fn_16 = function (__tame_k) {
                                         tame.setActiveCb (__tame_defer_cb);
-                                        var wo;
+                                        var xo;
                                         var __tame_fn_17 = function (__tame_k) {
                                             tame.setActiveCb (__tame_defer_cb);
                                             var __tame_defers = new tame.Deferrals (__tame_k);
                                             var __tame_fn_18 = function (__tame_k) {
                                                 tame.setActiveCb (__tame_defer_cb);
-                                                woquery . on ( 'end' ,
+                                                xoquery . on ( 'end' ,
                                                 __tame_defers.defer ( { 
                                                     assign_fn : 
                                                         function () {
-                                                            wo = arguments[0];
+                                                            xo = arguments[0];
                                                         }
                                                         ,
                                                     parent_cb : __tame_defer_cb,
@@ -496,81 +489,34 @@ var __tame_fn_0 = function (__tame_k) {
                                             __tame_defers._fulfill();
                                             tame.setActiveCb (null);
                                         };
-                                        var __tame_fn_28 = function (__tame_k) {
+                                        var __tame_fn_32 = function (__tame_k) {
                                             tame.setActiveCb (__tame_defer_cb);
-                                            var counters = { all : 0 , MO : 0 , XO : 0 , WO : 0 , MV : 0 , XV : 0 , WV : 0 , MSV : 0 , XSV : 0 , WSV : 0 , MUV : 0 , XUV : 0 , WUV : 0 , MJ : 0 , XJ : 0 , WJ : 0 , M20 : 0 , X20 : 0 , W20 : 0 , M23 : 0 , X23 : 0 , W23 : 0 } ;
-                                            
-                                            var teamquery = client . query ( 'select * from team where event_id=$1' , [ event . id ] ) ;
-                                            teamquery . on ( 'row' ,
+                                            var woquery = client . query ( 'select * from team where event_id=$1 and gender=$2 and age=$3 limit 3' , [ event . id , 'women' , 'open' ] ,
+                                            function  () {
+                                            }
+                                            ) ;
+                                            woquery . on ( 'row' ,
                                             function  (row) {
                                                 addMembers ( members , row ) ;
                                             }
                                             ) ;
-                                            teamquery . on ( 'row' ,
-                                            function  (row, result) {
-                                                if (row . duration == 24) {
-                                                    row . duration = '' ;
-                                                    var gender = hbs . handlebars . helpers . genderclass ( row . gender ) ;
-                                                    if (row . age == 'ultraveteran') {
-                                                        row [ gender + 'UV' ] = ++counters [ gender + 'UV' ] ;
-                                                        row [ gender + 'SV' ] = ++counters [ gender + 'SV' ] ;
-                                                        row [ gender + 'V' ] = ++counters [ gender + 'V' ] ;
-                                                        row [ gender + 'O' ] = ++counters [ gender + 'O' ] ;
-                                                    } else {
-                                                        if (row . age == 'superveteran') {
-                                                            row [ gender + 'SV' ] = ++counters [ gender + 'SV' ] ;
-                                                            row [ gender + 'V' ] = ++counters [ gender + 'V' ] ;
-                                                            row [ gender + 'O' ] = ++counters [ gender + 'O' ] ;
-                                                        } else {
-                                                            if (row . age == 'veteran') {
-                                                                row [ gender + 'V' ] = ++counters [ gender + 'V' ] ;
-                                                                row [ gender + 'O' ] = ++counters [ gender + 'O' ] ;
-                                                            } else {
-                                                                if (row . age == 'open') {
-                                                                    row [ gender + 'O' ] = ++counters [ gender + 'O' ] ;
-                                                                } else {
-                                                                    if (row . age == 'junior') {
-                                                                        row [ gender + 'J' ] = ++counters [ gender + 'J' ] ;
-                                                                    } else {
-                                                                        if (row . age == 'under23') {
-                                                                            row [ gender + '23' ] = ++counters [ gender + '23' ] ;
-                                                                        } else {
-                                                                            if (row . age == 'under20') {
-                                                                                row [ gender + '20' ] = ++counters [ gender + '20' ] ;
-                                                                            } else {
-                                                                            }
-                                                                        }
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                } else {
-                                                }
-                                                row [ 'place' ] = ++counters [ 'all' ] ;
-                                                if (! req . query . category || ( req . query . category && categories [ req . query . category ] . gender === row . gender && categories [ req . query . category ] . age === row . age )) {
-                                                    result . addRow ( row ) ;
-                                                } else {
-                                                }
-                                            }
-                                            ) ;
                                             var __tame_fn_19 = function (__tame_k) {
                                                 tame.setActiveCb (__tame_defer_cb);
-                                                var teams;
+                                                var wo;
                                                 var __tame_fn_20 = function (__tame_k) {
                                                     tame.setActiveCb (__tame_defer_cb);
                                                     var __tame_defers = new tame.Deferrals (__tame_k);
                                                     var __tame_fn_21 = function (__tame_k) {
                                                         tame.setActiveCb (__tame_defer_cb);
-                                                        teamquery . on ( 'end' ,
+                                                        woquery . on ( 'end' ,
                                                         __tame_defers.defer ( { 
                                                             assign_fn : 
                                                                 function () {
-                                                                    teams = arguments[0];
+                                                                    wo = arguments[0];
                                                                 }
                                                                 ,
                                                             parent_cb : __tame_defer_cb,
-                                                            line : 274,
+                                                            line : 238,
                                                             file : "web.tjs"
                                                         } )
                                                         ) ;
@@ -581,89 +527,180 @@ var __tame_fn_0 = function (__tame_k) {
                                                     __tame_defers._fulfill();
                                                     tame.setActiveCb (null);
                                                 };
-                                                var __tame_fn_27 = function (__tame_k) {
+                                                var __tame_fn_31 = function (__tame_k) {
                                                     tame.setActiveCb (__tame_defer_cb);
-                                                    var validCategories = [ ] , activeCategory = null ;
-                                                    var __tame_fn_22 = function (__tame_k) {
-                                                        tame.setActiveCb (__tame_defer_cb);
-                                                        var __tame_fn_23 = function (__tame_k) {
-                                                            tame.setActiveCb (__tame_defer_cb);
-                                                             for (var key in categories) {
-                                                                if (categories . hasOwnProperty ( key ) && counters [ key ] > 0) {
-                                                                    validCategories . push ( key ) ;
-                                                                    if (key === req . query . category) {
-                                                                        activeCategory = key ;
-                                                                    } else {
-                                                                    }
+                                                    var counters = { all : 0 , MO : 0 , XO : 0 , WO : 0 , MV : 0 , XV : 0 , WV : 0 , MSV : 0 , XSV : 0 , WSV : 0 , MUV : 0 , XUV : 0 , WUV : 0 , MJ : 0 , XJ : 0 , WJ : 0 , M20 : 0 , X20 : 0 , W20 : 0 , M23 : 0 , X23 : 0 , W23 : 0 } ;
+                                                    
+                                                    var teamquery = client . query ( 'select * from team where event_id=$1' , [ event . id ] ) ;
+                                                    teamquery . on ( 'row' ,
+                                                    function  (row) {
+                                                        addMembers ( members , row ) ;
+                                                    }
+                                                    ) ;
+                                                    teamquery . on ( 'row' ,
+                                                    function  (row, result) {
+                                                        if (row . duration == 24) {
+                                                            row . duration = '' ;
+                                                            var gender = hbs . handlebars . helpers . genderclass ( row . gender ) ;
+                                                            if (row . age == 'ultraveteran') {
+                                                                row [ gender + 'UV' ] = ++counters [ gender + 'UV' ] ;
+                                                                row [ gender + 'SV' ] = ++counters [ gender + 'SV' ] ;
+                                                                row [ gender + 'V' ] = ++counters [ gender + 'V' ] ;
+                                                                row [ gender + 'O' ] = ++counters [ gender + 'O' ] ;
+                                                            } else {
+                                                                if (row . age == 'superveteran') {
+                                                                    row [ gender + 'SV' ] = ++counters [ gender + 'SV' ] ;
+                                                                    row [ gender + 'V' ] = ++counters [ gender + 'V' ] ;
+                                                                    row [ gender + 'O' ] = ++counters [ gender + 'O' ] ;
                                                                 } else {
+                                                                    if (row . age == 'veteran') {
+                                                                        row [ gender + 'V' ] = ++counters [ gender + 'V' ] ;
+                                                                        row [ gender + 'O' ] = ++counters [ gender + 'O' ] ;
+                                                                    } else {
+                                                                        if (row . age == 'open') {
+                                                                            row [ gender + 'O' ] = ++counters [ gender + 'O' ] ;
+                                                                        } else {
+                                                                            if (row . age == 'junior') {
+                                                                                row [ gender + 'J' ] = ++counters [ gender + 'J' ] ;
+                                                                            } else {
+                                                                                if (row . age == 'under23') {
+                                                                                    row [ gender + '23' ] = ++counters [ gender + '23' ] ;
+                                                                                } else {
+                                                                                    if (row . age == 'under20') {
+                                                                                        row [ gender + '20' ] = ++counters [ gender + '20' ] ;
+                                                                                    } else {
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
                                                                 }
                                                             }
-                                                            tame.callChain([__tame_k]);
-                                                            tame.setActiveCb (null);
-                                                        };
-                                                        var __tame_fn_24 = function (__tame_k) {
+                                                        } else {
+                                                        }
+                                                        row [ 'place' ] = ++counters [ 'all' ] ;
+                                                        if (! req . query . category || ( req . query . category && categories [ req . query . category ] . gender === row . gender && categories [ req . query . category ] . age === row . age )) {
+                                                            result . addRow ( row ) ;
+                                                        } else {
+                                                        }
+                                                    }
+                                                    ) ;
+                                                    var __tame_fn_22 = function (__tame_k) {
+                                                        tame.setActiveCb (__tame_defer_cb);
+                                                        var teams;
+                                                        var __tame_fn_23 = function (__tame_k) {
                                                             tame.setActiveCb (__tame_defer_cb);
-                                                            var __tame_fn_25 = function (__tame_k) {
+                                                            var __tame_defers = new tame.Deferrals (__tame_k);
+                                                            var __tame_fn_24 = function (__tame_k) {
                                                                 tame.setActiveCb (__tame_defer_cb);
-                                                                res . redirect ( '/results' ) ;
+                                                                teamquery . on ( 'end' ,
+                                                                __tame_defers.defer ( { 
+                                                                    assign_fn : 
+                                                                        function () {
+                                                                            teams = arguments[0];
+                                                                        }
+                                                                        ,
+                                                                    parent_cb : __tame_defer_cb,
+                                                                    line : 277,
+                                                                    file : "web.tjs"
+                                                                } )
+                                                                ) ;
                                                                 tame.callChain([__tame_k]);
                                                                 tame.setActiveCb (null);
                                                             };
-                                                            if (req . query . category != activeCategory) {
-                                                                tame.callChain([__tame_fn_25, __tame_k]);
-                                                            } else {
-                                                                tame.callChain([__tame_k]);
-                                                            }
+                                                            __tame_fn_24(tame.end);
+                                                            __tame_defers._fulfill();
                                                             tame.setActiveCb (null);
                                                         };
-                                                        var __tame_fn_26 = function (__tame_k) {
+                                                        var __tame_fn_30 = function (__tame_k) {
                                                             tame.setActiveCb (__tame_defer_cb);
-                                                            res . render ( 'results' , {
-                                                            title : 'Results of ' + event . name ,
-                                                            event : event ,
-                                                            teams : teams . rows ,
-                                                            mo : { teams : mo . rows } ,
-                                                            xo : { teams : xo . rows } ,
-                                                            wo : { teams : wo . rows } ,
-                                                            identity : req . user ,
-                                                            isMO : counters . MO , isXO : counters . XO , isWO : counters . WO , isMV : counters . MV , isXV : counters . XV , isWV : counters . WV , isMSV : counters . MSV , isXSV : counters . XSV , isWSV : counters . WSV , isMUV : counters . MUV , isXUV : counters . XUV , isWUV : counters . WUV , isMJ : counters . MJ , isXJ : counters . XJ , isWJ : counters . WJ , isM20 : counters . M20 , isX20 : counters . X20 , isW20 : counters . W20 , isM23 : counters . M23 , isX23 : counters . X23 , isW23 : counters . W23 ,
-                                                            activeCategory : activeCategory ,
-                                                            categories : validCategories
-                                                            } ) ;
-                                                            tame.callChain([__tame_k]);
+                                                            var validCategories = [ ] , activeCategory = null ;
+                                                            var __tame_fn_25 = function (__tame_k) {
+                                                                tame.setActiveCb (__tame_defer_cb);
+                                                                var __tame_fn_26 = function (__tame_k) {
+                                                                    tame.setActiveCb (__tame_defer_cb);
+                                                                     for (var key in categories) {
+                                                                        if (categories . hasOwnProperty ( key ) && counters [ key ] > 0) {
+                                                                            validCategories . push ( key ) ;
+                                                                            if (key === req . query . category) {
+                                                                                activeCategory = key ;
+                                                                            } else {
+                                                                            }
+                                                                        } else {
+                                                                        }
+                                                                    }
+                                                                    tame.callChain([__tame_k]);
+                                                                    tame.setActiveCb (null);
+                                                                };
+                                                                var __tame_fn_27 = function (__tame_k) {
+                                                                    tame.setActiveCb (__tame_defer_cb);
+                                                                    var __tame_fn_28 = function (__tame_k) {
+                                                                        tame.setActiveCb (__tame_defer_cb);
+                                                                        res . redirect ( '/results' ) ;
+                                                                        tame.callChain([__tame_k]);
+                                                                        tame.setActiveCb (null);
+                                                                    };
+                                                                    if (req . query . category != activeCategory) {
+                                                                        tame.callChain([__tame_fn_28, __tame_k]);
+                                                                    } else {
+                                                                        tame.callChain([__tame_k]);
+                                                                    }
+                                                                    tame.setActiveCb (null);
+                                                                };
+                                                                var __tame_fn_29 = function (__tame_k) {
+                                                                    tame.setActiveCb (__tame_defer_cb);
+                                                                    res . render ( 'results' , {
+                                                                    title : 'Results of ' + event . name ,
+                                                                    event : event ,
+                                                                    teams : teams . rows ,
+                                                                    mo : { teams : mo . rows } ,
+                                                                    xo : { teams : xo . rows } ,
+                                                                    wo : { teams : wo . rows } ,
+                                                                    identity : req . user ,
+                                                                    isMO : counters . MO , isXO : counters . XO , isWO : counters . WO , isMV : counters . MV , isXV : counters . XV , isWV : counters . WV , isMSV : counters . MSV , isXSV : counters . XSV , isWSV : counters . WSV , isMUV : counters . MUV , isXUV : counters . XUV , isWUV : counters . WUV , isMJ : counters . MJ , isXJ : counters . XJ , isWJ : counters . WJ , isM20 : counters . M20 , isX20 : counters . X20 , isW20 : counters . W20 , isM23 : counters . M23 , isX23 : counters . X23 , isW23 : counters . W23 ,
+                                                                    activeCategory : activeCategory ,
+                                                                    categories : validCategories
+                                                                    } ) ;
+                                                                    tame.callChain([__tame_k]);
+                                                                    tame.setActiveCb (null);
+                                                                };
+                                                                tame.callChain([__tame_fn_26, __tame_fn_27, __tame_fn_29, __tame_k]);
+                                                                tame.setActiveCb (null);
+                                                            };
+                                                            tame.callChain([__tame_fn_25, __tame_k]);
                                                             tame.setActiveCb (null);
                                                         };
-                                                        tame.callChain([__tame_fn_23, __tame_fn_24, __tame_fn_26, __tame_k]);
+                                                        tame.callChain([__tame_fn_23, __tame_fn_30, __tame_k]);
                                                         tame.setActiveCb (null);
                                                     };
                                                     tame.callChain([__tame_fn_22, __tame_k]);
                                                     tame.setActiveCb (null);
                                                 };
-                                                tame.callChain([__tame_fn_20, __tame_fn_27, __tame_k]);
+                                                tame.callChain([__tame_fn_20, __tame_fn_31, __tame_k]);
                                                 tame.setActiveCb (null);
                                             };
                                             tame.callChain([__tame_fn_19, __tame_k]);
                                             tame.setActiveCb (null);
                                         };
-                                        tame.callChain([__tame_fn_17, __tame_fn_28, __tame_k]);
+                                        tame.callChain([__tame_fn_17, __tame_fn_32, __tame_k]);
                                         tame.setActiveCb (null);
                                     };
                                     tame.callChain([__tame_fn_16, __tame_k]);
                                     tame.setActiveCb (null);
                                 };
-                                tame.callChain([__tame_fn_14, __tame_fn_29, __tame_k]);
+                                tame.callChain([__tame_fn_14, __tame_fn_33, __tame_k]);
                                 tame.setActiveCb (null);
                             };
                             tame.callChain([__tame_fn_13, __tame_k]);
                             tame.setActiveCb (null);
                         };
-                        tame.callChain([__tame_fn_11, __tame_fn_30, __tame_k]);
+                        tame.callChain([__tame_fn_11, __tame_fn_34, __tame_k]);
                         tame.setActiveCb (null);
                     };
                     tame.callChain([__tame_fn_10, __tame_k]);
                     tame.setActiveCb (null);
                 };
-                tame.callChain([__tame_fn_8, __tame_fn_31, __tame_k]);
+                tame.callChain([__tame_fn_8, __tame_fn_35, __tame_k]);
                 tame.setActiveCb (null);
             };
             tame.callChain([__tame_fn_7, __tame_k]);
