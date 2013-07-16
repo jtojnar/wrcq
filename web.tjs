@@ -222,6 +222,11 @@ var categories = {MO: {age: 'open', gender: 'men'}, XO: {age: 'open', gender: 'm
 app.get('/events/:event/results', function(req, res) {
 	pg.connect(_dbUri, function(err, client) {
 		await client.query('select * from event where slug=$1 limit 1', [req.params.event], defer(var row, eventdata));
+		if(eventdata.rows.length == 0) {
+			res.status(404);
+			res.render('error/404', {body: 'Sorry, this event is not in our database, we may be working on it.'});
+			return;
+		}
 		var event = eventdata.rows[0];
 
 		await client.query('select * from member where event_id=$1', [event.id], defer(var row, members));

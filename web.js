@@ -380,16 +380,38 @@ var __tame_fn_0 = function (__tame_k) {
                     __tame_defers._fulfill();
                     tame.setActiveCb (null);
                 };
-                var __tame_fn_35 = function (__tame_k) {
+                var __tame_fn_10 = function (__tame_k) {
                     tame.setActiveCb (__tame_defer_cb);
-                    var event = eventdata . rows [ 0 ] ;
-                    var __tame_fn_10 = function (__tame_k) {
+                    var __tame_fn_12 = function (__tame_k) {
                         tame.setActiveCb (__tame_defer_cb);
-                        var row, members;
+                        res . status ( 404 ) ;
+                        res . render ( 'error/404' , { body : 'Sorry, this event is not in our database, we may be working on it.' } ) ;
                         var __tame_fn_11 = function (__tame_k) {
                             tame.setActiveCb (__tame_defer_cb);
+                                ;
+                                tame.callChain([tame.end, __tame_k]);
+                            tame.setActiveCb (null);
+                        };
+                        tame.callChain([__tame_fn_11, __tame_k]);
+                        tame.setActiveCb (null);
+                    };
+                    if (eventdata . rows . length == 0) {
+                        tame.callChain([__tame_fn_12, __tame_k]);
+                    } else {
+                        tame.callChain([__tame_k]);
+                    }
+                    tame.setActiveCb (null);
+                };
+                var __tame_fn_38 = function (__tame_k) {
+                    tame.setActiveCb (__tame_defer_cb);
+                    var event = eventdata . rows [ 0 ] ;
+                    var __tame_fn_13 = function (__tame_k) {
+                        tame.setActiveCb (__tame_defer_cb);
+                        var row, members;
+                        var __tame_fn_14 = function (__tame_k) {
+                            tame.setActiveCb (__tame_defer_cb);
                             var __tame_defers = new tame.Deferrals (__tame_k);
-                            var __tame_fn_12 = function (__tame_k) {
+                            var __tame_fn_15 = function (__tame_k) {
                                 tame.setActiveCb (__tame_defer_cb);
                                 client . query ( 'select * from member where event_id=$1' , [ event . id ] ,
                                 __tame_defers.defer ( { 
@@ -400,18 +422,18 @@ var __tame_fn_0 = function (__tame_k) {
                                         }
                                         ,
                                     parent_cb : __tame_defer_cb,
-                                    line : 227,
+                                    line : 232,
                                     file : "web.tjs"
                                 } )
                                 ) ;
                                 tame.callChain([__tame_k]);
                                 tame.setActiveCb (null);
                             };
-                            __tame_fn_12(tame.end);
+                            __tame_fn_15(tame.end);
                             __tame_defers._fulfill();
                             tame.setActiveCb (null);
                         };
-                        var __tame_fn_34 = function (__tame_k) {
+                        var __tame_fn_37 = function (__tame_k) {
                             tame.setActiveCb (__tame_defer_cb);
                             members = members . rows ;
                             var moquery = client . query ( 'select * from team where event_id=$1 and gender=$2 and age=$3 limit 3' , [ event . id , 'men' , 'open' ] ,
@@ -423,13 +445,13 @@ var __tame_fn_0 = function (__tame_k) {
                                 addMembers ( members , row ) ;
                             }
                             ) ;
-                            var __tame_fn_13 = function (__tame_k) {
+                            var __tame_fn_16 = function (__tame_k) {
                                 tame.setActiveCb (__tame_defer_cb);
                                 var mo;
-                                var __tame_fn_14 = function (__tame_k) {
+                                var __tame_fn_17 = function (__tame_k) {
                                     tame.setActiveCb (__tame_defer_cb);
                                     var __tame_defers = new tame.Deferrals (__tame_k);
-                                    var __tame_fn_15 = function (__tame_k) {
+                                    var __tame_fn_18 = function (__tame_k) {
                                         tame.setActiveCb (__tame_defer_cb);
                                         moquery . on ( 'end' ,
                                         __tame_defers.defer ( { 
@@ -439,18 +461,18 @@ var __tame_fn_0 = function (__tame_k) {
                                                 }
                                                 ,
                                             parent_cb : __tame_defer_cb,
-                                            line : 231,
+                                            line : 236,
                                             file : "web.tjs"
                                         } )
                                         ) ;
                                         tame.callChain([__tame_k]);
                                         tame.setActiveCb (null);
                                     };
-                                    __tame_fn_15(tame.end);
+                                    __tame_fn_18(tame.end);
                                     __tame_defers._fulfill();
                                     tame.setActiveCb (null);
                                 };
-                                var __tame_fn_33 = function (__tame_k) {
+                                var __tame_fn_36 = function (__tame_k) {
                                     tame.setActiveCb (__tame_defer_cb);
                                     var xoquery = client . query ( 'select * from team where event_id=$1 and gender=$2 and age=$3 limit 3' , [ event . id , 'mixed' , 'open' ] ,
                                     function  () {
@@ -461,13 +483,13 @@ var __tame_fn_0 = function (__tame_k) {
                                         addMembers ( members , row ) ;
                                     }
                                     ) ;
-                                    var __tame_fn_16 = function (__tame_k) {
+                                    var __tame_fn_19 = function (__tame_k) {
                                         tame.setActiveCb (__tame_defer_cb);
                                         var xo;
-                                        var __tame_fn_17 = function (__tame_k) {
+                                        var __tame_fn_20 = function (__tame_k) {
                                             tame.setActiveCb (__tame_defer_cb);
                                             var __tame_defers = new tame.Deferrals (__tame_k);
-                                            var __tame_fn_18 = function (__tame_k) {
+                                            var __tame_fn_21 = function (__tame_k) {
                                                 tame.setActiveCb (__tame_defer_cb);
                                                 xoquery . on ( 'end' ,
                                                 __tame_defers.defer ( { 
@@ -477,18 +499,18 @@ var __tame_fn_0 = function (__tame_k) {
                                                         }
                                                         ,
                                                     parent_cb : __tame_defer_cb,
-                                                    line : 234,
+                                                    line : 239,
                                                     file : "web.tjs"
                                                 } )
                                                 ) ;
                                                 tame.callChain([__tame_k]);
                                                 tame.setActiveCb (null);
                                             };
-                                            __tame_fn_18(tame.end);
+                                            __tame_fn_21(tame.end);
                                             __tame_defers._fulfill();
                                             tame.setActiveCb (null);
                                         };
-                                        var __tame_fn_32 = function (__tame_k) {
+                                        var __tame_fn_35 = function (__tame_k) {
                                             tame.setActiveCb (__tame_defer_cb);
                                             var woquery = client . query ( 'select * from team where event_id=$1 and gender=$2 and age=$3 limit 3' , [ event . id , 'women' , 'open' ] ,
                                             function  () {
@@ -499,13 +521,13 @@ var __tame_fn_0 = function (__tame_k) {
                                                 addMembers ( members , row ) ;
                                             }
                                             ) ;
-                                            var __tame_fn_19 = function (__tame_k) {
+                                            var __tame_fn_22 = function (__tame_k) {
                                                 tame.setActiveCb (__tame_defer_cb);
                                                 var wo;
-                                                var __tame_fn_20 = function (__tame_k) {
+                                                var __tame_fn_23 = function (__tame_k) {
                                                     tame.setActiveCb (__tame_defer_cb);
                                                     var __tame_defers = new tame.Deferrals (__tame_k);
-                                                    var __tame_fn_21 = function (__tame_k) {
+                                                    var __tame_fn_24 = function (__tame_k) {
                                                         tame.setActiveCb (__tame_defer_cb);
                                                         woquery . on ( 'end' ,
                                                         __tame_defers.defer ( { 
@@ -515,18 +537,18 @@ var __tame_fn_0 = function (__tame_k) {
                                                                 }
                                                                 ,
                                                             parent_cb : __tame_defer_cb,
-                                                            line : 237,
+                                                            line : 242,
                                                             file : "web.tjs"
                                                         } )
                                                         ) ;
                                                         tame.callChain([__tame_k]);
                                                         tame.setActiveCb (null);
                                                     };
-                                                    __tame_fn_21(tame.end);
+                                                    __tame_fn_24(tame.end);
                                                     __tame_defers._fulfill();
                                                     tame.setActiveCb (null);
                                                 };
-                                                var __tame_fn_31 = function (__tame_k) {
+                                                var __tame_fn_34 = function (__tame_k) {
                                                     tame.setActiveCb (__tame_defer_cb);
                                                     var counters = { all : 0 , MO : 0 , XO : 0 , WO : 0 , MV : 0 , XV : 0 , WV : 0 , MSV : 0 , XSV : 0 , WSV : 0 , MUV : 0 , XUV : 0 , WUV : 0 , MJ : 0 , XJ : 0 , WJ : 0 , M20 : 0 , X20 : 0 , W20 : 0 , M23 : 0 , X23 : 0 , W23 : 0 } ;
                                                     
@@ -584,13 +606,13 @@ var __tame_fn_0 = function (__tame_k) {
                                                         }
                                                     }
                                                     ) ;
-                                                    var __tame_fn_22 = function (__tame_k) {
+                                                    var __tame_fn_25 = function (__tame_k) {
                                                         tame.setActiveCb (__tame_defer_cb);
                                                         var teams;
-                                                        var __tame_fn_23 = function (__tame_k) {
+                                                        var __tame_fn_26 = function (__tame_k) {
                                                             tame.setActiveCb (__tame_defer_cb);
                                                             var __tame_defers = new tame.Deferrals (__tame_k);
-                                                            var __tame_fn_24 = function (__tame_k) {
+                                                            var __tame_fn_27 = function (__tame_k) {
                                                                 tame.setActiveCb (__tame_defer_cb);
                                                                 teamquery . on ( 'end' ,
                                                                 __tame_defers.defer ( { 
@@ -600,23 +622,23 @@ var __tame_fn_0 = function (__tame_k) {
                                                                         }
                                                                         ,
                                                                     parent_cb : __tame_defer_cb,
-                                                                    line : 276,
+                                                                    line : 281,
                                                                     file : "web.tjs"
                                                                 } )
                                                                 ) ;
                                                                 tame.callChain([__tame_k]);
                                                                 tame.setActiveCb (null);
                                                             };
-                                                            __tame_fn_24(tame.end);
+                                                            __tame_fn_27(tame.end);
                                                             __tame_defers._fulfill();
                                                             tame.setActiveCb (null);
                                                         };
-                                                        var __tame_fn_30 = function (__tame_k) {
+                                                        var __tame_fn_33 = function (__tame_k) {
                                                             tame.setActiveCb (__tame_defer_cb);
                                                             var validCategories = [ ] , activeCategory = null ;
-                                                            var __tame_fn_25 = function (__tame_k) {
+                                                            var __tame_fn_28 = function (__tame_k) {
                                                                 tame.setActiveCb (__tame_defer_cb);
-                                                                var __tame_fn_26 = function (__tame_k) {
+                                                                var __tame_fn_29 = function (__tame_k) {
                                                                     tame.setActiveCb (__tame_defer_cb);
                                                                      for (var key in categories) {
                                                                         if (categories . hasOwnProperty ( key ) && counters [ key ] > 0) {
@@ -631,22 +653,22 @@ var __tame_fn_0 = function (__tame_k) {
                                                                     tame.callChain([__tame_k]);
                                                                     tame.setActiveCb (null);
                                                                 };
-                                                                var __tame_fn_27 = function (__tame_k) {
+                                                                var __tame_fn_30 = function (__tame_k) {
                                                                     tame.setActiveCb (__tame_defer_cb);
-                                                                    var __tame_fn_28 = function (__tame_k) {
+                                                                    var __tame_fn_31 = function (__tame_k) {
                                                                         tame.setActiveCb (__tame_defer_cb);
                                                                         res . redirect ( '/results' ) ;
                                                                         tame.callChain([__tame_k]);
                                                                         tame.setActiveCb (null);
                                                                     };
                                                                     if (req . query . category != activeCategory) {
-                                                                        tame.callChain([__tame_fn_28, __tame_k]);
+                                                                        tame.callChain([__tame_fn_31, __tame_k]);
                                                                     } else {
                                                                         tame.callChain([__tame_k]);
                                                                     }
                                                                     tame.setActiveCb (null);
                                                                 };
-                                                                var __tame_fn_29 = function (__tame_k) {
+                                                                var __tame_fn_32 = function (__tame_k) {
                                                                     tame.setActiveCb (__tame_defer_cb);
                                                                     res . render ( 'results' , {
                                                                     title : 'Results of ' + event . name ,
@@ -663,43 +685,43 @@ var __tame_fn_0 = function (__tame_k) {
                                                                     tame.callChain([__tame_k]);
                                                                     tame.setActiveCb (null);
                                                                 };
-                                                                tame.callChain([__tame_fn_26, __tame_fn_27, __tame_fn_29, __tame_k]);
+                                                                tame.callChain([__tame_fn_29, __tame_fn_30, __tame_fn_32, __tame_k]);
                                                                 tame.setActiveCb (null);
                                                             };
-                                                            tame.callChain([__tame_fn_25, __tame_k]);
+                                                            tame.callChain([__tame_fn_28, __tame_k]);
                                                             tame.setActiveCb (null);
                                                         };
-                                                        tame.callChain([__tame_fn_23, __tame_fn_30, __tame_k]);
+                                                        tame.callChain([__tame_fn_26, __tame_fn_33, __tame_k]);
                                                         tame.setActiveCb (null);
                                                     };
-                                                    tame.callChain([__tame_fn_22, __tame_k]);
+                                                    tame.callChain([__tame_fn_25, __tame_k]);
                                                     tame.setActiveCb (null);
                                                 };
-                                                tame.callChain([__tame_fn_20, __tame_fn_31, __tame_k]);
+                                                tame.callChain([__tame_fn_23, __tame_fn_34, __tame_k]);
                                                 tame.setActiveCb (null);
                                             };
-                                            tame.callChain([__tame_fn_19, __tame_k]);
+                                            tame.callChain([__tame_fn_22, __tame_k]);
                                             tame.setActiveCb (null);
                                         };
-                                        tame.callChain([__tame_fn_17, __tame_fn_32, __tame_k]);
+                                        tame.callChain([__tame_fn_20, __tame_fn_35, __tame_k]);
                                         tame.setActiveCb (null);
                                     };
-                                    tame.callChain([__tame_fn_16, __tame_k]);
+                                    tame.callChain([__tame_fn_19, __tame_k]);
                                     tame.setActiveCb (null);
                                 };
-                                tame.callChain([__tame_fn_14, __tame_fn_33, __tame_k]);
+                                tame.callChain([__tame_fn_17, __tame_fn_36, __tame_k]);
                                 tame.setActiveCb (null);
                             };
-                            tame.callChain([__tame_fn_13, __tame_k]);
+                            tame.callChain([__tame_fn_16, __tame_k]);
                             tame.setActiveCb (null);
                         };
-                        tame.callChain([__tame_fn_11, __tame_fn_34, __tame_k]);
+                        tame.callChain([__tame_fn_14, __tame_fn_37, __tame_k]);
                         tame.setActiveCb (null);
                     };
-                    tame.callChain([__tame_fn_10, __tame_k]);
+                    tame.callChain([__tame_fn_13, __tame_k]);
                     tame.setActiveCb (null);
                 };
-                tame.callChain([__tame_fn_8, __tame_fn_35, __tame_k]);
+                tame.callChain([__tame_fn_8, __tame_fn_10, __tame_fn_38, __tame_k]);
                 tame.setActiveCb (null);
             };
             tame.callChain([__tame_fn_7, __tame_k]);
