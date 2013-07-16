@@ -382,7 +382,6 @@ var __tame_fn_0 = function (__tame_k) {
                 };
                 var __tame_fn_35 = function (__tame_k) {
                     tame.setActiveCb (__tame_defer_cb);
-                    console . log ( eventdata , row ) ;
                     var event = eventdata . rows [ 0 ] ;
                     var __tame_fn_10 = function (__tame_k) {
                         tame.setActiveCb (__tame_defer_cb);
@@ -401,7 +400,7 @@ var __tame_fn_0 = function (__tame_k) {
                                         }
                                         ,
                                     parent_cb : __tame_defer_cb,
-                                    line : 228,
+                                    line : 227,
                                     file : "web.tjs"
                                 } )
                                 ) ;
@@ -440,7 +439,7 @@ var __tame_fn_0 = function (__tame_k) {
                                                 }
                                                 ,
                                             parent_cb : __tame_defer_cb,
-                                            line : 232,
+                                            line : 231,
                                             file : "web.tjs"
                                         } )
                                         ) ;
@@ -478,7 +477,7 @@ var __tame_fn_0 = function (__tame_k) {
                                                         }
                                                         ,
                                                     parent_cb : __tame_defer_cb,
-                                                    line : 235,
+                                                    line : 234,
                                                     file : "web.tjs"
                                                 } )
                                                 ) ;
@@ -516,7 +515,7 @@ var __tame_fn_0 = function (__tame_k) {
                                                                 }
                                                                 ,
                                                             parent_cb : __tame_defer_cb,
-                                                            line : 238,
+                                                            line : 237,
                                                             file : "web.tjs"
                                                         } )
                                                         ) ;
@@ -601,7 +600,7 @@ var __tame_fn_0 = function (__tame_k) {
                                                                         }
                                                                         ,
                                                                     parent_cb : __tame_defer_cb,
-                                                                    line : 277,
+                                                                    line : 276,
                                                                     file : "web.tjs"
                                                                 } )
                                                                 ) ;
