@@ -657,7 +657,7 @@ var __tame_fn_0 = function (__tame_k) {
                                                                     tame.setActiveCb (__tame_defer_cb);
                                                                     var __tame_fn_31 = function (__tame_k) {
                                                                         tame.setActiveCb (__tame_defer_cb);
-                                                                        res . redirect ( '/results' ) ;
+                                                                        res . redirect ( req . _parsedUrl . pathname ) ;
                                                                         tame.callChain([__tame_k]);
                                                                         tame.setActiveCb (null);
                                                                     };

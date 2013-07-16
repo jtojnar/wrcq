@@ -290,7 +290,7 @@ app.get('/events/:event/results', function(req, res) {
 			}
 		}
 		if(req.query.category != activeCategory) {
-			res.redirect('/results');
+			res.redirect(req._parsedUrl.pathname);
 		}
 
 		res.render('results', {
