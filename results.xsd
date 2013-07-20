@@ -5,12 +5,12 @@
 				<xs:element name="team" maxOccurs="unbounded">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="member" maxOccurs="5" minOccurs="2"><!-- 5 is for legacy reasons see http://wrcq.rogaining.cz/standard/results/0.1#member -->
+							<xs:element name="member" maxOccurs="5" minOccurs="1"><!-- 5 is for legacy reasons see http://wrcq.rogaining.cz/standard/results/0.1#member -->
 								<xs:complexType>
 									<xs:simpleContent>
 										<xs:extension base="xs:string">
-											<xs:attribute type="xs:string" name="firstname" use="required"/>
-											<xs:attribute type="xs:string" name="lastname" use="required"/>
+											<xs:attribute type="xs:string" name="firstname" use="required" />
+											<xs:attribute type="xs:string" name="lastname" use="required" />
 											<xs:attribute name="country" use="required">
 												<xs:simpleType>
 													<xs:restriction base="xs:string">
@@ -37,22 +37,33 @@
 						<xs:attribute name="gender" use="required">
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
-									<xs:enumeration value="men" /> 
-									<xs:enumeration value="mixed" /> 
-									<xs:enumeration value="women" /> 
+									<xs:enumeration value="men" />
+									<xs:enumeration value="mixed" />
+									<xs:enumeration value="women" />
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
 						<xs:attribute name="age" use="required">
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
-									<xs:enumeration value="open" /> 
-									<xs:enumeration value="veteran" /> 
-									<xs:enumeration value="superveteran" /> 
-									<xs:enumeration value="ultraveteran" /> 
-									<xs:enumeration value="junior" /> 
-									<xs:enumeration value="under20" /> 
-									<xs:enumeration value="under23" /> 
+									<xs:enumeration value="open" />
+									<xs:enumeration value="veteran" />
+									<xs:enumeration value="superveteran" />
+									<xs:enumeration value="ultraveteran" />
+									<xs:enumeration value="junior" />
+									<xs:enumeration value="under20" />
+									<xs:enumeration value="under23" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="status" default="finished">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="not started" />
+									<xs:enumeration value="not finished" />
+									<xs:enumeration value="overtime" />
+									<xs:enumeration value="disqualified" />
+									<xs:enumeration value="finished" />
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>

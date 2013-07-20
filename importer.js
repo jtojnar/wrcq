@@ -8,13 +8,13 @@ var fs = require('fs');
 var moment = require('moment');
 var parseString = require('xml2js').parseString;
 
-var event = { id: 3 };
+var event = { id: 11 };
 
-pg.connect(_dbUri, function(err, client) {
-	if(err) { return done(err, false); }
+pg.connect(_dbUri, function(err, client, done) {
+	if(err) { return console.log(err); }
 	client.query('begin');
 
-	fs.readFile(__dirname + '/results.xml', function(err, data) {
+	fs.readFile(__dirname + '/resultsbroumy.xml', function(err, data) {
 		parseString(data, function (err, results) {
 			var teams = results.results.team;
 			for(var i = 0, j = teams.length; i<j; i++) {
@@ -22,7 +22,7 @@ pg.connect(_dbUri, function(err, client) {
 				team.event_id = event.id;
 				team.duration = team.duration ? team.duration : 24;
 
-				var query = client.query('insert into team(id, event_id, score, time, penalty, duration, gender, age) values($1, $2, $3, $4, $5, $6, $7, $8)', [team.id, team.event_id, team.score, team.time, team.penalty, team.duration, team.gender, team.age]);
+				var query = client.query('insert into team(id, event_id, score, time, penalty, duration, gender, age, status) values($1, $2, $3, $4, $5, $6, $7, $8, $9)', [team.id, team.event_id, team.score, team.time, team.penalty, team.duration, team.gender, team.age, team.status || 'finished']);
 
 				var members = teams[i].member;
 				for(var k = 0, l = members.length; k<l; k++) {
@@ -33,6 +33,8 @@ pg.connect(_dbUri, function(err, client) {
 				}
 			}
 			client.query('commit');
+			done();
 		});
 	});
 });
+pg.end();

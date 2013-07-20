@@ -3,16 +3,27 @@
 var express = require('express');
 var path = require('path');
 var fs = require('fs');
+var url = require('url');
 
 var parseString = require('xml2js').parseString;
 
-var passport = require('passport'),
-	LocalStrategy = require('passport-local').Strategy,
-	crypto = require('crypto'),
-	flash = require('connect-flash'),
-	sha1 = function(d) {
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
+var crypto = require('crypto');
+var flash = require('connect-flash');
+var sha1 = function(d) {
 		return crypto.createHash('sha1').update(d).digest('hex');
 	};
+
+function increment(obj, alpha, beta) {
+	if(!obj.hasOwnProperty(alpha)) {
+		obj[alpha] = {};
+	}
+	if(!obj[alpha].hasOwnProperty(beta)) {
+		obj[alpha][beta] = 0;
+	}
+	return ++obj[alpha][beta];
+}
 
 var _dbUri = process.env.HEROKU_POSTGRESQL_COPPER_URL;
 
@@ -20,14 +31,19 @@ passport.serializeUser(function(user, done) {
 	done(null, user.id);
 });
 passport.deserializeUser(function(id, done) {
-	pg.connect(_dbUri, function(err, client) {
-		if(err) {return done(err, false);}
+	pg.connect(_dbUri, function(err, client, pgdone) {
+		if(err) {
+			pgdone();
+			return done(err, false);
+		}
 
-		client.query('select * from "user" where "id"=$1', [id], function(result) {
-			if(result.rowCount == 0) {return done(err, false);}
-			var user = result.rows[0];
-			return done(err, user);
-		});
+		await client.query('select * from "user" where "id"=$1', [id], defer(row, result));
+		pgdone();
+		if(result.rowCount == 0) {
+			return done(err, false);
+		}
+		var user = result.rows[0];
+		return done(err, user);
 	});
 });
 
@@ -36,15 +52,22 @@ passport.deserializeUser(function(id, done) {
 passport.use(new LocalStrategy(
 	function(email, password, done) {
 		process.nextTick(function () {
-			pg.connect(_dbUri, function(err, client) {
-				if(err) {return done(err);}
+			pg.connect(_dbUri, function(err, client, pgdone) {
+				if(err) {
+					pgdone();
+					return done(err);
+				}
 
-				client.query('select * from "user" where "email"=$1', [email], function(result) {
-					if(result.rowCount == 0) {return done(null, false, {message: 'Unknown user ' + email});}
-					var user = result.rows[0];
-					if(user.password != sha1(password+user.salt)) {return done(null, false, {message: 'Invalid password'});}
-					return done(null, user);
-				});
+				await client.query('select * from "user" where "email"=$1', [email], defer(row, result));
+				pgdone();
+				if(result.rowCount == 0) {
+					return done(null, false, {message: 'Unknown user ' + email});
+				}
+				var user = result.rows[0];
+				if(user.password != sha1(password+user.salt)) {
+					return done(null, false, {message: 'Invalid password'});
+				}
+				return done(null, user);
 			});
 		});
 	}
@@ -191,9 +214,10 @@ app.configure('development', function() {
 
 
 app.get('/', function(req, res) {
-	pg.connect(_dbUri, function(err, client) {
+	pg.connect(_dbUri, function(err, client, done) {
 		await client.query('select * from update order by timestamp desc limit 10', defer(var row, updates));
 		await client.query('select * from event order by start asc', defer(var row, events));
+		done();
 		res.render('index', {updates: updates.rows, events: events.rows, identity: req.user});
 	});
 });
@@ -217,12 +241,13 @@ function addMembers(members, row) {
 	// mcache = [];
 }
 
-var categories = {MO: {age: 'open', gender: 'men'}, XO: {age: 'open', gender: 'mixed'}, WO: {age: 'open', gender: 'women'}, MV: {age: 'veteran', gender: 'men'}, XV: {age: 'veteran', gender: 'mixed'}, WV: {age: 'veteran', gender: 'women'}, MSV: {age: 'superveteran', gender: 'men'}, XSV: {age: 'superveteran', gender: 'mixed'}, WSV: {age: 'superveteran', gender: 'women'}, MUV: {age: 'ultraveteran', gender: 'men'}, XUV: {age: 'ultraveteran', gender: 'mixed'}, WUV: {age: 'ultraveteran', gender: 'women'}, MJ: {age: 'junior', gender: 'men'}, XJ: {age: 'junior', gender: 'mixed'}, WJ: {age: 'junior', gender: 'women'}, M20: {age: 'under20', gender: 'men'}, X20: {age: 'under20', gender: 'mixed'}, W20: {age: 'under20', gender: 'women'}, M23: {age: 'under23', gender: 'men'}, X23: {age: 'under23', gender: 'mixed'}, W23: {age: 'under23', gender: 'women'}};
+// var categories = {MO: {age: 'open', gender: 'men'}, XO: {age: 'open', gender: 'mixed'}, WO: {age: 'open', gender: 'women'}, MV: {age: 'veteran', gender: 'men'}, XV: {age: 'veteran', gender: 'mixed'}, WV: {age: 'veteran', gender: 'women'}, MSV: {age: 'superveteran', gender: 'men'}, XSV: {age: 'superveteran', gender: 'mixed'}, WSV: {age: 'superveteran', gender: 'women'}, MUV: {age: 'ultraveteran', gender: 'men'}, XUV: {age: 'ultraveteran', gender: 'mixed'}, WUV: {age: 'ultraveteran', gender: 'women'}, MJ: {age: 'junior', gender: 'men'}, XJ: {age: 'junior', gender: 'mixed'}, WJ: {age: 'junior', gender: 'women'}, M20: {age: 'under20', gender: 'men'}, X20: {age: 'under20', gender: 'mixed'}, W20: {age: 'under20', gender: 'women'}, M23: {age: 'under23', gender: 'men'}, X23: {age: 'under23', gender: 'mixed'}, W23: {age: 'under23', gender: 'women'}};
 
 app.get('/events/:event/results', function(req, res) {
-	pg.connect(_dbUri, function(err, client) {
+	pg.connect(_dbUri, function(err, client, done) {
 		await client.query('select * from event where slug=$1 limit 1', [req.params.event], defer(var row, eventdata));
 		if(eventdata.rows.length == 0) {
+			done();
 			res.status(404);
 			res.render('error/404', {body: 'Sorry, this event is not in our database, we may be working on it.'});
 			return;
@@ -231,68 +256,90 @@ app.get('/events/:event/results', function(req, res) {
 
 		await client.query('select * from member where event_id=$1', [event.id], defer(var row, members));
 		members = members.rows;
-		var moquery = client.query('select * from team where event_id=$1 and gender=$2 and age=$3 limit 3', [event.id, 'men', 'open'], function() {});
+		var moquery = client.query('select * from team where event_id=$1 and gender=$2 and age=$3 order by status=\'finished\' desc, score desc, time asc limit 3', [event.id, 'men', 'open'], function() {});
 		moquery.on('row', function(row) {addMembers(members, row);});
 		await moquery.on('end', defer(var mo));
-		var xoquery = client.query('select * from team where event_id=$1 and gender=$2 and age=$3 limit 3', [event.id, 'mixed', 'open'], function() {});
+		var xoquery = client.query('select * from team where event_id=$1 and gender=$2 and age=$3 order by status=\'finished\' desc, score desc, time asc limit 3', [event.id, 'mixed', 'open'], function() {});
 		xoquery.on('row', function(row) {addMembers(members, row);});
 		await xoquery.on('end', defer(var xo));
-		var woquery = client.query('select * from team where event_id=$1 and gender=$2 and age=$3 limit 3', [event.id, 'women', 'open'], function() {});
+		var woquery = client.query('select * from team where event_id=$1 and gender=$2 and age=$3 order by status=\'finished\' desc, score desc, time asc limit 3', [event.id, 'women', 'open'], function() {});
 		woquery.on('row', function(row) {addMembers(members, row);});
 		await woquery.on('end', defer(var wo));
 		
-		var counters = {all: 0, MO: 0, XO: 0, WO: 0, MV: 0, XV: 0, WV: 0, MSV: 0, XSV: 0, WSV: 0, MUV: 0, XUV: 0, WUV: 0, MJ: 0, XJ: 0, WJ: 0, M20: 0, X20: 0, W20: 0, M23: 0, X23: 0, W23: 0};
+		var counters = {};
+		var durations = [];
+		var categories = [];
 
-		var teamquery = client.query('select * from team where event_id=$1', [event.id]);
+		var teamquery = client.query('select * from team where event_id=$1 order by status=\'finished\' desc, score desc, time asc', [event.id]);
 		teamquery.on('row', function(row) {addMembers(members, row);});
 		teamquery.on('row', function(row, result) {
-			if(row.duration == 24) {
-				row.duration = '';
-				var gender = hbs.handlebars.helpers.genderclass(row.gender);
-				
-				if(row.age == 'ultraveteran') {
-					row[gender+'UV'] = ++counters[gender+'UV'];
-					row[gender+'SV'] = ++counters[gender+'SV'];
-					row[gender+'V'] = ++counters[gender+'V'];
-					row[gender+'O'] = ++counters[gender+'O'];
-				} else if(row.age == 'superveteran') {
-					row[gender+'SV'] = ++counters[gender+'SV'];
-					row[gender+'V'] = ++counters[gender+'V'];
-					row[gender+'O'] = ++counters[gender+'O'];
-				} else if(row.age == 'veteran') {
-					row[gender+'V'] = ++counters[gender+'V'];
-					row[gender+'O'] = ++counters[gender+'O'];
-				} else if(row.age == 'open') {
-					row[gender+'O'] = ++counters[gender+'O'];
-				} else if(row.age == 'junior') {
-					row[gender+'J'] = ++counters[gender+'J'];
-				} else if(row.age == 'under23') {
-					row[gender+'23'] = ++counters[gender+'23'];
-				} else if(row.age == 'under20') {
-					row[gender+'20'] = ++counters[gender+'20'];
-				}
-			}
-			row['place'] = ++counters['all'];
+			var gender = hbs.handlebars.helpers.genderclass(row.gender);
+			var age = hbs.handlebars.helpers.ageclass(row.age);
+			row.category = gender+age;
 
-			if(!req.query.category || (req.query.category && categories[req.query.category].gender === row.gender && categories[req.query.category].age === row.age)) {
+			if(durations.indexOf(row.duration) < 0) {
+				durations.push(row.duration);
+			}
+			if(categories.indexOf(row.category) < 0) {
+				categories.push(row.category);
+			}
+			
+			if(row.age == 'ultraveteran') {
+				row[gender+'UV'] = increment(counters, row.duration, gender+'UV');
+				row[gender+'SV'] = increment(counters, row.duration, gender+'SV');
+				row[gender+'V'] = increment(counters, row.duration, gender+'V');
+				row[gender+'O'] = increment(counters, row.duration, gender+'O');
+			} else if(row.age == 'superveteran') {
+				row[gender+'SV'] = increment(counters, row.duration, gender+'SV');
+				row[gender+'V'] = increment(counters, row.duration, gender+'V');
+				row[gender+'O'] = increment(counters, row.duration, gender+'O');
+			} else if(row.age == 'veteran') {
+				row[gender+'V'] = increment(counters, row.duration, gender+'V');
+				row[gender+'O'] = increment(counters, row.duration, gender+'O');
+			} else if(row.age == 'open') {
+				row[gender+'O'] = increment(counters, row.duration, gender+'O');
+			} else if(row.age == 'junior') {
+				row[gender+'J'] = increment(counters, row.duration, gender+'J');
+			} else if(row.age == 'under23') {
+				row[gender+'23'] = increment(counters, row.duration, gender+'23');
+			} else if(row.age == 'under20') {
+				row[gender+'20'] = increment(counters, row.duration, gender+'20');
+			}
+			row['place'] = increment(counters, row.duration, 'all');
+
+			if(!req.query.category || req.query.category === row.category) {
 				result.addRow(row);
 			}
 		});
 		await teamquery.on('end', defer(var teams));
+		done();
 
-		var validCategories = [], activeCategory = null;
-		for(var key in categories){
-			if(categories.hasOwnProperty(key) && counters[key] > 0) {
-				validCategories.push(key);
-				if(key === req.query.category) {
-					activeCategory = key;
-				}
+		var activeCategory = null;
+		var activeDuration = null;
+		var maxDuration = Math.max.apply(null, durations);
+		var invalidCategory = (req.query.hasOwnProperty('category') && categories.indexOf(req.query.category) < 0);
+		var invalidDuration = (req.query.hasOwnProperty('duration') && durations.indexOf(parseInt(req.query.duration)) < 0);
+		var defaultCategory = (req.query.hasOwnProperty('category') && req.query.category === '');
+		var defaultDuration = (req.query.hasOwnProperty('duration') && parseInt(req.query.duration) === maxDuration);
+
+		var query = {};
+		if(defaultCategory || defaultDuration) {
+			if(!defaultDuration) {
+				query.duration = req.query.duration;
 			}
+			if(!defaultCategory) {
+				query.category = req.query.category;
+			}
+			res.redirect(url.format({pathname: req._parsedUrl.pathname, query: query}));
+			return;
 		}
-		if(req.query.category != activeCategory) {
-			res.redirect(req._parsedUrl.pathname);
+		if(invalidDuration || invalidCategory) {
+			res.status(404);
+			res.render('error/404');
+			return;
 		}
 
+		var activeDuration = req.query.hasOwnProperty('duration') ? parseInt(req.query.duration) : maxDuration;
 		res.render('results', {
 			title: 'Results of ' + event.name,
 			event: event,
@@ -301,9 +348,11 @@ app.get('/events/:event/results', function(req, res) {
 			xo: {teams: xo.rows},
 			wo: {teams: wo.rows},
 			identity: req.user,
-			isMO: counters.MO, isXO: counters.XO, isWO: counters.WO, isMV: counters.MV, isXV: counters.XV, isWV: counters.WV, isMSV: counters.MSV, isXSV: counters.XSV, isWSV: counters.WSV, isMUV: counters.MUV, isXUV: counters.XUV, isWUV: counters.WUV, isMJ: counters.MJ, isXJ: counters.XJ, isWJ: counters.WJ, isM20: counters.M20, isX20: counters.X20, isW20: counters.W20, isM23: counters.M23, isX23: counters.X23, isW23: counters.W23,
-			activeCategory: activeCategory,
-			categories: validCategories
+			isMO: counters[activeDuration].MO, isXO: counters[activeDuration].XO, isWO: counters[activeDuration].WO, isMV: counters[activeDuration].MV, isXV: counters[activeDuration].XV, isWV: counters[activeDuration].WV, isMSV: counters[activeDuration].MSV, isXSV: counters[activeDuration].XSV, isWSV: counters[activeDuration].WSV, isMUV: counters[activeDuration].MUV, isXUV: counters[activeDuration].XUV, isWUV: counters[activeDuration].WUV, isMJ: counters[activeDuration].MJ, isXJ: counters[activeDuration].XJ, isWJ: counters[activeDuration].WJ, isM20: counters[activeDuration].M20, isX20: counters[activeDuration].X20, isW20: counters[activeDuration].W20, isM23: counters[activeDuration].M23, isX23: counters[activeDuration].X23, isW23: counters[activeDuration].W23,
+			activeCategory: req.query.hasOwnProperty('category') ? req.query.category : null,
+			categories: categories,
+			activeDuration: activeDuration,
+			durations: durations.length > 1 ? durations : null
 		});
 	});
 });
