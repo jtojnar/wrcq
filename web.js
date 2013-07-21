@@ -479,7 +479,7 @@ var __tame_fn_0 = function (__tame_k) {
                     var __tame_defers = new tame.Deferrals (__tame_k);
                     var __tame_fn_32 = function (__tame_k) {
                         tame.setActiveCb (__tame_defer_cb);
-                        client . query ( 'select * from event order by start asc' ,
+                        client . query ( 'select * from event where level=\'world\' order by start asc' ,
                         __tame_defers.defer ( { 
                             assign_fn : 
                                 function () {

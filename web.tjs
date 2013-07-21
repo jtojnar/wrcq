@@ -216,7 +216,7 @@ app.configure('development', function() {
 app.get('/', function(req, res) {
 	pg.connect(_dbUri, function(err, client, done) {
 		await client.query('select * from update order by timestamp desc limit 10', defer(var row, updates));
-		await client.query('select * from event order by start asc', defer(var row, events));
+		await client.query('select * from event where level=\'world\' order by start asc', defer(var row, events));
 		done();
 		res.render('index', {updates: updates.rows, events: events.rows, identity: req.user});
 	});
