@@ -22,7 +22,7 @@
 </div>
 <div class="tab-pane" id="all">
 <h2 class="pull-left">Overall results</h2>
-<div class="pull-right"><form class="form-inline sort-form" action="">{{#if durations}}<select name="duration" class="input-small" onchange="submit()">{{#durations}}<option value="{{this}}"{{#equals ../activeDuration this}} selected="selected"{{/equals}}>{{this}}</option>{{/durations}}</select>{{/if}}<select name="category" class="input-small" onchange="submit()"><option value=""{{#unless activeCategory}} selected="selected"{{/unless}}>all</option>{{#categories}}<option value="{{this}}"{{#equals ../activeCategory this}} selected="selected"{{/equals}}>{{this}}</option>{{/categories}}</select><noscript><button type="submit" class="btn btn-default btn-small">Filter</button></noscript></form></div>
+<div class="pull-right"><form class="form-inline sort-form" action="">{{#if durations}}<select name="duration" class="input-small" onchange="submit()">{{#durations}}<option value="{{this}}"{{#equals ../activeDuration this}} selected="selected"{{/equals}}>{{this}} hours</option>{{/durations}}</select>{{/if}}<select name="category" class="input-small" onchange="submit()"><option value=""{{#unless activeCategory}} selected="selected"{{/unless}}>all</option>{{#categories}}<option value="{{this}}"{{#equals ../activeCategory this}} selected="selected"{{/equals}}>{{this}}</option>{{/categories}}</select><noscript><button type="submit" class="btn btn-default btn-small">Filter</button></noscript></form></div>
 <br class="clearfix">
 {{> result}}
 </div>
