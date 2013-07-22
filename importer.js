@@ -1,5 +1,11 @@
 "use strict";
 
+if(process.argv.length < 4) {
+	console.log('Please provide sufficient number of arguments:̈́');
+	console.log('node importer <event_id> <xml_file>');
+	return;
+}
+
 var _dbUri = process.env.HEROKU_POSTGRESQL_COPPER_URL;
 
 var pg = require('pg');
@@ -8,7 +14,7 @@ var fs = require('fs');
 var moment = require('moment');
 var parseString = require('xml2js').parseString;
 
-var event = { id: 10 };
+var event = { id: process.argv[2] };
 var teamI = 0;
 var memberI = 0;
 
@@ -21,8 +27,7 @@ function recursive(teams, client, done) {
 		if(err) {
 			console.log(err);
 			client.query('rollback');
-			done();
-			return
+			return done();
 		}
 		memberI = 0;
 		if(teamI < teams.length) {
@@ -38,8 +43,7 @@ function mrecursive(teams, client, done, team, members) {
 		if(err) {
 			console.log(err);
 			client.query('rollback');
-			done();
-			return
+			return done();
 		}
 		if(memberI < members.length-1) {
 			memberI++;
@@ -50,8 +54,7 @@ function mrecursive(teams, client, done, team, members) {
 			return recursive(teams, client, done, team, members);
 		} else {
 			client.query('commit');
-			done();
-			return;
+			return done();
 		}
 	});
 }
@@ -59,11 +62,15 @@ function mrecursive(teams, client, done, team, members) {
 pg.connect(_dbUri, function(err, client, done) {
 	client.query('begin');
 
-	fs.readFile(__dirname + '/wrc2012.xml', function(err, data) {
+	fs.readFile(process.cwd() + '/' + process.argv[3], function(err, data) {
+		if(err) {
+			console.log(err);
+			return done();
+		}
 		parseString(data, function(err, results) {
 			if(err) {
 				console.log(err);
-				return;
+				return done();
 			}
 			var teams = results.results.team;
 			return recursive(teams, client, done);
