@@ -106,6 +106,17 @@ hbs.registerHelper('index', function(index, context) {
 	return index+1;
 });
 
+function pad(number, digits) {
+	number = "" + number;
+	while(number.length < digits) {
+		number = "0" + number;
+	}
+	return number;
+}
+hbs.registerHelper('time', function(time, context) {
+	return pad((time.days||0)*24 + (time.hours||0), 2) + ':' + pad(time.minutes||0, 2) + ':' + pad(time.seconds||0, 2);
+});
+
 var genderclass = {
 	'men': 'M',
 	'women': 'W',
@@ -283,7 +294,6 @@ app.get('/events/:event/results', function(req, res) {
 			if(categories.indexOf(row.category) < 0) {
 				categories.push(row.category);
 			}
-			
 			if(row.age == 'ultraveteran') {
 				row[gender+'UV'] = increment(counters, row.duration, gender+'UV');
 				row[gender+'SV'] = increment(counters, row.duration, gender+'SV');

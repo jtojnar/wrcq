@@ -312,6 +312,18 @@ var __tame_fn_0 = function (__tame_k) {
         return index +1;
     }
     ) ;
+    function pad (number, digits) {
+        number = "" + number ;
+        while (number . length < digits) {
+            number = "0" + number ;
+        }
+        return number;
+    }
+    hbs . registerHelper ( 'time' ,
+    function  (time, context) {
+        return pad ( ( time . days ||0 ) *24 + ( time . hours ||0 ) , 2 ) + ':' + pad ( time . minutes ||0 , 2 ) + ':' + pad ( time . seconds ||0 , 2 );
+    }
+    ) ;
     
     var genderclass = {
     'men' : 'M' ,
@@ -462,7 +474,7 @@ var __tame_fn_0 = function (__tame_k) {
                                 }
                                 ,
                             parent_cb : __tame_defer_cb,
-                            line : 218,
+                            line : 229,
                             file : "web.tjs"
                         } )
                         ) ;
@@ -488,7 +500,7 @@ var __tame_fn_0 = function (__tame_k) {
                                 }
                                 ,
                             parent_cb : __tame_defer_cb,
-                            line : 219,
+                            line : 230,
                             file : "web.tjs"
                         } )
                         ) ;
@@ -555,7 +567,7 @@ var __tame_fn_0 = function (__tame_k) {
                                 }
                                 ,
                             parent_cb : __tame_defer_cb,
-                            line : 248,
+                            line : 259,
                             file : "web.tjs"
                         } )
                         ) ;
@@ -609,7 +621,7 @@ var __tame_fn_0 = function (__tame_k) {
                                         }
                                         ,
                                     parent_cb : __tame_defer_cb,
-                                    line : 257,
+                                    line : 268,
                                     file : "web.tjs"
                                 } )
                                 ) ;
@@ -648,7 +660,7 @@ var __tame_fn_0 = function (__tame_k) {
                                                 }
                                                 ,
                                             parent_cb : __tame_defer_cb,
-                                            line : 261,
+                                            line : 272,
                                             file : "web.tjs"
                                         } )
                                         ) ;
@@ -686,7 +698,7 @@ var __tame_fn_0 = function (__tame_k) {
                                                         }
                                                         ,
                                                     parent_cb : __tame_defer_cb,
-                                                    line : 264,
+                                                    line : 275,
                                                     file : "web.tjs"
                                                 } )
                                                 ) ;
@@ -724,7 +736,7 @@ var __tame_fn_0 = function (__tame_k) {
                                                                 }
                                                                 ,
                                                             parent_cb : __tame_defer_cb,
-                                                            line : 267,
+                                                            line : 278,
                                                             file : "web.tjs"
                                                         } )
                                                         ) ;
@@ -817,7 +829,7 @@ var __tame_fn_0 = function (__tame_k) {
                                                                         }
                                                                         ,
                                                                     parent_cb : __tame_defer_cb,
-                                                                    line : 314,
+                                                                    line : 324,
                                                                     file : "web.tjs"
                                                                 } )
                                                                 ) ;
