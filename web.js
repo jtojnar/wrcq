@@ -849,7 +849,6 @@ var __tame_fn_0 = function (__tame_k) {
                                                                     tame.setActiveCb (__tame_defer_cb);
                                                                     var __tame_fn_58 = function (__tame_k) {
                                                                         tame.setActiveCb (__tame_defer_cb);
-                                                                        done ( ) ;
                                                                         res . status ( 404 ) ;
                                                                         res . render ( 'error/404' , { body : 'Sorry, this event has no results (yet). We are working on it in this very moment.' } ) ;
                                                                         var __tame_fn_57 = function (__tame_k) {
