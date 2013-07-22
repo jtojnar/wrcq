@@ -753,6 +753,8 @@ var __tame_fn_0 = function (__tame_k) {
                                                     var durations = [ ] ;
                                                     var categories = [ ] ;
                                                     
+                                                    var defaultDuration = 24 ;
+                                                    
                                                     var teamquery = client . query ( 'select * from team where event_id=$1 order by status=\'finished\' desc, score desc, time asc' , [ event . id ] ) ;
                                                     teamquery . on ( 'row' ,
                                                     function  (row) {
@@ -807,7 +809,11 @@ var __tame_fn_0 = function (__tame_k) {
                                                             }
                                                         }
                                                         row [ 'place' ] = increment ( counters , row . duration , 'all' ) ;
-                                                        if (! req . query . category || req . query . category === row . category) {
+                                                        
+                                                        var currentCategoryIsActive = ( req . query . category === row . category ) ;
+                                                        var currentDurationIsDefault = ( ! req . query . duration && defaultDuration === row . duration ) ;
+                                                        var currentDurationIsActive = ( parseInt ( req . query . duration ) === row . duration ) ;
+                                                        if (( ! req . query . category || currentCategoryIsActive ) && ( currentDurationIsDefault || currentDurationIsActive )) {
                                                             result . addRow ( row ) ;
                                                         } else {
                                                         }
@@ -829,7 +835,7 @@ var __tame_fn_0 = function (__tame_k) {
                                                                         }
                                                                         ,
                                                                     parent_cb : __tame_defer_cb,
-                                                                    line : 324,
+                                                                    line : 329,
                                                                     file : "web.tjs"
                                                                 } )
                                                                 ) ;
@@ -860,7 +866,7 @@ var __tame_fn_0 = function (__tame_k) {
                                                                         tame.callChain([__tame_fn_57, __tame_k]);
                                                                         tame.setActiveCb (null);
                                                                     };
-                                                                    if (teams . rows . length == 0) {
+                                                                    if (teams . rowCount == 0) {
                                                                         tame.callChain([__tame_fn_58, __tame_k]);
                                                                     } else {
                                                                         tame.callChain([__tame_k]);
@@ -871,11 +877,10 @@ var __tame_fn_0 = function (__tame_k) {
                                                                     tame.setActiveCb (__tame_defer_cb);
                                                                     var activeCategory = null ;
                                                                     var activeDuration = null ;
-                                                                    var maxDuration = Math . max . apply ( null , durations ) ;
-                                                                    var invalidCategory = ( req . query . hasOwnProperty ( 'category' ) && categories . indexOf ( req . query . category ) < 0 ) ;
-                                                                    var invalidDuration = ( req . query . hasOwnProperty ( 'duration' ) && durations . indexOf ( parseInt ( req . query . duration ) ) < 0 ) ;
-                                                                    var defaultCategory = ( req . query . hasOwnProperty ( 'category' ) && req . query . category === '' ) ;
-                                                                    var defaultDuration = ( req . query . hasOwnProperty ( 'duration' ) && parseInt ( req . query . duration ) === maxDuration ) ;
+                                                                    var isCategoryInvalid = ( req . query . hasOwnProperty ( 'category' ) && categories . indexOf ( req . query . category ) < 0 ) ;
+                                                                    var isDurationInvalid = ( req . query . hasOwnProperty ( 'duration' ) && durations . indexOf ( parseInt ( req . query . duration ) ) < 0 ) ;
+                                                                    var isCategoryDefault = ( req . query . hasOwnProperty ( 'category' ) && req . query . category === '' ) ;
+                                                                    var isDurationDefault = ( req . query . hasOwnProperty ( 'duration' ) && parseInt ( req . query . duration ) === defaultDuration ) ;
                                                                     
                                                                     var query = { } ;
                                                                     var __tame_fn_59 = function (__tame_k) {
@@ -892,7 +897,7 @@ var __tame_fn_0 = function (__tame_k) {
                                                                                         tame.callChain([__tame_k]);
                                                                                         tame.setActiveCb (null);
                                                                                     };
-                                                                                    if (! defaultDuration) {
+                                                                                    if (! isDurationDefault) {
                                                                                         tame.callChain([__tame_fn_63, __tame_k]);
                                                                                     } else {
                                                                                         tame.callChain([__tame_k]);
@@ -907,7 +912,7 @@ var __tame_fn_0 = function (__tame_k) {
                                                                                         tame.callChain([__tame_k]);
                                                                                         tame.setActiveCb (null);
                                                                                     };
-                                                                                    if (! defaultCategory) {
+                                                                                    if (! isCategoryDefault) {
                                                                                         tame.callChain([__tame_fn_65, __tame_k]);
                                                                                     } else {
                                                                                         tame.callChain([__tame_k]);
@@ -929,7 +934,7 @@ var __tame_fn_0 = function (__tame_k) {
                                                                                 tame.callChain([__tame_fn_62, __tame_fn_64, __tame_fn_67, __tame_k]);
                                                                                 tame.setActiveCb (null);
                                                                             };
-                                                                            if (defaultCategory || defaultDuration) {
+                                                                            if (isCategoryDefault || isDurationDefault) {
                                                                                 tame.callChain([__tame_fn_61, __tame_k]);
                                                                             } else {
                                                                                 tame.callChain([__tame_k]);
@@ -951,7 +956,7 @@ var __tame_fn_0 = function (__tame_k) {
                                                                                 tame.callChain([__tame_fn_69, __tame_k]);
                                                                                 tame.setActiveCb (null);
                                                                             };
-                                                                            if (invalidDuration || invalidCategory) {
+                                                                            if (isDurationInvalid || isCategoryInvalid) {
                                                                                 tame.callChain([__tame_fn_70, __tame_k]);
                                                                             } else {
                                                                                 tame.callChain([__tame_k]);
@@ -960,7 +965,7 @@ var __tame_fn_0 = function (__tame_k) {
                                                                         };
                                                                         var __tame_fn_71 = function (__tame_k) {
                                                                             tame.setActiveCb (__tame_defer_cb);
-                                                                            var activeDuration = req . query . hasOwnProperty ( 'duration' ) ? parseInt ( req . query . duration ) : maxDuration ;
+                                                                            var activeDuration = req . query . hasOwnProperty ( 'duration' ) ? parseInt ( req . query . duration ) : defaultDuration ;
                                                                             res . render ( 'results' , {
                                                                             title : 'Results of ' + event . name ,
                                                                             event : event ,

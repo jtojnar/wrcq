@@ -281,6 +281,8 @@ app.get('/events/:event/results', function(req, res) {
 		var durations = [];
 		var categories = [];
 
+		var defaultDuration = 24;
+
 		var teamquery = client.query('select * from team where event_id=$1 order by status=\'finished\' desc, score desc, time asc', [event.id]);
 		teamquery.on('row', function(row) {addMembers(members, row);});
 		teamquery.on('row', function(row, result) {
@@ -317,13 +319,16 @@ app.get('/events/:event/results', function(req, res) {
 			}
 			row['place'] = increment(counters, row.duration, 'all');
 
-			if(!req.query.category || req.query.category === row.category) {
+			var currentCategoryIsActive = (req.query.category === row.category);
+			var currentDurationIsDefault = (!req.query.duration && defaultDuration === row.duration);
+			var currentDurationIsActive = (parseInt(req.query.duration) === row.duration);
+			if((!req.query.category || currentCategoryIsActive) && (currentDurationIsDefault || currentDurationIsActive)) {
 				result.addRow(row);
 			}
 		});
 		await teamquery.on('end', defer(var teams));
 		done();
-		if(teams.rows.length == 0) {
+		if(teams.rowCount == 0) {
 			res.status(404);
 			res.render('error/404', {body: 'Sorry, this event has no results (yet). We are working on it in this very moment.'});
 			return;
@@ -331,30 +336,29 @@ app.get('/events/:event/results', function(req, res) {
 
 		var activeCategory = null;
 		var activeDuration = null;
-		var maxDuration = Math.max.apply(null, durations);
-		var invalidCategory = (req.query.hasOwnProperty('category') && categories.indexOf(req.query.category) < 0);
-		var invalidDuration = (req.query.hasOwnProperty('duration') && durations.indexOf(parseInt(req.query.duration)) < 0);
-		var defaultCategory = (req.query.hasOwnProperty('category') && req.query.category === '');
-		var defaultDuration = (req.query.hasOwnProperty('duration') && parseInt(req.query.duration) === maxDuration);
+		var isCategoryInvalid = (req.query.hasOwnProperty('category') && categories.indexOf(req.query.category) < 0);
+		var isDurationInvalid = (req.query.hasOwnProperty('duration') && durations.indexOf(parseInt(req.query.duration)) < 0);
+		var isCategoryDefault = (req.query.hasOwnProperty('category') && req.query.category === '');
+		var isDurationDefault = (req.query.hasOwnProperty('duration') && parseInt(req.query.duration) === defaultDuration);
 
 		var query = {};
-		if(defaultCategory || defaultDuration) {
-			if(!defaultDuration) {
+		if(isCategoryDefault || isDurationDefault) {
+			if(!isDurationDefault) {
 				query.duration = req.query.duration;
 			}
-			if(!defaultCategory) {
+			if(!isCategoryDefault) {
 				query.category = req.query.category;
 			}
 			res.redirect(url.format({pathname: req._parsedUrl.pathname, query: query}));
 			return;
 		}
-		if(invalidDuration || invalidCategory) {
+		if(isDurationInvalid || isCategoryInvalid) {
 			res.status(404);
 			res.render('error/404');
 			return;
 		}
 
-		var activeDuration = req.query.hasOwnProperty('duration') ? parseInt(req.query.duration) : maxDuration;
+		var activeDuration = req.query.hasOwnProperty('duration') ? parseInt(req.query.duration) : defaultDuration;
 		res.render('results', {
 			title: 'Results of ' + event.name,
 			event: event,
