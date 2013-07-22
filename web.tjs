@@ -323,6 +323,12 @@ app.get('/events/:event/results', function(req, res) {
 		});
 		await teamquery.on('end', defer(var teams));
 		done();
+		if(teams.rows.length == 0) {
+			done();
+			res.status(404);
+			res.render('error/404', {body: 'Sorry, this event has no results (yet). We are working on it in this very moment.'});
+			return;
+		}
 
 		var activeCategory = null;
 		var activeDuration = null;

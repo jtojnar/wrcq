@@ -601,7 +601,7 @@ var __tame_fn_0 = function (__tame_k) {
                     }
                     tame.setActiveCb (null);
                 };
-                var __tame_fn_73 = function (__tame_k) {
+                var __tame_fn_78 = function (__tame_k) {
                     tame.setActiveCb (__tame_defer_cb);
                     var event = eventdata . rows [ 0 ] ;
                     var __tame_fn_40 = function (__tame_k) {
@@ -632,7 +632,7 @@ var __tame_fn_0 = function (__tame_k) {
                             __tame_defers._fulfill();
                             tame.setActiveCb (null);
                         };
-                        var __tame_fn_72 = function (__tame_k) {
+                        var __tame_fn_77 = function (__tame_k) {
                             tame.setActiveCb (__tame_defer_cb);
                             members = members . rows ;
                             var moquery = client . query ( 'select * from team where event_id=$1 and gender=$2 and age=$3 order by status=\'finished\' desc, score desc, time asc limit 3' , [ event . id , 'men' , 'open' ] ,
@@ -671,7 +671,7 @@ var __tame_fn_0 = function (__tame_k) {
                                     __tame_defers._fulfill();
                                     tame.setActiveCb (null);
                                 };
-                                var __tame_fn_71 = function (__tame_k) {
+                                var __tame_fn_76 = function (__tame_k) {
                                     tame.setActiveCb (__tame_defer_cb);
                                     var xoquery = client . query ( 'select * from team where event_id=$1 and gender=$2 and age=$3 order by status=\'finished\' desc, score desc, time asc limit 3' , [ event . id , 'mixed' , 'open' ] ,
                                     function  () {
@@ -709,7 +709,7 @@ var __tame_fn_0 = function (__tame_k) {
                                             __tame_defers._fulfill();
                                             tame.setActiveCb (null);
                                         };
-                                        var __tame_fn_70 = function (__tame_k) {
+                                        var __tame_fn_75 = function (__tame_k) {
                                             tame.setActiveCb (__tame_defer_cb);
                                             var woquery = client . query ( 'select * from team where event_id=$1 and gender=$2 and age=$3 order by status=\'finished\' desc, score desc, time asc limit 3' , [ event . id , 'women' , 'open' ] ,
                                             function  () {
@@ -747,7 +747,7 @@ var __tame_fn_0 = function (__tame_k) {
                                                     __tame_defers._fulfill();
                                                     tame.setActiveCb (null);
                                                 };
-                                                var __tame_fn_69 = function (__tame_k) {
+                                                var __tame_fn_74 = function (__tame_k) {
                                                     tame.setActiveCb (__tame_defer_cb);
                                                     var counters = { } ;
                                                     var durations = [ ] ;
@@ -840,156 +840,188 @@ var __tame_fn_0 = function (__tame_k) {
                                                             __tame_defers._fulfill();
                                                             tame.setActiveCb (null);
                                                         };
-                                                        var __tame_fn_68 = function (__tame_k) {
+                                                        var __tame_fn_73 = function (__tame_k) {
                                                             tame.setActiveCb (__tame_defer_cb);
                                                             done ( ) ;
-                                                            
-                                                            var activeCategory = null ;
-                                                            var activeDuration = null ;
-                                                            var maxDuration = Math . max . apply ( null , durations ) ;
-                                                            var invalidCategory = ( req . query . hasOwnProperty ( 'category' ) && categories . indexOf ( req . query . category ) < 0 ) ;
-                                                            var invalidDuration = ( req . query . hasOwnProperty ( 'duration' ) && durations . indexOf ( parseInt ( req . query . duration ) ) < 0 ) ;
-                                                            var defaultCategory = ( req . query . hasOwnProperty ( 'category' ) && req . query . category === '' ) ;
-                                                            var defaultDuration = ( req . query . hasOwnProperty ( 'duration' ) && parseInt ( req . query . duration ) === maxDuration ) ;
-                                                            
-                                                            var query = { } ;
                                                             var __tame_fn_55 = function (__tame_k) {
                                                                 tame.setActiveCb (__tame_defer_cb);
                                                                 var __tame_fn_56 = function (__tame_k) {
                                                                     tame.setActiveCb (__tame_defer_cb);
-                                                                    var __tame_fn_57 = function (__tame_k) {
+                                                                    var __tame_fn_58 = function (__tame_k) {
                                                                         tame.setActiveCb (__tame_defer_cb);
-                                                                        var __tame_fn_58 = function (__tame_k) {
+                                                                        done ( ) ;
+                                                                        res . status ( 404 ) ;
+                                                                        res . render ( 'error/404' , { body : 'Sorry, this event has no results (yet). We are working on it in this very moment.' } ) ;
+                                                                        var __tame_fn_57 = function (__tame_k) {
                                                                             tame.setActiveCb (__tame_defer_cb);
-                                                                            var __tame_fn_59 = function (__tame_k) {
-                                                                                tame.setActiveCb (__tame_defer_cb);
-                                                                                query . duration = req . query . duration ;
-                                                                                tame.callChain([__tame_k]);
-                                                                                tame.setActiveCb (null);
-                                                                            };
-                                                                            if (! defaultDuration) {
-                                                                                tame.callChain([__tame_fn_59, __tame_k]);
-                                                                            } else {
-                                                                                tame.callChain([__tame_k]);
-                                                                            }
+                                                                                ;
+                                                                                tame.callChain([tame.end, __tame_k]);
                                                                             tame.setActiveCb (null);
                                                                         };
+                                                                        tame.callChain([__tame_fn_57, __tame_k]);
+                                                                        tame.setActiveCb (null);
+                                                                    };
+                                                                    if (teams . rows . length == 0) {
+                                                                        tame.callChain([__tame_fn_58, __tame_k]);
+                                                                    } else {
+                                                                        tame.callChain([__tame_k]);
+                                                                    }
+                                                                    tame.setActiveCb (null);
+                                                                };
+                                                                var __tame_fn_72 = function (__tame_k) {
+                                                                    tame.setActiveCb (__tame_defer_cb);
+                                                                    var activeCategory = null ;
+                                                                    var activeDuration = null ;
+                                                                    var maxDuration = Math . max . apply ( null , durations ) ;
+                                                                    var invalidCategory = ( req . query . hasOwnProperty ( 'category' ) && categories . indexOf ( req . query . category ) < 0 ) ;
+                                                                    var invalidDuration = ( req . query . hasOwnProperty ( 'duration' ) && durations . indexOf ( parseInt ( req . query . duration ) ) < 0 ) ;
+                                                                    var defaultCategory = ( req . query . hasOwnProperty ( 'category' ) && req . query . category === '' ) ;
+                                                                    var defaultDuration = ( req . query . hasOwnProperty ( 'duration' ) && parseInt ( req . query . duration ) === maxDuration ) ;
+                                                                    
+                                                                    var query = { } ;
+                                                                    var __tame_fn_59 = function (__tame_k) {
+                                                                        tame.setActiveCb (__tame_defer_cb);
                                                                         var __tame_fn_60 = function (__tame_k) {
                                                                             tame.setActiveCb (__tame_defer_cb);
                                                                             var __tame_fn_61 = function (__tame_k) {
                                                                                 tame.setActiveCb (__tame_defer_cb);
-                                                                                query . category = req . query . category ;
-                                                                                tame.callChain([__tame_k]);
+                                                                                var __tame_fn_62 = function (__tame_k) {
+                                                                                    tame.setActiveCb (__tame_defer_cb);
+                                                                                    var __tame_fn_63 = function (__tame_k) {
+                                                                                        tame.setActiveCb (__tame_defer_cb);
+                                                                                        query . duration = req . query . duration ;
+                                                                                        tame.callChain([__tame_k]);
+                                                                                        tame.setActiveCb (null);
+                                                                                    };
+                                                                                    if (! defaultDuration) {
+                                                                                        tame.callChain([__tame_fn_63, __tame_k]);
+                                                                                    } else {
+                                                                                        tame.callChain([__tame_k]);
+                                                                                    }
+                                                                                    tame.setActiveCb (null);
+                                                                                };
+                                                                                var __tame_fn_64 = function (__tame_k) {
+                                                                                    tame.setActiveCb (__tame_defer_cb);
+                                                                                    var __tame_fn_65 = function (__tame_k) {
+                                                                                        tame.setActiveCb (__tame_defer_cb);
+                                                                                        query . category = req . query . category ;
+                                                                                        tame.callChain([__tame_k]);
+                                                                                        tame.setActiveCb (null);
+                                                                                    };
+                                                                                    if (! defaultCategory) {
+                                                                                        tame.callChain([__tame_fn_65, __tame_k]);
+                                                                                    } else {
+                                                                                        tame.callChain([__tame_k]);
+                                                                                    }
+                                                                                    tame.setActiveCb (null);
+                                                                                };
+                                                                                var __tame_fn_67 = function (__tame_k) {
+                                                                                    tame.setActiveCb (__tame_defer_cb);
+                                                                                    res . redirect ( url . format ( { pathname : req . _parsedUrl . pathname , query : query } ) ) ;
+                                                                                    var __tame_fn_66 = function (__tame_k) {
+                                                                                        tame.setActiveCb (__tame_defer_cb);
+                                                                                            ;
+                                                                                            tame.callChain([tame.end, __tame_k]);
+                                                                                        tame.setActiveCb (null);
+                                                                                    };
+                                                                                    tame.callChain([__tame_fn_66, __tame_k]);
+                                                                                    tame.setActiveCb (null);
+                                                                                };
+                                                                                tame.callChain([__tame_fn_62, __tame_fn_64, __tame_fn_67, __tame_k]);
                                                                                 tame.setActiveCb (null);
                                                                             };
-                                                                            if (! defaultCategory) {
+                                                                            if (defaultCategory || defaultDuration) {
                                                                                 tame.callChain([__tame_fn_61, __tame_k]);
                                                                             } else {
                                                                                 tame.callChain([__tame_k]);
                                                                             }
                                                                             tame.setActiveCb (null);
                                                                         };
-                                                                        var __tame_fn_63 = function (__tame_k) {
+                                                                        var __tame_fn_68 = function (__tame_k) {
                                                                             tame.setActiveCb (__tame_defer_cb);
-                                                                            res . redirect ( url . format ( { pathname : req . _parsedUrl . pathname , query : query } ) ) ;
-                                                                            var __tame_fn_62 = function (__tame_k) {
+                                                                            var __tame_fn_70 = function (__tame_k) {
                                                                                 tame.setActiveCb (__tame_defer_cb);
-                                                                                    ;
-                                                                                    tame.callChain([tame.end, __tame_k]);
+                                                                                res . status ( 404 ) ;
+                                                                                res . render ( 'error/404' ) ;
+                                                                                var __tame_fn_69 = function (__tame_k) {
+                                                                                    tame.setActiveCb (__tame_defer_cb);
+                                                                                        ;
+                                                                                        tame.callChain([tame.end, __tame_k]);
+                                                                                    tame.setActiveCb (null);
+                                                                                };
+                                                                                tame.callChain([__tame_fn_69, __tame_k]);
                                                                                 tame.setActiveCb (null);
                                                                             };
-                                                                            tame.callChain([__tame_fn_62, __tame_k]);
+                                                                            if (invalidDuration || invalidCategory) {
+                                                                                tame.callChain([__tame_fn_70, __tame_k]);
+                                                                            } else {
+                                                                                tame.callChain([__tame_k]);
+                                                                            }
                                                                             tame.setActiveCb (null);
                                                                         };
-                                                                        tame.callChain([__tame_fn_58, __tame_fn_60, __tame_fn_63, __tame_k]);
-                                                                        tame.setActiveCb (null);
-                                                                    };
-                                                                    if (defaultCategory || defaultDuration) {
-                                                                        tame.callChain([__tame_fn_57, __tame_k]);
-                                                                    } else {
-                                                                        tame.callChain([__tame_k]);
-                                                                    }
-                                                                    tame.setActiveCb (null);
-                                                                };
-                                                                var __tame_fn_64 = function (__tame_k) {
-                                                                    tame.setActiveCb (__tame_defer_cb);
-                                                                    var __tame_fn_66 = function (__tame_k) {
-                                                                        tame.setActiveCb (__tame_defer_cb);
-                                                                        res . status ( 404 ) ;
-                                                                        res . render ( 'error/404' ) ;
-                                                                        var __tame_fn_65 = function (__tame_k) {
+                                                                        var __tame_fn_71 = function (__tame_k) {
                                                                             tame.setActiveCb (__tame_defer_cb);
-                                                                                ;
-                                                                                tame.callChain([tame.end, __tame_k]);
+                                                                            var activeDuration = req . query . hasOwnProperty ( 'duration' ) ? parseInt ( req . query . duration ) : maxDuration ;
+                                                                            res . render ( 'results' , {
+                                                                            title : 'Results of ' + event . name ,
+                                                                            event : event ,
+                                                                            teams : teams . rows ,
+                                                                            mo : { teams : mo . rows } ,
+                                                                            xo : { teams : xo . rows } ,
+                                                                            wo : { teams : wo . rows } ,
+                                                                            identity : req . user ,
+                                                                            isMO : counters [ activeDuration ] . MO , isXO : counters [ activeDuration ] . XO , isWO : counters [ activeDuration ] . WO , isMV : counters [ activeDuration ] . MV , isXV : counters [ activeDuration ] . XV , isWV : counters [ activeDuration ] . WV , isMSV : counters [ activeDuration ] . MSV , isXSV : counters [ activeDuration ] . XSV , isWSV : counters [ activeDuration ] . WSV , isMUV : counters [ activeDuration ] . MUV , isXUV : counters [ activeDuration ] . XUV , isWUV : counters [ activeDuration ] . WUV , isMJ : counters [ activeDuration ] . MJ , isXJ : counters [ activeDuration ] . XJ , isWJ : counters [ activeDuration ] . WJ , isM20 : counters [ activeDuration ] . M20 , isX20 : counters [ activeDuration ] . X20 , isW20 : counters [ activeDuration ] . W20 , isM23 : counters [ activeDuration ] . M23 , isX23 : counters [ activeDuration ] . X23 , isW23 : counters [ activeDuration ] . W23 ,
+                                                                            activeCategory : req . query . hasOwnProperty ( 'category' ) ? req . query . category : null ,
+                                                                            categories : categories ,
+                                                                            activeDuration : activeDuration ,
+                                                                            durations : durations . length > 1 ? durations : null
+                                                                            } ) ;
+                                                                            tame.callChain([__tame_k]);
                                                                             tame.setActiveCb (null);
                                                                         };
-                                                                        tame.callChain([__tame_fn_65, __tame_k]);
+                                                                        tame.callChain([__tame_fn_60, __tame_fn_68, __tame_fn_71, __tame_k]);
                                                                         tame.setActiveCb (null);
                                                                     };
-                                                                    if (invalidDuration || invalidCategory) {
-                                                                        tame.callChain([__tame_fn_66, __tame_k]);
-                                                                    } else {
-                                                                        tame.callChain([__tame_k]);
-                                                                    }
+                                                                    tame.callChain([__tame_fn_59, __tame_k]);
                                                                     tame.setActiveCb (null);
                                                                 };
-                                                                var __tame_fn_67 = function (__tame_k) {
-                                                                    tame.setActiveCb (__tame_defer_cb);
-                                                                    var activeDuration = req . query . hasOwnProperty ( 'duration' ) ? parseInt ( req . query . duration ) : maxDuration ;
-                                                                    res . render ( 'results' , {
-                                                                    title : 'Results of ' + event . name ,
-                                                                    event : event ,
-                                                                    teams : teams . rows ,
-                                                                    mo : { teams : mo . rows } ,
-                                                                    xo : { teams : xo . rows } ,
-                                                                    wo : { teams : wo . rows } ,
-                                                                    identity : req . user ,
-                                                                    isMO : counters [ activeDuration ] . MO , isXO : counters [ activeDuration ] . XO , isWO : counters [ activeDuration ] . WO , isMV : counters [ activeDuration ] . MV , isXV : counters [ activeDuration ] . XV , isWV : counters [ activeDuration ] . WV , isMSV : counters [ activeDuration ] . MSV , isXSV : counters [ activeDuration ] . XSV , isWSV : counters [ activeDuration ] . WSV , isMUV : counters [ activeDuration ] . MUV , isXUV : counters [ activeDuration ] . XUV , isWUV : counters [ activeDuration ] . WUV , isMJ : counters [ activeDuration ] . MJ , isXJ : counters [ activeDuration ] . XJ , isWJ : counters [ activeDuration ] . WJ , isM20 : counters [ activeDuration ] . M20 , isX20 : counters [ activeDuration ] . X20 , isW20 : counters [ activeDuration ] . W20 , isM23 : counters [ activeDuration ] . M23 , isX23 : counters [ activeDuration ] . X23 , isW23 : counters [ activeDuration ] . W23 ,
-                                                                    activeCategory : req . query . hasOwnProperty ( 'category' ) ? req . query . category : null ,
-                                                                    categories : categories ,
-                                                                    activeDuration : activeDuration ,
-                                                                    durations : durations . length > 1 ? durations : null
-                                                                    } ) ;
-                                                                    tame.callChain([__tame_k]);
-                                                                    tame.setActiveCb (null);
-                                                                };
-                                                                tame.callChain([__tame_fn_56, __tame_fn_64, __tame_fn_67, __tame_k]);
+                                                                tame.callChain([__tame_fn_56, __tame_fn_72, __tame_k]);
                                                                 tame.setActiveCb (null);
                                                             };
                                                             tame.callChain([__tame_fn_55, __tame_k]);
                                                             tame.setActiveCb (null);
                                                         };
-                                                        tame.callChain([__tame_fn_53, __tame_fn_68, __tame_k]);
+                                                        tame.callChain([__tame_fn_53, __tame_fn_73, __tame_k]);
                                                         tame.setActiveCb (null);
                                                     };
                                                     tame.callChain([__tame_fn_52, __tame_k]);
                                                     tame.setActiveCb (null);
                                                 };
-                                                tame.callChain([__tame_fn_50, __tame_fn_69, __tame_k]);
+                                                tame.callChain([__tame_fn_50, __tame_fn_74, __tame_k]);
                                                 tame.setActiveCb (null);
                                             };
                                             tame.callChain([__tame_fn_49, __tame_k]);
                                             tame.setActiveCb (null);
                                         };
-                                        tame.callChain([__tame_fn_47, __tame_fn_70, __tame_k]);
+                                        tame.callChain([__tame_fn_47, __tame_fn_75, __tame_k]);
                                         tame.setActiveCb (null);
                                     };
                                     tame.callChain([__tame_fn_46, __tame_k]);
                                     tame.setActiveCb (null);
                                 };
-                                tame.callChain([__tame_fn_44, __tame_fn_71, __tame_k]);
+                                tame.callChain([__tame_fn_44, __tame_fn_76, __tame_k]);
                                 tame.setActiveCb (null);
                             };
                             tame.callChain([__tame_fn_43, __tame_k]);
                             tame.setActiveCb (null);
                         };
-                        tame.callChain([__tame_fn_41, __tame_fn_72, __tame_k]);
+                        tame.callChain([__tame_fn_41, __tame_fn_77, __tame_k]);
                         tame.setActiveCb (null);
                     };
                     tame.callChain([__tame_fn_40, __tame_k]);
                     tame.setActiveCb (null);
                 };
-                tame.callChain([__tame_fn_35, __tame_fn_37, __tame_fn_73, __tame_k]);
+                tame.callChain([__tame_fn_35, __tame_fn_37, __tame_fn_78, __tame_k]);
                 tame.setActiveCb (null);
             };
             tame.callChain([__tame_fn_34, __tame_k]);
