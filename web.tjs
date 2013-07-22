@@ -370,6 +370,7 @@ app.get('/events/:event/results', function(req, res) {
 			isMO: counters[activeDuration].MO, isXO: counters[activeDuration].XO, isWO: counters[activeDuration].WO, isMV: counters[activeDuration].MV, isXV: counters[activeDuration].XV, isWV: counters[activeDuration].WV, isMSV: counters[activeDuration].MSV, isXSV: counters[activeDuration].XSV, isWSV: counters[activeDuration].WSV, isMUV: counters[activeDuration].MUV, isXUV: counters[activeDuration].XUV, isWUV: counters[activeDuration].WUV, isMJ: counters[activeDuration].MJ, isXJ: counters[activeDuration].XJ, isWJ: counters[activeDuration].WJ, isM20: counters[activeDuration].M20, isX20: counters[activeDuration].X20, isW20: counters[activeDuration].W20, isM23: counters[activeDuration].M23, isX23: counters[activeDuration].X23, isW23: counters[activeDuration].W23,
 			activeCategory: req.query.hasOwnProperty('category') ? req.query.category : null,
 			categories: categories,
+			counters: JSON.stringify(counters),
 			activeDuration: activeDuration,
 			durations: durations.length > 1 ? durations : null
 		});
