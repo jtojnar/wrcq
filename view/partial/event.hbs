@@ -3,7 +3,7 @@
 <thead><tr><th>Name</th><th>Date</th><th>Location</th><th>Organizer</th>{{! <th>Media Coverage</th> }}</tr></thead>
 <tbody>
 {{#each events}}
-<tr><td>{{#if website}}<a href="{{website}}">{{name}}</a>{{else}}{{name}}{{/if}}{{#if event_id}}<a href="/events/{{slug}}/results">♥</a>{{else}}{{#if results}} (<a href="{{results}}">Results</a>){{/if}}{{/if}}</td><td class="nowrap">{{date start}}–{{date end}}</td><td>{{location}}</td><td>{{organizer}}</td><!--<td>{{{media}}}</td>--></tr>
+<tr><td>{{#if website}}<a href="{{website}}">{{name}}</a>{{else}}{{name}}{{/if}}{{#if event_id}} (<a href="/events/{{slug}}/results">Results♥</a>){{else}}{{#if results}} (<a href="{{results}}">Results</a>){{/if}}{{/if}}</td><td class="nowrap">{{date start}}–{{date end}}</td><td>{{location}}</td><td>{{organizer}}</td><!--<td>{{{media}}}</td>--></tr>
 {{/each}}
 </tbody>
 </table>
