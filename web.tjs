@@ -234,7 +234,11 @@ app.get('/', function(req, res) {
 });
 
 app.get('/events', function(req, res) {
-	res.render('events', {identity: req.user});
+	pg.connect(_dbUri, function(err, client, done) {
+		await client.query('with latest as (select *, row_number() over(partition by level order by start desc) as rk from event) select * from latest left join (select event_id from team group by event_id) as team on team.event_id = latest.id where rk <= 2', defer(var row, events));
+		done();
+		res.render('events', {events: events.rows, identity: req.user});
+	});
 });
 
 function addMembers(members, row) {
