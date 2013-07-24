@@ -1,23 +1,23 @@
 <results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="results.xsd">
   <team id="10" score="2510" time="23:25:38" penalty="0" gender="men" age="open" duration="24">
-    <member firstname="Peteris" lastname="Ledins" country="USA" />
+    <member firstname="Peteris" lastname="Ledins" country="LAT" />
     <member firstname="Nikolay" lastname="Nachev" country="USA" />
   </team>
   <team id="9" score="2240" time="23:26:00" penalty="0" gender="men" age="open" duration="24">
-    <member firstname="James" lastname="Heilman" country="USA" />
-    <member firstname="Bart" lastname="Jarmula" country="USA" />
+    <member firstname="James" lastname="Heilman" country="CAN" />
+    <member firstname="Bart" lastname="Jarmula" country="CAN" />
   </team>
   <team id="4" score="2090" time="23:18:19" penalty="0" gender="men" age="open" duration="24">
     <member firstname="Maxim" lastname="Kazitov" country="USA" />
     <member firstname="Gena" lastname="Tertychnyi" country="USA" />
   </team>
   <team id="3" score="1720" time="23:42:30" penalty="0" gender="mixed" age="open" duration="24">
-    <member firstname="Jackie" lastname="Bonn" country="USA" />
-    <member firstname="Wade" lastname="Tokarek" country="USA" />
+    <member firstname="Jackie" lastname="Bonn" country="CAN" />
+    <member firstname="Wade" lastname="Tokarek" country="CAN" />
   </team>
   <team id="1" score="1710" time="23:41:59" penalty="0" gender="men" age="superveteran" duration="24">
-    <member firstname="John" lastname="Rance" country="USA" />
-    <member firstname="Bruce" lastname="Rennie" country="USA" />
+    <member firstname="John" lastname="Rance" country="CAN" />
+    <member firstname="Bruce" lastname="Rennie" country="CAN" />
   </team>
   <team id="16" score="1670" time="22:53:30" penalty="0" gender="mixed" age="open" duration="24">
     <member firstname="Alex" lastname="Frank" country="USA" />
@@ -36,32 +36,32 @@
     <member firstname="Bud" lastname="Laird" country="USA" />
   </team>
   <team id="22" score="1480" time="23:38:00" penalty="0" gender="men" age="open" duration="24">
-    <member firstname="Magnus" lastname="Byne" country="USA" />
-    <member firstname="Lannie" lastname="Thielen" country="USA" />
+    <member firstname="Magnus" lastname="Byne" country="CAN" />
+    <member firstname="Lannie" lastname="Thielen" country="CAN" />
   </team>
   <team id="23" score="1440" time="22:38:47" penalty="0" gender="men" age="open" duration="24">
     <member firstname="Brian" lastname="Bailey" country="USA" />
     <member firstname="Justin" lastname="Schmal" country="USA" />
   </team>
   <team id="12" score="1420" time="23:18:25" penalty="0" gender="men" age="open" duration="24">
-    <member firstname="Adrian" lastname="Low" country="USA" />
-    <member firstname="Dane" lastname="Low" country="USA" />
+    <member firstname="Adrian" lastname="Low" country="CAN" />
+    <member firstname="Dane" lastname="Low" country="CAN" />
   </team>
   <team id="11" score="1350" time="23:40:55" penalty="0" gender="men" age="open" duration="24">
     <member firstname="Dmitry" lastname="Lavrov" country="USA" />
     <member firstname="Roman" lastname="Lavrov" country="USA" />
   </team>
   <team id="14" score="1200" time="22:30:40" penalty="0" gender="mixed" age="superveteran" duration="24">
-    <member firstname="Hilary" lastname="Anderson" country="USA" />
-    <member firstname="Michel" lastname="Roberge" country="USA" />
+    <member firstname="Hilary" lastname="Anderson" country="CAN" />
+    <member firstname="Michel" lastname="Roberge" country="CAN" />
   </team>
   <team id="13" score="1120" time="23:52:30" penalty="0" gender="mixed" age="veteran" duration="24">
     <member firstname="Sue" lastname="Kuestner" country="USA" />
     <member firstname="Gavin" lastname="Wyatt-Mair" country="USA" />
   </team>
   <team id="2" score="1020" time="21:31:00" penalty="0" gender="mixed" age="ultraveteran" duration="24">
-    <member firstname="Jim" lastname="Waddington" country="USA" />
-    <member firstname="Sue" lastname="Waddington" country="USA" />
+    <member firstname="Jim" lastname="Waddington" country="CAN" />
+    <member firstname="Sue" lastname="Waddington" country="CAN" />
   </team>
   <team id="18" score="1000" time="24:01:58" penalty="20" gender="mixed" age="open" duration="24">
     <member firstname="Matthew" lastname="Shaffer" country="USA" />
