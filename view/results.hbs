@@ -36,8 +36,10 @@
 	var overallShown = false;
 	$('#tabs a[href=#all]').on('shown.bs.tab', function (e) {
 		if(!overallShown) {
-			$('.table-fixed-header').fixedHeader();
-			overallShown = true;
+			$(document).ready(function() {
+				$('.table-fixed-header').fixedHeader();
+				overallShown = true;
+			})
 		}
 	});
 
