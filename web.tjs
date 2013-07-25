@@ -281,6 +281,20 @@ function getCategoryDescendants(gender, age, reverse) {
 	return ret;
 }
 
+function getAgeDescendants(age, reverse) {
+	if(reverse) {
+		var categories = categoryInheritanceReverse;
+	} else {
+		var categories = categoryInheritance;
+	}
+	var ret = [];
+	ret.push(age);
+	if(categories.hasOwnProperty(age)) {
+		ret.push.apply(ret, getAgeDescendants(categories[age], reverse));
+	}
+	return ret;
+}
+
 app.get('/events/:event/results', function(req, res) {
 	pg.connect(_dbUri, function(err, client, done) {
 		await client.query('select * from event where slug=$1 limit 1', [req.params.event], defer(var row, eventdata));
@@ -294,13 +308,14 @@ app.get('/events/:event/results', function(req, res) {
 
 		await client.query('select * from member where event_id=$1', [event.id], defer(var row, members));
 		members = members.rows;
-		var moquery = client.query('select * from team where event_id=$1 and gender=$2 and age=$3 order by status=\'finished\' desc, score desc, time asc limit 3', [event.id, 'men', 'open'], function() {});
+		var openCategories = getAgeDescendants('open', true).join('\',\'');
+		var moquery = client.query('select * from team where event_id=$1 and gender=$2 and age in (\''+openCategories+'\') order by status=\'finished\' desc, score desc, time asc limit 3', [event.id, 'men'], function() {});
 		moquery.on('row', function(row) {addMembers(members, row);});
 		await moquery.on('end', defer(var mo));
-		var xoquery = client.query('select * from team where event_id=$1 and gender=$2 and age=$3 order by status=\'finished\' desc, score desc, time asc limit 3', [event.id, 'mixed', 'open'], function() {});
+		var xoquery = client.query('select * from team where event_id=$1 and gender=$2 and age in (\''+openCategories+'\') order by status=\'finished\' desc, score desc, time asc limit 3', [event.id, 'mixed'], function() {});
 		xoquery.on('row', function(row) {addMembers(members, row);});
 		await xoquery.on('end', defer(var xo));
-		var woquery = client.query('select * from team where event_id=$1 and gender=$2 and age=$3 order by status=\'finished\' desc, score desc, time asc limit 3', [event.id, 'women', 'open'], function() {});
+		var woquery = client.query('select * from team where event_id=$1 and gender=$2 and age in (\''+openCategories+'\') order by status=\'finished\' desc, score desc, time asc limit 3', [event.id, 'women'], function() {});
 		woquery.on('row', function(row) {addMembers(members, row);});
 		await woquery.on('end', defer(var wo));
 		

@@ -623,6 +623,20 @@ var __tame_fn_48 = function (__tame_k) {
                 }
                 return ret;
             }
+            function getAgeDescendants (age, reverse) {
+                if (reverse) {
+                    var categories = categoryInheritanceReverse ;
+                } else {
+                    var categories = categoryInheritance ;
+                }
+                var ret = [ ] ;
+                ret . push ( age ) ;
+                if (categories . hasOwnProperty ( age )) {
+                    ret . push . apply ( ret , getAgeDescendants ( categories [ age ] , reverse ) ) ;
+                } else {
+                }
+                return ret;
+            }
             app . get ( '/events/:event/results' ,
             function  (req, res) {
                 pg . connect ( _dbUri ,
@@ -647,7 +661,7 @@ var __tame_fn_48 = function (__tame_k) {
                                         }
                                         ,
                                     parent_cb : __tame_defer_cb,
-                                    line : 286,
+                                    line : 300,
                                     file : "web.tjs"
                                 } )
                                 ) ;
@@ -701,7 +715,7 @@ var __tame_fn_48 = function (__tame_k) {
                                                 }
                                                 ,
                                             parent_cb : __tame_defer_cb,
-                                            line : 295,
+                                            line : 309,
                                             file : "web.tjs"
                                         } )
                                         ) ;
@@ -715,7 +729,8 @@ var __tame_fn_48 = function (__tame_k) {
                                 var __tame_fn_46 = function (__tame_k) {
                                     tame.setActiveCb (__tame_defer_cb);
                                     members = members . rows ;
-                                    var moquery = client . query ( 'select * from team where event_id=$1 and gender=$2 and age=$3 order by status=\'finished\' desc, score desc, time asc limit 3' , [ event . id , 'men' , 'open' ] ,
+                                    var openCategories = getAgeDescendants ( 'open' , true ) . join ( '\',\'' ) ;
+                                    var moquery = client . query ( 'select * from team where event_id=$1 and gender=$2 and age in (\'' +openCategories+ '\') order by status=\'finished\' desc, score desc, time asc limit 3' , [ event . id , 'men' ] ,
                                     function  () {
                                     }
                                     ) ;
@@ -740,7 +755,7 @@ var __tame_fn_48 = function (__tame_k) {
                                                         }
                                                         ,
                                                     parent_cb : __tame_defer_cb,
-                                                    line : 299,
+                                                    line : 314,
                                                     file : "web.tjs"
                                                 } )
                                                 ) ;
@@ -753,7 +768,7 @@ var __tame_fn_48 = function (__tame_k) {
                                         };
                                         var __tame_fn_45 = function (__tame_k) {
                                             tame.setActiveCb (__tame_defer_cb);
-                                            var xoquery = client . query ( 'select * from team where event_id=$1 and gender=$2 and age=$3 order by status=\'finished\' desc, score desc, time asc limit 3' , [ event . id , 'mixed' , 'open' ] ,
+                                            var xoquery = client . query ( 'select * from team where event_id=$1 and gender=$2 and age in (\'' +openCategories+ '\') order by status=\'finished\' desc, score desc, time asc limit 3' , [ event . id , 'mixed' ] ,
                                             function  () {
                                             }
                                             ) ;
@@ -778,7 +793,7 @@ var __tame_fn_48 = function (__tame_k) {
                                                                 }
                                                                 ,
                                                             parent_cb : __tame_defer_cb,
-                                                            line : 302,
+                                                            line : 317,
                                                             file : "web.tjs"
                                                         } )
                                                         ) ;
@@ -791,7 +806,7 @@ var __tame_fn_48 = function (__tame_k) {
                                                 };
                                                 var __tame_fn_44 = function (__tame_k) {
                                                     tame.setActiveCb (__tame_defer_cb);
-                                                    var woquery = client . query ( 'select * from team where event_id=$1 and gender=$2 and age=$3 order by status=\'finished\' desc, score desc, time asc limit 3' , [ event . id , 'women' , 'open' ] ,
+                                                    var woquery = client . query ( 'select * from team where event_id=$1 and gender=$2 and age in (\'' +openCategories+ '\') order by status=\'finished\' desc, score desc, time asc limit 3' , [ event . id , 'women' ] ,
                                                     function  () {
                                                     }
                                                     ) ;
@@ -816,7 +831,7 @@ var __tame_fn_48 = function (__tame_k) {
                                                                         }
                                                                         ,
                                                                     parent_cb : __tame_defer_cb,
-                                                                    line : 305,
+                                                                    line : 320,
                                                                     file : "web.tjs"
                                                                 } )
                                                                 ) ;
@@ -895,7 +910,7 @@ var __tame_fn_48 = function (__tame_k) {
                                                                                 }
                                                                                 ,
                                                                             parent_cb : __tame_defer_cb,
-                                                                            line : 350,
+                                                                            line : 365,
                                                                             file : "web.tjs"
                                                                         } )
                                                                         ) ;
