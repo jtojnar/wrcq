@@ -256,7 +256,30 @@ function addMembers(members, row) {
 	// mcache = [];
 }
 
-// var categories = {MO: {age: 'open', gender: 'men'}, XO: {age: 'open', gender: 'mixed'}, WO: {age: 'open', gender: 'women'}, MV: {age: 'veteran', gender: 'men'}, XV: {age: 'veteran', gender: 'mixed'}, WV: {age: 'veteran', gender: 'women'}, MSV: {age: 'superveteran', gender: 'men'}, XSV: {age: 'superveteran', gender: 'mixed'}, WSV: {age: 'superveteran', gender: 'women'}, MUV: {age: 'ultraveteran', gender: 'men'}, XUV: {age: 'ultraveteran', gender: 'mixed'}, WUV: {age: 'ultraveteran', gender: 'women'}, MJ: {age: 'junior', gender: 'men'}, XJ: {age: 'junior', gender: 'mixed'}, WJ: {age: 'junior', gender: 'women'}, M20: {age: 'under20', gender: 'men'}, X20: {age: 'under20', gender: 'mixed'}, W20: {age: 'under20', gender: 'women'}, M23: {age: 'under23', gender: 'men'}, X23: {age: 'under23', gender: 'mixed'}, W23: {age: 'under23', gender: 'women'}};
+var categoriesToObject = {MO: {age: 'open', gender: 'men'}, XO: {age: 'open', gender: 'mixed'}, WO: {age: 'open', gender: 'women'}, MV: {age: 'veteran', gender: 'men'}, XV: {age: 'veteran', gender: 'mixed'}, WV: {age: 'veteran', gender: 'women'}, MSV: {age: 'superveteran', gender: 'men'}, XSV: {age: 'superveteran', gender: 'mixed'}, WSV: {age: 'superveteran', gender: 'women'}, MUV: {age: 'ultraveteran', gender: 'men'}, XUV: {age: 'ultraveteran', gender: 'mixed'}, WUV: {age: 'ultraveteran', gender: 'women'}, MJ: {age: 'junior', gender: 'men'}, XJ: {age: 'junior', gender: 'mixed'}, WJ: {age: 'junior', gender: 'women'}, M20: {age: 'under20', gender: 'men'}, X20: {age: 'under20', gender: 'mixed'}, W20: {age: 'under20', gender: 'women'}, M23: {age: 'under23', gender: 'men'}, X23: {age: 'under23', gender: 'mixed'}, W23: {age: 'under23', gender: 'women'}};
+
+
+var categoryInheritance = {'ultraveteran': 'superveteran', 'superveteran': 'veteran', 'veteran': 'open'};
+var categoryInheritanceReverse = {};
+for(var cat in categoryInheritance) {
+	if(categoryInheritance.hasOwnProperty(cat)) {
+		categoryInheritanceReverse[categoryInheritance[cat]] = cat;
+	}
+}
+
+function getCategoryDescendants(gender, age, reverse) {
+	if(reverse) {
+		var categories = categoryInheritanceReverse;
+	} else {
+		var categories = categoryInheritance;
+	}
+	var ret = [];
+	ret.push(hbs.handlebars.helpers.genderclass(gender)+hbs.handlebars.helpers.ageclass(age));
+	if(categories.hasOwnProperty(age)) {
+		ret.push.apply(ret, getCategoryDescendants(gender, categories[age], reverse));
+	}
+	return ret;
+}
 
 app.get('/events/:event/results', function(req, res) {
 	pg.connect(_dbUri, function(err, client, done) {
@@ -284,6 +307,7 @@ app.get('/events/:event/results', function(req, res) {
 		var counters = {};
 		var durations = [];
 		var categories = [];
+		var displayedCategories = {};
 
 		var defaultDuration = 24;
 
@@ -300,34 +324,27 @@ app.get('/events/:event/results', function(req, res) {
 			if(categories.indexOf(row.category) < 0) {
 				categories.push(row.category);
 			}
-			if(row.age == 'ultraveteran') {
-				row[gender+'UV'] = increment(counters, row.duration, gender+'UV');
-				row[gender+'SV'] = increment(counters, row.duration, gender+'SV');
-				row[gender+'V'] = increment(counters, row.duration, gender+'V');
-				row[gender+'O'] = increment(counters, row.duration, gender+'O');
-			} else if(row.age == 'superveteran') {
-				row[gender+'SV'] = increment(counters, row.duration, gender+'SV');
-				row[gender+'V'] = increment(counters, row.duration, gender+'V');
-				row[gender+'O'] = increment(counters, row.duration, gender+'O');
-			} else if(row.age == 'veteran') {
-				row[gender+'V'] = increment(counters, row.duration, gender+'V');
-				row[gender+'O'] = increment(counters, row.duration, gender+'O');
-			} else if(row.age == 'open') {
-				row[gender+'O'] = increment(counters, row.duration, gender+'O');
-			} else if(row.age == 'junior') {
-				row[gender+'J'] = increment(counters, row.duration, gender+'J');
-			} else if(row.age == 'under23') {
-				row[gender+'23'] = increment(counters, row.duration, gender+'23');
-			} else if(row.age == 'under20') {
-				row[gender+'20'] = increment(counters, row.duration, gender+'20');
+
+			var countToCategories = getCategoryDescendants(row.gender, row.age);
+			for(var i = 0; i < countToCategories.length; i++) {
+			 	var countToCategory = countToCategories[i];
+				row[countToCategory] = increment(counters, row.duration, countToCategory);
 			}
 			row['place'] = increment(counters, row.duration, 'all');
 
-			var currentCategoryIsActive = (req.query.category === row.category);
+			if(req.query.category) {
+				var availableCategories = getCategoryDescendants(categoriesToObject[req.query.category].gender, categoriesToObject[req.query.category].age, true);
+				var currentCategoryIsActive = (availableCategories.indexOf(row.category) > -1);
+			} else {
+				var currentCategoryIsActive = true;
+			}
 			var currentDurationIsDefault = (!req.query.duration && defaultDuration === row.duration);
 			var currentDurationIsActive = (parseInt(req.query.duration) === row.duration);
 			if((!req.query.category || currentCategoryIsActive) && (currentDurationIsDefault || currentDurationIsActive)) {
 				result.addRow(row);
+				if(!displayedCategories.hasOwnProperty(row.category)) {
+					displayedCategories[row.category] = 1;
+				}
 			}
 		});
 		await teamquery.on('end', defer(var teams));
@@ -371,7 +388,7 @@ app.get('/events/:event/results', function(req, res) {
 			xo: {teams: xo.rows},
 			wo: {teams: wo.rows},
 			identity: req.user,
-			isMO: counters[activeDuration].MO, isXO: counters[activeDuration].XO, isWO: counters[activeDuration].WO, isMV: counters[activeDuration].MV, isXV: counters[activeDuration].XV, isWV: counters[activeDuration].WV, isMSV: counters[activeDuration].MSV, isXSV: counters[activeDuration].XSV, isWSV: counters[activeDuration].WSV, isMUV: counters[activeDuration].MUV, isXUV: counters[activeDuration].XUV, isWUV: counters[activeDuration].WUV, isMJ: counters[activeDuration].MJ, isXJ: counters[activeDuration].XJ, isWJ: counters[activeDuration].WJ, isM20: counters[activeDuration].M20, isX20: counters[activeDuration].X20, isW20: counters[activeDuration].W20, isM23: counters[activeDuration].M23, isX23: counters[activeDuration].X23, isW23: counters[activeDuration].W23,
+			is: displayedCategories,
 			activeCategory: req.query.hasOwnProperty('category') ? req.query.category : null,
 			categories: categories,
 			counters: JSON.stringify(counters),
