@@ -544,7 +544,7 @@ var __tame_fn_48 = function (__tame_k) {
                     var __tame_defers = new tame.Deferrals (__tame_k);
                     var __tame_fn_84 = function (__tame_k) {
                         tame.setActiveCb (__tame_defer_cb);
-                        client . query ( 'with latest as (select *, row_number() over(partition by level order by start desc) as rk from event) select * from latest left join (select event_id from team group by event_id) as team on team.event_id = latest.id where rk <= 2' ,
+                        client . query ( 'with latest as (select *, row_number() over(partition by level order by start desc) as rk from event) select * from latest left join (select event_id from team group by event_id) as team on team.event_id = latest.id where rk <= 2 order by level=\'world\' desc, level::text like \'regional%\' desc, level::text like \'national%\' desc, start desc' ,
                         __tame_defers.defer ( { 
                             assign_fn : 
                                 function () {
