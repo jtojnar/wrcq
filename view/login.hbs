@@ -1,19 +1,19 @@
 <h1>{{title 'Log in'}}</h1>
-<form action="/login" method="post" class="form-horizontal">
-	<div class="row">
+<form action="/login" method="post" class="form-horizontal" role="form">
+	<div class="form-group">
 		<label class="col-lg-2 control-label" for="email">E-Mail:</label>
 		<div class="col-lg-10">
-			<input type="email" name="username" id="email" placeholder="your@mail.com">
+			<input type="email" class="form-control" name="username" id="email" placeholder="your@mail.com">
 		</div>
 	</div>
-	<div class="row">
+	<div class="form-group">
 		<label class="col-lg-2 control-label" for="password">Password:</label>
 		<div class="col-lg-10">
-			<input type="password" name="password" id="password" placeholder="thisissecret">
+			<input type="password" class="form-control" name="password" id="password" placeholder="thisissecret">
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-lg-10 col-offset-2">
+	<div class="form-group">
+		<div class="col-lg-offset-2 col-lg-10">
 			<button type="submit" class="btn btn-primary">Log me in</button>
 		</div>
 	</div>

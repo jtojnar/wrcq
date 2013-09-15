@@ -440,6 +440,7 @@ var __tame_fn_48 = function (__tame_k) {
         app . use ( express . compress ( ) ) ;
         app . use ( express . favicon ( ) ) ;
         app . use ( express . static ( publicDir ) ) ;
+        app . use ( '/bower_components' , express . static ( path . join ( __dirname , 'bower_components' ) ) ) ;
     }
     ) ;
     
@@ -474,7 +475,7 @@ var __tame_fn_48 = function (__tame_k) {
                                 }
                                 ,
                             parent_cb : __tame_defer_cb,
-                            line : 229,
+                            line : 230,
                             file : "web.tjs"
                         } )
                         ) ;
@@ -500,7 +501,7 @@ var __tame_fn_48 = function (__tame_k) {
                                 }
                                 ,
                             parent_cb : __tame_defer_cb,
-                            line : 230,
+                            line : 231,
                             file : "web.tjs"
                         } )
                         ) ;
@@ -552,7 +553,7 @@ var __tame_fn_48 = function (__tame_k) {
                                 }
                                 ,
                             parent_cb : __tame_defer_cb,
-                            line : 238,
+                            line : 239,
                             file : "web.tjs"
                         } )
                         ) ;
@@ -661,7 +662,7 @@ var __tame_fn_48 = function (__tame_k) {
                                         }
                                         ,
                                     parent_cb : __tame_defer_cb,
-                                    line : 300,
+                                    line : 301,
                                     file : "web.tjs"
                                 } )
                                 ) ;
@@ -715,7 +716,7 @@ var __tame_fn_48 = function (__tame_k) {
                                                 }
                                                 ,
                                             parent_cb : __tame_defer_cb,
-                                            line : 309,
+                                            line : 310,
                                             file : "web.tjs"
                                         } )
                                         ) ;
@@ -755,7 +756,7 @@ var __tame_fn_48 = function (__tame_k) {
                                                         }
                                                         ,
                                                     parent_cb : __tame_defer_cb,
-                                                    line : 314,
+                                                    line : 315,
                                                     file : "web.tjs"
                                                 } )
                                                 ) ;
@@ -793,7 +794,7 @@ var __tame_fn_48 = function (__tame_k) {
                                                                 }
                                                                 ,
                                                             parent_cb : __tame_defer_cb,
-                                                            line : 317,
+                                                            line : 318,
                                                             file : "web.tjs"
                                                         } )
                                                         ) ;
@@ -831,7 +832,7 @@ var __tame_fn_48 = function (__tame_k) {
                                                                         }
                                                                         ,
                                                                     parent_cb : __tame_defer_cb,
-                                                                    line : 320,
+                                                                    line : 321,
                                                                     file : "web.tjs"
                                                                 } )
                                                                 ) ;
@@ -910,7 +911,7 @@ var __tame_fn_48 = function (__tame_k) {
                                                                                 }
                                                                                 ,
                                                                             parent_cb : __tame_defer_cb,
-                                                                            line : 365,
+                                                                            line : 366,
                                                                             file : "web.tjs"
                                                                         } )
                                                                         ) ;

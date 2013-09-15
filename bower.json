@@ -1,0 +1,8 @@
+{
+	"name": "wrcQ",
+	"version": "0.0.1",
+	"dependencies": {
+		"jquery": "*",
+		"bootstrap": "3.x"
+	}
+}
