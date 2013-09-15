@@ -23,7 +23,7 @@ function recursive(teams, client, done) {
 	team.event_id = event.id;
 	team.duration = team.duration ? team.duration : 24;
 	var members = teams[teamI].member;
-	client.query('insert into team(id, event_id, score, time, penalty, duration, gender, age, status) values($1, $2, $3, $4, $5, $6, $7, $8, $9)', [team.id, team.event_id, team.score, team.time, team.penalty, team.duration, team.gender, team.age, team.status || 'finished'], function(err) {
+	client.query('insert into team(id, event_id, score, time, penalty, duration, gender, age, status, name) values($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)', [team.id, team.event_id, team.score, team.time, team.penalty, team.duration, team.gender, team.age, team.status || 'finished', team.name], function(err) {
 		if(err) {
 			console.log(err);
 			client.query('rollback');
