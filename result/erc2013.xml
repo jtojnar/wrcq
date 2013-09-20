@@ -700,7 +700,7 @@
 		<member firstname="Artis" lastname="MEDNIS" country="LAT" />
 		<member firstname="Kristine" lastname="VEISBERGA-MEDNE" country="LAT" />
 	</team>
-	<team id="169" score="0" time="0:00:00" penalty="0" gender="mixed" age="veteran">
+	<team id="169" score="0" time="0:00:00" penalty="0" gender="mixed" age="veteran" status="not finished">
 		<member firstname="Anneli" lastname="RÄMMANN" country="EST" />
 		<member firstname="Andrus" lastname="RÄMMANN" country="EST" />
 	</team>
