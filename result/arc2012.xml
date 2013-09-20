@@ -1,0 +1,473 @@
+<results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="results.xsd">
+	<team id="1" score="2550" time="23:58:02" penalty="0" gender="men" age="open">
+		<member firstname="Paul" lastname="Williams" country="AUS" />
+		<member firstname="Ben" lastname="Corry" country="AUS" />
+	</team>
+	<team id="2" score="2290" time="23:46:02" penalty="0" gender="mixed" age="open">
+		<member firstname="Sarah" lastname="Buckerfield" country="AUS" />
+		<member firstname="Ben" lastname="Greenwood" country="AUS" />
+	</team>
+	<team id="3" score="2240" time="23:38:15" penalty="0" gender="mixed" age="open">
+		<member firstname="Jonathan" lastname="Warswick" country="AUS" />
+		<member firstname="Julie" lastname="Quinn" country="AUS" />
+	</team>
+	<team id="4" score="2220" time="23:57:40" penalty="0" gender="women" age="open">
+		<member firstname="Zara" lastname="Soden" country="AUS" />
+		<member firstname="Suzanne" lastname="Casanova" country="AUS" />
+	</team>
+	<team id="5" score="2200" time="23:54:34" penalty="0" gender="men" age="veteran">
+		<member firstname="Jonathan" lastname="Sutcliffe" country="GBR" />
+		<member firstname="Andre" lastname="Morkel" country="AUS" />
+	</team>
+	<team id="6" score="2100" time="23:13:13" penalty="0" gender="men" age="open">
+		<member firstname="Paul" lastname="Guard" country="AUS" />
+		<member firstname="Tony" lastname="Scott" country="AUS" />
+	</team>
+	<team id="7" score="2060" time="22:27:15" penalty="0" gender="men" age="open">
+		<member firstname="Stephen" lastname="Dose" country="AUS" />
+		<member firstname="Wes" lastname="Dose" country="AUS" />
+	</team>
+	<team id="8" score="2060" time="22:58:04" penalty="0" gender="men" age="veteran">
+		<member firstname="Pauli" lastname="Viljakainen" country="AUS" />
+		<member firstname="Ari" lastname="Piiroinen" country="AUS" />
+	</team>
+	<team id="9" score="2050" time="23:52:01" penalty="0" gender="men" age="superveteran">
+		<member firstname="Paul" lastname="Hoopmann" country="AUS" />
+		<member firstname="Des" lastname="Norman" country="AUS" />
+	</team>
+	<team id="10" score="2040" time="23:33:25" penalty="0" gender="men" age="superveteran">
+		<member firstname="Ted" lastname="van Geldermalsen" country="AUS" />
+		<member firstname="Derek" lastname="Morris" country="AUS" />
+	</team>
+	<team id="11" score="2000" time="23:34:41" penalty="0" gender="mixed" age="open">
+		<member firstname="Mark" lastname="Corbett" country="AUS" />
+		<member firstname="Jenny" lastname="Casanova" country="AUS" />
+	</team>
+	<team id="12" score="2000" time="23:40:57" penalty="0" gender="women" age="veteran">
+		<member firstname="Thorlene" lastname="Egerton" country="AUS" />
+		<member firstname="Sharon" lastname="Dilly" country="AUS" />
+	</team>
+	<team id="13" score="2000" time="23:49:21" penalty="0" gender="mixed" age="open">
+		<member firstname="Andrew" lastname="Baker" country="AUS" />
+		<member firstname="Delyth" lastname="Lloyd" country="AUS" />
+	</team>
+	<team id="14" score="1980" time="23:36:50" penalty="0" gender="men" age="open">
+		<member firstname="Shane" lastname="Lewis" country="AUS" />
+		<member firstname="Tim" lastname="Sikma" country="AUS" />
+	</team>
+	<team id="15" score="1960" time="23:21:37" penalty="0" gender="mixed" age="veteran">
+		<member firstname="Richard" lastname="Robinson" country="AUS" />
+		<member firstname="Tamsin" lastname="Barnes" country="AUS" />
+	</team>
+	<team id="16" score="1890" time="23:36:26" penalty="0" gender="men" age="ultraveteran">
+		<member firstname="Phillip" lastname="Gatt" country="AUS" />
+		<member firstname="Thomas" lastname="Brazier" country="AUS" />
+	</team>
+	<team id="17" score="1870" time="23:48:29" penalty="0" gender="mixed" age="open">
+		<member firstname="Craig" lastname="Mottershead" country="AUS" />
+		<member firstname="Jasmine" lastname="Elson" country="AUS" />
+	</team>
+	<team id="18" score="1850" time="23:37:11" penalty="0" gender="men" age="superveteran">
+		<member firstname="Ian" lastname="Gordon" country="AUS" />
+		<member firstname="Geoff" lastname="Lawford" country="AUS" />
+		<member firstname="Rod" lastname="Gray" country="AUS" />
+	</team>
+	<team id="19" score="1840" time="23:32:52" penalty="0" gender="men" age="superveteran">
+		<member firstname="Vic" lastname="Sedunary" country="AUS" />
+		<member firstname="Merv" lastname="Trease" country="AUS" />
+	</team>
+	<team id="20" score="1820" time="23:21:17" penalty="0" gender="mixed" age="open">
+		<member firstname="Jess" lastname="Fuller-Smith" country="AUS" />
+		<member firstname="Darryl" lastname="Smith" country="AUS" />
+	</team>
+	<team id="21" score="1800" time="23:13:03" penalty="0" gender="mixed" age="superveteran">
+		<member firstname="Bill" lastname="Kennedy" country="NZL" />
+		<member firstname="Peter" lastname="Squires" country="NZL" />
+		<member firstname="Anne" lastname="Kennedy" country="NZL" />
+	</team>
+	<team id="22" score="1700" time="23:41:07" penalty="0" gender="men" age="open">
+		<member firstname="Dion" lastname="Keech" country="AUS" />
+		<member firstname="Keith" lastname="Hewitt" country="AUS" />
+	</team>
+	<team id="23" score="1650" time="23:08:47" penalty="0" gender="men" age="veteran">
+		<member firstname="Adrian" lastname="Garnett" country="AUS" />
+		<member firstname="Arnstein" lastname="Prytz" country="AUS" />
+	</team>
+	<team id="24" score="1650" time="23:24:24" penalty="0" gender="men" age="veteran">
+		<member firstname="Ross" lastname="Dawson" country="AUS" />
+		<member firstname="Peter" lastname="Taylor" country="AUS" />
+	</team>
+	<team id="25" score="1640" time="23:37:20" penalty="0" gender="men" age="open">
+		<member firstname="Mike" lastname="Hotchkis" country="AUS" />
+		<member firstname="Alec" lastname="Deslandes" country="AUS" />
+		<member firstname="Nathan" lastname="Overbeeke" country="AUS" />
+	</team>
+	<team id="26" score="1630" time="23:47:06" penalty="0" gender="men" age="veteran">
+		<member firstname="Graeme" lastname="Busch" country="AUS" />
+		<member firstname="Brett" lastname="Sparkes" country="AUS" />
+	</team>
+	<team id="27" score="1620" time="23:35:37" penalty="0" gender="men" age="veteran">
+		<member firstname="Jon" lastname="Smith" country="AUS" />
+		<member firstname="Mike" lastname="Broadbent" country="AUS" />
+	</team>
+	<team id="28" score="1620" time="23:40:09" penalty="0" gender="women" age="open">
+		<member firstname="Gill" lastname="Fowler" country="AUS" />
+		<member firstname="Alexa" lastname="Mc Auley" country="AUS" />
+	</team>
+	<team id="29" score="1600" time="23:33:45" penalty="0" gender="mixed" age="superveteran">
+		<member firstname="Jean" lastname="Douglass" country="AUS" />
+		<member firstname="Ron" lastname="Simpson" country="AUS" />
+	</team>
+	<team id="30" score="1600" time="23:36:52" penalty="0" gender="women" age="veteran">
+		<member firstname="Christine" lastname="Brown" country="AUS" />
+		<member firstname="Karen" lastname="Pedley" country="AUS" />
+	</team>
+	<team id="31" score="1580" time="23:32:50" penalty="0" gender="men" age="open">
+		<member firstname="Galen" lastname="Correy" country="AUS" />
+		<member firstname="Oliver" lastname="Lee" country="AUS" />
+	</team>
+	<team id="32" score="1570" time="23:07:32" penalty="0" gender="mixed" age="open">
+		<member firstname="Andrew" lastname="Murphy" country="AUS" />
+		<member firstname="Sarah" lastname="Murphy" country="AUS" />
+		<member firstname="Olivia" lastname="Thorne" country="AUS" />
+	</team>
+	<team id="33" score="1560" time="23:03:57" penalty="0" gender="men" age="open">
+		<member firstname="Adam" lastname="Fletcher" country="AUS" />
+		<member firstname="Kirk" lastname="Cumming" country="AUS" />
+	</team>
+	<team id="34" score="1550" time="23:04:30" penalty="0" gender="men" age="open">
+		<member firstname="Kevin" lastname="Colla" country="AUS" />
+		<member firstname="Stephen" lastname="Gray" country="AUS" />
+	</team>
+	<team id="35" score="1540" time="23:07:37" penalty="0" gender="women" age="veteran">
+		<member firstname="Julie" lastname="Gordon" country="NZL" />
+		<member firstname="Debbie" lastname="Mansfeild" country="NZL" />
+	</team>
+	<team id="36" score="1540" time="23:28:49" penalty="0" gender="mixed" age="open">
+		<member firstname="Ann" lastname="Smithson" country="AUS" />
+		<member firstname="Martin" lastname="Podhajsky" country="AUS" />
+	</team>
+	<team id="37" score="1480" time="23:36:41" penalty="0" gender="men" age="superveteran">
+		<member firstname="Neil" lastname="Hawthorne" country="AUS" />
+		<member firstname="Warwick" lastname="Selby" country="AUS" />
+	</team>
+	<team id="38" score="1470" time="23:00:02" penalty="0" gender="women" age="superveteran">
+		<member firstname="Kay" lastname="Haarsma" country="AUS" />
+		<member firstname="Kate" lastname="Logan" country="AUS" />
+		<member firstname="Jenny" lastname="Bourne" country="AUS" />
+	</team>
+	<team id="39" score="1440" time="23:04:51" penalty="0" gender="mixed" age="open">
+		<member firstname="Martin" lastname="Dearnley" country="AUS" />
+		<member firstname="Louise" lastname="Dearnley" country="AUS" />
+	</team>
+	<team id="40" score="1420" time="22:47:09" penalty="0" gender="mixed" age="superveteran">
+		<member firstname="Annie" lastname="Sanderson" country="NZL" />
+		<member firstname="Nick" lastname="Collins" country="NZL" />
+	</team>
+	<team id="41" score="1400" time="23:26:39" penalty="0" gender="mixed" age="veteran">
+		<member firstname="Mark" lastname="Struthers" country="NZL" />
+		<member firstname="Annette" lastname="Windross" country="NZL" />
+		<member firstname="Dennis" lastname="Litt" country="NZL" />
+		<member firstname="Henry" lastname="Beex" country="NZL" />
+	</team>
+	<team id="42" score="1380" time="18:37:14" penalty="0" gender="men" age="veteran">
+		<member firstname="Randell" lastname="Taylor" country="AUS" />
+		<member firstname="Angus" lastname="Forgan" country="AUS" />
+		<member firstname="Markus" lastname="Herderich" country="AUS" />
+	</team>
+	<team id="43" score="1380" time="22:18:40" penalty="0" gender="men" age="veteran">
+		<member firstname="Bruce" lastname="Greenhalgh" country="AUS" />
+		<member firstname="Farley" lastname="Wright" country="AUS" />
+	</team>
+	<team id="44" score="1370" time="23:47:33" penalty="0" gender="men" age="veteran">
+		<member firstname="Phil" lastname="Giddings" country="AUS" />
+		<member firstname="Ron" lastname="Mason" country="AUS" />
+	</team>
+	<team id="45" score="1340" time="23:41:05" penalty="0" gender="mixed" age="superveteran">
+		<member firstname="Ian" lastname="Herbert" country="AUS" />
+		<member firstname="Joan" lastname="Reynolds" country="AUS" />
+	</team>
+	<team id="46" score="1310" time="22:45:55" penalty="0" gender="women" age="ultraveteran">
+		<member firstname="Anna" lastname="Houghton" country="AUS" />
+		<member firstname="Manal" lastname="Monsour" country="AUS" />
+	</team>
+	<team id="47" score="1290" time="23:17:05" penalty="0" gender="mixed" age="superveteran">
+		<member firstname="Stephen" lastname="Honey" country="AUS" />
+		<member firstname="Martina" lastname="Honey" country="AUS" />
+	</team>
+	<team id="48" score="1270" time="23:42:30" penalty="0" gender="men" age="veteran">
+		<member firstname="Don" lastname="Mc Lean" country="AUS" />
+		<member firstname="Michael" lastname="Challen" country="AUS" />
+	</team>
+	<team id="49" score="1260" time="20:59:32" penalty="0" gender="men" age="veteran">
+		<member firstname="Andrew" lastname="Mc Gowan" country="NZL" />
+		<member firstname="Martin" lastname="Etherington" country="NZL" />
+	</team>
+	<team id="50" score="1260" time="23:35:47" penalty="0" gender="mixed" age="ultraveteran">
+		<member firstname="Kim" lastname="van Netten" country="AUS" />
+		<member firstname="Morris" lastname="Andrew" country="AUS" />
+	</team>
+	<team id="51" score="1250" time="23:17:04" penalty="0" gender="mixed" age="veteran">
+		<member firstname="Evelyn" lastname="Colwell" country="AUS" />
+		<member firstname="Craig" lastname="Colwell" country="AUS" />
+	</team>
+	<team id="52" score="1220" time="23:43:13" penalty="0" gender="men" age="superveteran">
+		<member firstname="David" lastname="Dash" country="AUS" />
+		<member firstname="John" lastname="Anderson" country="AUS" />
+	</team>
+	<team id="53" score="1200" time="22:54:42" penalty="0" gender="mixed" age="open">
+		<member firstname="Olivier" lastname="Fahy" country="AUS" />
+		<member firstname="Annika" lastname="Danielsson" country="AUS" />
+	</team>
+	<team id="54" score="1200" time="23:53:56" penalty="0" gender="mixed" age="veteran">
+		<member firstname="Simon" lastname="Allston" country="AUS" />
+		<member firstname="Janeil" lastname="Hall" country="AUS" />
+	</team>
+	<team id="55" score="1160" time="23:55:10" penalty="0" gender="men" age="open">
+		<member firstname="Simon" lastname="Inverarity" country="AUS" />
+		<member firstname="Adam" lastname="Leibhardt" country="AUS" />
+	</team>
+	<team id="56" score="1130" time="22:20:29" penalty="0" gender="men" age="veteran">
+		<member firstname="Ron" lastname="Avery" country="AUS" />
+		<member firstname="Phill" lastname="Yates" country="AUS" />
+	</team>
+	<team id="57" score="1070" time="22:30:29" penalty="0" gender="men" age="open">
+		<member firstname="Glenn" lastname="Bridgart" country="AUS" />
+		<member firstname="Tom" lastname="Sear" country="AUS" />
+	</team>
+	<team id="58" score="1060" time="22:57:39" penalty="0" gender="women" age="veteran">
+		<member firstname="Janet" lastname="Musker" country="AUS" />
+		<member firstname="Lesa" lastname="Muir" country="AUS" />
+	</team>
+	<team id="59" score="1050" time="24:10:01" penalty="110" gender="men" age="veteran">
+		<member firstname="Bruce" lastname="Paterson" country="AUS" />
+		<member firstname="Greg" lastname="Andrews" country="AUS" />
+	</team>
+	<team id="60" score="1040" time="23:36:43" penalty="0" gender="women" age="open">
+		<member firstname="Kate" lastname="Corner" country="AUS" />
+		<member firstname="Emma" lastname="Munzberg" country="AUS" />
+	</team>
+	<team id="61" score="1040" time="23:39:25" penalty="0" gender="men" age="veteran">
+		<member firstname="Simon" lastname="Rea" country="NZL" />
+		<member firstname="Jeff" lastname="Williams" country="NZL" />
+	</team>
+	<team id="62" score="1030" time="23:52:56" penalty="0" gender="mixed" age="open">
+		<member firstname="Christopher" lastname="Mardell" country="AUS" />
+		<member firstname="Amanda" lastname="Mardell" country="AUS" />
+	</team>
+	<team id="63" score="1000" time="23:15:00" penalty="0" gender="mixed" age="open">
+		<member firstname="Janet" lastname="Buckerfield" country="AUS" />
+		<member firstname="Mark" lastname="Buckerfield" country="AUS" />
+		<member firstname="Amy" lastname="Buckerfield" country="AUS" />
+	</team>
+	<team id="64" score="990" time="22:34:34" penalty="0" gender="men" age="open">
+		<member firstname="Zalesh" lastname="Myers" country="AUS" />
+		<member firstname="Gleb" lastname="Kotousov" country="AUS" />
+	</team>
+	<team id="65" score="990" time="23:44:33" penalty="0" gender="mixed" age="open">
+		<member firstname="Andrew" lastname="Koolhof" country="AUS" />
+		<member firstname="Claire" lastname="Butler" country="AUS" />
+	</team>
+	<team id="66" score="980" time="23:52:29" penalty="0" gender="men" age="open">
+		<member firstname="Anton" lastname="Steketee" country="AUS" />
+		<member firstname="Cameron" lastname="Roy" country="AUS" />
+	</team>
+	<team id="67" score="960" time="14:41:56" penalty="0" gender="mixed" age="superveteran">
+		<member firstname="Paula" lastname="Horton" country="AUS" />
+		<member firstname="Steve" lastname="Horton" country="AUS" />
+	</team>
+	<team id="68" score="930" time="23:02:44" penalty="0" gender="mixed" age="superveteran">
+		<member firstname="Grant" lastname="Battersby" country="AUS" />
+		<member firstname="Helen" lastname="Mc Auley" country="AUS" />
+	</team>
+	<team id="69" score="850" time="10:04:33" penalty="0" gender="men" age="superveteran">
+		<member firstname="Owen" lastname="Horton" country="AUS" />
+		<member firstname="Jim" lastname="Langford" country="AUS" />
+	</team>
+	<team id="70" score="850" time="22:00:47" penalty="0" gender="mixed" age="open">
+		<member firstname="Fern" lastname="Tomas" country="AUS" />
+		<member firstname="Tyson" lastname="Hillyard" country="AUS" />
+	</team>
+	<team id="71" score="820" time="22:40:07" penalty="0" gender="mixed" age="open">
+		<member firstname="Kara" lastname="Smernik" country="AUS" />
+		<member firstname="Ron" lastname="Smernik" country="AUS" />
+		<member firstname="Josephine" lastname="Smernik" country="AUS" />
+		<member firstname="Philippa" lastname="Smernik" country="AUS" />
+	</team>
+	<team id="72" score="820" time="23:31:47" penalty="0" gender="women" age="superveteran">
+		<member firstname="Colleen" lastname="Mock" country="AUS" />
+		<member firstname="Parissa" lastname="Poulis" country="AUS" />
+	</team>
+	<team id="73" score="800" time="20:58:54" penalty="0" gender="mixed" age="veteran">
+		<member firstname="Greg" lastname="Toman" country="AUS" />
+		<member firstname="Debbie" lastname="Toman" country="AUS" />
+	</team>
+	<team id="74" score="790" time="20:47:59" penalty="0" gender="mixed" age="superveteran">
+		<member firstname="Marg" lastname="Cook" country="AUS" />
+		<member firstname="Rob" lastname="Cook" country="AUS" />
+	</team>
+	<team id="75" score="790" time="22:17:44" penalty="0" gender="mixed" age="open">
+		<member firstname="Michael" lastname="Short" country="AUS" />
+		<member firstname="Lachlan" lastname="Short" country="AUS" />
+		<member firstname="Melinda" lastname="Short" country="AUS" />
+	</team>
+	<team id="76" score="780" time="21:17:26" penalty="0" gender="mixed" age="open">
+		<member firstname="Wolfgang" lastname="Meike" country="AUS" />
+		<member firstname="Mirjam" lastname="Kaestli" country="AUS" />
+	</team>
+	<team id="77" score="780" time="23:37:02" penalty="0" gender="mixed" age="veteran">
+		<member firstname="Jo" lastname="Powell" country="AUS" />
+		<member firstname="Matthew" lastname="Wheal" country="AUS" />
+	</team>
+	<team id="78" score="770" time="23:12:59" penalty="0" gender="mixed" age="open">
+		<member firstname="Jude" lastname="Mulhuijsen" country="AUS" />
+		<member firstname="Jon" lastname="Williamson" country="AUS" />
+	</team>
+	<team id="79" score="740" time="21:55:36" penalty="0" gender="women" age="superveteran">
+		<member firstname="Hilary" lastname="Cane" country="AUS" />
+		<member firstname="Debbie" lastname="Gale" country="AUS" />
+	</team>
+	<team id="80" score="730" time="23:27:45" penalty="0" gender="women" age="veteran">
+		<member firstname="Anne" lastname="Powell" country="AUS" />
+		<member firstname="Therese" lastname="Powell" country="AUS" />
+	</team>
+	<team id="81" score="710" time="22:14:39" penalty="0" gender="mixed" age="veteran">
+		<member firstname="Bryan" lastname="Baldwin" country="AUS" />
+		<member firstname="Julie" lastname="Baldwin" country="AUS" />
+	</team>
+	<team id="82" score="700" time="23:15:11" penalty="0" gender="men" age="open">
+		<member firstname="Simon" lastname="Saunders" country="AUS" />
+		<member firstname="Ben" lastname="Saunders" country="AUS" />
+	</team>
+	<team id="83" score="690" time="14:42:19" penalty="0" gender="men" age="open">
+		<member firstname="Matt" lastname="Smith" country="AUS" />
+		<member firstname="Peter" lastname="Brooks" country="AUS" />
+	</team>
+	<team id="84" score="680" time="23:25:48" penalty="0" gender="women" age="superveteran">
+		<member firstname="Joan" lastname="Corner" country="AUS" />
+		<member firstname="Chris" lastname="Fyffe" country="AUS" />
+	</team>
+	<team id="85" score="680" time="23:29:55" penalty="0" gender="mixed" age="open">
+		<member firstname="Isabell" lastname="Bastian" country="AUS" />
+		<member firstname="Felix" lastname="Erben" country="AUS" />
+		<member firstname="Soohyun" lastname="Kim" country="AUS" />
+	</team>
+	<team id="86" score="670" time="22:16:42" penalty="0" gender="women" age="open">
+		<member firstname="Sally" lastname="Caston" country="AUS" />
+		<member firstname="Sonja" lastname="van Wegen" country="AUS" />
+	</team>
+	<team id="87" score="650" time="23:39:33" penalty="0" gender="men" age="open">
+		<member firstname="John" lastname="Cameron" country="AUS" />
+		<member firstname="Tristan" lastname="Skawronski" country="AUS" />
+	</team>
+	<team id="88" score="620" time="21:03:17" penalty="0" gender="mixed" age="veteran">
+		<member firstname="Michael" lastname="Schafer" country="AUS" />
+		<member firstname="Janelle" lastname="Schafer" country="AUS" />
+	</team>
+	<team id="89" score="620" time="22:59:47" penalty="0" gender="women" age="superveteran">
+		<member firstname="Shirley" lastname="Proctor" country="AUS" />
+		<member firstname="Anne" lastname="Forsyth" country="AUS" />
+	</team>
+	<team id="90" score="620" time="24:06:24" penalty="70" gender="mixed" age="open">
+		<member firstname="Mike" lastname="Aylott" country="AUS" />
+		<member firstname="Suzanne" lastname="Byron" country="AUS" />
+	</team>
+	<team id="91" score="580" time="23:37:18" penalty="0" gender="men" age="superveteran">
+		<member firstname="Peter" lastname="Dalwood" country="AUS" />
+		<member firstname="Rob" lastname="Gardner" country="AUS" />
+	</team>
+	<team id="92" score="570" time="11:01:22" penalty="0" gender="men" age="open">
+		<member firstname="Nathan" lastname="Seal" country="AUS" />
+		<member firstname="Ken" lastname="Maxfield" country="AUS" />
+	</team>
+	<team id="93" score="530" time="22:45:15" penalty="0" gender="mixed" age="superveteran">
+		<member firstname="John" lastname="Such" country="AUS" />
+		<member firstname="Carol" lastname="Such" country="AUS" />
+	</team>
+	<team id="94" score="530" time="23:37:38" penalty="0" gender="men" age="superveteran">
+		<member firstname="Don" lastname="Baker" country="AUS" />
+		<member firstname="Ron" lastname="Frederick" country="AUS" />
+	</team>
+	<team id="95" score="500" time="24:19:03" penalty="200" gender="women" age="open">
+		<member firstname="Natalie" lastname="Anderson" country="AUS" />
+		<member firstname="Heather" lastname="Browett" country="AUS" />
+	</team>
+	<team id="96" score="490" time="23:25:43" penalty="0" gender="mixed" age="open">
+		<member firstname="Lexie" lastname="Ashforth" country="AUS" />
+		<member firstname="Michael" lastname="Westover" country="AUS" />
+	</team>
+	<team id="97" score="470" time="23:46:17" penalty="0" gender="mixed" age="open">
+		<member firstname="Ruth" lastname="Kinderman" country="AUS" />
+		<member firstname="Tim" lastname="Chiknaikin" country="AUS" />
+	</team>
+	<team id="98" score="460" time="20:47:00" penalty="0" gender="mixed" age="superveteran">
+		<member firstname="Colin" lastname="Corbett" country="AUS" />
+		<member firstname="Joy" lastname="Corbett" country="AUS" />
+	</team>
+	<team id="99" score="460" time="23:14:27" penalty="0" gender="men" age="open">
+		<member firstname="Andrew" lastname="Kennedy" country="AUS" />
+		<member firstname="Will" lastname="Kennedy" country="AUS" />
+	</team>
+	<team id="100" score="420" time="22:22:36" penalty="0" gender="women" age="open">
+		<member firstname="Sonia" lastname="Kupina" country="AUS" />
+		<member firstname="Mira" lastname="Kozik" country="AUS" />
+	</team>
+	<team id="101" score="400" time="23:19:46" penalty="0" gender="men" age="open">
+		<member firstname="Peter" lastname="Allen" country="AUS" />
+		<member firstname="Arron" lastname="Broom" country="AUS" />
+	</team>
+	<team id="102" score="390" time="20:28:09" penalty="0" gender="men" age="open">
+		<member firstname="Simon" lastname="Sypek" country="AUS" />
+		<member firstname="Morgan" lastname="Atkinson" country="AUS" />
+	</team>
+	<team id="103" score="390" time="22:27:48" penalty="0" gender="mixed" age="ultraveteran">
+		<member firstname="Michael" lastname="Waskiel" country="AUS" />
+		<member firstname="Elsa" lastname="Burnell" country="AUS" />
+		<member firstname="Konrad" lastname="Romaniuk" country="AUS" />
+	</team>
+	<team id="104" score="380" time="19:00:29" penalty="0" gender="mixed" age="veteran">
+		<member firstname="Michael" lastname="Dunbar" country="AUS" />
+		<member firstname="Sue" lastname="Berger" country="AUS" />
+	</team>
+	<team id="105" score="380" time="20:21:03" penalty="0" gender="mixed" age="veteran">
+		<member firstname="Gordon" lastname="Mc Keown" country="AUS" />
+		<member firstname="Sarah" lastname="Mc Keown" country="AUS" />
+	</team>
+	<team id="106" score="380" time="20:21:44" penalty="0" gender="men" age="open">
+		<member firstname="Doug" lastname="Gillott" country="AUS" />
+		<member firstname="Angus" lastname="Gillott" country="AUS" />
+	</team>
+	<team id="107" score="240" time="22:22:54" penalty="0" gender="women" age="superveteran">
+		<member firstname="Dianne" lastname="Young" country="AUS" />
+		<member firstname="Claire" lastname="Martin" country="AUS" />
+	</team>
+	<team id="108" score="210" time="19:58:07" penalty="0" gender="women" age="superveteran">
+		<member firstname="Tina" lastname="Smith" country="AUS" />
+		<member firstname="Bev" lastname="Trease" country="AUS" />
+	</team>
+	<team id="109" score="210" time="22:51:59" penalty="0" gender="women" age="open">
+		<member firstname="Cathryn" lastname="Blair" country="AUS" />
+		<member firstname="Rachel" lastname="Morcom" country="AUS" />
+	</team>
+	<team id="110" score="150" time="23:23:09" penalty="0" gender="men" age="superveteran">
+		<member firstname="Marc" lastname="Turner" country="AUS" />
+		<member firstname="John" lastname="Wauchope" country="AUS" />
+	</team>
+	<team id="111" score="30" time="14:31:48" penalty="0" gender="mixed" age="open">
+		<member firstname="Christine" lastname="Arnold" country="AUS" />
+		<member firstname="Samantha" lastname="Nester" country="AUS" />
+		<member firstname="Tony" lastname="Moritz" country="AUS" />
+	</team>
+	<team id="112" score="0" time="0:00:00" penalty="0" gender="mixed" age="open" status="not started">
+		<member firstname="Jordan" lastname="Lefmann" country="AUS" />
+		<member firstname="Linda" lastname="Davis" country="AUS" />
+	</team>
+	<team id="113" score="0" time="0:00:00" penalty="0" gender="men" age="open" status="not started">
+		<member firstname="Michael" lastname="Bammann" country="AUS" />
+		<member firstname="Dylan" lastname="Burford" country="AUS" />
+	</team>
+	<team id="114" score="0" time="0:00:00" penalty="0" gender="women" age="open" status="not started">
+		<member firstname="Shelley" lastname="Dorey" country="AUS" />
+		<member firstname="Sandra" lastname="Spinks" country="AUS" />
+	</team>
+</results>

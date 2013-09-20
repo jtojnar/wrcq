@@ -1,0 +1,316 @@
+<results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="results.xsd">
+	<team id="47" score="279" time="23:53:24" penalty="0" gender="men" age="veteran" duration="24" name="suotu.fi">
+		<member firstname="Armo" lastname="Hiie" country="EST" />
+		<member firstname="Reigo" lastname="Lehtla" country="EST" />
+	</team>
+	<team id="3" score="267" time="23:41:56" penalty="0" gender="men" age="open" duration="24" name="Raivojuoksijat">
+		<member firstname="Manu" lastname="Humppi" country="FIN" />
+		<member firstname="Jari" lastname="Pitkäkoski" country="FIN" />
+	</team>
+	<team id="11" score="250" time="23:34:25" penalty="0" gender="men" age="veteran" duration="24" name="IhanHukassa">
+		<member firstname="Tommi" lastname="Lainema" country="FIN" />
+		<member firstname="Juha" lastname="Karppinen" country="FIN" />
+	</team>
+	<team id="30" score="236" time="23:55:05" penalty="0" gender="men" age="open" duration="24" name="GP/Nijak">
+		<member firstname="Ari" lastname="Talja" country="FIN" />
+		<member firstname="Markus" lastname="Juvala" country="FIN" />
+	</team>
+	<team id="38" score="233" time="23:37:51" penalty="0" gender="men" age="veteran" duration="24" name="Team 22h">
+		<member firstname="Juha" lastname="Lehtonen" country="FIN" />
+		<member firstname="Jouni" lastname="Nurminen" country="FIN" />
+	</team>
+	<team id="7" score="224" time="23:22:54" penalty="0" gender="men" age="veteran" duration="24" name="KOMOD">
+		<member firstname="Andrey" lastname="Molotkov" country="RUS" />
+		<member firstname="Igor" lastname="Komin" country="RUS" />
+	</team>
+	<team id="40" score="220" time="22:21:56" penalty="0" gender="men" age="veteran" duration="24" name="Avanti adventure">
+		<member firstname="Janne" lastname="Kortelainen" country="FIN" />
+		<member firstname="Markus" lastname="Helander" country="FIN" />
+	</team>
+	<team id="25" score="220" time="23:15:35" penalty="0" gender="women" age="open" duration="24" name="RasKun Flikat">
+		<member firstname="Satu" lastname="Heittola" country="FIN" />
+		<member firstname="Leena" lastname="Ojala" country="FIN" />
+	</team>
+	<team id="15" score="219" time="23:10:30" penalty="0" gender="mixed" age="veteran" duration="24" name="Rekolan Raikas">
+		<member firstname="Eki" lastname="Haapomaa" country="FIN" />
+		<member firstname="Helena" lastname="Haapomaa" country="FIN" />
+	</team>
+	<team id="168" score="209" time="20:45:18" penalty="0" gender="men" age="open" duration="24" name="Pirunvuoren Ponnistus">
+		<member firstname="Kai" lastname="Törmikoski" country="FIN" />
+		<member firstname="Tomi" lastname="Mäkelä" country="FIN" />
+	</team>
+	<team id="23" score="190" time="23:15:09" penalty="0" gender="men" age="open" duration="24" name="Cokers">
+		<member firstname="Teemu" lastname="Kalvas" country="FIN" />
+		<member firstname="Jussi" lastname="Lahdenniemi" country="FIN" />
+	</team>
+	<team id="31" score="189" time="23:42:13" penalty="0" gender="women" age="veteran" duration="24" name="Hungry Birds">
+		<member firstname="Sirpa" lastname="Rauhala" country="FIN" />
+		<member firstname="Hanna" lastname="Niinimäki" country="FIN" />
+	</team>
+	<team id="37" score="184" time="22:07:14" penalty="0" gender="men" age="superveteran" duration="24" name="Laatuaikaa">
+		<member firstname="Hannu" lastname="Reiman" country="FIN" />
+		<member firstname="Lars" lastname="Forsblom" country="FIN" />
+	</team>
+	<team id="22" score="181" time="22:21:23" penalty="0" gender="women" age="veteran" duration="24" name="Tyykikylän Leidit">
+		<member firstname="Tuula" lastname="Nieminen" country="FIN" />
+		<member firstname="Katariina" lastname="Manni" country="FIN" />
+	</team>
+	<team id="43" score="180" time="23:41:33" penalty="0" gender="mixed" age="open" duration="24" name="Resistance">
+		<member firstname="Ilkka" lastname="Lassila" country="FIN" />
+		<member firstname="Anni" lastname="Toppila" country="FIN" />
+	</team>
+	<team id="12" score="179" time="23:55:35" penalty="0" gender="women" age="veteran" duration="24" name="Centipede">
+		<member firstname="Svetlana" lastname="Slobodenyuk" country="RUS" />
+		<member firstname="Elena" lastname="Krylova" country="RUS" />
+	</team>
+	<team id="16" score="178" time="23:38:55" penalty="0" gender="women" age="veteran" duration="24" name="Pirunvuoren Ponnistus Naisenergia">
+		<member firstname="Tarja" lastname="Törmikoski" country="FIN" />
+		<member firstname="Merja" lastname="Ylihärsilä" country="FIN" />
+	</team>
+	<team id="18" score="166" time="21:29:12" penalty="0" gender="men" age="open" duration="24" name="Juntit OK">
+		<member firstname="Jussi" lastname="Korhonen" country="FIN" />
+		<member firstname="Eetu" lastname="Pekkanen" country="FIN" />
+	</team>
+	<team id="5" score="165" time="22:28:02" penalty="0" gender="mixed" age="veteran" duration="24" name="JFF">
+		<member firstname="Tiina" lastname="Kangilaski" country="EST" />
+		<member firstname="Jaan" lastname="Metsa" country="EST" />
+	</team>
+	<team id="14" score="157" time="22:23:31" penalty="0" gender="mixed" age="veteran" duration="24" name="Peräkylän Ponnistus">
+		<member firstname="Sipoonkorven" lastname="Susi" country="FIN" />
+		<member firstname="Imatran" lastname="Voima" country="FIN" />
+		<member firstname="Pohjan" lastname="Tähti" country="FIN" />
+	</team>
+	<team id="41" score="157" time="23:18:28" penalty="0" gender="men" age="open" duration="24" name="SR heebot">
+		<member firstname="Kimmo" lastname="Köppä" country="FIN" />
+		<member firstname="Marko" lastname="Ollikainen" country="FIN" />
+	</team>
+	<team id="9" score="152" time="23:33:45" penalty="0" gender="men" age="superveteran" duration="24" name="Avant">
+		<member firstname="Aleksandr" lastname="Lisenenkov" country="RUS" />
+		<member firstname="Evgenii" lastname="Emelianov" country="RUS" />
+	</team>
+	<team id="19" score="149" time="23:42:35" penalty="0" gender="men" age="veteran" duration="24" name="TK-Team">
+		<member firstname="Jaakko" lastname="Uusitalo" country="FIN" />
+		<member firstname="Olavi" lastname="Ujanen" country="FIN" />
+	</team>
+	<team id="35" score="140" time="23:06:47" penalty="0" gender="men" age="veteran" duration="24" name="Suksitta suolle">
+		<member firstname="Kari" lastname="Härkönen" country="FIN" />
+		<member firstname="Tarmo" lastname="Lehtilä" country="FIN" />
+	</team>
+	<team id="13" score="128" time="23:40:37" penalty="0" gender="mixed" age="open" duration="24" name="LL">
+		<member firstname="Aleksandr" lastname="Shumskii" country="RUS" />
+		<member firstname="Elizabeth" lastname="Uspenskaya" country="RUS" />
+	</team>
+	<team id="28" score="122" time="23:35:34" penalty="0" gender="mixed" age="open" duration="24" name="Eileia">
+		<member firstname="Kaimar" lastname="Kerno" country="EST" />
+		<member firstname="Annika" lastname="Ruven" country="EST" />
+	</team>
+	<team id="1" score="121" time="23:14:38" penalty="0" gender="mixed" age="veteran" duration="24" name="Ilves V">
+		<member firstname="Juta" lastname="Ainelo" country="EST" />
+		<member firstname="Jaan" lastname="Ainelo" country="EST" />
+		<member firstname="Margus" lastname="Sarap" country="EST" />
+	</team>
+	<team id="32" score="110" time="23:37:23" penalty="0" gender="mixed" age="superveteran" duration="24" name="BaKi">
+		<member firstname="Olga" lastname="Bazhenova" country="RUS" />
+		<member firstname="Yury" lastname="Kiyl" country="RUS" />
+	</team>
+	<team id="39" score="108" time="22:44:45" penalty="0" gender="women" age="open" duration="24" name="OL-UT">
+		<member firstname="Hanna-Kaisa" lastname="Sadwinski" country="FIN" />
+		<member firstname="Terhi" lastname="Kujala" country="FIN" />
+		<member firstname="Essi" lastname="Kangasaho" country="FIN" />
+	</team>
+	<team id="6" score="101" time="23:44:59" penalty="0" gender="women" age="veteran" duration="24" name="zola">
+		<member firstname="Larisa" lastname="Uspenskaya" country="RUS" />
+		<member firstname="Zoia" lastname="Molotkova" country="RUS" />
+	</team>
+	<team id="26" score="97" time="18:40:50" penalty="0" gender="mixed" age="open" duration="24" name="Team Asana">
+		<member firstname="Anniina" lastname="Erkkilä" country="FIN" />
+		<member firstname="Santtu" lastname="Erkkilä" country="FIN" />
+	</team>
+	<team id="21" score="96" time="22:57:21" penalty="0" gender="women" age="superveteran" duration="24" name="Nastolan Terä/Ruutiduo">
+		<member firstname="Tuija" lastname="Rantalainen" country="FIN" />
+		<member firstname="Arja" lastname="Rantalainen" country="FIN" />
+	</team>
+	<team id="17" score="95" time="21:45:54" penalty="0" gender="men" age="open" duration="24" name="Tenoriveljet">
+		<member firstname="Harri" lastname="Pakkala" country="FIN" />
+		<member firstname="Ossi" lastname="Vuorinen" country="FIN" />
+	</team>
+	<team id="24" score="93" time="21:42:00" penalty="0" gender="mixed" age="veteran" duration="24" name="marikari">
+		<member firstname="Mari" lastname="Hjelt" country="FIN" />
+		<member firstname="Kari" lastname="Hjelt" country="FIN" />
+	</team>
+	<team id="27" score="91" time="22:29:41" penalty="0" gender="men" age="open" duration="24" name="Oskar and friends">
+		<member firstname="Ragnar" lastname="Ilp" country="EST" />
+		<member firstname="Andres" lastname="Arro" country="EST" />
+	</team>
+	<team id="4" score="90" time="12:02:51" penalty="0" gender="mixed" age="open" duration="24" name="J.U.N.K">
+		<member firstname="Jouni" lastname="Junkkaala" country="FIN" />
+		<member firstname="Katja" lastname="Junkkarinen" country="FIN" />
+	</team>
+	<team id="46" score="87" time="19:36:20" penalty="0" gender="mixed" age="superveteran" duration="24" name="HiPe">
+		<member firstname="Hillevi" lastname="Syväterä" country="FIN" />
+		<member firstname="Pekka" lastname="Syväterä" country="FIN" />
+	</team>
+	<team id="10" score="72" time="9:49:34" penalty="0" gender="women" age="open" duration="24" name="Night macrame">
+		<member firstname="Anna" lastname="Lisenenkova" country="RUS" />
+		<member firstname="Anastasya" lastname="Yakovleva" country="RUS" />
+	</team>
+	<team id="36" score="70" time="23:15:52" penalty="0" gender="mixed" age="open" duration="24" name="Hukassa24h">
+		<member firstname="Aki" lastname="Ali-Lekkala" country="FIN" />
+		<member firstname="Niko" lastname="Sipiläinen" country="FIN" />
+		<member firstname="Tomi-Petteri" lastname="Vieno" country="FIN" />
+		<member firstname="Noora" lastname="Karppinen" country="FIN" />
+	</team>
+	<team id="20" score="43" time="11:21:05" penalty="0" gender="women" age="superveteran" duration="24" name="Maatuivat">
+		<member firstname="Tuire" lastname="Laine" country="FIN" />
+		<member firstname="Maarit" lastname="Laine" country="FIN" />
+	</team>
+	<team id="8" score="42" time="10:12:28" penalty="0" gender="mixed" age="open" duration="24" name="kominy">
+		<member firstname="Anna" lastname="Komina" country="RUS" />
+		<member firstname="Peter" lastname="Komin" country="RUS" />
+	</team>
+	<team id="34" score="36" time="8:07:10" penalty="0" gender="women" age="open" duration="24" name="Just for fun">
+		<member firstname="Jess" lastname="Fuller-Smith" country="AUS" />
+		<member firstname="Minja" lastname="Hynynen" country="FIN" />
+	</team>
+	<team id="33" score="0" time="0:00:00" penalty="0" gender="men" age="veteran" duration="24" name="OUT RC Eemeli" status="not finished">
+		<member firstname="Timo" lastname="Reiman" country="FIN" />
+	</team>
+	<team id="42" score="0" time="0:00:00" penalty="0" gender="mixed" age="veteran" duration="24" name="Vuorenpeikot" status="not finished">
+		<member firstname="Virva" lastname="Vuorenpää" country="FIN" />
+		<member firstname="Asmo" lastname="Vuorenpää" country="FIN" />
+	</team>
+	<team id="45" score="0" time="0:00:00" penalty="0" gender="women" age="open" duration="24" name="VetU" status="not started">
+		<member firstname="Tanja" lastname="Rannila" country="FIN" />
+		<member firstname="Anne" lastname="Polso" country="FIN" />
+	</team>
+	<team id="96" score="113" time="7:53:50" penalty="0" gender="women" age="open" duration="8" name="Rajavillit">
+		<member firstname="Antti" lastname="Nousiainen" country="FIN" />
+		<member firstname="Markus" lastname="Siivola" country="FIN" />
+	</team>
+	<team id="98" score="105" time="7:41:36" penalty="0" gender="men" age="open" duration="8" name="Hanhiperän veto">
+		<member firstname="Sami" lastname="Löfman" country="FIN" />
+		<member firstname="Tomi" lastname="Löfman" country="FIN" />
+	</team>
+	<team id="86" score="104" time="7:53:27" penalty="0" gender="men" age="open" duration="8" name="Vika Suunta">
+		<member firstname="Petteri" lastname="Nikki" country="FIN" />
+		<member firstname="Pasi" lastname="Pekkala" country="FIN" />
+	</team>
+	<team id="110" score="101" time="7:48:00" penalty="0" gender="men" age="open" duration="8" name="Sampo Haistelijat">
+		<member firstname="Sami" lastname="Liponkoski" country="FIN" />
+		<member firstname="Ville" lastname="Maksimainen" country="FIN" />
+	</team>
+	<team id="107" score="100" time="7:55:28" penalty="0" gender="men" age="open" duration="8" name="Sioux Duo">
+		<member firstname="Hans" lastname="Tuominen" country="FIN" />
+		<member firstname="Jari" lastname="Siukonen" country="FIN" />
+	</team>
+	<team id="105" score="95" time="8:02:00" penalty="3" gender="men" age="open" duration="8" name="Mustavuoren Reippaat">
+		<member firstname="" lastname="Penttilä" country="FIN" />
+		<member firstname="" lastname="Hihnala" country="FIN" />
+		<member firstname="" lastname="Soivio" country="FIN" />
+	</team>
+	<team id="99" score="95" time="8:12:25" penalty="13" gender="men" age="open" duration="8" name="Liekkitiimi">
+		<member firstname="Mika" lastname="Talvisilta" country="FIN" />
+		<member firstname="Timo" lastname="Serenius" country="FIN" />
+		<member firstname="Niko" lastname="Junnila" country="FIN" />
+	</team>
+	<team id="89" score="94" time="7:35:16" penalty="0" gender="mixed" age="open" duration="8" name="Sheikki Leino">
+		<member firstname="Petri" lastname="Lassheikki" country="FIN" />
+		<member firstname="Johanna" lastname="Leino" country="FIN" />
+	</team>
+	<team id="91" score="91" time="7:57:39" penalty="0" gender="women" age="open" duration="8" name="Team Laajavuori">
+		<member firstname="Laura" lastname="Ketonen" country="FIN" />
+		<member firstname="Lotta" lastname="Tuominen" country="FIN" />
+	</team>
+	<team id="104" score="87" time="7:42:22" penalty="0" gender="men" age="open" duration="8" name="Telemark Team ?rn">
+		<member firstname="Aki" lastname="Halme" country="FIN" />
+		<member firstname="Marko" lastname="Marenk" country="FIN" />
+		<member firstname="Kalle" lastname="Martikainen" country="FIN" />
+	</team>
+	<team id="85" score="85" time="7:40:19" penalty="0" gender="mixed" age="open" duration="8" name="team Hautaniemi">
+		<member firstname="Marjaana" lastname="Hautaniemi" country="FIN" />
+		<member firstname="Petri" lastname="Hautaniemi" country="FIN" />
+	</team>
+	<team id="112" score="83" time="7:44:30" penalty="0" gender="mixed" age="open" duration="8" name="Team Noria">
+		<member firstname="Hanna" lastname="Peltonen" country="FIN" />
+		<member firstname="Teemu" lastname="Kettunen" country="FIN" />
+	</team>
+	<team id="111" score="80" time="7:38:15" penalty="0" gender="mixed" age="open" duration="8" name="Reitittittömät">
+		<member firstname="Jenny" lastname="Vainio" country="FIN" />
+		<member firstname="Antti" lastname="Heikkilä" country="FIN" />
+	</team>
+	<team id="100" score="80" time="7:39:38" penalty="0" gender="mixed" age="open" duration="8" name="Pohjoisen Valopäät">
+		<member firstname="Sami" lastname="Lappalainen" country="FIN" />
+		<member firstname="Jyrki" lastname="Lappalainen" country="FIN" />
+		<member firstname="Antti" lastname="Jutila" country="FIN" />
+	</team>
+	<team id="95" score="77" time="8:07:25" penalty="8" gender="mixed" age="open" duration="8" name="Peräkylän Ponnistus 2">
+		<member firstname="Karhusolan" lastname="Tiukunen" country="FIN" />
+		<member firstname="Domina" lastname="Halstedt" country="FIN" />
+	</team>
+	<team id="87" score="75" time="7:49:14" penalty="0" gender="men" age="open" duration="8" name="Kotkan pojat">
+		<member firstname="Markku" lastname="Löfgren" country="FIN" />
+		<member firstname="Jouni" lastname="Oljakka" country="FIN" />
+	</team>
+	<team id="81" score="70" time="7:31:03" penalty="0" gender="mixed" age="open" duration="8" name="ELV">
+		<member firstname="Eeva-Liisa" lastname="Salonen" country="FIN" />
+		<member firstname="Velipekka" lastname="Raes" country="FIN" />
+	</team>
+	<team id="82" score="70" time="7:33:23" penalty="0" gender="men" age="open" duration="8" name="White Spots">
+		<member firstname="Tuomas" lastname="Arisalo" country="FIN" />
+	</team>
+	<team id="92" score="69" time="7:26:32" penalty="0" gender="women" age="open" duration="8" name="PäRa Ladies">
+		<member firstname="Merja" lastname="Lahtinen" country="FIN" />
+		<member firstname="Marika" lastname="Liikola" country="FIN" />
+	</team>
+	<team id="102" score="65" time="7:52:32" penalty="0" gender="women" age="open" duration="8" name="Salainen ainesosa">
+		<member firstname="Miia" lastname="Kokkonen" country="FIN" />
+	</team>
+	<team id="88" score="57" time="7:39:50" penalty="0" gender="men" age="open" duration="8" name="Team juma">
+		<member firstname="Matti" lastname="Hailu" country="FIN" />
+		<member firstname="Jukka" lastname="Hailu" country="FIN" />
+	</team>
+	<team id="90" score="56" time="7:42:18" penalty="0" gender="mixed" age="open" duration="8" name="Team K">
+		<member firstname="Henri" lastname="Karppinen" country="FIN" />
+		<member firstname="Anna" lastname="Karppinen" country="FIN" />
+	</team>
+	<team id="108" score="55" time="7:57:18" penalty="0" gender="men" age="open" duration="8" name="Team HollEmot">
+		<member firstname="Jouni" lastname="Holopainen" country="FIN" />
+	</team>
+	<team id="109" score="44" time="7:20:30" penalty="0" gender="mixed" age="open" duration="8" name="Paha Rasti">
+		<member firstname="Kati" lastname="Niemelä" country="FIN" />
+		<member firstname="Marko" lastname="Niemelä" country="FIN" />
+	</team>
+	<team id="103" score="42" time="7:38:25" penalty="0" gender="women" age="open" duration="8" name="Emitemut">
+		<member firstname="Anne-Maria" lastname="Ernvall-Hytönen" country="FIN" />
+		<member firstname="Hanna" lastname="Vehkamäki" country="FIN" />
+		<member firstname="Lotta" lastname="Oinonen" country="FIN" />
+	</team>
+	<team id="94" score="40" time="7:30:02" penalty="0" gender="women" age="open" duration="8" name="Hapsun enkelit">
+		<member firstname="Elina" lastname="Ahvonen" country="FIN" />
+		<member firstname="Tiina" lastname="Lindqvist" country="FIN" />
+		<member firstname="Sari" lastname="Ojansuu" country="FIN" />
+	</team>
+	<team id="93" score="37" time="7:34:21" penalty="0" gender="women" age="open" duration="8" name="Meijjän tiimi">
+		<member firstname="Taina" lastname="Pärnänen" country="FIN" />
+		<member firstname="Maria" lastname="Makkonen" country="FIN" />
+	</team>
+	<team id="106" score="37" time="7:54:41" penalty="0" gender="women" age="open" duration="8" name="Star Walkers">
+		<member firstname="Annika" lastname="Mälkiä" country="FIN" />
+	</team>
+	<team id="101" score="35" time="7:05:41" penalty="0" gender="mixed" age="open" duration="8" name="ATP">
+		<member firstname="Anni" lastname="Seppälä" country="FIN" />
+		<member firstname="Sanni" lastname="Seppälä" country="FIN" />
+	</team>
+	<team id="97" score="0" time="8:53:19" penalty="0" gender="women" age="open" duration="8" name="Azimuth-SPb" status="overtime">
+		<member firstname="Marina" lastname="Cherkasova" country="RUS" />
+		<member firstname="Olga" lastname="Gavrilova" country="RUS" />
+	</team>
+	<team id="83" score="0" time="0:00:00" penalty="0" gender="women" age="open" duration="8" name="Annat palaa" status="not started">
+		<member firstname="Anna" lastname="Ruohonen" country="FIN" />
+		<member firstname="Anna-Kaisa" lastname="Viita" country="FIN" />
+	</team>
+	<team id="84" score="0" time="0:00:00" penalty="0" gender="men" age="open" duration="8" name="Evon Torpedot" status="not started">
+		<member firstname="Juho" lastname="Walinen" country="FIN" />
+		<member firstname="Jesse" lastname="Valto" country="FIN" />
+	</team>
+</results>

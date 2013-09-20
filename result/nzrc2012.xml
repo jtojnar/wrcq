@@ -1,0 +1,224 @@
+<results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="results.xsd">
+	<team id="15" score="3020" time="23:47:30" penalty="0" gender="men" age="open" duration="24">
+		<member firstname="Greig" lastname="Hamilton" country="NZL" />
+		<member firstname="Matt" lastname="Scott" country="NZL" />
+	</team>
+	<team id="13" score="2740" time="23:50:26" penalty="0" gender="men" age="veteran" duration="24">
+		<member firstname="Phil" lastname="Wood" country="NZL" />
+		<member firstname="Ross" lastname="Rotherham" country="NZL" />
+	</team>
+	<team id="30" score="2410" time="23:55:09" penalty="0" gender="mixed" age="open" duration="24">
+		<member firstname="Tim" lastname="Farrant" country="NZL" />
+		<member firstname="Ramash" lastname="Swamy" country="NZL" />
+		<member firstname="Jana" lastname="Nyklova" country="CZE" />
+	</team>
+	<team id="18" score="2230" time="23:06:09" penalty="0" gender="mixed" age="veteran" duration="24">
+		<member firstname="Debbie" lastname="Mansfield" country="NZL" />
+		<member firstname="Glen" lastname="Warner" country="NZL" />
+	</team>
+	<team id="23" score="2230" time="23:56:50" penalty="0" gender="men" age="superveteran" duration="24">
+		<member firstname="Nick" lastname="Collins" country="NZL" />
+		<member firstname="Don" lastname="Paterson" country="NZL" />
+	</team>
+	<team id="25" score="2150" time="23:25:14" penalty="0" gender="men" age="veteran" duration="24">
+		<member firstname="Colin" lastname="Dixon" country="NZL" />
+		<member firstname="Douglas" lastname="Woods" country="NZL" />
+	</team>
+	<team id="21" score="2130" time="23:36:56" penalty="0" gender="men" age="veteran" duration="24">
+		<member firstname="Barry" lastname="Ruddell" country="NZL" />
+		<member firstname="Graeme" lastname="Ewenson" country="NZL" />
+	</team>
+	<team id="34" score="2090" time="23:42:11" penalty="0" gender="men" age="junior" duration="24">
+		<member firstname="Joel" lastname="Smith" country="NZL" />
+		<member firstname="Elisha" lastname="Nuttall" country="NZL" />
+	</team>
+	<team id="4" score="1990" time="23:51:58" penalty="0" gender="mixed" age="superveteran" duration="24">
+		<member firstname="Emma" lastname="de Lacey" country="NZL" />
+		<member firstname="Guy" lastname="de Lacey" country="NZL" />
+	</team>
+	<team id="10" score="1910" time="23:25:21" penalty="0" gender="mixed" age="open" duration="24">
+		<member firstname="Lisa" lastname="Bates" country="NZL" />
+		<member firstname="Wayne" lastname="Oxenham" country="NZL" />
+	</team>
+	<team id="12" score="1910" time="23:54:12" penalty="0" gender="men" age="open" duration="24">
+		<member firstname="Kelvin" lastname="Thiele" country="NZL" />
+		<member firstname="Richard" lastname="Persson" country="NZL" />
+	</team>
+	<team id="1" score="1890" time="23:55:17" penalty="0" gender="mixed" age="veteran" duration="24">
+		<member firstname="Richard" lastname="Robinson" country="AUS" />
+		<member firstname="Tamsin" lastname="Barnes" country="AUS" />
+		<member firstname="Vivienne" lastname="Prince" country="NZL" />
+	</team>
+	<team id="17" score="1740" time="23:12:08" penalty="0" gender="women" age="superveteran" duration="24">
+		<member firstname="Val" lastname="Rogers" country="NZL" />
+		<member firstname="Kathrin" lastname="Mueller" country="NZL" />
+	</team>
+	<team id="3" score="1690" time="23:08:59" penalty="0" gender="mixed" age="superveteran" duration="24">
+		<member firstname="Annie" lastname="Sanderson" country="NZL" />
+		<member firstname="Max" lastname="Kerrison" country="NZL" />
+	</team>
+	<team id="26" score="1650" time="23:40:40" penalty="0" gender="mixed" age="veteran" duration="24">
+		<member firstname="Mark" lastname="Struthers" country="NZL" />
+		<member firstname="Annette" lastname="Windross" country="NZL" />
+	</team>
+	<team id="27" score="1650" time="23:59:10" penalty="0" gender="women" age="veteran" duration="24">
+		<member firstname="Chris" lastname="Dixon" country="NZL" />
+		<member firstname="Caroline" lastname="Elliott" country="NZL" />
+	</team>
+	<team id="31" score="1640" time="22:42:45" penalty="0" gender="men" age="superveteran" duration="24">
+		<member firstname="Michael" lastname="Wood" country="NZL" />
+		<member firstname="Derek" lastname="Morrison" country="NZL" />
+	</team>
+	<team id="7" score="1630" time="22:53:52" penalty="0" gender="men" age="superveteran" duration="24">
+		<member firstname="Andrew" lastname="Mc Gowan" country="NZL" />
+		<member firstname="Trevor" lastname="Merrifield" country="NZL" />
+	</team>
+	<team id="5" score="1600" time="23:34:45" penalty="0" gender="men" age="superveteran" duration="24">
+		<member firstname="Richard" lastname="English" country="NZL" />
+		<member firstname="Dave" lastname="Armstrong" country="NZL" />
+	</team>
+	<team id="28" score="1580" time="22:57:40" penalty="0" gender="men" age="open" duration="24">
+		<member firstname="Alex" lastname="Opie" country="NZL" />
+		<member firstname="Jeremy" lastname="Lane" country="NZL" />
+	</team>
+	<team id="29" score="1580" time="23:57:21" penalty="0" gender="men" age="veteran" duration="24">
+		<member firstname="Alister" lastname="Metherell" country="NZL" />
+		<member firstname="Mike" lastname="Harding" country="NZL" />
+	</team>
+	<team id="8" score="1510" time="23:31:17" penalty="0" gender="men" age="open" duration="24">
+		<member firstname="Richard" lastname="Davies" country="NZL" />
+		<member firstname="Ben" lastname="Clendon" country="NZL" />
+	</team>
+	<team id="16" score="1460" time="21:37:10" penalty="0" gender="men" age="veteran" duration="24">
+		<member firstname="Martin" lastname="Etherington" country="NZL" />
+		<member firstname="Graeme" lastname="Read" country="NZL" />
+	</team>
+	<team id="32" score="1450" time="21:36:57" penalty="0" gender="men" age="veteran" duration="24">
+		<member firstname="Mark" lastname="Hearfield" country="NZL" />
+		<member firstname="Andy" lastname="Foster" country="NZL" />
+	</team>
+	<team id="33" score="1410" time="23:35:56" penalty="0" gender="mixed" age="open" duration="24">
+		<member firstname="Gwenn" lastname="Le Mee" country="NZL" />
+		<member firstname="Yoann" lastname="Feillet" country="NZL" />
+		<member firstname="Gaspard" lastname="Marjollet" country="NZL" />
+	</team>
+	<team id="9" score="1310" time="22:45:34" penalty="0" gender="mixed" age="veteran" duration="24">
+		<member firstname="Michael" lastname="Schafer" country="NZL" />
+		<member firstname="Janelle" lastname="Schafer" country="NZL" />
+	</team>
+	<team id="14" score="1290" time="20:54:55" penalty="0" gender="women" age="open" duration="24">
+		<member firstname="Melanie" lastname="Stephen" country="NZL" />
+		<member firstname="Julie" lastname="Grant" country="NZL" />
+	</team>
+	<team id="20" score="1270" time="17:22:24" penalty="0" gender="mixed" age="open" duration="24">
+		<member firstname="Katherine" lastname="Allan" country="NZL" />
+		<member firstname="Allister" lastname="Adams" country="NZL" />
+		<member firstname="Gray" lastname="Patterson" country="NZL" />
+	</team>
+	<team id="6" score="1170" time="20:49:29" penalty="0" gender="men" age="open" duration="24">
+		<member firstname="Chris" lastname="Townley" country="NZL" />
+		<member firstname="Steve" lastname="Lock" country="NZL" />
+	</team>
+	<team id="22" score="1130" time="15:56:45" penalty="0" gender="women" age="veteran" duration="24">
+		<member firstname="Di" lastname="Liddell" country="NZL" />
+		<member firstname="Sam" lastname="Wright" country="NZL" />
+	</team>
+	<team id="19" score="1090" time="23:20:51" penalty="0" gender="mixed" age="superveteran" duration="24">
+		<member firstname="Phil" lastname="Bones" country="NZL" />
+		<member firstname="Anne" lastname="Kennedy" country="NZL" />
+	</team>
+	<team id="11" score="1030" time="17:47:22" penalty="0" gender="men" age="veteran" duration="24">
+		<member firstname="Simon" lastname="Rea" country="NZL" />
+		<member firstname="Jeff" lastname="Williams" country="NZL" />
+	</team>
+	<team id="24" score="820" time="11:27:42" penalty="0" gender="women" age="junior" duration="24">
+		<member firstname="Georgie" lastname="Opie" country="NZL" />
+		<member firstname="Erin" lastname="Paterson" country="NZL" />
+	</team>
+	<team id="35" score="550" time="23:49:07" penalty="0" gender="mixed" age="veteran" duration="24">
+		<member firstname="Helen" lastname="Chignell" country="NZL" />
+		<member firstname="Mark" lastname="Chignell" country="NZL" />
+	</team>
+	<team id="209" score="1040" time="6:52:54" penalty="0" gender="men" age="veteran" duration="7">
+		<member firstname="Kev" lastname="Knowles" country="NZL" />
+		<member firstname="Jim" lastname="Cotter" country="NZL" />
+	</team>
+	<team id="214" score="940" time="6:51:30" penalty="0" gender="men" age="open" duration="7">
+		<member firstname="Daniel" lastname="Johnston" country="NZL" />
+		<member firstname="Tim" lastname="Lusk" country="NZL" />
+	</team>
+	<team id="210" score="930" time="6:46:16" penalty="0" gender="men" age="open" duration="7">
+		<member firstname="Ben" lastname="Ludgate" country="NZL" />
+		<member firstname="Brian" lastname="Buschl" country="NZL" />
+	</team>
+	<team id="203" score="830" time="6:59:29" penalty="0" gender="men" age="open" duration="7">
+		<member firstname="Bud" lastname="Law" country="NZL" />
+		<member firstname="Robbie" lastname="Mitchell" country="NZL" />
+	</team>
+	<team id="206" score="750" time="6:45:43" penalty="0" gender="mixed" age="veteran" duration="7">
+		<member firstname="Antonia" lastname="Wood" country="NZL" />
+		<member firstname="Jonathon" lastname="Wood" country="NZL" />
+	</team>
+	<team id="213" score="660" time="6:50:06" penalty="0" gender="men" age="open" duration="7">
+		<member firstname="Carl" lastname="Rathbone" country="NZL" />
+		<member firstname="Paul" lastname="Prince" country="NZL" />
+	</team>
+	<team id="215" score="610" time="6:42:21" penalty="0" gender="mixed" age="open" duration="7">
+		<member firstname="Phil" lastname="Watson" country="NZL" />
+		<member firstname="Cath" lastname="Watson" country="NZL" />
+	</team>
+	<team id="212" score="580" time="7:04:27" penalty="50" gender="mixed" age="veteran" duration="7">
+		<member firstname="Lesley" lastname="Woudberg" country="NZL" />
+		<member firstname="Jac" lastname="Woudberg" country="NZL" />
+	</team>
+	<team id="207" score="570" time="6:54:45" penalty="0" gender="mixed" age="junior" duration="7">
+		<member firstname="Sam" lastname="Mc Culloch" country="NZL" />
+		<member firstname="Hamish" lastname="Mc Kay" country="NZL" />
+		<member firstname="Lucy" lastname="Geddes" country="NZL" />
+	</team>
+	<team id="201" score="570" time="7:00:32" penalty="10" gender="mixed" age="veteran" duration="7">
+		<member firstname="Sharon" lastname="Morrison" country="NZL" />
+		<member firstname="Bill" lastname="Taine" country="NZL" />
+	</team>
+	<team id="208" score="540" time="6:54:45" penalty="0" gender="mixed" age="junior" duration="7">
+		<member firstname="Monty" lastname="Shearer" country="NZL" />
+		<member firstname="Jeremy" lastname="Norbury" country="NZL" />
+		<member firstname="Kenza" lastname="Randle" country="NZL" />
+		<member firstname="Sydney" lastname="Cook" country="NZL" />
+	</team>
+	<team id="211" score="510" time="6:59:45" penalty="0" gender="mixed" age="open" duration="7">
+		<member firstname="Roger" lastname="Slow" country="NZL" />
+		<member firstname="Natalie" lastname="Slow" country="NZL" />
+	</team>
+	<team id="202" score="490" time="6:58:37" penalty="0" gender="mixed" age="superveteran" duration="7">
+		<member firstname="Jennifer" lastname="Hudson" country="NZL" />
+		<member firstname="Grant" lastname="Hudson" country="NZL" />
+	</team>
+	<team id="220" score="480" time="6:45:14" penalty="0" gender="mixed" age="open" duration="7">
+		<member firstname="Julie" lastname="Nelson" country="NZL" />
+		<member firstname="Will" lastname="Nelson" country="NZL" />
+	</team>
+	<team id="219" score="480" time="6:45:19" penalty="0" gender="mixed" age="open" duration="7">
+		<member firstname="Keri" lastname="Barnett" country="NZL" />
+		<member firstname="Malcolm" lastname="Creagh" country="NZL" />
+		<member firstname="Ella" lastname="Creagh" country="NZL" />
+		<member firstname="Annie" lastname="Wardle" country="NZL" />
+	</team>
+	<team id="205" score="440" time="6:56:08" penalty="0" gender="women" age="veteran" duration="7">
+		<member firstname="Maria" lastname="Smith" country="NZL" />
+		<member firstname="Kursti" lastname="Annison" country="NZL" />
+	</team>
+	<team id="217" score="430" time="5:51:11" penalty="0" gender="mixed" age="open" duration="7">
+		<member firstname="Moni" lastname="Soehren" country="NZL" />
+		<member firstname="Sebastian" lastname="knight" country="NZL" />
+	</team>
+	<team id="216" score="390" time="6:59:05" penalty="0" gender="mixed" age="open" duration="7">
+		<member firstname="Tim" lastname="Jowett" country="NZL" />
+		<member firstname="Daniel" lastname="Turek" country="NZL" />
+		<member firstname="Jenn" lastname="Turek" country="NZL" />
+	</team>
+	<team id="204" score="230" time="7:27:37" penalty="280" gender="mixed" age="open" duration="7">
+		<member firstname="Jane" lastname="Forsyth" country="NZL" />
+		<member firstname="Alan" lastname="Grant" country="NZL" />
+	</team>
+</results>

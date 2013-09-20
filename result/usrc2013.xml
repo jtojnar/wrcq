@@ -1,0 +1,208 @@
+<results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="results.xsd">
+	<team id="1" score="2700" time="23:59:55" penalty="0" gender="men" age="open" duration="24" name="Gnome &amp; Troll">
+		<member firstname="Justin" lastname="Bakken" country="USA" />
+		<member firstname="Brian" lastname="Mayer" country="USA" />
+	</team>
+	<team id="2" score="2700" time="23:59:56" penalty="0" gender="men" age="veteran" duration="24" name="Speedy Goats">
+		<member firstname="Greg" lastname="Balter" country="USA" />
+		<member firstname="Vadim" lastname="Masalkov" country="USA" />
+	</team>
+	<team id="3" score="2700" time="23:59:59" penalty="0" gender="mixed" age="open" duration="24" name="Untamed: MadAthlete 1">
+		<member firstname="Joe" lastname="Brautigam" country="USA" />
+		<member firstname="Molly" lastname="Housman" country="USA" />
+		<member firstname="David" lastname="Lamb" country="USA" />
+	</team>
+	<team id="4" score="2290" time="23:59:59" penalty="0" gender="men" age="superveteran" duration="24" name="Phast Generation">
+		<member firstname="Glen" lastname="Brake" country="USA" />
+		<member firstname="Ken" lastname="Walker" country="USA" />
+	</team>
+	<team id="5" score="2210" time="23:59:59" penalty="0" gender="men" age="open" duration="24" name="GOALS ARA">
+		<member firstname="Brent" lastname="Freedland" country="XXX" />
+		<member firstname="Brian" lastname="Reiss" country="XXX" />
+	</team>
+	<team id="6" score="2200" time="23:59:59" penalty="0" gender="men" age="veteran" duration="24" name="Action D&amp;E">
+		<member firstname="Dave" lastname="Dunham" country="XXX" />
+		<member firstname="Ernst" lastname="Linder" country="XXX" />
+	</team>
+	<team id="7" score="2150" time="23:59:59" penalty="0" gender="men" age="veteran" duration="24" name="Team F">
+		<member firstname="Frank" lastname="Boscoe" country="USA" />
+		<member firstname="Fred" lastname="Pilon" country="USA" />
+	</team>
+	<team id="8" score="2100" time="23:59:59" penalty="0" gender="mixed" age="open" duration="24" name="Team Untamed Adventure">
+		<member firstname="Grant" lastname="Killian" country="USA" />
+		<member firstname="Russell" lastname="Nordquist" country="USA" />
+		<member firstname="Val" lastname="Nordquist" country="USA" />
+	</team>
+	<team id="9" score="2090" time="23:59:59" penalty="0" gender="men" age="open" duration="24" name="Mountain Desert">
+		<member firstname="Sagi" lastname="Levy" country="XXX" />
+		<member firstname="Andras" lastname="Wibmer" country="XXX" />
+	</team>
+	<team id="10" score="2050" time="23:59:59" penalty="0" gender="men" age="veteran" duration="24" name="Crunchy Bones">
+		<member firstname="Pavel" lastname="Korniliev" country="USA" />
+		<member firstname="Dmitry" lastname="Lavrov" country="USA" />
+	</team>
+	<team id="11" score="2040" time="23:59:59" penalty="0" gender="men" age="open" duration="24" name="Team HD/NYARA">
+		<member firstname="Olof" lastname="Hedberg" country="USA" />
+		<member firstname="Brice" lastname="Wilson" country="USA" />
+	</team>
+	<team id="12" score="2000" time="23:59:59" penalty="0" gender="women" age="open" duration="24" name="Topo Girlz">
+		<member firstname="Stina" lastname="Bridgeman" country="USA" />
+		<member firstname="Barb" lastname="Campbell" country="CAN" />
+	</team>
+	<team id="13" score="1920" time="23:59:58" penalty="0" gender="mixed" age="open" duration="24" name="Untamed: MadAthlete 2">
+		<member firstname="Chad" lastname="Denning" country="USA" />
+		<member firstname="Francis" lastname="Falardeau" country="USA" />
+		<member firstname="Meghan" lastname="Smith" country="USA" />
+	</team>
+	<team id="14" score="1920" time="23:59:59" penalty="0" gender="men" age="veteran" duration="24" name="Team Nadav">
+		<member firstname="Nadim" lastname="Ahmed" country="USA" />
+		<member firstname="David" lastname="Onkst" country="USA" />
+	</team>
+	<team id="15" score="1730" time="23:59:59" penalty="0" gender="men" age="veteran" duration="24" name="TBD2 (To Be Determined 2)">
+		<member firstname="Ben" lastname="Chagnon" country="XXX" />
+		<member firstname="Gary" lastname="Maslanka" country="XXX" />
+	</team>
+	<team id="16" score="1700" time="23:59:55" penalty="0" gender="men" age="open" duration="24" name="Zombie Wolf &amp; Gummy Warlord">
+		<member firstname="Sam" lastname="Kolins" country="XXX" />
+		<member firstname="Mark" lastname="Walsh" country="XXX" />
+	</team>
+	<team id="17" score="1700" time="23:59:59" penalty="0" gender="mixed" age="open" duration="24" name="Rubber &amp; Steel">
+		<member firstname="Mladen" lastname="Kolar" country="XXX" />
+		<member firstname="Kathy Jo" lastname="Rufener" country="XXX" />
+		<member firstname="Alexis" lastname="Rzewski" country="XXX" />
+	</team>
+	<team id="18" score="1690" time="23:59:59" penalty="0" gender="mixed" age="veteran" duration="24" name="Vignette">
+		<member firstname="John" lastname="Beard" country="USA" />
+		<member firstname="Marcy" lastname="Beard" country="USA" />
+	</team>
+	<team id="19" score="1620" time="23:59:59" penalty="0" gender="men" age="veteran" duration="24" name="Team Dark Horse/HTFU">
+		<member firstname="David" lastname="Darby" country="XXX" />
+		<member firstname="Tom" lastname="Smith" country="XXX" />
+	</team>
+	<team id="20" score="1510" time="23:59:59" penalty="0" gender="mixed" age="superveteran" duration="24" name="Lucky Path">
+		<member firstname="Valeriy" lastname="Doverov" country="USA" />
+		<member firstname="Sandra" lastname="Fillebrown" country="USA" />
+	</team>
+	<team id="21" score="1360" time="23:59:59" penalty="0" gender="mixed" age="open" duration="24" name="ROCers">
+		<member firstname="Chris" lastname="Joyce" country="USA" />
+		<member firstname="Lindsay" lastname="Worner" country="USA" />
+	</team>
+	<team id="22" score="1300" time="23:59:59" penalty="0" gender="men" age="open" duration="24" name="Black Ducks">
+		<member firstname="Anthony" lastname="Di Stefano" country="XXX" />
+		<member firstname="Giovany" lastname="Hernandez" country="XXX" />
+	</team>
+	<team id="23" score="1270" time="23:59:59" penalty="0" gender="men" age="open" duration="24" name="ET">
+		<member firstname="Earl" lastname="La Vallee" country="USA" />
+		<member firstname="Thomas" lastname="Rycroft" country="USA" />
+	</team>
+	<team id="24" score="980" time="23:59:59" penalty="0" gender="mixed" age="ultraveteran" duration="24" name="GHO SLO">
+		<member firstname="Jim" lastname="Waddington" country="XXX" />
+		<member firstname="Sue" lastname="Waddington" country="XXX" />
+	</team>
+	<team id="25" score="960" time="23:59:55" penalty="0" gender="mixed" age="open" duration="24" name="Buzzards Follow Us">
+		<member firstname="Joshua" lastname="Fisher" country="USA" />
+		<member firstname="Bud" lastname="Laird" country="USA" />
+		<member firstname="Colleen" lastname="Laird" country="USA" />
+	</team>
+	<team id="26" score="960" time="23:59:59" penalty="0" gender="mixed" age="superveteran" duration="24" name="Peach Pie">
+		<member firstname="Gary" lastname="Fortcher" country="USA" />
+		<member firstname="Carol" lastname="Johnson" country="USA" />
+		<member firstname="Ken" lastname="Lotze" country="USA" />
+	</team>
+	<team id="27" score="870" time="23:59:59" penalty="0" gender="mixed" age="open" duration="24" name="Turtle and the Hare">
+		<member firstname="Richard" lastname="Madden" country="XXX" />
+		<member firstname="Sydney" lastname="Madden" country="XXX" />
+	</team>
+	<team id="28" score="690" time="23:59:59" penalty="0" gender="men" age="open" duration="24" name="Team Kelsey">
+		<member firstname="Chuck" lastname="Kelsey" country="XXX" />
+		<member firstname="Keegan" lastname="Kelsey" country="XXX" />
+	</team>
+	<team id="29" score="550" time="23:59:55" penalty="0" gender="mixed" age="ultraveteran" duration="24" name="Lyons Den">
+		<member firstname="Patricia" lastname="Lyons" country="USA" />
+		<member firstname="Walter" lastname="Lyons" country="USA" />
+	</team>
+	<team id="30" score="550" time="23:59:59" penalty="0" gender="women" age="superveteran" duration="24" name="Team Lady Slippers">
+		<member firstname="Kathleen" lastname="Bannister" country="USA" />
+		<member firstname="Judy" lastname="Dickinson" country="USA" />
+	</team>
+	<team id="31" score="0" time="23:59:59" penalty="0" gender="mixed" age="veteran" duration="24" name="Ridge Runners">
+		<member firstname="Gordon" lastname="Mc Curry" country="USA" />
+		<member firstname="Nancy" lastname="McCurry" country="USA" />
+	</team>
+	<team id="32" score="1100" time="12:00:00" penalty="0" gender="men" age="open" duration="12" name="Kiwi">
+		<member firstname="Alister" lastname="Metherell" country="NZL" />
+		<member firstname="Jeremy" lastname="Metherell" country="NZL" />
+	</team>
+	<team id="33" score="890" time="12:00:00" penalty="0" gender="men" age="superveteran" duration="12" name="Baltimore Boys">
+		<member firstname="Nicholas" lastname="Gomez-Kling" country="USA" />
+		<member firstname="Jody" lastname="Landers" country="USA" />
+		<member firstname="John" lastname="Landers" country="USA" />
+	</team>
+	<team id="34" score="810" time="12:00:00" penalty="0" gender="men" age="open" duration="12" name="Xfp">
+		<member firstname="Mikhail" lastname="Leder" country="USA" />
+		<member firstname="K. J." lastname="Orbekk" country="USA" />
+		<member firstname="Yin-Shen" lastname="Chao" country="USA" />
+	</team>
+	<team id="35" score="770" time="12:00:00" penalty="0" gender="men" age="open" duration="12" name="Moth Man &amp; Doc">
+		<member firstname="Paul" lastname="Beckwith" country="USA" />
+		<member firstname="Steve" lastname="Gelber" country="USA" />
+	</team>
+	<team id="36" score="770" time="12:00:00" penalty="0" gender="men" age="open" duration="12" name="YB Normal">
+		<member firstname="Ron" lastname="Barron" country="USA" />
+		<member firstname="Doug" lastname="Sevon" country="USA" />
+	</team>
+	<team id="37" score="760" time="12:00:00" penalty="0" gender="women" age="open" duration="12" name="AR Chicks">
+		<member firstname="Whitney" lastname="Hedberg" country="USA" />
+		<member firstname="Abigail" lastname="Perkiss" country="USA" />
+	</team>
+	<team id="38" score="580" time="12:00:00" penalty="0" gender="men" age="open" duration="12" name="STSC">
+		<member firstname="Fletcher" lastname="Carron" country="USA" />
+		<member firstname="Robert" lastname="Clark" country="USA" />
+		<member firstname="Judson" lastname="Dieffenbach" country="USA" />
+	</team>
+	<team id="39" score="570" time="12:00:00" penalty="0" gender="mixed" age="open" duration="12" name="Andersons">
+		<member firstname="Martin" lastname="Anderson" country="USA" />
+		<member firstname="Natalie" lastname="Anderson" country="USA" />
+	</team>
+	<team id="40" score="260" time="12:00:00" penalty="0" gender="men" age="open" duration="12" name="Snail Trail">
+		<member firstname="Gomeh" lastname="Barak" country="USA" />
+		<member firstname="Yaki" lastname="Barak" country="USA" />
+	</team>
+	<team id="41" score="570" time="6:00:00" penalty="0" gender="mixed" age="superveteran" duration="6" name="Ramble On">
+		<member firstname="Glen" lastname="Tryson" country="USA" />
+		<member firstname="Janet" lastname="Tryson" country="USA" />
+	</team>
+	<team id="42" score="530" time="6:00:00" penalty="0" gender="mixed" age="veteran" duration="6" name="Quando Omni Flunkus Moritaty">
+		<member firstname="John" lastname="Boland" country="USA" />
+		<member firstname="Barb" lastname="Dominie" country="USA" />
+		<member firstname="Mark" lastname="Dominie" country="USA" />
+	</team>
+	<team id="43" score="430" time="6:00:00" penalty="0" gender="men" age="open" duration="6" name="ADK Vauhti">
+		<member firstname="Matthew" lastname="Torniainen" country="USA" />
+		<member firstname="Matti" lastname="Torniainen" country="USA" />
+	</team>
+	<team id="44" score="360" time="6:00:00" penalty="0" gender="men" age="open" duration="6" name="Mountain Meisters">
+		<member firstname="Patrick" lastname="Gerstner" country="USA" />
+		<member firstname="Gregory" lastname="Soule" country="USA" />
+	</team>
+	<team id="45" score="350" time="6:00:00" penalty="0" gender="men" age="superveteran" duration="6" name="The Office Rangers">
+		<member firstname="Art" lastname="Godin" country="USA" />
+		<member firstname="Allen" lastname="Quirk" country="USA" />
+	</team>
+	<team id="46" score="280" time="6:00:00" penalty="0" gender="mixed" age="superveteran" duration="6" name="Fink">
+		<member firstname="Bob" lastname="Fink" country="USA" />
+		<member firstname="Carol" lastname="Fink" country="USA" />
+	</team>
+	<team id="47" score="250" time="6:00:00" penalty="0" gender="mixed" age="ultraveteran" duration="6" name="Urban Blight">
+		<member firstname="Dave" lastname="Urban" country="USA" />
+		<member firstname="Kathy" lastname="Urban" country="USA" />
+	</team>
+	<team id="48" score="100" time="6:00:00" penalty="0" gender="men" age="veteran" duration="6" name="Mason-Dixon Misalignment">
+		<member firstname="Robert" lastname="Buraczynski" country="USA" />
+		<member firstname="Shawn" lastname="Forney" country="USA" />
+	</team>
+	<team id="49" score="30" time="6:00:00" penalty="0" gender="women" age="veteran" duration="6" name="No Mercy">
+		<member firstname="Holly" lastname="Freeman" country="USA" />
+		<member firstname="Susan" lastname="Sanderson" country="USA" />
+	</team>
+</results>
