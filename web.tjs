@@ -77,6 +77,9 @@ var hbs = require('hbs');
 hbs.registerHelper('date', function(date) {
 	return moment(date).format('L');
 });
+hbs.registerHelper('dateinterval', function(start, end) {
+	return moment(start).format('D MMM') + '–' + moment(end).format('D MMM YYYY');
+});
 
 var blocks = {};
 
