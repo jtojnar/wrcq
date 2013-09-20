@@ -337,6 +337,7 @@ var __tame_fn_48 = function (__tame_k) {
     ) ;
     
     var ageclass = {
+    'under18' : '18' ,
     'under20' : '20' ,
     'under23' : '23' ,
     'junior' : 'J' ,
@@ -475,7 +476,7 @@ var __tame_fn_48 = function (__tame_k) {
                                 }
                                 ,
                             parent_cb : __tame_defer_cb,
-                            line : 230,
+                            line : 231,
                             file : "web.tjs"
                         } )
                         ) ;
@@ -501,7 +502,7 @@ var __tame_fn_48 = function (__tame_k) {
                                 }
                                 ,
                             parent_cb : __tame_defer_cb,
-                            line : 231,
+                            line : 232,
                             file : "web.tjs"
                         } )
                         ) ;
@@ -553,7 +554,7 @@ var __tame_fn_48 = function (__tame_k) {
                                 }
                                 ,
                             parent_cb : __tame_defer_cb,
-                            line : 239,
+                            line : 240,
                             file : "web.tjs"
                         } )
                         ) ;
@@ -590,7 +591,7 @@ var __tame_fn_48 = function (__tame_k) {
         }
         ;
     }
-    var categoriesToObject = { MO : { age : 'open' , gender : 'men' } , XO : { age : 'open' , gender : 'mixed' } , WO : { age : 'open' , gender : 'women' } , MV : { age : 'veteran' , gender : 'men' } , XV : { age : 'veteran' , gender : 'mixed' } , WV : { age : 'veteran' , gender : 'women' } , MSV : { age : 'superveteran' , gender : 'men' } , XSV : { age : 'superveteran' , gender : 'mixed' } , WSV : { age : 'superveteran' , gender : 'women' } , MUV : { age : 'ultraveteran' , gender : 'men' } , XUV : { age : 'ultraveteran' , gender : 'mixed' } , WUV : { age : 'ultraveteran' , gender : 'women' } , MJ : { age : 'junior' , gender : 'men' } , XJ : { age : 'junior' , gender : 'mixed' } , WJ : { age : 'junior' , gender : 'women' } , M20 : { age : 'under20' , gender : 'men' } , X20 : { age : 'under20' , gender : 'mixed' } , W20 : { age : 'under20' , gender : 'women' } , M23 : { age : 'under23' , gender : 'men' } , X23 : { age : 'under23' , gender : 'mixed' } , W23 : { age : 'under23' , gender : 'women' } } ;
+    var categoriesToObject = { MO : { age : 'open' , gender : 'men' } , XO : { age : 'open' , gender : 'mixed' } , WO : { age : 'open' , gender : 'women' } , MV : { age : 'veteran' , gender : 'men' } , XV : { age : 'veteran' , gender : 'mixed' } , WV : { age : 'veteran' , gender : 'women' } , MSV : { age : 'superveteran' , gender : 'men' } , XSV : { age : 'superveteran' , gender : 'mixed' } , WSV : { age : 'superveteran' , gender : 'women' } , MUV : { age : 'ultraveteran' , gender : 'men' } , XUV : { age : 'ultraveteran' , gender : 'mixed' } , WUV : { age : 'ultraveteran' , gender : 'women' } , MJ : { age : 'junior' , gender : 'men' } , XJ : { age : 'junior' , gender : 'mixed' } , WJ : { age : 'junior' , gender : 'women' } , M18 : { age : 'under18' , gender : 'men' } , X18 : { age : 'under18' , gender : 'mixed' } , W18 : { age : 'under18' , gender : 'women' } , M20 : { age : 'under20' , gender : 'men' } , X20 : { age : 'under20' , gender : 'mixed' } , W20 : { age : 'under20' , gender : 'women' } , M23 : { age : 'under23' , gender : 'men' } , X23 : { age : 'under23' , gender : 'mixed' } , W23 : { age : 'under23' , gender : 'women' } } ;
     
     
     var categoryInheritance = { 'ultraveteran' : 'superveteran' , 'superveteran' : 'veteran' , 'veteran' : 'open' } ;
@@ -662,7 +663,7 @@ var __tame_fn_48 = function (__tame_k) {
                                         }
                                         ,
                                     parent_cb : __tame_defer_cb,
-                                    line : 301,
+                                    line : 302,
                                     file : "web.tjs"
                                 } )
                                 ) ;
@@ -716,7 +717,7 @@ var __tame_fn_48 = function (__tame_k) {
                                                 }
                                                 ,
                                             parent_cb : __tame_defer_cb,
-                                            line : 310,
+                                            line : 311,
                                             file : "web.tjs"
                                         } )
                                         ) ;
@@ -756,7 +757,7 @@ var __tame_fn_48 = function (__tame_k) {
                                                         }
                                                         ,
                                                     parent_cb : __tame_defer_cb,
-                                                    line : 315,
+                                                    line : 316,
                                                     file : "web.tjs"
                                                 } )
                                                 ) ;
@@ -794,7 +795,7 @@ var __tame_fn_48 = function (__tame_k) {
                                                                 }
                                                                 ,
                                                             parent_cb : __tame_defer_cb,
-                                                            line : 318,
+                                                            line : 319,
                                                             file : "web.tjs"
                                                         } )
                                                         ) ;
@@ -832,7 +833,7 @@ var __tame_fn_48 = function (__tame_k) {
                                                                         }
                                                                         ,
                                                                     parent_cb : __tame_defer_cb,
-                                                                    line : 321,
+                                                                    line : 322,
                                                                     file : "web.tjs"
                                                                 } )
                                                                 ) ;
@@ -911,7 +912,7 @@ var __tame_fn_48 = function (__tame_k) {
                                                                                 }
                                                                                 ,
                                                                             parent_cb : __tame_defer_cb,
-                                                                            line : 366,
+                                                                            line : 367,
                                                                             file : "web.tjs"
                                                                         } )
                                                                         ) ;
