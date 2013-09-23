@@ -1,0 +1,300 @@
+<results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="results.xsd">
+	<team id="27" score="436" time="23:47:23" penalty="0" gender="men" age="open" name="ELITA">
+		<member firstname="Kristaps" lastname="Epners" country="LAT" />
+		<member firstname="Jānis" lastname="Blanks" country="LAT" />
+	</team>
+	<team id="2" score="426" time="23:38:37" penalty="0" gender="men" age="open" name="escape.lv">
+		<member firstname="Guntis" lastname="Pikurs" country="LAT" />
+		<member firstname="Māris" lastname="Bērziņš" country="LAT" />
+	</team>
+	<team id="28" score="416" time="23:40:05" penalty="0" gender="men" age="open" name="Ar draugiem mežā">
+		<member firstname="Mārtiņš" lastname="Malzubris" country="LAT" />
+		<member firstname="Romāns" lastname="Evarts" country="LAT" />
+	</team>
+	<team id="602" score="412" time="23:39:06" penalty="0" gender="men" age="veteran" name="Nix65-2013">
+		<member firstname="Aigars" lastname="Actiņš" country="LAT" />
+		<member firstname="Nikolajs" lastname="Lucāns" country="LAT" />
+	</team>
+	<team id="605" score="396" time="23:51:06" penalty="0" gender="men" age="veteran" name="RAID.lv">
+		<member firstname="Pēteris" lastname="Īvāns" country="LAT" />
+		<member firstname="Normunds" lastname="Lisovskis" country="LAT" />
+	</team>
+	<team id="802" score="368" time="23:57:29" penalty="0" gender="mixed" age="veteran" name="Mona">
+		<member firstname="Baiba" lastname="Ozola" country="LAT" />
+		<member firstname="Jānis" lastname="Nāgelis" country="LAT" />
+	</team>
+	<team id="1106" score="366" time="23:21:51" penalty="0" gender="mixed" age="superveteran" name="ELFI">
+		<member firstname="Alīda" lastname="Ābola" country="LAT" />
+		<member firstname="Imants" lastname="Čaklis" country="LAT" />
+	</team>
+	<team id="219" score="362" time="23:39:21" penalty="0" gender="mixed" age="open" name="Fosgēns">
+		<member firstname="Mārtiņš" lastname="Krūze" country="LAT" />
+		<member firstname="Ieva" lastname="Grauduma" country="LAT" />
+	</team>
+	<team id="212" score="360" time="23:15:13" penalty="0" gender="mixed" age="open" name="Ņergas">
+		<member firstname="Mārtiņš" lastname="Puriņš" country="LAT" />
+		<member firstname="Marta" lastname="Zumberga" country="LAT" />
+	</team>
+	<team id="209" score="358" time="23:51:56" penalty="0" gender="mixed" age="open" name="Liedagi-35">
+		<member firstname="Fadejs" lastname="Precinieks" country="LAT" />
+		<member firstname="Zelma" lastname="Preciniece" country="LAT" />
+	</team>
+	<team id="1102" score="356" time="23:50:32" penalty="0" gender="mixed" age="superveteran" name="Kāpa LR">
+		<member firstname="Rolands" lastname="Laveiķis" country="LAT" />
+		<member firstname="Ligita" lastname="Grunde" country="LAT" />
+	</team>
+	<team id="13" score="355" time="23:41:31" penalty="0" gender="men" age="open" name="Meža Rūķi.">
+		<member firstname="Jānis" lastname="Bogdanovs" country="LAT" />
+		<member firstname="Mārcis" lastname="Bogdanovs" country="LAT" />
+	</team>
+	<team id="216" score="349" time="23:34:55" penalty="0" gender="mixed" age="open" name="Gatis_un_Alda">
+		<member firstname="Alda" lastname="Bražūne" country="LAT" />
+		<member firstname="Gatis" lastname="Kalniņš" country="LAT" />
+	</team>
+	<team id="1105" score="348" time="23:36:22" penalty="0" gender="mixed" age="superveteran" name="Nekas Nekur Nepazūd">
+		<member firstname="Andris" lastname="Tauvens" country="LAT" />
+		<member firstname="Gunta" lastname="Lebedoka" country="LAT" />
+	</team>
+	<team id="22" score="337" time="23:53:06" penalty="0" gender="men" age="veteran" name="Random Suslik band">
+		<member firstname="Valerijs" lastname="Sturis" country="LAT" />
+		<member firstname="Aleksandrs" lastname="Tambovcevs" country="LAT" />
+	</team>
+	<team id="604" score="334" time="23:33:38" penalty="0" gender="men" age="veteran" name="CONCORDE">
+		<member firstname="Einārs" lastname="Masteiko" country="LAT" />
+		<member firstname="Ingus" lastname="Portnajs" country="LAT" />
+	</team>
+	<team id="804" score="332" time="23:42:17" penalty="0" gender="mixed" age="veteran" name="Mona-X">
+		<member firstname="Pēteris" lastname="Zariņš" country="LAT" />
+		<member firstname="Līga" lastname="Plakane" country="LAT" />
+	</team>
+	<team id="1103" score="328" time="23:45:34" penalty="0" gender="mixed" age="superveteran" name="Malači">
+		<member firstname="Velga" lastname="Buša" country="LAT" />
+		<member firstname="Uldis" lastname="Pekuss" country="LAT" />
+	</team>
+	<team id="220" score="322" time="23:42:30" penalty="0" gender="mixed" age="open" name="Ruta un Aivis">
+		<member firstname="Ruta" lastname="Poikāne" country="LAT" />
+		<member firstname="Aivis" lastname="Poikāns" country="LAT" />
+	</team>
+	<team id="26" score="321" time="20:16:08" penalty="0" gender="men" age="open" name="Divi Naži">
+		<member firstname="Nauris" lastname="Spalviņš" country="LAT" />
+		<member firstname="Kristaps" lastname="Magone" country="LAT" />
+	</team>
+	<team id="218" score="320" time="23:25:24" penalty="0" gender="mixed" age="open" name="2 koki un citi zvēri">
+		<member firstname="Jānis" lastname="Šneiders" country="LAT" />
+		<member firstname="Alberts" lastname="Jasāns" country="LAT" />
+		<member firstname="Līva" lastname="Medne" country="LAT" />
+	</team>
+	<team id="205" score="318" time="23:40:35" penalty="0" gender="mixed" age="open" name="LūzerX">
+		<member firstname="Kārlis" lastname="Priedītis" country="LAT" />
+		<member firstname="Sandra" lastname="Priedīte" country="LAT" />
+		<member firstname="Toms" lastname="Šulmanis" country="LAT" />
+	</team>
+	<team id="904" score="315" time="23:46:41" penalty="0" gender="men" age="superveteran" name="Privātbūve">
+		<member firstname="Andris" lastname="Kosmačevs" country="LAT" />
+		<member firstname="Vairis" lastname="Krauklis" country="LAT" />
+	</team>
+	<team id="902" score="308" time="23:37:48" penalty="0" gender="men" age="superveteran" name="LB-63">
+		<member firstname="Jānis" lastname="Biezais" country="LAT" />
+		<member firstname="Helmuts" lastname="Lukačovs" country="LAT" />
+	</team>
+	<team id="103" score="306" time="23:38:43" penalty="0" gender="women" age="open" name="VSK Noskrien meitenes">
+		<member firstname="Evija" lastname="Stračinska" country="LAT" />
+		<member firstname="Dina" lastname="Alksne" country="LAT" />
+	</team>
+	<team id="1107" score="303" time="23:37:24" penalty="0" gender="mixed" age="superveteran" name="KĀPA VR">
+		<member firstname="Ruta" lastname="Kukka" country="LAT" />
+		<member firstname="Volli" lastname="Kukk" country="LAT" />
+	</team>
+	<team id="609" score="278" time="22:33:35" penalty="0" gender="men" age="veteran" name="Resnais Susurs">
+		<member firstname="Māris" lastname="Avotiņš" country="LAT" />
+		<member firstname="Ainārs" lastname="Cīrulis" country="LAT" />
+	</team>
+	<team id="25" score="277" time="22:54:00" penalty="0" gender="men" age="open" name="Blomes trio">
+		<member firstname="Jurgis" lastname="Eberhards" country="LAT" />
+		<member firstname="Renars" lastname="Eberhards" country="LAT" />
+		<member firstname="Rudolfs" lastname="Eberhards" country="LAT" />
+	</team>
+	<team id="702" score="276" time="23:33:12" penalty="0" gender="women" age="veteran" name="Cerība mirst pēdējā">
+		<member firstname="Indra" lastname="Segliņa" country="LAT" />
+		<member firstname="Zane" lastname="Blumberga" country="LAT" />
+	</team>
+	<team id="603" score="275" time="22:43:36" penalty="0" gender="men" age="veteran" name="AA2">
+		<member firstname="Arne" lastname="Lūsis" country="LAT" />
+		<member firstname="Ainārs" lastname="Šiliņš" country="LAT" />
+	</team>
+	<team id="1" score="274" time="23:50:19" penalty="0" gender="men" age="open" name="eBIOpower">
+		<member firstname="Gatis" lastname="Gaņģītis" country="LAT" />
+		<member firstname="Imants" lastname="Iesalnieks" country="LAT" />
+		<member firstname="Juris" lastname="Pētersons" country="LAT" />
+	</team>
+	<team id="20" score="269" time="22:04:19" penalty="0" gender="men" age="open" name="SPAMMA">
+		<member firstname="Raitis" lastname="Birznieks" country="LAT" />
+		<member firstname="Kaspars" lastname="Vītols" country="LAT" />
+	</team>
+	<team id="1101" score="264" time="23:21:08" penalty="0" gender="mixed" age="superveteran" name="Olaines kāpa">
+		<member firstname="Juris" lastname="Šinke" country="LAT" />
+		<member firstname="Ārija" lastname="Šinke" country="LAT" />
+	</team>
+	<team id="1104" score="253" time="23:34:17" penalty="0" gender="mixed" age="superveteran" name="Miera Buši">
+		<member firstname="Liene" lastname="Buša" country="LAT" />
+		<member firstname="Miervaldis" lastname="Bušs" country="LAT" />
+	</team>
+	<team id="24" score="252" time="23:05:04" penalty="0" gender="men" age="open" name="Valdemārija">
+		<member firstname="Artūrs" lastname="Putniņš" country="LAT" />
+		<member firstname="Valdemārs" lastname="Stūris" country="LAT" />
+		<member firstname="Agnis" lastname="Rečs" country="LAT" />
+	</team>
+	<team id="704" score="250" time="23:27:55" penalty="0" gender="women" age="veteran" name="Bebri IR">
+		<member firstname="Ilze" lastname="Laure" country="LAT" />
+		<member firstname="Rota" lastname="Šņuka" country="LAT" />
+	</team>
+	<team id="19" score="245" time="20:49:04" penalty="0" gender="men" age="open" name="Zāģis un varbūt Zebiekste">
+		<member firstname="Gints" lastname="Ģērmanis" country="LAT" />
+		<member firstname="Uģis" lastname="Ģērmanis" country="LAT" />
+	</team>
+	<team id="8" score="244" time="18:26:02" penalty="0" gender="men" age="open" name="30draugi.lv II">
+		<member firstname="Artis" lastname="Dobulis" country="LAT" />
+		<member firstname="Sandis" lastname="Zuzāns" country="LAT" />
+	</team>
+	<team id="701" score="243" time="23:40:40" penalty="0" gender="women" age="veteran" name="Viens uz divām">
+		<member firstname="Agrita" lastname="Pilābere" country="LAT" />
+		<member firstname="Iveta" lastname="Zāģere" country="LAT" />
+	</team>
+	<team id="1301" score="242" time="23:23:19" penalty="0" gender="women" age="ultraveteran" name="Velmara">
+		<member firstname="Māra" lastname="Bolšteina" country="LAT" />
+		<member firstname="Velta" lastname="Zjatkova" country="LAT" />
+	</team>
+	<team id="101" score="241" time="20:53:09" penalty="0" gender="women" age="open" name="BI happy!">
+		<member firstname="Ilze" lastname="Čakle" country="LAT" />
+		<member firstname="Baiba" lastname="Beitika" country="LAT" />
+	</team>
+	<team id="203" score="241" time="23:34:24" penalty="0" gender="mixed" age="open" name="Baltie Zalkši">
+		<member firstname="Ivars" lastname="Krenklis" country="LAT" />
+		<member firstname="Edgars" lastname="Celms" country="LAT" />
+		<member firstname="Baiba" lastname="Kaškina" country="LAT" />
+	</team>
+	<team id="12" score="239" time="23:45:05" penalty="0" gender="men" age="open" name="KompoC">
+		<member firstname="Jānis" lastname="Bormeisters" country="LAT" />
+		<member firstname="Gatis" lastname="Žeivots" country="LAT" />
+	</team>
+	<team id="208" score="238" time="23:17:22" penalty="0" gender="mixed" age="open" name="KRĒMELIS">
+		<member firstname="Pēteris" lastname="Zavadskis" country="LAT" />
+		<member firstname="Signe" lastname="Svetoka" country="LAT" />
+	</team>
+	<team id="221" score="237" time="21:33:44" penalty="0" gender="mixed" age="open" name="2K2B">
+		<member firstname="Krišs" lastname="Karnītis" country="LAT" />
+		<member firstname="Baiba" lastname="Birzniece" country="LAT" />
+	</team>
+	<team id="1201" score="234" time="23:33:33" penalty="0" gender="men" age="ultraveteran" name="Jēkaba Aģentūra">
+		<member firstname="Oskars" lastname="Zīds" country="LAT" />
+		<member firstname="Uldis" lastname="Alksnis" country="LAT" />
+	</team>
+	<team id="207" score="232" time="21:14:42" penalty="0" gender="women" age="open" name="Pārgājiens">
+		<member firstname="Irita" lastname="Puķīte" country="LAT" />
+		<member firstname="Ilze" lastname="Pužule" country="LAT" />
+	</team>
+	<team id="601" score="218" time="23:48:11" penalty="0" gender="men" age="veteran" name="JuSa">
+		<member firstname="Juris" lastname="Cebulis" country="LAT" />
+		<member firstname="Sandris" lastname="Lācis" country="LAT" />
+	</team>
+	<team id="23" score="216" time="17:43:09" penalty="0" gender="men" age="open" name="NKA">
+		<member firstname="Madars" lastname="Bandenovičs" country="LAT" />
+		<member firstname="Alvis" lastname="Lapiņš" country="LAT" />
+	</team>
+	<team id="21" score="215" time="23:31:24" penalty="0" gender="men" age="open" name="Šoreiz bez tulznām">
+		<member firstname="Jāzeps" lastname="Žogla" country="LAT" />
+		<member firstname="Ēvalds" lastname="Žogla" country="LAT" />
+		<member firstname="Andis" lastname="Plakans" country="LAT" />
+	</team>
+	<team id="15" score="214" time="19:52:32" penalty="0" gender="men" age="open" name="2 Cinīši">
+		<member firstname="Juris" lastname="Cinītis" country="LAT" />
+		<member firstname="Toms" lastname="Cinītis" country="LAT" />
+	</team>
+	<team id="903" score="208" time="23:23:31" penalty="0" gender="men" age="superveteran" name="AKUA">
+		<member firstname="Uldis" lastname="Alksnis" country="LAT" />
+		<member firstname="Arnolds" lastname="Kučinskis" country="LAT" />
+	</team>
+	<team id="6" score="205" time="23:46:49" penalty="0" gender="men" age="open" name="Gentlemen's Club">
+		<member firstname="Viktors" lastname="Saveļjevs" country="LAT" />
+		<member firstname="Andris" lastname="Ronimoiss" country="LAT" />
+	</team>
+	<team id="1001" score="203" time="23:55:31" penalty="0" gender="women" age="superveteran" name="Bebrenes">
+		<member firstname="Inese" lastname="Purgaile" country="LAT" />
+		<member firstname="Ilze" lastname="Vabole" country="LAT" />
+	</team>
+	<team id="803" score="201" time="22:58:23" penalty="0" gender="mixed" age="veteran" name="Tauriņi">
+		<member firstname="Māris" lastname="Sokolovskis" country="LAT" />
+		<member firstname="Iveta" lastname="Kārkliņa-Vīksne" country="LAT" />
+	</team>
+	<team id="910" score="200" time="19:35:34" penalty="0" gender="men" age="superveteran" name="Aptumsums">
+		<member firstname="Vitolds" lastname="Bērziņš" country="LAT" />
+		<member firstname="Ilgonis" lastname="Krūmiņš" country="LAT" />
+		<member firstname="Juris" lastname="Drunka" country="LAT" />
+	</team>
+	<team id="17" score="196" time="20:49:10" penalty="0" gender="men" age="open" name="Marmotes">
+		<member firstname="Guntars" lastname="Vība" country="LAT" />
+		<member firstname="Arnis" lastname="Rozenfelds" country="LAT" />
+	</team>
+	<team id="703" score="181" time="23:18:57" penalty="0" gender="women" age="veteran" name="assa">
+		<member firstname="Astrīda" lastname="Grīnberga" country="LAT" />
+		<member firstname="Sarmīte" lastname="Vlodare" country="LAT" />
+	</team>
+	<team id="14" score="176" time="23:12:33" penalty="0" gender="men" age="open" name="SPAMMA">
+		<member firstname="Jānis" lastname="Strazdiņš" country="LAT" />
+		<member firstname="Andis" lastname="Šķēle" country="LAT" />
+	</team>
+	<team id="204" score="152" time="23:45:55" penalty="0" gender="mixed" age="open" name="Kapteinis Bremze">
+		<member firstname="Elizabete" lastname="Neimiševa" country="LAT" />
+		<member firstname="Aleksandrs" lastname="Bodiļevs" country="LAT" />
+	</team>
+	<team id="16" score="143" time="23:30:47" penalty="0" gender="men" age="open" name="Kapteinis Juris, sapņu kapteinis Juris,,,, Ooooo,,">
+		<member firstname="Jānis" lastname="Ikaunieks" country="LAT" />
+		<member firstname="Juris" lastname="Ikaunieks" country="LAT" />
+	</team>
+	<team id="211" score="134" time="17:21:16" penalty="0" gender="mixed" age="open" name="Sapnīši">
+		<member firstname="Jānis" lastname="Upāns" country="LAT" />
+		<member firstname="Ieva" lastname="Upāne" country="LAT" />
+		<member firstname="Mārtiņš" lastname="Linde" country="LAT" />
+	</team>
+	<team id="806" score="131" time="16:56:47" penalty="0" gender="mixed" age="veteran" name="Mītavas Aļņi">
+		<member firstname="Zintis" lastname="Brasavs-Muižnieks" country="LAT" />
+		<member firstname="Valdis" lastname="Drozdovs" country="LAT" />
+		<member firstname="Vita" lastname="Auziņa" country="LAT" />
+	</team>
+	<team id="106" score="124" time="23:50:39" penalty="0" gender="women" age="open" name="Kompoc 2">
+		<member firstname="Linda" lastname="Krastiņa" country="LAT" />
+		<member firstname="Gita" lastname="Dubrova" country="LAT" />
+	</team>
+	<team id="206" score="113" time="19:14:29" penalty="0" gender="mixed" age="open" name="SUSLIKI">
+		<member firstname="Mareks" lastname="Meņšikovs" country="LAT" />
+		<member firstname="Vizbulīte" lastname="Celmiņa" country="LAT" />
+	</team>
+	<team id="213" score="109" time="23:32:03" penalty="0" gender="mixed" age="open" name="Romanichi">
+		<member firstname="Ilva" lastname="Koškina" country="LAT" />
+		<member firstname="Romāns" lastname="Koškins" country="LAT" />
+	</team>
+	<team id="3" score="58" time="21:12:47" penalty="0" gender="men" age="open" name="wAlts">
+		<member firstname="Artis" lastname="Mednis" country="LAT" />
+		<member firstname="Gatis" lastname="Mednis" country="LAT" />
+	</team>
+	<team id="608" score="28" time="3:03:51" penalty="0" gender="men" age="veteran" name="ALUSALA">
+		<member firstname="Arvis" lastname="ZVANĪTĀJS" country="LAT" />
+		<member firstname="Dzintars" lastname="LAĶIS" country="LAT" />
+	</team>
+	<team id="1401" score="21" time="9:24:31" penalty="0" gender="mixed" age="ultraveteran" name="seniors">
+		<member firstname="Jūlija" lastname="Zvirgzde" country="LAT" />
+		<member firstname="Juris" lastname="Zvirgzds" country="LAT" />
+	</team>
+	<team id="215" score="271" time="23:50:14" penalty="0" gender="men" age="veteran" name="Bebraine" status="not finished">
+		<member firstname="Andris" lastname="Miglavs" country="LAT" />
+	</team>
+	<team id="32" score="250" time="22:54:04" penalty="0" gender="men" age="veteran" name="Ģirts" status="not finished">
+		<member firstname="Girts" lastname="Strujevičs" country="LAT" />
+	</team>
+	<team id="31" score="50" time="11:55:34" penalty="0" gender="men" age="veteran" name="2 Cinīši A" status="not finished">
+		<member firstname="Juris" lastname="Cinītis" country="LAT" />
+	</team>
+	<team id="33" score="151" time="23:56:35" penalty="0" gender="women" age="open" name="Rūta" status="out of competition">
+		<member firstname="Rūta" lastname="Miglava" country="LAT" />
+	</team>
+</results>
