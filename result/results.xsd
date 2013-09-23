@@ -71,6 +71,7 @@
 									<xs:enumeration value="not finished" />
 									<xs:enumeration value="overtime" />
 									<xs:enumeration value="disqualified" />
+									<xs:enumeration value="out of competition" />
 									<xs:enumeration value="finished" />
 								</xs:restriction>
 							</xs:simpleType>
