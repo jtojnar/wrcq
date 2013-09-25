@@ -1,100 +1,100 @@
 <results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="results.xsd">
 	<team id="15" score="3430" time="20:32:00" penalty="0" gender="men" age="open" duration="24">
-		<member firstname="Eric" lastname="Bone" country="XXX" />
-		<member firstname="Dennis" lastname="Wilkinson" country="XXX" />
+		<member firstname="Eric" lastname="Bone" country="USA" />
+		<member firstname="Dennis" lastname="Wilkinson" country="USA" />
 	</team>
 	<team id="9" score="2980" time="23:41:25" penalty="0" gender="mixed" age="open" duration="24">
-		<member firstname="Louise" lastname="Oram" country="XXX" />
-		<member firstname="Christoph" lastname="Rufenacht" country="XXX" />
+		<member firstname="Louise" lastname="Oram" country="USA" />
+		<member firstname="Christoph" lastname="Rufenacht" country="USA" />
 	</team>
 	<team id="7" score="2930" time="23:31:57" penalty="0" gender="women" age="veteran" duration="24">
-		<member firstname="Pam" lastname="James" country="XXX" />
-		<member firstname="Catherine" lastname="Hagan" country="XXX" />
+		<member firstname="Pam" lastname="James" country="USA" />
+		<member firstname="Catherine" lastname="Hagan" country="USA" />
 	</team>
 	<team id="24" score="2930" time="23:40:11" penalty="0" gender="men" age="superveteran" duration="24">
-		<member firstname="Bryan" lastname="Chubb" country="XXX" />
-		<member firstname="Leo" lastname="Rankin" country="XXX" />
+		<member firstname="Bryan" lastname="Chubb" country="USA" />
+		<member firstname="Leo" lastname="Rankin" country="USA" />
 	</team>
 	<team id="2" score="2920" time="23:08:18" penalty="0" gender="mixed" age="open" duration="24">
-		<member firstname="James" lastname="Wakana" country="XXX" />
-		<member firstname="Wakana" lastname="Heilman" country="XXX" />
+		<member firstname="James" lastname="Wakana" country="CAN" />
+		<member firstname="Wakana" lastname="Heilman" country="CAN" />
 	</team>
 	<team id="3" score="2640" time="23:37:54" penalty="0" gender="men" age="veteran" duration="24">
-		<member firstname="Tom De" lastname="Vries" country="XXX" />
-		<member firstname="Geraint" lastname="Edmunds" country="XXX" />
+		<member firstname="Tom De" lastname="Vries" country="USA" />
+		<member firstname="Geraint" lastname="Edmunds" country="USA" />
 	</team>
 	<team id="23" score="2440" time="18:22:26" penalty="0" gender="men" age="veteran" duration="24">
-		<member firstname="Kevin" lastname="Matrosovs" country="XXX" />
-		<member firstname="Dan" lastname="Crockett" country="XXX" />
+		<member firstname="Kevin" lastname="Matrosovs" country="USA" />
+		<member firstname="Dan" lastname="Crockett" country="USA" />
 	</team>
 	<team id="10" score="2390" time="23:39:49" penalty="0" gender="men" age="superveteran" duration="24">
-		<member firstname="Chris" lastname="Oram" country="XXX" />
-		<member firstname="John" lastname="Harbuck" country="XXX" />
+		<member firstname="Chris" lastname="Oram" country="USA" />
+		<member firstname="John" lastname="Harbuck" country="USA" />
 	</team>
 	<team id="18" score="2350" time="23:56:12" penalty="0" gender="mixed" age="open" duration="24">
-		<member firstname="Angela" lastname="Forseille" country="XXX" />
-		<member firstname="Jean-Michel" lastname="Lessard" country="XXX" />
+		<member firstname="Angela" lastname="Forseille" country="USA" />
+		<member firstname="Jean-Michel" lastname="Lessard" country="USA" />
 	</team>
 	<team id="8" score="2200" time="23:47:27" penalty="0" gender="men" age="superveteran" duration="24">
-		<member firstname="John" lastname="Rance" country="XXX" />
-		<member firstname="Bruce" lastname="Rennie" country="XXX" />
+		<member firstname="John" lastname="Rance" country="USA" />
+		<member firstname="Bruce" lastname="Rennie" country="USA" />
 	</team>
 	<team id="1" score="2160" time="23:23:34" penalty="0" gender="men" age="superveteran" duration="24">
-		<member firstname="Bud" lastname="Laird" country="XXX" />
-		<member firstname="Glen" lastname="Brake" country="XXX" />
+		<member firstname="Bud" lastname="Laird" country="USA" />
+		<member firstname="Glen" lastname="Brake" country="USA" />
 	</team>
 	<team id="11" score="2110" time="23:45:31" penalty="0" gender="women" age="superveteran" duration="24">
-		<member firstname="Marion" lastname="Owen" country="XXX" />
-		<member firstname="Althea" lastname="Shaw" country="XXX" />
+		<member firstname="Marion" lastname="Owen" country="USA" />
+		<member firstname="Althea" lastname="Shaw" country="USA" />
 	</team>
 	<team id="4" score="2040" time="23:18:56" penalty="0" gender="women" age="superveteran" duration="24">
-		<member firstname="Margo" lastname="Mactaggart" country="XXX" />
-		<member firstname="Kathryn" lastname="Mueller" country="XXX" />
+		<member firstname="Margo" lastname="Mactaggart" country="USA" />
+		<member firstname="Kathryn" lastname="Mueller" country="USA" />
 	</team>
 	<team id="17" score="1930" time="22:30:35" penalty="0" gender="men" age="open" duration="24">
-		<member firstname="Wade" lastname="Tokarek" country="XXX" />
-		<member firstname="Dana" lastname="Manhard" country="XXX" />
+		<member firstname="Wade" lastname="Tokarek" country="USA" />
+		<member firstname="Dana" lastname="Manhard" country="USA" />
 	</team>
 	<team id="19" score="1820" time="23:45:59" penalty="0" gender="men" age="open" duration="24">
-		<member firstname="Jame" lastname="Mollison" country="XXX" />
-		<member firstname="Adrian" lastname="Low" country="XXX" />
+		<member firstname="Jame" lastname="Mollison" country="USA" />
+		<member firstname="Adrian" lastname="Low" country="USA" />
 	</team>
 	<team id="27" score="1780" time="23:51:12" penalty="0" gender="women" age="veteran" duration="24">
-		<member firstname="Charlottee" lastname="MacNaughton" country="XXX" />
-		<member firstname="Andree" lastname="Powers" country="XXX" />
+		<member firstname="Charlottee" lastname="MacNaughton" country="USA" />
+		<member firstname="Andree" lastname="Powers" country="USA" />
 	</team>
 	<team id="5" score="1760" time="23:16:46" penalty="0" gender="mixed" age="superveteran" duration="24">
 		<member firstname="Eric" lastname="Smith" country="USA" />
 		<member firstname="Mary" lastname="Smith" country="USA" />
 	</team>
 	<team id="26" score="1600" time="20:19:17" penalty="0" gender="mixed" age="open" duration="24">
-		<member firstname="Scott" lastname="Covey" country="XXX" />
-		<member firstname="Tyler" lastname="Dwyer" country="XXX" />
-		<member firstname="Sara" lastname="Bucovaz" country="XXX" />
+		<member firstname="Scott" lastname="Covey" country="USA" />
+		<member firstname="Tyler" lastname="Dwyer" country="USA" />
+		<member firstname="Sara" lastname="Bucovaz" country="USA" />
 	</team>
 	<team id="21" score="1460" time="23:57:39" penalty="0" gender="mixed" age="open" duration="24">
-		<member firstname="Tori" lastname="Owen" country="XXX" />
-		<member firstname="Jared" lastname="Kesteven" country="XXX" />
+		<member firstname="Tori" lastname="Owen" country="USA" />
+		<member firstname="Jared" lastname="Kesteven" country="USA" />
 	</team>
 	<team id="20" score="1390" time="22:22:59" penalty="0" gender="mixed" age="open" duration="24">
-		<member firstname="Tammy" lastname="Howe" country="XXX" />
-		<member firstname="Daryl" lastname="Spencer" country="XXX" />
+		<member firstname="Tammy" lastname="Howe" country="USA" />
+		<member firstname="Daryl" lastname="Spencer" country="USA" />
 	</team>
 	<team id="25" score="1370" time="18:07:34" penalty="0" gender="mixed" age="veteran" duration="24">
-		<member firstname="Mikhail" lastname="Pekour" country="XXX" />
-		<member firstname="superveteranlana" lastname="Sergueeva" country="XXX" />
+		<member firstname="Mikhail" lastname="Pekour" country="USA" />
+		<member firstname="superveteranlana" lastname="Sergueeva" country="USA" />
 	</team>
 	<team id="14" score="1360" time="16:15:45" penalty="0" gender="men" age="open" duration="24">
-		<member firstname="Duncan" lastname="Coo" country="XXX" />
-		<member firstname="Tom" lastname="Crack" country="XXX" />
+		<member firstname="Duncan" lastname="Coo" country="USA" />
+		<member firstname="Tom" lastname="Crack" country="USA" />
 	</team>
 	<team id="16" score="1030" time="23:48:13" penalty="0" gender="women" age="superveteran" duration="24">
 		<member firstname="Karen" lastname="Lachance" country="XXX" />
 		<member firstname="Robyn" lastname="Rennie" country="XXX" />
 	</team>
 	<team id="13" score="860" time="17:02:10" penalty="0" gender="mixed" age="open" duration="24">
-		<member firstname="Patrick" lastname="Gottsacker" country="XXX" />
-		<member firstname="Jinnet" lastname="Powel" country="XXX" />
+		<member firstname="Patrick" lastname="Gottsacker" country="USA" />
+		<member firstname="Jinnet" lastname="Powel" country="USA" />
 	</team>
 	<team id="12" score="270" time="23:41:44" penalty="0" gender="mixed" age="superveteran" duration="24">
 		<member firstname="Bob" lastname="Reddick" country="USA" />
