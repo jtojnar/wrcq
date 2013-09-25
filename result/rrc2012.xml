@@ -1,11 +1,11 @@
 <results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="results.xsd">
 	<team id="64" score="335" time="23:31:41" penalty="0" gender="men" age="open" duration="24" name="Волжские просторы">
-		<member firstname="Aleksey" lastname="Korolev" country="RUS" />
+		<member firstname="Alexey" lastname="Korolev" country="RUS" />
 		<member firstname="Denis" lastname="Bareyev" country="RUS" />
 	</team>
 	<team id="24" score="320" time="23:50:58" penalty="0" gender="men" age="open" duration="24" name="Альфа-D">
-		<member firstname="Aleksandr" lastname="Tonis" country="RUS" />
-		<member firstname="Aleksandr" lastname="Khalyapin" country="RUS" />
+		<member firstname="Alexander" lastname="Tonis" country="RUS" />
+		<member firstname="Alexander" lastname="Khalyapin" country="RUS" />
 	</team>
 	<team id="39" score="306" time="23:52:10" penalty="0" gender="men" age="veteran" duration="24" name="SV">
 		<member firstname="Вячеслав" lastname="Савченко" country="RUS" />
@@ -20,7 +20,7 @@
 		<member firstname="Alena" lastname="Akimova" country="RUS" />
 	</team>
 	<team id="128" score="293" time="23:52:42" penalty="0" gender="mixed" age="open" duration="24" name="GORE Running Wear">
-		<member firstname="Pavel" lastname="Demetchik" country="RUS" />
+		<member firstname="Pavel" lastname="Demeshchik" country="RUS" />
 		<member firstname="Anna" lastname="Shavlakova" country="RUS" />
 	</team>
 	<team id="37" score="289" time="23:16:47" penalty="0" gender="mixed" age="open" duration="24" name="Крылатый батальон">
