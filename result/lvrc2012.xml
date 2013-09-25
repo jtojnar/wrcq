@@ -11,7 +11,7 @@
 		<member firstname="Normunds" lastname="Lisovskis" country="LAT" />
 		<member firstname="Pēteris" lastname="Īvāns" country="LAT" />
 	</team>
-	<team id="803" score="409" time="23:31:21" penalty="0" gender="men" age="veteran" name="Easy">
+	<team id="803" score="409" time="23:31:21" penalty="0" gender="mixed" age="veteran" name="Easy">
 		<member firstname="Aigars" lastname="Actiņš" country="LAT" />
 		<member firstname="Ilze" lastname="Lapiņa" country="LAT" />
 	</team>
