@@ -206,13 +206,13 @@
 	<team id="107" name="OLLE Aleksandrino" score="342" time="23:44:22" penalty="0" gender="men" age="superveteran">
 		<member firstname="Oleg" lastname="Zhegusov" country="RUS" />
 		<member firstname="Aleksandr" lastname="Kopelevich" country="RUS" />
-	</team>
-	<team id="109" name="Kapa LR" score="340" time="23:43:52" penalty="0" gender="mixed" age="superveteran">
 		<member firstname="Alexandr" lastname="Tereshkin" country="RUS" />
-		<member firstname="Ligita" lastname="Grunde" country="LAT" />
 	</team>
-	<team id="112" name="Fairies of Druids" score="340" time="23:49:18" penalty="0" gender="women" age="open">
+	<team id="109" name="Kapa LR" score="340" time="23:43:54" penalty="0" gender="mixed" age="superveteran">
+		<member firstname="Ligita" lastname="Grunde" country="LAT" />
 		<member firstname="Rolands" lastname="Laveikis" country="LAT" />
+	</team>
+	<team id="112" name="Fairies of Druids" score="340" time="23:49:18" penalty="0" gender="women" age="open">		
 		<member firstname="Anna" lastname="Avramenko" country="RUS" />
 		<member firstname="Svetlana" lastname="Subbotina" country="RUS" />
 	</team>
