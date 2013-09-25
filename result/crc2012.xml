@@ -290,26 +290,26 @@
 		<member firstname="Nick" lastname="Curry" country="AUS" />
 		<member firstname="Marta" lastname="Schaferova" country="CZE" />
 	</team>
-	<team id="9" score="0" time="0:00:00" penalty="0" gender="men" age="open" name="Dva z Kladna" duration="24">
+	<team id="9" score="0" time="0:00:00" penalty="0" gender="men" age="open" name="Dva z Kladna" duration="24" status="not finished">
 		<member firstname="Tomáš" lastname="Kučera" country="CZE" />
 		<member firstname="Zdeněk" lastname="Kučera" country="CZE" />
 	</team>
-	<team id="49" score="0" time="0:00:00" penalty="0" gender="women" age="veteran" name="Popoběhnem" duration="24">
+	<team id="49" score="0" time="0:00:00" penalty="0" gender="women" age="veteran" name="Popoběhnem" duration="24" status="not finished">
 		<member firstname="Lucie" lastname="Doležalová" country="CZE" />
 		<member firstname="Renata" lastname="Šiková" country="CZE" />
 	</team>
-	<team id="95" score="0" time="0:00:00" penalty="0" gender="women" age="junior" name="Malecha" duration="24">
+	<team id="95" score="0" time="0:00:00" penalty="0" gender="women" age="junior" name="Malecha" duration="24" status="not finished">
 		<member firstname="Ivanchak" lastname="Anna-Polina" country="UKR" />
 		<member firstname="Veronika" lastname="Letychevska" country="UKR" />
 	</team>
-	<team id="115" score="0" time="0:00:00" penalty="0" gender="mixed" age="veteran" name="Až na dno" duration="24">
+	<team id="115" score="0" time="0:00:00" penalty="0" gender="mixed" age="veteran" name="Až na dno" duration="24" status="not finished">
 		<member firstname="Miroslav" lastname="Češpiva" country="CZE" />
 		<member firstname="Zuzana" lastname="Hodková" country="CZE" />
 	</team>
-	<team id="117" score="0" time="0:00:00" penalty="0" gender="men" age="open" name="Worm" duration="24">
+	<team id="117" score="0" time="0:00:00" penalty="0" gender="men" age="open" name="Worm" duration="24" status="not finished">
 		<member firstname="Jan" lastname="Červák" country="CZE" />
 	</team>
-	<team id="13" score="0" time="22:39:33" penalty="0" gender="mixed" age="open" name="Vetraci" duration="24">
+	<team id="13" score="0" time="22:39:33" penalty="0" gender="mixed" age="open" name="Vetraci" duration="24" status="disqualified">
 		<member firstname="Roman" lastname="Hynek" country="CZE" />
 		<member firstname="Drahomira" lastname="Hynkova" country="CZE" />
 		<member firstname="Dana" lastname="Kekrtova" country="CZE" />
