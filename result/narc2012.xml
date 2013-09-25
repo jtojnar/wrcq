@@ -104,8 +104,8 @@
 		<member firstname="Shara" lastname="Feld" country="USA" />
 	</team>
 	<team id="915" score="730" time="8:24:49" penalty="0" gender="women" age="open" duration="9">
-		<member firstname="Courtney" lastname="Rennie" country="USA" />
-		<member firstname="Wakana" lastname="Heilman" country="USA" />
+		<member firstname="Courtney" lastname="Rennie" country="CAN" />
+		<member firstname="Wakana" lastname="Heilman" country="CAN" />
 	</team>
 	<team id="906" score="710" time="8:11:14" penalty="0" gender="men" age="veteran" duration="9">
 		<member firstname="Jim" lastname="Probala" country="USA" />
