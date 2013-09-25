@@ -101,8 +101,8 @@
 		<member firstname="Pat" lastname="Reddick" country="USA" />
 		<member firstname="Ken" lastname="Lew" country="USA" />
 	</team>
-<!--	<team id="22" score="1650" time="23:48:04" penalty="0" category="off competition">
-		<member firstname="Hilary" lastname="Anderson" country="XXX" />
-		<member firstname="Michel" lastname="Roberge" country="XXX" />
-	</team> -->
+	<team id="22" score="1650" time="23:48:04" penalty="0" gender="mixed" age="superveteran">
+		<member firstname="Hilary" lastname="Anderson" country="CAN" />
+		<member firstname="Michel" lastname="Roberge" country="CAN" />
+	</team>
 </results>
