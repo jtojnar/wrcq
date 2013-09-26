@@ -582,7 +582,7 @@
 		<member firstname="Dan" lastname="Hüvonen" country="EST" />
 	</team>
 	<team id="188" score="1770" time="23:56:25" penalty="0" gender="men" age="junior" duration="24">
-		<member firstname="Mazan" lastname="Bartłomiej" country="POL" />
+		<member firstname="Bartłomiej" lastname="Mazan" country="POL" />
 		<member firstname="Wojciech" lastname="Bombas" country="POL" />
 	</team>
 	<team id="189" score="1970" time="23:15:33" penalty="0" gender="men" age="open" duration="24">
