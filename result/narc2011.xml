@@ -16,7 +16,7 @@
 		<member firstname="Leo" lastname="Rankin" country="USA" />
 	</team>
 	<team id="2" score="2920" time="23:08:18" penalty="0" gender="mixed" age="open" duration="24">
-		<member firstname="James" lastname="Wakana" country="CAN" />
+		<member firstname="James" lastname="Heilman" country="CAN" />
 		<member firstname="Wakana" lastname="Heilman" country="CAN" />
 	</team>
 	<team id="3" score="2640" time="23:37:54" penalty="0" gender="men" age="veteran" duration="24">
@@ -82,7 +82,7 @@
 	</team>
 	<team id="25" score="1370" time="18:07:34" penalty="0" gender="mixed" age="veteran" duration="24">
 		<member firstname="Mikhail" lastname="Pekour" country="USA" />
-		<member firstname="superveteranlana" lastname="Sergueeva" country="USA" />
+		<member firstname="Svetlana" lastname="Sergueeva" country="USA" />
 	</team>
 	<team id="14" score="1360" time="16:15:45" penalty="0" gender="men" age="open" duration="24">
 		<member firstname="Duncan" lastname="Coo" country="USA" />
