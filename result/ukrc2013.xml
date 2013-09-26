@@ -25,12 +25,12 @@
 		<member firstname="Volodimir" lastname="Shpik" country="UKR" />
 	</team>
 	<team id="7" score="212" time="22:15:56" penalty="0" gender="men" age="under20" duration="24" name="Tchernivtsy_9">
-		<member firstname="Vyatcheslav" lastname="Kelya" country="UKR" />
+		<member firstname="Vyacheslav" lastname="Kelya" country="UKR" />
 		<member firstname="Andriy" lastname="Kelya" country="UKR" />
 	</team>
 	<team id="8" score="166" time="23:30:46" penalty="0" gender="men" age="under20" duration="24" name="Kalush_1">
 		<member firstname="Sergiy" lastname="Mospan" country="UKR" />
-		<member firstname="Vyatcheslav" lastname="Pikulin" country="UKR" />
+		<member firstname="Vyacheslav" lastname="Pikulin" country="UKR" />
 		<member firstname="Vitaliy" lastname="Zhmaka" country="UKR" />
 	</team>
 	<team id="9" score="145" time="23:17:41" penalty="0" gender="men" age="under20" duration="24" name="Kalush_2">
@@ -38,11 +38,11 @@
 		<member firstname="Andriy" lastname="Gudz" country="UKR" />
 	</team>
 	<team id="10" score="143" time="21:23:52" penalty="0" gender="men" age="under20" duration="24" name="Vinniciya_2">
-		<member firstname="Volodimir" lastname="Bezditniy" country="UKR" />
+		<member firstname="Volodimir" lastname="Bezditnyi" country="UKR" />
 		<member firstname="Roman" lastname="Simonishen" country="UKR" />
 	</team>
 	<team id="11" score="271" time="19:43:19" penalty="0" gender="men" age="open" duration="24" name="Kharkiv_1">
-		<member firstname="Vyatcheslav" lastname="Shimchuk" country="UKR" />
+		<member firstname="Vyacheslav" lastname="Shimchuk" country="UKR" />
 		<member firstname="Ruslan" lastname="Shimchuk" country="UKR" />
 	</team>
 	<team id="12" score="271" time="21:09:14" penalty="0" gender="men" age="open" duration="24" name="Salomon">
@@ -83,7 +83,7 @@
 	</team>
 	<team id="21" score="106" time="23:49:06" penalty="0" gender="men" age="open" duration="24" name="X">
 		<member firstname="Konstantin" lastname="Marchenko" country="UKR" />
-		<member firstname="Volodimir" lastname="Shpetnyj" country="UKR" />
+		<member firstname="Volodimir" lastname="Shpetniy" country="UKR" />
 	</team>
 	<team id="22" score="105" time="23:49:51" penalty="0" gender="men" age="open" duration="24" name="Tchernivtsy_5">
 		<member firstname="Oleksandr" lastname="Mikhailov" country="UKR" />
@@ -91,12 +91,12 @@
 		<member firstname="Yuriy" lastname="Richlo" country="UKR" />
 	</team>
 	<team id="23" score="100" time="23:54:25" penalty="0" gender="men" age="open" duration="24" name="Arterium">
-		<member firstname="Sergej" lastname="Sur" country="UKR" />
+		<member firstname="Sergey" lastname="Sur" country="UKR" />
 		<member firstname="Yuriy" lastname="Kuvayskov" country="UKR" />
 	</team>
 	<team id="24" score="46" time="7:02:33" penalty="0" gender="men" age="open" duration="24" name="Tchernivtsy_6">
 		<member firstname="Dmitro" lastname="Sandul" country="UKR" />
-		<member firstname="Volodimir" lastname="Lupuljak" country="UKR" />
+		<member firstname="Volodimir" lastname="Lupulyak" country="UKR" />
 	</team>
 	<team id="25" score="9" time="21:47:25" penalty="0" gender="men" age="superveteran" duration="24" name="Kalush_5">
 		<member firstname="Omelyan" lastname="Kucuk" country="UKR" />
@@ -151,8 +151,8 @@
 		<member firstname="Roman" lastname="Tikhonov" country="UKR" />
 	</team>
 	<team id="37" score="50" time="23:19:58" penalty="0" gender="mixed" age="open" duration="24" name="Kharkiv_2">
-		<member firstname="Katerina" lastname="Medjanik" country="UKR" />
-		<member firstname="Vyatcheslav" lastname="Stadnik" country="UKR" />
+		<member firstname="Katerina" lastname="Medyanik" country="UKR" />
+		<member firstname="Vyacheslav" lastname="Stadnik" country="UKR" />
 	</team>
 	<team id="38" score="32" time="23:55:07" penalty="0" gender="mixed" age="open" duration="24" name="Meridian">
 		<member firstname="Dmitro" lastname="Sandul" country="UKR" />
@@ -176,7 +176,7 @@
 	</team>
 	<team id="43" score="45" time="21:40:38" penalty="0" gender="women" age="under18" duration="24" name="Inter SSM_8">
 		<member firstname="Olena" lastname="Mamchuk" country="UKR" />
-		<member firstname="Yana" lastname="Kukuljak" country="UKR" />
+		<member firstname="Yana" lastname="Kukulyak" country="UKR" />
 	</team>
 	<team id="44" score="119" time="20:43:59" penalty="0" gender="women" age="under20" duration="24" name="Vinniciya_4">
 		<member firstname="Maria" lastname="Sokolovska" country="UKR" />
