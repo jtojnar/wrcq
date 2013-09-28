@@ -229,10 +229,23 @@ app.configure('development', function() {
 });
 
 
+function addEventLinks(links, row) {
+	row.links = [];
+	for(var i = 0; i < links.length; i++) {
+		if(links[i].event_id == row.id) {
+			row.links.push(links[i]);
+		}
+	};
+}
+
 app.get('/', function(req, res) {
 	pg.connect(_dbUri, function(err, client, done) {
 		await client.query('select * from update order by timestamp desc limit 10', defer(var row, updates));
-		await client.query('select * from event where level=\'world\' order by start asc', defer(var row, events));
+		await client.query('select * from link', defer(var row, links));
+		links = links.rows;
+		var eventsQuery = client.query('select * from event left join (select event_id from team group by event_id) as team on team.event_id = event.id where level=\'world\' order by start asc', function() {});
+		eventsQuery.on('row', function(row) {addEventLinks(links, row);});
+		await eventsQuery.on('end', defer(var events));
 		done();
 		res.render('index', {updates: updates.rows, events: events.rows, identity: req.user});
 	});
@@ -240,7 +253,11 @@ app.get('/', function(req, res) {
 
 app.get('/events', function(req, res) {
 	pg.connect(_dbUri, function(err, client, done) {
-		await client.query('with latest as (select *, row_number() over(partition by level order by start desc) as rk from event) select * from latest left join (select event_id from team group by event_id) as team on team.event_id = latest.id where rk <= 2 order by level=\'world\' desc, level::text like \'regional%\' desc, level::text like \'national%\' desc, start desc', defer(var row, events));
+		await client.query('select * from link', defer(var row, links));
+		links = links.rows;
+		var eventsQuery = client.query('with latest as (select *, row_number() over(partition by level order by start desc) as rk from event) select * from latest left join (select event_id from team group by event_id) as team on team.event_id = latest.id where rk <= 2 order by level=\'world\' desc, level::text like \'regional%\' desc, level::text like \'national%\' desc, start desc', function() {});
+		eventsQuery.on('row', function(row) {addEventLinks(links, row);});
+		await eventsQuery.on('end', defer(var events));
 		done();
 		res.render('events', {events: events.rows, identity: req.user});
 	});

@@ -455,8 +455,16 @@ var __tame_fn_48 = function (__tame_k) {
         app . use ( express . logger ( ) ) ;
     }
     ) ;
-    
-    
+    function addEventLinks (links, row) {
+        row . links = [ ] ;
+         for (var i = 0 ; i < links . length ; i ++) {
+            if (links [ i ] . event_id == row . id) {
+                row . links . push ( links [ i ] ) ;
+            } else {
+            }
+        }
+        ;
+    }
     app . get ( '/' ,
     function  (req, res) {
         pg . connect ( _dbUri ,
@@ -481,7 +489,7 @@ var __tame_fn_48 = function (__tame_k) {
                                 }
                                 ,
                             parent_cb : __tame_defer_cb,
-                            line : 234,
+                            line : 243,
                             file : "web.tjs"
                         } )
                         ) ;
@@ -492,22 +500,22 @@ var __tame_fn_48 = function (__tame_k) {
                     __tame_defers._fulfill();
                     tame.setActiveCb (null);
                 };
-                var row, events;
+                var row, links;
                 var __tame_fn_79 = function (__tame_k) {
                     tame.setActiveCb (__tame_defer_cb);
                     var __tame_defers = new tame.Deferrals (__tame_k);
                     var __tame_fn_80 = function (__tame_k) {
                         tame.setActiveCb (__tame_defer_cb);
-                        client . query ( 'select * from event where level=\'world\' order by start asc' ,
+                        client . query ( 'select * from link' ,
                         __tame_defers.defer ( { 
                             assign_fn : 
                                 function () {
                                     row = arguments[0];
-                                    events = arguments[1];
+                                    links = arguments[1];
                                 }
                                 ,
                             parent_cb : __tame_defer_cb,
-                            line : 235,
+                            line : 244,
                             file : "web.tjs"
                         } )
                         ) ;
@@ -518,14 +526,59 @@ var __tame_fn_48 = function (__tame_k) {
                     __tame_defers._fulfill();
                     tame.setActiveCb (null);
                 };
-                var __tame_fn_81 = function (__tame_k) {
+                var __tame_fn_85 = function (__tame_k) {
                     tame.setActiveCb (__tame_defer_cb);
-                    done ( ) ;
-                    res . render ( 'index' , { updates : updates . rows , events : events . rows , identity : req . user } ) ;
-                    tame.callChain([__tame_k]);
+                    links = links . rows ;
+                    var eventsQuery = client . query ( 'select * from event left join (select event_id from team group by event_id) as team on team.event_id = event.id where level=\'world\' order by start asc' ,
+                    function  () {
+                    }
+                    ) ;
+                    eventsQuery . on ( 'row' ,
+                    function  (row) {
+                        addEventLinks ( links , row ) ;
+                    }
+                    ) ;
+                    var __tame_fn_81 = function (__tame_k) {
+                        tame.setActiveCb (__tame_defer_cb);
+                        var events;
+                        var __tame_fn_82 = function (__tame_k) {
+                            tame.setActiveCb (__tame_defer_cb);
+                            var __tame_defers = new tame.Deferrals (__tame_k);
+                            var __tame_fn_83 = function (__tame_k) {
+                                tame.setActiveCb (__tame_defer_cb);
+                                eventsQuery . on ( 'end' ,
+                                __tame_defers.defer ( { 
+                                    assign_fn : 
+                                        function () {
+                                            events = arguments[0];
+                                        }
+                                        ,
+                                    parent_cb : __tame_defer_cb,
+                                    line : 248,
+                                    file : "web.tjs"
+                                } )
+                                ) ;
+                                tame.callChain([__tame_k]);
+                                tame.setActiveCb (null);
+                            };
+                            __tame_fn_83(tame.end);
+                            __tame_defers._fulfill();
+                            tame.setActiveCb (null);
+                        };
+                        var __tame_fn_84 = function (__tame_k) {
+                            tame.setActiveCb (__tame_defer_cb);
+                            done ( ) ;
+                            res . render ( 'index' , { updates : updates . rows , events : events . rows , identity : req . user } ) ;
+                            tame.callChain([__tame_k]);
+                            tame.setActiveCb (null);
+                        };
+                        tame.callChain([__tame_fn_82, __tame_fn_84, __tame_k]);
+                        tame.setActiveCb (null);
+                    };
+                    tame.callChain([__tame_fn_81, __tame_k]);
                     tame.setActiveCb (null);
                 };
-                tame.callChain([__tame_fn_77, __tame_fn_79, __tame_fn_81, __tame_k]);
+                tame.callChain([__tame_fn_77, __tame_fn_79, __tame_fn_85, __tame_k]);
                 tame.setActiveCb (null);
             };
             tame.callChain([__tame_fn_76, __tame_k]);
@@ -542,45 +595,90 @@ var __tame_fn_48 = function (__tame_k) {
             var __tame_defer_cb = tame.findDeferCb ([err, client, done]);
             tame.setActiveCb (__tame_defer_cb);
             var __tame_this = this;
-            var __tame_fn_82 = function (__tame_k) {
+            var __tame_fn_86 = function (__tame_k) {
                 tame.setActiveCb (__tame_defer_cb);
-                var row, events;
-                var __tame_fn_83 = function (__tame_k) {
+                var row, links;
+                var __tame_fn_87 = function (__tame_k) {
                     tame.setActiveCb (__tame_defer_cb);
                     var __tame_defers = new tame.Deferrals (__tame_k);
-                    var __tame_fn_84 = function (__tame_k) {
+                    var __tame_fn_88 = function (__tame_k) {
                         tame.setActiveCb (__tame_defer_cb);
-                        client . query ( 'with latest as (select *, row_number() over(partition by level order by start desc) as rk from event) select * from latest left join (select event_id from team group by event_id) as team on team.event_id = latest.id where rk <= 2 order by level=\'world\' desc, level::text like \'regional%\' desc, level::text like \'national%\' desc, start desc' ,
+                        client . query ( 'select * from link' ,
                         __tame_defers.defer ( { 
                             assign_fn : 
                                 function () {
                                     row = arguments[0];
-                                    events = arguments[1];
+                                    links = arguments[1];
                                 }
                                 ,
                             parent_cb : __tame_defer_cb,
-                            line : 243,
+                            line : 256,
                             file : "web.tjs"
                         } )
                         ) ;
                         tame.callChain([__tame_k]);
                         tame.setActiveCb (null);
                     };
-                    __tame_fn_84(tame.end);
+                    __tame_fn_88(tame.end);
                     __tame_defers._fulfill();
                     tame.setActiveCb (null);
                 };
-                var __tame_fn_85 = function (__tame_k) {
+                var __tame_fn_93 = function (__tame_k) {
                     tame.setActiveCb (__tame_defer_cb);
-                    done ( ) ;
-                    res . render ( 'events' , { events : events . rows , identity : req . user } ) ;
-                    tame.callChain([__tame_k]);
+                    links = links . rows ;
+                    var eventsQuery = client . query ( 'with latest as (select *, row_number() over(partition by level order by start desc) as rk from event) select * from latest left join (select event_id from team group by event_id) as team on team.event_id = latest.id where rk <= 2 order by level=\'world\' desc, level::text like \'regional%\' desc, level::text like \'national%\' desc, start desc' ,
+                    function  () {
+                    }
+                    ) ;
+                    eventsQuery . on ( 'row' ,
+                    function  (row) {
+                        addEventLinks ( links , row ) ;
+                    }
+                    ) ;
+                    var __tame_fn_89 = function (__tame_k) {
+                        tame.setActiveCb (__tame_defer_cb);
+                        var events;
+                        var __tame_fn_90 = function (__tame_k) {
+                            tame.setActiveCb (__tame_defer_cb);
+                            var __tame_defers = new tame.Deferrals (__tame_k);
+                            var __tame_fn_91 = function (__tame_k) {
+                                tame.setActiveCb (__tame_defer_cb);
+                                eventsQuery . on ( 'end' ,
+                                __tame_defers.defer ( { 
+                                    assign_fn : 
+                                        function () {
+                                            events = arguments[0];
+                                        }
+                                        ,
+                                    parent_cb : __tame_defer_cb,
+                                    line : 260,
+                                    file : "web.tjs"
+                                } )
+                                ) ;
+                                tame.callChain([__tame_k]);
+                                tame.setActiveCb (null);
+                            };
+                            __tame_fn_91(tame.end);
+                            __tame_defers._fulfill();
+                            tame.setActiveCb (null);
+                        };
+                        var __tame_fn_92 = function (__tame_k) {
+                            tame.setActiveCb (__tame_defer_cb);
+                            done ( ) ;
+                            res . render ( 'events' , { events : events . rows , identity : req . user } ) ;
+                            tame.callChain([__tame_k]);
+                            tame.setActiveCb (null);
+                        };
+                        tame.callChain([__tame_fn_90, __tame_fn_92, __tame_k]);
+                        tame.setActiveCb (null);
+                    };
+                    tame.callChain([__tame_fn_89, __tame_k]);
                     tame.setActiveCb (null);
                 };
-                tame.callChain([__tame_fn_83, __tame_fn_85, __tame_k]);
+                tame.callChain([__tame_fn_87, __tame_fn_93, __tame_k]);
                 tame.setActiveCb (null);
             };
-            tame.callChain([__tame_fn_82, __tame_k]);
+            tame.callChain([__tame_fn_86, __tame_k]);
             tame.setActiveCb (null);
         }
         ) ;
@@ -668,7 +766,7 @@ var __tame_fn_48 = function (__tame_k) {
                                         }
                                         ,
                                     parent_cb : __tame_defer_cb,
-                                    line : 305,
+                                    line : 322,
                                     file : "web.tjs"
                                 } )
                                 ) ;
@@ -722,7 +820,7 @@ var __tame_fn_48 = function (__tame_k) {
                                                 }
                                                 ,
                                             parent_cb : __tame_defer_cb,
-                                            line : 314,
+                                            line : 331,
                                             file : "web.tjs"
                                         } )
                                         ) ;
@@ -762,7 +860,7 @@ var __tame_fn_48 = function (__tame_k) {
                                                         }
                                                         ,
                                                     parent_cb : __tame_defer_cb,
-                                                    line : 319,
+                                                    line : 336,
                                                     file : "web.tjs"
                                                 } )
                                                 ) ;
@@ -800,7 +898,7 @@ var __tame_fn_48 = function (__tame_k) {
                                                                 }
                                                                 ,
                                                             parent_cb : __tame_defer_cb,
-                                                            line : 322,
+                                                            line : 339,
                                                             file : "web.tjs"
                                                         } )
                                                         ) ;
@@ -838,7 +936,7 @@ var __tame_fn_48 = function (__tame_k) {
                                                                         }
                                                                         ,
                                                                     parent_cb : __tame_defer_cb,
-                                                                    line : 325,
+                                                                    line : 342,
                                                                     file : "web.tjs"
                                                                 } )
                                                                 ) ;
@@ -917,7 +1015,7 @@ var __tame_fn_48 = function (__tame_k) {
                                                                                 }
                                                                                 ,
                                                                             parent_cb : __tame_defer_cb,
-                                                                            line : 370,
+                                                                            line : 387,
                                                                             file : "web.tjs"
                                                                         } )
                                                                         ) ;
