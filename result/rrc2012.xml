@@ -1,339 +1,339 @@
 <results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="results.xsd">
-	<team id="64" score="335" time="23:31:41" penalty="0" gender="men" age="open" duration="24" name="Волжские просторы">
+	<team id="64" score="335" time="23:31:41" penalty="0" gender="men" age="open" name="Волжские просторы">
 		<member firstname="Alexey" lastname="Korolev" country="RUS" />
 		<member firstname="Denis" lastname="Bareyev" country="RUS" />
 	</team>
-	<team id="24" score="320" time="23:50:58" penalty="0" gender="men" age="open" duration="24" name="Альфа-D">
+	<team id="24" score="320" time="23:50:58" penalty="0" gender="men" age="open" name="Альфа-D">
 		<member firstname="Alexander" lastname="Tonis" country="RUS" />
 		<member firstname="Alexander" lastname="Khalyapin" country="RUS" />
 	</team>
-	<team id="39" score="306" time="23:52:10" penalty="0" gender="men" age="veteran" duration="24" name="SV">
+	<team id="39" score="306" time="23:52:10" penalty="0" gender="men" age="veteran" name="SV">
 		<member firstname="Вячеслав" lastname="Савченко" country="RUS" />
 		<member firstname="Владимир" lastname="Шпетный" country="RUS" />
 	</team>
-	<team id="84" score="300" time="23:54:53" penalty="0" gender="women" age="open" duration="24" name="Garmin-Blondie">
+	<team id="84" score="300" time="23:54:53" penalty="0" gender="women" age="open" name="Garmin-Blondie">
 		<member firstname="Natalya" lastname="Abramova" country="RUS" />
 		<member firstname="Natalya" lastname="Zimina" country="RUS" />
 	</team>
-	<team id="96" score="293" time="23:50:52" penalty="0" gender="mixed" age="open" duration="24" name="A-Z">
+	<team id="96" score="293" time="23:50:52" penalty="0" gender="mixed" age="open" name="A-Z">
 		<member firstname="Vladislav" lastname="Zavyalov" country="RUS" />
 		<member firstname="Alena" lastname="Akimova" country="RUS" />
 	</team>
-	<team id="128" score="293" time="23:52:42" penalty="0" gender="mixed" age="open" duration="24" name="GORE Running Wear">
+	<team id="128" score="293" time="23:52:42" penalty="0" gender="mixed" age="open" name="GORE Running Wear">
 		<member firstname="Pavel" lastname="Demeshchik" country="RUS" />
 		<member firstname="Anna" lastname="Shavlakova" country="RUS" />
 	</team>
-	<team id="37" score="289" time="23:16:47" penalty="0" gender="mixed" age="open" duration="24" name="Крылатый батальон">
+	<team id="37" score="289" time="23:16:47" penalty="0" gender="mixed" age="open" name="Крылатый батальон">
 		<member firstname="Татьяна" lastname="Дмитриева" country="RUS" />
 		<member firstname="Валерий" lastname="Барановский" country="RUS" />
 		<member firstname="Андрей" lastname="Аверьянов" country="RUS" />
 	</team>
-	<team id="76" score="288" time="23:54:28" penalty="0" gender="men" age="open" duration="24" name="Guarana-АК МАИ">
+	<team id="76" score="288" time="23:54:28" penalty="0" gender="men" age="open" name="Guarana-АК МАИ">
 		<member firstname="Яков" lastname="Френклах" country="RUS" />
 		<member firstname="Игорь" lastname="Яковлев" country="RUS" />
 	</team>
-	<team id="42" score="286" time="23:52:53" penalty="0" gender="men" age="veteran" duration="24" name="кОлесо">
+	<team id="42" score="286" time="23:52:53" penalty="0" gender="men" age="veteran" name="кОлесо">
 		<member firstname="Анатолий" lastname="Шостацкий" country="RUS" />
 		<member firstname="Олег" lastname="Жегусов" country="RUS" />
 	</team>
-	<team id="8" score="285" time="23:37:59" penalty="0" gender="men" age="open" duration="24" name="РЯЗАНЬ">
+	<team id="8" score="285" time="23:37:59" penalty="0" gender="men" age="open" name="РЯЗАНЬ">
 		<member firstname="Алексей" lastname="Стенин" country="RUS" />
 		<member firstname="Егор" lastname="Ивашнев" country="RUS" />
 	</team>
-	<team id="58" score="283" time="23:57:00" penalty="0" gender="women" age="veteran" duration="24" name="Кенга - Неутомимый Томагавк">
+	<team id="58" score="283" time="23:57:00" penalty="0" gender="women" age="veteran" name="Кенга - Неутомимый Томагавк">
 		<member firstname="Marina" lastname="Galkina" country="RUS" />
 		<member firstname="Nina" lastname="Mikheeva" country="RUS" />
 	</team>
-	<team id="61" score="275" time="23:51:19" penalty="0" gender="mixed" age="veteran" duration="24" name="Кураган">
+	<team id="61" score="275" time="23:51:19" penalty="0" gender="mixed" age="veteran" name="Кураган">
 		<member firstname="Ирина" lastname="Сафонова" country="RUS" />
 		<member firstname="Александр" lastname="Сафонов" country="RUS" />
 	</team>
-	<team id="73" score="270" time="23:48:23" penalty="0" gender="men" age="open" duration="24" name="Движки">
+	<team id="73" score="270" time="23:48:23" penalty="0" gender="men" age="open" name="Движки">
 		<member firstname="Константин" lastname="Иванов" country="RUS" />
 		<member firstname="Кирилл" lastname="Перминов" country="RUS" />
 	</team>
-	<team id="11" score="268" time="23:44:11" penalty="0" gender="men" age="open" duration="24" name="Теплый Стан">
+	<team id="11" score="268" time="23:44:11" penalty="0" gender="men" age="open" name="Теплый Стан">
 		<member firstname="Роман" lastname="Рощин" country="RUS" />
 		<member firstname="Сергей" lastname="Колесов" country="RUS" />
 	</team>
-	<team id="99" score="266" time="23:44:08" penalty="0" gender="men" age="veteran" duration="24" name="Сибирский экспресс">
+	<team id="99" score="266" time="23:44:08" penalty="0" gender="men" age="veteran" name="Сибирский экспресс">
 		<member firstname="Игорь" lastname="Семичев" country="RUS" />
 		<member firstname="Анатолий" lastname="Антонов" country="RUS" />
 	</team>
-	<team id="80" score="263" time="23:56:22" penalty="0" gender="men" age="open" duration="24" name="Дети болот">
+	<team id="80" score="263" time="23:56:22" penalty="0" gender="men" age="open" name="Дети болот">
 		<member firstname="Александр" lastname="Кунцевич" country="RUS" />
 		<member firstname="Павел" lastname="Рoзанов" country="RUS" />
 	</team>
-	<team id="52" score="258" time="23:43:21" penalty="0" gender="mixed" age="open" duration="24" name="МГУ">
+	<team id="52" score="258" time="23:43:21" penalty="0" gender="mixed" age="open" name="МГУ">
 		<member firstname="Анна" lastname="Авраменко" country="RUS" />
 		<member firstname="Александр" lastname="Мордирос" country="RUS" />
 	</team>
-	<team id="81" score="250" time="23:41:48" penalty="0" gender="men" age="open" duration="24" name="O-Tula Team КБП">
+	<team id="81" score="250" time="23:41:48" penalty="0" gender="men" age="open" name="O-Tula Team КБП">
 		<member firstname="Николай" lastname="Павлов" country="RUS" />
 		<member firstname="Алексей" lastname="Бакулин" country="RUS" />
 	</team>
-	<team id="15" score="249" time="23:55:06" penalty="0" gender="men" age="open" duration="24" name="Азимут СПб-Москва">
+	<team id="15" score="249" time="23:55:06" penalty="0" gender="men" age="open" name="Азимут СПб-Москва">
 		<member firstname="Сергей" lastname="Русаков" country="RUS" />
 		<member firstname="Алексей" lastname="Минаев" country="RUS" />
 	</team>
-	<team id="125" score="247" time="23:44:20" penalty="0" gender="mixed" age="open" duration="24" name="Rogaining.ru">
+	<team id="125" score="247" time="23:44:20" penalty="0" gender="mixed" age="open" name="Rogaining.ru">
 		<member firstname="Александр" lastname="Якимов" country="RUS" />
 		<member firstname="Юлия" lastname="Назарова" country="RUS" />
 	</team>
-	<team id="25" score="247" time="23:59:13" penalty="0" gender="mixed" age="veteran" duration="24" name="Пикник на обочине">
+	<team id="25" score="247" time="23:59:13" penalty="0" gender="mixed" age="veteran" name="Пикник на обочине">
 		<member firstname="Игорь" lastname="Комин" country="RUS" />
 		<member firstname="Татьяна" lastname="Егорова" country="RUS" />
 	</team>
-	<team id="5" score="234" time="22:33:25" penalty="0" gender="men" age="veteran" duration="24" name="Верный путь">
+	<team id="5" score="234" time="22:33:25" penalty="0" gender="men" age="veteran" name="Верный путь">
 		<member firstname="Алексей" lastname="Самойлов" country="RUS" />
 		<member firstname="Иван" lastname="Румянцев" country="RUS" />
 	</team>
-	<team id="63" score="234" time="23:37:14" penalty="0" gender="mixed" age="veteran" duration="24" name="Рязань-приозёрье">
+	<team id="63" score="234" time="23:37:14" penalty="0" gender="mixed" age="veteran" name="Рязань-приозёрье">
 		<member firstname="Елена" lastname="Науменко" country="RUS" />
 		<member firstname="Владимир" lastname="Кратенко" country="RUS" />
 	</team>
-	<team id="94" score="233" time="23:36:16" penalty="0" gender="men" age="veteran" duration="24" name="O-team">
+	<team id="94" score="233" time="23:36:16" penalty="0" gender="men" age="veteran" name="O-team">
 		<member firstname="Александр" lastname="Кротков" country="RUS" />
 		<member firstname="Сергей" lastname="Константинов" country="RUS" />
 	</team>
-	<team id="6" score="230" time="23:39:46" penalty="0" gender="men" age="open" duration="24" name="Ром и Пепси-Кола">
+	<team id="6" score="230" time="23:39:46" penalty="0" gender="men" age="open" name="Ром и Пепси-Кола">
 		<member firstname="Роман" lastname="Тарубаров" country="RUS" />
 		<member firstname="Рафис" lastname="Галимов" country="RUS" />
 	</team>
-	<team id="68" score="230" time="23:53:01" penalty="0" gender="mixed" age="veteran" duration="24" name="Буран">
+	<team id="68" score="230" time="23:53:01" penalty="0" gender="mixed" age="veteran" name="Буран">
 		<member firstname="Анатолий" lastname="Крысанов" country="RUS" />
 		<member firstname="Галина" lastname="Цветаева" country="RUS" />
 	</team>
-	<team id="20" score="218" time="23:48:59" penalty="0" gender="men" age="open" duration="24" name="Радуга">
+	<team id="20" score="218" time="23:48:59" penalty="0" gender="men" age="open" name="Радуга">
 		<member firstname="Александр" lastname="Нестерук" country="RUS" />
 		<member firstname="Алексей" lastname="Матюшкин" country="RUS" />
 	</team>
-	<team id="40" score="217" time="23:52:49" penalty="0" gender="men" age="superveteran" duration="24" name="HONKA">
+	<team id="40" score="217" time="23:52:49" penalty="0" gender="men" age="superveteran" name="HONKA">
 		<member firstname="Владимир" lastname="Тохтуев" country="RUS" />
 		<member firstname="Михаил" lastname="Табаков" country="RUS" />
 	</team>
-	<team id="9" score="216" time="23:58:43" penalty="0" gender="men" age="open" duration="24" name="Жесткая Примавера">
+	<team id="9" score="216" time="23:58:43" penalty="0" gender="men" age="open" name="Жесткая Примавера">
 		<member firstname="Григорий" lastname="Сабиров" country="RUS" />
 		<member firstname="Андрей" lastname="Горячкин" country="RUS" />
 	</team>
-	<team id="14" score="215" time="23:58:10" penalty="0" gender="mixed" age="veteran" duration="24" name="А24А">
+	<team id="14" score="215" time="23:58:10" penalty="0" gender="mixed" age="veteran" name="А24А">
 		<member firstname="Андрей" lastname="Молотков" country="RUS" />
 		<member firstname="Анна" lastname="Бойко" country="RUS" />
 	</team>
-	<team id="47" score="212" time="23:23:05" penalty="0" gender="men" age="open" duration="24" name="Chudovo strong">
+	<team id="47" score="212" time="23:23:05" penalty="0" gender="men" age="open" name="Chudovo strong">
 		<member firstname="Алексей" lastname="Зинин" country="RUS" />
 		<member firstname="Гордей" lastname="Хамзин" country="RUS" />
 	</team>
-	<team id="181" score="207" time="23:26:42" penalty="0" gender="mixed" age="open" duration="24" name="контрамоты">
+	<team id="181" score="207" time="23:26:42" penalty="0" gender="mixed" age="open" name="контрамоты">
 		<member firstname="Михаил" lastname="Агеев" country="RUS" />
 		<member firstname="Анна" lastname="Переверзева" country="RUS" />
 	</team>
-	<team id="19" score="207" time="23:48:10" penalty="0" gender="women" age="veteran" duration="24" name="Сороконожка">
+	<team id="19" score="207" time="23:48:10" penalty="0" gender="women" age="veteran" name="Сороконожка">
 		<member firstname="Елена" lastname="Крылова" country="RUS" />
 		<member firstname="Светлана" lastname="Слободенюк" country="RUS" />
 		<member firstname="Светлана" lastname="Соколова" country="RUS" />
 	</team>
-	<team id="59" score="206" time="21:33:39" penalty="0" gender="mixed" age="open" duration="24" name="АУ!">
+	<team id="59" score="206" time="21:33:39" penalty="0" gender="mixed" age="open" name="АУ!">
 		<member firstname="Ирина" lastname="Пшестанчик" country="RUS" />
 		<member firstname="Вячеслав" lastname="Степанов" country="RUS" />
 	</team>
-	<team id="56" score="206" time="21:59:50" penalty="0" gender="men" age="open" duration="24" name="Северная лисица">
+	<team id="56" score="206" time="21:59:50" penalty="0" gender="men" age="open" name="Северная лисица">
 		<member firstname="Александр" lastname="Резяпкин" country="RUS" />
 		<member firstname="Евгений" lastname="Медвецкий" country="RUS" />
 	</team>
-	<team id="75" score="204" time="23:32:19" penalty="0" gender="men" age="superveteran" duration="24" name="АРИНА НН">
+	<team id="75" score="204" time="23:32:19" penalty="0" gender="men" age="superveteran" name="АРИНА НН">
 		<member firstname="Евгений" lastname="Додонов" country="RUS" />
 		<member firstname="Александр" lastname="Лукьянов" country="RUS" />
 	</team>
-	<team id="97" score="203" time="23:01:48" penalty="0" gender="men" age="open" duration="24" name="Tver_Kalashnikov">
+	<team id="97" score="203" time="23:01:48" penalty="0" gender="men" age="open" name="Tver_Kalashnikov">
 		<member firstname="Артём" lastname="Калашников" country="RUS" />
 		<member firstname="Андрей" lastname="Калашников" country="RUS" />
 	</team>
-	<team id="13" score="203" time="23:31:56" penalty="0" gender="men" age="open" duration="24" name="BGR-2011">
+	<team id="13" score="203" time="23:31:56" penalty="0" gender="men" age="open" name="BGR-2011">
 		<member firstname="Гарыня" lastname="Саблин-Яворский" country="RUS" />
 		<member firstname="Борис" lastname="Димитров" country="RUS" />
 	</team>
-	<team id="31" score="201" time="23:47:24" penalty="0" gender="mixed" age="open" duration="24" name="chasing the sun">
+	<team id="31" score="201" time="23:47:24" penalty="0" gender="mixed" age="open" name="chasing the sun">
 		<member firstname="Евгений" lastname="Сидоровский" country="RUS" />
 		<member firstname="Анна" lastname="Кочергина" country="RUS" />
 	</team>
-	<team id="10" score="200" time="23:38:32" penalty="0" gender="men" age="open" duration="24" name="ALOHA">
+	<team id="10" score="200" time="23:38:32" penalty="0" gender="men" age="open" name="ALOHA">
 		<member firstname="Максим" lastname="Щеглов" country="RUS" />
 		<member firstname="Сергей" lastname="Мартынов" country="RUS" />
 	</team>
-	<team id="16" score="200" time="23:51:47" penalty="0" gender="men" age="superveteran" duration="24" name="Авант">
+	<team id="16" score="200" time="23:51:47" penalty="0" gender="men" age="superveteran" name="Авант">
 		<member firstname="Александр" lastname="Лисененков" country="RUS" />
 		<member firstname="Евгений" lastname="Емельянов" country="RUS" />
 	</team>
-	<team id="53" score="198" time="23:51:22" penalty="0" gender="mixed" age="veteran" duration="24" name="Звёздочка">
+	<team id="53" score="198" time="23:51:22" penalty="0" gender="mixed" age="veteran" name="Звёздочка">
 		<member firstname="Сергей" lastname="Лукин" country="RUS" />
 		<member firstname="Тамара" lastname="Хижняк" country="RUS" />
 	</team>
-	<team id="33" score="197" time="23:24:20" penalty="0" gender="men" age="superveteran" duration="24" name="А вдруг?">
+	<team id="33" score="197" time="23:24:20" penalty="0" gender="men" age="superveteran" name="А вдруг?">
 		<member firstname="Юрий" lastname="Векшин" country="RUS" />
 		<member firstname="Сергей" lastname="Черкесов" country="RUS" />
 	</team>
-	<team id="86" score="196" time="23:51:15" penalty="0" gender="mixed" age="veteran" duration="24" name="Пых пых">
+	<team id="86" score="196" time="23:51:15" penalty="0" gender="mixed" age="veteran" name="Пых пых">
 		<member firstname="Владимир" lastname="Комов" country="RUS" />
 		<member firstname="Ирина" lastname="Козлова" country="RUS" />
 	</team>
-	<team id="129" score="193" time="23:32:23" penalty="0" gender="men" age="junior" duration="24" name="Дети Сусанина">
+	<team id="129" score="193" time="23:32:23" penalty="0" gender="men" age="junior" name="Дети Сусанина">
 		<member firstname="Владислав" lastname="Еремин" country="RUS" />
 		<member firstname="Даниил" lastname="Коднев" country="RUS" />
 	</team>
-	<team id="115" score="190" time="23:45:00" penalty="0" gender="mixed" age="veteran" duration="24" name="КСО Легенда">
+	<team id="115" score="190" time="23:45:00" penalty="0" gender="mixed" age="veteran" name="КСО Легенда">
 		<member firstname="Владимир" lastname="Михайлов" country="RUS" />
 		<member firstname="Валентина" lastname="Михайлова" country="RUS" />
 	</team>
-	<team id="30" score="188" time="23:08:18" penalty="0" gender="mixed" age="open" duration="24" name="Удмуртия">
+	<team id="30" score="188" time="23:08:18" penalty="0" gender="mixed" age="open" name="Удмуртия">
 		<member firstname="Станислав" lastname="Гладков" country="RUS" />
 		<member firstname="Раиса" lastname="Михайлова" country="RUS" />
 	</team>
-	<team id="3" score="186" time="22:21:02" penalty="0" gender="men" age="open" duration="24" name="ВышлиПо...">
+	<team id="3" score="186" time="22:21:02" penalty="0" gender="men" age="open" name="ВышлиПо...">
 		<member firstname="Павел" lastname="Баранов" country="RUS" />
 		<member firstname="Андрей" lastname="Устинов" country="RUS" />
 	</team>
-	<team id="72" score="184" time="22:42:00" penalty="0" gender="men" age="veteran" duration="24" name="Селецкий ориентир">
+	<team id="72" score="184" time="22:42:00" penalty="0" gender="men" age="veteran" name="Селецкий ориентир">
 		<member firstname="Владимир" lastname="Максимов" country="RUS" />
 		<member firstname="Анатолий" lastname="Концевой" country="RUS" />
 	</team>
-	<team id="17" score="181" time="23:49:11" penalty="0" gender="men" age="veteran" duration="24" name="ветераны ВДВ">
+	<team id="17" score="181" time="23:49:11" penalty="0" gender="men" age="veteran" name="ветераны ВДВ">
 		<member firstname="Геннадий" lastname="Ягодкин" country="RUS" />
 		<member firstname="Владимир" lastname="Елескин" country="RUS" />
 	</team>
-	<team id="7" score="176" time="22:07:37" penalty="0" gender="mixed" age="open" duration="24" name="Ёжики~шатуны">
+	<team id="7" score="176" time="22:07:37" penalty="0" gender="mixed" age="open" name="Ёжики~шатуны">
 		<member firstname="Алексей" lastname="Каритич" country="RUS" />
 		<member firstname="Ольга" lastname="Комахина" country="RUS" />
 	</team>
-	<team id="170" score="171" time="23:44:26" penalty="0" gender="men" age="ultraveteran" duration="24" name="Азимут">
+	<team id="170" score="171" time="23:44:26" penalty="0" gender="men" age="ultraveteran" name="Азимут">
 		<member firstname="Михаил" lastname="Никитин" country="RUS" />
 		<member firstname="Виктор" lastname="Кравченко" country="RUS" />
 	</team>
-	<team id="36" score="169" time="23:24:57" penalty="0" gender="women" age="open" duration="24" name="Сквозняки">
+	<team id="36" score="169" time="23:24:57" penalty="0" gender="women" age="open" name="Сквозняки">
 		<member firstname="Зинаида" lastname="Перевертова" country="RUS" />
 		<member firstname="Анна" lastname="Варлачева" country="RUS" />
 		<member firstname="Софья" lastname="Ким" country="RUS" />
 	</team>
-	<team id="2" score="168" time="23:38:05" penalty="0" gender="mixed" age="superveteran" duration="24" name="Таежник г.Чебоксары">
+	<team id="2" score="168" time="23:38:05" penalty="0" gender="mixed" age="superveteran" name="Таежник г.Чебоксары">
 		<member firstname="Феоктиста" lastname="Кривуша" country="RUS" />
 		<member firstname="Владимир" lastname="Кривуша" country="RUS" />
 	</team>
-	<team id="22" score="166" time="22:33:12" penalty="0" gender="women" age="superveteran" duration="24" name="АвантаЖ">
+	<team id="22" score="166" time="22:33:12" penalty="0" gender="women" age="superveteran" name="АвантаЖ">
 		<member firstname="Татьяна" lastname="Оноприенко" country="RUS" />
 		<member firstname="Елена" lastname="Лисененкова" country="RUS" />
 	</team>
-	<team id="4" score="161" time="23:49:51" penalty="0" gender="men" age="open" duration="24" name="Тверь-Бурухин">
+	<team id="4" score="161" time="23:49:51" penalty="0" gender="men" age="open" name="Тверь-Бурухин">
 		<member firstname="Дмитрий" lastname="Матросов" country="RUS" />
 		<member firstname="Дмитрий" lastname="Битков" country="RUS" />
 	</team>
-	<team id="160" score="160" time="23:34:07" penalty="0" gender="mixed" age="open" duration="24" name="В лыжи обутые">
+	<team id="160" score="160" time="23:34:07" penalty="0" gender="mixed" age="open" name="В лыжи обутые">
 		<member firstname="Андрей" lastname="Сомов" country="RUS" />
 		<member firstname="Плявинская" lastname="Регина" country="RUS" />
 	</team>
-	<team id="145" score="160" time="24:00:26" penalty="0" gender="mixed" age="veteran" duration="24" name="МирАнт">
+	<team id="145" score="160" time="24:00:26" penalty="0" gender="mixed" age="veteran" name="МирАнт">
 		<member firstname="Егор" lastname="Антонов" country="RUS" />
 		<member firstname="Юлия" lastname="Мирошниченко" country="RUS" />
 	</team>
-	<team id="123" score="157" time="23:07:13" penalty="0" gender="men" age="junior" duration="24" name="Надежда Великого Новгорода 1">
+	<team id="123" score="157" time="23:07:13" penalty="0" gender="men" age="junior" name="Надежда Великого Новгорода 1">
 		<member firstname="Ефим" lastname="Ляшков" country="RUS" />
 		<member firstname="Даниил" lastname="Смирнов" country="RUS" />
 	</team>
-	<team id="55" score="142" time="23:36:03" penalty="0" gender="women" age="open" duration="24" name="Chudovo strong 2">
+	<team id="55" score="142" time="23:36:03" penalty="0" gender="women" age="open" name="Chudovo strong 2">
 		<member firstname="Юлия" lastname="Банникова" country="RUS" />
 		<member firstname="Юлия" lastname="Зинина" country="RUS" />
 	</team>
-	<team id="194" score="136" time="16:44:34" penalty="0" gender="men" age="open" duration="24" name="привалка">
+	<team id="194" score="136" time="16:44:34" penalty="0" gender="men" age="open" name="привалка">
 		<member firstname="Сергей" lastname="Привалов" country="RUS" />
 		<member firstname="Александр" lastname="Привалов" country="RUS" />
 	</team>
-	<team id="32" score="133" time="12:48:45" penalty="0" gender="men" age="open" duration="24" name="Крылья, ноги и хвост!!">
+	<team id="32" score="133" time="12:48:45" penalty="0" gender="men" age="open" name="Крылья, ноги и хвост!!">
 		<member firstname="Роман" lastname="Майоров" country="RUS" />
 		<member firstname="Василий" lastname="Мишарев" country="RUS" />
 	</team>
-	<team id="162" score="130" time="23:48:01" penalty="0" gender="men" age="open" duration="24" name="Лосиный остров">
+	<team id="162" score="130" time="23:48:01" penalty="0" gender="men" age="open" name="Лосиный остров">
 		<member firstname="Александр" lastname="Нилов" country="RUS" />
 		<member firstname="Василий" lastname="Боков" country="RUS" />
 	</team>
-	<team id="112" score="129" time="21:13:41" penalty="0" gender="mixed" age="open" duration="24" name="Перелётные птицы">
+	<team id="112" score="129" time="21:13:41" penalty="0" gender="mixed" age="open" name="Перелётные птицы">
 		<member firstname="Лариса" lastname="Андреева" country="RUS" />
 		<member firstname="Петр" lastname="Струнков" country="RUS" />
 	</team>
-	<team id="65" score="129" time="23:14:16" penalty="0" gender="mixed" age="veteran" duration="24" name="Нижегородцы">
+	<team id="65" score="129" time="23:14:16" penalty="0" gender="mixed" age="veteran" name="Нижегородцы">
 		<member firstname="Владимир" lastname="Ворончихин" country="RUS" />
 		<member firstname="Юлия" lastname="Векслер" country="RUS" />
 	</team>
-	<team id="87" score="127" time="14:51:22" penalty="0" gender="men" age="open" duration="24" name="Беги, Форест, Беги">
+	<team id="87" score="127" time="14:51:22" penalty="0" gender="men" age="open" name="Беги, Форест, Беги">
 		<member firstname="Александр" lastname="Александрюк" country="RUS" />
 		<member firstname="Олег" lastname="Щеглов" country="RUS" />
 	</team>
-	<team id="48" score="126" time="23:37:05" penalty="0" gender="women" age="veteran" duration="24" name="КВа">
+	<team id="48" score="126" time="23:37:05" penalty="0" gender="women" age="veteran" name="КВа">
 		<member firstname="Елена" lastname="Кузнецова" country="RUS" />
 		<member firstname="Катерина" lastname="Васильева" country="RUS" />
 	</team>
-	<team id="111" score="125" time="22:38:47" penalty="0" gender="mixed" age="junior" duration="24" name="Надежда Великого Новгорода 2">
+	<team id="111" score="125" time="22:38:47" penalty="0" gender="mixed" age="junior" name="Надежда Великого Новгорода 2">
 		<member firstname="Анна" lastname="Фёдорова" country="RUS" />
 		<member firstname="Ирина" lastname="Нестерова" country="RUS" />
 		<member firstname="Денис" lastname="Борисов" country="RUS" />
 		<member firstname="Тимур" lastname="Волков" country="RUS" />
 	</team>
-	<team id="35" score="123" time="15:15:15" penalty="0" gender="men" age="open" duration="24" name="Аяксы">
+	<team id="35" score="123" time="15:15:15" penalty="0" gender="men" age="open" name="Аяксы">
 		<member firstname="Дмитрий" lastname="Кочнов" country="RUS" />
 		<member firstname="Дмитрий" lastname="Мологин" country="RUS" />
 	</team>
-	<team id="71" score="118" time="23:47:01" penalty="0" gender="women" age="open" duration="24" name="MISS">
+	<team id="71" score="118" time="23:47:01" penalty="0" gender="women" age="open" name="MISS">
 		<member firstname="Илона" lastname="Миронова" country="RUS" />
 		<member firstname="Светлана" lastname="Субботина" country="RUS" />
 	</team>
-	<team id="315" score="117" time="11:38:45" penalty="0" gender="men" age="open" duration="24" name="РМАТ">
+	<team id="315" score="117" time="11:38:45" penalty="0" gender="men" age="open" name="РМАТ">
 		<member firstname="Артем" lastname="Лавринович" country="RUS" />
 		<member firstname="Юрий" lastname="Стоне" country="RUS" />
 	</team>
-	<team id="116" score="116" time="21:23:57" penalty="0" gender="men" age="open" duration="24" name="Лесники">
+	<team id="116" score="116" time="21:23:57" penalty="0" gender="men" age="open" name="Лесники">
 		<member firstname="Никита" lastname="Дорохов" country="RUS" />
 		<member firstname="Алексей" lastname="Лахно" country="RUS" />
 	</team>
-	<team id="103" score="113" time="19:08:06" penalty="0" gender="mixed" age="superveteran" duration="24" name="КаМар">
+	<team id="103" score="113" time="19:08:06" penalty="0" gender="mixed" age="superveteran" name="КаМар">
 		<member firstname="Владимир" lastname="Мартынов" country="RUS" />
 		<member firstname="Ирина" lastname="Капустян" country="RUS" />
 	</team>
-	<team id="49" score="110" time="13:12:23" penalty="0" gender="mixed" age="veteran" duration="24" name="Шурики">
+	<team id="49" score="110" time="13:12:23" penalty="0" gender="mixed" age="veteran" name="Шурики">
 		<member firstname="Александр" lastname="Болгов" country="RUS" />
 		<member firstname="Елена" lastname="Болгова" country="RUS" />
 	</team>
-	<team id="301" score="100" time="19:47:23" penalty="0" gender="men" age="open" duration="24" name="ФЭЛКОН">
+	<team id="301" score="100" time="19:47:23" penalty="0" gender="men" age="open" name="ФЭЛКОН">
 		<member firstname="Сергей" lastname="Михалев" country="RUS" />
 		<member firstname="Игорь" lastname="Тучанский" country="RUS" />
 	</team>
-	<team id="57" score="96" time="22:41:50" penalty="0" gender="women" age="junior" duration="24" name="ВИФК">
+	<team id="57" score="96" time="22:41:50" penalty="0" gender="women" age="junior" name="ВИФК">
 		<member firstname="Анастасия" lastname="Прохорова" country="RUS" />
 		<member firstname="Кристина" lastname="Третьякова" country="RUS" />
 	</team>
-	<team id="18" score="93" time="17:06:30" penalty="0" gender="women" age="open" duration="24" name="ВН">
+	<team id="18" score="93" time="17:06:30" penalty="0" gender="women" age="open" name="ВН">
 		<member firstname="Елена" lastname="Ветрова" country="RUS" />
 		<member firstname="Татьяна" lastname="Тучина" country="RUS" />
 	</team>
-	<team id="108" score="92" time="11:10:23" penalty="0" gender="women" age="open" duration="24" name="Ночное макраме">
+	<team id="108" score="92" time="11:10:23" penalty="0" gender="women" age="open" name="Ночное макраме">
 		<member firstname="Анна" lastname="Лисененкова" country="RUS" />
 		<member firstname="Анастасия" lastname="Яковлева" country="RUS" />
 	</team>
-	<team id="46" score="88" time="23:54:19" penalty="0" gender="women" age="open" duration="24" name="Энтузиазм">
+	<team id="46" score="88" time="23:54:19" penalty="0" gender="women" age="open" name="Энтузиазм">
 		<member firstname="Тамара" lastname="Жуковская" country="RUS" />
 		<member firstname="Марина" lastname="Руднева" country="RUS" />
 		<member firstname="Наталья" lastname="Жемальдинова" country="RUS" />
 	</team>
-	<team id="23" score="51" time="11:11:59" penalty="0" gender="women" age="superveteran" duration="24" name="ZOLA">
+	<team id="23" score="51" time="11:11:59" penalty="0" gender="women" age="superveteran" name="ZOLA">
 		<member firstname="Зоя" lastname="Молоткова" country="RUS" />
 		<member firstname="Надежда" lastname="Морозова" country="RUS" />
 	</team>
-	<team id="27" score="33" time="12:24:50" penalty="0" gender="women" age="open" duration="24" name="айки">
+	<team id="27" score="33" time="12:24:50" penalty="0" gender="women" age="open" name="айки">
 		<member firstname="Екатерина" lastname="Шмитке" country="RUS" />
 		<member firstname="Антонина" lastname="Басовская" country="RUS" />
 	</team>
-	<team id="26" score="32" time="11:25:04" penalty="0" gender="mixed" age="veteran" duration="24" name="Кипр">
+	<team id="26" score="32" time="11:25:04" penalty="0" gender="mixed" age="veteran" name="Кипр">
 		<member firstname="Анатолий" lastname="Вещиков" country="RUS" />
 		<member firstname="Елена" lastname="Качанова" country="RUS" />
 	</team>
-	<team id="51" score="0" time="0:00:00" penalty="0" gender="mixed" age="open" duration="24" name="МГУ" status="not finished">
+	<team id="51" score="0" time="0:00:00" penalty="0" gender="mixed" age="open" name="МГУ" status="not finished">
 		<member firstname="Мария" lastname="Новокович" country="RUS" />
 		<member firstname="Михаил" lastname="Кубарев" country="RUS" />
 	</team>

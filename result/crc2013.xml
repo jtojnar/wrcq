@@ -1,17 +1,17 @@
 <results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="results.xsd">
-	<team id="8" score="720" time="23:33:22" penalty="0" gender="women" age="veteran" duration="24">
+	<team id="8" score="720" time="23:33:22" penalty="0" gender="women" age="veteran">
 		<member firstname="Doležalová" lastname="Lucie" country="CZE" />
 		<member firstname="Šiková" lastname="Renata" country="CZE" />
 	</team>
-	<team id="9" score="620" time="23:35:39" penalty="0" gender="women" age="veteran" duration="24">
+	<team id="9" score="620" time="23:35:39" penalty="0" gender="women" age="veteran">
 		<member firstname="Kolovská" lastname="Ilona" country="CZE" />
 		<member firstname="Šilhavá" lastname="Jana" country="CZE" />
 	</team>
-	<team id="10" score="930" time="23:08:54" penalty="0" gender="men" age="open" duration="24">
+	<team id="10" score="930" time="23:08:54" penalty="0" gender="men" age="open">
 		<member firstname="Cupal" lastname="Josef" country="CZE" />
 		<member firstname="Zeman" lastname="Radek" country="CZE" />
 	</team>
-	<team id="11" score="660" time="22:41:45" penalty="0" gender="women" age="open" duration="24">
+	<team id="11" score="660" time="22:41:45" penalty="0" gender="women" age="open">
 		<member firstname="Müllerová" lastname="Petra" country="CZE" />
 		<member firstname="Müllerová" lastname="Zorka" country="CZE" />
 	</team>
@@ -19,28 +19,28 @@
 		<member firstname="Klogner" lastname="Tomáš" country="CZE" />
 		<member firstname="Švorc" lastname="Jindřich" country="CZE" />
 	</team>
-	<team id="13" score="0" time="0:00:00" penalty="0" gender="men" age="veteran" duration="24" status="not finished">
+	<team id="13" score="0" time="0:00:00" penalty="0" gender="men" age="veteran" status="not finished">
 		<member firstname="Klos" lastname="Václav" country="CZE" />
 		<member firstname="Kučera" lastname="Zdeněk" country="CZE" />
 	</team>
-	<team id="14" score="1960" time="23:48:37" penalty="0" gender="men" age="veteran" duration="24">
+	<team id="14" score="1960" time="23:48:37" penalty="0" gender="men" age="veteran">
 		<member firstname="Šebánek" lastname="Martin" country="CZE" />
 		<member firstname="Urban" lastname="Hynek" country="CZE" />
 	</team>
-	<team id="16" score="860" time="22:45:17" penalty="0" gender="women" age="veteran" duration="24">
+	<team id="16" score="860" time="22:45:17" penalty="0" gender="women" age="veteran">
 		<member firstname="Krejčíková" lastname="Monika" country="CZE" />
 		<member firstname="Stackeová" lastname="Anna" country="CZE" />
 	</team>
-	<team id="17" score="1780" time="23:30:15" penalty="0" gender="mixed" age="open" duration="24">
+	<team id="17" score="1780" time="23:30:15" penalty="0" gender="mixed" age="open">
 		<member firstname="Kováčová" lastname="Božena" country="CZE" />
 		<member firstname="Osis" lastname="Kaspars" country="LAT" />
 	</team>
-	<team id="18" score="970" time="23:15:02" penalty="0" gender="men" age="open" duration="24">
+	<team id="18" score="970" time="23:15:02" penalty="0" gender="men" age="open">
 		<member firstname="Mareš" lastname="Ladislav" country="CZE" />
 		<member firstname="Pešta" lastname="Jiří" country="CZE" />
 		<member firstname="Žižka" lastname="Přemysl" country="CZE" />
 	</team>
-	<team id="19" score="970" time="23:36:13" penalty="0" gender="mixed" age="open" duration="24">
+	<team id="19" score="970" time="23:36:13" penalty="0" gender="mixed" age="open">
 		<member firstname="Kopeček" lastname="Martin" country="CZE" />
 		<member firstname="Voštová" lastname="Marie" country="CZE" />
 	</team>
@@ -58,23 +58,23 @@
 		<member firstname="Honzák" lastname="Tomáš" country="CZE" />
 		<member firstname="Raisr" lastname="Ivo" country="CZE" />
 	</team>
-	<team id="23" score="810" time="19:14:58" penalty="0" gender="men" age="open" duration="24">
+	<team id="23" score="810" time="19:14:58" penalty="0" gender="men" age="open">
 		<member firstname="Bořánek" lastname="František" country="CZE" />
 		<member firstname="Šticha" lastname="Jan" country="CZE" />
 	</team>
-	<team id="25" score="1570" time="23:35:33" penalty="0" gender="men" age="open" duration="24">
+	<team id="25" score="1570" time="23:35:33" penalty="0" gender="men" age="open">
 		<member firstname="Škroch" lastname="Michal" country="CZE" />
 		<member firstname="Šrejber" lastname="Vojtěch" country="CZE" />
 	</team>
-	<team id="26" score="1360" time="23:06:48" penalty="0" gender="mixed" age="open" duration="24">
+	<team id="26" score="1360" time="23:06:48" penalty="0" gender="mixed" age="open">
 		<member firstname="Poikāne" lastname="Ruta" country="LAT" />
 		<member firstname="Poikāns" lastname="Aivis" country="LAT" />
 	</team>
-	<team id="27" score="1490" time="23:28:07" penalty="0" gender="mixed" age="open" duration="24">
+	<team id="27" score="1490" time="23:28:07" penalty="0" gender="mixed" age="open">
 		<member firstname="Balcar" lastname="Aleš" country="CZE" />
 		<member firstname="Svobodová" lastname="Jana" country="CZE" />
 	</team>
-	<team id="28" score="790" time="19:04:12" penalty="0" gender="men" age="open" duration="24">
+	<team id="28" score="790" time="19:04:12" penalty="0" gender="men" age="open">
 		<member firstname="Měkuta" lastname="Kryštof" country="CZE" />
 		<member firstname="Novotný" lastname="Tomáš" country="CZE" />
 	</team>
@@ -82,7 +82,7 @@
 		<member firstname="Hercigová" lastname="Tereza" country="CZE" />
 		<member firstname="Ptáček" lastname="Tomáš" country="CZE" />
 	</team>
-	<team id="30" score="1560" time="23:52:25" penalty="0" gender="men" age="open" duration="24">
+	<team id="30" score="1560" time="23:52:25" penalty="0" gender="men" age="open">
 		<member firstname="Kašpar" lastname="Jiří" country="CZE" />
 		<member firstname="Vohradský" lastname="Ondřej" country="CZE" />
 	</team>
@@ -90,11 +90,11 @@
 		<member firstname="Makovská" lastname="Anna" country="CZE" />
 		<member firstname="Pavlasová" lastname="Veronika" country="CZE" />
 	</team>
-	<team id="32" score="1200" time="23:39:17" penalty="0" gender="mixed" age="open" duration="24">
+	<team id="32" score="1200" time="23:39:17" penalty="0" gender="mixed" age="open">
 		<member firstname="Krchová" lastname="Tereza" country="CZE" />
 		<member firstname="Vošta" lastname="Zdeněk" country="CZE" />
 	</team>
-	<team id="33" score="1520" time="23:59:20" penalty="0" gender="mixed" age="open" duration="24">
+	<team id="33" score="1520" time="23:59:20" penalty="0" gender="mixed" age="open">
 		<member firstname="Černíková" lastname="Barbora" country="CZE" />
 		<member firstname="Fátor" lastname="Jan" country="CZE" />
 	</team>
@@ -102,11 +102,11 @@
 		<member firstname="Holas" lastname="Stanislav" country="CZE" />
 		<member firstname="Holasová" lastname="Renáta" country="CZE" />
 	</team>
-	<team id="35" score="2320" time="23:57:05" penalty="0" gender="men" age="open" duration="24">
+	<team id="35" score="2320" time="23:57:05" penalty="0" gender="men" age="open">
 		<member firstname="Čech" lastname="Radovan" country="CZE" />
 		<member firstname="Skripnik" lastname="Ondřej" country="CZE" />
 	</team>
-	<team id="36" score="2280" time="23:43:13" penalty="0" gender="men" age="open" duration="24">
+	<team id="36" score="2280" time="23:43:13" penalty="0" gender="men" age="open">
 		<member firstname="Seidl" lastname="Miroslav" country="CZE" />
 		<member firstname="Skripnik" lastname="Štěpán" country="CZE" />
 	</team>
@@ -114,27 +114,27 @@
 		<member firstname="Bartoš" lastname="František" country="CZE" />
 		<member firstname="Bartošová" lastname="Kateřina" country="CZE" />
 	</team>
-	<team id="39" score="1150" time="23:26:39" penalty="0" gender="women" age="superveteran" duration="24">
+	<team id="39" score="1150" time="23:26:39" penalty="0" gender="women" age="superveteran">
 		<member firstname="Hájková" lastname="Věra" country="CZE" />
 		<member firstname="Haňkovská" lastname="Jana" country="CZE" />
 	</team>
-	<team id="40" score="1560" time="23:36:55" penalty="0" gender="mixed" age="superveteran" duration="24">
+	<team id="40" score="1560" time="23:36:55" penalty="0" gender="mixed" age="superveteran">
 		<member firstname="Hora" lastname="Vladimír" country="CZE" />
 		<member firstname="Horová" lastname="Magda" country="CZE" />
 	</team>
-	<team id="41" score="920" time="12:03:02" penalty="0" gender="men" age="junior" duration="24">
+	<team id="41" score="920" time="12:03:02" penalty="0" gender="men" age="junior">
 		<member firstname="Kolovský" lastname="František" country="CZE" />
 		<member firstname="Rubeš" lastname="Martin" country="CZE" />
 	</team>
-	<team id="44" score="1130" time="23:48:45" penalty="0" gender="men" age="open" duration="24">
+	<team id="44" score="1130" time="23:48:45" penalty="0" gender="men" age="open">
 		<member firstname="Kratochvíl" lastname="Daniel" country="CZE" />
 		<member firstname="Plašil" lastname="Ondřej" country="CZE" />
 	</team>
-	<team id="45" score="1470" time="23:35:13" penalty="0" gender="women" age="open" duration="24">
+	<team id="45" score="1470" time="23:35:13" penalty="0" gender="women" age="open">
 		<member firstname="Hladká" lastname="Michaela" country="CZE" />
 		<member firstname="Zamazalová" lastname="Kateřina" country="CZE" />
 	</team>
-	<team id="46" score="1850" time="23:28:45" penalty="0" gender="men" age="open" duration="24">
+	<team id="46" score="1850" time="23:28:45" penalty="0" gender="men" age="open">
 		<member firstname="Pračka" lastname="Tomáš" country="CZE" />
 		<member firstname="Rožek" lastname="David" country="CZE" />
 	</team>
@@ -142,23 +142,23 @@
 		<member firstname="Sedláček" lastname="Jaroslav" country="CZE" />
 		<member firstname="Sedláčková" lastname="Petra" country="CZE" />
 	</team>
-	<team id="48" score="1080" time="23:21:54" penalty="0" gender="mixed" age="open" duration="24">
+	<team id="48" score="1080" time="23:21:54" penalty="0" gender="mixed" age="open">
 		<member firstname="Havelka" lastname="Jan" country="CZE" />
 		<member firstname="Procházková" lastname="Markéta" country="CZE" />
 	</team>
-	<team id="49" score="480" time="23:33:00" penalty="0" gender="women" age="veteran" duration="24">
+	<team id="49" score="480" time="23:33:00" penalty="0" gender="women" age="veteran">
 		<member firstname="Kamarádová" lastname="Zdenka" country="CZE" />
 		<member firstname="Zmeková" lastname="Míla" country="CZE" />
 	</team>
-	<team id="50" score="1100" time="22:32:33" penalty="0" gender="mixed" age="veteran" duration="24">
+	<team id="50" score="1100" time="22:32:33" penalty="0" gender="mixed" age="veteran">
 		<member firstname="Glabazňová" lastname="Jana" country="CZE" />
 		<member firstname="Krejčík" lastname="Zbyněk" country="CZE" />
 	</team>
-	<team id="51" score="1030" time="22:51:05" penalty="0" gender="mixed" age="open" duration="24">
+	<team id="51" score="1030" time="22:51:05" penalty="0" gender="mixed" age="open">
 		<member firstname="Hynek" lastname="Roman" country="CZE" />
 		<member firstname="Kekrtová" lastname="Dana" country="CZE" />
 	</team>
-	<team id="52" score="1310" time="23:31:16" penalty="0" gender="men" age="open" duration="24">
+	<team id="52" score="1310" time="23:31:16" penalty="0" gender="men" age="open">
 		<member firstname="Marek" lastname="Jan" country="CZE" />
 		<member firstname="Plachý" lastname="Jaroslav" country="CZE" />
 		<member firstname="Vojtík" lastname="Petr" country="CZE" />
@@ -167,7 +167,7 @@
 		<member firstname="Bína" lastname="Jan" country="CZE" />
 		<member firstname="Švihlová" lastname="Kateřina" country="CZE" />
 	</team>
-	<team id="55" score="1680" time="23:33:33" penalty="0" gender="women" age="veteran" duration="24">
+	<team id="55" score="1680" time="23:33:33" penalty="0" gender="women" age="veteran">
 		<member firstname="Klinkerová" lastname="Jitka" country="CZE" />
 		<member firstname="Kožinová" lastname="Jana" country="CZE" />
 	</team>
@@ -179,7 +179,7 @@
 		<member firstname="Kavka" lastname="Jiri" country="CZE" />
 		<member firstname="Kavková" lastname="Dana" country="CZE" />
 	</team>
-	<team id="58" score="1250" time="23:21:36" penalty="0" gender="men" age="open" duration="24">
+	<team id="58" score="1250" time="23:21:36" penalty="0" gender="men" age="open">
 		<member firstname="Hamáček" lastname="Vladimír" country="CZE" />
 		<member firstname="Sobotka" lastname="Jan" country="CZE" />
 	</team>
@@ -187,7 +187,7 @@
 		<member firstname="Janušková" lastname="Daniela" country="CZE" />
 		<member firstname="Schustrová" lastname="Jana" country="CZE" />
 	</team>
-	<team id="62" score="610" time="23:03:26" penalty="0" gender="mixed" age="open" duration="24">
+	<team id="62" score="610" time="23:03:26" penalty="0" gender="mixed" age="open">
 		<member firstname="Horák" lastname="René" country="CZE" />
 		<member firstname="Štěpánová" lastname="Dita" country="CZE" />
 	</team>
@@ -195,19 +195,19 @@
 		<member firstname="Vansa" lastname="Radim" country="CZE" />
 		<member firstname="Vansa" lastname="Tibor" country="CZE" />
 	</team>
-	<team id="66" score="800" time="23:44:40" penalty="0" gender="mixed" age="veteran" duration="24">
+	<team id="66" score="800" time="23:44:40" penalty="0" gender="mixed" age="veteran">
 		<member firstname="Misiaczek" lastname="Ewa" country="POL" />
 		<member firstname="Olbrycht" lastname="Janusz" country="POL" />
 	</team>
-	<team id="67" score="770" time="21:04:18" penalty="0" gender="mixed" age="open" duration="24">
+	<team id="67" score="770" time="21:04:18" penalty="0" gender="mixed" age="open">
 		<member firstname="Čunátová" lastname="Eliška" country="CZE" />
 		<member firstname="Toman" lastname="Jiří" country="CZE" />
 	</team>
-	<team id="68" score="1030" time="23:18:31" penalty="0" gender="men" age="open" duration="24">
+	<team id="68" score="1030" time="23:18:31" penalty="0" gender="men" age="open">
 		<member firstname="Hanousek" lastname="Martin" country="CZE" />
 		<member firstname="Jelínek" lastname="Jaromír" country="CZE" />
 	</team>
-	<team id="70" score="1540" time="23:38:35" penalty="0" gender="mixed" age="veteran" duration="24">
+	<team id="70" score="1540" time="23:38:35" penalty="0" gender="mixed" age="veteran">
 		<member firstname="Klapka" lastname="Michal" country="CZE" />
 		<member firstname="Klapková" lastname="Milada" country="CZE" />
 	</team>
@@ -215,11 +215,11 @@
 		<member firstname="Lindová" lastname="Miroslava" country="CZE" />
 		<member firstname="Seidlová" lastname="Barbora" country="CZE" />
 	</team>
-	<team id="75" score="1110" time="20:18:12" penalty="0" gender="women" age="veteran" duration="24">
+	<team id="75" score="1110" time="20:18:12" penalty="0" gender="women" age="veteran">
 		<member firstname="Klapalová" lastname="Jana" country="CZE" />
 		<member firstname="Procházková" lastname="Alexandra" country="CZE" />
 	</team>
-	<team id="76" score="1810" time="23:42:19" penalty="0" gender="mixed" age="open" duration="24">
+	<team id="76" score="1810" time="23:42:19" penalty="0" gender="mixed" age="open">
 		<member firstname="Gabrovská" lastname="Lucka" country="CZE" />
 		<member firstname="Makovský" lastname="Kuba" country="CZE" />
 	</team>
@@ -227,11 +227,11 @@
 		<member firstname="Hýbl" lastname="Lukáš" country="CZE" />
 		<member firstname="Komín" lastname="David" country="CZE" />
 	</team>
-	<team id="79" score="1530" time="23:55:13" penalty="0" gender="men" age="open" duration="24">
+	<team id="79" score="1530" time="23:55:13" penalty="0" gender="men" age="open">
 		<member firstname="Koblížek" lastname="Kamil" country="CZE" />
 		<member firstname="Moskva" lastname="Roman" country="CZE" />
 	</team>
-	<team id="81" score="1100" time="22:04:53" penalty="0" gender="men" age="veteran" duration="24">
+	<team id="81" score="1100" time="22:04:53" penalty="0" gender="men" age="veteran">
 		<member firstname="Procházka" lastname="Pavel" country="CZE" />
 		<member firstname="Štancl" lastname="Jiří" country="CZE" />
 	</team>
@@ -239,11 +239,11 @@
 		<member firstname="Himmel" lastname="Petr" country="CZE" />
 		<member firstname="Nováková" lastname="Marie" country="CZE" />
 	</team>
-	<team id="84" score="1010" time="23:38:29" penalty="0" gender="women" age="junior" duration="24">
+	<team id="84" score="1010" time="23:38:29" penalty="0" gender="women" age="junior">
 		<member firstname="Šiková" lastname="Barbora" country="CZE" />
 		<member firstname="Šiková" lastname="Karolína" country="CZE" />
 	</team>
-	<team id="85" score="850" time="23:53:21" penalty="0" gender="women" age="open" duration="24">
+	<team id="85" score="850" time="23:53:21" penalty="0" gender="women" age="open">
 		<member firstname="Setínková" lastname="Eva" country="CZE" />
 		<member firstname="Záveská" lastname="Anna" country="CZE" />
 	</team>
@@ -251,15 +251,15 @@
 		<member firstname="Hojovcová" lastname="Petra" country="CZE" />
 		<member firstname="Vohnoutová" lastname="Markéta" country="CZE" />
 	</team>
-	<team id="87" score="1020" time="22:54:55" penalty="0" gender="men" age="open" duration="24">
+	<team id="87" score="1020" time="22:54:55" penalty="0" gender="men" age="open">
 		<member firstname="Pavlík" lastname="Libor" country="CZE" />
 		<member firstname="Struk" lastname="Petr" country="CZE" />
 	</team>
-	<team id="89" score="730" time="18:26:04" penalty="0" gender="women" age="open" duration="24">
+	<team id="89" score="730" time="18:26:04" penalty="0" gender="women" age="open">
 		<member firstname="Kučerová" lastname="Barbora" country="CZE" />
 		<member firstname="Nosková" lastname="Zuzana" country="CZE" />
 	</team>
-	<team id="90" score="940" time="17:41:02" penalty="0" gender="men" age="open" duration="24">
+	<team id="90" score="940" time="17:41:02" penalty="0" gender="men" age="open">
 		<member firstname="Krejsa" lastname="Jan" country="CZE" />
 		<member firstname="Krejsa" lastname="Martin" country="CZE" />
 		<member firstname="Krejsa" lastname="Vladimír" country="CZE" />
@@ -269,15 +269,15 @@
 		<member firstname="Plch" lastname="Matěj" country="CZE" />
 		<member firstname="Podhorný" lastname="Jiří" country="CZE" />
 	</team>
-	<team id="92" score="830" time="19:18:27" penalty="0" gender="men" age="open" duration="24">
+	<team id="92" score="830" time="19:18:27" penalty="0" gender="men" age="open">
 		<member firstname="Švihla" lastname="Tomáš" country="CZE" />
 		<member firstname="Vedral" lastname="Jarda" country="SVK" />
 	</team>
-	<team id="93" score="620" time="23:13:06" penalty="0" gender="women" age="open" duration="24">
+	<team id="93" score="620" time="23:13:06" penalty="0" gender="women" age="open">
 		<member firstname="Brettlová" lastname="Marta" country="CZE" />
 		<member firstname="Skobová" lastname="Tereza" country="CZE" />
 	</team>
-	<team id="94" score="620" time="19:38:23" penalty="0" gender="mixed" age="open" duration="24">
+	<team id="94" score="620" time="19:38:23" penalty="0" gender="mixed" age="open">
 		<member firstname="Duchačová" lastname="Alena" country="CZE" />
 		<member firstname="Krása" lastname="Michal" country="CZE" />
 	</team>
@@ -285,7 +285,7 @@
 		<member firstname="Plchová" lastname="Eva" country="CZE" />
 		<member firstname="Smejkal" lastname="Petr" country="CZE" />
 	</team>
-	<team id="96" score="1130" time="23:05:05" penalty="0" gender="mixed" age="open" duration="24">
+	<team id="96" score="1130" time="23:05:05" penalty="0" gender="mixed" age="open">
 		<member firstname="Ďoubal" lastname="Jan" country="CZE" />
 		<member firstname="Peterová" lastname="Věra" country="CZE" />
 	</team>
@@ -298,7 +298,7 @@
 		<member firstname="Mertová" lastname="Eva" country="CZE" />
 		<member firstname="Šedina" lastname="Jaroslav" country="CZE" />
 	</team>
-	<team id="100" score="950" time="23:31:50" penalty="0" gender="mixed" age="open" duration="24">
+	<team id="100" score="950" time="23:31:50" penalty="0" gender="mixed" age="open">
 		<member firstname="Braun-Elwert" lastname="Carla" country="NZL" />
 		<member firstname="Eyermann" lastname="Horst" country="GER" />
 		<member firstname="Hadjiivanova" lastname="Radina" country="BUL" />
@@ -315,7 +315,7 @@
 		<member firstname="Aster" lastname="Vladimír" country="CZE" />
 		<member firstname="Asterová" lastname="Jana" country="CZE" />
 	</team>
-	<team id="105" score="1930" time="23:55:08" penalty="0" gender="men" age="veteran" duration="24">
+	<team id="105" score="1930" time="23:55:08" penalty="0" gender="men" age="veteran">
 		<member firstname="Fišer" lastname="Pavel" country="CZE" />
 		<member firstname="Pekárek" lastname="Martin" country="CZE" />
 	</team>
@@ -324,7 +324,7 @@
 		<member firstname="Nedvidek" lastname="Adam" country="CZE" />
 		<member firstname="Vašíček" lastname="Jiří" country="CZE" />
 	</team>
-	<team id="107" score="2150" time="23:28:28" penalty="0" gender="mixed" age="open" duration="24">
+	<team id="107" score="2150" time="23:28:28" penalty="0" gender="mixed" age="open">
 		<member firstname="Kučera" lastname="Petr" country="CZE" />
 		<member firstname="Nyklová" lastname="Jana" country="CZE" />
 	</team>
@@ -332,11 +332,11 @@
 		<member firstname="Doležal" lastname="Petr" country="CZE" />
 		<member firstname="Kepka" lastname="Pavel" country="CZE" />
 	</team>
-	<team id="109" score="430" time="21:20:45" penalty="0" gender="women" age="open" duration="24">
+	<team id="109" score="430" time="21:20:45" penalty="0" gender="women" age="open">
 		<member firstname="Bambrook" lastname="Shelley" country="AUS" />
 		<member firstname="Widmer" lastname="Diana" country="GER" />
 	</team>
-	<team id="111" score="760" time="23:45:36" penalty="0" gender="men" age="junior" duration="24">
+	<team id="111" score="760" time="23:45:36" penalty="0" gender="men" age="junior">
 		<member firstname="Pešek" lastname="Martin" country="CZE" />
 		<member firstname="Valeš" lastname="Jiří" country="CZE" />
 	</team>
@@ -344,7 +344,7 @@
 		<member firstname="Novák" lastname="Miroslav" country="CZE" />
 		<member firstname="Novák" lastname="Ondřej" country="CZE" />
 	</team>
-	<team id="113" score="880" time="23:49:30" penalty="0" gender="men" age="superveteran" duration="24">
+	<team id="113" score="880" time="23:49:30" penalty="0" gender="men" age="superveteran">
 		<member firstname="Hostinský" lastname="Jiří" country="CZE" />
 		<member firstname="Mrštík" lastname="Václav" country="CZE" />
 	</team>
@@ -356,11 +356,11 @@
 		<member firstname="Adámek" lastname="Alan" country="CZE" />
 		<member firstname="Böhm" lastname="Adam" country="CZE" />
 	</team>
-	<team id="119" score="770" time="23:48:43" penalty="0" gender="men" age="open" duration="24">
+	<team id="119" score="770" time="23:48:43" penalty="0" gender="men" age="open">
 		<member firstname="Martínek" lastname="Robert" country="CZE" />
 		<member firstname="Žáček" lastname="Martin" country="CZE" />
 	</team>
-	<team id="121" score="730" time="12:56:23" penalty="0" gender="men" age="open" duration="24">
+	<team id="121" score="730" time="12:56:23" penalty="0" gender="men" age="open">
 		<member firstname="Knepr" lastname="Lukáš" country="CZE" />
 		<member firstname="Rambousek" lastname="Karel" country="CZE" />
 	</team>
@@ -380,7 +380,7 @@
 		<member firstname="Bašná" lastname="Michaela" country="CZE" />
 		<member firstname="Pivarci" lastname="Lubos" country="SVK" />
 	</team>
-	<team id="127" score="550" time="22:38:49" penalty="0" gender="women" age="open" duration="24">
+	<team id="127" score="550" time="22:38:49" penalty="0" gender="women" age="open">
 		<member firstname="Gloserová" lastname="Veronika" country="CZE" />
 		<member firstname="Koppová" lastname="Ingrid" country="CZE" />
 	</team>
@@ -388,19 +388,19 @@
 		<member firstname="Kovařík" lastname="Jan" country="CZE" />
 		<member firstname="Prošek" lastname="Luboš" country="CZE" />
 	</team>
-	<team id="129" score="560" time="10:52:20" penalty="0" gender="men" age="open" duration="24">
+	<team id="129" score="560" time="10:52:20" penalty="0" gender="men" age="open">
 		<member firstname="Holec" lastname="Honza" country="CZE" />
 		<member firstname="Langer" lastname="Martin" country="CZE" />
 	</team>
-	<team id="131" score="1230" time="17:20:10" penalty="0" gender="men" age="open" duration="24">
+	<team id="131" score="1230" time="17:20:10" penalty="0" gender="men" age="open">
 		<member firstname="Řídel" lastname="Jakub" country="CZE" />
 		<member firstname="Štemberk" lastname="Adam" country="CZE" />
 	</team>
-	<team id="132" score="860" time="23:29:51" penalty="0" gender="men" age="open" duration="24">
+	<team id="132" score="860" time="23:29:51" penalty="0" gender="men" age="open">
 		<member firstname="Müller" lastname="Kamil" country="CZE" />
 		<member firstname="Souček" lastname="Karel" country="CZE" />
 	</team>
-	<team id="134" score="800" time="22:59:33" penalty="0" gender="men" age="open" duration="24">
+	<team id="134" score="800" time="22:59:33" penalty="0" gender="men" age="open">
 		<member firstname="Sedláček" lastname="Tomáš" country="CZE" />
 		<member firstname="Vištejn" lastname="Jiří" country="CZE" />
 	</team>
@@ -408,7 +408,7 @@
 		<member firstname="Balusková" lastname="Ida" country="CZE" />
 		<member firstname="Novák" lastname="Ivo" country="CZE" />
 	</team>
-	<team id="147" score="400" time="14:48:02" penalty="0" gender="mixed" age="open" duration="24">
+	<team id="147" score="400" time="14:48:02" penalty="0" gender="mixed" age="open">
 		<member firstname="Faů" lastname="Roman" country="CZE" />
 		<member firstname="Havelková" lastname="Zdeňka" country="CZE" />
 	</team>
@@ -416,20 +416,20 @@
 		<member firstname="Aster" lastname="Thomas" country="CZE" />
 		<member firstname="Ježek" lastname="Ondřej" country="CZE" />
 	</team>
-	<team id="150" score="1220" time="22:02:00" penalty="0" gender="men" age="open" duration="24">
+	<team id="150" score="1220" time="22:02:00" penalty="0" gender="men" age="open">
 		<member firstname="Nedvídek" lastname="Martin" country="CZE" />
 		<member firstname="Šandera" lastname="Michal" country="CZE" />
 	</team>
-	<team id="151" score="1290" time="22:33:08" penalty="0" gender="mixed" age="open" duration="24">
+	<team id="151" score="1290" time="22:33:08" penalty="0" gender="mixed" age="open">
 		<member firstname="Grammlich" lastname="Christiane" country="GER" />
 		<member firstname="Holfeld" lastname="Christina" country="GER" />
 		<member firstname="Klose" lastname="Sven" country="GER" />
 	</team>
-	<team id="152" score="840" time="21:04:13" penalty="0" gender="men" age="junior" duration="24">
+	<team id="152" score="840" time="21:04:13" penalty="0" gender="men" age="junior">
 		<member firstname="Kekrt" lastname="Lukas" country="CZE" />
 		<member firstname="Vysusil" lastname="Jan" country="CZE" />
 	</team>
-	<team id="153" score="660" time="23:47:10" penalty="0" gender="mixed" age="veteran" duration="24">
+	<team id="153" score="660" time="23:47:10" penalty="0" gender="mixed" age="veteran">
 		<member firstname="Kretzschmar" lastname="Frank" country="GER" />
 		<member firstname="Kretzschmar" lastname="Ute" country="GER" />
 	</team>
@@ -441,11 +441,11 @@
 		<member firstname="Dvořáček" lastname="Radek" country="CZE" />
 		<member firstname="Dvořáček" lastname="Vlastimil" country="CZE" />
 	</team>
-	<team id="160" score="700" time="23:22:12" penalty="0" gender="mixed" age="open" duration="24">
+	<team id="160" score="700" time="23:22:12" penalty="0" gender="mixed" age="open">
 		<member firstname="Fuller-Smith" lastname="Jess" country="AUS" />
 		<member firstname="Kozulin" lastname="Peter" country="AUS" />
 	</team>
-	<team id="161" score="1060" time="23:46:54" penalty="0" gender="mixed" age="open" duration="24">
+	<team id="161" score="1060" time="23:46:54" penalty="0" gender="mixed" age="open">
 		<member firstname="Hofman" lastname="Jiří" country="CZE" />
 		<member firstname="Nekolová" lastname="Bára" country="CZE" />
 	</team>
