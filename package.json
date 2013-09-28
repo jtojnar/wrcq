@@ -5,7 +5,7 @@
 		"express": "3.x",
 		"pg": "2.x",
 		"xml2js": "0.2.x",
-		"moment": "2.x",
+		"moment": "2.0.x",
 		"passport": "0.1.x",
 		"passport-local": "0.1.x",
 		"connect-flash": "*",
