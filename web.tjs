@@ -12,8 +12,8 @@ var LocalStrategy = require('passport-local').Strategy;
 var crypto = require('crypto');
 var flash = require('connect-flash');
 var sha1 = function(d) {
-		return crypto.createHash('sha1').update(d).digest('hex');
-	};
+	return crypto.createHash('sha1').update(d).digest('hex');
+};
 
 function increment(obj, alpha, beta) {
 	if(!obj.hasOwnProperty(alpha)) {
