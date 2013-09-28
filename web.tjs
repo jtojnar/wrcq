@@ -75,7 +75,7 @@ passport.use(new LocalStrategy(
 
 var hbs = require('hbs');
 hbs.registerHelper('date', function(date) {
-	return moment(date).format('L');
+	return moment(date).format('D MMM YYYY');
 });
 hbs.registerHelper('dateinterval', function(start, end) {
 	return moment(start).format('D MMM') + '–' + moment(end).format('D MMM YYYY');

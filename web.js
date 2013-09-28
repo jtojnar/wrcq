@@ -273,7 +273,7 @@ var __tame_fn_48 = function (__tame_k) {
     var hbs = require ( 'hbs' ) ;
     hbs . registerHelper ( 'date' ,
     function  (date) {
-        return moment ( date ) . format ( 'L' );
+        return moment ( date ) . format ( 'D MMM YYYY' );
     }
     ) ;
     hbs . registerHelper ( 'dateinterval' ,
