@@ -1,0 +1,4 @@
+<h3>{{@key}}</h3>
+{{#each this}}
+<p><strong>{{lastname}} {{firstname}}</strong> {{#each reasons}}{{#equals criterion '1.4'}}IRF councillor{{else}}<a href="/events/{{event}}/results">{{genderclass gender}}{{ageclass age}}{{position}}@{{event}}</a>{{/equals}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+{{/each}}

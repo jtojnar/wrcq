@@ -263,6 +263,208 @@ app.get('/events', function(req, res) {
 	});
 });
 
+function pushQualified(qualified, type, criterion, criterion_qualified, eventIds) {
+	for(member in criterion_qualified.rows) {
+		if(criterion_qualified.rows.hasOwnProperty(member)) {
+			var member = criterion_qualified.rows[member];
+			if(!qualified[type].hasOwnProperty(member.country_code)) {
+				qualified[type][member.country_code] = {};
+			}
+			if(!qualified[type][member.country_code].hasOwnProperty(member.person_id)) {
+				qualified[type][member.country_code][member.person_id] = {firstname: member.firstname, lastname: member.lastname, country_code: member.country_code, reasons: []};
+			}
+			if(criterion === '1.1' || criterion == '1.3') {
+				var reason = {
+					criterion: criterion,
+					event: eventIds[member.event_id].slug,
+					gender: member.gender,
+					position: member.position,
+					age: member.age
+				};
+				qualified[type][member.country_code][member.person_id].reasons.push(reason);
+			} else if(criterion === '1.4') {
+				qualified[type][member.country_code][member.person_id].reasons.push({criterion: criterion});
+			} else {
+				if(member.position_uv != null) {
+					var reason = {
+						criterion: criterion,
+						event: eventIds[member.event_id].slug,
+						gender: member.gender,
+						reason: member.position_uv,
+						age: 'ultraveteran'
+					};
+					qualified[type][member.country_code][member.person_id].reasons.push(reason);
+				}
+				if(member.position_sv != null) {
+					var reason = {
+						criterion: criterion,
+						event: eventIds[member.event_id].slug,
+						gender: member.gender,
+						position: member.position_sv,
+						age: 'superveteran'
+					};
+					qualified[type][member.country_code][member.person_id].reasons.push(reason);
+				}
+				if(member.position_v != null) {
+					var reason = {
+						criterion: criterion,
+						event: eventIds[member.event_id].slug,
+						gender: member.gender,
+						position: member.position_v,
+						age: 'veteran'
+					};
+					qualified[type][member.country_code][member.person_id].reasons.push(reason);
+				}
+				if(member.position_o != null) {
+					var reason = {
+						criterion: criterion,
+						event: eventIds[member.event_id].slug,
+						gender: member.gender,
+						position: member.position_o,
+						age: 'open'
+					};
+					qualified[type][member.country_code][member.person_id].reasons.push(reason);
+				}
+				if(member.position_j != null) {
+					var reason = {
+						criterion: criterion,
+						event: eventIds[member.event_id].slug,
+						gender: member.gender,
+						position: member.position_j,
+						age: 'junior'
+					};
+					qualified[type][member.country_code][member.person_id].reasons.push(reason);
+				}
+			}
+		}
+	}
+}
+app.get('/qualified', function(req, res) {
+	pg.connect(_dbUri, function(err, client, done) {
+		var eventIds = {};
+		var eventsQuery = client.query('select * from event', function(){});
+		eventsQuery.on('row', function(row) {eventIds[row.id] = row;});
+		await eventsQuery.on('end', defer());
+
+		var qualified = {auto: {}, preferred: {}};
+
+		// criterion 1.1
+		await client.query(
+			"with past_event as (select id from event where level = 'world'), past_team as (select *, count(*) over w as \"limit\", row_number() over (w order by score desc, time asc) as position from team where event_id in (select * from past_event) window w as (partition by event_id, gender)), recent_event as (select id from event where level = 'world' and \"end\" < current_date order by \"end\" desc limit 2), recent_event_attendee as (select person_id from member where (event_id, team_id) in (select event_id, id from team where event_id in (select * from recent_event))) select * from member left join past_team on member.event_id = past_team.event_id and member.team_id = past_team.id where position = 1 and person_id in (select person_id from recent_event_attendee);",
+			defer(var err, criterion_qualified)
+		);
+		if(err) {
+			console.error(err);
+		}
+		pushQualified(qualified, 'auto', '1.1', criterion_qualified, eventIds);
+
+		// criterion 1.2a
+		await client.query(
+			"with recent_event as (select id from event where level = 'world' and \"end\" < current_date order by \"end\" desc limit 2), past_team as (select *, (case when age = 'ultraveteran' then count(*) over w else null end) as limit_uv, (case when age = 'ultraveteran' then row_number() over (w order by score desc, time asc) else null end) as position_uv, (case when age in ('ultraveteran', 'superveteran') then count(*) over w else null end) as limit_sv, (case when age in ('ultraveteran', 'superveteran') then row_number() over (w order by score desc, time asc) else null end) as position_sv, (case when age in ('ultraveteran', 'superveteran', 'veteran') then count(*) over w else null end) as limit_v, (case when age in ('ultraveteran', 'superveteran', 'veteran') then row_number() over (w order by score desc, time asc) else null end) as position_v, count(*) over w as limit_o, row_number() over (w order by score desc, time asc) as position_o, (case when age = 'junior' then count(*) over w else null end) as limit_j, (case when age = 'junior' then row_number() over (w order by score desc, time asc) else null end) as position_j from team where event_id in (select * from recent_event) window w as (partition by event_id, gender) ) select * from member left join past_team on member.event_id = past_team.event_id and member.team_id = past_team.id where (position_uv <= 6 and position_uv <= ceil(limit_uv*0.5)) or (position_sv <= 6 and position_sv <= ceil(limit_sv*0.5)) or (position_v <= 6 and position_v <= ceil(limit_v*0.5)) or (position_o <= 6 and position_o <= ceil(limit_o*0.5)) or (position_j <= 6 and position_j <= ceil(limit_j*0.5));",
+			defer(var err, criterion_qualified)
+		);
+		if(err) {
+			console.error(err);
+		}
+		pushQualified(qualified, 'auto', '1.2a', criterion_qualified, eventIds);
+
+		// criterion 1.2b
+		await client.query(
+			"with recent_event as (select id from event where level = 'regional-e' and \"end\" < current_date order by \"end\" desc limit 2), past_team as (select *, (case when age = 'ultraveteran' then count(*) over w else null end) as limit_uv, (case when age = 'ultraveteran' then row_number() over (w order by score desc, time asc) else null end) as position_uv, (case when age in ('ultraveteran', 'superveteran') then count(*) over w else null end) as limit_sv, (case when age in ('ultraveteran', 'superveteran') then row_number() over (w order by score desc, time asc) else null end) as position_sv, (case when age in ('ultraveteran', 'superveteran', 'veteran') then count(*) over w else null end) as limit_v, (case when age in ('ultraveteran', 'superveteran', 'veteran') then row_number() over (w order by score desc, time asc) else null end) as position_v, count(*) over w as limit_o, row_number() over (w order by score desc, time asc) as position_o, (case when age = 'junior' then count(*) over w else null end) as limit_j, (case when age = 'junior' then row_number() over (w order by score desc, time asc) else null end) as position_j from team where event_id in (select * from recent_event) window w as (partition by event_id, gender)) select * from member left join past_team on member.event_id = past_team.event_id and member.team_id = past_team.id where (position_uv <= 3 and position_uv <= ceil(limit_uv*0.5)) or (position_sv <= 3 and position_sv <= ceil(limit_sv*0.5)) or (position_v <= 3 and position_v <= ceil(limit_v*0.5)) or (position_o <= 3 and position_o <= ceil(limit_o*0.5)) or (position_j <= 3 and position_j <= ceil(limit_j*0.5));",
+			defer(var err, criterion_qualified)
+		);
+		if(err) {
+			console.error(err);
+		}
+		pushQualified(qualified, 'auto', '1.2b', criterion_qualified, eventIds);
+
+		// criterion 1.2c
+		await client.query(
+			"with recent_event as (select id from event where level = 'regional-na' and \"end\" < current_date order by \"end\" desc limit 2), past_team as (select *, (case when age = 'ultraveteran' then count(*) over w else null end) as limit_uv, (case when age = 'ultraveteran' then row_number() over (w order by score desc, time asc) else null end) as position_uv, (case when age in ('ultraveteran', 'superveteran') then count(*) over w else null end) as limit_sv, (case when age in ('ultraveteran', 'superveteran') then row_number() over (w order by score desc, time asc) else null end) as position_sv, (case when age in ('ultraveteran', 'superveteran', 'veteran') then count(*) over w else null end) as limit_v, (case when age in ('ultraveteran', 'superveteran', 'veteran') then row_number() over (w order by score desc, time asc) else null end) as position_v, count(*) over w as limit_o, row_number() over (w order by score desc, time asc) as position_o, (case when age = 'junior' then count(*) over w else null end) as limit_j, (case when age = 'junior' then row_number() over (w order by score desc, time asc) else null end) as position_j from team where event_id in (select * from recent_event) window w as (partition by event_id, gender)) select * from member left join past_team on member.event_id = past_team.event_id and member.team_id = past_team.id where (position_uv <= 2 and position_uv <= ceil(limit_uv*0.5)) or (position_sv <= 2 and position_sv <= ceil(limit_sv*0.5)) or (position_v <= 2 and position_v <= ceil(limit_v*0.5)) or (position_o <= 2 and position_o <= ceil(limit_o*0.5)) or (position_j <= 2 and position_j <= ceil(limit_j*0.5));",
+			defer(var err, criterion_qualified)
+		);
+		if(err) {
+			console.error(err);
+		}
+		pushQualified(qualified, 'auto', '1.2c', criterion_qualified, eventIds);
+
+		// criterion 1.2d
+		await client.query(
+			"with recent_event as (select id from event where level = 'regional-a' and \"end\" < current_date order by \"end\" desc limit 2), past_team as (select *, (case when age = 'ultraveteran' then count(*) over w else null end) as limit_uv, (case when age = 'ultraveteran' then row_number() over (w order by score desc, time asc) else null end) as position_uv, (case when age in ('ultraveteran', 'superveteran') then count(*) over w else null end) as limit_sv, (case when age in ('ultraveteran', 'superveteran') then row_number() over (w order by score desc, time asc) else null end) as position_sv, (case when age in ('ultraveteran', 'superveteran', 'veteran') then count(*) over w else null end) as limit_v, (case when age in ('ultraveteran', 'superveteran', 'veteran') then row_number() over (w order by score desc, time asc) else null end) as position_v, count(*) over w as limit_o, row_number() over (w order by score desc, time asc) as position_o, (case when age = 'junior' then count(*) over w else null end) as limit_j, (case when age = 'junior' then row_number() over (w order by score desc, time asc) else null end) as position_j from team where event_id in (select * from recent_event) window w as (partition by event_id, gender)) select * from member left join past_team on member.event_id = past_team.event_id and member.team_id = past_team.id where (position_uv <= 2 and position_uv <= ceil(limit_uv*0.5)) or (position_sv <= 2 and position_sv <= ceil(limit_sv*0.5)) or (position_v <= 2 and position_v <= ceil(limit_v*0.5)) or (position_o <= 2 and position_o <= ceil(limit_o*0.5)) or (position_j <= 2 and position_j <= ceil(limit_j*0.5));",
+			defer(var err, criterion_qualified)
+		);
+		if(err) {
+			console.error(err);
+		}
+		pushQualified(qualified, 'auto', '1.2d', criterion_qualified, eventIds);
+
+		// criterion 1.3
+		await client.query(
+			"with qualifying_national as (select id from event where level in ('national-c', 'national-f', 'national-lv', 'national-r', 'national-nz', 'national-a', 'national-uk', 'national-us')), past_team as (select *, count(*) over w as \"limit\", row_number() over (w order by score desc, time asc) as position from team where event_id in (select * from qualifying_national) window w as (partition by event_id, gender)) select * from member left join past_team on member.event_id = past_team.event_id and member.team_id = past_team.id where position <= 2 and position <= ceil(\"limit\"*0.5);",
+			defer(var err, criterion_qualified)
+		);
+		if(err) {
+			console.error(err);
+		}
+		pushQualified(qualified, 'auto', '1.3', criterion_qualified, eventIds);
+
+		// criterion 1.4
+		await client.query(
+			"select * from councillor;",
+			defer(var err, criterion_qualified)
+		);
+		if(err) {
+			console.error(err);
+		}
+		pushQualified(qualified, 'auto', '1.4', criterion_qualified);
+
+		// criterion 2.1
+		await client.query(
+			"with recent_event as (select id from event where level = 'world' and \"end\" < current_date order by \"end\" desc limit 2), past_team as (select *, (case when age = 'ultraveteran' then count(*) over w else null end) as limit_uv, (case when age = 'ultraveteran' then row_number() over (w order by score desc, time asc) else null end) as position_uv, (case when age in ('ultraveteran', 'superveteran') then count(*) over w else null end) as limit_sv, (case when age in ('ultraveteran', 'superveteran') then row_number() over (w order by score desc, time asc) else null end) as position_sv, (case when age in ('ultraveteran', 'superveteran', 'veteran') then count(*) over w else null end) as limit_v, (case when age in ('ultraveteran', 'superveteran', 'veteran') then row_number() over (w order by score desc, time asc) else null end) as position_v, count(*) over w as limit_o, row_number() over (w order by score desc, time asc) as position_o, (case when age = 'junior' then count(*) over w else null end) as limit_j, (case when age = 'junior' then row_number() over (w order by score desc, time asc) else null end) as position_j from team where event_id in (select * from recent_event) window w as (partition by event_id, gender)) select * from member left join past_team on member.event_id = past_team.event_id and member.team_id = past_team.id where (position_uv >= 7 and position_uv <= 9 and position_uv <= ceil(limit_uv*0.3)) or (position_sv >= 7 and position_sv <= 9 and position_sv <= ceil(limit_sv*0.3)) or (position_v >= 7 and position_v <= 9 and position_v <= ceil(limit_v*0.3)) or (position_o >= 7 and position_o <= 9 and position_o <= ceil(limit_o*0.3)) or (position_j >= 7 and position_j <= 9 and position_j <= ceil(limit_j*0.3));",
+			defer(var err, criterion_qualified)
+		);
+		if(err) {
+			console.error(err);
+		}
+		pushQualified(qualified, 'preferred', '2.1', criterion_qualified, eventIds);
+
+		// criterion 2.2
+		await client.query(
+			"with recent_event as (select id from event where level = 'regional-e' and \"end\" < current_date order by \"end\" desc limit 2), past_team as (select *, (case when age = 'ultraveteran' then count(*) over w else null end) as limit_uv, (case when age = 'ultraveteran' then row_number() over (w order by score desc, time asc) else null end) as position_uv, (case when age in ('ultraveteran', 'superveteran') then count(*) over w else null end) as limit_sv, (case when age in ('ultraveteran', 'superveteran') then row_number() over (w order by score desc, time asc) else null end) as position_sv, (case when age in ('ultraveteran', 'superveteran', 'veteran') then count(*) over w else null end) as limit_v, (case when age in ('ultraveteran', 'superveteran', 'veteran') then row_number() over (w order by score desc, time asc) else null end) as position_v, count(*) over w as limit_o, row_number() over (w order by score desc, time asc) as position_o, (case when age = 'junior' then count(*) over w else null end) as limit_j, (case when age = 'junior' then row_number() over (w order by score desc, time asc) else null end) as position_j from team where event_id in (select * from recent_event) window w as (partition by event_id, gender)) select * from member left join past_team on member.event_id = past_team.event_id and member.team_id = past_team.id where (position_uv >= 4 and position_uv <= 5 and position_uv <= ceil(limit_uv*0.3)) or (position_sv >= 4 and position_sv <= 5 and position_sv <= ceil(limit_sv*0.3)) or (position_v >= 4 and position_v <= 5 and position_v <= ceil(limit_v*0.3)) or (position_o >= 4 and position_o <= 5 and position_o <= ceil(limit_o*0.3)) or (position_j >= 4 and position_j <= 5 and position_j <= ceil(limit_j*0.3));",
+			defer(var err, criterion_qualified)
+		);
+		if(err) {
+			console.error(err);
+		}
+		pushQualified(qualified, 'preferred', '2.2', criterion_qualified, eventIds);
+
+		// criterion 2.3a
+		await client.query(
+			"with recent_event as (select id from event where level = 'regional-na' and \"end\" < current_date order by \"end\" desc limit 2), past_team as (select *, (case when age = 'ultraveteran' then count(*) over w else null end) as limit_uv, (case when age = 'ultraveteran' then row_number() over (w order by score desc, time asc) else null end) as position_uv, (case when age in ('ultraveteran', 'superveteran') then count(*) over w else null end) as limit_sv, (case when age in ('ultraveteran', 'superveteran') then row_number() over (w order by score desc, time asc) else null end) as position_sv, (case when age in ('ultraveteran', 'superveteran', 'veteran') then count(*) over w else null end) as limit_v, (case when age in ('ultraveteran', 'superveteran', 'veteran') then row_number() over (w order by score desc, time asc) else null end) as position_v, count(*) over w as limit_o, row_number() over (w order by score desc, time asc) as position_o, (case when age = 'junior' then count(*) over w else null end) as limit_j, (case when age = 'junior' then row_number() over (w order by score desc, time asc) else null end) as position_j from team where event_id in (select * from recent_event) window w as (partition by event_id, gender)) select * from member left join past_team on member.event_id = past_team.event_id and member.team_id = past_team.id where (position_uv = 3 and position_uv <= ceil(limit_uv*0.3)) or (position_sv = 3 and position_sv <= ceil(limit_sv*0.3)) or (position_v = 3 and position_v <= ceil(limit_v*0.3)) or (position_o = 3 and position_o <= ceil(limit_o*0.3)) or (position_j = 3 and position_j <= ceil(limit_j*0.3));",
+			defer(var err, criterion_qualified)
+		);
+		if(err) {
+			console.error(err);
+		}
+		pushQualified(qualified, 'preferred', '2.3a', criterion_qualified, eventIds);
+
+		// criterion 2.3b
+		await client.query(
+			"with recent_event as (select id from event where level = 'regional-a' and \"end\" < current_date order by \"end\" desc limit 2), past_team as (select *, (case when age = 'ultraveteran' then count(*) over w else null end) as limit_uv, (case when age = 'ultraveteran' then row_number() over (w order by score desc, time asc) else null end) as position_uv, (case when age in ('ultraveteran', 'superveteran') then count(*) over w else null end) as limit_sv, (case when age in ('ultraveteran', 'superveteran') then row_number() over (w order by score desc, time asc) else null end) as position_sv, (case when age in ('ultraveteran', 'superveteran', 'veteran') then count(*) over w else null end) as limit_v, (case when age in ('ultraveteran', 'superveteran', 'veteran') then row_number() over (w order by score desc, time asc) else null end) as position_v, count(*) over w as limit_o, row_number() over (w order by score desc, time asc) as position_o, (case when age = 'junior' then count(*) over w else null end) as limit_j, (case when age = 'junior' then row_number() over (w order by score desc, time asc) else null end) as position_j from team where event_id in (select * from recent_event) window w as (partition by event_id, gender)) select * from member left join past_team on member.event_id = past_team.event_id and member.team_id = past_team.id where (position_uv = 3 and position_uv <= ceil(limit_uv*0.3)) or (position_sv = 3 and position_sv <= ceil(limit_sv*0.3)) or (position_v = 3 and position_v <= ceil(limit_v*0.3)) or (position_o = 3 and position_o <= ceil(limit_o*0.3)) or (position_j = 3 and position_j <= ceil(limit_j*0.3));",
+			defer(var err, criterion_qualified)
+		);
+		if(err) {
+			console.error(err);
+		}
+		pushQualified(qualified, 'preferred', '2.3b', criterion_qualified, eventIds);
+
+
+
+		done();
+		res.render('qualified', {title: 'List of pre-qualifying entrants', qualified: qualified, identity: req.user});
+	});
+});
+
 function addMembers(members, row) {
 	row.members = [];
 	// var mcache = [];
@@ -327,6 +529,12 @@ app.get('/events/:event/results', function(req, res) {
 			return;
 		}
 		var event = eventdata.rows[0];
+		if(!event.complete) {
+			done();
+			res.status(404);
+			res.render('error/404', {body: 'Sorry, this event has no results (yet). We are working on it in this very moment.'});
+			return;
+		}
 
 		await client.query('select * from member where event_id=$1', [event.id], defer(var row, members));
 		members = members.rows;
