@@ -12,8 +12,8 @@
 		<member firstname="Jonas" lastname="Kjäll" country="USA" />
 	</team>
 	<team id="207" score="1600" time="23:07:52" penalty="0" gender="men" age="open" name="Norcal">
-		<member firstname="Rich" lastname="Brazeau" country="XXX" />
-		<member firstname="Scott L." lastname="Porter" country="XXX" />
+		<member firstname="Rich" lastname="Brazeau" country="USA" />
+		<member firstname="Scott L." lastname="Porter" country="USA" />
 	</team>
 	<team id="152" score="1190" time="23:20:35" penalty="0" gender="men" age="veteran" name="Dodgy Tatties">
 		<member firstname="Deron" lastname="van Hoff" country="USA" />
@@ -21,40 +21,40 @@
 		<member firstname="Manfred" lastname="Kopisch" country="USA" />
 	</team>
 	<team id="208" score="920" time="23:50:42" penalty="0" gender="men" age="open" name="sea donkeys">
-		<member firstname="Tim" lastname="Hall" country="XXX" />
-		<member firstname="Danny" lastname="Trudeau" country="XXX" />
-		<member firstname="Cory" lastname="Zelmer" country="XXX" />
+		<member firstname="Tim" lastname="Hall" country="USA" />
+		<member firstname="Danny" lastname="Trudeau" country="USA" />
+		<member firstname="Cory" lastname="Zelmer" country="USA" />
 	</team>
 	<team id="95" score="780" time="18:38:35" penalty="0" gender="men" age="veteran" name="Buzzards Follow Us">
 		<member firstname="Bud" lastname="Laird" country="USA" />
 		<member firstname="Mark" lastname="Jones" country="USA" />
 	</team>
 	<team id="259" score="640" time="13:50:03" penalty="0" gender="men" age="open" name="Fire Starters">
-		<member firstname="Derek" lastname="Castle" country="XXX" />
-		<member firstname="Carey L." lastname="Gregg" country="XXX" />
-		<member firstname="Ray" lastname="Kablanow" country="XXX" />
-		<member firstname="Ervin R." lastname="Ruhe Jr." country="XXX" />
+		<member firstname="Derek" lastname="Castle" country="USA" />
+		<member firstname="Carey L." lastname="Gregg" country="USA" />
+		<member firstname="Ray" lastname="Kablanow" country="USA" />
+		<member firstname="Ervin R." lastname="Ruhe Jr." country="USA" />
 	</team>
 	<team id="179" score="530" time="13:55:48" penalty="0" gender="men" age="open" name="Well Oiled">
-		<member firstname="Christian" lastname="Palouda" country="XXX" />
-		<member firstname="Hare" lastname="Casey" country="XXX" />
+		<member firstname="Christian" lastname="Palouda" country="USA" />
+		<member firstname="Hare" lastname="Casey" country="USA" />
 	</team>
 	<team id="205" score="460" time="17:57:40" penalty="0" gender="men" age="open" name="USBP AMU">
-		<member firstname="E." lastname="Evert" country="XXX" />
-		<member firstname="J. R." lastname="Harris" country="XXX" />
-		<member firstname="T." lastname="Gaus" country="XXX" />
-		<member firstname="J. D." lastname="Bindert" country="XXX" />
-		<member firstname="G. M." lastname="Connolly" country="XXX" />
+		<member firstname="E." lastname="Evert" country="USA" />
+		<member firstname="J. R." lastname="Harris" country="USA" />
+		<member firstname="T." lastname="Gaus" country="USA" />
+		<member firstname="J. D." lastname="Bindert" country="USA" />
+		<member firstname="G. M." lastname="Connolly" country="USA" />
 	</team>
 	<team id="271" score="450" time="21:15:48" penalty="0" gender="men" age="junior" name="M-A Bears">
 		<member firstname="Daniel" lastname="Kopisch" country="USA" />
 		<member firstname="Philipp" lastname="Kopisch" country="USA" />
 	</team>
 	<team id="226" score="300" time="15:02:52" penalty="0" gender="men" age="open" name="B Team">
-		<member firstname="Diego" lastname="Asturias" country="XXX" />
-		<member firstname="Brandon" lastname="Chan" country="XXX" />
-		<member firstname="Dmitry" lastname="Kashlev" country="XXX" />
-		<member firstname="Yi" lastname="Wei" country="XXX" />
+		<member firstname="Diego" lastname="Asturias" country="USA" />
+		<member firstname="Brandon" lastname="Chan" country="USA" />
+		<member firstname="Dmitry" lastname="Kashlev" country="USA" />
+		<member firstname="Yi" lastname="Wei" country="USA" />
 	</team>
 	<team id="194" score="1520" time="23:40:07" penalty="0" gender="mixed" age="open" name="Racing with Giant Dirty Avoc's">
 		<member firstname="C." lastname="Choi" country="USA" />
@@ -68,36 +68,36 @@
 		<member firstname="Mary" lastname="Smith" country="USA" />
 	</team>
 	<team id="261" score="1350" time="23:19:28" penalty="0" gender="mixed" age="open" name="Baarbd Avocados">
-		<member firstname="Galen" lastname="Pewtherer" country="XXX" />
-		<member firstname="Mark" lastname="Richardson" country="XXX" />
-		<member firstname="Henrike" lastname="Siemen" country="XXX" />
+		<member firstname="Galen" lastname="Pewtherer" country="USA" />
+		<member firstname="Mark" lastname="Richardson" country="USA" />
+		<member firstname="Henrike" lastname="Siemen" country="USA" />
 	</team>
 	<team id="278" score="1220" time="23:51:46" penalty="0" gender="mixed" age="open" name="D &amp; D">
 		<member firstname="Dmitry" lastname="Lavrov" country="USA" />
 		<member firstname="Diana" lastname="Serebryanik" country="USA" />
 	</team>
 	<team id="263" score="780" time="23:46:02" penalty="0" gender="mixed" age="open" name="SOAR Newlyweds">
-		<member firstname="Emil" lastname="DeFillipo" country="XXX" />
-		<member firstname="Mike" lastname="DeFillipo" country="XXX" />
+		<member firstname="Emil" lastname="DeFillipo" country="USA" />
+		<member firstname="Mike" lastname="DeFillipo" country="USA" />
 	</team>
 	<team id="287" score="490" time="13:40:23" penalty="0" gender="mixed" age="open" name="The Angry Chickens">
-		<member firstname="Anthony L." lastname="Lyscio" country="XXX" />
-		<member firstname="Erin" lastname="Lyscio" country="XXX" />
+		<member firstname="Anthony L." lastname="Lyscio" country="USA" />
+		<member firstname="Erin" lastname="Lyscio" country="USA" />
 	</team>
 	<team id="273" score="1180" time="23:39:15" penalty="0" gender="mixed" age="veteran" name="PQRs">
 		<member firstname="Mikhail S." lastname="Pekour" country="USA" />
 		<member firstname="Svetlana" lastname="Sergueeva" country="USA" />
 	</team>
 	<team id="267" score="1110" time="23:18:45" penalty="0" gender="mixed" age="veteran" name="Cygolite - SOAR">
-		<member firstname="M. P." lastname="Brunelli" country="XXX" />
-		<member firstname="D." lastname="Dunlap" country="XXX" />
-		<member firstname="T. A." lastname="Evans" country="XXX" />
-		<member firstname="C. S." lastname="Mc Coy" country="XXX" />
-		<member firstname="T. M." lastname="Mc Coy" country="XXX" />
+		<member firstname="M. P." lastname="Brunelli" country="USA" />
+		<member firstname="D." lastname="Dunlap" country="USA" />
+		<member firstname="T. A." lastname="Evans" country="USA" />
+		<member firstname="C. S." lastname="Mc Coy" country="USA" />
+		<member firstname="T. M." lastname="Mc Coy" country="USA" />
 	</team>
 	<team id="148" score="700" time="16:47:15" penalty="0" gender="mixed" age="veteran" name="And Loving It!">
-		<member firstname="Kathy" lastname="Giori" country="XXX" />
-		<member firstname="Nicholas" lastname="Giori" country="XXX" />
+		<member firstname="Kathy" lastname="Giori" country="USA" />
+		<member firstname="Nicholas" lastname="Giori" country="USA" />
 	</team>
 	<team id="262" score="590" time="24:18:51" penalty="190" gender="mixed" age="veteran" name="Durand Durand">
 		<member firstname="Clare Woo" lastname="Durand" country="USA" />
@@ -108,9 +108,9 @@
 		<member firstname="Gavin" lastname="Wyatt-Mair" country="USA" />
 	</team>
 	<team id="168" score="480" time="14:22:30" penalty="0" gender="mixed" age="veteran" name="Desert Dash">
-		<member firstname="Lori A." lastname="Flores" country="XXX" />
-		<member firstname="Glenn" lastname="Millar" country="XXX" />
-		<member firstname="Phill" lastname="Novak" country="XXX" />
+		<member firstname="Lori A." lastname="Flores" country="USA" />
+		<member firstname="Glenn" lastname="Millar" country="USA" />
+		<member firstname="Phill" lastname="Novak" country="USA" />
 	</team>
 	<team id="204" score="420" time="11:27:42" penalty="0" gender="mixed" age="veteran" name="Team Chautauqua">
 		<member firstname="Frances" lastname="Young" country="USA" />
@@ -216,8 +216,8 @@
 		<member firstname="A." lastname="Parker" country="USA" />
 	</team>
 	<team id="284" score="110" time="3:44:54" penalty="0" gender="men" age="open" duration="4" name="Mostofi">
-		<member firstname="Afsheen" lastname="Mostofi" country="XXX" />
-		<member firstname="Kayvon" lastname="Mostofi" country="XXX" />
+		<member firstname="Afsheen" lastname="Mostofi" country="USA" />
+		<member firstname="Kayvon" lastname="Mostofi" country="USA" />
 	</team>
 	<team id="126" score="100" time="4:12:10" penalty="130" gender="men" age="open" duration="4" name="Dragonfly Spring">
 		<member firstname="Shura" lastname="Krechetov" country="USA" />
@@ -227,8 +227,8 @@
 		<member firstname="Chris T." lastname="Robinson" country="USA" />
 	</team>
 	<team id="275" score="320" time="3:56:27" penalty="0" gender="mixed" age="open" duration="4" name="Team iCompass">
-		<member firstname="François" lastname="Leonard" country="XXX" />
-		<member firstname="Marie-Josée" lastname="Parayre" country="XXX" />
+		<member firstname="François" lastname="Leonard" country="USA" />
+		<member firstname="Marie-Josée" lastname="Parayre" country="USA" />
 	</team>
 	<team id="295" score="150" time="4:00:12" penalty="10" gender="mixed" age="open" duration="4" name="Tiny Bubbles">
 		<member firstname="Michael C." lastname="Miller" country="USA" />

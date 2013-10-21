@@ -17,12 +17,12 @@
 		<member firstname="Ken" lastname="Walker" country="USA" />
 	</team>
 	<team id="5" score="2210" time="23:59:59" penalty="0" gender="men" age="open" name="GOALS ARA">
-		<member firstname="Brent" lastname="Freedland" country="XXX" />
-		<member firstname="Brian" lastname="Reiss" country="XXX" />
+		<member firstname="Brent" lastname="Freedland" country="USA" />
+		<member firstname="Brian" lastname="Reiss" country="USA" />
 	</team>
 	<team id="6" score="2200" time="23:59:59" penalty="0" gender="men" age="veteran" name="Action D&amp;E">
-		<member firstname="Dave" lastname="Dunham" country="XXX" />
-		<member firstname="Ernst" lastname="Linder" country="XXX" />
+		<member firstname="Dave" lastname="Dunham" country="USA" />
+		<member firstname="Ernst" lastname="Linder" country="USA" />
 	</team>
 	<team id="7" score="2150" time="23:59:59" penalty="0" gender="men" age="veteran" name="Team F">
 		<member firstname="Frank" lastname="Boscoe" country="USA" />
@@ -34,8 +34,8 @@
 		<member firstname="Val" lastname="Nordquist" country="USA" />
 	</team>
 	<team id="9" score="2090" time="23:59:59" penalty="0" gender="men" age="open" name="Mountain Desert">
-		<member firstname="Sagi" lastname="Levy" country="XXX" />
-		<member firstname="Andras" lastname="Wibmer" country="XXX" />
+		<member firstname="Sagi" lastname="Levy" country="USA" />
+		<member firstname="Andras" lastname="Wibmer" country="USA" />
 	</team>
 	<team id="10" score="2050" time="23:59:59" penalty="0" gender="men" age="veteran" name="Crunchy Bones">
 		<member firstname="Pavel" lastname="Korniliev" country="USA" />
@@ -59,25 +59,25 @@
 		<member firstname="David" lastname="Onkst" country="USA" />
 	</team>
 	<team id="15" score="1730" time="23:59:59" penalty="0" gender="men" age="veteran" name="TBD2 (To Be Determined 2)">
-		<member firstname="Ben" lastname="Chagnon" country="XXX" />
-		<member firstname="Gary" lastname="Maslanka" country="XXX" />
+		<member firstname="Ben" lastname="Chagnon" country="USA" />
+		<member firstname="Gary" lastname="Maslanka" country="USA" />
 	</team>
 	<team id="16" score="1700" time="23:59:55" penalty="0" gender="men" age="open" name="Zombie Wolf &amp; Gummy Warlord">
-		<member firstname="Sam" lastname="Kolins" country="XXX" />
-		<member firstname="Mark" lastname="Walsh" country="XXX" />
+		<member firstname="Sam" lastname="Kolins" country="USA" />
+		<member firstname="Mark" lastname="Walsh" country="USA" />
 	</team>
 	<team id="17" score="1700" time="23:59:59" penalty="0" gender="mixed" age="open" name="Rubber &amp; Steel">
-		<member firstname="Mladen" lastname="Kolar" country="XXX" />
-		<member firstname="Kathy Jo" lastname="Rufener" country="XXX" />
-		<member firstname="Alexis" lastname="Rzewski" country="XXX" />
+		<member firstname="Mladen" lastname="Kolar" country="USA" />
+		<member firstname="Kathy Jo" lastname="Rufener" country="USA" />
+		<member firstname="Alexis" lastname="Rzewski" country="USA" />
 	</team>
 	<team id="18" score="1690" time="23:59:59" penalty="0" gender="mixed" age="veteran" name="Vignette">
 		<member firstname="John" lastname="Beard" country="USA" />
 		<member firstname="Marcy" lastname="Beard" country="USA" />
 	</team>
 	<team id="19" score="1620" time="23:59:59" penalty="0" gender="men" age="veteran" name="Team Dark Horse/HTFU">
-		<member firstname="David" lastname="Darby" country="XXX" />
-		<member firstname="Tom" lastname="Smith" country="XXX" />
+		<member firstname="David" lastname="Darby" country="USA" />
+		<member firstname="Tom" lastname="Smith" country="USA" />
 	</team>
 	<team id="20" score="1510" time="23:59:59" penalty="0" gender="mixed" age="superveteran" name="Lucky Path">
 		<member firstname="Valeriy" lastname="Doverov" country="USA" />
@@ -88,16 +88,16 @@
 		<member firstname="Lindsay" lastname="Worner" country="USA" />
 	</team>
 	<team id="22" score="1300" time="23:59:59" penalty="0" gender="men" age="open" name="Black Ducks">
-		<member firstname="Anthony" lastname="Di Stefano" country="XXX" />
-		<member firstname="Giovany" lastname="Hernandez" country="XXX" />
+		<member firstname="Anthony" lastname="Di Stefano" country="USA" />
+		<member firstname="Giovany" lastname="Hernandez" country="USA" />
 	</team>
 	<team id="23" score="1270" time="23:59:59" penalty="0" gender="men" age="open" name="ET">
 		<member firstname="Earl" lastname="La Vallee" country="USA" />
 		<member firstname="Thomas" lastname="Rycroft" country="USA" />
 	</team>
 	<team id="24" score="980" time="23:59:59" penalty="0" gender="mixed" age="ultraveteran" name="GHO SLO">
-		<member firstname="Jim" lastname="Waddington" country="XXX" />
-		<member firstname="Sue" lastname="Waddington" country="XXX" />
+		<member firstname="Jim" lastname="Waddington" country="USA" />
+		<member firstname="Sue" lastname="Waddington" country="USA" />
 	</team>
 	<team id="25" score="960" time="23:59:55" penalty="0" gender="mixed" age="open" name="Buzzards Follow Us">
 		<member firstname="Joshua" lastname="Fisher" country="USA" />
@@ -110,12 +110,12 @@
 		<member firstname="Ken" lastname="Lotze" country="USA" />
 	</team>
 	<team id="27" score="870" time="23:59:59" penalty="0" gender="mixed" age="open" name="Turtle and the Hare">
-		<member firstname="Richard" lastname="Madden" country="XXX" />
-		<member firstname="Sydney" lastname="Madden" country="XXX" />
+		<member firstname="Richard" lastname="Madden" country="USA" />
+		<member firstname="Sydney" lastname="Madden" country="USA" />
 	</team>
 	<team id="28" score="690" time="23:59:59" penalty="0" gender="men" age="open" name="Team Kelsey">
-		<member firstname="Chuck" lastname="Kelsey" country="XXX" />
-		<member firstname="Keegan" lastname="Kelsey" country="XXX" />
+		<member firstname="Chuck" lastname="Kelsey" country="USA" />
+		<member firstname="Keegan" lastname="Kelsey" country="USA" />
 	</team>
 	<team id="29" score="550" time="23:59:55" penalty="0" gender="mixed" age="ultraveteran" name="Lyons Den">
 		<member firstname="Patricia" lastname="Lyons" country="USA" />

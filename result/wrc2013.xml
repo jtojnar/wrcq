@@ -654,7 +654,7 @@
 	</team>
 	<team id="331" name="Slepov-Kornilov" score="1740" time="23:36:28" penalty="0" gender="men" age="superveteran">
 		<member firstname="Vyacheslav" lastname="Slepov" country="RUS" />
-		<member firstname="Aleksandr" lastname="Kornilov" country="RUS" />
+		<member firstname="Alexander" lastname="Kornilov" country="RUS" />
 	</team>
 	<team id="381" name="Bezdiga-Tuchak" score="1740" time="23:50:17" penalty="0" gender="men" age="open">
 		<member firstname="Andrei" lastname="Bezdiga" country="MDA" />
