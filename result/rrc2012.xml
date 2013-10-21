@@ -12,8 +12,8 @@
 		<member firstname="Владимир" lastname="Шпетный" country="RUS" />
 	</team>
 	<team id="84" score="300" time="23:54:53" penalty="0" gender="women" age="open" name="Garmin-Blondie">
-		<member firstname="Natalya" lastname="Abramova" country="RUS" />
-		<member firstname="Natalya" lastname="Zimina" country="RUS" />
+		<member firstname="Natalia" lastname="Abramova" country="RUS" />
+		<member firstname="Natalia" lastname="Zimina" country="RUS" />
 	</team>
 	<team id="96" score="293" time="23:50:52" penalty="0" gender="mixed" age="open" name="A-Z">
 		<member firstname="Vladislav" lastname="Zavyalov" country="RUS" />

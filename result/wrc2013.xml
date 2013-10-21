@@ -16,7 +16,7 @@
 		<member firstname="Eero" lastname="Jappinen" country="FIN" />
 	</team>
 	<team id="221" name="Abramova-Shvedov" score="3370" time="23:48:33" penalty="0" gender="mixed" age="open">
-		<member firstname="Natalija" lastname="Abramova" country="RUS" />
+		<member firstname="Natalia" lastname="Abramova" country="RUS" />
 		<member firstname="Andrey" lastname="Shvedov" country="RUS" />
 	</team>
 	<team id="358" name="Tolkko-Olivar" score="3340" time="23:57:00" penalty="0" gender="men" age="open">
@@ -269,8 +269,8 @@
 		<member firstname="Aleksey" lastname="Aslamov" country="RUS" />
 	</team>
 	<team id="338" name="Kozlova-Baryshnikova" score="2320" time="23:10:14" penalty="0" gender="women" age="open">
-		<member firstname="Natalya" lastname="Kozlova" country="RUS" />
-		<member firstname="Nataliya" lastname="Baryshnikova" country="RUS" />
+		<member firstname="Natalia" lastname="Kozlova" country="RUS" />
+		<member firstname="Natalia" lastname="Baryshnikova" country="RUS" />
 	</team>
 	<team id="40" name="Averyanov-Dmitriva-Baranovskiy" score="2310" time="23:30:31" penalty="0" gender="mixed" age="open">
 		<member firstname="Andrey" lastname="Averyanov" country="RUS" />
@@ -924,7 +924,7 @@
 		<member firstname="Eva" lastname="Tloustova" country="CZE" />
 	</team>
 	<team id="394" name="Tarabanovska-Shuniakov" score="1390" time="23:04:15" penalty="0" gender="mixed" age="open">
-		<member firstname="Nataliya" lastname="Tarabanovska" country="UKR" />
+		<member firstname="Natalia" lastname="Tarabanovska" country="UKR" />
 		<member firstname="Volodymyr" lastname="Shuniakov" country="UKR" />
 	</team>
 	<team id="263" name="Zogla-Zogla-Plakans" score="1380" time="22:30:30" penalty="0" gender="men" age="veteran">
@@ -1085,7 +1085,7 @@
 	</team>
 	<team id="131" name="Avvakumenkov-Koplienko" score="1140" time="21:50:20" penalty="0" gender="mixed" age="junior">
 		<member firstname="Sergei" lastname="Avvakumenkov" country="RUS" />
-		<member firstname="Natalja" lastname="Koplienko" country="RUS" />
+		<member firstname="Natalia" lastname="Koplienko" country="RUS" />
 	</team>
 	<team id="13" name="Zhirnov-Frolov" score="1130" time="22:29:29" penalty="0" gender="men" age="open">
 		<member firstname="Andrey" lastname="Zhirnov" country="RUS" />
@@ -1220,7 +1220,7 @@
 	</team>
 	<team id="202" name="Zasypkin-Labzova" score="850" time="13:17:35" penalty="0" gender="mixed" age="open">
 		<member firstname="Valentin" lastname="Zasypkin" country="RUS" />
-		<member firstname="Natalya" lastname="Labzova" country="RUS" />
+		<member firstname="Natalia" lastname="Labzova" country="RUS" />
 	</team>
 	<team id="339" name="Ionov-Orlova" score="830" time="23:17:57" penalty="0" gender="mixed" age="open">
 		<member firstname="Sergey" lastname="Ionov" country="RUS" />
