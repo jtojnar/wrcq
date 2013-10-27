@@ -21,7 +21,7 @@
 	</team>
 	<team id="12" name="Garmin Orienta SkiO" score="392" time="20:50:59" penalty="0" gender="mixed" age="open">
 		<member firstname="Andrei" lastname="Shvedov" country="RUS" />
-		<member firstname="Natalija" lastname="Abramova" country="RUS" />
+		<member firstname="Natalia" lastname="Abramova" country="RUS" />
 	</team>
 	<team id="15" name="Adventure Club Xdream" score="392" time="21:36:50" penalty="0" gender="men" age="open">
 		<member firstname="Riho" lastname="Roopõld" country="EST" />
@@ -33,7 +33,7 @@
 	</team>
 	<team id="19" name="RunLab" score="392" time="22:41:38" penalty="0" gender="men" age="open">
 		<member firstname="Vladimir" lastname="Kot" country="RUS" />
-		<member firstname="Evgeni" lastname="Gavrilov" country="RUS" />
+		<member firstname="Evgeniy" lastname="Gavrilov" country="RUS" />
 	</team>
 	<team id="21" name="Easy" score="392" time="22:58:22" penalty="0" gender="mixed" age="veteran">
 		<member firstname="Ilze" lastname="Lapiņa" country="LAT" />
@@ -127,7 +127,7 @@
 		<member firstname="Vladimir" lastname="Temiakov" country="RUS" />
 	</team>
 	<team id="68" name="Chasing daylight" score="374" time="23:04:33" penalty="0" gender="men" age="open">
-		<member firstname="Evgeni" lastname="Kolganov" country="RUS" />
+		<member firstname="Evgeniy" lastname="Kolganov" country="RUS" />
 		<member firstname="Filip" lastname="Fedosov" country="RUS" />
 	</team>
 	<team id="70" name="Demeshchik Erokhin" score="370" time="23:26:41" penalty="0" gender="men" age="open">
@@ -347,8 +347,8 @@
 	</team>
 	<team id="182" name="Manomy" score="314" time="23:31:32" penalty="0" gender="men" age="open">
 		<member firstname="Andrei" lastname="Zhirnov" country="RUS" />
-		<member firstname="Evgeni" lastname="Matrosenkov" country="RUS" />
-		<member firstname="Dmitri" lastname="Frolov" country="RUS" />
+		<member firstname="Evgeniy" lastname="Matrosenkov" country="RUS" />
+		<member firstname="Dmitriy" lastname="Frolov" country="RUS" />
 	</team>
 	<team id="184" name="Punkt leitud" score="312" time="19:44:28" penalty="0" gender="men" age="veteran">
 		<member firstname="Raul" lastname="Sankovski" country="EST" />
@@ -620,7 +620,7 @@
 		<member firstname="Andris" lastname="Melkerts" country="LAT" />
 	</team>
 	<team id="325" name="Ukraine" score="209" time="14:51:47" penalty="0" gender="women" age="junior">
-		<member firstname="Natalija" lastname="Shelepiuk" country="UKR" />
+		<member firstname="Natalia" lastname="Shelepiuk" country="UKR" />
 		<member firstname="Marija" lastname="Sokolovska" country="UKR" />
 	</team>
 	<team id="327" name="Oskar and friends" score="209" time="21:48:20" penalty="0" gender="men" age="open">
@@ -662,7 +662,7 @@
 	</team>
 	<team id="346" name="Omsk" score="187" time="11:57:23" penalty="0" gender="men" age="veteran">
 		<member firstname="Sergei" lastname="Paitov" country="RUS" />
-		<member firstname="Evgeni" lastname="Ragozin" country="RUS" />
+		<member firstname="Evgeniy" lastname="Ragozin" country="RUS" />
 	</team>
 	<team id="348" name="Kazantsev 2 novgorod" score="187" time="23:31:59" penalty="0" gender="mixed" age="superveteran">
 		<member firstname="Alina" lastname="Kazantseva" country="RUS" />
