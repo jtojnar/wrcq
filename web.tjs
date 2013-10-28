@@ -25,7 +25,7 @@ function increment(obj, alpha, beta) {
 	return ++obj[alpha][beta];
 }
 
-var _dbUri = process.env.HEROKU_POSTGRESQL_COPPER_URL;
+var _dbUri = process.env.DATABASE_URL;
 
 passport.serializeUser(function(user, done) {
 	done(null, user.id);

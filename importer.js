@@ -6,7 +6,7 @@ if(process.argv.length < 4) {
 	return;
 }
 
-var _dbUri = process.env.HEROKU_POSTGRESQL_COPPER_URL;
+var _dbUri = process.env.DATABASE_URL;
 
 var pg = require('pg');
 var fs = require('fs');
