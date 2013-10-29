@@ -9,7 +9,7 @@
 	</team>
 	<team id="4" score="2090" time="23:18:19" penalty="0" gender="men" age="open">
 		<member firstname="Maxim" lastname="Kazitov" country="USA" />
-		<member firstname="Gena" lastname="Tertychnyi" country="USA" />
+		<member firstname="Gena" lastname="Tertychniy" country="USA" />
 	</team>
 	<team id="3" score="1720" time="23:42:30" penalty="0" gender="mixed" age="open">
 		<member firstname="Jackie" lastname="Bonn" country="CAN" />

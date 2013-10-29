@@ -117,7 +117,7 @@
 		<member firstname="Jerry" lastname="Young" country="USA" />
 	</team>
 	<team id="260" score="1540" time="23:40:05" penalty="0" gender="women" age="superveteran" name="Proceeding On">
-		<member firstname="Sharon L." lastname="Crawford" country="USA" />
+		<member firstname="Sharon" lastname="Crawford" country="USA" />
 		<member firstname="Natalia" lastname="Deconescu" country="USA" />
 	</team>
 	<team id="1" score="580" time="7:45:50" penalty="0" gender="men" age="open" duration="8" name="Going Nowhere">

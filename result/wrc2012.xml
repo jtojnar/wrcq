@@ -8,15 +8,15 @@
 		<member firstname="Jakub" lastname="Veselý" country="CZE" />
 	</team>
 	<team id="4" score="1550" time="23:08:51" penalty="0" gender="men" age="junior">
-		<member firstname="Kelya" lastname="Andriy" country="UKR" />
-		<member firstname="Kelya" lastname="Vyacheslav" country="UKR" />
+		<member firstname="Andriy" lastname="Kelya" country="UKR" />
+		<member firstname="Vyacheslav" lastname="Kelya" country="UKR" />
 	</team>
 	<team id="5" score="2580" time="22:56:31" penalty="0" gender="men" age="junior">
-		<member firstname="Kovbasiuk" lastname="Mykola" country="UKR" />
-		<member firstname="Mospan" lastname="Sergiy" country="UKR" />
+		<member firstname="Mykola" lastname="Kovbasyuk" country="UKR" />
+		<member firstname="Sergiy" lastname="Mospan" country="UKR" />
 	</team>
 	<team id="6" score="1820" time="23:53:33" penalty="0" gender="men" age="junior">
-		<member firstname="Alex" lastname="Perfilyev" country="RUS" />
+		<member firstname="Alexey" lastname="Perfilyev" country="RUS" />
 		<member firstname="Vladimir" lastname="Ragozin" country="RUS" />
 	</team>
 	<team id="7" score="870" time="21:50:08" penalty="0" gender="men" age="junior">
@@ -34,31 +34,31 @@
 		<member firstname="Jana" lastname="Spevackova" country="CZE" />
 	</team>
 	<team id="11" score="1550" time="23:01:14" penalty="0" gender="women" age="junior">
-		<member firstname="Natliia" lastname="Shelepiuk" country="UKR" />
-		<member firstname="Mariia" lastname="Sokolovska" country="UKR" />
+		<member firstname="Natalia" lastname="Shelepiuk" country="UKR" />
+		<member firstname="Maria" lastname="Sokolovska" country="UKR" />
 	</team>
 	<team id="12" score="1110" time="17:04:18" penalty="0" gender="women" age="junior">
-		<member firstname="Ivanchak" lastname="Polina" country="UKR" />
-		<member firstname="Letychevska" lastname="Veronika" country="UKR" />
-		<member firstname="Tkachuk" lastname="Viktoriya" country="UKR" />
+		<member firstname="Polina" lastname="Ivanchak" country="UKR" />
+		<member firstname="Veronika" lastname="Letychevska" country="UKR" />
+		<member firstname="Viktoria" lastname="Tkachuk" country="UKR" />
 	</team>
 	<team id="13" score="2150" time="22:22:28" penalty="0" gender="mixed" age="junior">
 		<member firstname="Mykola" lastname="Kobets" country="UKR" />
-		<member firstname="Yuliya" lastname="Kobets" country="UKR" />
+		<member firstname="Yulia" lastname="Kobets" country="UKR" />
 		<member firstname="Alexej" lastname="Kovinovskij" country="UKR" />
 	</team>
 	<team id="14" score="2030" time="23:41:44" penalty="0" gender="mixed" age="junior">
-		<member firstname="Mariya" lastname="Drondina" country="RUS" />
+		<member firstname="Maria" lastname="Drondina" country="RUS" />
 		<member firstname="Artem" lastname="Skindirev" country="RUS" />
 	</team>
 	<team id="15" score="1880" time="23:36:13" penalty="0" gender="mixed" age="junior">
-		<member firstname="Homenko" lastname="Vadym" country="UKR" />
-		<member firstname="Ozhegova" lastname="Valerya" country="UKR" />
-		<member firstname="Demchenko" lastname="Vyacheslav" country="UKR" />
+		<member firstname="Vadym" lastname="Homenko" country="UKR" />
+		<member firstname="Valerya" lastname="Ozhegova" country="UKR" />
+		<member firstname="Vyacheslav" lastname="Demchenko" country="UKR" />
 	</team>
 	<team id="16" score="1920" time="23:26:55" penalty="0" gender="mixed" age="junior">
 		<member firstname="Volodymyr" lastname="Bezditnyi" country="UKR" />
-		<member firstname="Polina" lastname="Zaharova" country="UKR" />
+		<member firstname="Polina" lastname="Zakharova" country="UKR" />
 	</team>
 	<team id="17" score="1860" time="21:56:24" penalty="0" gender="mixed" age="junior">
 		<member firstname="Viktor" lastname="Andreykovich" country="UKR" />
@@ -104,8 +104,8 @@
 		<member firstname="Natalia" lastname="Troyanovska" country="UKR" />
 	</team>
 	<team id="31" score="1890" time="23:26:29" penalty="0" gender="women" age="open">
-		<member firstname="Chekanova" lastname="Kseniya" country="RUS" />
-		<member firstname="Karnauhova" lastname="Natalia" country="RUS" />
+		<member firstname="Kseniya" lastname="Chekanova" country="RUS" />
+		<member firstname="Natalia" lastname="Karnauhova" country="RUS" />
 	</team>
 	<team id="32" score="2060" time="21:51:11" penalty="0" gender="women" age="open">
 		<member firstname="Tiina" lastname="Isoniemi" country="FIN" />
@@ -289,8 +289,8 @@
 		<member firstname="Kristaps" lastname="Jaudzems" country="LAT" />
 	</team>
 	<team id="112" score="2560" time="23:40:42" penalty="0" gender="men" age="open">
-		<member firstname="Iaroshenko" lastname="Sergii" country="UKR" />
-		<member firstname="Sirinok" lastname="Sergii" country="UKR" />
+		<member firstname="Sergiy" lastname="Iaroshenko" country="UKR" />
+		<member firstname="Sergiy" lastname="Sirinok" country="UKR" />
 	</team>
 	<team id="113" score="1840" time="23:58:59" penalty="0" gender="men" age="open">
 		<member firstname="Andrey" lastname="Korolev" country="RUS" />
@@ -317,8 +317,8 @@
 		<member firstname="Andrew" lastname="Ustinov" country="RUS" />
 	</team>
 	<team id="119" score="2310" time="23:21:41" penalty="0" gender="men" age="open">
-		<member firstname="egor" lastname="ivashnev" country="RUS" />
-		<member firstname="alex" lastname="stenin" country="RUS" />
+		<member firstname="Egor" lastname="Ivashnev" country="RUS" />
+		<member firstname="Alex" lastname="Stenin" country="RUS" />
 	</team>
 	<team id="120" score="3120" time="23:55:33" penalty="0" gender="men" age="open">
 		<member firstname="Marko" lastname="Vapa" country="FIN" />
@@ -366,7 +366,7 @@
 		<member firstname="Oleg" lastname="Kalinin" country="RUS" />
 	</team>
 	<team id="131" score="2010" time="15:10:09" penalty="0" gender="men" age="open">
-		<member firstname="Evgeny" lastname="Gavrilov" country="RUS" />
+		<member firstname="Evgeniy" lastname="Gavrilov" country="RUS" />
 		<member firstname="Igor" lastname="Klimov" country="RUS" />
 	</team>
 	<team id="132" score="820" time="20:34:03" penalty="0" gender="men" age="open">
@@ -378,7 +378,7 @@
 		<member firstname="Alexander" lastname="Eduardov" country="RUS" />
 	</team>
 	<team id="134" score="1530" time="21:00:08" penalty="0" gender="men" age="open">
-		<member firstname="Dmitry" lastname="Frolov" country="RUS" />
+		<member firstname="Dmitriy" lastname="Frolov" country="RUS" />
 		<member firstname="Andrey" lastname="Zhirnov" country="RUS" />
 	</team>
 	<team id="135" score="1440" time="23:54:24" penalty="0" gender="men" age="open">
@@ -463,15 +463,15 @@
 	</team>
 	<team id="156" score="3190" time="23:24:38" penalty="0" gender="men" age="open">
 		<member firstname="Radovan" lastname="Čech" country="CZE" />
-		<member firstname="Ondrej" lastname="Skripnik" country="CZE" />
+		<member firstname="Ondřej" lastname="Skripnik" country="CZE" />
 	</team>
 	<team id="158" score="1540" time="14:34:44" penalty="0" gender="men" age="open">
 		<member firstname="Vasyl" lastname="Bodnaruk" country="UKR" />
 		<member firstname="Vitalii" lastname="Kindrachuk" country="UKR" />
 	</team>
 	<team id="159" score="1980" time="23:58:34" penalty="0" gender="men" age="open">
-		<member firstname="Myhailov" lastname="Oleksandr" country="UKR" />
-		<member firstname="Myhailov" lastname="Viktor" country="UKR" />
+		<member firstname="Oleksandr" lastname="Myhailov" country="UKR" />
+		<member firstname="Viktor" lastname="Myhailov" country="UKR" />
 	</team>
 	<team id="160" score="3250" time="23:50:14" penalty="0" gender="men" age="open">
 		<member firstname="Erik" lastname="Aibast" country="EST" />
@@ -487,8 +487,8 @@
 		<member firstname="Evgeniy" lastname="Gyryanov" country="RUS" />
 	</team>
 	<team id="163" score="2280" time="23:14:38" penalty="0" gender="men" age="open">
-		<member firstname="Lenyuk" lastname="Oleg" country="UKR" />
-		<member firstname="Savenkov" lastname="Oleksandr" country="UKR" />
+		<member firstname="Oleg" lastname="Lenyuk" country="UKR" />
+		<member firstname="Oleksandr" lastname="Savenkov" country="UKR" />
 	</team>
 	<team id="164" score="3040" time="23:21:35" penalty="0" gender="men" age="open">
 		<member firstname="Jan" lastname="Fujáček" country="CZE" />
@@ -516,8 +516,8 @@
 		<member firstname="Janis" lastname="Riza" country="LAT" />
 	</team>
 	<team id="171" score="3030" time="23:29:40" penalty="0" gender="men" age="open">
-		<member firstname="Parzych" lastname="Frédéric" country="FRA" />
-		<member firstname="Boudet" lastname="Pierre" country="FRA" />
+		<member firstname="Frédéric" lastname="Parzych" country="FRA" />
+		<member firstname="Pierre" lastname="Boudet" country="FRA" />
 	</team>
 	<team id="172" score="1430" time="21:37:52" penalty="0" gender="men" age="open">
 		<member firstname="Martin" lastname="Hanousek" country="CZE" />
@@ -562,12 +562,12 @@
 		<member firstname="Jiří" lastname="Žaloudík" country="CZE" />
 	</team>
 	<team id="183" score="1880" time="23:38:00" penalty="0" gender="men" age="open">
-		<member firstname="xevi" lastname="renart" country="ESP" />
-		<member firstname="jordi" lastname="vilà" country="ESP" />
+		<member firstname="Xevi" lastname="Renart" country="ESP" />
+		<member firstname="Jordi" lastname="Vilà" country="ESP" />
 	</team>
 	<team id="184" score="1280" time="23:55:09" penalty="0" gender="men" age="open">
 		<member firstname="Volodimir" lastname="Conedov" country="UKR" />
-		<member firstname="Andriy" lastname="Gomzyk" country="CZE" />
+		<member firstname="Andriy" lastname="Gomzyk" country="UKR" />
 	</team>
 	<team id="185" score="1170" time="15:34:29" penalty="0" gender="men" age="open">
 		<member firstname="Václav" lastname="Brandejský" country="CZE" />
@@ -798,8 +798,8 @@
 		<member firstname="Tuula" lastname="Nieminen" country="FIN" />
 	</team>
 	<team id="258" score="1860" time="20:57:39" penalty="0" gender="mixed" age="open">
-		<member firstname="Mizernyk" lastname="Valentina" country="UKR" />
-		<member firstname="Mizernyk" lastname="Vladislav" country="UKR" />
+		<member firstname="Valentina" lastname="Mizernyk" country="UKR" />
+		<member firstname="Vladislav" lastname="Mizernyk" country="UKR" />
 	</team>
 	<team id="259" score="1870" time="23:16:05" penalty="0" gender="mixed" age="open">
 		<member firstname="Piotr" lastname="Dargacz" country="POL" />
@@ -864,7 +864,7 @@
 	</team>
 	<team id="284" score="1860" time="23:51:51" penalty="0" gender="mixed" age="superveteran">
 		<member firstname="Irina" lastname="Kapustian" country="RUS" />
-		<member firstname="Vladimir" lastname="Martynov" country="RUS" />
+		<member firstname="Vladimir" lastname="Martinov" country="RUS" />
 	</team>
 	<team id="285" score="1930" time="23:22:32" penalty="0" gender="mixed" age="superveteran">
 		<member firstname="Anne" lastname="Kennedy" country="NZL" />
@@ -988,7 +988,7 @@
 	</team>
 	<team id="316" score="2940" time="23:43:32" penalty="0" gender="men" age="veteran">
 		<member firstname="Viacheslav" lastname="Savchenko" country="RUS" />
-		<member firstname="Volodymyr" lastname="Shpetnyy" country="UKR" />
+		<member firstname="Volodymyr" lastname="Shpetniy" country="UKR" />
 	</team>
 	<team id="317" score="1200" time="15:15:30" penalty="0" gender="men" age="veteran">
 		<member firstname="Yuri" lastname="Ivanov" country="RUS" />
@@ -1264,7 +1264,7 @@
 		<member firstname="Michael" lastname="Wood" country="NZL" />
 	</team>
 	<team id="402" score="2410" time="23:51:51" penalty="0" gender="men" age="superveteran">
-		<member firstname="Rod" lastname="Gray" country="AUS" />
+		<member firstname="Rodney" lastname="Gray" country="AUS" />
 		<member firstname="Geoff" lastname="Lawford" country="AUS" />
 	</team>
 	<team id="403" score="2060" time="23:33:21" penalty="0" gender="men" age="superveteran">
@@ -1334,7 +1334,7 @@
 		<member firstname="Neil" lastname="Phillips" country="AUS" />
 	</team>
 	<team id="421" score="2240" time="23:52:43" penalty="0" gender="men" age="superveteran">
-		<member firstname="Aleksandr" lastname="Kopelevich" country="RUS" />
+		<member firstname="Alexander" lastname="Kopelevich" country="RUS" />
 		<member firstname="Alexander" lastname="Tereshkin" country="RUS" />
 		<member firstname="Oleg" lastname="Zhegusov" country="RUS" />
 	</team>

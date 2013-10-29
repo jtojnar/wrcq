@@ -16,11 +16,11 @@
 		<member firstname="Marcin" lastname="Krasuski" country="POL" />
 	</team>
 	<team id="10" name="SV" score="392" time="20:34:05" penalty="0" gender="men" age="veteran">
-		<member firstname="Volodymyr" lastname="Shpetnyi" country="UKR" />
+		<member firstname="Volodymyr" lastname="Shpetniy" country="UKR" />
 		<member firstname="Viacheslav" lastname="Savchenko" country="RUS" />
 	</team>
 	<team id="12" name="Garmin Orienta SkiO" score="392" time="20:50:59" penalty="0" gender="mixed" age="open">
-		<member firstname="Andrei" lastname="Shvedov" country="RUS" />
+		<member firstname="Andrey" lastname="Shvedov" country="RUS" />
 		<member firstname="Natalia" lastname="Abramova" country="RUS" />
 	</team>
 	<team id="15" name="Adventure Club Xdream" score="392" time="21:36:50" penalty="0" gender="men" age="open">
@@ -70,15 +70,15 @@
 		<member firstname="Marina" lastname="Galkina" country="RUS" />
 	</team>
 	<team id="38" name="RunForFun" score="382" time="23:55:48" penalty="0" gender="men" age="open">
-		<member firstname="Alexandr" lastname="Tonis" country="RUS" />
-		<member firstname="Alexei" lastname="Golikov" country="RUS" />
+		<member firstname="Alexander" lastname="Tonis" country="RUS" />
+		<member firstname="Alexey" lastname="Golikov" country="RUS" />
 	</team>
 	<team id="41" name="Buff" score="380" time="21:30:03" penalty="0" gender="men" age="open">
 		<member firstname="Jukka" lastname="Pinola" country="FIN" />
 		<member firstname="Ville" lastname="Niemelä" country="FIN" />
 	</team>
 	<team id="42" name="24 stundas SK" score="380" time="21:43:04" penalty="0" gender="men" age="veteran">
-		<member firstname="Lapins" lastname="Raimonds" country="LAT" />
+		<member firstname="Raimonds" lastname="Lapins" country="LAT" />
 		<member firstname="Nikolajs" lastname="Lucāns" country="LAT" />
 	</team>
 	<team id="44" name="Bona Fide" score="380" time="22:10:55" penalty="0" gender="men" age="veteran">
@@ -94,16 +94,16 @@
 		<member firstname="Yacov" lastname="Frenklakh" country="RUS" />
 	</team>
 	<team id="50" name="rogaining.ru" score="380" time="22:29:21" penalty="0" gender="mixed" age="open">
-		<member firstname="Alexandr" lastname="Yakimov" country="RUS" />
+		<member firstname="Alexander" lastname="Yakimov" country="RUS" />
 		<member firstname="Yulia" lastname="Nazarova" country="RUS" />
 	</team>
 	<team id="53" name="Azimut Club" score="380" time="22:47:30" penalty="0" gender="men" age="junior">
-		<member firstname="Serhii" lastname="Mospan" country="UKR" />
+		<member firstname="Sergiy" lastname="Mospan" country="UKR" />
 		<member firstname="Mykola" lastname="Kovbasyuk" country="UKR" />
 	</team>
 	<team id="54" name="Herson, Herson" score="380" time="22:54:06" penalty="0" gender="mixed" age="veteran">
-		<member firstname="Alexandr" lastname="Kiselev" country="UKR" />
-		<member firstname="Sergei" lastname="Kobets" country="UKR" />
+		<member firstname="Alexander" lastname="Kiselev" country="UKR" />
+		<member firstname="Sergiy" lastname="Kobets" country="UKR" />
 	</team>
 	<team id="57" name="421" score="380" time="23:01:35" penalty="0" gender="mixed" age="open">
 		<member firstname="Roman" lastname="Yukhymenko" country="UKR" />
@@ -205,8 +205,8 @@
 	</team>
 	<team id="107" name="OLLE Aleksandrino" score="342" time="23:44:22" penalty="0" gender="men" age="superveteran">
 		<member firstname="Oleg" lastname="Zhegusov" country="RUS" />
-		<member firstname="Aleksandr" lastname="Kopelevich" country="RUS" />
-		<member firstname="Alexandr" lastname="Tereshkin" country="RUS" />
+		<member firstname="Alexander" lastname="Kopelevich" country="RUS" />
+		<member firstname="Alexander" lastname="Tereshkin" country="RUS" />
 	</team>
 	<team id="109" name="Kapa LR" score="340" time="23:43:54" penalty="0" gender="mixed" age="superveteran">
 		<member firstname="Ligita" lastname="Grunde" country="LAT" />
@@ -320,7 +320,7 @@
 		<member firstname="Raivis" lastname="Grivinš" country="LAT" />
 	</team>
 	<team id="167" name="VN" score="318" time="23:47:56" penalty="0" gender="men" age="superveteran">
-		<member firstname="Alexandr" lastname="Orlov" country="RUS" />
+		<member firstname="Alexander" lastname="Orlov" country="RUS" />
 		<member firstname="Sergei" lastname="Cherkesov" country="RUS" />
 	</team>
 	<team id="170" name="Herson, Herson" score="316" time="18:49:53" penalty="0" gender="mixed" age="junior">
@@ -404,7 +404,7 @@
 	</team>
 	<team id="210" name="Centipede" score="302" time="23:33:25" penalty="0" gender="women" age="veteran">
 		<member firstname="Elena" lastname="Krylova" country="RUS" />
-		<member firstname="Svetlana" lastname="Slobodenuk" country="RUS" />
+		<member firstname="Svetlana" lastname="Slobodenyuk" country="RUS" />
 	</team>
 	<team id="213" name="Dnepr" score="297" time="22:32:10" penalty="0" gender="mixed" age="superveteran">
 		<member firstname="Georgiy" lastname="Bordiyan" country="UKR" />
@@ -621,7 +621,7 @@
 	</team>
 	<team id="325" name="Ukraine" score="209" time="14:51:47" penalty="0" gender="women" age="junior">
 		<member firstname="Natalia" lastname="Shelepiuk" country="UKR" />
-		<member firstname="Marija" lastname="Sokolovska" country="UKR" />
+		<member firstname="Maria" lastname="Sokolovska" country="UKR" />
 	</team>
 	<team id="327" name="Oskar and friends" score="209" time="21:48:20" penalty="0" gender="men" age="open">
 		<member firstname="Andres" lastname="Arro" country="EST" />

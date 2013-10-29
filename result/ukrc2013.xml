@@ -143,7 +143,7 @@
 		<member firstname="Christina" lastname="Tkatch" country="UKR" />
 	</team>
 	<team id="35" score="104" time="21:43:50" penalty="0" gender="mixed" age="open" name="Donetsk">
-		<member firstname="yulia" lastname="Sentchenko" country="UKR" />
+		<member firstname="Yulia" lastname="Sentchenko" country="UKR" />
 		<member firstname="Denis" lastname="Khudyakov" country="UKR" />
 	</team>
 	<team id="36" score="62" time="22:20:56" penalty="0" gender="mixed" age="open" name="Inter SSM_10">
@@ -187,7 +187,7 @@
 		<member firstname="Ivana" lastname="Melnicka" country="UKR" />
 	</team>
 	<team id="46" score="204" time="22:00:34" penalty="0" gender="women" age="open" name="Luganska/Kiiv_1">
-		<member firstname="Elena" lastname="Kostina" country="UKR" />
+		<member firstname="Olena" lastname="Kostina" country="UKR" />
 		<member firstname="Olena" lastname="Docenko" country="UKR" />
 	</team>
 	<team id="47" score="92" time="23:55:24" penalty="0" gender="women" age="open" name="Vinniciya_5">

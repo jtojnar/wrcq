@@ -205,7 +205,7 @@
 	</team>
 	<team id="50" score="1260" time="23:35:47" penalty="0" gender="mixed" age="ultraveteran">
 		<member firstname="Kim" lastname="van Netten" country="AUS" />
-		<member firstname="Morris" lastname="Andrew" country="AUS" />
+		<member firstname="Andrew" lastname="Morris" country="AUS" />
 	</team>
 	<team id="51" score="1250" time="23:17:04" penalty="0" gender="mixed" age="veteran">
 		<member firstname="Evelyn" lastname="Colwell" country="AUS" />
