@@ -49,8 +49,8 @@
 		<member firstname="Peep" lastname="Eomois" country="EST" />
 	</team>
 	<team id="48" score="153" time="24:01:04" penalty="2" gender="mixed" age="veteran" name="Kägu kukub">
-		<member firstname="Anneli" lastname="Rämmann" country="FIN" />
-		<member firstname="Andrus" lastname="Rämmann" country="FIN" />
+		<member firstname="Anneli" lastname="Rämmann" country="EST" />
+		<member firstname="Andrus" lastname="Rämmann" country="EST" />
 	</team>
 	<team id="43" score="148" time="20:13:21" penalty="0" gender="men" age="open" name="Team Footbalance">
 		<member firstname="Sami" lastname="Mäkinen" country="FIN" />
