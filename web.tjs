@@ -203,6 +203,11 @@ var publicDir = path.join(__dirname, 'public');
 
 var app = express();
 
+var allowCrossDomain = function(req, res, next) {
+	res.header('Access-Control-Allow-Origin', '*');
+
+	next();
+}
 
 app.configure(function() {
 	app.set('views', path.join(__dirname, 'view'));
@@ -220,6 +225,7 @@ app.configure(function() {
 
 	app.use(express.compress());
 	app.use(express.favicon());
+	app.use(allowCrossDomain);
 	app.use(express.static(publicDir));
 	app.use('/bower_components', express.static(path.join(__dirname, 'bower_components')));
 });
