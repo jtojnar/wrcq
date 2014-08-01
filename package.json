@@ -1,23 +1,27 @@
 {
-	"name": "wrcQ",
-	"version": "0.0.2",
-	"dependencies": {
-		"express": "3.x",
-		"pg": "2.x",
-		"xml2js": "0.2.x",
-		"moment": "2.0.x",
-		"passport": "0.1.x",
-		"passport-local": "0.1.x",
-		"connect-flash": "*",
-		"hbs": "2.x",
-		"tamejs": "0.4.x",
-		"bower": "1.x"
-	},
-	"scripts": {
-		"postinstall": "./node_modules/bower/bin/bower install"
-	},
-	"engines": {
-		"node": "0.10.17",
-		"npm": "1.3.x"
-	}
+  "name": "wrcQ",
+  "version": "0.0.2",
+  "dependencies": {
+    "body-parser": "^1.5.2",
+    "bower": "1.x",
+    "compression": "^1.0.9",
+    "connect-flash": "*",
+    "cookie-parser": "^1.3.2",
+    "express": "4.x",
+    "express-session": "^1.7.2",
+    "hbs": "2.x",
+    "method-override": "^2.1.2",
+    "moment": "2.0.x",
+    "morgan": "~1.0.0",
+    "passport": "0.1.x",
+    "passport-local": "0.1.x",
+    "pg": "2.x",
+    "serve-favicon": "^2.0.1",
+    "serve-static": "~1.0.3",
+    "tamejs": "0.4.x",
+    "xml2js": "0.2.x"
+  },
+  "scripts": {
+    "postinstall": "./node_modules/bower/bin/bower install"
+  }
 }
