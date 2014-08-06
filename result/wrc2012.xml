@@ -45,7 +45,7 @@
 	<team id="13" score="2150" time="22:22:28" penalty="0" gender="mixed" age="junior">
 		<member firstname="Mykola" lastname="Kobets" country="UKR" />
 		<member firstname="Yulia" lastname="Kobets" country="UKR" />
-		<member firstname="Alexej" lastname="Kovinovskij" country="UKR" />
+		<member firstname="Alexey" lastname="Kovinovskiy" country="UKR" />
 	</team>
 	<team id="14" score="2030" time="23:41:44" penalty="0" gender="mixed" age="junior">
 		<member firstname="Maria" lastname="Drondina" country="RUS" />
@@ -53,7 +53,7 @@
 	</team>
 	<team id="15" score="1880" time="23:36:13" penalty="0" gender="mixed" age="junior">
 		<member firstname="Vadym" lastname="Homenko" country="UKR" />
-		<member firstname="Valerya" lastname="Ozhegova" country="UKR" />
+		<member firstname="Valeriya" lastname="Ozhegova" country="UKR" />
 		<member firstname="Vyacheslav" lastname="Demchenko" country="UKR" />
 	</team>
 	<team id="16" score="1920" time="23:26:55" penalty="0" gender="mixed" age="junior">
