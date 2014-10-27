@@ -214,9 +214,13 @@ var serveStatic = require('serve-static');
 app.set('view engine', 'hbs');
 
 app.use(require('cookie-parser')());
-app.use(require('body-parser')());
+
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json())
+
 app.use(require('method-override')());
-app.use(require('express-session')({secret: 'too much to bear'}));
+app.use(require('express-session')({secret: 'too much to bear', resave: true, saveUninitialized: true}));
 app.use(require('connect-flash')());
 app.use(passport.initialize());
 app.use(passport.session());
@@ -228,7 +232,7 @@ app.use('/bower_components', serveStatic(path.join(__dirname, 'bower_components'
 
 var env = process.env.NODE_ENV || 'development';
 if(env == 'development') {
-	app.use(require('morgan')());
+	app.use(require('morgan')('common'));
 }
 
 
