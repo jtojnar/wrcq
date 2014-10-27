@@ -72,61 +72,12 @@ passport.use(new LocalStrategy(
 	}
 ));
 
-var hbs = require('hbs');
-hbs.registerHelper('date', function(date) {
-	return moment(date).format('D MMM YYYY');
-});
-hbs.registerHelper('dateinterval', function(start, end) {
-	return moment(start).format('D MMM') + '–' + moment(end).format('D MMM YYYY');
-});
-
-var blocks = {};
-
-hbs.registerHelper('extend', function(name, context) {
-	var block = blocks[name];
-	if(!block) {
-		block = blocks[name] = [];
-	}
-
-	block.push(context.fn(this));
-});
-
-hbs.registerHelper('block', function(name) {
-	var val = (blocks[name] || []).join('\n');
-
-	// clear the block
-	blocks[name] = [];
-	return val;
-});
-
-hbs.registerHelper('title', function(value, context) {
-	blocks.title = [value];
-	return value;
-});
-
-hbs.registerHelper('index', function(index, context) {
-	return index+1;
-});
-
-function pad(number, digits) {
-	number = "" + number;
-	while(number.length < digits) {
-		number = "0" + number;
-	}
-	return number;
-}
-hbs.registerHelper('time', function(time, context) {
-	return pad((time.days||0)*24 + (time.hours||0), 2) + ':' + pad(time.minutes||0, 2) + ':' + pad(time.seconds||0, 2);
-});
-
+var hbs = require('express-handlebars');
 var genderclass = {
 	'men': 'M',
 	'women': 'W',
 	'mixed': 'X'
 };
-hbs.registerHelper('genderclass', function(gender, context) {
-	return typeof genderclass[gender] === 'undefined' ? '' : genderclass[gender];
-});
 
 var ageclass = {
 	'under18': '18',
@@ -138,62 +89,72 @@ var ageclass = {
 	'superveteran': 'SV',
 	'ultraveteran': 'UV'
 };
-hbs.registerHelper('ageclass', function(age, context) {
-	return typeof ageclass[age] === 'undefined' ? '' : ageclass[age];
-});
 
-hbs.registerHelper('each', function(context, options) {
-	var fn = options.fn, inverse = options.inverse;
-	var i = 0, ret = "", data;
+var blocks = {};
 
-	if(options.data) {
-		data = hbs.handlebars.createFrame(options.data);
-	}
+var helpers = {
+	date: function(date) {
+		return moment(date).format('D MMM YYYY');
+	},
 
-	if(context && typeof context === 'object') {
-		if(context instanceof Array) {
-			for(var j = context.length; i<j; i++) {
-				if(data) {data.index = i;}
-				if(i === (j-1)) {
-					data.last = true;
-				} else {
-					data.last = false;
-				}
-				ret = ret + fn(context[i], {data: data});
-			}
+	dateinterval: function(start, end) {
+		return moment(start).format('D MMM') + '–' + moment(end).format('D MMM YYYY');
+	},
+
+	extend: function(name, context) {
+		var block = blocks[name];
+		if(!block) {
+			block = blocks[name] = [];
+		}
+
+		block.push(context.fn(this));
+	},
+
+	block: function(name) {
+		var val = (blocks[name] || []).join('\n');
+
+		// clear the block
+		blocks[name] = [];
+		return val;
+	},
+
+	title: function(value, context) {
+		blocks.title = [value];
+		return value;
+	},
+
+	index: function(index, context) {
+		return index+1;
+	},
+
+	pad: function(number, digits) {
+		number = "" + number;
+		while(number.length < digits) {
+			number = "0" + number;
+		}
+		return number;
+	},
+
+	time: function(time, context) {
+		return helpers.pad((time.days||0)*24 + (time.hours||0), 2) + ':' + helpers.pad(time.minutes||0, 2) + ':' + pad(time.seconds||0, 2);
+	},
+
+	genderclass: function(gender, context) {
+		return typeof genderclass[gender] === 'undefined' ? '' : genderclass[gender];
+	},
+
+	ageclass: function(age, context) {
+		return typeof ageclass[age] === 'undefined' ? '' : ageclass[age];
+	},
+
+	equals: function(primary, secondary, options) {
+		if(primary === secondary) {
+			return options.fn(this);
 		} else {
-			var j = context.length;
-			for(var key in context) {
-				if(context.hasOwnProperty(key)) {
-					if(data) {data.key = key;}
-					if(i === (j-1)) {
-						data.last = true;
-					} else {
-						data.last = false;
-					}
-					ret = ret + fn(context[key], {data: data});
-					i++;
-				}
-			}
+			return options.inverse(this);
 		}
 	}
-
-	if(i === 0) {
-		ret = inverse(this);
-	}
-
-	return ret;
-});
-
-hbs.registerHelper('equals', function(primary, secondary, options) {
-	if(primary === secondary) {
-		return options.fn(this);
-	} else {
-		return options.inverse(this);
-	}
-});
-
-hbs.registerPartials(path.join(__dirname, 'view', 'partial'));
+}
 
 var pg = require('pg');
 var moment = require('moment');
@@ -211,6 +172,7 @@ var allowCrossDomain = function(req, res, next) {
 app.set('views', path.join(__dirname, 'view'));
 app.set('port', process.env.PORT || 5000);
 var serveStatic = require('serve-static');
+app.engine('hbs', hbs({defaultLayout: 'layout', extname: '.hbs', layoutsDir: 'view', partialsDir: path.join(__dirname, 'view', 'partial'), helpers: helpers}));
 app.set('view engine', 'hbs');
 
 app.use(require('cookie-parser')());
