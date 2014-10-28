@@ -270,8 +270,11 @@ app.get('/events', function(req, res) {
 		var eventsQuery = client.query('with latest as (select *, row_number() over(partition by level order by start desc) as rk from event) select * from latest left join (select event_id from team group by event_id) as team on team.event_id = latest.id where rk <= 2 order by level=\'world\' desc, level::text like \'regional%\' desc, level::text like \'national%\' desc, start desc', function() {});
 		eventsQuery.on('row', function(row) {addEventLinks(links, row);});
 		await eventsQuery.on('end', defer(var events));
+		var pastEventsQuery = client.query('with latest as (select *, row_number() over(partition by level order by start desc) as rk from event) select * from latest left join (select event_id from team group by event_id) as team on team.event_id = latest.id where rk > 2 order by level=\'world\' desc, level::text like \'regional%\' desc, level::text like \'national%\' desc, start desc', function() {});
+		pastEventsQuery.on('row', function(row) {addEventLinks(links, row);});
+		await pastEventsQuery.on('end', defer(var pastEvents));
 		done();
-		res.render('events', {events: events.rows, identity: req.user});
+		res.render('events', {events: {events: events.rows}, pastEvents: {events: pastEvents.rows}, identity: req.user});
 	});
 });
 
