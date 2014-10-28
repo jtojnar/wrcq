@@ -27,16 +27,16 @@ $(function() {
 		}
 
 		var self = this;
-		$.post('/api/update/add', {content: content}).done(function updateSucceeded() {
+		$.post('/api/update/add', {content: content}).done(function updateSucceeded(data) {
 			self.form.reset();
-			$(self.form).hide().parent().after($('<dt>Today</dt><dd>' + content + '</dd>'));
+			$(self.form).hide().parent().after($('<dt><button class="btn btn-unstyled btn-xs edit-update" data-id="' + data + '" type="button" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>Today</dt><dd>' + content + '</dd>'));
 			$('#update-form').hide();
 			$('#show-form').show();
 		}).fail(function updateFailed() {
 			window.alert('Updating the website failed. Please try again later.');
 		});
 	});
-	$('.edit-update').click(function editUpdateClickHandler(e) {
+	$('dl.news').on('click', '.edit-update', function editUpdateClickHandler(e) {
 		var enableEditationButton = $(this);
 		var dd = enableEditationButton.parent().next('dd');
 		var textarea = $('<textarea class="form-control">' + dd.html().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</textarea>');
