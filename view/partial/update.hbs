@@ -1,18 +1,47 @@
-<h2>{{title 'News'}}{{#if identity}}<button class="btn btn-small" id="updates-add"><span class="glyphicon glyphicon-plus"></span></button>{{/if}}</h2>
-{{#if updates}}
+<h2>{{title 'News'}}{{#if identity}}<button class="btn btn-xs" id="show-form" type="button"><span class="glyphicon glyphicon-plus"></span></button>{{/if}}</h2>
+
 <dl class="dl-horizontal news">
+{{#if identity}}<dt></dt><dd><form action="" method="post" id="update-form"><textarea name="content" id="content" class="form-control"></textarea><button class="btn btn-block" id="update-add" type="submit" title="Update"><span class="glyphicon glyphicon-plus"></span></button></form></dd>{{/if}}
 {{#each updates}}
 <dt>{{date timestamp}}</dt><dd>{{{text}}}</dd>
 {{/each}}
 </dl>
-{{/if}}
+
+{{#if identity}}
 {{#extend 'bottom'}}
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script>
 $(function() {
-	$('#updates-add').click(function(e) {
+	$('#update-form').hide();
+	$('#show-form').click(function showFormClickHandler(e) {
+		$('#update-form').show(200);
+		$(this).hide();
+	});
+	$('#update-add').click(function addUpdateClickHandler(e) {
+		e.preventDefault();
 
+		var content = $('#content').val().trim();
+		if(content === '') {
+			return window.alert('Please enter some content.');
+		}
+
+		var self = this;
+		$.post('/api/update/add', {content: content}).done(function updateSucceeded() {
+			self.form.reset();
+			$(self.form).hide().parent().after($('<dt>Today</dt><dd>' + content + '</dd>'));
+			$('#update-form').hide();
+			$('#show-form').show();
+		}).fail(function updateFailed() {
+			window.alert('Updating the website failed. Please try again later.');
+		});
 	});
 });
 </script>
+<style>
+textarea {
+	min-width: 100%;
+	max-width: 100%;
+}
+</style>
 {{/extend}}
+{{/if}}

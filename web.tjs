@@ -207,6 +207,25 @@ function addEventLinks(links, row) {
 	};
 }
 
+app.post('/api/update/add', function(req, res) {
+	if(!req.user) {
+		return res.status(403).send('User not logged in.').end();
+	}
+	if(!req.body.content || req.body.content.trim() === '') {
+		return res.status(400).send('Empty update text.').end();
+	}
+	pg.connect(_dbUri, function(err, client, done) {
+		await client.query('insert into update(text, user_id, timestamp) values($1, $2, $3)', [req.body.content, req.user.id, new Date()], defer(var err));
+		done();
+		if(!err) {
+			return res.status(200).send('Empty update text.').end();
+		} else {
+			morgan(err);
+			return res.status(500).end();
+		}
+	});
+});
+
 app.get('/', function(req, res) {
 	pg.connect(_dbUri, function(err, client, done) {
 		await client.query('select * from update order by timestamp desc limit 10', defer(var row, updates));
