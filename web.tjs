@@ -226,6 +226,30 @@ app.post('/api/update/add', function(req, res) {
 	});
 });
 
+app.post('/api/update/edit', function(req, res) {
+	if(!req.user) {
+		return res.status(403).send('User not logged in.').end();
+	}
+	if(!req.body.id || isNaN(parseInt(req.body.id))) {
+		return res.status(400).send('Invalid or mising id.').end();
+	}
+	var id = parseInt(req.body.id);
+
+	if(!req.body.content || req.body.content.trim() === '') {
+		return res.status(400).send('Empty update text.').end();
+	}
+	pg.connect(_dbUri, function(err, client, done) {
+		await client.query('update update set text = $1 where id = $2', [req.body.content, req.body.id], defer(var err));
+		done();
+		if(!err) {
+			return res.status(200).end();
+		} else {
+			console.error(err);
+			return res.status(500).end();
+		}
+	});
+});
+
 app.get('/', function(req, res) {
 	pg.connect(_dbUri, function(err, client, done) {
 		await client.query('select * from update order by timestamp desc limit 10', defer(var row, updates));
