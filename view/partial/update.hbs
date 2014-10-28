@@ -15,6 +15,7 @@ $(function() {
 	$('#update-form').hide();
 	$('#show-form').click(function showFormClickHandler(e) {
 		$('#update-form').show(200);
+		$('#content').focus();
 		$(this).hide();
 	});
 	$('#update-add').click(function addUpdateClickHandler(e) {
