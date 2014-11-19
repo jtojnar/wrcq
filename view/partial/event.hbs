@@ -3,7 +3,7 @@
 <thead><tr><th>Event</th><th>Date</th><th>Location</th><th>Organizer</th><th style="min-width: 10em;">Links</th></tr></thead>
 <tbody>
 {{#each events}}
-<tr><td>{{#if website}}<a href="{{website}}">{{name}}</a>{{else}}{{name}}{{/if}}</td><td class="nowrap">{{dateinterval start end}}</td><td>{{location}}</td><td>{{organizer}}</td><td><ul class="list-unstyled">{{#if event_id}}{{#if complete}}<li><a href="/events/{{slug}}/results">Results</a></li>{{/if}}{{/if}}{{#if results}}<li><a href="{{results}}">Original results</a></li>{{/if}}{{#each links}}<li><a href="{{url}}">{{./title}}</a></li>{{/each}}</ul></td></tr>
+<tr><td>{{#if website}}<a href="{{website}}">{{name}}</a>{{else}}{{name}}{{/if}}</td><td class="nowrap">{{dateinterval start end}}</td><td>{{location}}</td><td>{{organizer}}</td><td><ul class="list-unstyled">{{#if event_id}}{{#if complete}}<li><a href="/events/{{slug}}/results">PQE Results</a></li>{{/if}}{{/if}}{{#if results}}<li><a href="{{results}}">Original results</a></li>{{/if}}{{#each links}}<li><a href="{{url}}">{{./title}}</a></li>{{/each}}</ul></td></tr>
 {{/each}}
 </tbody>
 </table>
