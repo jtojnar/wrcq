@@ -57,6 +57,7 @@
 									<xs:enumeration value="veteran" />
 									<xs:enumeration value="superveteran" />
 									<xs:enumeration value="ultraveteran" />
+									<xs:enumeration value="youth" />
 									<xs:enumeration value="junior" />
 									<xs:enumeration value="under18" />
 									<xs:enumeration value="under20" />
