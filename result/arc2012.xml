@@ -3,7 +3,7 @@
 		<member firstname="Paul" lastname="Williams" country="AUS" />
 		<member firstname="Ben" lastname="Corry" country="AUS" />
 	</team>
-	<team id="2" score="2290" time="23:46:02" penalty="0" gender="mixed" age="open">
+	<team id="2" score="2290" time="23:46:02" penalty="0" gender="mixed" age="junior">
 		<member firstname="Sarah" lastname="Buckerfield" country="AUS" />
 		<member firstname="Ben" lastname="Greenwood" country="AUS" />
 	</team>
@@ -59,7 +59,7 @@
 		<member firstname="Richard" lastname="Robinson" country="AUS" />
 		<member firstname="Tamsin" lastname="Barnes" country="AUS" />
 	</team>
-	<team id="16" score="1890" time="23:36:26" penalty="0" gender="men" age="ultraveteran">
+	<team id="16" score="1890" time="23:36:26" penalty="0" gender="men" age="open">
 		<member firstname="Phillip" lastname="Gatt" country="AUS" />
 		<member firstname="Thomas" lastname="Brazier" country="AUS" />
 	</team>
@@ -122,7 +122,7 @@
 		<member firstname="Christine" lastname="Brown" country="AUS" />
 		<member firstname="Karen" lastname="Pedley" country="AUS" />
 	</team>
-	<team id="31" score="1580" time="23:32:50" penalty="0" gender="men" age="open">
+	<team id="31" score="1580" time="23:32:50" penalty="0" gender="men" age="junior">
 		<member firstname="Galen" lastname="Correy" country="AUS" />
 		<member firstname="Oliver" lastname="Lee" country="AUS" />
 	</team>
@@ -187,7 +187,7 @@
 		<member firstname="Ian" lastname="Herbert" country="AUS" />
 		<member firstname="Joan" lastname="Reynolds" country="AUS" />
 	</team>
-	<team id="46" score="1310" time="22:45:55" penalty="0" gender="women" age="ultraveteran">
+	<team id="46" score="1310" time="22:45:55" penalty="0" gender="women" age="open">
 		<member firstname="Anna" lastname="Houghton" country="AUS" />
 		<member firstname="Manal" lastname="Monsour" country="AUS" />
 	</team>
@@ -203,7 +203,7 @@
 		<member firstname="Andrew" lastname="Mc Gowan" country="NZL" />
 		<member firstname="Martin" lastname="Etherington" country="NZL" />
 	</team>
-	<team id="50" score="1260" time="23:35:47" penalty="0" gender="mixed" age="ultraveteran">
+	<team id="50" score="1260" time="23:35:47" penalty="0" gender="mixed" age="open">
 		<member firstname="Kim" lastname="van Netten" country="AUS" />
 		<member firstname="Andrew" lastname="Morris" country="AUS" />
 	</team>
@@ -223,7 +223,7 @@
 		<member firstname="Simon" lastname="Allston" country="AUS" />
 		<member firstname="Janeil" lastname="Hall" country="AUS" />
 	</team>
-	<team id="55" score="1160" time="23:55:10" penalty="0" gender="men" age="open">
+	<team id="55" score="1160" time="23:55:10" penalty="0" gender="men" age="junior">
 		<member firstname="Simon" lastname="Inverarity" country="AUS" />
 		<member firstname="Adam" lastname="Leibhardt" country="AUS" />
 	</team>
@@ -260,11 +260,11 @@
 		<member firstname="Mark" lastname="Buckerfield" country="AUS" />
 		<member firstname="Amy" lastname="Buckerfield" country="AUS" />
 	</team>
-	<team id="64" score="990" time="22:34:34" penalty="0" gender="men" age="open">
+	<team id="64" score="990" time="22:34:34" penalty="0" gender="men" age="junior">
 		<member firstname="Zalesh" lastname="Myers" country="AUS" />
 		<member firstname="Gleb" lastname="Kotousov" country="AUS" />
 	</team>
-	<team id="65" score="990" time="23:44:33" penalty="0" gender="mixed" age="open">
+	<team id="65" score="990" time="23:44:33" penalty="0" gender="mixed" age="junior">
 		<member firstname="Andrew" lastname="Koolhof" country="AUS" />
 		<member firstname="Claire" lastname="Butler" country="AUS" />
 	</team>
@@ -420,7 +420,7 @@
 		<member firstname="Simon" lastname="Sypek" country="AUS" />
 		<member firstname="Morgan" lastname="Atkinson" country="AUS" />
 	</team>
-	<team id="103" score="390" time="22:27:48" penalty="0" gender="mixed" age="ultraveteran">
+	<team id="103" score="390" time="22:27:48" penalty="0" gender="mixed" age="open">
 		<member firstname="Michael" lastname="Waskiel" country="AUS" />
 		<member firstname="Elsa" lastname="Burnell" country="AUS" />
 		<member firstname="Konrad" lastname="Romaniuk" country="AUS" />
