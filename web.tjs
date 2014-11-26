@@ -185,7 +185,9 @@ app.use(require('cookie-parser')());
 
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+
+var multipart = require('connect-multiparty');
 
 app.use(require('method-override')());
 app.use(require('express-session')({secret: 'too much to bear', resave: true, saveUninitialized: true}));
@@ -270,7 +272,7 @@ app.get('/', function(req, res) {
 });
 
 var eventsRoute = require('./route/events');
-eventsRoute.inject(pg, _dbUri);
+eventsRoute.inject(pg, fs, _dbUri);
 
 app.get('/events', function(req, res) {
 	pg.connect(_dbUri, function(err, client, done) {
@@ -289,6 +291,9 @@ app.get('/events', function(req, res) {
 
 app.get('/events/add', eventsRoute.add);
 app.post('/events/add', eventsRoute.add);
+
+app.get('/events/:event/upload', eventsRoute.upload);
+app.post('/events/:event/upload', multipart(), eventsRoute.upload);
 
 function pushQualified(qualified, type, criterion, criterion_qualified, eventIds) {
 	for(member in criterion_qualified.rows) {
