@@ -183,7 +183,7 @@ app.use(bodyParser.json())
 
 app.use(require('method-override')());
 app.use(require('express-session')({secret: 'too much to bear', resave: true, saveUninitialized: true}));
-app.use(require('connect-flash')());
+app.use(require('express-flash')());
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -691,7 +691,7 @@ app.get('/events/:event/results', function(req, res) {
 });
 
 app.get('/login', function(req, res) {
-	res.render('login', {identity: req.user, message: req.flash('error')});
+	res.render('login', {identity: req.user});
 });
 
 app.post('/login', passport.authenticate('local', {failureRedirect: '/login', failureFlash: true}), function(req, res) {
