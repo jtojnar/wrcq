@@ -73,7 +73,7 @@ module.exports.add = function(req, res) {
 
 
 module.exports.upload = function(req, res) {
-	if(false && !req.user) {
+	if(!req.user) {
 		res.redirect('/login');
 	} else {
 		pg.connect(_dbUri, function(err, client, done) {
