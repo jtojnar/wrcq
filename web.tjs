@@ -153,6 +153,12 @@ var helpers = {
 		} else {
 			return options.inverse(this);
 		}
+	},
+
+	selected: function(values, name, options) {
+		if(values.hasOwnProperty(name) && values[name] === true) {
+			return options.fn(this);
+		}
 	}
 }
 
@@ -178,7 +184,7 @@ app.set('view engine', 'hbs');
 app.use(require('cookie-parser')());
 
 var bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json())
 
 app.use(require('method-override')());
@@ -263,6 +269,9 @@ app.get('/', function(req, res) {
 	});
 });
 
+var eventsRoute = require('./route/events');
+eventsRoute.inject(pg, _dbUri);
+
 app.get('/events', function(req, res) {
 	pg.connect(_dbUri, function(err, client, done) {
 		await client.query('select * from link', defer(var row, links));
@@ -277,6 +286,9 @@ app.get('/events', function(req, res) {
 		res.render('events', {events: {events: events.rows}, pastEvents: {events: pastEvents.rows}, identity: req.user});
 	});
 });
+
+app.get('/events/add', eventsRoute.add);
+app.post('/events/add', eventsRoute.add);
 
 function pushQualified(qualified, type, criterion, criterion_qualified, eventIds) {
 	for(member in criterion_qualified.rows) {
