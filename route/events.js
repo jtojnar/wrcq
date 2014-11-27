@@ -108,16 +108,17 @@ module.exports.upload = function(req, res) {
 
 								var xml = ['<results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="results.xsd">'];
 
+								var sanitizer = require('sanitizer');
 								fs.createReadStream(req.files.data.path).pipe(require('fast-csv').parse(options)).on('data', function(data) {
 									if(Object.keys(data).length > 0) {
-										xml.push('	<team id="' + data.id + '" score="' + data.score + '" time="' + data.time + '" penalty="' + data.penalty + '" gender="' + data.gender + '" age="' + data.age + '" name="' + data.name + '"' + (data.hasOwnProperty('status') && data.status !== '' ? ' status="' + data.status + '"' : '') + '>');
+										xml.push('	<team id="' + sanitizer.escape(data.id) + '" score="' + sanitizer.escape(data.score) + '" time="' + sanitizer.escape(data.time) + '" penalty="' + sanitizer.escape(data.penalty) + '" gender="' + sanitizer.escape(data.gender) + '" age="' + sanitizer.escape(data.age) + '" name="' + sanitizer.escape(data.name) + '"' + (data.hasOwnProperty('status') && data.status !== '' ? ' status="' + sanitizer.escape(data.status) + '"' : '') + '>');
 
 										var i = 1;
 										while(true) {
 											if(!data.hasOwnProperty('member' + i + 'firstname') || data['member' + i + 'firstname'] === '') {
 												break;
 											}
-											xml.push('		<member firstname="' + data['member' + i + 'firstname'] + '" lastname="' + data['member' + i + 'lastname'] + '" country="' + data['member' + i + 'country'] + '" />');
+											xml.push('		<member firstname="' + sanitizer.escape(data['member' + i + 'firstname']) + '" lastname="' + sanitizer.escape(data['member' + i + 'lastname']) + '" country="' + sanitizer.escape(data['member' + i + 'country']) + '" />');
 											i++;
 										}
 										xml.push('	</team>');
@@ -200,7 +201,6 @@ function processXML(event, data, client, done, cb) {
 				members.push(member);
 			}
 		}
-		console.log(members);
 
 		client.query('delete from team where event_id = $1', [event.id], function(err) {
 			if(err) {
