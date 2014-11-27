@@ -1,0 +1,6 @@
+name,age,gender,penalty,time,score,id,member1country,member1lastname,member1firstname,member2country,member2lastname,member2firstname
+Offwidth,veteran,men,0,23:31:23,1190,1313,USA,Engovatov,Daniel,USA,Graube,Peter
+MUV,ultraveteran,men,0,21:52:33,940,1314,USA,Brake Jr.,V. Glen,USA,Laird,Bud
+Team Tubac,veteran,mixed,0,20:10:15,640,1315,USA,Poe,Brad,USA,Poe,Yvonne P.
+Nightcrawlers,ultraveteran,mixed,0,23:00:39,610,1319,USA,Smith,Eric,USA,Smith,Mary
+HalFastAsleep,superveteran,mixed,0,23:32:18,510,1320,USA,Kuestner,Sue,USA,Wyatt-Mair,Gavin
