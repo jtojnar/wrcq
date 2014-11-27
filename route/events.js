@@ -116,7 +116,7 @@ module.exports.upload = function(req, res) {
 										if(!data.hasOwnProperty('member' + i + 'firstname') || data['member' + i + 'firstname'] === '') {
 											break;
 										}
-										xml.push('		<member firstname="' + data['member' + i + 'firstname'] + '" lastname="' + data['member' + i + 'firstname'] + '" country="' + data['member' + i + 'country'] + '" />');
+										xml.push('		<member firstname="' + data['member' + i + 'firstname'] + '" lastname="' + data['member' + i + 'lastname'] + '" country="' + data['member' + i + 'country'] + '" />');
 										i++;
 									}
 									xml.push('	</team>');
@@ -195,6 +195,7 @@ function processXML(event, data, client, done, cb) {
 				members.push(member);
 			}
 		}
+		console.log(members);
 
 		client.query('delete from team where event_id = $1', [event.id], function(err) {
 			if(err) {
