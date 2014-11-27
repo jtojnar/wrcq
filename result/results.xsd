@@ -70,6 +70,7 @@
 								<xs:restriction base="xs:string">
 									<xs:enumeration value="not started" />
 									<xs:enumeration value="not finished" />
+									<xs:enumeration value="withdrawn" />
 									<xs:enumeration value="overtime" />
 									<xs:enumeration value="disqualified" />
 									<xs:enumeration value="out of competition" />
