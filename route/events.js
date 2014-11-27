@@ -109,11 +109,11 @@ module.exports.upload = function(req, res) {
 
 							fs.createReadStream(req.files.data.path).pipe(require('fast-csv').parse(options)).on('data', function(data) {
 								if(Object.keys(data).length > 0) {
-									xml.push('	<team id="' + data.id + '" score="' + data.score + '" time="' + data.time + '" penalty="' + data.penalty + '" gender="' + data.gender + '" age="' + data.age + '" name="' + data.name + '"' + (data.hasOwnProperty('status') ? ' status="' + data.status + '"' : '') + '>');
+									xml.push('	<team id="' + data.id + '" score="' + data.score + '" time="' + data.time + '" penalty="' + data.penalty + '" gender="' + data.gender + '" age="' + data.age + '" name="' + data.name + '"' + (data.hasOwnProperty('status') && data.status !== '' ? ' status="' + data.status + '"' : '') + '>');
 
 									var i = 1;
 									while(true) {
-										if(!data.hasOwnProperty('member' + i + 'firstname')) {
+										if(!data.hasOwnProperty('member' + i + 'firstname') || data['member' + i + 'firstname'] === '') {
 											break;
 										}
 										xml.push('		<member firstname="' + data['member' + i + 'firstname'] + '" lastname="' + data['member' + i + 'firstname'] + '" country="' + data['member' + i + 'country'] + '" />');
@@ -127,6 +127,7 @@ module.exports.upload = function(req, res) {
 
 								processXML(eventdata.rows[0], xml, client, done, function(err) {
 									if(err) {
+										console.error(err);
 										req.flash('danger', err);
 										res.render('events_upload', {identity: req.user, values: values});
 									} else {
@@ -142,6 +143,7 @@ module.exports.upload = function(req, res) {
 								}
 								processXML(eventdata.rows[0], data, client, done, function(err) {
 									if(err) {
+										console.error(err);
 										req.flash('error', err);
 										res.render('events_upload', {identity: req.user, values: values});
 									} else {
@@ -178,6 +180,8 @@ function processXML(event, data, client, done, cb) {
 		for(var i = 0; i < results.results.team.length; i++) {
 			team = results.results.team[i].$;
 			team.event_id = event.id;
+			team.name = team.name || '';
+			team.status = team.status || 'finished';
 			team.duration = team.duration ? team.duration : 24;
 			teams.push(team);
 
