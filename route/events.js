@@ -99,59 +99,64 @@ module.exports.upload = function(req, res) {
 					values.data_type_iof = formSent && req.body.data_type === 'iof';
 
 					if(formSent) {
-						if(req.body.data_type === 'csv' || req.body.data_type === 'ssv') {
-							var options = {headers: true};
-							if(req.body.data_type === 'ssv') {
-								options.delimiter = ';';
-							}
+						if(req.files.hasOwnProperty('data') && req.files.data.size > 0) {
+							if(req.body.data_type === 'csv' || req.body.data_type === 'ssv') {
+								var options = {headers: true};
+								if(req.body.data_type === 'ssv') {
+									options.delimiter = ';';
+								}
 
-							var xml = ['<results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="results.xsd">'];
+								var xml = ['<results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="results.xsd">'];
 
-							fs.createReadStream(req.files.data.path).pipe(require('fast-csv').parse(options)).on('data', function(data) {
-								if(Object.keys(data).length > 0) {
-									xml.push('	<team id="' + data.id + '" score="' + data.score + '" time="' + data.time + '" penalty="' + data.penalty + '" gender="' + data.gender + '" age="' + data.age + '" name="' + data.name + '"' + (data.hasOwnProperty('status') && data.status !== '' ? ' status="' + data.status + '"' : '') + '>');
+								fs.createReadStream(req.files.data.path).pipe(require('fast-csv').parse(options)).on('data', function(data) {
+									if(Object.keys(data).length > 0) {
+										xml.push('	<team id="' + data.id + '" score="' + data.score + '" time="' + data.time + '" penalty="' + data.penalty + '" gender="' + data.gender + '" age="' + data.age + '" name="' + data.name + '"' + (data.hasOwnProperty('status') && data.status !== '' ? ' status="' + data.status + '"' : '') + '>');
 
-									var i = 1;
-									while(true) {
-										if(!data.hasOwnProperty('member' + i + 'firstname') || data['member' + i + 'firstname'] === '') {
-											break;
+										var i = 1;
+										while(true) {
+											if(!data.hasOwnProperty('member' + i + 'firstname') || data['member' + i + 'firstname'] === '') {
+												break;
+											}
+											xml.push('		<member firstname="' + data['member' + i + 'firstname'] + '" lastname="' + data['member' + i + 'lastname'] + '" country="' + data['member' + i + 'country'] + '" />');
+											i++;
 										}
-										xml.push('		<member firstname="' + data['member' + i + 'firstname'] + '" lastname="' + data['member' + i + 'lastname'] + '" country="' + data['member' + i + 'country'] + '" />');
-										i++;
+										xml.push('	</team>');
 									}
-									xml.push('	</team>');
-								}
-							}).on('end', function() {
-								xml.push('</results>');
-								xml = xml.join('\n');
+								}).on('end', function() {
+									xml.push('</results>');
+									xml = xml.join('\n');
 
-								processXML(eventdata.rows[0], xml, client, done, function(err) {
-									if(err) {
-										console.error(err);
-										req.flash('danger', err);
-										res.render('events_upload', {identity: req.user, values: values});
-									} else {
-										res.redirect('/events/' + req.params.event + '/results');
-									}
+									processXML(eventdata.rows[0], xml, client, done, function(err) {
+										if(err) {
+											console.error(err);
+											req.flash('danger', err);
+											res.render('events_upload', {identity: req.user, values: values});
+										} else {
+											res.redirect('/events/' + req.params.event + '/results');
+										}
+									});
 								});
-							});
-						} else if(req.body.data_type === 'irf') {
-							fs.readFile(req.files.data.path, function(err, data) {
-								if (err) {
-									done();
-									throw err;
-								}
-								processXML(eventdata.rows[0], data, client, done, function(err) {
-									if(err) {
-										console.error(err);
-										req.flash('error', err);
-										res.render('events_upload', {identity: req.user, values: values});
-									} else {
-										req.flash('success', 'Results were updated.');
-										res.redirect('/events/' + req.params.event + '/results');
+							} else if(req.body.data_type === 'irf') {
+								fs.readFile(req.files.data.path, function(err, data) {
+									if (err) {
+										done();
+										throw err;
 									}
+									processXML(eventdata.rows[0], data, client, done, function(err) {
+										if(err) {
+											console.error(err);
+											req.flash('error', err);
+											res.render('events_upload', {identity: req.user, values: values});
+										} else {
+											req.flash('success', 'Results were updated.');
+											res.redirect('/events/' + req.params.event + '/results');
+										}
+									});
 								});
-							});
+							}
+						} else {
+							req.flash('danger', 'Please provide a file.');
+							res.render('events_upload', {identity: req.user, values: values});
 						}
 					} else {
 						res.render('events_upload', {identity: req.user, values: values});
