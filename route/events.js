@@ -94,14 +94,20 @@ module.exports.upload = function(req, res) {
 					var values = req.body;
 
 					values.data_type_csv = !formSent || req.body.data_type === 'csv';
+					values.data_type_ssv = formSent && req.body.data_type === 'ssv';
 					values.data_type_irf = formSent && req.body.data_type === 'irf';
 					values.data_type_iof = formSent && req.body.data_type === 'iof';
 
 					if(formSent) {
-						if(req.body.data_type === 'csv') {
+						if(req.body.data_type === 'csv' || req.body.data_type === 'ssv') {
+							var options = {headers: true};
+							if(req.body.data_type === 'ssv') {
+								options.delimiter = ';';
+							}
+
 							var xml = ['<results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="results.xsd">'];
 
-							fs.createReadStream(req.files.data.path).pipe(require('fast-csv').parse({headers: true})).on('data', function(data) {
+							fs.createReadStream(req.files.data.path).pipe(require('fast-csv').parse(options)).on('data', function(data) {
 								if(Object.keys(data).length > 0) {
 									xml.push('	<team id="' + data.id + '" score="' + data.score + '" time="' + data.time + '" penalty="' + data.penalty + '" gender="' + data.gender + '" age="' + data.age + '" name="' + data.name + '"' + (data.hasOwnProperty('status') ? ' status="' + data.status + '"' : '') + '>');
 
