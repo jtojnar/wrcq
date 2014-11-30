@@ -263,7 +263,7 @@ updatesRoute.inject(pg, _dbUri);
 
 app.get('/', function(req, res) {
 	pg.connect(_dbUri, function(err, client, done) {
-		await client.query('select * from update order by timestamp desc limit 10', defer(var row, updates));
+		await client.query('select * from update order by timestamp desc limit 5', defer(var row, updates));
 		await client.query('select * from link', defer(var row, links));
 		links = links.rows;
 		var eventsQuery = client.query('select * from event left join (select event_id from team group by event_id) as team on team.event_id = event.id where level=\'world\' order by start asc', function() {});
