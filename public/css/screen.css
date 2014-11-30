@@ -1,0 +1,52 @@
+.container {
+	margin-top: 2em;
+}
+.user-panel {
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
+.news dt {
+	width: 100px;
+}
+.news dd {
+	 margin-left: 120px;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.irf-link {
+	width: 50px;
+}
+header a {
+	color: inherit;
+}
+header {
+	position: relative;
+}
+header .irf-link {
+	color: #aaaaac;
+	font-size: 65%;
+	text-align: center;
+	position: absolute;
+	left: -70px;
+}
+header .irf-link span {
+	white-space: nowrap;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -50px;
+	width: 100px;
+}
+
+textarea {
+	min-width: 100%;
+	max-width: 100%;
+}
+.edit-update {
+	background-color: transparent;
+	border-color: transparent;
+	padding: 1px;
+}
