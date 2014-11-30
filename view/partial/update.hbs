@@ -6,7 +6,8 @@
 <dt>{{#if ../identity}}<button class="btn btn-xs edit-update" data-id="{{{id}}}" type="button" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>{{/if}}{{date timestamp}}</dt><dd>{{{text}}}</dd>
 {{/each}}
 </dl>
-
+{{#unless first}}<p><a href="/archive">Older updates</a></p>{{/unless}}
+{{#unless last}}<p><a href="/archive">Newer updates</a></p>{{/unless}}
 {{#if identity}}
 {{#extend 'bottom'}}
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
