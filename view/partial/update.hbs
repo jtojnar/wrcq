@@ -1,5 +1,3 @@
-<h2>{{title 'News'}}{{#if identity}}<button class="btn btn-xs" id="show-form" type="button" title="Add update"><span class="glyphicon glyphicon-plus"></span></button>{{/if}}</h2>
-
 <dl class="dl-horizontal news">
 {{#if identity}}<dt></dt><dd><form action="" method="post" id="update-form"><textarea name="content" id="content" class="form-control"></textarea><button class="btn btn-primary btn-block" id="update-add" type="submit" title="Update"><span class="glyphicon glyphicon-plus"></span></button></form></dd>{{/if}}
 {{#each updates}}
