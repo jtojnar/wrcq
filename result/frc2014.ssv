@@ -1,0 +1,48 @@
+name;age;gender;penalty;time;score;id;member1country;member1lastname;member1firstname;member2country;member2lastname;member2firstname;member3country;member3lastname;member3firstname
+Team Välivuosi 2;open;men;0;23:45:47;2850;7;FIN;Mikkola;Jarno;FIN;Toimela;Niko
+Lupus Extreme;open;mixed;0;23:58:01;2480;51;FIN;Snellman;Janne;FIN;Vapaaoksa;Jenni
+Ozona Unda;open;women;0;23:38:00;2180;24;LAT;Jakovela;Aiva;LAT;Brazune;Alda
+Veli Mäen Säätiö;open;men;0;23:46:48;2180;6;FIN;Korkeakangas;Antti;FIN;Nikkola;Hannu;FIN;Lehtimäki;Harri
+RC Eemeli;veteran;men;0;22:28:31;2110;15;FIN;Lahtonen;Tommi;FIN;Leskelä;Jyrki
+KOMOD;veteran;men;0;22:43:01;2060;13;RUS;Molotkov;Andrey;RUS;Komin;Igor
+RasKun flikat;open;women;0;22:59:19;1950;23;FIN;Heittola;Suvi;FIN;Heittola;Satu;FIN;Ojala;Leena
+Viimeiset pirkkalaiset;veteran;men;0;22:16:12;1880;17;FIN;Hyvärinen;Vesa;FIN;Koskinen;Tapani
+Vaarojen Maraton;veteran;men;0;16:54:03;1800;18;FIN;Holttinen;O-P;FIN;Säämänen;Juha
+Paha Rasti 2;open;men;0;20:56:51;1760;8;FIN;Liponkoski;Sami;FIN;Maksimainen;Ville;FIN;Mäkelä;Pete
+Resistance;open;mixed;0;22:16:24;1730;45;FIN;Lassila;Ilkka;FIN;Toppila;Anni
+Raivojuoksijat;open;men;0;14:58:32;1520;4;FIN;Humppi;Manu;FIN;Pitkäkoski;Jari
+Rekolan Raikas;superveteran;mixed;0;23:39:08;1520;55;FIN;Haapomaa;Helena;FIN;Haapomaa;Eki
+Aarnivalkea;open;men;0;20:18:35;1510;1;FIN;Junkkaala;Jouni;FIN;Sakko;Janne
+Atqsi;veteran;men;0;19:27:29;1490;12;FIN;Valasma;Harri;FIN;Hietala;Aki
+Team-TK;veteran;men;0;23:20:34;1480;14;FIN;Uusitalo;Jaakko;FIN;Ujanen;Olavi
+Almost 1life;veteran;mixed;0;12:25:10;1460;60;FIN;Silventoinen;Ulla;FIN;Ruuska;Matti
+Centipede;veteran;women;0;23:37:34;1430;31;RUS;Krylova;Elena;RUS;Slobodenyuk;Svetlana
+Duck Intelligence;open;mixed;0;23:02:59;1420;41;FIN;Mannila;Minna;FIN;Koivunen;Petri
+Lumioksa;open;mixed;0;15:39:38;1400;47;FIN;Luusalo;Mikko;FIN;Okker;Saija
+Ilves;veteran;mixed;0;23:02:45;1390;57;EST;Sarap;Margus;EST;Ainelo;Juta
+Vuorentaustan Vega;veteran;mixed;0;22:20:25;1320;59;FIN;Viilola;Merja;FIN;Denks;Jan
+Festina Lente;superveteran;men;0;23:39:28;1270;11;EST;Kuiv;Sulev;EST;Eomois;Peep
+Luxus;open;women;0;21:24:25;1260;27;FIN;Vuosku;Tiina;FIN;Kaipainen;Jenni;FIN;Soini;Mari
+Hungry Birds ;veteran;women;0;23:34:32;1220;32;FIN;Sirpa;Rauhala;FIN;Hanna;Niinimäki
+Team Arkalokki;open;mixed;0;15:38:22;1210;53;FIN;Heinonen;Ilkka;FIN;Heinonen;Karoliina
+Nokian Torpedo;open;mixed;0;16:06:00;1210;44;FIN;Tomminen;Antti;FIN;Kangaspunta;Veera;FIN;Vartiala;Matti-Olavi
+zola;superveteran;women;0;23:42:55;1200;28;RUS;Molotkova;Zoia;RUS;Uspenskaya;Larisa;RUS;Lisenenkova;Elena
+Jähijät;open;men;0;20:31:56;1190;5;FIN;Kotiranta;Olli;FIN;Turunen;Teemu;FIN;Kalliomäki;Antti
+Sisko ja sen veli;open;mixed;0;23:08:51;1190;54;FIN;Hemminki;Heini;FIN;Rantoja;Jussi
+Team Asana;open;mixed;0;22:57:04;1180;49;FIN;Erkkilä;Anniina;FIN;Nuoranto;Olli
+Paha Rasti 1;open;women;0;23:33:17;1180;25;FIN;Liponkoski;Teija;FIN;Moisio;Malin;FIN;Piesala;Johanna
+Hikers and nerds;open;men;0;14:59:05;1160;9;RUS;Misharev;Vasiliy;RUS;Mayorov;Roman
+OL-UT;open;women;0;23:28:16;1140;26;FIN;Kujala;Terhi;FIN;Kangasaho;Essi
+Team MC-HC;open;men;0;11:38:44;1090;2;FIN;Sarin;Johannes;FIN;Jansson;Mathias
+Kiwibird;open;mixed;0;16:53:51;1080;50;RUS;Ivanov;Vladimir;RUS;Anokhina;Galina
+Suksitta Suolle;veteran;men;0;23:02:12;1060;16;FIN;Härkönen;Kari;FIN;Lehtilä;Tarmo
+Tilanteen mukaista toimintaa;open;men;0;11:46:48;1030;3;FIN;Jutila;Antti;FIN;Paananen;Veli-Matti
+Nastolan Terä 1;superveteran;women;0;23:42:29;1030;29;FIN;Rantalainen;Tuija;FIN;Rantalainen;Arja
+Eräoravat;open;mixed;0;11:45:31;960;48;FIN;Lahdenniemi;Jussi;FIN;Lahdenniemi;Eeva
+HiPe;superveteran;mixed;0;23:03:47;950;56;FIN;Syväterä;Hillevi;FIN;Syväterä;Pekka
+Orange Team Hayabusa;open;mixed;0;13:23:04;920;52;FIN;Mäkelä;Tomi;FIN;Ylihärsilä;Merja
+TosiPahaRasti;open;mixed;0;14:42:50;820;43;FIN;Merilä;Reetta;FIN;Lehto;Matti
+HTRC 1;open;mixed;0;11:27:23;730;46;FIN;Hankivuo;Samuli;FIN;Merimaa;Katja
+kominy;open;mixed;0;10:38:53;540;42;RUS;Komina;Anna;RUS;Komin;Petr
+Night Macrame;open;women;0;10:07:15;500;22;RUS;Lisenenkova;Anna;RUS;Grigoryeva;Anastasia
+Maatuivat;superveteran;women;0;9:24:33;220;30;FIN;Laine;Tuire;FIN;Laine;Maarit

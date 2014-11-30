@@ -46,7 +46,7 @@
 	</team>
 	<team id="12" score="311" time="23:50:01" penalty="0" gender="men" age="veteran">
 		<member firstname="Viacheslav" lastname="Savchenko" country="RUS" />
-		<member firstname="Volodymyr" lastname="Shpetniy" country="UKR" />
+		<member firstname="Volodyimir" lastname="Shpetniy" country="UKR" />
 	</team>
 	<team id="13" score="308" time="23:28:03" penalty="0" gender="men" age="open">
 		<member firstname="Jon Ander" lastname="Arambalza" country="ESP" />
@@ -547,7 +547,7 @@
 	<team id="133" score="159" time="22:30:53" penalty="0" gender="mixed" age="junior">
 		<member firstname="Mykola" lastname="Kobets" country="UKR" />
 		<member firstname="Yulia" lastname="Kobets" country="UKR" />
-		<member firstname="Volodymyr" lastname="Bezditniy" country="UKR" />
+		<member firstname="Volodimir" lastname="Bezditniy" country="UKR" />
 	</team>
 	<team id="134" score="158" time="23:37:37" penalty="0" gender="men" age="superveteran">
 		<member firstname="Ricard" lastname="Masferrer" country="ESP" />

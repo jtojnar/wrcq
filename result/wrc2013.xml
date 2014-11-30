@@ -86,7 +86,7 @@
 	</team>
 	<team id="90" name="Savchenko-Shpetniy" score="2780" time="23:45:30" penalty="0" gender="men" age="veteran">
 		<member firstname="Viacheslav" lastname="Savchenko" country="RUS" />
-		<member firstname="Volodymyr" lastname="Shpetniy" country="UKR" />
+		<member firstname="Volodimir" lastname="Shpetniy" country="UKR" />
 	</team>
 	<team id="181" name="Shimchuk-Shimchuk" score="2760" time="23:32:54" penalty="0" gender="men" age="open">
 		<member firstname="Ruslan" lastname="Shimchuk" country="UKR" />
@@ -249,7 +249,7 @@
 		<member firstname="Valentyna" lastname="Bevso" country="UKR" />
 	</team>
 	<team id="143" name="Kelia-Kelia" score="2340" time="23:36:04" penalty="0" gender="men" age="junior">
-		<member firstname="Viaceslav" lastname="Kelia" country="UKR" />
+		<member firstname="Viacheslav" lastname="Kelia" country="UKR" />
 		<member firstname="Andriy" lastname="Kelia" country="UKR" />
 	</team>
 	<team id="379" name="Pavlov-Mugichkov" score="2340" time="23:38:51" penalty="0" gender="men" age="open">

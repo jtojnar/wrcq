@@ -1,0 +1,45 @@
+name;age;gender;penalty;time;status;score;id;member1country;member1lastname;member1firstname;member2country;member2lastname;member2firstname;member3country;member3lastname;member3firstname;member4country;member4lastname;member4firstname
+MTK Zelesta;open;men;0;23:53:12;;268;1222;UKR;Sheshukov;Oleksandr;UKR;Dmitryuk;Oleksandr
+Machnovci;open;men;0;23:44:56;;229;1301;UKR;Martinov;Dmitro;UKR;Sirinyuk;Sergiy;UKR;Yaroshenko;Sergiy
+MIDIZ_MSV;superveteran;men;0;22:53:25;;222;136;UKR;Ліпка;Володимир;UKR;Шульга;Валерій
+Лідер-тур_2;junior;men;0;23:20:26;;194;1272;UKR;Романов;Георгій;UKR;Кошовий;Ярослав
+МІДІЗ_1;junior;men;0;23:09:47;;181;12;UKR;Келя;Андрій;UKR;Келя;Вячеслав
+МІДІЗ_10;open;men;0;23:32:12;;155;15;UKR;Михайлов;Олександр;UKR;Волошін;Олександр
+Львів_ІвФр;open;men;0;10:59:42;;142;1281;UKR;Моспан;Сергій;UKR;Пажух;Ярослав
+Алчевск;open;men;0;23:11:19;;142;1072;UKR;Кисаков;Дмитрий;UKR;Базаров;Микола
+Чернівецька_2;junior;men;0;23:44:13;;143;162;UKR;Неделько;Анатолій;UKR;Лупуляк;Дмитро
+Львівська 2;junior;men;0;15:45:10;;135;1292;UKR;Степаненко;Роман;UKR;Гощицький;Володимир
+Інтер СММ 4;junior;men;0;23:15:01;;133;78;UKR;Турецькій;Сергій;UKR;Білий;Владислав
+Інтер СММ 9;junior;men;0;23:25:40;;126;76;UKR;Мокрієнко;Ігор;UKR;Собко;Максим
+Інтер СММ 6;junior;men;0;23:25:47;;126;2;UKR;Саїн;Андрій;UKR;Гамалюк;Юрій
+Черв.Діброва_1;open;men;0;17:37:27;;123;1401;UKR;Заморський;Олег;UKR;Москалюк;Іван
+Fox;open;men;0;23:25:17;;115;1061;UKR;Добросердов;Дмитро;UKR;Шабалін;Сергій
+Глибока-4;junior;men;0;23:29:14;;109;9;UKR;Неделько;Олексій;UKR;Горло;Роман
+Калуш_3;junior;men;0;23:21:54;;102;1211;UKR;Гнатишин;Володимир;UKR;Мельник;Юрій
+Глибока-3;junior;men;0;12:54:21;;51;127;UKR;Лупуляк;Олександр;UKR;Ванзуряк;Олександр
+Інваспорт;junior;men;0;4:56:43;;43;133;UKR;Калараш;Ігор;UKR;Мендрешора;Петро;UKR;Горик;Юрій
+МІДІЗ_5;veteran;women;0;23:44:31;;128;53;UKR;Nikitina;Olga;UKR;Bevzo;Valentina
+Глибока-2;open;women;0;8:49:29;;71;128;UKR;Melenko;Olga;UKR;Yemelyanova;Lyudmila
+Інтер СММ 8;junior;women;0;21:54:57;;58;88;UKR;Кукуляк;Яна;UKR;Штефанюк;Каріна
+ДЮСШ 4_1;junior;women;0;7:39:29;;19;108;UKR;Андрусяк;Євгенія;UKR;Чистякова;Анастасія
+Глибока-1;open;mixed;0;22:49:44;;181;121;UKR;Sandul;Dmitro;UKR;Shelepyuk;Natalia;UKR;Lupuljak;Volodimir
+Вовки;open;mixed;0;22:13:00;;175;1113;UKR;Melnik;Taras;UKR;Golovachek;Yuriy;UKR;Voytovich;Irina
+Лідер-тур_1;open;mixed;0;23:31:31;;173;1261;UKR;Калінкін;Олександр;UKR;Яременко;Євгенія
+ХЦДЮТ-ДЮСШ;junior;mixed;0;22:22:58;;163;1391;UKR;Пікулін;Вячеслав;UKR;Поляниця;Ольга
+Інтер СММ 1;open;mixed;0;22:52:42;;149;84;UKR;Кирилова;Любов;UKR;Арсенюк;Михайло
+Визит;open;mixed;0;23:49:47;;148;1102;UKR;Шуняков;Володимир;UKR;Тарабановська;Наталі
+Черв.Діброва_2;veteran;mixed;0;17:41:00;;130;1411;UKR;Баранюк;Володимир;UKR;Савченко;Ніна
+ДЮСШ-4_2;junior;mixed;0;23:25:52;;117;112;UKR;Поповецька;Марина;UKR;Колчанов;Олександр
+Артеріум;open;mixed;0;23:58:21;;102;1091;UKR;Зволінська;Наталія;UKR;Сур;Сергей
+Калуш_1;junior;mixed;0;20:16:36;;92;1182;UKR;Ковбасюк;Микола;UKR;Бобик;Ілона;UKR;Гудз;Андрій
+Інтер СММ 7;junior;mixed;0;22:49:50;;89;81;UKR;Цера;Василь;UKR;Ковцун;Ганна
+КНУім.Шевченко;junior;mixed;0;23:59:53;;88;1251;UKR;Блюмина;Катерина;UKR;Святенко;Андрей
+Алч.странники;superveteran;mixed;0;23:40:51;;81;1082;UKR;Шур;Юрий;UKR;Дрітова;Тетяна
+Інтер СММ 2;open;mixed;0;8:32:05;;76;86;UKR;Марченко;Ганна;UKR;Тіхонов;Роман
+Чернівецька_3;junior;mixed;0;19:29:13;;56;35;UKR;Копчинский;Андрій;UKR;Нігда;Олена;UKR;Карамишев;Віталій
+Інтер СММ 3;junior;mixed;0;19:15:10;;52;34;UKR;Мордасов;Влад;UKR;Ясько;Діана
+МІДІЗ_7;junior;mixed;0;4:56:29;;43;51;UKR;Затинайченко;Ксенія;UKR;Терице;Дмитро
+Калуш_2;junior;mixed;0;1:01:04;;21;1201;UKR;Мельницька;Іванна;UKR;Боднарук;Василь
+Херсонська;junior;mixed;0;22:49:04;;188;1601;UKR;Shuper;Maria;UKR;Bodnaruk;Vasil
+Калуш_4;junior;mixed;26;0;not finished;0;1501;UKR;Метелишин;Тетяна;UKR;Мехалків;Андрій;UKR;Коробко;Роман;UKR;Гончар;Олександр
+Харків;open;mixed;139;0;overtime;0;1382;UKR;Ратушна;Катерина;UKR;Пуговкін;Антон
