@@ -703,7 +703,7 @@ app.get('/events/:event/results', function(req, res) {
 			wo: {teams: wo.rows},
 			identity: req.user,
 			is: displayedCategories,
-			activeCategory: req.query.hasOwnProperty('category') ? req.query.category : null,
+			activeCategory: req.query.hasOwnProperty('category') && req.query.category != '' ? req.query.category : null,
 			categories: categories,
 			counters: JSON.stringify(counters),
 			activeDuration: activeDuration,
