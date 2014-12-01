@@ -678,10 +678,10 @@ app.get('/events/:event/results', function(req, res) {
 
 		var query = {};
 		if(isCategoryDefault || isDurationDefault) {
-			if(!isDurationDefault) {
+			if(req.query.hasOwnProperty('duration') && !isDurationDefault) {
 				query.duration = req.query.duration;
 			}
-			if(!isCategoryDefault) {
+			if(req.query.hasOwnProperty('category') && !isCategoryDefault) {
 				query.category = req.query.category;
 			}
 			res.redirect(url.format({pathname: req._parsedUrl.pathname, query: query}));
