@@ -136,6 +136,15 @@ module.exports.upload = function(req, res) {
 											res.redirect('/events/' + req.params.event + '/results');
 										}
 									});
+								}).on('error', function(err) {
+									if(err.message.indexOf('Unexpected Error: column header mismatch expected') === 0) {
+										err = err.message;
+									} else {
+										console.error(err);
+										err = 'Unknown error parsing csv.';
+									}
+									req.flash('danger', err);
+									res.render('events_upload', {identity: req.user, values: values});
 								});
 							} else if(req.body.data_type === 'irf') {
 								fs.readFile(req.files.data.path, function(err, data) {
