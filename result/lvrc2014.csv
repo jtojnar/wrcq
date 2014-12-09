@@ -1,5 +1,5 @@
 name;age;gender;penalty;time;status;score;id;member1country;member1lastname;member1firstname;member2country;member2lastname;member2firstname;member3country;member3lastname;member3firstname
-Ilmäraeksimatud;open;men;0;23:50:41;;434;312;LAT;Mirme;Sander;LAT;Ansko;Ilmar
+Ilmäraeksimatud;open;men;0;23:50:41;;434;312;EST;Mirme;Sander;EST;Ansko;Ilmar
 2 slapji krekli;veteran;mixed;0;23:59:49;;417;806;LAT;Liepiņa;Anita;LAT;Kaminskis;Valters
 Carpe Diem! PRO;veteran;men;0;23:58:20;;379;610;LAT;Hiie;Armo;LAT;Lehtla;Reigo
 GuN 2014;veteran;men;0;23:45:28;;370;606;LAT;Lucāns;Nikolajs;LAT;Pikurs;Gumtis
@@ -65,5 +65,5 @@ Nepareizais virziens;open;men;0;16:50:19;;104;311;LAT;Johansons;Nils;LAT;Seļms;
 Madona/Lejasciems;open;women;0;16:00:15;not finished;122;502;LAT;Āboliņa;Gerda;LAT;Krēsliņa;Linda;LAT;Švika;Jānis
 JAKS-2014;superveteran;men;0;13:27:52;not finished;105;906;LAT;Kučinskis;Arnolds;LAT;Skrūzmanis;Jānis
 Isostar Ņergas;open;mixed;0;12:29:36;not finished;156;518;LAT;Zumberga;Marta;LAT;Puriņš;Mārtiņš
-Ilze Čakle;open;women;0;23:49:48;out of competition;323;102;LAT;Čakle;Ilze
-Bebraine;open;women;-4;24:03:41;out of competition;150;512;LAT;Miglava;Rūta
+Ilze Čakle;open;women;0;23:49:48;out of competition;-323;102;LAT;Čakle;Ilze
+Bebraine;open;women;-4;24:03:41;out of competition;-150;512;LAT;Miglava;Rūta
