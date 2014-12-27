@@ -552,38 +552,37 @@ function addMembers(members, row) {
 var categoriesToObject = {MO: {age: 'open', gender: 'men'}, XO: {age: 'open', gender: 'mixed'}, WO: {age: 'open', gender: 'women'}, MV: {age: 'veteran', gender: 'men'}, XV: {age: 'veteran', gender: 'mixed'}, WV: {age: 'veteran', gender: 'women'}, MSV: {age: 'superveteran', gender: 'men'}, XSV: {age: 'superveteran', gender: 'mixed'}, WSV: {age: 'superveteran', gender: 'women'}, MUV: {age: 'ultraveteran', gender: 'men'}, XUV: {age: 'ultraveteran', gender: 'mixed'}, WUV: {age: 'ultraveteran', gender: 'women'}, MJ: {age: 'junior', gender: 'men'}, XJ: {age: 'junior', gender: 'mixed'}, WJ: {age: 'junior', gender: 'women'}, M18: {age: 'under18', gender: 'men'}, X18: {age: 'under18', gender: 'mixed'}, W18: {age: 'under18', gender: 'women'}, M20: {age: 'under20', gender: 'men'}, X20: {age: 'under20', gender: 'mixed'}, W20: {age: 'under20', gender: 'women'}, M23: {age: 'under23', gender: 'men'}, X23: {age: 'under23', gender: 'mixed'}, W23: {age: 'under23', gender: 'women'}};
 
 
-var categoryInheritance = {'ultraveteran': 'superveteran', 'superveteran': 'veteran', 'veteran': 'open'};
+var categoryInheritance = {'ultraveteran': 'superveteran', 'superveteran': 'veteran', 'veteran': 'open', 'junior': 'open', 'under20': 'open', 'under23': 'open'};
 var categoryInheritanceReverse = {};
 for(var cat in categoryInheritance) {
 	if(categoryInheritance.hasOwnProperty(cat)) {
-		categoryInheritanceReverse[categoryInheritance[cat]] = cat;
+		if(!categoryInheritanceReverse.hasOwnProperty(categoryInheritance[cat])) {
+			categoryInheritanceReverse[categoryInheritance[cat]] = [];
+		}
+		categoryInheritanceReverse[categoryInheritance[cat]].push(cat);
 	}
 }
 
-function getCategoryDescendants(gender, age, reverse) {
-	if(reverse) {
-		var categories = categoryInheritanceReverse;
-	} else {
-		var categories = categoryInheritance;
-	}
+function getCategoryDescendants(age, gender) {
+	var categories = categoryInheritance;
 	var ret = [];
 	ret.push(helpers.genderclass(gender)+helpers.ageclass(age));
 	if(categories.hasOwnProperty(age)) {
-		ret.push.apply(ret, getCategoryDescendants(gender, categories[age], reverse));
+		ret.push.apply(ret, getCategoryDescendants(categories[age], gender));
 	}
 	return ret;
 }
 
-function getAgeDescendants(age, reverse) {
-	if(reverse) {
-		var categories = categoryInheritanceReverse;
-	} else {
-		var categories = categoryInheritance;
-	}
+function getCategoryParents(age, gender) {
+	var categories = categoryInheritanceReverse;
 	var ret = [];
-	ret.push(age);
+	ret.push(gender ? helpers.genderclass(gender)+helpers.ageclass(age) : age);
 	if(categories.hasOwnProperty(age)) {
-		ret.push.apply(ret, getAgeDescendants(categories[age], reverse));
+		for (var subage in categories[age]) {
+			if (categories[age].hasOwnProperty(subage)) {
+				ret.push.apply(ret, getCategoryParents(categories[age][subage], gender));
+			}
+		}
 	}
 	return ret;
 }
@@ -607,7 +606,7 @@ app.get('/events/:event/results', function(req, res) {
 
 		await client.query('select * from member where event_id=$1', [event.id], defer(var row, members));
 		members = members.rows;
-		var openCategories = getAgeDescendants('open', true).join('\',\'');
+		var openCategories = getCategoryParents('open').join('\',\'');
 		var moquery = client.query('select * from team where event_id=$1 and gender=$2 and age in (\''+openCategories+'\') order by status=\'finished\' desc, score desc, time asc limit 3', [event.id, 'men'], function() {});
 		moquery.on('row', function(row) {addMembers(members, row);});
 		await moquery.on('end', defer(var mo));
@@ -639,7 +638,7 @@ app.get('/events/:event/results', function(req, res) {
 				categories.push(row.category);
 			}
 
-			var countToCategories = getCategoryDescendants(row.gender, row.age);
+			var countToCategories = getCategoryDescendants(row.age, row.gender);
 			for(var i = 0; i < countToCategories.length; i++) {
 				var countToCategory = countToCategories[i];
 				row[countToCategory] = increment(counters, row.duration, countToCategory);
@@ -647,7 +646,7 @@ app.get('/events/:event/results', function(req, res) {
 			row['place'] = increment(counters, row.duration, 'all');
 
 			if(req.query.category) {
-				var availableCategories = getCategoryDescendants(categoriesToObject[req.query.category].gender, categoriesToObject[req.query.category].age, true);
+				var availableCategories = getCategoryParents(categoriesToObject[req.query.category].age, categoriesToObject[req.query.category].gender);
 				var currentCategoryIsActive = (availableCategories.indexOf(row.category) > -1);
 			} else {
 				var currentCategoryIsActive = true;
