@@ -162,6 +162,33 @@ var helpers = {
 	}
 }
 
+function reverse(obj, bijective) {
+	var rev = {};
+	for (var key in obj) {
+		if (obj.hasOwnProperty(key)) {
+			if (bijective) {
+				rev[obj[key]] = key;
+			} else {
+				if (!rev.hasOwnProperty(obj[key])) {
+					rev[obj[key]] = [];
+				}
+				rev[obj[key]].push(key);
+			}
+		}
+	}
+	return rev;
+}
+
+function decodeCategory(cat) {
+	return {
+		gender: genderclassReverse[cat[0]],
+		age: ageclassReverse[cat.substr(1)]
+	};
+}
+
+var genderclassReverse = reverse(genderclass, true);
+var ageclassReverse = reverse(ageclass, true);
+
 var pg = require('pg');
 var moment = require('moment');
 
@@ -553,34 +580,26 @@ var categoriesToObject = {MO: {age: 'open', gender: 'men'}, XO: {age: 'open', ge
 
 
 var categoryInheritance = {'ultraveteran': 'superveteran', 'superveteran': 'veteran', 'veteran': 'open', 'junior': 'open', 'under20': 'open', 'under23': 'open'};
-var categoryInheritanceReverse = {};
-for(var cat in categoryInheritance) {
-	if(categoryInheritance.hasOwnProperty(cat)) {
-		if(!categoryInheritanceReverse.hasOwnProperty(categoryInheritance[cat])) {
-			categoryInheritanceReverse[categoryInheritance[cat]] = [];
-		}
-		categoryInheritanceReverse[categoryInheritance[cat]].push(cat);
-	}
-}
+var categoryInheritanceReverse = reverse(categoryInheritance);
 
-function getCategoryDescendants(age, gender) {
+function getCategoryParents(age, gender) {
 	var categories = categoryInheritance;
 	var ret = [];
-	ret.push(helpers.genderclass(gender)+helpers.ageclass(age));
-	if(categories.hasOwnProperty(age)) {
-		ret.push.apply(ret, getCategoryDescendants(categories[age], gender));
+	ret.push(gender ? helpers.genderclass(gender) + helpers.ageclass(age) : age);
+	if (categories.hasOwnProperty(age)) {
+		ret.push.apply(ret, getCategoryParents(categories[age], gender));
 	}
 	return ret;
 }
 
-function getCategoryParents(age, gender) {
+function getCategoryDescendants(age, gender) {
 	var categories = categoryInheritanceReverse;
 	var ret = [];
-	ret.push(gender ? helpers.genderclass(gender)+helpers.ageclass(age) : age);
-	if(categories.hasOwnProperty(age)) {
+	ret.push(gender ? helpers.genderclass(gender) + helpers.ageclass(age) : age);
+	if (categories.hasOwnProperty(age)) {
 		for (var subage in categories[age]) {
 			if (categories[age].hasOwnProperty(subage)) {
-				ret.push.apply(ret, getCategoryParents(categories[age][subage], gender));
+				ret.push.apply(ret, getCategoryDescendants(categories[age][subage], gender));
 			}
 		}
 	}
@@ -606,7 +625,7 @@ app.get('/events/:event/results', function(req, res) {
 
 		await client.query('select * from member where event_id=$1', [event.id], defer(var row, members));
 		members = members.rows;
-		var openCategories = getCategoryParents('open').join('\',\'');
+		var openCategories = getCategoryDescendants('open').join('\',\'');
 		var moquery = client.query('select * from team where event_id=$1 and gender=$2 and age in (\''+openCategories+'\') order by status=\'finished\' desc, score desc, time asc limit 3', [event.id, 'men'], function() {});
 		moquery.on('row', function(row) {addMembers(members, row);});
 		await moquery.on('end', defer(var mo));
@@ -620,7 +639,7 @@ app.get('/events/:event/results', function(req, res) {
 		var counters = {};
 		var durations = [];
 		var categories = [];
-		var displayedCategories = {};
+		var usedCategories = [];
 
 		var defaultDuration = 24;
 
@@ -638,7 +657,7 @@ app.get('/events/:event/results', function(req, res) {
 				categories.push(row.category);
 			}
 
-			var countToCategories = getCategoryDescendants(row.age, row.gender);
+			var countToCategories = getCategoryParents(row.age, row.gender);
 			for(var i = 0; i < countToCategories.length; i++) {
 				var countToCategory = countToCategories[i];
 				row[countToCategory] = increment(counters, row.duration, countToCategory);
@@ -646,8 +665,10 @@ app.get('/events/:event/results', function(req, res) {
 			row['place'] = increment(counters, row.duration, 'all');
 
 			if(req.query.category) {
-				var availableCategories = getCategoryParents(categoriesToObject[req.query.category].age, categoriesToObject[req.query.category].gender);
-				var currentCategoryIsActive = (availableCategories.indexOf(row.category) > -1);
+				var categoryDescendants = getCategoryDescendants(categoriesToObject[req.query.category].age, categoriesToObject[req.query.category].gender);
+				var availableCategories = categoryDescendants.slice();
+				Array.prototype.push.apply(availableCategories, getCategoryParents(categoriesToObject[req.query.category].age, categoriesToObject[req.query.category].gender));
+				var currentCategoryIsActive = (categoryDescendants.indexOf(row.category) > -1);
 			} else {
 				var currentCategoryIsActive = true;
 			}
@@ -655,8 +676,8 @@ app.get('/events/:event/results', function(req, res) {
 			var currentDurationIsActive = (parseInt(req.query.duration) === row.duration);
 			if((!req.query.category || currentCategoryIsActive) && (currentDurationIsDefault || currentDurationIsActive)) {
 				result.addRow(row);
-				if(!displayedCategories.hasOwnProperty(row.category)) {
-					displayedCategories[row.category] = 1;
+				if (usedCategories.indexOf(row.category) < 0) {
+					usedCategories.push(row.category);
 				}
 			}
 		});
@@ -674,6 +695,28 @@ app.get('/events/:event/results', function(req, res) {
 		var isDurationInvalid = (req.query.hasOwnProperty('duration') && durations.indexOf(parseInt(req.query.duration)) < 0);
 		var isCategoryDefault = (req.query.hasOwnProperty('category') && req.query.category === '');
 		var isDurationDefault = (req.query.hasOwnProperty('duration') && parseInt(req.query.duration) === defaultDuration);
+
+		var displayedCategories = {};
+		usedCategories.forEach(function(cat) {
+			cat = decodeCategory(cat);
+			var parents = getCategoryParents(cat.age, cat.gender);
+			parents.forEach(function(parent) {
+				if (!displayedCategories.hasOwnProperty(parent)) {
+					displayedCategories[parent] = 1;
+				}
+			});
+		});
+
+		var allCategories = [];
+		categories.forEach(function(cat) {
+			cat = decodeCategory(cat);
+			var parents = getCategoryParents(cat.age, cat.gender);
+			parents.forEach(function(parent) {
+				if (allCategories.indexOf(parent) < 0) {
+					allCategories.push(parent);
+				}
+			});
+		});
 
 		var query = {};
 		if(isCategoryDefault || isDurationDefault) {
@@ -703,7 +746,21 @@ app.get('/events/:event/results', function(req, res) {
 			identity: req.user,
 			is: displayedCategories,
 			activeCategory: req.query.hasOwnProperty('category') && req.query.category != '' ? req.query.category : null,
-			categories: categories,
+			categories: allCategories.sort(function(a, b) {
+				if (a[0] === b[0]) {
+					var aAge = ageclassReverse[a.substr(1)];
+					var bAge = ageclassReverse[b.substr(1)];
+					if (aAge === bAge || (!getCategoryDescendants(aAge).indexOf(bAge) < 0 && !getCategoryDescendants(bAge).indexOf(aAge) < 0)) {
+						return 0;
+					} else if (!getCategoryDescendants(aAge).indexOf(bAge) < 0) {
+						return -1;
+					} else {
+						return 1;
+					}
+				} else {
+					return a[0] < b[0] ? -1 : 1;
+				}
+			}),
 			counters: JSON.stringify(counters),
 			activeDuration: activeDuration,
 			durations: durations.length > 1 ? durations : null
