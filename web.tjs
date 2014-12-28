@@ -580,6 +580,7 @@ var categoriesToObject = {MO: {age: 'open', gender: 'men'}, XO: {age: 'open', ge
 
 
 var categoryInheritance = {'ultraveteran': 'superveteran', 'superveteran': 'veteran', 'veteran': 'open', 'junior': 'open', 'under20': 'open', 'under23': 'open'};
+var categorySorting = {'ultraveteran': [], 'superveteran': ['ultraveteran'], 'veteran': ['superveteran', 'ultraveteran'], 'open': ['veteran', 'superveteran', 'ultraveteran'], 'youth': ['open', 'veteran', 'superveteran', 'ultraveteran'], 'junior': ['youth', 'open', 'veteran', 'superveteran', 'ultraveteran'], 'under23': ['junior', 'youth', 'open', 'veteran', 'superveteran', 'ultraveteran'], 'under20': ['under23', 'junior', 'youth', 'open', 'veteran', 'superveteran', 'ultraveteran']};
 var categoryInheritanceReverse = reverse(categoryInheritance);
 
 function getCategoryParents(age, gender) {
@@ -750,12 +751,13 @@ app.get('/events/:event/results', function(req, res) {
 				if (a[0] === b[0]) {
 					var aAge = ageclassReverse[a.substr(1)];
 					var bAge = ageclassReverse[b.substr(1)];
-					if (aAge === bAge || (!getCategoryDescendants(aAge).indexOf(bAge) < 0 && !getCategoryDescendants(bAge).indexOf(aAge) < 0)) {
+
+					if (aAge === bAge) {
 						return 0;
-					} else if (!getCategoryDescendants(aAge).indexOf(bAge) < 0) {
-						return -1;
-					} else {
+					} else if (categorySorting[aAge].indexOf(bAge) < 0) {
 						return 1;
+					} else {
+						return -1;
 					}
 				} else {
 					return a[0] < b[0] ? -1 : 1;
