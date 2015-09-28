@@ -265,50 +265,55 @@ function processIOF(event, data, client, done, cb) {
 		var currentTeam;
 
 		var classes = results.ResultList.ClassResult;
-		for (var i = 0; i < classes.length; i++) {
-			var classTeams = classes[i].TeamResult;
-			var classAbbr = classes[i].Class[0].Name[0];
-			var classDecoded = helpers.decodeCategory(classAbbr);
-			for (var j = 0; j < classTeams.length; j++) {
-				currentTeam = classTeams[j];
+		try {
+			for (var i = 0; i < classes.length; i++) {
+				var classTeams = classes[i].TeamResult;
+				var classAbbr = classes[i].Class[0].Name[0];
+				var classDecoded = helpers.decodeCategory(classAbbr);
+				for (var j = 0; j < classTeams.length; j++) {
+					currentTeam = classTeams[j];
 
-				team = {};
-				team.event_id = event.id;
-				team.id = currentTeam.BibNumber[0];
-				team.gender = classDecoded.gender;
-				team.age = classDecoded.age;
-				team.name = currentTeam.Name[0] || '';
-				team.duration = 24;
+					team = {};
+					team.event_id = event.id;
+					team.id = currentTeam.BibNumber[0];
+					team.gender = classDecoded.gender;
+					team.age = classDecoded.age;
+					team.name = currentTeam.Name[0] || '';
+					team.duration = 24;
 
-				for (var m = 0; m < currentTeam.TeamMemberResult.length; m++) {
-					var currentMember = currentTeam.TeamMemberResult[m].Person[0];
-					if (currentMember.Name[0].Family[0] === 'TEAMTOTAL') {
-						var result = currentTeam.TeamMemberResult[m].Result[0];
-						team.time = helpers.printSeconds(parseInt(result.Time[0]));
-						team.status = helpers.iofStatus(result.Status[0]);
-						team.penalty = 0;
-						for (var s = 0; s < result.Score.length; s++) {
-							var sc = result.Score[s];
-							if (sc.$.type === 'Points') {
-								team.score = sc._;
-							} else if (sc.$.type === 'PenaltyPoints') {
-								team.penalty = sc._;
+					for (var m = 0; m < currentTeam.TeamMemberResult.length; m++) {
+						var currentMember = currentTeam.TeamMemberResult[m].Person[0];
+						if (currentMember.Name[0].Family[0] === 'TEAMTOTAL') {
+							var result = currentTeam.TeamMemberResult[m].Result[0];
+							team.time = helpers.printSeconds(parseInt(result.Time[0]));
+							team.status = helpers.iofStatus(result.Status[0]);
+							team.penalty = 0;
+							for (var s = 0; s < result.Score.length; s++) {
+								var sc = result.Score[s];
+								if (sc.$.type === 'Points') {
+									team.score = sc._;
+								} else if (sc.$.type === 'PenaltyPoints') {
+									team.penalty = sc._;
+								}
 							}
+							continue;
 						}
-						continue;
+
+						member = {};
+						member.team_id = team.id;
+						member.event_id = event.id;
+						member.firstname = currentMember.Name[0].Given[0];
+						member.lastname = currentMember.Name[0].Family[0];
+						member.country_code = currentMember.Nationality[0].$.code;
+						members.push(member);
 					}
 
-					member = {};
-					member.team_id = team.id;
-					member.event_id = event.id;
-					member.firstname = currentMember.Name[0].Given[0];
-					member.lastname = currentMember.Name[0].Family[0];
-					member.country_code = currentMember.Nationality[0].$.code;
-					members.push(member);
+					teams.push(team);
 				}
-
-				teams.push(team);
 			}
+		} catch (err) {
+			done();
+			return cb(err);
 		}
 
 		client.query('delete from team where event_id = $1', [event.id], function(err) {
