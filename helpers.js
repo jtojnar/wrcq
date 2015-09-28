@@ -53,6 +53,14 @@ module.exports = helpers = {
 		return moment(start).format('D MMM') + '–' + moment(end).format('D MMM YYYY');
 	},
 
+	printSeconds: function(t) {
+		return helpers.time({
+			seconds: t % 60,
+			minutes: Math.floor(t / 60) % 60,
+			hours: Math.floor(Math.floor(t / 60) / 60),
+		})
+	},
+
 	extend: function(name, context) {
 		var block = blocks[name];
 		if(!block) {
@@ -145,5 +153,20 @@ module.exports = helpers = {
 		if(values.hasOwnProperty(name) && values[name] === true) {
 			return options.fn(this);
 		}
+	},
+
+	iofStatus: function(status) {
+		if (status === 'OK') {
+			return 'finished';
+		} else if (status === 'OverTime') {
+			return 'overtime';
+		} else if (status === 'Disqualified') {
+			return 'disqualified';
+		} else if (status === 'DidNotFinish') {
+			return 'not finished';
+		} else if (status === '') {
+			return '';
+		}
+		throw Error('wrong status name: ' + status);
 	}
 }

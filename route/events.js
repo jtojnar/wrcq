@@ -3,6 +3,7 @@ var fs;
 var _dbUri;
 var sql = require('sql');
 var model = require('../model')(sql);
+var helpers = require('../helpers');
 
 module.exports.inject = function(_pg, _fs, __dbUri) {
 	pg = _pg;
@@ -127,7 +128,7 @@ module.exports.upload = function(req, res) {
 									xml.push('</results>');
 									xml = xml.join('\n');
 
-									processXML(eventdata.rows[0], xml, client, done, function(err) {
+									processIRF(eventdata.rows[0], xml, client, done, function(err) {
 										if(err) {
 											console.error(err);
 											req.flash('danger', err);
@@ -146,12 +147,13 @@ module.exports.upload = function(req, res) {
 									req.flash('danger', err);
 									res.render('events_upload', {identity: req.user, values: values});
 								});
-							} else if(values.data_type === 'irf') {
+							} else if(values.data_type === 'irf' || values.data_type === 'iof') {
 								fs.readFile(req.files.data.path, function(err, data) {
 									if (err) {
 										done();
 										throw err;
 									}
+									var processXML = values.data_type === 'irf' ? processIRF : processIOF;
 									processXML(eventdata.rows[0], data, client, done, function(err) {
 										if(err) {
 											console.error(err);
@@ -183,7 +185,7 @@ module.exports.upload = function(req, res) {
 
 var parseString = require('xml2js').parseString;
 
-function processXML(event, data, client, done, cb) {
+function processIRF(event, data, client, done, cb) {
 	parseString(data, function(err, results) {
 		if(err) {
 			done();
@@ -211,6 +213,101 @@ function processXML(event, data, client, done, cb) {
 				delete member.country;
 
 				members.push(member);
+			}
+		}
+
+		client.query('delete from team where event_id = $1', [event.id], function(err) {
+			if(err) {
+				done();
+				return cb(err);
+			} else {
+				client.query(model.team.insert(teams).toQuery(), function(err) {
+					if(err) {
+						done();
+						return cb(err);
+					} else {
+						client.query(model.member.insert(members).toQuery(), function(err) {
+							if(err) {
+								done();
+								return cb(err);
+							} else {
+								client.query(model.event.update({complete: true}).where(model.event.id.equals(event.id)).toQuery(), function(err) {
+									if(err) {
+										done();
+										return cb(err);
+									} else {
+										done();
+										return cb(null);
+									}
+								});
+							}
+						});
+					}
+				});
+			}
+		});
+	});
+}
+
+
+function processIOF(event, data, client, done, cb) {
+	parseString(data, function(err, results) {
+		if(err) {
+			done();
+			return cb(err);
+		}
+
+		var teams = [];
+		var members = [];
+
+		var team;
+		var member;
+		var currentTeam;
+
+		var classes = results.ResultList.ClassResult;
+		for (var i = 0; i < classes.length; i++) {
+			var classTeams = classes[i].TeamResult;
+			var classAbbr = classes[i].Class[0].Name[0];
+			var classDecoded = helpers.decodeCategory(classAbbr);
+			for (var j = 0; j < classTeams.length; j++) {
+				currentTeam = classTeams[j];
+
+				team = {};
+				team.event_id = event.id;
+				team.id = currentTeam.BibNumber[0];
+				team.gender = classDecoded.gender;
+				team.age = classDecoded.age;
+				team.name = currentTeam.Name[0] || '';
+				team.duration = 24;
+
+				for (var m = 0; m < currentTeam.TeamMemberResult.length; m++) {
+					var currentMember = currentTeam.TeamMemberResult[m].Person[0];
+					if (currentMember.Name[0].Family[0] === 'TEAMTOTAL') {
+						var result = currentTeam.TeamMemberResult[m].Result[0];
+						team.time = helpers.printSeconds(parseInt(result.Time[0]));
+						team.status = helpers.iofStatus(result.Status[0]);
+						team.penalty = 0;
+						for (var s = 0; s < result.Score.length; s++) {
+							var sc = result.Score[s];
+							if (sc.$.type === 'Points') {
+								team.score = sc._;
+							} else if (sc.$.type === 'PenaltyPoints') {
+								team.penalty = sc._;
+							}
+						}
+						continue;
+					}
+
+					member = {};
+					member.team_id = team.id;
+					member.event_id = event.id;
+					member.firstname = currentMember.Name[0].Given[0];
+					member.lastname = currentMember.Name[0].Family[0];
+					member.country_code = currentMember.Nationality[0].$.code;
+					members.push(member);
+				}
+
+				teams.push(team);
 			}
 		}
 
