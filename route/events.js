@@ -39,7 +39,7 @@ module.exports.add = function(req, res) {
 		var values = req.body;
 
 		if(formSent) {
-			values[req.body.level] = true;
+			values[values.level] = true;
 			values.complete = values.hasOwnProperty('complete');
 
 			pg.connect(_dbUri, function(err, client, done) {
@@ -93,16 +93,16 @@ module.exports.upload = function(req, res) {
 					var formSent = req.method.toLowerCase() === 'post';
 					var values = req.body;
 
-					values.data_type_csv = !formSent || req.body.data_type === 'csv';
-					values.data_type_ssv = formSent && req.body.data_type === 'ssv';
-					values.data_type_irf = formSent && req.body.data_type === 'irf';
-					values.data_type_iof = formSent && req.body.data_type === 'iof';
+					values.data_type_csv = !formSent || values.data_type === 'csv';
+					values.data_type_ssv = formSent && values.data_type === 'ssv';
+					values.data_type_irf = formSent && values.data_type === 'irf';
+					values.data_type_iof = formSent && values.data_type === 'iof';
 
 					if(formSent) {
 						if(req.files.hasOwnProperty('data') && req.files.data.size > 0) {
-							if(req.body.data_type === 'csv' || req.body.data_type === 'ssv') {
+							if(values.data_type === 'csv' || values.data_type === 'ssv') {
 								var options = {headers: true};
-								if(req.body.data_type === 'ssv') {
+								if(values.data_type === 'ssv') {
 									options.delimiter = ';';
 								}
 
@@ -146,7 +146,7 @@ module.exports.upload = function(req, res) {
 									req.flash('danger', err);
 									res.render('events_upload', {identity: req.user, values: values});
 								});
-							} else if(req.body.data_type === 'irf') {
+							} else if(values.data_type === 'irf') {
 								fs.readFile(req.files.data.path, function(err, data) {
 									if (err) {
 										done();
