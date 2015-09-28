@@ -163,6 +163,9 @@ module.exports.upload = function(req, res) {
 										}
 									});
 								});
+							} else {
+								req.flash('danger', 'Please provide a valid file type.');
+								res.render('events_upload', {identity: req.user, values: values});
 							}
 						} else {
 							req.flash('danger', 'Please provide a file.');
