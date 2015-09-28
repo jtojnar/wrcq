@@ -772,11 +772,12 @@ app.get('/events/:event/results', function(req, res) {
 });
 
 app.get('/login', function(req, res) {
-	res.render('login', {identity: req.user});
+	res.render('login', {identity: req.user, values: req.body});
 });
 
-app.post('/login', passport.authenticate('local', {failureRedirect: '/login', failureFlash: true}), function(req, res) {
-	res.redirect('/');
+app.post('/login', passport.authenticate('local', {successRedirect: '/', failureFlash: true, failWithError: true}), function(err, req, res, next) {
+	console.log(err);
+	return res.render('login', {identity: req.user, values: req.body});
 });
 
 app.get('/logout', function(req, res) {
