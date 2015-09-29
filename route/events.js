@@ -266,10 +266,16 @@ function processIOF(event, data, client, done, cb) {
 
 		var classes = results.ResultList.ClassResult;
 		try {
+			if (!classes) {
+				throw Error('Missing ResultList.ClassResult');
+			}
 			for (var i = 0; i < classes.length; i++) {
 				var classTeams = classes[i].TeamResult;
 				var classAbbr = classes[i].Class[0].Name[0];
 				var classDecoded = helpers.decodeCategory(classAbbr);
+				if (!classTeams) {
+					throw Error('Missing ResultList.ClassResult[' + i + '].TeamResult');
+				}
 				for (var j = 0; j < classTeams.length; j++) {
 					currentTeam = classTeams[j];
 
@@ -281,6 +287,9 @@ function processIOF(event, data, client, done, cb) {
 					team.name = currentTeam.Name[0] || '';
 					team.duration = 24;
 
+					if (!currentTeam.TeamMemberResult) {
+						throw Error('Missing ResultList.ClassResult[' + i + '].TeamResult[' + j + '].TeamMemberResult');
+					}
 					for (var m = 0; m < currentTeam.TeamMemberResult.length; m++) {
 						var currentMember = currentTeam.TeamMemberResult[m].Person[0];
 						if (currentMember.Name[0].Family[0] === 'TEAMTOTAL') {
@@ -288,6 +297,9 @@ function processIOF(event, data, client, done, cb) {
 							team.time = helpers.printSeconds(parseInt(result.Time[0]));
 							team.status = helpers.iofStatus(result.Status[0]);
 							team.penalty = 0;
+							if (!result.Score) {
+								throw Error('Missing ResultList.ClassResult[' + i + '].TeamResult[' + j + '].TeamMemberResult[' + m + '] > Score');
+							}
 							for (var s = 0; s < result.Score.length; s++) {
 								var sc = result.Score[s];
 								if (sc.$.type === 'Points') {
