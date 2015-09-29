@@ -164,8 +164,8 @@ module.exports = helpers = {
 			return 'disqualified';
 		} else if (status === 'DidNotFinish') {
 			return 'not finished';
-		} else if (status === '') {
-			return '';
+		} else if (status === 'DidNotStart') {
+			return 'not started';
 		}
 		throw Error('wrong status name: ' + status);
 	}
