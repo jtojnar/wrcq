@@ -274,7 +274,8 @@ function processIOF(event, data, client, done, cb) {
 				var classAbbr = classes[i].Class[0].Name[0];
 				var classDecoded = helpers.decodeCategory(classAbbr);
 				if (!classTeams) {
-					throw Error('Missing ResultList.ClassResult[' + i + '].TeamResult');
+					console.log('Skipping import of an empty class: ' + classAbbr);
+					continue;
 				}
 				for (var j = 0; j < classTeams.length; j++) {
 					currentTeam = classTeams[j];
