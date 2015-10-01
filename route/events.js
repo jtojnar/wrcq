@@ -298,16 +298,26 @@ function processIOF(event, data, client, done, cb) {
 							team.time = helpers.printSeconds(parseInt(result.Time[0]));
 							team.status = helpers.iofStatus(result.Status[0]);
 							team.penalty = 0;
+							var totalPointsAvailable = false;
+
 							if (!result.Score) {
 								throw Error('Missing ResultList.ClassResult[' + i + '].TeamResult[' + j + '].TeamMemberResult[' + m + '] > Score');
 							}
+
 							for (var s = 0; s < result.Score.length; s++) {
 								var sc = result.Score[s];
-								if (sc.$.type === 'TotalPoints') {
+								if (!totalPointsAvailable && sc.$.type === 'Points') {
+									team.score = sc._;
+								} else if (sc.$.type === 'TotalPoints') {
+									totalPointsAvailable = true;
 									team.score = sc._;
 								} else if (sc.$.type === 'PenaltyPoints') {
 									team.penalty = sc._;
 								}
+							}
+
+							if (!totalPointsAvailable) {
+								team.score -= team.penalty;
 							}
 							continue;
 						}
