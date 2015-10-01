@@ -303,7 +303,7 @@ function processIOF(event, data, client, done, cb) {
 							}
 							for (var s = 0; s < result.Score.length; s++) {
 								var sc = result.Score[s];
-								if (sc.$.type === 'Points') {
+								if (sc.$.type === 'TotalPoints') {
 									team.score = sc._;
 								} else if (sc.$.type === 'PenaltyPoints') {
 									team.penalty = sc._;
