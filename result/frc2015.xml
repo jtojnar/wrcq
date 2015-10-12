@@ -1,0 +1,5148 @@
+<ResultList createTime="2015-10-07T08:46:37+02:00" creator="RogainManager" iofVersion="3.0" status="Complete" xmlns="http://www.orienteering.org/datastandard/3.0">
+	<Event>
+		<Name>Retki-Rogaining</Name>
+		<StartTime>
+			<Date>2015-05-16</Date>
+			<Time>11:00:00</Time>
+		</StartTime>
+		<Form>Team</Form>
+		<Organiser>
+			<Name>jopa, kalke</Name>
+		</Organiser>
+		<Race>
+			<RaceNumber>1</RaceNumber>
+			<Name>Retki-Rogaining</Name>
+			<StartTime>
+				<Date>2015-05-16</Date>
+				<Time>11:00:00</Time>
+			</StartTime>
+			<Official type="CourseSetter">
+				<Person>
+					<Name>
+						<Family>Lahtonen</Family>
+						<Given>Tommi</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</Official>
+		</Race>
+	</Event>
+	<ClassResult timeResolution="1">
+		<Class>
+			<Name>MO</Name>
+		</Class>
+		<TeamResult>
+			<Name>Team Hikisol</Name>
+			<BibNumber>3</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Rissanen</Family>
+						<Given>Juho</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Kolhinen</Family>
+						<Given>Veli</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Poleshchuk</Family>
+						<Given>Oleksii</Given>
+					</Name>
+					<Nationality code="UKR"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Simutkin</Family>
+						<Given>Vasily</Given>
+					</Name>
+					<Nationality code="RUS"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T05:45:41</FinishTime>
+					<Time>67541</Time>
+					<Status>OK</Status>
+					<Score type="Points">151</Score>
+					<Score type="TotalPoints">151</Score>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>396</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>2606</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>91</ControlCode>
+						<Time>5044</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>63</ControlCode>
+						<Time>7519</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>92</ControlCode>
+						<Time>9561</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>71</ControlCode>
+						<Time>12779</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>80</ControlCode>
+						<Time>15184</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>62</ControlCode>
+						<Time>16071</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>85</ControlCode>
+						<Time>17390</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>79</ControlCode>
+						<Time>20990</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>83</ControlCode>
+						<Time>23608</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>39</ControlCode>
+						<Time>25651</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>60</ControlCode>
+						<Time>29700</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>99</ControlCode>
+						<Time>33812</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>50</ControlCode>
+						<Time>38336</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>94</ControlCode>
+						<Time>40914</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>72</ControlCode>
+						<Time>43353</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>35</ControlCode>
+						<Time>45868</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>55</ControlCode>
+						<Time>47197</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>97</ControlCode>
+						<Time>50445</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>67</ControlCode>
+						<Time>55426</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>82</ControlCode>
+						<Time>58147</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>66743</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7203079</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>Team MC-HC</Name>
+			<BibNumber>6</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Sarin</Family>
+						<Given>Johannes</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Jansson</Family>
+						<Given>Mathias</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T06:03:55</FinishTime>
+					<Time>68635</Time>
+					<Status>OK</Status>
+					<Score type="Points">123</Score>
+					<Score type="TotalPoints">123</Score>
+					<SplitTime status="OK">
+						<ControlCode>34</ControlCode>
+						<Time>1427</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>95</ControlCode>
+						<Time>3126</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>87</ControlCode>
+						<Time>7955</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>37</ControlCode>
+						<Time>11393</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>96</ControlCode>
+						<Time>13141</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>98</ControlCode>
+						<Time>17814</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>65</ControlCode>
+						<Time>23031</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>89</ControlCode>
+						<Time>26559</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>59</ControlCode>
+						<Time>29154</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>57</ControlCode>
+						<Time>31633</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>75</ControlCode>
+						<Time>33100</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>46</ControlCode>
+						<Time>36067</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>86</ControlCode>
+						<Time>38253</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>41348</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>42605</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>82</ControlCode>
+						<Time>55436</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>30</ControlCode>
+						<Time>58825</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>91</ControlCode>
+						<Time>62108</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>66069</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>68079</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7203152</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>Raivojuoksijat</Name>
+			<BibNumber>10</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Humppi</Family>
+						<Given>Manu</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Pitkäkoski</Family>
+						<Given>Jari</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T09:50:52</FinishTime>
+					<Time>82252</Time>
+					<Status>OK</Status>
+					<Score type="Points">295</Score>
+					<Score type="TotalPoints">295</Score>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>345</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>34</ControlCode>
+						<Time>1220</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>95</ControlCode>
+						<Time>2319</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>40</ControlCode>
+						<Time>3697</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>84</ControlCode>
+						<Time>5119</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>53</ControlCode>
+						<Time>7039</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>91</ControlCode>
+						<Time>8877</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>63</ControlCode>
+						<Time>10864</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>92</ControlCode>
+						<Time>12216</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>80</ControlCode>
+						<Time>13810</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>62</ControlCode>
+						<Time>14906</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>71</ControlCode>
+						<Time>16651</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>52</ControlCode>
+						<Time>18413</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>79</ControlCode>
+						<Time>20405</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>85</ControlCode>
+						<Time>23244</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>74</ControlCode>
+						<Time>24526</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>73</ControlCode>
+						<Time>26658</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>81</ControlCode>
+						<Time>28383</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>45</ControlCode>
+						<Time>30020</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>42</ControlCode>
+						<Time>31282</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>83</ControlCode>
+						<Time>32935</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>39</ControlCode>
+						<Time>34349</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>60</ControlCode>
+						<Time>36198</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>99</ControlCode>
+						<Time>38584</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>72</ControlCode>
+						<Time>40944</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>94</ControlCode>
+						<Time>42429</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>35</ControlCode>
+						<Time>43994</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>55</ControlCode>
+						<Time>44911</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>97</ControlCode>
+						<Time>47349</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>33</ControlCode>
+						<Time>49697</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>82</ControlCode>
+						<Time>52711</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>67</ControlCode>
+						<Time>54251</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>58</ControlCode>
+						<Time>55963</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>88</ControlCode>
+						<Time>58040</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>90</ControlCode>
+						<Time>60202</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>78</ControlCode>
+						<Time>62451</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>93</ControlCode>
+						<Time>64176</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>64</ControlCode>
+						<Time>67055</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>44</ControlCode>
+						<Time>69129</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>76</ControlCode>
+						<Time>70885</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>57</ControlCode>
+						<Time>72509</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>75</ControlCode>
+						<Time>73767</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>46</ControlCode>
+						<Time>75863</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>86</ControlCode>
+						<Time>77961</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>80177</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>81421</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7203036</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>A-Team</Name>
+			<BibNumber>12</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Uusitalo</Family>
+						<Given>Jaakko</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Alaruusi</Family>
+						<Given>Antti</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-16T22:18:04</FinishTime>
+					<Time>40684</Time>
+					<Status>OK</Status>
+					<Score type="Points">81</Score>
+					<Score type="TotalPoints">81</Score>
+					<SplitTime status="OK">
+						<ControlCode>34</ControlCode>
+						<Time>1393</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>95</ControlCode>
+						<Time>3318</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>48</ControlCode>
+						<Time>6558</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>61</ControlCode>
+						<Time>9183</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>31</ControlCode>
+						<Time>11749</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>89</ControlCode>
+						<Time>13349</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>59</ControlCode>
+						<Time>15854</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>76</ControlCode>
+						<Time>18024</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>90</ControlCode>
+						<Time>24199</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>88</ControlCode>
+						<Time>27410</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>58</ControlCode>
+						<Time>29486</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>36</ControlCode>
+						<Time>33293</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>38337</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>39888</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7202189</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>Free Adventure Oulu</Name>
+			<BibNumber>33</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Vapa</Family>
+						<Given>Marko</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Vapa</Family>
+						<Given>Mikko</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Säily</Family>
+						<Given>Tuomas</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T09:12:40</FinishTime>
+					<Time>79960</Time>
+					<Status>OK</Status>
+					<Score type="Points">173</Score>
+					<Score type="TotalPoints">173</Score>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>306</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>998</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>91</ControlCode>
+						<Time>2485</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>63</ControlCode>
+						<Time>4054</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>92</ControlCode>
+						<Time>5282</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>33</ControlCode>
+						<Time>6947</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>97</ControlCode>
+						<Time>8741</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>55</ControlCode>
+						<Time>10355</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>35</ControlCode>
+						<Time>11071</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>72</ControlCode>
+						<Time>12433</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>94</ControlCode>
+						<Time>13585</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>50</ControlCode>
+						<Time>15164</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>60</ControlCode>
+						<Time>17213</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>39</ControlCode>
+						<Time>18720</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>83</ControlCode>
+						<Time>20274</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>79</ControlCode>
+						<Time>22999</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>52</ControlCode>
+						<Time>24823</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>71</ControlCode>
+						<Time>26485</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>80</ControlCode>
+						<Time>28095</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>62</ControlCode>
+						<Time>28744</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>85</ControlCode>
+						<Time>29813</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>74</ControlCode>
+						<Time>32139</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>68</ControlCode>
+						<Time>33539</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>53</ControlCode>
+						<Time>36122</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>84</ControlCode>
+						<Time>38005</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>40</ControlCode>
+						<Time>40156</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>95</ControlCode>
+						<Time>43254</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>34</ControlCode>
+						<Time>44991</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7202083</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>Team Fujitsu</Name>
+			<BibNumber>36</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Paju</Family>
+						<Given>Erno</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Laurila</Family>
+						<Given>Pasi</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T07:17:18</FinishTime>
+					<Time>73038</Time>
+					<Status>OK</Status>
+					<Score type="Points">201</Score>
+					<Score type="TotalPoints">201</Score>
+					<SplitTime status="OK">
+						<ControlCode>48</ControlCode>
+						<Time>1885</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>77</ControlCode>
+						<Time>3351</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>87</ControlCode>
+						<Time>4851</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>37</ControlCode>
+						<Time>6494</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>96</ControlCode>
+						<Time>7486</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>98</ControlCode>
+						<Time>10362</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>41</ControlCode>
+						<Time>12300</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>70</ControlCode>
+						<Time>14400</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>61</ControlCode>
+						<Time>16347</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>89</ControlCode>
+						<Time>19489</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>59</ControlCode>
+						<Time>20825</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>76</ControlCode>
+						<Time>22317</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>44</ControlCode>
+						<Time>24025</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>93</ControlCode>
+						<Time>25990</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>78</ControlCode>
+						<Time>27719</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>90</ControlCode>
+						<Time>29425</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>88</ControlCode>
+						<Time>31626</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>75</ControlCode>
+						<Time>34382</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>46</ControlCode>
+						<Time>36036</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>86</ControlCode>
+						<Time>38326</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>40381</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>44680</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>30</ControlCode>
+						<Time>48556</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>82</ControlCode>
+						<Time>51248</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>67</ControlCode>
+						<Time>53351</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>97</ControlCode>
+						<Time>57788</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>55</ControlCode>
+						<Time>61428</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>92</ControlCode>
+						<Time>64567</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>91</ControlCode>
+						<Time>68580</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>71176</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>72455</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7204360</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+	</ClassResult>
+	<ClassResult timeResolution="1">
+		<Class>
+			<Name>MJ</Name>
+		</Class>
+	</ClassResult>
+	<ClassResult timeResolution="1">
+		<Class>
+			<Name>MV</Name>
+		</Class>
+		<TeamResult>
+			<Name>IhanHukassa</Name>
+			<BibNumber>14</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Karppinen</Family>
+						<Given>Juha</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Vänni</Family>
+						<Given>Mika</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T10:37:01</FinishTime>
+					<Time>85021</Time>
+					<Status>OK</Status>
+					<Score type="Points">264</Score>
+					<Score type="TotalPoints">264</Score>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>404</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>1149</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>86</ControlCode>
+						<Time>2596</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>61</ControlCode>
+						<Time>4280</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>77</ControlCode>
+						<Time>5952</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>54</ControlCode>
+						<Time>7349</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>87</ControlCode>
+						<Time>9076</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>37</ControlCode>
+						<Time>11103</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>96</ControlCode>
+						<Time>12369</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>70</ControlCode>
+						<Time>15066</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>41</ControlCode>
+						<Time>16820</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>98</ControlCode>
+						<Time>18886</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>65</ControlCode>
+						<Time>21988</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>89</ControlCode>
+						<Time>24665</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>59</ControlCode>
+						<Time>26543</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>76</ControlCode>
+						<Time>28550</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>49</ControlCode>
+						<Time>30404</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>64</ControlCode>
+						<Time>32537</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>93</ControlCode>
+						<Time>35093</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>78</ControlCode>
+						<Time>37085</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>90</ControlCode>
+						<Time>39665</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>88</ControlCode>
+						<Time>42903</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>58</ControlCode>
+						<Time>44856</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>67</ControlCode>
+						<Time>47811</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>82</ControlCode>
+						<Time>49786</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>55</ControlCode>
+						<Time>52830</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>35</ControlCode>
+						<Time>54016</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>72</ControlCode>
+						<Time>55538</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>94</ControlCode>
+						<Time>57230</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>50</ControlCode>
+						<Time>59213</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>60</ControlCode>
+						<Time>61745</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>39</ControlCode>
+						<Time>63638</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>83</ControlCode>
+						<Time>65599</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>79</ControlCode>
+						<Time>68817</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>62</ControlCode>
+						<Time>71618</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>80</ControlCode>
+						<Time>72590</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>92</ControlCode>
+						<Time>75039</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>63</ControlCode>
+						<Time>77011</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>91</ControlCode>
+						<Time>79926</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>82921</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>84612</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7204246</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>molk 1</Name>
+			<BibNumber>16</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Andrei</Family>
+						<Given>Molotkov</Given>
+					</Name>
+					<Nationality code="RUS"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Nikolai</Family>
+						<Given>Belyaev</Given>
+					</Name>
+					<Nationality code="RUS"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T10:50:11</FinishTime>
+					<Time>85811</Time>
+					<Status>OK</Status>
+					<Score type="Points">228</Score>
+					<Score type="TotalPoints">228</Score>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>514</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>86</ControlCode>
+						<Time>1980</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>46</ControlCode>
+						<Time>3501</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>36</ControlCode>
+						<Time>4899</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>58</ControlCode>
+						<Time>6462</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>88</ControlCode>
+						<Time>8015</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>90</ControlCode>
+						<Time>10206</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>78</ControlCode>
+						<Time>13020</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>93</ControlCode>
+						<Time>14611</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>44</ControlCode>
+						<Time>16824</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>76</ControlCode>
+						<Time>18590</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>57</ControlCode>
+						<Time>20071</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>75</ControlCode>
+						<Time>21327</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>59</ControlCode>
+						<Time>24090</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>89</ControlCode>
+						<Time>25714</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>70</ControlCode>
+						<Time>29229</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>96</ControlCode>
+						<Time>31879</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>37</ControlCode>
+						<Time>33347</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>54</ControlCode>
+						<Time>36727</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>77</ControlCode>
+						<Time>38817</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>87</ControlCode>
+						<Time>41949</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>47</ControlCode>
+						<Time>45594</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>95</ControlCode>
+						<Time>48905</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>34</ControlCode>
+						<Time>50913</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>57109</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>58435</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>30</ControlCode>
+						<Time>61472</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>82</ControlCode>
+						<Time>63419</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>67</ControlCode>
+						<Time>65299</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>55</ControlCode>
+						<Time>68675</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>35</ControlCode>
+						<Time>69905</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>72</ControlCode>
+						<Time>71665</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>94</ControlCode>
+						<Time>73505</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>92</ControlCode>
+						<Time>76583</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>63</ControlCode>
+						<Time>79173</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>91</ControlCode>
+						<Time>82006</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>85311</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7203021</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>Somero Yö rogaining</Name>
+			<BibNumber>20</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Tuomola</Family>
+						<Given>Jarkko</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Ylösmäki</Family>
+						<Given>Marko</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Koivuniemi</Family>
+						<Given>Jarmo</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T09:11:12</FinishTime>
+					<Time>79872</Time>
+					<Status>OK</Status>
+					<Score type="Points">103</Score>
+					<Score type="TotalPoints">103</Score>
+					<SplitTime status="OK">
+						<ControlCode>86</ControlCode>
+						<Time>2761</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>61</ControlCode>
+						<Time>6380</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>70</ControlCode>
+						<Time>9872</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>89</ControlCode>
+						<Time>14210</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>59</ControlCode>
+						<Time>19424</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>76</ControlCode>
+						<Time>22428</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>57</ControlCode>
+						<Time>25820</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>75</ControlCode>
+						<Time>27404</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>46</ControlCode>
+						<Time>29881</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>36</ControlCode>
+						<Time>33053</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>37060</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>34</ControlCode>
+						<Time>53756</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>40</ControlCode>
+						<Time>56350</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>84</ControlCode>
+						<Time>61290</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>91</ControlCode>
+						<Time>69457</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>74676</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>77216</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>79051</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7204203</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>Team toipilaat</Name>
+			<BibNumber>21</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Jutila</Family>
+						<Given>Antti</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Paananen</Family>
+						<Given>Veli-Matti</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T07:15:55</FinishTime>
+					<Time>72955</Time>
+					<Status>OK</Status>
+					<Score type="Points">125</Score>
+					<Score type="TotalPoints">125</Score>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>613</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>86</ControlCode>
+						<Time>2406</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>46</ControlCode>
+						<Time>4565</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>75</ControlCode>
+						<Time>6719</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>88</ControlCode>
+						<Time>10027</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>90</ControlCode>
+						<Time>12580</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>78</ControlCode>
+						<Time>15714</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>93</ControlCode>
+						<Time>18029</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>44</ControlCode>
+						<Time>20229</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>76</ControlCode>
+						<Time>22778</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>59</ControlCode>
+						<Time>24813</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>89</ControlCode>
+						<Time>26807</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>61</ControlCode>
+						<Time>30834</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>77</ControlCode>
+						<Time>32923</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>87</ControlCode>
+						<Time>35400</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>95</ControlCode>
+						<Time>39957</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>34</ControlCode>
+						<Time>42182</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>70466</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>72098</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7204347</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>Lupus Extreme</Name>
+			<BibNumber>23</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Snellman</Family>
+						<Given>Janne</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Päivärinta</Family>
+						<Given>Juha</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T09:50:33</FinishTime>
+					<Time>82233</Time>
+					<Status>OK</Status>
+					<Score type="Points">236</Score>
+					<Score type="TotalPoints">236</Score>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>561</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>86</ControlCode>
+						<Time>2076</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>61</ControlCode>
+						<Time>3683</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>77</ControlCode>
+						<Time>5482</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>87</ControlCode>
+						<Time>7285</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>37</ControlCode>
+						<Time>9108</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>96</ControlCode>
+						<Time>10329</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>98</ControlCode>
+						<Time>13186</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>65</ControlCode>
+						<Time>15903</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>89</ControlCode>
+						<Time>18521</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>59</ControlCode>
+						<Time>20239</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>76</ControlCode>
+						<Time>22001</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>44</ControlCode>
+						<Time>23612</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>64</ControlCode>
+						<Time>25614</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>93</ControlCode>
+						<Time>29098</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>78</ControlCode>
+						<Time>31088</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>90</ControlCode>
+						<Time>33371</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>88</ControlCode>
+						<Time>35434</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>57</ControlCode>
+						<Time>38274</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>75</ControlCode>
+						<Time>41321</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>46</ControlCode>
+						<Time>43137</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>36</ControlCode>
+						<Time>45272</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>58</ControlCode>
+						<Time>47621</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>67</ControlCode>
+						<Time>49870</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>82</ControlCode>
+						<Time>51849</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>33</ControlCode>
+						<Time>54401</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>97</ControlCode>
+						<Time>57197</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>55</ControlCode>
+						<Time>59961</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>35</ControlCode>
+						<Time>61214</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>72</ControlCode>
+						<Time>63225</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>94</ControlCode>
+						<Time>65745</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>92</ControlCode>
+						<Time>68899</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>63</ControlCode>
+						<Time>71581</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>91</ControlCode>
+						<Time>75403</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>78344</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>80097</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>81481</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7203072</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>Elläimen kinthaat ok</Name>
+			<BibNumber>25</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Hihnala</Family>
+						<Given>Tero</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Lassheikki</Family>
+						<Given>Petri</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T10:12:06</FinishTime>
+					<Time>83526</Time>
+					<Status>OK</Status>
+					<Score type="Points">202</Score>
+					<Score type="TotalPoints">202</Score>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>582</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>86</ControlCode>
+						<Time>2213</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>46</ControlCode>
+						<Time>4159</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>75</ControlCode>
+						<Time>6369</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>57</ControlCode>
+						<Time>7676</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>76</ControlCode>
+						<Time>9363</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>44</ControlCode>
+						<Time>13635</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>64</ControlCode>
+						<Time>16163</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>93</ControlCode>
+						<Time>19437</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>78</ControlCode>
+						<Time>22270</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>90</ControlCode>
+						<Time>25435</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>88</ControlCode>
+						<Time>28407</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>58</ControlCode>
+						<Time>30364</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>67</ControlCode>
+						<Time>32418</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>82</ControlCode>
+						<Time>34521</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>33</ControlCode>
+						<Time>37194</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>97</ControlCode>
+						<Time>40349</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>55</ControlCode>
+						<Time>43531</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>92</ControlCode>
+						<Time>47370</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>94</ControlCode>
+						<Time>51537</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>72</ControlCode>
+						<Time>54000</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>50</ControlCode>
+						<Time>57048</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>71</ControlCode>
+						<Time>60801</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>62</ControlCode>
+						<Time>63728</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>85</ControlCode>
+						<Time>65408</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>74</ControlCode>
+						<Time>67814</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>68</ControlCode>
+						<Time>70255</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>91</ControlCode>
+						<Time>75234</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>79090</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>81372</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>82795</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7203041</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>Reissu Petet</Name>
+			<BibNumber>27</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Mäkelä</Family>
+						<Given>Pete</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Pete</Family>
+						<Given>Vuorenmaa</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T09:45:56</FinishTime>
+					<Time>81956</Time>
+					<Status>OK</Status>
+					<Score type="Points">209</Score>
+					<Score type="TotalPoints">209</Score>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>741</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>86</ControlCode>
+						<Time>2719</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>46</ControlCode>
+						<Time>4859</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>75</ControlCode>
+						<Time>6766</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>57</ControlCode>
+						<Time>7941</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>88</ControlCode>
+						<Time>10538</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>90</ControlCode>
+						<Time>13045</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>78</ControlCode>
+						<Time>14852</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>93</ControlCode>
+						<Time>16942</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>44</ControlCode>
+						<Time>19198</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>76</ControlCode>
+						<Time>20937</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>59</ControlCode>
+						<Time>23380</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>89</ControlCode>
+						<Time>25370</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>70</ControlCode>
+						<Time>28967</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>61</ControlCode>
+						<Time>31464</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>48</ControlCode>
+						<Time>33665</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>95</ControlCode>
+						<Time>36427</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>34</ControlCode>
+						<Time>38225</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>40554</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>46271</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>91</ControlCode>
+						<Time>49464</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>63</ControlCode>
+						<Time>53625</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>92</ControlCode>
+						<Time>55896</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>94</ControlCode>
+						<Time>59055</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>71</ControlCode>
+						<Time>62302</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>80</ControlCode>
+						<Time>64960</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>62</ControlCode>
+						<Time>66015</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>85</ControlCode>
+						<Time>67658</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>74</ControlCode>
+						<Time>70270</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>68</ControlCode>
+						<Time>72632</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>53</ControlCode>
+						<Time>76865</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>81211</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7204388</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>ISC</Name>
+			<BibNumber>28</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Tasa</Family>
+						<Given>Johannes</Given>
+					</Name>
+					<Nationality code="EST"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Kivikas</Family>
+						<Given>Arvo</Given>
+					</Name>
+					<Nationality code="EST"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T10:44:19</FinishTime>
+					<Time>85459</Time>
+					<Status>OK</Status>
+					<Score type="Points">202</Score>
+					<Score type="TotalPoints">202</Score>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>786</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>86</ControlCode>
+						<Time>3060</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>46</ControlCode>
+						<Time>5050</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>75</ControlCode>
+						<Time>6889</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>57</ControlCode>
+						<Time>8490</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>88</ControlCode>
+						<Time>11440</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>90</ControlCode>
+						<Time>14005</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>78</ControlCode>
+						<Time>16140</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>93</ControlCode>
+						<Time>18439</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>44</ControlCode>
+						<Time>20599</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>76</ControlCode>
+						<Time>22474</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>59</ControlCode>
+						<Time>24380</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>89</ControlCode>
+						<Time>26085</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>31</ControlCode>
+						<Time>27850</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>61</ControlCode>
+						<Time>30436</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>77</ControlCode>
+						<Time>32456</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>87</ControlCode>
+						<Time>35351</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>47</ControlCode>
+						<Time>37816</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>95</ControlCode>
+						<Time>40268</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>34</ControlCode>
+						<Time>42220</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>43973</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>55356</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>57823</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>91</ControlCode>
+						<Time>60521</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>63</ControlCode>
+						<Time>63629</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>92</ControlCode>
+						<Time>65838</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>94</ControlCode>
+						<Time>68577</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>72</ControlCode>
+						<Time>70322</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>35</ControlCode>
+						<Time>72207</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>55</ControlCode>
+						<Time>73534</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>33</ControlCode>
+						<Time>75871</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>82</ControlCode>
+						<Time>78753</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>30</ControlCode>
+						<Time>81020</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7204369</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+	</ClassResult>
+	<ClassResult timeResolution="1">
+		<Class>
+			<Name>MSV</Name>
+		</Class>
+	</ClassResult>
+	<ClassResult timeResolution="1">
+		<Class>
+			<Name>MUV</Name>
+		</Class>
+	</ClassResult>
+	<ClassResult timeResolution="1">
+		<Class>
+			<Name>MY</Name>
+		</Class>
+		<TeamResult>
+			<Name>Team Talasjormat</Name>
+			<BibNumber>24</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Roivainen</Family>
+						<Given>Tuomas</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Roivainen</Family>
+						<Given>Arttu</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T07:56:05</FinishTime>
+					<Time>75365</Time>
+					<Status>OK</Status>
+					<Score type="Points">112</Score>
+					<Score type="TotalPoints">112</Score>
+					<SplitTime status="OK">
+						<ControlCode>34</ControlCode>
+						<Time>1535</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>40</ControlCode>
+						<Time>3053</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>84</ControlCode>
+						<Time>5151</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>53</ControlCode>
+						<Time>8607</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>68</ControlCode>
+						<Time>11963</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>74</ControlCode>
+						<Time>14316</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>45</ControlCode>
+						<Time>18670</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>42</ControlCode>
+						<Time>21079</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>83</ControlCode>
+						<Time>24230</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>39</ControlCode>
+						<Time>27251</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>60</ControlCode>
+						<Time>32000</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>50</ControlCode>
+						<Time>34629</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>94</ControlCode>
+						<Time>42519</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>72</ControlCode>
+						<Time>46691</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>35</ControlCode>
+						<Time>49146</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>55</ControlCode>
+						<Time>51228</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>97</ControlCode>
+						<Time>55273</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>68426</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>72582</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>74439</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7204292</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+	</ClassResult>
+	<ClassResult timeResolution="1">
+		<Class>
+			<Name>WO</Name>
+		</Class>
+		<TeamResult>
+			<Name>Jopatus</Name>
+			<BibNumber>2</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Perälä</Family>
+						<Given>Anne</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Männistö</Family>
+						<Given>Tanja</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T10:12:18</FinishTime>
+					<Time>83538</Time>
+					<Status>OK</Status>
+					<Score type="Points">169</Score>
+					<Score type="TotalPoints">169</Score>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>433</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>1459</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>91</ControlCode>
+						<Time>4286</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>63</ControlCode>
+						<Time>7310</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>68</ControlCode>
+						<Time>10725</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>74</ControlCode>
+						<Time>13369</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>85</ControlCode>
+						<Time>15447</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>62</ControlCode>
+						<Time>17008</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>80</ControlCode>
+						<Time>18050</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>71</ControlCode>
+						<Time>20991</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>79</ControlCode>
+						<Time>24675</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>83</ControlCode>
+						<Time>27695</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>39</ControlCode>
+						<Time>31197</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>60</ControlCode>
+						<Time>34170</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>50</ControlCode>
+						<Time>37196</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>94</ControlCode>
+						<Time>41089</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>92</ControlCode>
+						<Time>44444</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>55</ControlCode>
+						<Time>48946</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>33</ControlCode>
+						<Time>52798</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>82</ControlCode>
+						<Time>56372</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>67</ControlCode>
+						<Time>59935</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>58</ControlCode>
+						<Time>63267</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>88</ControlCode>
+						<Time>66570</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>75</ControlCode>
+						<Time>71442</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>46</ControlCode>
+						<Time>74915</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>80807</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>82751</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7203179</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>Team Challenger</Name>
+			<BibNumber>4</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Antikainen</Family>
+						<Given>Saija</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Kolehmainen</Family>
+						<Given>Piia</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T03:16:15</FinishTime>
+					<Time>58575</Time>
+					<Status>DidNotFinish</Status>
+					<Score type="Points">116</Score>
+					<SplitTime status="OK">
+						<ControlCode>34</ControlCode>
+						<Time>1399</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>95</ControlCode>
+						<Time>2918</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>87</ControlCode>
+						<Time>7305</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>37</ControlCode>
+						<Time>9703</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>96</ControlCode>
+						<Time>11217</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>98</ControlCode>
+						<Time>14989</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>65</ControlCode>
+						<Time>18714</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>89</ControlCode>
+						<Time>22049</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>59</ControlCode>
+						<Time>25210</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>75</ControlCode>
+						<Time>28154</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>57</ControlCode>
+						<Time>29633</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>76</ControlCode>
+						<Time>31851</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>44</ControlCode>
+						<Time>35260</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>93</ControlCode>
+						<Time>38760</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>78</ControlCode>
+						<Time>42006</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>90</ControlCode>
+						<Time>45629</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>88</ControlCode>
+						<Time>49261</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7203109</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>Team MaHa</Name>
+			<BibNumber>9</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Damskägg</Family>
+						<Given>Marika</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Bister</Family>
+						<Given>Hanna</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T09:53:21</FinishTime>
+					<Time>82401</Time>
+					<Status>OK</Status>
+					<Score type="Points">126</Score>
+					<Score type="TotalPoints">126</Score>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>983</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>36</ControlCode>
+						<Time>4133</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>58</ControlCode>
+						<Time>7144</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>88</ControlCode>
+						<Time>10956</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>90</ControlCode>
+						<Time>13348</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>38</ControlCode>
+						<Time>17296</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>57</ControlCode>
+						<Time>20869</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>75</ControlCode>
+						<Time>22946</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>46</ControlCode>
+						<Time>24859</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>86</ControlCode>
+						<Time>27621</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>40836</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>42712</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>91</ControlCode>
+						<Time>47028</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>63</ControlCode>
+						<Time>51141</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>92</ControlCode>
+						<Time>53872</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>55</ControlCode>
+						<Time>56955</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>35</ControlCode>
+						<Time>58578</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>97</ControlCode>
+						<Time>63664</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>33</ControlCode>
+						<Time>68196</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>82</ControlCode>
+						<Time>71915</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>30</ControlCode>
+						<Time>75848</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>81561</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7203008</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>Paha Rasti</Name>
+			<BibNumber>18</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Piesala</Family>
+						<Given>Johanna</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Moisio</Family>
+						<Given>Malin</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Liponkoski</Family>
+						<Given>Teija</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T09:24:49</FinishTime>
+					<Time>80689</Time>
+					<Status>OK</Status>
+					<Score type="Points">149</Score>
+					<Score type="TotalPoints">149</Score>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>460</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>1608</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>91</ControlCode>
+						<Time>4493</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>63</ControlCode>
+						<Time>7423</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>92</ControlCode>
+						<Time>9776</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>80</ControlCode>
+						<Time>13967</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>62</ControlCode>
+						<Time>15242</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>71</ControlCode>
+						<Time>17926</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>94</ControlCode>
+						<Time>21043</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>72</ControlCode>
+						<Time>23253</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>35</ControlCode>
+						<Time>25158</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>55</ControlCode>
+						<Time>26643</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>97</ControlCode>
+						<Time>30662</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>67</ControlCode>
+						<Time>35672</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>82</ControlCode>
+						<Time>38298</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>30</ControlCode>
+						<Time>40995</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>45472</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>86</ControlCode>
+						<Time>58307</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>46</ControlCode>
+						<Time>61889</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>75</ControlCode>
+						<Time>66054</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>88</ControlCode>
+						<Time>69952</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>58</ControlCode>
+						<Time>72431</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>36</ControlCode>
+						<Time>75313</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>79602</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7910015</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>OL-UT</Name>
+			<BibNumber>19</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Kujala</Family>
+						<Given>Terhi</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Kangasaho</Family>
+						<Given>Essi</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T09:42:21</FinishTime>
+					<Time>81741</Time>
+					<Status>OK</Status>
+					<Score type="Points">144</Score>
+					<Score type="TotalPoints">144</Score>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>857</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>82</ControlCode>
+						<Time>5054</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>67</ControlCode>
+						<Time>7116</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>58</ControlCode>
+						<Time>9350</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>88</ControlCode>
+						<Time>12502</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>38</ControlCode>
+						<Time>14659</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>90</ControlCode>
+						<Time>17162</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>78</ControlCode>
+						<Time>19711</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>93</ControlCode>
+						<Time>22799</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>64</ControlCode>
+						<Time>26485</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>44</ControlCode>
+						<Time>29365</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>76</ControlCode>
+						<Time>31385</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>59</ControlCode>
+						<Time>34390</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>89</ControlCode>
+						<Time>36090</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>57</ControlCode>
+						<Time>40303</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>75</ControlCode>
+						<Time>41985</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>46</ControlCode>
+						<Time>44742</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>86</ControlCode>
+						<Time>48692</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>67582</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>69519</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>71393</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>40</ControlCode>
+						<Time>74930</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>95</ControlCode>
+						<Time>77978</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>34</ControlCode>
+						<Time>79981</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7203148</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>Pyry ja muut</Name>
+			<BibNumber>22</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Kirsi Hänninen</Family>
+						<Given>Kirsi</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Pia Jormakka</Family>
+						<Given>Pia</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-16T23:02:09</FinishTime>
+					<Time>43329</Time>
+					<Status>OK</Status>
+					<Score type="Points">44</Score>
+					<Score type="TotalPoints">44</Score>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>2295</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>86</ControlCode>
+						<Time>8142</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>46</ControlCode>
+						<Time>14189</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>75</ControlCode>
+						<Time>20837</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>57</ControlCode>
+						<Time>22707</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>58</ControlCode>
+						<Time>27904</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>67</ControlCode>
+						<Time>30304</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>30</ControlCode>
+						<Time>38838</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7202124</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>RasKun Flikat</Name>
+			<BibNumber>31</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Heittola</Family>
+						<Given>Satu</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>1899-12-30T00:00:00</FinishTime>
+					<Time>0</Time>
+					<Status>DidNotStart</Status>
+					<Score type="Points">0</Score>
+					<ControlCard punchingSystem="SI">7204218</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>Lahjattomat</Name>
+			<BibNumber>35</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Eskelinen</Family>
+						<Given>Suvi</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Lepistö</Family>
+						<Given>Hanna-Leena</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T06:32:58</FinishTime>
+					<Time>70378</Time>
+					<Status>OK</Status>
+					<Score type="Points">74</Score>
+					<Score type="TotalPoints">74</Score>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>438</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>1658</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>84</ControlCode>
+						<Time>6550</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>53</ControlCode>
+						<Time>10230</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>68</ControlCode>
+						<Time>16728</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>74</ControlCode>
+						<Time>19218</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>85</ControlCode>
+						<Time>22184</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>62</ControlCode>
+						<Time>24031</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>80</ControlCode>
+						<Time>27634</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>63</ControlCode>
+						<Time>30398</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>92</ControlCode>
+						<Time>35642</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>30</ControlCode>
+						<Time>40950</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7203070</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+	</ClassResult>
+	<ClassResult timeResolution="1">
+		<Class>
+			<Name>WJ</Name>
+		</Class>
+	</ClassResult>
+	<ClassResult timeResolution="1">
+		<Class>
+			<Name>WV</Name>
+		</Class>
+		<TeamResult>
+			<Name>Mimmit</Name>
+			<BibNumber>29</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Autio</Family>
+						<Given>Maria</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Koukkari</Family>
+						<Given>Mervi</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T10:09:49</FinishTime>
+					<Time>83389</Time>
+					<Status>OK</Status>
+					<Score type="Points">118</Score>
+					<Score type="TotalPoints">118</Score>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>749</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>30</ControlCode>
+						<Time>3730</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>82</ControlCode>
+						<Time>5675</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>67</ControlCode>
+						<Time>7837</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>97</ControlCode>
+						<Time>11550</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>55</ControlCode>
+						<Time>14261</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>35</ControlCode>
+						<Time>15239</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>72</ControlCode>
+						<Time>17117</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>94</ControlCode>
+						<Time>19266</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>92</ControlCode>
+						<Time>23984</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>63</ControlCode>
+						<Time>26237</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>91</ControlCode>
+						<Time>29362</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>33297</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>35219</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>38046</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>86</ControlCode>
+						<Time>64332</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>46</ControlCode>
+						<Time>67142</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>75</ControlCode>
+						<Time>74280</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>31</ControlCode>
+						<Time>77635</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>34</ControlCode>
+						<Time>81826</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7204213</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>Arctic Circle Adventure</Name>
+			<BibNumber>37</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Siltanen</Family>
+						<Given>Riitta</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Huuskonen</Family>
+						<Given>Taija</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-16T21:50:14</FinishTime>
+					<Time>39014</Time>
+					<Status>OK</Status>
+					<Score type="Points">133</Score>
+					<Score type="TotalPoints">133</Score>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>593</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>30</ControlCode>
+						<Time>2611</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>82</ControlCode>
+						<Time>3930</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>67</ControlCode>
+						<Time>5206</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>97</ControlCode>
+						<Time>7854</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>55</ControlCode>
+						<Time>10452</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>35</ControlCode>
+						<Time>11398</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>72</ControlCode>
+						<Time>12579</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>94</ControlCode>
+						<Time>14084</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>71</ControlCode>
+						<Time>15971</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>52</ControlCode>
+						<Time>17864</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>79</ControlCode>
+						<Time>20027</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>85</ControlCode>
+						<Time>22754</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>74</ControlCode>
+						<Time>24544</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>68</ControlCode>
+						<Time>26265</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>63</ControlCode>
+						<Time>28322</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>92</ControlCode>
+						<Time>30331</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>91</ControlCode>
+						<Time>34008</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>36209</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>37360</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>38480</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7204255</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+	</ClassResult>
+	<ClassResult timeResolution="1">
+		<Class>
+			<Name>WSV</Name>
+		</Class>
+		<TeamResult>
+			<Name>Nastolan Terä 1</Name>
+			<BibNumber>8</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Rantalainen</Family>
+						<Given>Tuija</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Rantalainen</Family>
+						<Given>Arja</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T10:27:11</FinishTime>
+					<Time>84431</Time>
+					<Status>OK</Status>
+					<Score type="Points">136</Score>
+					<Score type="TotalPoints">136</Score>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>448</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>1683</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>53</ControlCode>
+						<Time>4510</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>68</ControlCode>
+						<Time>8231</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>74</ControlCode>
+						<Time>11159</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>85</ControlCode>
+						<Time>14157</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>62</ControlCode>
+						<Time>15828</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>80</ControlCode>
+						<Time>17395</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>71</ControlCode>
+						<Time>21023</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>94</ControlCode>
+						<Time>24308</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>72</ControlCode>
+						<Time>27353</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>35</ControlCode>
+						<Time>30017</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>55</ControlCode>
+						<Time>31433</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>92</ControlCode>
+						<Time>34999</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>63</ControlCode>
+						<Time>38478</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>91</ControlCode>
+						<Time>43161</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>34</ControlCode>
+						<Time>48413</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>59034</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>86</ControlCode>
+						<Time>63468</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>46</ControlCode>
+						<Time>68161</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>75</ControlCode>
+						<Time>72523</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>83723</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7204121</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>zola</Name>
+			<BibNumber>15</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Zoia</Family>
+						<Given>Molotkova</Given>
+					</Name>
+					<Nationality code="RUS"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Larisa</Family>
+						<Given>Uspenskaya</Given>
+					</Name>
+					<Nationality code="RUS"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T10:39:51</FinishTime>
+					<Time>85191</Time>
+					<Status>OK</Status>
+					<Score type="Points">134</Score>
+					<Score type="TotalPoints">134</Score>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>816</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>36</ControlCode>
+						<Time>4023</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>58</ControlCode>
+						<Time>6644</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>67</ControlCode>
+						<Time>10375</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>82</ControlCode>
+						<Time>13387</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>33</ControlCode>
+						<Time>15920</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>55</ControlCode>
+						<Time>18167</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>35</ControlCode>
+						<Time>19399</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>94</ControlCode>
+						<Time>21859</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>92</ControlCode>
+						<Time>25299</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>80</ControlCode>
+						<Time>28131</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>62</ControlCode>
+						<Time>29454</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>85</ControlCode>
+						<Time>31051</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>74</ControlCode>
+						<Time>33899</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>68</ControlCode>
+						<Time>36356</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>91</ControlCode>
+						<Time>40347</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>43789</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>66281</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>67540</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>34</ControlCode>
+						<Time>69483</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>95</ControlCode>
+						<Time>71408</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>87</ControlCode>
+						<Time>77558</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7203020</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+	</ClassResult>
+	<ClassResult timeResolution="1">
+		<Class>
+			<Name>WUV</Name>
+		</Class>
+	</ClassResult>
+	<ClassResult timeResolution="1">
+		<Class>
+			<Name>WY</Name>
+		</Class>
+	</ClassResult>
+	<ClassResult timeResolution="1">
+		<Class>
+			<Name>XO</Name>
+		</Class>
+		<TeamResult>
+			<Name>Resistance</Name>
+			<BibNumber>7</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Lassila</Family>
+						<Given>Ilkka</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Toppila</Family>
+						<Given>Anni</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T08:46:21</FinishTime>
+					<Time>78381</Time>
+					<Status>OK</Status>
+					<Score type="Points">225</Score>
+					<Score type="TotalPoints">225</Score>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>620</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>86</ControlCode>
+						<Time>2230</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>46</ControlCode>
+						<Time>4155</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>75</ControlCode>
+						<Time>5752</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>57</ControlCode>
+						<Time>6680</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>76</ControlCode>
+						<Time>8497</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>44</ControlCode>
+						<Time>10429</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>93</ControlCode>
+						<Time>12136</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>78</ControlCode>
+						<Time>14097</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>90</ControlCode>
+						<Time>16676</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>88</ControlCode>
+						<Time>18822</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>58</ControlCode>
+						<Time>20289</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>67</ControlCode>
+						<Time>21885</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>82</ControlCode>
+						<Time>24007</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>33</ControlCode>
+						<Time>25856</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>97</ControlCode>
+						<Time>28763</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>55</ControlCode>
+						<Time>31406</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>92</ControlCode>
+						<Time>34189</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>72</ControlCode>
+						<Time>37828</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>94</ControlCode>
+						<Time>40371</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>71</ControlCode>
+						<Time>44071</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>52</ControlCode>
+						<Time>47203</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>83</ControlCode>
+						<Time>50126</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>79</ControlCode>
+						<Time>53981</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>85</ControlCode>
+						<Time>57472</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>74</ControlCode>
+						<Time>59699</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>68</ControlCode>
+						<Time>62182</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>62</ControlCode>
+						<Time>64116</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>80</ControlCode>
+						<Time>65176</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>63</ControlCode>
+						<Time>67821</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>91</ControlCode>
+						<Time>71736</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>74909</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>76868</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>77903</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7204126</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>Team ernut eellimmäisenä</Name>
+			<BibNumber>13</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Hakkarainen</Family>
+						<Given>Jari</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Hakkarainen</Family>
+						<Given>Heidi</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Salmela</Family>
+						<Given>Jutta</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T04:39:43</FinishTime>
+					<Time>63583</Time>
+					<Status>OK</Status>
+					<Score type="Points">79</Score>
+					<Score type="TotalPoints">79</Score>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>885</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>46</ControlCode>
+						<Time>5731</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>75</ControlCode>
+						<Time>8737</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>88</ControlCode>
+						<Time>13931</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>90</ControlCode>
+						<Time>17140</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>78</ControlCode>
+						<Time>22848</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>93</ControlCode>
+						<Time>25512</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>44</ControlCode>
+						<Time>31282</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>76</ControlCode>
+						<Time>34600</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>59</ControlCode>
+						<Time>39934</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>65</ControlCode>
+						<Time>48031</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>70</ControlCode>
+						<Time>54276</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7202067</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>TTR-RoGa-RaideRs</Name>
+			<BibNumber>17</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Lehkonen</Family>
+						<Given>Emmi</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Ollila</Family>
+						<Given>Antti</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Saari</Family>
+						<Given>Hannu</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T09:18:22</FinishTime>
+					<Time>80302</Time>
+					<Status>OK</Status>
+					<Score type="Points">172</Score>
+					<Score type="TotalPoints">172</Score>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>690</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>86</ControlCode>
+						<Time>2807</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>46</ControlCode>
+						<Time>5079</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>75</ControlCode>
+						<Time>7103</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>57</ControlCode>
+						<Time>8130</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>88</ControlCode>
+						<Time>10489</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>90</ControlCode>
+						<Time>12803</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>78</ControlCode>
+						<Time>15330</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>93</ControlCode>
+						<Time>17452</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>44</ControlCode>
+						<Time>20586</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>76</ControlCode>
+						<Time>22697</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>59</ControlCode>
+						<Time>24501</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>89</ControlCode>
+						<Time>26695</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>31</ControlCode>
+						<Time>28384</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>61</ControlCode>
+						<Time>31158</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>48</ControlCode>
+						<Time>34020</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>46158</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>47705</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>91</ControlCode>
+						<Time>51227</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>63</ControlCode>
+						<Time>54798</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>92</ControlCode>
+						<Time>57278</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>80</ControlCode>
+						<Time>62685</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>62</ControlCode>
+						<Time>64005</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>85</ControlCode>
+						<Time>65901</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>74</ControlCode>
+						<Time>67791</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>68</ControlCode>
+						<Time>71159</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>79663</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7202932</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>Rasti-Jussit</Name>
+			<BibNumber>34</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Korkeakangas</Family>
+						<Given>Antti</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Tölli</Family>
+						<Given>Alisa</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T10:26:28</FinishTime>
+					<Time>84388</Time>
+					<Status>OK</Status>
+					<Score type="Points">163</Score>
+					<Score type="TotalPoints">163</Score>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>422</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>30</ControlCode>
+						<Time>3121</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>82</ControlCode>
+						<Time>4666</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>67</ControlCode>
+						<Time>6233</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>97</ControlCode>
+						<Time>9381</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>55</ControlCode>
+						<Time>11817</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>35</ControlCode>
+						<Time>13369</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>72</ControlCode>
+						<Time>14694</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>94</ControlCode>
+						<Time>16599</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>92</ControlCode>
+						<Time>20062</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>71</ControlCode>
+						<Time>23386</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>62</ControlCode>
+						<Time>26383</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>80</ControlCode>
+						<Time>27512</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>63</ControlCode>
+						<Time>29249</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>91</ControlCode>
+						<Time>31909</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>34202</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>57669</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>36</ControlCode>
+						<Time>60714</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>58</ControlCode>
+						<Time>63789</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>88</ControlCode>
+						<Time>66407</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>90</ControlCode>
+						<Time>69380</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>57</ControlCode>
+						<Time>75717</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>75</ControlCode>
+						<Time>77124</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>46</ControlCode>
+						<Time>79180</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>86</ControlCode>
+						<Time>81732</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>84038</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7203211</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+	</ClassResult>
+	<ClassResult timeResolution="1">
+		<Class>
+			<Name>XJ</Name>
+		</Class>
+	</ClassResult>
+	<ClassResult timeResolution="1">
+		<Class>
+			<Name>XV</Name>
+		</Class>
+		<TeamResult>
+			<Name>Ilves</Name>
+			<BibNumber>1</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Ainelo</Family>
+						<Given>Juta</Given>
+					</Name>
+					<Nationality code="EST"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Ainelo</Family>
+						<Given>Jaan</Given>
+					</Name>
+					<Nationality code="EST"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Sarap</Family>
+						<Given>Margus</Given>
+					</Name>
+					<Nationality code="EST"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T09:42:40</FinishTime>
+					<Time>81760</Time>
+					<Status>OK</Status>
+					<Score type="Points">138</Score>
+					<Score type="TotalPoints">138</Score>
+					<SplitTime status="OK">
+						<ControlCode>34</ControlCode>
+						<Time>1387</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>95</ControlCode>
+						<Time>3074</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>40</ControlCode>
+						<Time>5592</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>84</ControlCode>
+						<Time>8604</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>53</ControlCode>
+						<Time>11123</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>68</ControlCode>
+						<Time>16143</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>74</ControlCode>
+						<Time>18389</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>85</ControlCode>
+						<Time>20400</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>62</ControlCode>
+						<Time>21830</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>80</ControlCode>
+						<Time>22744</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>71</ControlCode>
+						<Time>25043</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>94</ControlCode>
+						<Time>28573</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>92</ControlCode>
+						<Time>31538</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>63</ControlCode>
+						<Time>33878</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>91</ControlCode>
+						<Time>37001</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>39984</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>41583</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>65547</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>68240</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>36</ControlCode>
+						<Time>72147</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>46</ControlCode>
+						<Time>74700</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>86</ControlCode>
+						<Time>78047</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7204167</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>Pirunvuoren Ponnistus</Name>
+			<BibNumber>5</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Törmikoski</Family>
+						<Given>Tarja</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Törmikoski</Family>
+						<Given>Kai</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T07:12:42</FinishTime>
+					<Time>72762</Time>
+					<Status>OK</Status>
+					<Score type="Points">199</Score>
+					<Score type="TotalPoints">199</Score>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>415</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>34</ControlCode>
+						<Time>1606</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>95</ControlCode>
+						<Time>2881</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>40</ControlCode>
+						<Time>4715</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>84</ControlCode>
+						<Time>6650</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>53</ControlCode>
+						<Time>8591</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>68</ControlCode>
+						<Time>11295</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>74</ControlCode>
+						<Time>13021</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>85</ControlCode>
+						<Time>15620</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>62</ControlCode>
+						<Time>16658</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>80</ControlCode>
+						<Time>17533</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>63</ControlCode>
+						<Time>18970</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>71</ControlCode>
+						<Time>21244</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>52</ControlCode>
+						<Time>24261</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>79</ControlCode>
+						<Time>26675</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>83</ControlCode>
+						<Time>29167</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>39</ControlCode>
+						<Time>31049</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>60</ControlCode>
+						<Time>33937</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>99</ControlCode>
+						<Time>37158</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>72</ControlCode>
+						<Time>40090</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>94</ControlCode>
+						<Time>43003</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>92</ControlCode>
+						<Time>47488</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>55</ControlCode>
+						<Time>50510</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>97</ControlCode>
+						<Time>53485</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>67</ControlCode>
+						<Time>57472</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>82</ControlCode>
+						<Time>60287</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>30</ControlCode>
+						<Time>62451</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>91</ControlCode>
+						<Time>65053</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>68816</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>70914</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>72155</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7204222</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>SIRU</Name>
+			<BibNumber>30</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Ulla</Family>
+						<Given>Silventoinen</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Matti</Family>
+						<Given>Ruuska</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T04:47:18</FinishTime>
+					<Time>64038</Time>
+					<Status>OK</Status>
+					<Score type="Points">200</Score>
+					<Score type="TotalPoints">200</Score>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>338</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>34</ControlCode>
+						<Time>1348</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>95</ControlCode>
+						<Time>2496</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>40</ControlCode>
+						<Time>4176</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>84</ControlCode>
+						<Time>6409</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>53</ControlCode>
+						<Time>8596</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>91</ControlCode>
+						<Time>10549</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>63</ControlCode>
+						<Time>12981</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>92</ControlCode>
+						<Time>14688</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>71</ControlCode>
+						<Time>17570</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>80</ControlCode>
+						<Time>19236</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>62</ControlCode>
+						<Time>19966</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>85</ControlCode>
+						<Time>21068</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>74</ControlCode>
+						<Time>22641</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>73</ControlCode>
+						<Time>24967</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>81</ControlCode>
+						<Time>27458</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>42</ControlCode>
+						<Time>29418</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>79</ControlCode>
+						<Time>31573</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>83</ControlCode>
+						<Time>33813</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>39</ControlCode>
+						<Time>35656</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>60</ControlCode>
+						<Time>38195</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>50</ControlCode>
+						<Time>40345</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>94</ControlCode>
+						<Time>42478</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>72</ControlCode>
+						<Time>44517</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>35</ControlCode>
+						<Time>46372</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>55</ControlCode>
+						<Time>47512</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>97</ControlCode>
+						<Time>51370</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>67</ControlCode>
+						<Time>55263</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>82</ControlCode>
+						<Time>57430</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>62115</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>63379</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7204177</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>Mambo Mzungu</Name>
+			<BibNumber>32</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Juntunen</Family>
+						<Given>Paavo</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Köntti</Family>
+						<Given>Irina</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T09:16:50</FinishTime>
+					<Time>80210</Time>
+					<Status>OK</Status>
+					<Score type="Points">111</Score>
+					<Score type="TotalPoints">111</Score>
+					<SplitTime status="OK">
+						<ControlCode>34</ControlCode>
+						<Time>1558</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>95</ControlCode>
+						<Time>3094</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>47</ControlCode>
+						<Time>6013</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>87</ControlCode>
+						<Time>8373</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>37</ControlCode>
+						<Time>11452</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>96</ControlCode>
+						<Time>14003</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>98</ControlCode>
+						<Time>18914</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>65</ControlCode>
+						<Time>22475</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>59</ControlCode>
+						<Time>26648</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>89</ControlCode>
+						<Time>28777</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>31</ControlCode>
+						<Time>30691</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>61</ControlCode>
+						<Time>34622</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>86</ControlCode>
+						<Time>37387</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>47351</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>30</ControlCode>
+						<Time>52240</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>82</ControlCode>
+						<Time>55914</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>71236</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>75412</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>79202</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7204104</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+	</ClassResult>
+	<ClassResult timeResolution="1">
+		<Class>
+			<Name>XSV</Name>
+		</Class>
+	</ClassResult>
+	<ClassResult timeResolution="1">
+		<Class>
+			<Name>XUV</Name>
+		</Class>
+		<TeamResult>
+			<Name>Sister and her brother</Name>
+			<BibNumber>11</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Lainema</Family>
+						<Given>Ilkka</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Lainema</Family>
+						<Given>Maija</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-16T23:16:30</FinishTime>
+					<Time>44190</Time>
+					<Status>OK</Status>
+					<Score type="Points">92</Score>
+					<Score type="TotalPoints">92</Score>
+					<SplitTime status="OK">
+						<ControlCode>69</ControlCode>
+						<Time>920</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>36</ControlCode>
+						<Time>4350</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>58</ControlCode>
+						<Time>7796</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>88</ControlCode>
+						<Time>10370</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>90</ControlCode>
+						<Time>13754</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>78</ControlCode>
+						<Time>17735</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>93</ControlCode>
+						<Time>20626</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>44</ControlCode>
+						<Time>23658</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>76</ControlCode>
+						<Time>26471</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>59</ControlCode>
+						<Time>29006</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>89</ControlCode>
+						<Time>31128</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>31</ControlCode>
+						<Time>33631</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>86</ControlCode>
+						<Time>36983</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>41865</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>43411</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7204241</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+		<TeamResult>
+			<Name>HiPe</Name>
+			<BibNumber>26</BibNumber>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Syväterä</Family>
+						<Given>Hillevi</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>Syväterä</Family>
+						<Given>Pekka</Given>
+					</Name>
+					<Nationality code="FIN"/>
+				</Person>
+			</TeamMemberResult>
+			<TeamMemberResult>
+				<Person>
+					<Name>
+						<Family>TEAMTOTAL</Family>
+						<Given/>
+					</Name>
+				</Person>
+				<Result>
+					<StartTime>2015-05-16T11:00:00</StartTime>
+					<FinishTime>2015-05-17T09:39:09</FinishTime>
+					<Time>81549</Time>
+					<Status>OK</Status>
+					<Score type="Points">86</Score>
+					<Score type="TotalPoints">86</Score>
+					<SplitTime status="OK">
+						<ControlCode>51</ControlCode>
+						<Time>730</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>56</ControlCode>
+						<Time>1992</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>32</ControlCode>
+						<Time>3678</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>53</ControlCode>
+						<Time>6756</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>91</ControlCode>
+						<Time>10080</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>63</ControlCode>
+						<Time>14673</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>92</ControlCode>
+						<Time>18325</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>55</ControlCode>
+						<Time>22072</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>97</ControlCode>
+						<Time>25793</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>33</ControlCode>
+						<Time>30402</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>82</ControlCode>
+						<Time>33968</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>30</ControlCode>
+						<Time>36816</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>34</ControlCode>
+						<Time>69389</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>40</ControlCode>
+						<Time>71884</Time>
+					</SplitTime>
+					<SplitTime status="OK">
+						<ControlCode>95</ControlCode>
+						<Time>77791</Time>
+					</SplitTime>
+					<ControlCard punchingSystem="SI">7202005</ControlCard>
+				</Result>
+			</TeamMemberResult>
+		</TeamResult>
+	</ClassResult>
+	<ClassResult timeResolution="1">
+		<Class>
+			<Name>XY</Name>
+		</Class>
+	</ClassResult>
+</ResultList>
