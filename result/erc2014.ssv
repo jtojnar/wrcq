@@ -22,7 +22,7 @@ R24.LV;veteran;mixed;0;23:47:11;;295;294;LAT;Kaminskis;Valters;LAT;Liepina;Anita
 Alpha-D;veteran;men;0;23:54:17;;293;101;RUS;Khalyapin;Alexander;RUS;Tonis;Alexander
 Peipsi Kurk / Veski Külalistemaja;open;men;0;23:44:13;;292;47;EST;Anton;Arvi;EST;Tammemäe;Joosep
 Krilatiy Batalion;open;men;0;23:50:28;;292;34;RUS;Averianov;Andrey;RUS;Baranovskiy;Valery
-ArcticFox;open;mixed;0;23:24:29;;291;212;RUS;Alekseeva;Ekaterina;RUS;Kiselev;Aleksandr
+ArcticFox;open;mixed;0;23:24:29;;291;212;RUS;Alekseeva;Ekaterina;RUS;Kiselev;Aleksander
 Klanova;veteran;men;0;23:40:15;;291;115;EST;Roose;Antti;EST;Ellamik;Väino
 Easy;veteran;mixed;0;23:40:33;;291;281;LAT;Actins;Aigars;LAT;Lapina;Ilze
 Raivojuoksijat;open;men;0;23:21:47;;287;48;FIN;Haka;Sakari;FIN;Pitkäkoski;Jari
@@ -76,7 +76,7 @@ Festina Lente;superveteran;men;0;23:54:28;;235;78;EST;Eomois;Peep;EST;Kuiv;Sulev
 Kapa LR;superveteran;mixed;0;23:43:44;;234;264;LAT;Laveikis;Rolands;LAT;Grunde;Ligita
 MGU;veteran;mixed;0;23:54:02;;234;237;RUS;Kubarev;Mikhail;RUS;Kubareva;Elena
 Leader-tour-2;junior;men;0;23:39:30;;233;2;UKR;Koshoviy;Yaroslav;UKR;Romanov;Georgiy
-ISC;superveteran;men;0;23:44:12;;233;82;EST;Kivikas;Arvo;EST;Tasa;Johannes;LAT;Ainars;Gailis
+ISC;superveteran;men;0;23:44:12;;233;82;EST;Kivikas;Arvo;EST;Tasa;Johannes;LAT;Gailis;Ainars
 Green Power Shoes;veteran;men;0;22:54:01;;232;109;LAT;Petersons;Gints;LAT;Muiznieks;Raitis
 Malaci;superveteran;mixed;0;23:30:37;;232;267;LAT;Busa;Velga;LAT;Pekuss;Uldis
 Rändajad;veteran;women;0;23:37:08;;232;196;EST;Himma;Evelyn;EST;Mets;Merike
@@ -95,7 +95,7 @@ Snappy;junior;men;-5;24:04:39;;223;4;UKR;Kelia;Andriy;UKR;Kelia;Viacheslav
 LB-63;superveteran;men;0;22:52:30;;222;85;LAT;Biezais;Janis;LAT;Lukasovs;Helmuts
 O-Rostov;open;mixed;0;21:27:58;;221;211;RUS;Bugrova;Diana;RUS;Temiakov;Andrey
 Lynx-Lynx;veteran;mixed;0;22:40:40;;220;291;EST;Ilves;Elin;EST;Ilves;Tönu
-Astra;junior;women;0;23:02:21;;220;149;UKR;Dzema;Katia;UKR;Zakharova;Polina;UKR;Basyuk;Anastasia
+Astra;junior;women;0;23:02:21;;220;149;UKR;Dzema;Kateryna;UKR;Zakharova;Polina;UKR;Basyuk;Anastasia
 KAPA VR;superveteran;mixed;0;23:32:25;;220;265;LAT;Kukka;Ruta;LAT;Kukk;Volli
 Krasnogorsk;superveteran;men;0;21:14:41;;219;84;RUS;Chernyshov;Igor;RUS;Lukin;Mikhail
 Flamps;open;men;0;20:20:21;;217;21;LAT;Gedins;Marcis;LAT;Drukis;Peteris
@@ -163,7 +163,7 @@ Avant;ultraveteran;men;0;23:46:59;;182;95;RUS;Bazanov;Aleksei;RUS;Lisenenkov;Ale
 Picnic na obochine-2;veteran;mixed;0;22:43:38;;181;293;RUS;Egorova;Tatiana;RUS;Levchenko;Dmitrii
 Konnanimi;open;men;0;21:23:14;;180;33;EST;Ivanov;Heno;EST;Pettai;Martin
 Ceriba mirst pedeja;veteran;women;0;22:31:18;;180;186;LAT;Seglina;Indra;LAT;Blumberga;Zane
-Ukraine;junior;women;0;22:41:59;;179;151;UKR;Kobets;Yulia;UKR;Tkachuk;Viktoria
+Ukraine;junior;women;0;22:41:59;;179;151;UKR;Kobets;Yulia;UKR;Tkatchuk;Viktoria
 Baltie Zalksi;open;mixed;0;23:45:03;;179;213;LAT;Celms;Edgars;LAT;Kaskina;Baiba;LAT;Krenklis;Ivars;LAT;Malkalnietis;Gints
 Medwedia;open;men;0;23:49:02;;179;40;EST;Virumäe;Alar;EST;Aasaru;Juhan
 Saare malev;open;men;0;17:55:29;;178;53;EST;Linde;Jüri;EST;Tuisk;Taavi

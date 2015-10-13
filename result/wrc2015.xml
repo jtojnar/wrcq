@@ -14047,7 +14047,7 @@
 				<Person sex="M">
 					<Name>
 						<Family>Mospan</Family>
-						<Given>Serhii</Given>
+						<Given>Serhiy</Given>
 					</Name>
 					<Nationality code="UKR"/>
 					<BirthDate>1993-10-19</BirthDate>
@@ -14056,8 +14056,8 @@
 			<TeamMemberResult>
 				<Person sex="M">
 					<Name>
-						<Family>Andria</Family>
-						<Given>Hudz</Given>
+						<Family>Hudz</Family>
+						<Given>Andria</Given>
 					</Name>
 					<Nationality code="UKR"/>
 					<BirthDate>1995-12-15</BirthDate>
@@ -14542,8 +14542,8 @@
 			<TeamMemberResult>
 				<Person sex="M">
 					<Name>
-						<Family>Andrii</Family>
-						<Given>Kelia</Given>
+						<Family>Kelia</Family>
+						<Given>Andriy</Given>
 					</Name>
 					<Nationality code="UKR"/>
 					<BirthDate>1994-07-01</BirthDate>
@@ -23127,8 +23127,8 @@
 			<TeamMemberResult>
 				<Person sex="M">
 					<Name>
-						<Family>Evgeny</Family>
-						<Given>Dombrovsky</Given>
+						<Family>Evgeniy</Family>
+						<Given>Dombrovskiy</Given>
 					</Name>
 					<Nationality code="RUS"/>
 					<BirthDate>1975-01-02</BirthDate>
@@ -23137,8 +23137,8 @@
 			<TeamMemberResult>
 				<Person sex="M">
 					<Name>
-						<Family>Sergey</Family>
-						<Given>Konstantinov</Given>
+						<Family>Konstantinov</Family>
+						<Given>Sergey</Given>
 					</Name>
 					<Nationality code="RUS"/>
 					<BirthDate>1969-07-26</BirthDate>
@@ -23359,8 +23359,8 @@
 			<TeamMemberResult>
 				<Person sex="M">
 					<Name>
-						<Family>Oleg</Family>
-						<Given>Kalinin</Given>
+						<Family>Kalinin</Family>
+						<Given>Oleg</Given>
 					</Name>
 					<Nationality code="RUS"/>
 					<BirthDate>1974-11-10</BirthDate>
@@ -23369,8 +23369,8 @@
 			<TeamMemberResult>
 				<Person sex="M">
 					<Name>
-						<Family>Andrey</Family>
-						<Given>Shvedov</Given>
+						<Family>Shvedov</Family>
+						<Given>Andrey</Given>
 					</Name>
 					<Nationality code="RUS"/>
 					<BirthDate>1972-02-03</BirthDate>
@@ -26163,8 +26163,8 @@
 			<TeamMemberResult>
 				<Person sex="M">
 					<Name>
-						<Family>Sirinok</Family>
-						<Given>Sergii</Given>
+						<Family>Sirinyuk</Family>
+						<Given>Serhiy</Given>
 					</Name>
 					<Nationality code="UKR"/>
 					<BirthDate>1973-06-29</BirthDate>
@@ -26607,7 +26607,7 @@
 				<Person sex="M">
 					<Name>
 						<Family>Gray</Family>
-						<Given>Rod</Given>
+						<Given>Rodney,</Given>
 					</Name>
 					<Nationality code="AUS"/>
 					<BirthDate>1955-04-15</BirthDate>
@@ -28942,8 +28942,8 @@
 			<TeamMemberResult>
 				<Person sex="M">
 					<Name>
-						<Family>Mikhail</Family>
-						<Given>Lukin</Given>
+						<Family>Lukin</Family>
+						<Given>Mikhail</Given>
 					</Name>
 					<Nationality code="RUS"/>
 					<BirthDate>1955-11-28</BirthDate>
@@ -28952,8 +28952,8 @@
 			<TeamMemberResult>
 				<Person sex="M">
 					<Name>
-						<Family>Igor</Family>
-						<Given>Chernyshov</Given>
+						<Family>Chernyshov</Family>
+						<Given>Igor</Given>
 					</Name>
 					<Nationality code="RUS"/>
 					<BirthDate>1957-03-30</BirthDate>
@@ -33153,7 +33153,7 @@
 				<Person sex="F">
 					<Name>
 						<Family>Shavlakova</Family>
-						<Given>Ann</Given>
+						<Given>Anna</Given>
 					</Name>
 					<Nationality code="RUS"/>
 					<BirthDate>1979-02-28</BirthDate>
@@ -36486,8 +36486,8 @@
 			<TeamMemberResult>
 				<Person sex="F">
 					<Name>
-						<Family>Kateryna</Family>
-						<Given>Dzema</Given>
+						<Family>Dzema</Family>
+						<Given>Kateryna</Given>
 					</Name>
 					<Nationality code="UKR"/>
 					<BirthDate>1994-09-09</BirthDate>
@@ -36496,8 +36496,8 @@
 			<TeamMemberResult>
 				<Person sex="F">
 					<Name>
-						<Family>Polina</Family>
-						<Given>Zakharova</Given>
+						<Family>Zakharova</Family>
+						<Given>Polina</Given>
 					</Name>
 					<Nationality code="UKR"/>
 					<BirthDate>1994-12-01</BirthDate>
@@ -37085,8 +37085,8 @@
 			<TeamMemberResult>
 				<Person sex="F">
 					<Name>
-						<Family>Nina</Family>
-						<Given>Mikheeva</Given>
+						<Family>Mikheeva</Family>
+						<Given>Nina</Given>
 					</Name>
 					<Nationality code="RUS"/>
 					<BirthDate>1969-02-21</BirthDate>
@@ -37095,8 +37095,8 @@
 			<TeamMemberResult>
 				<Person sex="F">
 					<Name>
-						<Family>Marina</Family>
-						<Given>Galkina</Given>
+						<Family>Galkina</Family>
+						<Given>Marina</Given>
 					</Name>
 					<Nationality code="RUS"/>
 					<BirthDate>1968-04-28</BirthDate>
@@ -38188,7 +38188,7 @@
 				<Person sex="F">
 					<Name>
 						<Family>Davidova</Family>
-						<Given>Yuliia</Given>
+						<Given>Yulia</Given>
 					</Name>
 					<Nationality code="RUS"/>
 					<BirthDate>1972-09-05</BirthDate>
@@ -40455,8 +40455,8 @@
 			<TeamMemberResult>
 				<Person sex="F">
 					<Name>
-						<Family>Jurane</Family>
-						<Given>Gundega</Given>
+						<Family>Gundega</Family>
+						<Given>Jurane</Given>
 					</Name>
 					<Nationality code="LAT"/>
 					<BirthDate>1959-06-12</BirthDate>
@@ -42647,8 +42647,8 @@
 			<TeamMemberResult>
 				<Person sex="F">
 					<Name>
-						<Family>Natalia</Family>
-						<Given>Zimina</Given>
+						<Family>Zimina</Family>
+						<Given>Natalia</Given>
 					</Name>
 					<Nationality code="RUS"/>
 					<BirthDate>1979-03-04</BirthDate>
@@ -48824,8 +48824,8 @@
 			<TeamMemberResult>
 				<Person sex="F">
 					<Name>
-						<Family>Yuliya</Family>
-						<Given>Kobets</Given>
+						<Family>Kobets</Family>
+						<Given>Yuliya</Given>
 					</Name>
 					<Nationality code="UKR"/>
 					<BirthDate>1996-03-07</BirthDate>
@@ -48834,8 +48834,8 @@
 			<TeamMemberResult>
 				<Person sex="M">
 					<Name>
-						<Family>Mykola</Family>
-						<Given>Kobets</Given>
+						<Family>Kobets</Family>
+						<Given>Mykola</Given>
 					</Name>
 					<Nationality code="UKR"/>
 					<BirthDate>1993-06-20</BirthDate>
@@ -49308,8 +49308,8 @@
 			<TeamMemberResult>
 				<Person sex="M">
 					<Name>
-						<Family>Volodymyr</Family>
-						<Given>Bezditnyi</Given>
+						<Family>Bezditniy</Family>
+						<Given>Volodymyr</Given>
 					</Name>
 					<Nationality code="UKR"/>
 					<BirthDate>1993-12-27</BirthDate>
@@ -49318,8 +49318,8 @@
 			<TeamMemberResult>
 				<Person sex="M">
 					<Name>
-						<Family>Sergey</Family>
-						<Given>Nagorniuk</Given>
+						<Family>Nagornyuk</Family>
+						<Given>Sergey</Given>
 					</Name>
 					<Nationality code="UKR"/>
 					<BirthDate>1996-11-21</BirthDate>
@@ -49328,8 +49328,8 @@
 			<TeamMemberResult>
 				<Person sex="F">
 					<Name>
-						<Family>Anastasia</Family>
-						<Given>Basiuk</Given>
+						<Family>Basyuk</Family>
+						<Given>Anastasia</Given>
 					</Name>
 					<Nationality code="UKR"/>
 					<BirthDate>1997-01-26</BirthDate>
@@ -52386,7 +52386,7 @@
 				<Person sex="M">
 					<Name>
 						<Family>Zolotykh</Family>
-						<Given>Andrei</Given>
+						<Given>Andrey</Given>
 					</Name>
 					<Nationality code="RUS"/>
 					<BirthDate>1972-03-09</BirthDate>
@@ -54969,8 +54969,8 @@
 			<TeamMemberResult>
 				<Person sex="F">
 					<Name>
-						<Family>Irita</Family>
-						<Given>Pukite</Given>
+						<Family>Pukite</Family>
+						<Given>Irita</Given>
 					</Name>
 					<Nationality code="LAT"/>
 					<BirthDate>1974-12-17</BirthDate>
@@ -57551,7 +57551,7 @@
 			<TeamMemberResult>
 				<Person sex="F">
 					<Name>
-						<Family>Buða</Family>
+						<Family>Busa</Family>
 						<Given>Velga</Given>
 					</Name>
 					<Nationality code="LAT"/>

@@ -1027,9 +1027,9 @@
   </team>
   <team id="24159" score="2560" time="23:48:35" penalty="0" name="O-RUN FOR FUN"
  gender="men" age="veteran" duration="24">
-    <member firstname="ALEXANDER" lastname="KHALYAPIN" country="RUS" />
-    <member firstname="Viacheslav" lastname="Savchenko" country="RUS" />
-    <member firstname="SERGII" lastname="SIRINOK" country="UKR" />
+    <member firstname="Alexander" lastname="Khaljapin" country="RUS" />
+    <member firstname="Viatcheslav" lastname="Savchenko" country="RUS" />
+    <member firstname="Serhij" lastname="Sirinyuk" country="UKR" />
   </team>
   <team id="24160" score="2230" time="23:12:32" penalty="0" name="RM-1902"
  gender="men" age="veteran" duration="24">
@@ -1119,18 +1119,18 @@
   </team>
   <team id="24183" score="2070" time="23:40:16" penalty="0" name="Astra"
  gender="women" age="superveteran" duration="24">
-    <member firstname="Dzema" lastname="Kateryna" country="UKR" />
-    <member firstname="Zakharova" lastname="Polina" country="UKR" />
+    <member firstname="Kateryna" lastname="Dzema" country="UKR" />
+    <member firstname="Polina" lastname="Zakharova" country="UKR" />
   </team>
   <team id="24184" score="1850" time="22:49:52" penalty="0" name="Dnepr"
  gender="women" age="superveteran" duration="24">
-    <member firstname="TKACHUK" lastname="VICTORIY" country="UKR" />
-    <member firstname="KRAVCHUK" lastname="YULIIY" country="UKR" />
+    <member firstname="Victoria" lastname="Thatchuk" country="UKR" />
+    <member firstname="Yulia" lastname="Kravchuk" country="UKR" />
   </team>
   <team id="24185" score="2090" time="23:33:36" penalty="0" name="FirstVinLeader"
  gender="mixed" age="superveteran" duration="24">
     <member firstname="Anastasia" lastname="Basiuk" country="UKR" />
-    <member firstname="Sergey" lastname="Nagorniuk" country="UKR" />
+    <member firstname="Sergey" lastname="Nagornyuk" country="UKR" />
   </team>
   <team id="24186" score="1240" time="23:38:03" penalty="0" name="hutsuli"
  gender="mixed" age="superveteran" duration="24">
@@ -1149,13 +1149,13 @@
   </team>
   <team id="24189" score="1660" time="23:20:55" penalty="0" name="ChNU-Avangard 3"
  gender="men" age="superveteran" duration="24">
-    <member firstname="Kelia" lastname="Andrii" country="UKR" />
-    <member firstname="Kelia" lastname="Vicheslav" country="UKR" />
+    <member firstname="Andriy" lastname="Kelia" country="UKR" />
+    <member firstname="Viatcheslav" lastname="Kelia" country="UKR" />
   </team>
   <team id="24190" score="2450" time="22:58:05" penalty="0" name="karpaty"
  gender="men" age="superveteran" duration="24">
-    <member firstname="Mospan" lastname="Serhii" country="UKR" />
-    <member firstname="Pikulin" lastname="Viacheslav" country="UKR" />
+    <member firstname="Serhiy" lastname="Mospan" country="UKR" />
+    <member firstname="Viatcheslav" lastname="Pikulin" country="UKR" />
   </team>
   <team id="24191" score="1010" time="15:39:51" penalty="0" name="Kherson-1"
  gender="mixed" age="superveteran" duration="24">
@@ -1170,19 +1170,19 @@
   </team>
   <team id="24194" score="2210" time="23:46:25" penalty="0" name="November"
  gender="women" age="open" duration="24">
-    <member firstname="Olena" lastname="Dotsenko" country="UKR" />
+    <member firstname="Olena" lastname="Docenko" country="UKR" />
     <member firstname="Nataliia" lastname="Pustova" country="UKR" />
   </team>
   <team id="24196" score="1860" time="22:22:12" penalty="0" name="UKRAINE"
  gender="mixed" age="superveteran" duration="24">
-    <member firstname="OLEKSANDER" lastname="KOLCHANOV" country="UKR" />
-    <member firstname="NATALIA" lastname="SHELEPIUK" country="UKR" />
+    <member firstname="Olexander" lastname="Kolchanov" country="UKR" />
+    <member firstname="Natalia" lastname="Shelepyuk" country="UKR" />
   </team>
   <team id="24197" score="2140" time="23:39:09" penalty="0" name="UKRAINE-DINAMO"
  gender="mixed" age="superveteran" duration="24">
-    <member firstname="KOBETS" lastname="MYKOLA" country="UKR" />
-    <member firstname="BEZDITNYI" lastname="VOLODYMYR" country="UKR" />
-    <member firstname="KOBETS" lastname="YULIYA" country="UKR" />
+    <member firstname="Mykola" lastname="Kobets" country="UKR" />
+    <member firstname="Bezditniy" lastname="Volodymyr" country="UKR" />
+    <member firstname="Yulia" lastname="Kobets" country="UKR" />
   </team>
   <team id="24198" score="1610" time="23:51:40" penalty="0" name="UkraineXJ"
  gender="mixed" age="superveteran" duration="24">
