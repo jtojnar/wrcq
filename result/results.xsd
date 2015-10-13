@@ -69,6 +69,7 @@
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
 									<xs:enumeration value="not started" />
+									<xs:enumeration value="late" />
 									<xs:enumeration value="not finished" />
 									<xs:enumeration value="withdrawn" />
 									<xs:enumeration value="overtime" />
