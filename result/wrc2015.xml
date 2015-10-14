@@ -26607,7 +26607,7 @@
 				<Person sex="M">
 					<Name>
 						<Family>Gray</Family>
-						<Given>Rodney,</Given>
+						<Given>Rodney</Given>
 					</Name>
 					<Nationality code="AUS"/>
 					<BirthDate>1955-04-15</BirthDate>
