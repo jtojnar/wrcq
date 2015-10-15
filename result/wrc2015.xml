@@ -32344,8 +32344,8 @@
 			<TeamMemberResult>
 				<Person sex="F">
 					<Name>
-						<Family>Aiva</Family>
-						<Given>Jakovela</Given>
+						<Family>Jakovela</Family>
+						<Given>Aiva</Given>
 					</Name>
 					<Nationality code="LAT"/>
 					<BirthDate>1977-01-16</BirthDate>
@@ -32354,8 +32354,8 @@
 			<TeamMemberResult>
 				<Person sex="F">
 					<Name>
-						<Family>Alda</Family>
-						<Given>Braþune</Given>
+						<Family>Brazune</Family>
+						<Given>Alda</Given>
 					</Name>
 					<Nationality code="LAT"/>
 					<BirthDate>1982-03-31</BirthDate>
@@ -40455,8 +40455,8 @@
 			<TeamMemberResult>
 				<Person sex="F">
 					<Name>
-						<Family>Gundega</Family>
-						<Given>Jurane</Given>
+						<Family>Jurane</Family>
+						<Given>Gundega</Given>
 					</Name>
 					<Nationality code="LAT"/>
 					<BirthDate>1959-06-12</BirthDate>
@@ -53569,8 +53569,8 @@
 			<TeamMemberResult>
 				<Person sex="F">
 					<Name>
-						<Family>Baiba</Family>
-						<Given>Ozola</Given>
+						<Family>Ozola</Family>
+						<Given>Baiba</Given>
 					</Name>
 					<Nationality code="LAT"/>
 					<BirthDate>1964-10-18</BirthDate>
@@ -53579,8 +53579,8 @@
 			<TeamMemberResult>
 				<Person sex="M">
 					<Name>
-						<Family>Janis</Family>
-						<Given>Nagelis</Given>
+						<Family>Nāgelis</Family>
+						<Given>Janis</Given>
 					</Name>
 					<Nationality code="LAT"/>
 					<BirthDate>1960-11-24</BirthDate>
@@ -54979,8 +54979,8 @@
 			<TeamMemberResult>
 				<Person sex="M">
 					<Name>
-						<Family>Guntars</Family>
-						<Given>Mankus</Given>
+						<Family>Mankus</Family>
+						<Given>Guntars</Given>
 					</Name>
 					<Nationality code="LAT"/>
 					<BirthDate>1969-07-05</BirthDate>
@@ -57725,8 +57725,8 @@
 			<TeamMemberResult>
 				<Person sex="M">
 					<Name>
-						<Family>Rolands</Family>
-						<Given>Laveikis</Given>
+						<Family>Laveikis</Family>
+						<Given>Rolands</Given>
 					</Name>
 					<Nationality code="LAT"/>
 					<BirthDate>1956-03-31</BirthDate>
@@ -57735,8 +57735,8 @@
 			<TeamMemberResult>
 				<Person sex="F">
 					<Name>
-						<Family>Ligita</Family>
-						<Given>Grunde</Given>
+						<Family>Grunde</Family>
+						<Given>Ligita</Given>
 					</Name>
 					<Nationality code="LAT"/>
 					<BirthDate>1954-10-04</BirthDate>
