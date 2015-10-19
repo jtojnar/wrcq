@@ -1,4 +1,4 @@
 <h3>{{@key}}</h3>
 {{#each this}}
-<p><strong>{{lastname}} {{firstname}}</strong> {{#each reasons}}{{criterion}} – {{#equals criterion '1.4'}}IRF councillor{{else}}<a href="/events/{{event}}/results">{{genderclass gender}}{{ageclass age}}{{position}}@{{event}}</a>{{/equals}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+<p><strong>{{lastname}} {{firstname}}</strong> {{#each reasons}}{{criterion}} – {{#equals criterion '1.4'}}IRF councillor{{else}}{{#if starWarning}}<span title="Provided that the person has competed in at least one 24-hour rogaine in the two years immediately preceding the opening of entries" data-toggle="tooltip">{{/if}}<a href="/events/{{event}}/results">{{genderclass gender}}{{ageclass age}}{{position}}@{{event}}</a>{{#if starWarning}}*</span>{{/if}}{{/equals}}{{#unless @last}}, {{/unless}}{{/each}}</p>
 {{/each}}

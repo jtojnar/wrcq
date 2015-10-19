@@ -235,13 +235,15 @@ function pushQualified(qualified, type, criterion, criterion_qualified, eventIds
 			} else if(criterion === '1.4') {
 				qualified[type][member.country_code][member.person_id].reasons.push({criterion: criterion});
 			} else {
+				var starWarning = criterion === '2.1' ? member.star_warning : false;
 				if(member.prequalified_uv) {
 					var reason = {
 						criterion: criterion,
 						event: eventIds[member.event_id].slug,
 						gender: member.gender,
 						position: member.position_uv,
-						age: 'ultraveteran'
+						age: 'ultraveteran',
+						starWarning: starWarning
 					};
 					qualified[type][member.country_code][member.person_id].reasons.push(reason);
 				}
@@ -251,7 +253,8 @@ function pushQualified(qualified, type, criterion, criterion_qualified, eventIds
 						event: eventIds[member.event_id].slug,
 						gender: member.gender,
 						position: member.position_sv,
-						age: 'superveteran'
+						age: 'superveteran',
+						starWarning: starWarning
 					};
 					qualified[type][member.country_code][member.person_id].reasons.push(reason);
 				}
@@ -261,7 +264,8 @@ function pushQualified(qualified, type, criterion, criterion_qualified, eventIds
 						event: eventIds[member.event_id].slug,
 						gender: member.gender,
 						position: member.position_v,
-						age: 'veteran'
+						age: 'veteran',
+						starWarning: starWarning
 					};
 					qualified[type][member.country_code][member.person_id].reasons.push(reason);
 				}
@@ -271,7 +275,8 @@ function pushQualified(qualified, type, criterion, criterion_qualified, eventIds
 						event: eventIds[member.event_id].slug,
 						gender: member.gender,
 						position: member.position_o,
-						age: 'open'
+						age: 'open',
+						starWarning: starWarning
 					};
 					qualified[type][member.country_code][member.person_id].reasons.push(reason);
 				}
@@ -281,7 +286,8 @@ function pushQualified(qualified, type, criterion, criterion_qualified, eventIds
 						event: eventIds[member.event_id].slug,
 						gender: member.gender,
 						position: member.position_j,
-						age: 'youth'
+						age: 'youth',
+						starWarning: starWarning
 					};
 					qualified[type][member.country_code][member.person_id].reasons.push(reason);
 				}
@@ -383,7 +389,7 @@ app.get('/qualified', function(req, res) {
 
 		// criterion 2.1
 		await client.query(
-			"with past_event as (select id from event where level = 'world'), past_team as (select *, count(*) over w as \"limit\", row_number() over (w order by score desc, time asc) as position from team where event_id in (select * from past_event) window w as (partition by event_id, gender)), recent_event as (select id from event where level = 'world' and \"end\" < current_date order by \"end\" desc limit 2), recent_event_attendee as (select person_id from member where (event_id, team_id) in (select event_id, id from team where event_id in (select * from recent_event))) select *, true as prequalified_o from member left join past_team on member.event_id = past_team.event_id and member.team_id = past_team.id where position = 1 and person_id not in (select person_id from recent_event_attendee);",
+			"with past_event as (select id from event where level = 'world'), past_team as (select *, count(*) over w as \"limit\", row_number() over (w order by score desc, time asc) as position from team where event_id in (select * from past_event) window w as (partition by event_id, gender)), recent_event as (select id from event where level = 'world' and \"end\" < current_date order by \"end\" desc limit 2), recent_event_attendee as (select person_id from member where (event_id, team_id) in (select event_id, id from team where event_id in (select * from recent_event))), all_recent_event as (select id from event where \"end\" > (current_date - INTERVAL '2 years') and \"end\" < current_date), all_recent_event_attendee as (select person_id from member where event_id in (select id from all_recent_event)) select *, (person_id not in (select * from all_recent_event_attendee)) as star_warning, true as prequalified_o from member left join past_team on member.event_id = past_team.event_id and member.team_id = past_team.id where position = 1 and person_id not in (select person_id from recent_event_attendee); ",
 			defer(var err, criterion_qualified)
 		);
 		if(err) {
