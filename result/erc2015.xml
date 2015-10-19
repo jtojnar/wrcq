@@ -283,7 +283,7 @@
 		<member firstname="Jitka" lastname="Svobodová" country="CZE" />
 		<member firstname="Pavla" lastname="Vildmonová" country="CZE" />
 	</team>
-	<team id="24020" score="1310" time="22:45:10" penalty="0" name="Homo Rogainis" gender="men" age="superveteran" duration="24">
+	<team id="24020" score="1310" time="22:45:10" penalty="0" name="Homo Rogainis" gender="men" age="youth" duration="24">
 		<member firstname="Lukáš" lastname="Kekrt" country="CZE" />
 		<member firstname="Pavel" lastname="Šimon" country="CZE" />
 	</team>
@@ -307,7 +307,7 @@
 		<member firstname="Ilona" lastname="Kolovská" country="CZE" />
 		<member firstname="Iva" lastname="Pechova" country="CZE" />
 	</team>
-	<team id="24027" score="2170" time="23:07:23" penalty="0" name="Kačka tým" gender="women" age="superveteran" duration="24">
+	<team id="24027" score="2170" time="23:07:23" penalty="0" name="Kačka tým" gender="women" age="youth" duration="24">
 		<member firstname="Barbora" lastname="Šiková" country="CZE" />
 		<member firstname="Karolína" lastname="Šiková" country="CZE" />
 	</team>
@@ -359,7 +359,7 @@
 		<member firstname="Jakub" lastname="Bejvl" country="CZE" />
 		<member firstname="Miroslav" lastname="Šimek" country="CZE" />
 	</team>
-	<team id="24040" score="2540" time="23:30:51" penalty="0" name="mafa" gender="men" age="superveteran" duration="24">
+	<team id="24040" score="2540" time="23:30:51" penalty="0" name="mafa" gender="men" age="youth" duration="24">
 		<member firstname="František" lastname="Kolovský" country="CZE" />
 		<member firstname="Martin" lastname="Rubeš" country="CZE" />
 	</team>
@@ -415,7 +415,7 @@
 		<member firstname="Jiří" lastname="Kolovský" country="CZE" />
 		<member firstname="Miroslav" lastname="Šilhavý" country="CZE" />
 	</team>
-	<team id="24054" score="1950" time="23:07:08" penalty="0" name="RunFree" gender="mixed" age="superveteran" duration="24">
+	<team id="24054" score="1950" time="23:07:08" penalty="0" name="RunFree" gender="mixed" age="youth" duration="24">
 		<member firstname="Věra" lastname="Chvalová" country="CZE" />
 		<member firstname="Jiří" lastname="Valeš" country="CZE" />
 	</team>
@@ -483,7 +483,7 @@
 		<member firstname="Vladimír" lastname="Junek" country="CZE" />
 		<member firstname="Karel" lastname="Veselý" country="CZE" />
 	</team>
-	<team id="24072" score="1670" time="23:52:01" penalty="0" name="Zvěstovatelé myšlenky Bonbovy" gender="men" age="superveteran" duration="24">
+	<team id="24072" score="1670" time="23:52:01" penalty="0" name="Zvěstovatelé myšlenky Bonbovy" gender="men" age="youth" duration="24">
 		<member firstname="Martin" lastname="Pešek" country="CZE" />
 		<member firstname="František" lastname="Sova" country="CZE" />
 	</team>
@@ -512,7 +512,7 @@
 		<member firstname="Peep" lastname="Eomois" country="EST" />
 		<member firstname="Sulev" lastname="Kuiv" country="EST" />
 	</team>
-	<team id="24079" score="1670" time="23:11:18" penalty="0" name="HP-Sport team" gender="women" age="superveteran" duration="24">
+	<team id="24079" score="1670" time="23:11:18" penalty="0" name="HP-Sport team" gender="women" age="youth" duration="24">
 		<member firstname="Helis" lastname="Pajuste" country="EST" />
 		<member firstname="Kadri" lastname="Ustav" country="EST" />
 	</team>
@@ -686,7 +686,7 @@
 		<member firstname="Jānis" lastname="Nāgelis" country="LAT" />
 		<member firstname="Baiba" lastname="Ozola" country="LAT" />
 	</team>
-	<team id="24124" score="2550" time="22:50:54" penalty="0" name="Nosaukuma izdomāšana rada problēmas" gender="mixed" age="superveteran" duration="24">
+	<team id="24124" score="2550" time="22:50:54" penalty="0" name="Nosaukuma izdomāšana rada problēmas" gender="mixed" age="youth" duration="24">
 		<member firstname="Kristaps" lastname="Magone" country="LAT" />
 		<member firstname="Alma" lastname="Vītola" country="LAT" />
 	</team>
@@ -783,7 +783,7 @@
 		<member firstname="Konstantin" lastname="Ivanov" country="RUS" />
 		<member firstname="Natalia" lastname="Zimina" country="RUS" />
 	</team>
-	<team id="24149" score="1400" time="23:15:01" penalty="0" name="DIVO" gender="men" age="superveteran" duration="24">
+	<team id="24149" score="1400" time="23:15:01" penalty="0" name="DIVO" gender="men" age="youth" duration="24">
 		<member firstname="Dmitrii" lastname="Naumov" country="RUS" />
 		<member firstname="Vladimir" lastname="Nosyrev" country="RUS" />
 	</team>
@@ -849,7 +849,7 @@
 		<member firstname="Alexander" lastname="Safonov" country="RUS" />
 		<member firstname="Irina" lastname="Safonova" country="RUS" />
 	</team>
-	<team id="24169" score="1360" time="23:44:29" penalty="0" name="Up-and-Run" gender="mixed" age="superveteran" duration="24">
+	<team id="24169" score="1360" time="23:44:29" penalty="0" name="Up-and-Run" gender="mixed" age="youth" duration="24">
 		<member firstname="Andrei" lastname="Botalov" country="RUS" />
 		<member firstname="Evgeniia" lastname="Loshkareva" country="RUS" />
 	</team>
@@ -898,44 +898,44 @@
 		<member firstname="Tetyana" lastname="Dritova" country="UKR" />
 		<member firstname="Yuriy" lastname="Shur" country="UKR" />
 	</team>
-	<team id="24183" score="2070" time="23:40:16" penalty="0" name="Astra" gender="women" age="superveteran" duration="24">
+	<team id="24183" score="2070" time="23:40:16" penalty="0" name="Astra" gender="women" age="youth" duration="24">
 		<member firstname="Kateryna" lastname="Dzema" country="UKR" />
 		<member firstname="Polina" lastname="Zakharova" country="UKR" />
 	</team>
-	<team id="24184" score="1850" time="22:49:52" penalty="0" name="Dnepr" gender="women" age="superveteran" duration="24">
+	<team id="24184" score="1850" time="22:49:52" penalty="0" name="Dnepr" gender="women" age="youth" duration="24">
 		<member firstname="Victoria" lastname="Thatchuk" country="UKR" />
 		<member firstname="Yulia" lastname="Kravchuk" country="UKR" />
 	</team>
-	<team id="24185" score="2090" time="23:33:36" penalty="0" name="FirstVinLeader" gender="mixed" age="superveteran" duration="24">
+	<team id="24185" score="2090" time="23:33:36" penalty="0" name="FirstVinLeader" gender="mixed" age="youth" duration="24">
 		<member firstname="Anastasia" lastname="Basiuk" country="UKR" />
 		<member firstname="Sergey" lastname="Nagornyuk" country="UKR" />
 	</team>
-	<team id="24186" score="1240" time="23:38:03" penalty="0" name="hutsuli" gender="mixed" age="superveteran" duration="24">
+	<team id="24186" score="1240" time="23:38:03" penalty="0" name="hutsuli" gender="mixed" age="youth" duration="24">
 		<member firstname="Hudz" lastname="Andrii" country="UKR" />
 		<member firstname="Bobyk" lastname="Ilona" country="UKR" />
 	</team>
-	<team id="24187" score="1300" time="23:31:42" penalty="0" name="ChNU-Avangard" gender="men" age="superveteran" duration="24">
+	<team id="24187" score="1300" time="23:31:42" penalty="0" name="ChNU-Avangard" gender="men" age="youth" duration="24">
 		<member firstname="Horihovskiy" lastname="Vadim" country="UKR" />
 		<member firstname="Manher" lastname="Valentyn" country="UKR" />
 	</team>
-	<team id="24188" score="560" time="21:32:01" penalty="0" name="ChNU-Avangard 2" gender="men" age="superveteran" duration="24">
+	<team id="24188" score="560" time="21:32:01" penalty="0" name="ChNU-Avangard 2" gender="men" age="youth" duration="24">
 		<member firstname="Moskaliuk" lastname="Ihor" country="UKR" />
 		<member firstname="Tsurkan" lastname="Viktor" country="UKR" />
 	</team>
-	<team id="24189" score="1660" time="23:20:55" penalty="0" name="ChNU-Avangard 3" gender="men" age="superveteran" duration="24">
+	<team id="24189" score="1660" time="23:20:55" penalty="0" name="ChNU-Avangard 3" gender="men" age="youth" duration="24">
 		<member firstname="Andriy" lastname="Kelia" country="UKR" />
 		<member firstname="Viatcheslav" lastname="Kelia" country="UKR" />
 	</team>
-	<team id="24190" score="2450" time="22:58:05" penalty="0" name="karpaty" gender="men" age="superveteran" duration="24">
+	<team id="24190" score="2450" time="22:58:05" penalty="0" name="karpaty" gender="men" age="youth" duration="24">
 		<member firstname="Serhiy" lastname="Mospan" country="UKR" />
 		<member firstname="Viatcheslav" lastname="Pikulin" country="UKR" />
 	</team>
-	<team id="24191" score="1010" time="15:39:51" penalty="0" name="Kherson-1" gender="mixed" age="superveteran" duration="24">
+	<team id="24191" score="1010" time="15:39:51" penalty="0" name="Kherson-1" gender="mixed" age="youth" duration="24">
 		<member firstname="Daria" lastname="Gorshkova" country="UKR" />
 		<member firstname="Bohdan" lastname="Griazev" country="UKR" />
 		<member firstname="Sveta" lastname="Kobets" country="UKR" />
 	</team>
-	<team id="24192" score="290" time="22:50:07" penalty="0" name="Kherson-2" gender="women" age="superveteran" duration="24">
+	<team id="24192" score="290" time="22:50:07" penalty="0" name="Kherson-2" gender="women" age="youth" duration="24">
 		<member firstname="Valeria" lastname="Spekhova" country="UKR" />
 		<member firstname="Liudmila" lastname="Yanchytska" country="UKR" />
 	</team>
@@ -943,16 +943,16 @@
 		<member firstname="Olena" lastname="Docenko" country="UKR" />
 		<member firstname="Nataliia" lastname="Pustova" country="UKR" />
 	</team>
-	<team id="24196" score="1860" time="22:22:12" penalty="0" name="UKRAINE" gender="mixed" age="superveteran" duration="24">
+	<team id="24196" score="1860" time="22:22:12" penalty="0" name="UKRAINE" gender="mixed" age="youth" duration="24">
 		<member firstname="Olexander" lastname="Kolchanov" country="UKR" />
 		<member firstname="Natalia" lastname="Shelepyuk" country="UKR" />
 	</team>
-	<team id="24197" score="2140" time="23:39:09" penalty="0" name="UKRAINE-DINAMO" gender="mixed" age="superveteran" duration="24">
+	<team id="24197" score="2140" time="23:39:09" penalty="0" name="UKRAINE-DINAMO" gender="mixed" age="youth" duration="24">
 		<member firstname="Mykola" lastname="Kobets" country="UKR" />
 		<member firstname="Bezditniy" lastname="Volodymyr" country="UKR" />
 		<member firstname="Yulia" lastname="Kobets" country="UKR" />
 	</team>
-	<team id="24198" score="1610" time="23:51:40" penalty="0" name="UkraineXJ" gender="mixed" age="superveteran" duration="24">
+	<team id="24198" score="1610" time="23:51:40" penalty="0" name="UkraineXJ" gender="mixed" age="youth" duration="24">
 		<member firstname="Kuznetsova" lastname="Nina" country="UKR" />
 		<member firstname="Rusenchyk" lastname="Vladyslav" country="UKR" />
 	</team>
@@ -960,7 +960,7 @@
 		<member firstname="Bogdan" lastname="Grelya" country="UKR" />
 		<member firstname="Olena" lastname="Mironenko" country="UKR" />
 	</team>
-	<team id="24201" score="990" time="22:47:05" penalty="0" name="Free Runners" gender="men" age="superveteran" duration="24">
+	<team id="24201" score="990" time="22:47:05" penalty="0" name="Free Runners" gender="men" age="youth" duration="24">
 		<member firstname="Tejas" lastname="Iyer" country="AUS" />
 		<member firstname="Rory" lastname="Taylor" country="AUS" />
 	</team>
