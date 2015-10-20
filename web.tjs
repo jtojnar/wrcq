@@ -459,7 +459,7 @@ app.get('/qualified', function(req, res) {
 		}
 
 		done();
-		res.render('qualified', {title: 'List of pre-qualifying entrants', qualified: qualified, identity: req.user});
+		res.render('qualified', {title: 'List of pre-qualifying entrants', qualified: qualified, identity: req.user, datetime: (new Date()).toUTCString()});
 	});
 });
 
