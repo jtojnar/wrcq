@@ -23127,8 +23127,8 @@
 			<TeamMemberResult>
 				<Person sex="M">
 					<Name>
-						<Family>Evgeniy</Family>
-						<Given>Dombrovskiy</Given>
+						<Family>Dombrovskiy</Family>
+						<Given>Evgeniy</Given>
 					</Name>
 					<Nationality code="RUS"/>
 					<BirthDate>1975-01-02</BirthDate>
@@ -48825,7 +48825,7 @@
 				<Person sex="F">
 					<Name>
 						<Family>Kobets</Family>
-						<Given>Yuliya</Given>
+						<Given>Yulia</Given>
 					</Name>
 					<Nationality code="UKR"/>
 					<BirthDate>1996-03-07</BirthDate>

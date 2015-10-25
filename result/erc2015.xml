@@ -903,11 +903,11 @@
 		<member firstname="Polina" lastname="Zakharova" country="UKR" />
 	</team>
 	<team id="24184" score="1850" time="22:49:52" penalty="0" name="Dnepr" gender="women" age="youth" duration="24">
-		<member firstname="Victoria" lastname="Thatchuk" country="UKR" />
+		<member firstname="Viktoria" lastname="Thatchuk" country="UKR" />
 		<member firstname="Yulia" lastname="Kravchuk" country="UKR" />
 	</team>
 	<team id="24185" score="2090" time="23:33:36" penalty="0" name="FirstVinLeader" gender="mixed" age="youth" duration="24">
-		<member firstname="Anastasia" lastname="Basiuk" country="UKR" />
+		<member firstname="Anastasia" lastname="Basyuk" country="UKR" />
 		<member firstname="Sergey" lastname="Nagornyuk" country="UKR" />
 	</team>
 	<team id="24186" score="1240" time="23:38:03" penalty="0" name="hutsuli" gender="mixed" age="youth" duration="24">
