@@ -13,12 +13,12 @@
 			{{#if complete}}
 				<li><a href="/events/{{slug}}/results">PQE Results</a></li>
 			{{else}}
-				{{#if ../../../../identity}}
+				{{#if ../identity}}
 					<li><a href="/events/{{slug}}/upload"><span class="glyphicon glyphicon-upload"></span> Upload PQE Results</a></li>
 				{{/if}}
 			{{/if}}
 		{{else}}
-			{{#if ../../../identity}}
+			{{#if ../identity}}
 				<li><a href="/events/{{slug}}/upload"><span class="glyphicon glyphicon-upload"></span> Upload PQE Results</a></li>
 			{{/if}}
 		{{/if}}
