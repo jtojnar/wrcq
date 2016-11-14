@@ -1,0 +1,104 @@
+id;name;member1firstname;member1lastname;member1country;member2firstname;member2lastname;member2country;member3firstname;member3lastname;member3country;member4firstname;member4lastname;member4country;original_score;penalty;score;time;km;vieta;gender;age
+302;MÜRSK;Märt;Roosaare;EST;Siim;Klais;EST;;;;;;;417;0;417;23:48:24;99.50;1;men;open
+609;Karvajalad;Armo;Hiie;EST;Reigo;Lehtla;EST;;;;;;;387;0;387;23:57:11;91.83;2;men;veteran
+314;ISOSTAR LONG ENERGY;Alberts;Jasāns;LAT;Zigmunds;Bībers;LAT;;;;;;;384;0;384;23:05:02;90.04;3;men;open
+514;Divi Auni;Tõnis;Piirisild;EST;Inga;Siegert;EST;;;;;;;371;0;371;23:35:12;90.31;4;mixed;open
+810;Serious & Intent;Aigars;Actiņš;LAT;Ilze;Lapiņa;LAT;;;;;;;352;0;352;23:50:04;84.43;5;mixed;veteran
+516;Meža Dīvainīši;Einārs;Masteiko;LAT;Elīna;Millere;LAT;;;;;;;356;4;352;24:03:06;78.67;6;mixed;open
+310;Slapjie pumpuri;Aigars;Čeksters;LAT;Vilnis;Frišfelds;LAT;;;;;;;348;0;348;23:41:40;78.43;7;men;open
+315;Pusdienas ārpus mājas;Mārtiņš;Malzubris;LAT;Kaspars;Vingris;LAT;;;;;;;338;0;338;23:52:57;79.28;8;men;open
+513;Engures Sportam - LIELISKIE;Ainārs;Grīnvalds;LAT;Harijs;Meiers;LAT;Ance;Ziediņa;LAT;Rimants;Liepiņš;LAT;334;0;334;23:38:34;71.69;9;mixed;open
+511;Liedagi-35;Fadejs;Precinieks;LAT;Zelma;Preciniece;LAT;;;;;;;333;0;333;23:47:59;80.89;10;mixed;open
+901;Asie pipari;Ilmārs;Kaulakāns;LAT;Harijs;Lācars;LAT;;;;;;;331;0;331;23:33:17;76.44;11;men;superveteran
+319;Teku Taku;Reinis;Bērziņš;LAT;Sandis;Pētersons;LAT;;;;;;;330;0;330;23:45:30;78.32;12;men;open
+603;Green Power Shoes;Gints;Pētersons;LAT;Raitis;Muižnieks;LAT;;;;;;;324;0;324;23:47:40;76.25;13;men;veteran
+812;Mona V;Baiba;Ozola;LAT;Jānis;Nāgelis;LAT;;;;;;;321;0;321;23:40:23;70.74;14;mixed;veteran
+608;Pīlēm grūti;Nikolajs;Lucāns;LAT;Guntis;Pikurs;LAT;;;;;;;316;0;316;23:39:04;73.97;15;men;veteran
+408;Ozons 77 un Silva;Aiva;Jakovela;LAT;Anita;Liepiņa;LAT;;;;;;;313;0;313;23:42:00;78.21;16;women;open
+906;Staigātāji;Imants;Čaklis;LAT;Jānis;Turks;LAT;Varis;Peisenieks;LAT;;;;309;0;309;23:42:19;72.54;17;men;superveteran
+308;Peldošais Kurmis;Emīls;Endele;LAT;Raimods;Ozoliņš;LAT;Emīls;Gailis;LAT;;;;307;0;307;23:20:10;71.48;18;men;open
+601;Drulmi;Pēteris;Druķis;LAT;Ints;Ulmanis;LAT;;;;;;;300;0;300;23:32:55;73.85;19;men;veteran
+318;Blomes trio;Jurģis;Eberhards;LAT;Renārs;Eberhards;LAT;;;;;;;297;0;297;21:58:14;67.38;20;men;open
+708;27.janvāris;Ildze;Straume;LAT;Ilze;Čakle;LAT;;;;;;;290;0;290;23:46:23;70.12;21;women;veteran
+808;4L;Lauri;Leppik;EST;Lea;Leppik;EST;;;;;;;278;0;278;23:31:28;62.90;22;mixed;veteran
+503;Ampēriņš;Madara;Apsalone;LAT;Aleksandrs;Riguns;LAT;;;;;;;273;0;273;23:47:47;65.20;23;mixed;open
+604;Bez steigas;Jurijs;Narels;LAT;Pēteris;Krastiņš;LAT;;;;;;;270;0;270;23:44:08;72.25;24;men;veteran
+1401;KĀPA VR;Volli;Kukk;LAT;Ruta;Kukka;LAT;;;;;;;266;0;266;23:22:52;63.47;25;mixed;ultraveteran
+903;Festina Lente;Sulev;Kuiv;EST;Peep;Eomois;EST;;;;;;;265;0;265;23:54:37;61.26;26;men;superveteran
+902;Privātbūve;Vairis;Krauklis;LAT;Andris;Kosmočovs;LAT;;;;;;;261;0;261;23:43:39;68.85;27;men;superveteran
+905;EKSPERIMENTS;Helmuts;Lukačovs;LAT;Juris;Drunka;LAT;;;;;;;257;0;257;23:56:42;68.34;28;men;superveteran
+813;Teļubauska;Didzis;Čonka;LAT;Aija;Čonka;LAT;;;;;;;256;0;256;23:53:40;65.90;29;mixed;veteran
+1101;KĀPA LR;Rolands;Laveiķis;LAT;Ligita;Grunde;LAT;;;;;;;252;0;252;23:43:26;60.52;30;mixed;superveteran
+702;Suusahullud;Punab;Mari;EST;Vares;Made;EST;;;;;;;250;0;250;23:43:38;62.58;31;women;veteran
+520;VELUX/mySport;Māris;Sumčenko;LAT;Jānis;Stašāns;LAT;Patrisia;Himenes;LAT;;;;247;0;247;23:32:57;56.88;32;mixed;open
+904;Divi veči;Jānis;Biezais;LAT;Uldis;Alksnis;LAT;;;;;;;245;0;245;23:30:27;56.38;33;men;superveteran
+607;Izturība;Artis;Dobulis;LAT;Valdis;Kulpe;LAT;;;;;;;242;0;242;23:37:35;63.03;34;men;veteran
+506;Mammut Latvija;Aigars;Beks;LAT;Dace;Linde;LAT;;;;;;;240;0;240;22:17:53;57.47;35;mixed;open
+304;TITURGAS IESPĒJU PARKS;Aigars;Putnis;LAT;Sandis;Rudzītis;LAT;;;;;;;239;0;239;23:02:03;59.38;36;men;open
+701;Vidzemes ekspresis;Iveta;Zāģere;LAT;Inese;Bērziņa;LAT;;;;;;;235;0;235;23:26:17;65.75;37;women;veteran
+401;Sciurus vulgaris;Inga;Kāpiņa;LAT;Dace;Veipa;LAT;;;;;;;235;0;235;23:47:55;57.89;38;women;open
+1103;Persiki;Juris;Šinke;LAT;Ārija;Šinke;LAT;;;;;;;232;0;232;23:24:38;59.03;39;mixed;superveteran
+704;Daivas;Aiva;Skopāne;LAT;Dace;Ikšele;LAT;;;;;;;231;0;231;23:06:36;51.49;40;women;veteran
+305;Sinoles Sūtņi;Edijs;Jundzis;LAT;Aldis;Sebris;LAT;;;;;;;230;0;230;23:16:30;56.36;41;men;open
+705;Balto zalkšu cerība;Indra;Segliņa;LAT;Baiba;Kaškina;LAT;;;;;;;230;0;230;23:32:04;56.76;42;women;veteran
+1201;QLM;Arvo;Kivikas;EST;Nurm;Tõnu;EST;Johannes;Tasa;EST;;;;227;0;227;23:23:25;58.22;43;men;ultraveteran
+521;No pusvārda;Raivis;Grīviņš;LAT;Anda;Saliņa;LAT;;;;;;;224;0;224;23:37:44;49.83;44;mixed;open
+407;Viss forši;Sandra;Priedīte;LAT;Signe;Zavadska;LAT;;;;;;;223;0;223;21:40:26;52.85;45;women;open
+1102;Sēlijas mežs;Aivars;Druvenieks;LAT;Gundega;Jurāne;LAT;;;;;;;220;0;220;23:48:51;54.87;46;mixed;superveteran
+321;vumgad;Indrek;Jentson;EST;Heno;Ivanov;EST;;;;;;;217;0;217;21:50:56;52.78;47;men;open
+814;Ekipējuma pārbaude;Toms;Puravs;LAT;Svetlana;Kuļčihina;LAT;;;;;;;217;0;217;23:30:48;58.91;48;mixed;veteran
+505;Resnais Susurs;Māris;Avotiņš;LAT;Lea;Briede;LAT;;;;;;;213;0;213;22:36:23;53.99;49;mixed;open
+2;Debesu bultas;Viesturs;Ivbulis;LAT;Aivars;Lucijanovs;LAT;;;;;;;210;0;210;23:59:47;54.44;50;men;junior
+802;TutiVaps;Aivar;Liivrand;EST;Eva;Rinne;EST;;;;;;;207;0;207;22:04:41;50.92;51;mixed;veteran
+301;eBIOpower;Gatis;Gaņģītis;LAT;Imants;Iesalnieks;LAT;;;;;;;206;0;206;23:18:03;50.90;52;men;open
+405;Dzintarlapsas;Ilze;Krēmere;LAT;Ieva;Simsone;LAT;;;;;;;206;0;206;23:38:35;55.75;53;women;open
+510;Ņeržaveika;Jānis;Kalniņš;LAT;Ieva;Grauduma;LAT;Mārtiņš;Peisenieks;LAT;;;;202;0;202;21:22:26;53.34;54;mixed;open
+402;Koopaorav;Marju;Villak;EST;Kaire;Kallak;EST;;;;;;;202;0;202;23:47:52;49.65;55;women;open
+1002;Kurmji Rok Kos?;Gunta;Lebedoka;LAT;Silvija;Segliņa;LAT;;;;;;;201;0;201;23:47:36;52.85;56;women;superveteran
+309;Glāžšķūņu rūķīši;Andris;Sprūds;LAT;Edgars;Vanters;LAT;;;;;;;199;0;199;14:41:09;45.05;57;men;open
+1301;Velmara;Velta;Zjatkova;LAT;Māra;Bolšteina;LAT;;;;;;;198;0;198;23:41:50;51.98;58;women;ultraveteran
+201;Meža virzienā;Pēteris;Liepa;LAT;Marta;Tamane;LAT;;;;;;;197;0;197;23:05:09;48.89;59;mixed;junior
+1004;Bebrenes;Ilze;Vabole;LAT;Aleksandrs;Tambovcevs;LAT;;;;;;;197;0;197;23:49:50;52.07;60;mixed;open
+706;Pozitīvie skorpioni;Inta;Poriķe;LAT;Liene;Buša;LAT;;;;;;;196;0;196;23:39:34;52.52;61;women;veteran
+320;Ērgļi;Jānis;Rešņa;LAT;Mārtiņš;Dravants;LAT;;;;;;;193;0;193;17:43:22;47.55;62;men;open
+815;Nu pagaidi!;Sanda;Rapa;LAT;Jānis;Rapa;LAT;;;;;;;190;0;190;22:28:36;44.48;63;mixed;veteran
+306;84 rullē!;Didzis;Šapkus;LAT;Artūrs;Vaselis;LAT;;;;;;;188;0;188;21:51:34;55.28;64;men;open
+311;Vichy;Valdis;Čunka;LAT;Kaspars;Adijāns;LAT;;;;;;;181;0;181;15:54:37;42.89;65;men;open
+1;NAA;Dāvis;Lapiņš;LAT;Ēriks;Niegliņš;LAT;;;;;;;179;0;179;21:59:00;54.87;66;men;junior
+806;Autostarts.lv;Aivars;Lapa;LAT;Marita;Lapa;LAT;;;;;;;177;0;177;23:28:21;53.49;67;mixed;veteran
+504;Hibernējies āpsis;Kalvis;Upītis;LAT;Sanita;Ivanova;LAT;;;;;;;176;0;176;23:28:28;49.65;68;mixed;open
+809;Marmotes;Guntars;Vība;LAT;Inese;Rudzīte;LAT;Vitolds;Bērziņš;LAT;;;;174;0;174;19:32:50;46.17;69;mixed;veteran
+303;VSK Noskrien Rieksti;Dzintars;Rērihs;LAT;Kristaps;Broks;LAT;;;;;;;172;0;172;15:22:10;42.75;70;men;open
+804;Romanichi;Ilva;Koškina;LAT;Romāns;Koškins;LAT;;;;;;;171;0;171;21:30:51;39.74;71;mixed;veteran
+707;Cerība mirst pēdējā;Zane;Blumberga;LAT;Dace;Lesiņa;LAT;;;;;;;171;0;171;22:09:45;38.25;72;women;veteran
+803;Vējš matos;Uldis;Gaiss;LAT;Gita;Gaisa;LAT;;;;;;;170;0;170;13:19:45;39.87;73;mixed;veteran
+509;Surikati;Pēteris;Grīviņš;LAT;Ieva;Upmace;LAT;;;;;;;165;0;165;10:14:05;38.91;74;mixed;open
+316;Apakšgrāvja adipināts;Mārtiņš;Krūze;LAT;Edgars;Jurjāns;LAT;;;;;;;160;0;160;11:56:43;43.69;75;men;open
+606;Novaator RSK;Matis;Märtson;EST;Villu;Päärt;EST;;;;;;;159;0;159;23:49:00;45.32;76;men;veteran
+502;ar daili ir spēks;Madara;Kukaine;LAT;Sanita;Atslēga;LAT;Andris;Atslēga;LAT;Ēriks;Melkurts;LAT;158;0;158;15:40:53;42.67;77;mixed;open
+507;Borūdeņražskābe;Juris;Pētersons;LAT;Elīna;Krēmere;LAT;;;;;;;158;0;158;18:28:30;44.74;78;mixed;open
+1203;TAKA 2016;Arnolds;Kučinskis;LAT;Andris;Tauvens;LAT;;;;;;;158;0;158;22:29:41;44.76;79;men;ultraveteran
+811;Saule pāri visam;Videga;Gaigala;LAT;Kaspars;Liepiņš;LAT;;;;;;;153;0;153;13:19:58;35.31;80;mixed;veteran
+518;Viss ir galvās;Viesturs;Tamužs;LAT;Arnis;Grišans;LAT;Inese;Gulbe;LAT;;;;153;0;153;23:46:56;71.04;81;mixed;open
+515;Soli pa solim;Ivars;Lukaševics;LAT;Ēriks;Lebedoks;LAT;Alma;Vītola;LAT;;;;149;0;149;09:33:14;34.62;82;mixed;open
+801;Sudraba bultas;Valērijs;Stūris;LAT;Inese;Stūre;LAT;;;;;;;148;0;148;20:00:28;34.20;83;mixed;veteran
+1001;KĀ2;Sarmīte;Vlodare;LAT;Dace;Saulīte;LAT;;;;;;;143;0;143;23:20:17;37.70;84;women;superveteran
+602;Kawe;Ago;Lauri;EST;Helgo;Akke;EST;;;;;;;142;0;142;19:09:19;42.08;85;men;veteran
+522;Powered by bananas;Sven;Kivioja;EST;Kaisa;Rebane;EST;;;;;;;141;0;141;18:42:53;43.73;86;mixed;open
+605;Bingo;Andis;Plakans;LAT;Ēvalds;Žogla;LAT;;;;;;;140;0;140;21:53:29;33.26;87;men;veteran
+1003;Paulīnes;Silvija;Penkule;LAT;Skaidrīte;Otaņķe;LAT;;;;;;;132;0;132;23:19:22;41.04;88;women;superveteran
+519;PIENA ZOBI;Edmunds;Fadiņš;LAT;Katrīna;Poliščuka;LAT;;;;;;;127;0;127;21:38:26;34.14;89;mixed;open
+508;Tuksneša vējš;Agnis;Graudulis;LAT;Ingrīda;Nukša;LAT;Evija;Grinmane;LAT;;;;127;0;127;23:48:51;62.26;90;mixed;open
+406;Čiekurmeitas;Santa;Grāvelsiņa;LAT;Elīna;Līce;LAT;;;;;;;125;0;125;22:59:26;42.28;91;women;open
+703;Meža ogas;Sintija;Alaine;LAT;Vizbulīte;Celmiņa;LAT;;;;;;;108;0;108;23:02:54;38.51;92;women;veteran
+202;Lūša ķepas;Ieva;Ivbule;LAT;Tabita;Tīna Lūka;LAT;Laine;Odziļeviča;LAT;Renārs;Lucijanovs;LAT;107;0;107;23:11:16;30.88;93;mixed;junior
+805;Kolēģi;Liene;Hermansone;LAT;Ģirts;Strujevičs;LAT;;;;;;;104;0;104;22:33:50;32.96;94;mixed;veteran
+404;C Vitaminizēts;Dace;Pētersone;LAT;Linda;Veikina-Zīle;LAT;;;;;;;104;0;104;23:23:25;37.64;95;women;open
+403;GREEN GRASS Sigulda;Baiba;Beitika;LAT;Ilvija;Bensone;LAT;;;;;;;103;0;103;23:26:04;43.13;96;women;open
+1403;Jēkaba ceļojumi;Uldis;Alksnis;LAT;Mudīte;Alksne;LAT;;;;;;;101;0;101;23:23:42;32.14;97;mixed;ultraveteran
+1202;RIJS;Jānis;Skrūzmanis;LAT;Ilmārs;Rieksts;LAT;;;;;;;100;0;100;23:21:19;33.89;98;men;ultraveteran
+807;Paulīne un Māris;Mudīte;Šteina;LAT;Māris;Otaņķis;LAT;;;;;;;99;0;99;21:22:41;27.80;99;mixed;veteran
+501;Smilšu graudi;Laine;Štēbele;LAT;Kristiāna;Štēbele;LAT;Sandris;Ķuda;LAT;;;;87;0;87;10:55:12;23.57;100;mixed;open
+409;Čiepiņas;Zane;Kaļva;LAT;Madara;Strauta;LAT;;;;;;;77;0;77;17:44:40;29.70;101;women;open
+307;wAlts;Artis;Mednis;LAT;Gatis;Mednis;LAT;;;;;;;67;0;67;16:50:35;24.12;102;men;open
+1402;JUJU;Jūlija;Zvirgzde;LAT;Juris;Zvirgzds;LAT;;;;;;;33;0;33;08:24:09;12.09;103;mixed;ultraveteran
