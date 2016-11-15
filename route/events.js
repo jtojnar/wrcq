@@ -110,8 +110,23 @@ module.exports.upload = function(req, res) {
 								var xml = ['<results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="results.xsd">'];
 
 								var sanitizer = require('sanitizer');
-								fs.createReadStream(req.files.data.path).pipe(require('fast-csv').parse(options)).on('data', function(data) {
-									if(Object.keys(data).length > 0) {
+								let lineno = 2;
+								let err = null;
+								require('fast-csv').fromPath(req.files.data.path, options).on('data', function(data) {
+									if(Object.keys(data).length > 0 && !err) {
+										for (let field of ['id', 'score', 'time', 'penalty', 'gender', 'age', 'name']) {
+											if (!data.hasOwnProperty(field) || data[field] === '') {
+												err = 'Missing value on line ' + lineno + ': ' + field;
+												return;
+											}
+										}
+										for (let field of ['id', 'score', 'penalty']) {
+											if (isNaN(data[field])) {
+												err = 'Value is not a number on line ' + lineno + ': ' + field;
+												return;
+											}
+										}
+
 										xml.push('	<team id="' + sanitizer.escape(data.id) + '" score="' + sanitizer.escape(data.score) + '" time="' + sanitizer.escape(data.time) + '" penalty="' + sanitizer.escape(data.penalty) + '" gender="' + sanitizer.escape(data.gender) + '" age="' + sanitizer.escape(data.age) + '" name="' + sanitizer.escape(data.name) + '"' + (data.hasOwnProperty('status') && data.status !== '' ? ' status="' + sanitizer.escape(data.status) + '"' : '') + '>');
 
 										var i = 1;
@@ -124,9 +139,16 @@ module.exports.upload = function(req, res) {
 										}
 										xml.push('	</team>');
 									}
+									lineno++;
 								}).on('end', function() {
 									xml.push('</results>');
 									xml = xml.join('\n');
+
+									if (err) {
+										req.flash('danger', err);
+										res.render('events_upload', {identity: req.user, values: values});
+										return;
+									}
 
 									processIRF(eventdata.rows[0], xml, client, done, function(err) {
 										if(err) {
