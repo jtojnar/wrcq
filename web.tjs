@@ -77,6 +77,8 @@ var hbs = require('express-handlebars');
 var helpers = require('./helpers');
 
 var pg = require('pg');
+const session = require('express-session');
+const pgSession = require('connect-pg-simple')(session);
 
 var publicDir = path.join(__dirname, 'public');
 
@@ -103,7 +105,13 @@ app.use(bodyParser.json());
 var multipart = require('connect-multiparty');
 
 app.use(require('method-override')());
-app.use(require('express-session')({secret: 'too much to bear', resave: true, saveUninitialized: true}));
+app.use(session({
+	store: new pgSession({pg: pg}),
+	secret: 'too much to bear',
+	resave: true,
+	saveUninitialized: true,
+	cookie: {maxAge: 30 * 24 * 60 * 60 * 1000}
+}));
 app.use(require('express-flash')());
 app.use(passport.initialize());
 app.use(passport.session());
