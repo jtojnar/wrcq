@@ -114,7 +114,7 @@ module.exports.upload = function(req, res) {
 								let err = null;
 								require('fast-csv').fromPath(req.files.data.path, options).on('data', function(data) {
 									if(Object.keys(data).length > 0 && !err) {
-										for (let field of ['id', 'score', 'time', 'penalty', 'gender', 'age', 'name']) {
+										for (let field of ['id', 'score', 'time', 'penalty', 'gender', 'age']) {
 											if (!data.hasOwnProperty(field) || data[field] === '') {
 												err = 'Missing value on line ' + lineno + ': ' + field;
 												return;
@@ -124,6 +124,11 @@ module.exports.upload = function(req, res) {
 											if (isNaN(data[field])) {
 												err = 'Value is not a number on line ' + lineno + ': ' + field;
 												return;
+											}
+										}
+										for (let field of ['name']) {
+											if (!data.hasOwnProperty(field) || data[field] === '') {
+												data[field] = '';
 											}
 										}
 
