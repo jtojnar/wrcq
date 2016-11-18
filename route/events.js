@@ -158,7 +158,7 @@ module.exports.upload = function(req, res) {
 									processIRF(eventdata.rows[0], xml, client, done, function(err) {
 										if(err) {
 											console.error(err);
-											req.flash('danger', err);
+											req.flash('danger', err.detail ? `${err} (${err.detail})` : `${err}`);
 											res.render('events_upload', {identity: req.user, values: values});
 										} else {
 											res.redirect('/events/' + req.params.event + '/results');
@@ -184,7 +184,7 @@ module.exports.upload = function(req, res) {
 									processXML(eventdata.rows[0], data, client, done, function(err) {
 										if(err) {
 											console.error(err);
-											req.flash('error', err);
+											req.flash('error', err.detail ? `${err} (${err.detail})` : `${err}`);
 											res.render('events_upload', {identity: req.user, values: values});
 										} else {
 											req.flash('success', 'Results were updated.');
