@@ -1,0 +1,40 @@
+id;name;gender;age;member1lastname;member1firstname;member1country;member2lastname;member2firstname;member2country;member3lastname;member3firstname;member3country;member4lastname;member4firstname;member4country;member5lastname;member5firstname;member5country;time;original_score;penalty;score;status
+49; Santa and his Reindeer ;men;open;Forne;Chris;NZL;Hamilton;Greig;NZL;;;;;;;;;;23:43:24;3590;0;3590;
+41; Team Tumeke ;men;open;Thompson;Ryan;NZL;Farrant;Tim;NZL;;;;;;;;;;23:53:25;3010;0;3010;
+28; Georgia and Lara ;women;open;Prince;Lara;NZL;Whitla;Georgia;NZL;;;;;;;;;;23:40:19;3000;0;3000;
+22; Stumbleweed ;mixed;veteran;Devine;Keri;NZL;Smith;Rob;NZL;;;;;;;;;;23:35:37;2620;0;2620;
+45; Late Wakatipu ;men;open;Lucas;Tom;NZL;Kelly;Mike;NZL;;;;;;;;;;23:52:17;2530;0;2530;
+60; Theo and Selena ;mixed;open;Metherell;Selena;NZL;Wordsworth;Theo;NZL;;;;;;;;;;23:39:32;2440;0;2440;
+43; kelly + aaron ;mixed;open;Scott;Aaron;NZL;Mabbett;Kelly;NZL;;;;;;;;;;22:10:00;2330;0;2330;
+36; Peace Love and Tofu;women;open;Bolt;Katie;NZL;Forne;Emily;NZL;;;;;;;;;;23:50:24;2300;0;2300;
+16; Lost Control ;mixed;veteran;Smith;Andrew;NZL;Bachvarova;Toni;NZL;;;;;;;;;;23:45:00;2270;0;2270;
+14; Missing Bits ;men;superveteran;Woods;Douglas;NZL;Dixon;Colin;NZL;;;;;;;;;;23:51:11;2240;0;2240;
+58; Sneaky Weasel Gang ;men;open;Munro;Byron;NZL;Munro;Mitch;NZL;Webb;Struan;NZL;;;;;;;22:43:52;2170;0;2170;
+68; The Phils ;men;open;Sueltrop;Hans Philipp;NZL;Wallace;Phillip;NZL;;;;;;;;;;23:51:28;1960;0;1960;
+33; Going halves ;men;superveteran;Metherell;Alister;NZL;Armstrong;Dave;NZL;;;;;;;;;;23:58:25;1930;0;1930;
+38;" Lara &amp; Leon ";mixed;open;Shepherd;Lara;NZL;Perrie;Leon;NZL;;;;;;;;;;23:34:17;1810;0;1810;
+19; Tenacious Turtles ;men;open;Tolerton;Ev;NZL;Harris;Nathan;NZL;;;;;;;;;;23:45:16;1800;0;1800;
+52; Crocodile Soup ;men;superveteran;Morrison;Derek;NZL;Rea;Simon;NZL;;;;;;;;;;23:47:42;1740;0;1740;
+31; Flutterbys ;women;superveteran;Mueller;Kathrin;NZL;Rogers;Val;NZL;Prince;Viv;NZL;;;;;;;23:35:36;1720;0;1720;
+63; Walla Doby ;men;youth;Mckinnel;Tiaan;NZL;Lennon;Jack;NZL;Mckinnel;Jonty;NZL;;;;;;;23:32:18;1700;0;1700;
+62; Team Teviot ;men;veteran;Mckinnel;John;NZL;Geddes;Stew;NZL;;;;;;;;;;23:44:29;1700;0;1700;
+64; Mobico Heart Kids ;mixed;open;MacLachlan;Rupert;NZL;Muller;Karen;NZL;Wilton;Hedley;NZL;Dove;Richard;NZL;;;;23:01:07;1670;0;1670;
+40; Prue and Gen ;women;veteran;Johnstone;Genevieve;NZL;McLean;Prue;NZL;Blyleven;Jenni;NZL;;;;;;;23:26:18;1660;0;1660;
+20; Merrillow ;mixed;veteran;Millow;Wayne;NZL;Merrifield;Trevor;NZL;Millow;Liz;NZL;;;;;;;23:32:09;1630;0;1630;
+21; Matt and Errol ;men;open;Bebbington;Matt;NZL;Bebbington;Errol;NZL;;;;;;;;;;22:30:29;1570;0;1570;
+29; Rebel Food ;mixed;open;Bates;Lisa;NZL;Williams;Mark;NZL;;;;;;;;;;23:42:16;1540;0;1540;
+15; Robyn and Helen ;women;veteran;Dunmore;Robyn;NZL;Steenbergen;Helen;NZL;;;;;;;;;;23:09:33;1470;0;1470;
+42; Respiratory Distress ;mixed;open;Paterson;Erin;NZL;Redmond;Daniel;NZL;;;;;;;;;;12:20:47;1350;0;1350;
+23; Hot Fuzz ;mixed;open;Bransgrove;Tracey;NZL;Gray;Anne;NZL;Tait;Hugh;NZL;White;Nathan;NZL;;;;23:06:43;1330;0;1330;
+17; Ditch Hoppers ;mixed;veteran;Cutfield;Lisa;NZL;Lhuede;Nick;NZL;;;;;;;;;;20:07:42;1090;0;1090;
+34; Swiss Cheese ;mixed;superveteran;McGowan;Andrew;NZL;Sutter;Sandra;NZL;Morrison;Sharon;NZL;;;;;;;17:53:59;1000;0;1000;
+44; Dead Horses ;men;open;Ydgren;Pete;NZL;Hay;Nathan;NZL;;;;;;;;;;20:45:07;950;0;950;
+53; Retired Runners ;men;veteran;Bixley;Matt;NZL;Lukes;Martin;NZL;;;;;;;;;;7:10:54;890;0;890;
+37; Little and large ;men;veteran;Collins;Andy;NZL;Farrell;Tiernach;NZL;;;;;;;;;;21:29:31;660;0;660;
+18; Lightning Speed Robots ;men;veteran;Thiele;Kelvin;NZL;Persson;Richard;NZL;;;;;;;;;;5:46:24;530;0;530;
+26; Invincibles ;men;superveteran;Williams;Rex;NZL;Jackson;Peter;NZL;Pooch;Vincent;NZL;;;;;;;11:53:44;510;0;510;
+55; Jet Planes ;mixed;open;Swamy;Ramash;NZL;Swamy;Jo;NZL;Swamy;Oliver;NZL;Swamy;Ruby;NZL;;;;23:52:36;190;0;190;
+47; The Undecideables ;men;open;Liddell;Di;NZL;Herdson;Brent;NZL;Robinson;Bernard;NZL;;;;;;;0:00:00;1380;1380;0;withdrawn
+51; B.R.O ;men;open;Scott;Reuben;NZL;McMillan;Blake;NZL;;;;;;;;;;0:00:00;890;890;0;withdrawn
+66; Charismatic Megafauna ;men;open;Hibbert;Levi;NZL;Spencer;Tom;NZL;Adlam;William;NZL;Dobbin;Sam;NZL;Sturrock;Nathan ;NZL;0:00:00;1050;1050;0;withdrawn
+77; Godzone ;women;open;Eustace;Katherine;NZL;Fairmaid;Sarah;NZL;;;;;;;;;; 25:24:18;1510;1510;0;overtime
