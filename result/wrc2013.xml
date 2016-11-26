@@ -219,8 +219,8 @@
 		<member firstname="Alexander" lastname="Krotkov" country="RUS" />
 		<member firstname="Sergey" lastname="Konstantinov" country="RUS" />
 	</team>
-	<team id="305" name="Docenko-Kostina" score="2420" time="23:50:10" penalty="0" gender="women" age="open">
-		<member firstname="Olena" lastname="Docenko" country="UKR" />
+	<team id="305" name="Dotsenko-Kostina" score="2420" time="23:50:10" penalty="0" gender="women" age="open">
+		<member firstname="Olena" lastname="Dotsenko" country="UKR" />
 		<member firstname="Olena" lastname="Kostina" country="UKR" />
 	</team>
 	<team id="165" name="Mospan-Pikulin" score="2410" time="23:40:07" penalty="0" gender="men" age="junior">

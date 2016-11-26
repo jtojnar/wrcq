@@ -14552,8 +14552,8 @@
 			<TeamMemberResult>
 				<Person sex="M">
 					<Name>
-						<Family>Viacheslav</Family>
-						<Given>Kelia</Given>
+						<Family>Kelia</Family>
+						<Given>Viacheslav</Given>
 					</Name>
 					<Nationality code="UKR"/>
 					<BirthDate>1995-10-14</BirthDate>
@@ -32925,7 +32925,7 @@
 				<Person sex="F">
 					<Name>
 						<Family>Galitarova</Family>
-						<Given>Anastasiia</Given>
+						<Given>Anastasia</Given>
 					</Name>
 					<Nationality code="RUS"/>
 					<BirthDate>1983-02-09</BirthDate>
@@ -42637,8 +42637,8 @@
 			<TeamMemberResult>
 				<Person sex="M">
 					<Name>
-						<Family>Konstantin</Family>
-						<Given>Ivanov</Given>
+						<Family>Ivanov</Family>
+						<Given>Konstantin</Given>
 					</Name>
 					<Nationality code="RUS"/>
 					<BirthDate>1985-08-21</BirthDate>
