@@ -13,7 +13,9 @@ module.exports.inject = function(_pg, _fs, __dbUri) {
 
 module.exports.add = function(req, res) {
 	if(!req.user) {
-		res.redirect('/login');
+		res.status(403);
+		req.flash('danger', 'You need to be logged in to create an event.');
+		res.render('login');
 	} else {
 		var levels = [
 			{name: 'world', label: 'World'},
@@ -75,7 +77,9 @@ module.exports.add = function(req, res) {
 
 module.exports.upload = function(req, res) {
 	if(!req.user) {
-		res.redirect('/login');
+		res.status(403);
+		req.flash('danger', 'You need to be logged in to upload an event results.');
+		res.render('login');
 	} else {
 		pg.connect(_dbUri, function(err, client, done) {
 			if(err) {
