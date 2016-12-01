@@ -3,6 +3,7 @@
 <thead><tr><th>Event</th><th>Date</th><th>Location</th><th>Organizer</th><th style="min-width: 10em;">Links</th></tr></thead>
 <tbody>
 {{#each events}}
+{{#unless dummy}}
 <tr>
 	<td>{{#if website}}<a href="{{website}}">{{name}}</a>{{else}}{{name}}{{/if}}</td>
 	<td class="nowrap">{{dateinterval start end}}</td>
@@ -30,6 +31,7 @@
 		{{/each}}
 	</ul></td>
 </tr>
+{{/unless}}
 {{/each}}
 </tbody>
 </table>
