@@ -1,17 +1,11 @@
-var pg;
-var fs;
-var _dbUri;
 var sql = require('sql');
 var model = require('../model')(sql);
 var helpers = require('../helpers');
+const db = require('../db')
+const fs = require('fs-extra');
+const neatCsv = require('neat-csv');
 
-module.exports.inject = function(_pg, _fs, __dbUri) {
-	pg = _pg;
-	fs = _fs;
-	_dbUri = __dbUri;
-}
-
-module.exports.add = function(req, res) {
+module.exports.add = async function(req, res) {
 	if(!req.user) {
 		res.status(403);
 		req.flash('danger', 'You need to be logged in to create an event.');
@@ -45,29 +39,21 @@ module.exports.add = function(req, res) {
 			values[values.level] = true;
 			values.complete = values.hasOwnProperty('complete');
 
-			pg.connect(_dbUri, function(err, client, done) {
-				if(err) {
-					console.error(err);
-					req.flash('danger', err);
-					res.render('events_add', {identity: req.user, values: values, levels: levels});
+			try {
+				await db.query('insert into event(name, start, "end", location, organizer, level, website, results, media, slug, complete) values($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)', [values.name, values.start, values.end, values.location, values.organizer, values.level, values.website, values.results, values.media, values.slug, values.complete]);
+
+				req.flash('success', 'Event was successfully created.');
+				return res.redirect('/events');
+			} catch (err) {
+				console.error(err);
+				if(err.code == 23505) {
+					req.flash('danger', 'Event with this slug already exists. Please consult with the list of events.');
 				} else {
-					client.query('insert into event(name, start, "end", location, organizer, level, website, results, media, slug, complete) values($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)', [values.name, values.start, values.end, values.location, values.organizer, values.level, values.website, values.results, values.media, values.slug, values.complete], function(err) {
-						if(err) {
-							console.error(err);
-							if(err.code == 23505) {
-								req.flash('danger', 'Event with this slug already exists. Please consult with the list of events.');
-							} else {
-								req.flash('danger', err);
-							}
-						} else {
-							req.flash('success', 'Event was successfully created.');
-							return res.redirect('/events');
-						}
-						res.render('events_add', {identity: req.user, values: values, levels: levels});
-					});
+					req.flash('danger', err);
 				}
-				done();
-			});
+
+				res.render('events_add', {identity: req.user, values: values, levels: levels});
+			}
 		} else {
 			res.render('events_add', {identity: req.user, values: values, levels: levels});
 		}
@@ -75,330 +61,243 @@ module.exports.add = function(req, res) {
 }
 
 
-module.exports.upload = function(req, res) {
+module.exports.upload = async function(req, res) {
 	if(!req.user) {
 		res.status(403);
 		req.flash('danger', 'You need to be logged in to upload an event results.');
 		res.render('login');
 	} else {
-		pg.connect(_dbUri, function(err, client, done) {
-			if(err) {
-				console.error(err);
-				req.flash('danger', err);
-				res.render('events_add', {identity: req.user, values: values, levels: levels});
-			} else {
-				client.query('select * from event where slug=$1 limit 1', [req.params.event], function defer(err, eventdata) {
-					if(eventdata.rows.length == 0) {
-						done();
-						res.status(404);
-						res.render('error/404', {body: 'Sorry, this event is not in our database, we may be working on it.'});
-						return;
-					}
+		let eventdata = await db.query('select * from event where slug=$1 limit 1', [req.params.event]);
+		if(eventdata.rows.length == 0) {
+			res.status(404);
+			res.render('error/404', {body: 'Sorry, this event is not in our database, we may be working on it.'});
+			return;
+		}
 
-					var formSent = req.method.toLowerCase() === 'post';
-					var values = req.body;
+		var formSent = req.method.toLowerCase() === 'post';
+		var values = req.body;
 
-					values.data_type_csv = !formSent || values.data_type === 'csv';
-					values.data_type_ssv = formSent && values.data_type === 'ssv';
-					values.data_type_irf = formSent && values.data_type === 'irf';
-					values.data_type_iof = formSent && values.data_type === 'iof';
+		values.data_type_csv = !formSent || values.data_type === 'csv';
+		values.data_type_ssv = formSent && values.data_type === 'ssv';
+		values.data_type_irf = formSent && values.data_type === 'irf';
+		values.data_type_iof = formSent && values.data_type === 'iof';
 
-					if(formSent) {
-						if(req.files.hasOwnProperty('data') && req.files.data.size > 0) {
-							if(values.data_type === 'csv' || values.data_type === 'ssv') {
-								var options = {headers: true};
-								if(values.data_type === 'ssv') {
-									options.delimiter = ';';
+		if(formSent) {
+			if(req.files.hasOwnProperty('data') && req.files.data.size > 0) {
+				if(values.data_type === 'csv' || values.data_type === 'ssv') {
+					try {
+						var options = {};
+						if(values.data_type === 'ssv') {
+							options.separator = ';';
+						}
+
+						var xml = ['<results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="results.xsd">'];
+
+						var sanitizer = require('sanitizer');
+						let lineno = 2;
+						let teamData = await fs.createReadStream(req.files.data.path);
+						let teams = await neatCsv(teamData, options);
+
+						teams.forEach(data => {
+							if(Object.keys(data).length > 0) {
+								for (let field of ['id', 'score', 'time', 'penalty', 'gender', 'age']) {
+									if (!data.hasOwnProperty(field) || data[field] === '') {
+										throw Error('Missing value on line ' + lineno + ': ' + field);
+									}
+								}
+								for (let field of ['id', 'score', 'penalty']) {
+									if (isNaN(data[field])) {
+										throw Error('Value is not a number on line ' + lineno + ': ' + field);
+									}
+								}
+								for (let field of ['name']) {
+									if (!data.hasOwnProperty(field) || data[field] === '') {
+										data[field] = '';
+									}
 								}
 
-								var xml = ['<results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="results.xsd">'];
+								xml.push('	<team id="' + sanitizer.escape(data.id) + '" score="' + sanitizer.escape(data.score) + '" time="' + sanitizer.escape(data.time) + '" penalty="' + sanitizer.escape(data.penalty) + '" gender="' + sanitizer.escape(data.gender) + '" age="' + sanitizer.escape(data.age) + '" name="' + sanitizer.escape(data.name) + '"' + (data.hasOwnProperty('status') && data.status !== '' ? ' status="' + sanitizer.escape(data.status) + '"' : '') + '>');
 
-								var sanitizer = require('sanitizer');
-								let lineno = 2;
-								let err = null;
-								require('fast-csv').fromPath(req.files.data.path, options).on('data', function(data) {
-									if(Object.keys(data).length > 0 && !err) {
-										for (let field of ['id', 'score', 'time', 'penalty', 'gender', 'age']) {
-											if (!data.hasOwnProperty(field) || data[field] === '') {
-												err = 'Missing value on line ' + lineno + ': ' + field;
-												return;
-											}
-										}
-										for (let field of ['id', 'score', 'penalty']) {
-											if (isNaN(data[field])) {
-												err = 'Value is not a number on line ' + lineno + ': ' + field;
-												return;
-											}
-										}
-										for (let field of ['name']) {
-											if (!data.hasOwnProperty(field) || data[field] === '') {
-												data[field] = '';
-											}
-										}
-
-										xml.push('	<team id="' + sanitizer.escape(data.id) + '" score="' + sanitizer.escape(data.score) + '" time="' + sanitizer.escape(data.time) + '" penalty="' + sanitizer.escape(data.penalty) + '" gender="' + sanitizer.escape(data.gender) + '" age="' + sanitizer.escape(data.age) + '" name="' + sanitizer.escape(data.name) + '"' + (data.hasOwnProperty('status') && data.status !== '' ? ' status="' + sanitizer.escape(data.status) + '"' : '') + '>');
-
-										var i = 1;
-										while(true) {
-											if(!data.hasOwnProperty('member' + i + 'firstname') || data['member' + i + 'firstname'] === '') {
-												break;
-											}
-											xml.push('		<member firstname="' + sanitizer.escape(data['member' + i + 'firstname']) + '" lastname="' + sanitizer.escape(data['member' + i + 'lastname']) + '" country="' + sanitizer.escape(data['member' + i + 'country']) + '" />');
-											i++;
-										}
-										xml.push('	</team>');
+								var i = 1;
+								while(true) {
+									if(!data.hasOwnProperty('member' + i + 'firstname') || data['member' + i + 'firstname'] === '' || data['member' + i + 'firstname'] === undefined) {
+										break;
 									}
-									lineno++;
-								}).on('end', function() {
-									xml.push('</results>');
-									xml = xml.join('\n');
-
-									if (err) {
-										req.flash('danger', err);
-										res.render('events_upload', {identity: req.user, values: values});
-										return;
-									}
-
-									processIRF(eventdata.rows[0], xml, client, done, function(err) {
-										if(err) {
-											console.error(err);
-											req.flash('danger', err.detail ? `${err} (${err.detail})` : `${err}`);
-											res.render('events_upload', {identity: req.user, values: values});
-										} else {
-											res.redirect('/events/' + req.params.event + '/results');
-										}
-									});
-								}).on('error', function(err) {
-									if(err.message.indexOf('Unexpected Error: column header mismatch expected') === 0) {
-										err = err.message;
-									} else {
-										console.error(err);
-										err = 'Unknown error parsing csv.';
-									}
-									req.flash('danger', err);
-									res.render('events_upload', {identity: req.user, values: values});
-								});
-							} else if(values.data_type === 'irf' || values.data_type === 'iof') {
-								fs.readFile(req.files.data.path, function(err, data) {
-									if (err) {
-										done();
-										throw err;
-									}
-									var processXML = values.data_type === 'irf' ? processIRF : processIOF;
-									processXML(eventdata.rows[0], data, client, done, function(err) {
-										if(err) {
-											console.error(err);
-											req.flash('error', err.detail ? `${err} (${err.detail})` : `${err}`);
-											res.render('events_upload', {identity: req.user, values: values});
-										} else {
-											req.flash('success', 'Results were updated.');
-											res.redirect('/events/' + req.params.event + '/results');
-										}
-									});
-								});
-							} else {
-								req.flash('danger', 'Please provide a valid file type.');
-								res.render('events_upload', {identity: req.user, values: values});
+									xml.push('		<member firstname="' + sanitizer.escape(data['member' + i + 'firstname']) + '" lastname="' + sanitizer.escape(data['member' + i + 'lastname']) + '" country="' + sanitizer.escape(data['member' + i + 'country']) + '" />');
+									i++;
+								}
+								xml.push('	</team>');
 							}
-						} else {
-							req.flash('danger', 'Please provide a file.');
-							res.render('events_upload', {identity: req.user, values: values});
-						}
-					} else {
+							lineno++;
+						});
+
+						xml.push('</results>');
+						xml = xml.join('\n');
+
+						await processIRF(eventdata.rows[0], xml);
+						res.redirect('/events/' + req.params.event + '/results');
+					} catch (err) {
+						req.flash('danger', err.detail ? `${err} (${err.detail})` : `${err}`);
 						res.render('events_upload', {identity: req.user, values: values});
 					}
-				});
+				} else if(values.data_type === 'irf' || values.data_type === 'iof') {
+					fs.readFile(req.files.data.path, async function(err, data) {
+						if (err) {
+							throw err;
+						}
+						var processXML = values.data_type === 'irf' ? processIRF : processIOF;
+						try {
+							await processXML(eventdata.rows[0], data);
+							req.flash('success', 'Results were updated.');
+							res.redirect('/events/' + req.params.event + '/results');
+						} catch (err) {
+							console.error(err);
+							req.flash('error', err.detail ? `${err} (${err.detail})` : `${err}`);
+							res.render('events_upload', {identity: req.user, values: values});
+						}
+					});
+				} else {
+					req.flash('danger', 'Please provide a valid file type.');
+					res.render('events_upload', {identity: req.user, values: values});
+				}
+			} else {
+				req.flash('danger', 'Please provide a file.');
+				res.render('events_upload', {identity: req.user, values: values});
 			}
-			done();
-		});
+		} else {
+			res.render('events_upload', {identity: req.user, values: values});
+		}
 	}
 }
 
-var parseString = require('xml2js').parseString;
-
-function processIRF(event, data, client, done, cb) {
-	parseString(data, function(err, results) {
-		if(err) {
-			done();
-			return cb(err);
-		}
-
-		var teams = [];
-		var members = [];
-
-		var team;
-		var member;
-		for(var i = 0; i < results.results.team.length; i++) {
-			team = results.results.team[i].$;
-			team.event_id = event.id;
-			team.name = team.name || '';
-			team.status = team.status || 'finished';
-			team.duration = team.duration ? team.duration : 24;
-			teams.push(team);
-
-			for(var j = 0; j < results.results.team[i].member.length; j++) {
-				member = results.results.team[i].member[j].$;
-				member.team_id = team.id;
-				member.event_id = event.id;
-				member.country_code = member.country;
-				delete member.country;
-
-				members.push(member);
-			}
-		}
-
-		client.query('delete from team where event_id = $1', [event.id], function(err) {
-			if(err) {
-				done();
-				return cb(err);
+const xml2js = require('xml2js');
+const parseString = function(data) {
+	return new Promise((resolve, reject) => {
+		xml2js.parseString(data, (err, res) => {
+			if (err) {
+				reject(err);
 			} else {
-				client.query(model.team.insert(teams).toQuery(), function(err) {
-					if(err) {
-						done();
-						return cb(err);
-					} else {
-						client.query(model.member.insert(members).toQuery(), function(err) {
-							if(err) {
-								done();
-								return cb(err);
-							} else {
-								client.query(model.event.update({complete: true}).where(model.event.id.equals(event.id)).toQuery(), function(err) {
-									if(err) {
-										done();
-										return cb(err);
-									} else {
-										done();
-										return cb(null);
-									}
-								});
-							}
-						});
-					}
-				});
+				resolve(res);
 			}
 		});
 	});
+};
+
+async function processIRF(event, data) {
+	let results = await parseString(data);
+
+	var teams = [];
+	var members = [];
+
+	var team;
+	var member;
+	for(var i = 0; i < results.results.team.length; i++) {
+		team = results.results.team[i].$;
+		team.event_id = event.id;
+		team.name = team.name || '';
+		team.status = team.status || 'finished';
+		team.duration = team.duration ? team.duration : 24;
+		teams.push(team);
+
+		for(var j = 0; j < results.results.team[i].member.length; j++) {
+			member = results.results.team[i].member[j].$;
+			member.team_id = team.id;
+			member.event_id = event.id;
+			member.country_code = member.country;
+			delete member.country;
+
+			members.push(member);
+		}
+	}
+
+	await db.query('delete from team where event_id = $1', [event.id]);
+	await db.query(model.team.insert(teams).toQuery());
+	await db.query(model.member.insert(members).toQuery());
+	await db.query(model.event.update({complete: true}).where(model.event.id.equals(event.id)).toQuery());
 }
 
 
-function processIOF(event, data, client, done, cb) {
-	parseString(data, function(err, results) {
-		if(err) {
-			done();
-			return cb(err);
+async function processIOF(event, data) {
+	let results = await parseString(data);
+	var teams = [];
+	var members = [];
+
+	var team;
+	var member;
+	var currentTeam;
+
+	var classes = results.ResultList.ClassResult;
+	if (!classes) {
+		throw Error('Missing ResultList.ClassResult');
+	}
+	for (var i = 0; i < classes.length; i++) {
+		var classTeams = classes[i].TeamResult;
+		var classAbbr = classes[i].Class[0].Name[0];
+		var classDecoded = helpers.decodeCategory(classAbbr);
+		if (!classTeams) {
+			console.log('Skipping import of an empty class: ' + classAbbr);
+			continue;
 		}
+		for (var j = 0; j < classTeams.length; j++) {
+			currentTeam = classTeams[j];
 
-		var teams = [];
-		var members = [];
+			team = {};
+			team.event_id = event.id;
+			team.id = currentTeam.BibNumber[0];
+			team.gender = classDecoded.gender;
+			team.age = classDecoded.age;
+			team.name = currentTeam.Name[0] || '';
+			team.duration = 24;
 
-		var team;
-		var member;
-		var currentTeam;
-
-		var classes = results.ResultList.ClassResult;
-		try {
-			if (!classes) {
-				throw Error('Missing ResultList.ClassResult');
+			if (!currentTeam.TeamMemberResult) {
+				throw Error('Missing ResultList.ClassResult[' + i + '].TeamResult[' + j + '].TeamMemberResult');
 			}
-			for (var i = 0; i < classes.length; i++) {
-				var classTeams = classes[i].TeamResult;
-				var classAbbr = classes[i].Class[0].Name[0];
-				var classDecoded = helpers.decodeCategory(classAbbr);
-				if (!classTeams) {
-					console.log('Skipping import of an empty class: ' + classAbbr);
+			for (var m = 0; m < currentTeam.TeamMemberResult.length; m++) {
+				var currentMember = currentTeam.TeamMemberResult[m].Person[0];
+				if (currentMember.Name[0].Family[0] === 'TEAMTOTAL') {
+					var result = currentTeam.TeamMemberResult[m].Result[0];
+					team.time = helpers.printSeconds(parseInt(result.Time[0]));
+					team.status = helpers.iofStatus(result.Status[0]);
+					team.penalty = 0;
+					var totalPointsAvailable = false;
+
+					if (!result.Score) {
+						throw Error('Missing ResultList.ClassResult[' + i + '].TeamResult[' + j + '].TeamMemberResult[' + m + '] > Score');
+					}
+
+					for (var s = 0; s < result.Score.length; s++) {
+						var sc = result.Score[s];
+						if (!totalPointsAvailable && sc.$.type === 'Points') {
+							team.score = sc._;
+						} else if (sc.$.type === 'TotalPoints') {
+							totalPointsAvailable = true;
+							team.score = sc._;
+						} else if (sc.$.type === 'PenaltyPoints') {
+							team.penalty = sc._;
+						}
+					}
+
+					if (!totalPointsAvailable) {
+						team.score -= team.penalty;
+					}
 					continue;
 				}
-				for (var j = 0; j < classTeams.length; j++) {
-					currentTeam = classTeams[j];
 
-					team = {};
-					team.event_id = event.id;
-					team.id = currentTeam.BibNumber[0];
-					team.gender = classDecoded.gender;
-					team.age = classDecoded.age;
-					team.name = currentTeam.Name[0] || '';
-					team.duration = 24;
-
-					if (!currentTeam.TeamMemberResult) {
-						throw Error('Missing ResultList.ClassResult[' + i + '].TeamResult[' + j + '].TeamMemberResult');
-					}
-					for (var m = 0; m < currentTeam.TeamMemberResult.length; m++) {
-						var currentMember = currentTeam.TeamMemberResult[m].Person[0];
-						if (currentMember.Name[0].Family[0] === 'TEAMTOTAL') {
-							var result = currentTeam.TeamMemberResult[m].Result[0];
-							team.time = helpers.printSeconds(parseInt(result.Time[0]));
-							team.status = helpers.iofStatus(result.Status[0]);
-							team.penalty = 0;
-							var totalPointsAvailable = false;
-
-							if (!result.Score) {
-								throw Error('Missing ResultList.ClassResult[' + i + '].TeamResult[' + j + '].TeamMemberResult[' + m + '] > Score');
-							}
-
-							for (var s = 0; s < result.Score.length; s++) {
-								var sc = result.Score[s];
-								if (!totalPointsAvailable && sc.$.type === 'Points') {
-									team.score = sc._;
-								} else if (sc.$.type === 'TotalPoints') {
-									totalPointsAvailable = true;
-									team.score = sc._;
-								} else if (sc.$.type === 'PenaltyPoints') {
-									team.penalty = sc._;
-								}
-							}
-
-							if (!totalPointsAvailable) {
-								team.score -= team.penalty;
-							}
-							continue;
-						}
-
-						member = {};
-						member.team_id = team.id;
-						member.event_id = event.id;
-						member.firstname = currentMember.Name[0].Given[0];
-						member.lastname = currentMember.Name[0].Family[0];
-						member.country_code = currentMember.Nationality[0].$.code;
-						members.push(member);
-					}
-
-					teams.push(team);
-				}
+				member = {};
+				member.team_id = team.id;
+				member.event_id = event.id;
+				member.firstname = currentMember.Name[0].Given[0];
+				member.lastname = currentMember.Name[0].Family[0];
+				member.country_code = currentMember.Nationality[0].$.code;
+				members.push(member);
 			}
-		} catch (err) {
-			done();
-			return cb(err);
+
+			teams.push(team);
 		}
+	}
 
-		client.query('delete from team where event_id = $1', [event.id], function(err) {
-			if(err) {
-				done();
-				return cb(err);
-			} else {
-				client.query(model.team.insert(teams).toQuery(), function(err) {
-					if(err) {
-						done();
-						return cb(err);
-					} else {
-						client.query(model.member.insert(members).toQuery(), function(err) {
-							if(err) {
-								done();
-								return cb(err);
-							} else {
-								client.query(model.event.update({complete: true}).where(model.event.id.equals(event.id)).toQuery(), function(err) {
-									if(err) {
-										done();
-										return cb(err);
-									} else {
-										done();
-										return cb(null);
-									}
-								});
-							}
-						});
-					}
-				});
-			}
-		});
-	});
+	await db.query('delete from team where event_id = $1', [event.id]);
+	await db.query(model.team.insert(teams).toQuery());
+	await db.query(model.member.insert(members).toQuery());
+	await db.query(model.event.update({complete: true}).where(model.event.id.equals(event.id)).toQuery());
 }
