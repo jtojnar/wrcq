@@ -1,6 +1,6 @@
-var sql = require('sql');
-var model = require('../model')(sql);
-var helpers = require('../helpers');
+const sql = require('sql');
+const model = require('../model')(sql);
+const helpers = require('../helpers');
 const db = require('../db')
 const fs = require('fs-extra');
 const neatCsv = require('neat-csv');
@@ -11,7 +11,7 @@ module.exports.add = async function(req, res) {
 		req.flash('danger', 'You need to be logged in to create an event.');
 		res.render('login');
 	} else {
-		var levels = [
+		const levels = [
 			{name: 'world', label: 'World'},
 			{label: 'Regional', open: true},
 			{name: 'regional', label: 'General'},
@@ -32,8 +32,8 @@ module.exports.add = async function(req, res) {
 			{close: true}
 		];
 
-		var formSent = req.method.toLowerCase() === 'post';
-		var values = req.body;
+		const formSent = req.method.toLowerCase() === 'post';
+		let values = req.body;
 
 		if(formSent) {
 			values[values.level] = true;
@@ -74,8 +74,8 @@ module.exports.upload = async function(req, res) {
 			return;
 		}
 
-		var formSent = req.method.toLowerCase() === 'post';
-		var values = req.body;
+		const formSent = req.method.toLowerCase() === 'post';
+		let values = req.body;
 
 		values.data_type_csv = !formSent || values.data_type === 'csv';
 		values.data_type_ssv = formSent && values.data_type === 'ssv';
@@ -86,14 +86,14 @@ module.exports.upload = async function(req, res) {
 			if(req.files.hasOwnProperty('data') && req.files.data.size > 0) {
 				if(values.data_type === 'csv' || values.data_type === 'ssv') {
 					try {
-						var options = {};
+						let options = {};
 						if(values.data_type === 'ssv') {
 							options.separator = ';';
 						}
 
-						var xml = ['<results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="results.xsd">'];
+						let xml = ['<results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="results.xsd">'];
 
-						var sanitizer = require('sanitizer');
+						let sanitizer = require('sanitizer');
 						let lineno = 2;
 						let teamData = await fs.createReadStream(req.files.data.path);
 						let teams = await neatCsv(teamData, options);
@@ -118,7 +118,7 @@ module.exports.upload = async function(req, res) {
 
 								xml.push('	<team id="' + sanitizer.escape(data.id) + '" score="' + sanitizer.escape(data.score) + '" time="' + sanitizer.escape(data.time) + '" penalty="' + sanitizer.escape(data.penalty) + '" gender="' + sanitizer.escape(data.gender) + '" age="' + sanitizer.escape(data.age) + '" name="' + sanitizer.escape(data.name) + '"' + (data.hasOwnProperty('status') && data.status !== '' ? ' status="' + sanitizer.escape(data.status) + '"' : '') + '>');
 
-								var i = 1;
+								let i = 1;
 								while(true) {
 									if(!data.hasOwnProperty('member' + i + 'firstname') || data['member' + i + 'firstname'] === '' || data['member' + i + 'firstname'] === undefined) {
 										break;
@@ -145,7 +145,7 @@ module.exports.upload = async function(req, res) {
 						if (err) {
 							throw err;
 						}
-						var processXML = values.data_type === 'irf' ? processIRF : processIOF;
+						const processXML = values.data_type === 'irf' ? processIRF : processIOF;
 						try {
 							await processXML(eventdata.rows[0], data);
 							req.flash('success', 'Results were updated.');
@@ -186,21 +186,20 @@ const parseString = function(data) {
 async function processIRF(event, data) {
 	let results = await parseString(data);
 
-	var teams = [];
-	var members = [];
+	let teams = [];
+	let members = [];
 
-	var team;
-	var member;
-	for(var i = 0; i < results.results.team.length; i++) {
-		team = results.results.team[i].$;
+	for(let teamEl of results.results.team) {
+		const teamMembers = teamEl.member;
+		const team = teamEl.$;
 		team.event_id = event.id;
 		team.name = team.name || '';
 		team.status = team.status || 'finished';
 		team.duration = team.duration ? team.duration : 24;
 		teams.push(team);
 
-		for(var j = 0; j < results.results.team[i].member.length; j++) {
-			member = results.results.team[i].member[j].$;
+		for(let memberEl of teamMembers) {
+			const member = memberEl.$;
 			member.team_id = team.id;
 			member.event_id = event.id;
 			member.country_code = member.country;
@@ -219,29 +218,25 @@ async function processIRF(event, data) {
 
 async function processIOF(event, data) {
 	let results = await parseString(data);
-	var teams = [];
-	var members = [];
+	let teams = [];
+	let members = [];
 
-	var team;
-	var member;
-	var currentTeam;
-
-	var classes = results.ResultList.ClassResult;
+	const classes = results.ResultList.ClassResult;
 	if (!classes) {
 		throw Error('Missing ResultList.ClassResult');
 	}
-	for (var i = 0; i < classes.length; i++) {
-		var classTeams = classes[i].TeamResult;
-		var classAbbr = classes[i].Class[0].Name[0];
-		var classDecoded = helpers.decodeCategory(classAbbr);
+	for (let i = 0; i < classes.length; i++) {
+		let classTeams = classes[i].TeamResult;
+		let classAbbr = classes[i].Class[0].Name[0];
+		let classDecoded = helpers.decodeCategory(classAbbr);
 		if (!classTeams) {
 			console.log('Skipping import of an empty class: ' + classAbbr);
 			continue;
 		}
-		for (var j = 0; j < classTeams.length; j++) {
-			currentTeam = classTeams[j];
+		for (let j = 0; j < classTeams.length; j++) {
+			let currentTeam = classTeams[j];
 
-			team = {};
+			let team = {};
 			team.event_id = event.id;
 			team.id = currentTeam.BibNumber[0];
 			team.gender = classDecoded.gender;
@@ -252,21 +247,21 @@ async function processIOF(event, data) {
 			if (!currentTeam.TeamMemberResult) {
 				throw Error('Missing ResultList.ClassResult[' + i + '].TeamResult[' + j + '].TeamMemberResult');
 			}
-			for (var m = 0; m < currentTeam.TeamMemberResult.length; m++) {
-				var currentMember = currentTeam.TeamMemberResult[m].Person[0];
+			for (let m = 0; m < currentTeam.TeamMemberResult.length; m++) {
+				let currentMember = currentTeam.TeamMemberResult[m].Person[0];
 				if (currentMember.Name[0].Family[0] === 'TEAMTOTAL') {
-					var result = currentTeam.TeamMemberResult[m].Result[0];
+					let result = currentTeam.TeamMemberResult[m].Result[0];
 					team.time = helpers.printSeconds(parseInt(result.Time[0]));
 					team.status = helpers.iofStatus(result.Status[0]);
 					team.penalty = 0;
-					var totalPointsAvailable = false;
+					let totalPointsAvailable = false;
 
 					if (!result.Score) {
 						throw Error('Missing ResultList.ClassResult[' + i + '].TeamResult[' + j + '].TeamMemberResult[' + m + '] > Score');
 					}
 
-					for (var s = 0; s < result.Score.length; s++) {
-						var sc = result.Score[s];
+					for (let s = 0; s < result.Score.length; s++) {
+						let sc = result.Score[s];
 						if (!totalPointsAvailable && sc.$.type === 'Points') {
 							team.score = sc._;
 						} else if (sc.$.type === 'TotalPoints') {
@@ -283,7 +278,7 @@ async function processIOF(event, data) {
 					continue;
 				}
 
-				member = {};
+				let member = {};
 				member.team_id = team.id;
 				member.event_id = event.id;
 				member.firstname = currentMember.Name[0].Given[0];

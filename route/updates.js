@@ -1,6 +1,6 @@
 const db = require('../db')
-var sql = require('sql');
-var model = require('../model')(sql);
+const sql = require('sql');
+const model = require('../model')(sql);
 
 module.exports.archive = async function(req, res) {
 	let data = await db.query('select * from update order by timestamp desc');

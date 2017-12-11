@@ -1,13 +1,13 @@
-var moment = require('moment');
+const moment = require('moment');
 
-var genderclass = {
+const genderclass = {
 	'men': 'M',
 	'women': 'W',
 	'mixed': 'X'
 };
-var genderclassReverse = reverse(genderclass, true);
+const genderclassReverse = reverse(genderclass, true);
 
-var ageclass = {
+const ageclass = {
 	'under18': '18',
 	'under20': '20',
 	'under23': '23',
@@ -18,17 +18,17 @@ var ageclass = {
 	'superveteran': 'SV',
 	'ultraveteran': 'UV'
 };
-var ageclassReverse = reverse(ageclass, true);
+const ageclassReverse = reverse(ageclass, true);
 
-var categoriesToObject = {MO: {age: 'open', gender: 'men'}, XO: {age: 'open', gender: 'mixed'}, WO: {age: 'open', gender: 'women'}, MV: {age: 'veteran', gender: 'men'}, XV: {age: 'veteran', gender: 'mixed'}, WV: {age: 'veteran', gender: 'women'}, MSV: {age: 'superveteran', gender: 'men'}, XSV: {age: 'superveteran', gender: 'mixed'}, WSV: {age: 'superveteran', gender: 'women'}, MUV: {age: 'ultraveteran', gender: 'men'}, XUV: {age: 'ultraveteran', gender: 'mixed'}, WUV: {age: 'ultraveteran', gender: 'women'}, MJ: {age: 'junior', gender: 'men'}, XJ: {age: 'junior', gender: 'mixed'}, WJ: {age: 'junior', gender: 'women'}, MY: {age: 'youth', gender: 'men'}, XY: {age: 'youth', gender: 'mixed'}, WY: {age: 'youth', gender: 'women'}, M18: {age: 'under18', gender: 'men'}, X18: {age: 'under18', gender: 'mixed'}, W18: {age: 'under18', gender: 'women'}, M20: {age: 'under20', gender: 'men'}, X20: {age: 'under20', gender: 'mixed'}, W20: {age: 'under20', gender: 'women'}, M23: {age: 'under23', gender: 'men'}, X23: {age: 'under23', gender: 'mixed'}, W23: {age: 'under23', gender: 'women'}};
+const categoriesToObject = {MO: {age: 'open', gender: 'men'}, XO: {age: 'open', gender: 'mixed'}, WO: {age: 'open', gender: 'women'}, MV: {age: 'veteran', gender: 'men'}, XV: {age: 'veteran', gender: 'mixed'}, WV: {age: 'veteran', gender: 'women'}, MSV: {age: 'superveteran', gender: 'men'}, XSV: {age: 'superveteran', gender: 'mixed'}, WSV: {age: 'superveteran', gender: 'women'}, MUV: {age: 'ultraveteran', gender: 'men'}, XUV: {age: 'ultraveteran', gender: 'mixed'}, WUV: {age: 'ultraveteran', gender: 'women'}, MJ: {age: 'junior', gender: 'men'}, XJ: {age: 'junior', gender: 'mixed'}, WJ: {age: 'junior', gender: 'women'}, MY: {age: 'youth', gender: 'men'}, XY: {age: 'youth', gender: 'mixed'}, WY: {age: 'youth', gender: 'women'}, M18: {age: 'under18', gender: 'men'}, X18: {age: 'under18', gender: 'mixed'}, W18: {age: 'under18', gender: 'women'}, M20: {age: 'under20', gender: 'men'}, X20: {age: 'under20', gender: 'mixed'}, W20: {age: 'under20', gender: 'women'}, M23: {age: 'under23', gender: 'men'}, X23: {age: 'under23', gender: 'mixed'}, W23: {age: 'under23', gender: 'women'}};
 
-var categoryInheritance = {'ultraveteran': 'superveteran', 'superveteran': 'veteran', 'veteran': 'open', 'junior': 'open', 'youth': 'open', 'under20': 'open', 'under23': 'open'};
-var categorySorting = {'ultraveteran': [], 'superveteran': ['ultraveteran'], 'veteran': ['superveteran', 'ultraveteran'], 'open': ['veteran', 'superveteran', 'ultraveteran'], 'youth': ['open', 'veteran', 'superveteran', 'ultraveteran'], 'junior': ['youth', 'open', 'veteran', 'superveteran', 'ultraveteran'], 'under23': ['junior', 'youth', 'open', 'veteran', 'superveteran', 'ultraveteran'], 'under20': ['under23', 'junior', 'youth', 'open', 'veteran', 'superveteran', 'ultraveteran']};
-var categoryInheritanceReverse = reverse(categoryInheritance);
+const categoryInheritance = {'ultraveteran': 'superveteran', 'superveteran': 'veteran', 'veteran': 'open', 'junior': 'open', 'youth': 'open', 'under20': 'open', 'under23': 'open'};
+const categorySorting = {'ultraveteran': [], 'superveteran': ['ultraveteran'], 'veteran': ['superveteran', 'ultraveteran'], 'open': ['veteran', 'superveteran', 'ultraveteran'], 'youth': ['open', 'veteran', 'superveteran', 'ultraveteran'], 'junior': ['youth', 'open', 'veteran', 'superveteran', 'ultraveteran'], 'under23': ['junior', 'youth', 'open', 'veteran', 'superveteran', 'ultraveteran'], 'under20': ['under23', 'junior', 'youth', 'open', 'veteran', 'superveteran', 'ultraveteran']};
+const categoryInheritanceReverse = reverse(categoryInheritance);
 
 function reverse(obj, bijective) {
-	var rev = {};
-	for (var key in obj) {
+	let rev = {};
+	for (let key in obj) {
 		if (obj.hasOwnProperty(key)) {
 			if (bijective) {
 				rev[obj[key]] = key;
@@ -43,7 +43,7 @@ function reverse(obj, bijective) {
 	return rev;
 }
 
-var blocks = {};
+let blocks = {};
 module.exports = helpers = {
 	date: function(date) {
 		return moment(date).format('D MMM YYYY');
@@ -62,7 +62,7 @@ module.exports = helpers = {
 	},
 
 	extend: function(name, context) {
-		var block = blocks[name];
+		let block = blocks[name];
 		if(!block) {
 			block = blocks[name] = [];
 		}
@@ -71,7 +71,7 @@ module.exports = helpers = {
 	},
 
 	block: function(name) {
-		var val = (blocks[name] || []).join('\n');
+		let val = (blocks[name] || []).join('\n');
 
 		// clear the block
 		blocks[name] = [];
@@ -113,8 +113,8 @@ module.exports = helpers = {
 	},
 
 	getCategoryParents: function(age, gender) {
-		var categories = categoryInheritance;
-		var ret = [];
+		let categories = categoryInheritance;
+		let ret = [];
 		ret.push(gender ? helpers.genderclass(gender) + helpers.ageclass(age) : age);
 		if (categories.hasOwnProperty(age)) {
 			ret.push.apply(ret, helpers.getCategoryParents(categories[age], gender));
@@ -122,11 +122,11 @@ module.exports = helpers = {
 		return ret;
 	},
 	getCategoryDescendants: function(age, gender) {
-		var categories = categoryInheritanceReverse;
-		var ret = [];
+		let categories = categoryInheritanceReverse;
+		let ret = [];
 		ret.push(gender ? helpers.genderclass(gender) + helpers.ageclass(age) : age);
 		if (categories.hasOwnProperty(age)) {
-			for (var subage in categories[age]) {
+			for (let subage in categories[age]) {
 				if (categories[age].hasOwnProperty(subage)) {
 					ret.push.apply(ret, helpers.getCategoryDescendants(categories[age][subage], gender));
 				}

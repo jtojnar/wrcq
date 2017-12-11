@@ -1,16 +1,14 @@
 "use strict";
 
-var express = require('express');
-var path = require('path');
-var fs = require('fs');
-var url = require('url');
+const express = require('express');
+const path = require('path');
+const fs = require('fs');
+const url = require('url');
 const db = require('./db')
 
-var parseString = require('xml2js').parseString;
-
-var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
-var crypto = require('crypto');
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
+const crypto = require('crypto');
 
 const Router = require('express-promise-router');
 const session = require('express-session');
@@ -18,7 +16,7 @@ const pgSession = require('connect-pg-simple')(session);
 
 const router = new Router();
 
-var sha1 = function(d) {
+const sha1 = function(d) {
 	return crypto.createHash('sha1').update(d).digest('hex');
 };
 
@@ -37,7 +35,7 @@ passport.serializeUser(function(user, done) {
 });
 passport.deserializeUser(async function(id, done) {
 	let result = await db.query('select * from "user" where "id"=$1', [id]);
-	if(result.rowCount == 0) {
+	if(result.rowCount === 0) {
 		done(null, false);
 	}
 
@@ -51,10 +49,10 @@ passport.use(new LocalStrategy(
 	function(email, password, done) {
 		process.nextTick(function () {
 			db.query('select * from "user" where "email"=$1', [email]).then(result => {
-				if(result.rowCount == 0) {
+				if(result.rowCount === 0) {
 					done(null, false, {message: 'Unknown user ' + email});
 				}
-				var user = result.rows[0];
+				let user = result.rows[0];
 				if(user.password != sha1(password+user.salt)) {
 					done(null, false, {message: 'Invalid password'});
 				}
@@ -64,15 +62,15 @@ passport.use(new LocalStrategy(
 	}
 ));
 
-var hbs = require('express-handlebars');
+const hbs = require('express-handlebars');
 
-var helpers = require('./helpers');
+const helpers = require('./helpers');
 
-var publicDir = path.join(__dirname, 'public');
+const publicDir = path.join(__dirname, 'public');
 
-var app = express();
+const app = express();
 
-var allowCrossDomain = function(req, res, next) {
+const allowCrossDomain = function(req, res, next) {
 	res.header('Access-Control-Allow-Origin', '*');
 
 	next();
@@ -80,17 +78,17 @@ var allowCrossDomain = function(req, res, next) {
 
 app.set('views', path.join(__dirname, 'view'));
 app.set('port', process.env.PORT || 5000);
-var serveStatic = require('serve-static');
+const serveStatic = require('serve-static');
 app.engine('hbs', hbs({defaultLayout: 'layout', extname: '.hbs', layoutsDir: 'view', partialsDir: path.join(__dirname, 'view', 'partial'), helpers: helpers}));
 app.set('view engine', 'hbs');
 
 app.use(require('cookie-parser')());
 
-var bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-var multipart = require('connect-multiparty');
+const multipart = require('connect-multiparty');
 
 app.use(require('method-override')());
 app.use(session({
@@ -109,14 +107,14 @@ app.use(allowCrossDomain);
 app.use(serveStatic(publicDir));
 app.use('/bower_components', serveStatic(path.join(__dirname, 'bower_components')));
 
-var env = process.env.NODE_ENV || 'development';
-if(env == 'development') {
+const env = process.env.NODE_ENV || 'development';
+if(env === 'development') {
 	app.use(require('morgan')('common'));
 }
 
 function addEventLinks(links, events) {
 	events.forEach(event => {
-		event.links = links.filter(link => link.event_id == event.id);
+		event.links = links.filter(link => link.event_id === event.id);
 	});
 }
 
@@ -144,7 +142,7 @@ router.post('/api/update/edit', async function(req, res) {
 	if(!req.body.id || isNaN(parseInt(req.body.id))) {
 		return res.status(400).send('Invalid or mising id.').end();
 	}
-	var id = parseInt(req.body.id);
+	const id = parseInt(req.body.id);
 
 	if(!req.body.content || req.body.content.trim() === '') {
 		return res.status(400).send('Empty update text.').end();
@@ -159,7 +157,7 @@ router.post('/api/update/edit', async function(req, res) {
 	}
 });
 
-var updatesRoute = require('./route/updates');
+const updatesRoute = require('./route/updates');
 
 router.get('/', async function(req, res) {
 	let updates = await db.query('select * from update order by timestamp desc limit 5');
@@ -173,15 +171,15 @@ router.get('/', async function(req, res) {
 
 router.get('/archive', updatesRoute.archive);
 
-var eventsRoute = require('./route/events');
+const eventsRoute = require('./route/events');
 
 router.get('/events', async function(req, res) {
 	let links = await db.query('select * from link');
 	links = links.rows;
-	var eventsQuery = await db.query('with latest as (select *, row_number() over(partition by level order by start desc) as rk from event where "end" > \'2013-01-01\') select * from latest left join (select event_id from team group by event_id) as team on team.event_id = latest.id where rk <= 2 order by level=\'world\' desc, level::text like \'regional%\' desc, level::text like \'national%\' desc, start desc');
+	let eventsQuery = await db.query('with latest as (select *, row_number() over(partition by level order by start desc) as rk from event where "end" > \'2013-01-01\') select * from latest left join (select event_id from team group by event_id) as team on team.event_id = latest.id where rk <= 2 order by level=\'world\' desc, level::text like \'regional%\' desc, level::text like \'national%\' desc, start desc');
 	addEventLinks(links, eventsQuery.rows);
 	let events = eventsQuery.rows;
-	var pastEventsQuery = await db.query('with latest as (select *, row_number() over(partition by level order by start desc) as rk from event) select * from latest left join (select event_id from team group by event_id) as team on team.event_id = latest.id where rk > 2 or "end" <= \'2013-01-01\' order by level=\'world\' desc, level::text like \'regional%\' desc, level::text like \'national%\' desc, start desc');
+	let pastEventsQuery = await db.query('with latest as (select *, row_number() over(partition by level order by start desc) as rk from event) select * from latest left join (select event_id from team group by event_id) as team on team.event_id = latest.id where rk > 2 or "end" <= \'2013-01-01\' order by level=\'world\' desc, level::text like \'regional%\' desc, level::text like \'national%\' desc, start desc');
 	addEventLinks(links, pastEventsQuery.rows);
 	let pastEvents = pastEventsQuery.rows;
 	res.render('events', {events: {events: events}, pastEvents: {events: pastEvents}, identity: req.user});
@@ -196,15 +194,15 @@ router.post('/events/:event/upload', multipart(), eventsRoute.upload);
 function pushQualified(qualified, type, criterion, criterion_qualified, eventIds) {
 	for(member in criterion_qualified.rows) {
 		if(criterion_qualified.rows.hasOwnProperty(member)) {
-			var member = criterion_qualified.rows[member];
+			let member = criterion_qualified.rows[member];
 			if(!qualified[type].hasOwnProperty(member.country_code)) {
 				qualified[type][member.country_code] = {};
 			}
 			if(!qualified[type][member.country_code].hasOwnProperty(member.person_id)) {
 				qualified[type][member.country_code][member.person_id] = {firstname: member.firstname, lastname: member.lastname, country_code: member.country_code, reasons: []};
 			}
-			if(criterion === '1.1' || criterion == '1.3') {
-				var reason = {
+			if(criterion === '1.1' || criterion === '1.3') {
+				let reason = {
 					criterion: criterion,
 					event: eventIds[member.event_id].slug,
 					gender: member.gender,
@@ -215,9 +213,9 @@ function pushQualified(qualified, type, criterion, criterion_qualified, eventIds
 			} else if(criterion === '1.4') {
 				qualified[type][member.country_code][member.person_id].reasons.push({criterion: criterion});
 			} else {
-				var starWarning = criterion === '2.1' ? member.star_warning : false;
+				let starWarning = criterion === '2.1' ? member.star_warning : false;
 				if(member.prequalified_uv) {
-					var reason = {
+					let reason = {
 						criterion: criterion,
 						event: eventIds[member.event_id].slug,
 						gender: member.gender,
@@ -228,7 +226,7 @@ function pushQualified(qualified, type, criterion, criterion_qualified, eventIds
 					qualified[type][member.country_code][member.person_id].reasons.push(reason);
 				}
 				if(member.prequalified_sv) {
-					var reason = {
+					let reason = {
 						criterion: criterion,
 						event: eventIds[member.event_id].slug,
 						gender: member.gender,
@@ -239,7 +237,7 @@ function pushQualified(qualified, type, criterion, criterion_qualified, eventIds
 					qualified[type][member.country_code][member.person_id].reasons.push(reason);
 				}
 				if(member.prequalified_v) {
-					var reason = {
+					let reason = {
 						criterion: criterion,
 						event: eventIds[member.event_id].slug,
 						gender: member.gender,
@@ -250,7 +248,7 @@ function pushQualified(qualified, type, criterion, criterion_qualified, eventIds
 					qualified[type][member.country_code][member.person_id].reasons.push(reason);
 				}
 				if(member.prequalified_o) {
-					var reason = {
+					let reason = {
 						criterion: criterion,
 						event: eventIds[member.event_id].slug,
 						gender: member.gender,
@@ -261,7 +259,7 @@ function pushQualified(qualified, type, criterion, criterion_qualified, eventIds
 					qualified[type][member.country_code][member.person_id].reasons.push(reason);
 				}
 				if(member.prequalified_j) {
-					var reason = {
+					let reason = {
 						criterion: criterion,
 						event: eventIds[member.event_id].slug,
 						gender: member.gender,
@@ -289,15 +287,15 @@ function compare_member(a, b) {
 }
 
 router.get('/qualified', async function(req, res) {
-	var eventIds = {};
-	var eventsQuery = await db.query('select * from event');
+	let eventIds = {};
+	let eventsQuery = await db.query('select * from event');
 	eventsQuery.rows.forEach(row => {
 		eventIds[row.id] = row;
 	});
 
 
 	try {
-		var qualified = {auto: {}, preferred: {}};
+		let qualified = {auto: {}, preferred: {}};
 
 		// criterion 1.1
 		let criterion_qualified11 = await db.query(
@@ -371,16 +369,16 @@ router.get('/qualified', async function(req, res) {
 		);
 		pushQualified(qualified, 'preferred', '2.4b', criterion_qualified24b, eventIds);
 
-		var types = ['auto', 'preferred'];
-		for(var type in types) {
-			var type = types[type];
-			var countries = Object.keys(qualified[type]).sort();
-			var temporary = {};
-			for(var country in countries) {
+		let types = ['auto', 'preferred'];
+		for(let type in types) {
+			let type = types[type];
+			let countries = Object.keys(qualified[type]).sort();
+			let temporary = {};
+			for(let country in countries) {
 				if(countries.hasOwnProperty(country)) {
-					var country = countries[country];
-					var persons = [];
-					for(var person in qualified[type][country]) {
+					let country = countries[country];
+					let persons = [];
+					for(let person in qualified[type][country]) {
 						if(qualified[type][country].hasOwnProperty(person)) {
 							persons.push(qualified[type][country][person]);
 						}
@@ -400,7 +398,7 @@ router.get('/qualified', async function(req, res) {
 
 function addMembers(members, teams) {
 	teams.forEach(team => {
-		team.members = members.filter(member => member.team_id == team.id);
+		team.members = members.filter(member => member.team_id === team.id);
 	});
 }
 
@@ -412,7 +410,7 @@ router.get('/events/:event/results', async function(req, res) {
 		res.render('error/404', {body: 'Sorry, this event is not in our database, we may be working on it.'});
 		return;
 	}
-	var event = eventdata.rows[0];
+	let event = eventdata.rows[0];
 	if(!event.complete) {
 		res.status(404);
 		res.render('error/404', {body: 'Sorry, this event has no results (yet). We are working on it in this very moment.'});
@@ -421,34 +419,34 @@ router.get('/events/:event/results', async function(req, res) {
 
 	let members = await db.query('select * from member where event_id=$1', [event.id]);
 	members = members.rows;
-	var openCategories = helpers.getCategoryDescendants('open').join('\',\'');
-	var moquery = await db.query('select * from team where event_id=$1 and gender=$2 and age in (\''+openCategories+'\') order by status=\'finished\' desc, score desc, time asc limit 3', [event.id, 'men']);
+	let openCategories = helpers.getCategoryDescendants('open').join('\',\'');
+	let moquery = await db.query('select * from team where event_id=$1 and gender=$2 and age in (\''+openCategories+'\') order by status=\'finished\' desc, score desc, time asc limit 3', [event.id, 'men']);
 	addMembers(members, moquery.rows);
 	let mo = moquery.rows;
-	var xoquery = await db.query('select * from team where event_id=$1 and gender=$2 and age in (\''+openCategories+'\') order by status=\'finished\' desc, score desc, time asc limit 3', [event.id, 'mixed']);
+	let xoquery = await db.query('select * from team where event_id=$1 and gender=$2 and age in (\''+openCategories+'\') order by status=\'finished\' desc, score desc, time asc limit 3', [event.id, 'mixed']);
 	addMembers(members, xoquery.rows);
 	let xo = xoquery.rows;
-	var woquery = await db.query('select * from team where event_id=$1 and gender=$2 and age in (\''+openCategories+'\') order by status=\'finished\' desc, score desc, time asc limit 3', [event.id, 'women']);
+	let woquery = await db.query('select * from team where event_id=$1 and gender=$2 and age in (\''+openCategories+'\') order by status=\'finished\' desc, score desc, time asc limit 3', [event.id, 'women']);
 	addMembers(members, woquery.rows);
 	let wo = woquery.rows;
 
-	var counters = {};
-	var durations = [];
-	var categories = [];
-	var usedCategories = [];
+	let counters = {};
+	let durations = [];
+	let categories = [];
+	let usedCategories = [];
 
-	var defaultDuration = 24;
+	let defaultDuration = 24;
 
-	var teamquery = await db.query('select * from team where event_id=$1 order by status=\'finished\' desc, score desc, time asc', [event.id]);
-	if(teamquery.rowCount == 0) {
+	let teamquery = await db.query('select * from team where event_id=$1 order by status=\'finished\' desc, score desc, time asc', [event.id]);
+	if(teamquery.rowCount === 0) {
 		res.status(404);
 		res.render('error/404', {body: 'Sorry, this event has no results (yet). We are working on it in this very moment.'});
 		return;
 	}
 
 	teamquery.rows.forEach(row => {
-		var gender = helpers.genderclass(row.gender);
-		var age = helpers.ageclass(row.age);
+		let gender = helpers.genderclass(row.gender);
+		let age = helpers.ageclass(row.age);
 		row.category = gender+age;
 
 		if(durations.indexOf(row.duration) < 0) {
@@ -458,23 +456,23 @@ router.get('/events/:event/results', async function(req, res) {
 			categories.push(row.category);
 		}
 
-		var countToCategories = helpers.getCategoryParents(row.age, row.gender);
-		for(var i = 0; i < countToCategories.length; i++) {
-			var countToCategory = countToCategories[i];
+		let countToCategories = helpers.getCategoryParents(row.age, row.gender);
+		for(let i = 0; i < countToCategories.length; i++) {
+			let countToCategory = countToCategories[i];
 			row[countToCategory] = increment(counters, row.duration, countToCategory);
 		}
 		row['place'] = increment(counters, row.duration, 'all');
 
 		if(req.query.category) {
-			var categoryDescendants = helpers.getCategoryDescendants(helpers.categoriesToObject[req.query.category].age, helpers.categoriesToObject[req.query.category].gender);
-			var availableCategories = categoryDescendants.slice();
+			let categoryDescendants = helpers.getCategoryDescendants(helpers.categoriesToObject[req.query.category].age, helpers.categoriesToObject[req.query.category].gender);
+			let availableCategories = categoryDescendants.slice();
 			Array.prototype.push.apply(availableCategories, helpers.getCategoryParents(helpers.categoriesToObject[req.query.category].age, helpers.categoriesToObject[req.query.category].gender));
-			var currentCategoryIsActive = (categoryDescendants.indexOf(row.category) > -1);
+			let currentCategoryIsActive = (categoryDescendants.indexOf(row.category) > -1);
 		} else {
-			var currentCategoryIsActive = true;
+			let currentCategoryIsActive = true;
 		}
-		var currentDurationIsDefault = (!req.query.duration && defaultDuration === row.duration);
-		var currentDurationIsActive = (parseInt(req.query.duration) === row.duration);
+		let currentDurationIsDefault = (!req.query.duration && defaultDuration === row.duration);
+		let currentDurationIsActive = (parseInt(req.query.duration) === row.duration);
 		if((!req.query.category || currentCategoryIsActive) && (currentDurationIsDefault || currentDurationIsActive)) {
 			if (usedCategories.indexOf(row.category) < 0) {
 				usedCategories.push(row.category);
@@ -484,17 +482,15 @@ router.get('/events/:event/results', async function(req, res) {
 	addMembers(members, teamquery.rows);
 	let teams = teamquery.rows;
 
-	var activeCategory = null;
-	var activeDuration = null;
-	var isCategoryInvalid = (req.query.hasOwnProperty('category') && categories.indexOf(req.query.category) < 0);
-	var isDurationInvalid = (req.query.hasOwnProperty('duration') && durations.indexOf(parseInt(req.query.duration)) < 0);
-	var isCategoryDefault = (req.query.hasOwnProperty('category') && req.query.category === '');
-	var isDurationDefault = (req.query.hasOwnProperty('duration') && parseInt(req.query.duration) === defaultDuration);
+	let isCategoryInvalid = (req.query.hasOwnProperty('category') && categories.indexOf(req.query.category) < 0);
+	let isDurationInvalid = (req.query.hasOwnProperty('duration') && durations.indexOf(parseInt(req.query.duration)) < 0);
+	let isCategoryDefault = (req.query.hasOwnProperty('category') && req.query.category === '');
+	let isDurationDefault = (req.query.hasOwnProperty('duration') && parseInt(req.query.duration) === defaultDuration);
 
-	var displayedCategories = {};
+	let displayedCategories = {};
 	usedCategories.forEach(function(cat) {
 		cat = helpers.decodeCategory(cat);
-		var parents = helpers.getCategoryParents(cat.age, cat.gender);
+		let parents = helpers.getCategoryParents(cat.age, cat.gender);
 		parents.forEach(function(parent) {
 			if (!displayedCategories.hasOwnProperty(parent)) {
 				displayedCategories[parent] = 1;
@@ -502,10 +498,10 @@ router.get('/events/:event/results', async function(req, res) {
 		});
 	});
 
-	var allCategories = [];
+	let allCategories = [];
 	categories.forEach(function(cat) {
 		cat = helpers.decodeCategory(cat);
-		var parents = helpers.getCategoryParents(cat.age, cat.gender);
+		let parents = helpers.getCategoryParents(cat.age, cat.gender);
 		parents.forEach(function(parent) {
 			if (allCategories.indexOf(parent) < 0) {
 				allCategories.push(parent);
@@ -513,7 +509,7 @@ router.get('/events/:event/results', async function(req, res) {
 		});
 	});
 
-	var query = {};
+	let query = {};
 	if(isCategoryDefault || isDurationDefault) {
 		if(req.query.hasOwnProperty('duration') && !isDurationDefault) {
 			query.duration = req.query.duration;
@@ -530,7 +526,7 @@ router.get('/events/:event/results', async function(req, res) {
 		return;
 	}
 
-	var activeDuration = req.query.hasOwnProperty('duration') ? parseInt(req.query.duration) : defaultDuration;
+	let activeDuration = req.query.hasOwnProperty('duration') ? parseInt(req.query.duration) : defaultDuration;
 	res.render('results', {
 		title: 'Results of ' + event.name,
 		event: event,
@@ -543,8 +539,8 @@ router.get('/events/:event/results', async function(req, res) {
 		activeCategory: req.query.hasOwnProperty('category') && req.query.category != '' ? req.query.category : null,
 		categories: allCategories.sort(function(a, b) {
 			if (a[0] === b[0]) {
-				var aAge = helpers.ageclassReverse[a.substr(1)];
-				var bAge = helpers.ageclassReverse[b.substr(1)];
+				let aAge = helpers.ageclassReverse[a.substr(1)];
+				let bAge = helpers.ageclassReverse[b.substr(1)];
 
 				if (aAge === bAge) {
 					return 0;

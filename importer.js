@@ -6,23 +6,23 @@ if(process.argv.length < 4) {
 	return;
 }
 
-var _dbUri = process.env.DATABASE_URL;
+const _dbUri = process.env.DATABASE_URL;
 
-var pg = require('pg');
-var fs = require('fs');
+const pg = require('pg');
+const fs = require('fs');
 
-var moment = require('moment');
-var parseString = require('xml2js').parseString;
+const moment = require('moment');
+const parseString = require('xml2js').parseString;
 
-var event = { id: process.argv[2] };
-var teamI = 0;
-var memberI = 0;
+let event = { id: process.argv[2] };
+let teamI = 0;
+let memberI = 0;
 
 function recursive(teams, client, done) {
-	var team = teams[teamI].$;
+	let team = teams[teamI].$;
 	team.event_id = event.id;
 	team.duration = team.duration ? team.duration : 24;
-	var members = teams[teamI].member;
+	let members = teams[teamI].member;
 	client.query('insert into team(id, event_id, score, time, penalty, duration, gender, age, status, name) values($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)', [team.id, team.event_id, team.score, team.time, team.penalty, team.duration, team.gender, team.age, team.status || 'finished', team.name || ''], function(err) {
 		if(err) {
 			console.log(err);
@@ -36,7 +36,7 @@ function recursive(teams, client, done) {
 	});
 }
 function mrecursive(teams, client, done, team, members) {
-	var member = members[memberI].$;
+	let member = members[memberI].$;
 	member.team_id = team.id;
 	member.event_id = event.id;
 	client.query('insert into member(team_id, event_id, firstname, lastname, country_code) values($1, $2, $3, $4, $5)', [member.team_id, member.event_id, member.firstname, member.lastname, member.country], function(err) {
@@ -72,7 +72,7 @@ pg.connect(_dbUri, function(err, client, done) {
 				console.log(err);
 				return done();
 			}
-			var teams = results.results.team;
+			let teams = results.results.team;
 			return recursive(teams, client, done);
 		});
 	});
