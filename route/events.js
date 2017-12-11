@@ -1,12 +1,12 @@
 const sql = require('sql');
 const model = require('../model')(sql);
 const helpers = require('../helpers');
-const db = require('../db')
+const db = require('../db');
 const fs = require('fs-extra');
 const neatCsv = require('neat-csv');
 
 module.exports.add = async function(req, res) {
-	if(!req.user) {
+	if (!req.user) {
 		res.status(403);
 		req.flash('danger', 'You need to be logged in to create an event.');
 		res.render('login');
@@ -35,7 +35,7 @@ module.exports.add = async function(req, res) {
 		const formSent = req.method.toLowerCase() === 'post';
 		let values = req.body;
 
-		if(formSent) {
+		if (formSent) {
 			values[values.level] = true;
 			values.complete = values.hasOwnProperty('complete');
 
@@ -46,7 +46,7 @@ module.exports.add = async function(req, res) {
 				return res.redirect('/events');
 			} catch (err) {
 				console.error(err);
-				if(err.code == 23505) {
+				if (err.code == 23505) {
 					req.flash('danger', 'Event with this slug already exists. Please consult with the list of events.');
 				} else {
 					req.flash('danger', err);
@@ -58,17 +58,17 @@ module.exports.add = async function(req, res) {
 			res.render('events_add', {identity: req.user, values: values, levels: levels});
 		}
 	}
-}
+};
 
 
 module.exports.upload = async function(req, res) {
-	if(!req.user) {
+	if (!req.user) {
 		res.status(403);
 		req.flash('danger', 'You need to be logged in to upload an event results.');
 		res.render('login');
 	} else {
 		let eventdata = await db.query('select * from event where slug=$1 limit 1', [req.params.event]);
-		if(eventdata.rows.length == 0) {
+		if (eventdata.rows.length == 0) {
 			res.status(404);
 			res.render('error/404', {body: 'Sorry, this event is not in our database, we may be working on it.'});
 			return;
@@ -82,12 +82,12 @@ module.exports.upload = async function(req, res) {
 		values.data_type_irf = formSent && values.data_type === 'irf';
 		values.data_type_iof = formSent && values.data_type === 'iof';
 
-		if(formSent) {
-			if(req.files.hasOwnProperty('data') && req.files.data.size > 0) {
-				if(values.data_type === 'csv' || values.data_type === 'ssv') {
+		if (formSent) {
+			if (req.files.hasOwnProperty('data') && req.files.data.size > 0) {
+				if (values.data_type === 'csv' || values.data_type === 'ssv') {
 					try {
 						let options = {};
-						if(values.data_type === 'ssv') {
+						if (values.data_type === 'ssv') {
 							options.separator = ';';
 						}
 
@@ -99,7 +99,7 @@ module.exports.upload = async function(req, res) {
 						let teams = await neatCsv(teamData, options);
 
 						teams.forEach(data => {
-							if(Object.keys(data).length > 0) {
+							if (Object.keys(data).length > 0) {
 								for (let field of ['id', 'score', 'time', 'penalty', 'gender', 'age']) {
 									if (!data.hasOwnProperty(field) || data[field] === '') {
 										throw Error('Missing value on line ' + lineno + ': ' + field);
@@ -119,8 +119,8 @@ module.exports.upload = async function(req, res) {
 								xml.push('	<team id="' + sanitizer.escape(data.id) + '" score="' + sanitizer.escape(data.score) + '" time="' + sanitizer.escape(data.time) + '" penalty="' + sanitizer.escape(data.penalty) + '" gender="' + sanitizer.escape(data.gender) + '" age="' + sanitizer.escape(data.age) + '" name="' + sanitizer.escape(data.name) + '"' + (data.hasOwnProperty('status') && data.status !== '' ? ' status="' + sanitizer.escape(data.status) + '"' : '') + '>');
 
 								let i = 1;
-								while(true) {
-									if(!data.hasOwnProperty('member' + i + 'firstname') || data['member' + i + 'firstname'] === '' || data['member' + i + 'firstname'] === undefined) {
+								while (true) {
+									if (!data.hasOwnProperty('member' + i + 'firstname') || data['member' + i + 'firstname'] === '' || data['member' + i + 'firstname'] === undefined) {
 										break;
 									}
 									xml.push('		<member firstname="' + sanitizer.escape(data['member' + i + 'firstname']) + '" lastname="' + sanitizer.escape(data['member' + i + 'lastname']) + '" country="' + sanitizer.escape(data['member' + i + 'country']) + '" />');
@@ -140,7 +140,7 @@ module.exports.upload = async function(req, res) {
 						req.flash('danger', err.detail ? `${err} (${err.detail})` : `${err}`);
 						res.render('events_upload', {identity: req.user, values: values});
 					}
-				} else if(values.data_type === 'irf' || values.data_type === 'iof') {
+				} else if (values.data_type === 'irf' || values.data_type === 'iof') {
 					fs.readFile(req.files.data.path, async function(err, data) {
 						if (err) {
 							throw err;
@@ -168,7 +168,7 @@ module.exports.upload = async function(req, res) {
 			res.render('events_upload', {identity: req.user, values: values});
 		}
 	}
-}
+};
 
 const xml2js = require('xml2js');
 const parseString = function(data) {
@@ -189,7 +189,7 @@ async function processIRF(event, data) {
 	let teams = [];
 	let members = [];
 
-	for(let teamEl of results.results.team) {
+	for (let teamEl of results.results.team) {
 		const teamMembers = teamEl.member;
 		const team = teamEl.$;
 		team.event_id = event.id;
@@ -198,7 +198,7 @@ async function processIRF(event, data) {
 		team.duration = team.duration ? team.duration : 24;
 		teams.push(team);
 
-		for(let memberEl of teamMembers) {
+		for (let memberEl of teamMembers) {
 			const member = memberEl.$;
 			member.team_id = team.id;
 			member.event_id = event.id;

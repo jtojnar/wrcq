@@ -58,12 +58,12 @@ module.exports = helpers = {
 			seconds: t % 60,
 			minutes: Math.floor(t / 60) % 60,
 			hours: Math.floor(Math.floor(t / 60) / 60),
-		})
+		});
 	},
 
 	extend: function(name, context) {
 		let block = blocks[name];
-		if(!block) {
+		if (!block) {
 			block = blocks[name] = [];
 		}
 
@@ -84,19 +84,19 @@ module.exports = helpers = {
 	},
 
 	index: function(index, context) {
-		return index+1;
+		return index + 1;
 	},
 
 	pad: function(number, digits) {
-		number = "" + number;
-		while(number.length < digits) {
-			number = "0" + number;
+		number = '' + number;
+		while (number.length < digits) {
+			number = '0' + number;
 		}
 		return number;
 	},
 
 	time: function(time, context) {
-		return helpers.pad((time.days||0)*24 + (time.hours||0), 2) + ':' + helpers.pad(time.minutes||0, 2) + ':' + helpers.pad(time.seconds||0, 2);
+		return helpers.pad((time.days || 0) * 24 + (time.hours || 0), 2) + ':' + helpers.pad(time.minutes || 0, 2) + ':' + helpers.pad(time.seconds || 0, 2);
 	},
 
 	ageclassReverse: ageclassReverse,
@@ -142,7 +142,7 @@ module.exports = helpers = {
 	},
 
 	equals: function(primary, secondary, options) {
-		if(primary === secondary) {
+		if (primary === secondary) {
 			return options.fn(this);
 		} else {
 			return options.inverse(this);
@@ -150,7 +150,7 @@ module.exports = helpers = {
 	},
 
 	selected: function(values, name, options) {
-		if(values.hasOwnProperty(name) && values[name] === true) {
+		if (values.hasOwnProperty(name) && values[name] === true) {
 			return options.fn(this);
 		}
 	},
@@ -169,4 +169,4 @@ module.exports = helpers = {
 		}
 		throw Error('wrong status name: ' + status);
 	}
-}
+};

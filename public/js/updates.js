@@ -9,7 +9,7 @@ $(function() {
 		e.preventDefault();
 
 		var content = $('#content').val().trim();
-		if(content === '') {
+		if (content === '') {
 			return window.alert('Please enter some content.');
 		}
 
@@ -31,7 +31,7 @@ $(function() {
 		button.click((function(textarea, enableEditationButton) {
 			return function saveUpdateClickHandler(e) {
 				var content = textarea.val();
-				$.post('/api/update/edit', {id: enableEditationButton.attr('data-id'), content: content}).done((function(content, textarea, enableEditationButton){
+				$.post('/api/update/edit', {id: enableEditationButton.attr('data-id'), content: content}).done((function(content, textarea, enableEditationButton) {
 					return function updateSucceeded() {
 						$(textarea).parent().html(content);
 						enableEditationButton.show();

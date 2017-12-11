@@ -1,10 +1,9 @@
-"use strict";
+'use strict';
 
 const express = require('express');
 const path = require('path');
-const fs = require('fs');
 const url = require('url');
-const db = require('./db')
+const db = require('./db');
 
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
@@ -21,10 +20,10 @@ const sha1 = function(d) {
 };
 
 function increment(obj, alpha, beta) {
-	if(!obj.hasOwnProperty(alpha)) {
+	if (!obj.hasOwnProperty(alpha)) {
 		obj[alpha] = {};
 	}
-	if(!obj[alpha].hasOwnProperty(beta)) {
+	if (!obj[alpha].hasOwnProperty(beta)) {
 		obj[alpha][beta] = 0;
 	}
 	return ++obj[alpha][beta];
@@ -35,7 +34,7 @@ passport.serializeUser(function(user, done) {
 });
 passport.deserializeUser(async function(id, done) {
 	let result = await db.query('select * from "user" where "id"=$1', [id]);
-	if(result.rowCount === 0) {
+	if (result.rowCount === 0) {
 		done(null, false);
 	}
 
@@ -47,13 +46,13 @@ passport.deserializeUser(async function(id, done) {
 // thisisdangerous
 passport.use(new LocalStrategy(
 	function(email, password, done) {
-		process.nextTick(function () {
+		process.nextTick(function() {
 			db.query('select * from "user" where "email"=$1', [email]).then(result => {
-				if(result.rowCount === 0) {
+				if (result.rowCount === 0) {
 					done(null, false, {message: 'Unknown user ' + email});
 				}
 				let user = result.rows[0];
-				if(user.password != sha1(password+user.salt)) {
+				if (user.password != sha1(password + user.salt)) {
 					done(null, false, {message: 'Invalid password'});
 				}
 				done(null, user);
@@ -74,7 +73,7 @@ const allowCrossDomain = function(req, res, next) {
 	res.header('Access-Control-Allow-Origin', '*');
 
 	next();
-}
+};
 
 app.set('views', path.join(__dirname, 'view'));
 app.set('port', process.env.PORT || 5000);
@@ -108,7 +107,7 @@ app.use(serveStatic(publicDir));
 app.use('/bower_components', serveStatic(path.join(__dirname, 'bower_components')));
 
 const env = process.env.NODE_ENV || 'development';
-if(env === 'development') {
+if (env === 'development') {
 	app.use(require('morgan')('common'));
 }
 
@@ -119,10 +118,10 @@ function addEventLinks(links, events) {
 }
 
 router.post('/api/update/add', async function(req, res) {
-	if(!req.user) {
+	if (!req.user) {
 		return res.status(403).send('User not logged in.').end();
 	}
-	if(!req.body.content || req.body.content.trim() === '') {
+	if (!req.body.content || req.body.content.trim() === '') {
 		return res.status(400).send('Empty update text.').end();
 	}
 
@@ -136,20 +135,20 @@ router.post('/api/update/add', async function(req, res) {
 });
 
 router.post('/api/update/edit', async function(req, res) {
-	if(!req.user) {
+	if (!req.user) {
 		return res.status(403).send('User not logged in.').end();
 	}
-	if(!req.body.id || isNaN(parseInt(req.body.id))) {
+	if (!req.body.id || isNaN(parseInt(req.body.id))) {
 		return res.status(400).send('Invalid or mising id.').end();
 	}
 	const id = parseInt(req.body.id);
 
-	if(!req.body.content || req.body.content.trim() === '') {
+	if (!req.body.content || req.body.content.trim() === '') {
 		return res.status(400).send('Empty update text.').end();
 	}
 
 	try {
-		await db.query('update update set text = $1 where id = $2', [req.body.content, req.body.id]);
+		await db.query('update update set text = $1 where id = $2', [req.body.content, id]);
 		return res.status(200).end();
 	} catch (err) {
 		console.error(err);
@@ -192,16 +191,16 @@ router.get('/events/:event/upload', eventsRoute.upload);
 router.post('/events/:event/upload', multipart(), eventsRoute.upload);
 
 function pushQualified(qualified, type, criterion, criterion_qualified, eventIds) {
-	for(member in criterion_qualified.rows) {
-		if(criterion_qualified.rows.hasOwnProperty(member)) {
+	for (member in criterion_qualified.rows) {
+		if (criterion_qualified.rows.hasOwnProperty(member)) {
 			let member = criterion_qualified.rows[member];
-			if(!qualified[type].hasOwnProperty(member.country_code)) {
+			if (!qualified[type].hasOwnProperty(member.country_code)) {
 				qualified[type][member.country_code] = {};
 			}
-			if(!qualified[type][member.country_code].hasOwnProperty(member.person_id)) {
+			if (!qualified[type][member.country_code].hasOwnProperty(member.person_id)) {
 				qualified[type][member.country_code][member.person_id] = {firstname: member.firstname, lastname: member.lastname, country_code: member.country_code, reasons: []};
 			}
-			if(criterion === '1.1' || criterion === '1.3') {
+			if (criterion === '1.1' || criterion === '1.3') {
 				let reason = {
 					criterion: criterion,
 					event: eventIds[member.event_id].slug,
@@ -210,11 +209,11 @@ function pushQualified(qualified, type, criterion, criterion_qualified, eventIds
 					age: 'open'
 				};
 				qualified[type][member.country_code][member.person_id].reasons.push(reason);
-			} else if(criterion === '1.4') {
+			} else if (criterion === '1.4') {
 				qualified[type][member.country_code][member.person_id].reasons.push({criterion: criterion});
 			} else {
 				let starWarning = criterion === '2.1' ? member.star_warning : false;
-				if(member.prequalified_uv) {
+				if (member.prequalified_uv) {
 					let reason = {
 						criterion: criterion,
 						event: eventIds[member.event_id].slug,
@@ -225,7 +224,7 @@ function pushQualified(qualified, type, criterion, criterion_qualified, eventIds
 					};
 					qualified[type][member.country_code][member.person_id].reasons.push(reason);
 				}
-				if(member.prequalified_sv) {
+				if (member.prequalified_sv) {
 					let reason = {
 						criterion: criterion,
 						event: eventIds[member.event_id].slug,
@@ -236,7 +235,7 @@ function pushQualified(qualified, type, criterion, criterion_qualified, eventIds
 					};
 					qualified[type][member.country_code][member.person_id].reasons.push(reason);
 				}
-				if(member.prequalified_v) {
+				if (member.prequalified_v) {
 					let reason = {
 						criterion: criterion,
 						event: eventIds[member.event_id].slug,
@@ -247,7 +246,7 @@ function pushQualified(qualified, type, criterion, criterion_qualified, eventIds
 					};
 					qualified[type][member.country_code][member.person_id].reasons.push(reason);
 				}
-				if(member.prequalified_o) {
+				if (member.prequalified_o) {
 					let reason = {
 						criterion: criterion,
 						event: eventIds[member.event_id].slug,
@@ -258,7 +257,7 @@ function pushQualified(qualified, type, criterion, criterion_qualified, eventIds
 					};
 					qualified[type][member.country_code][member.person_id].reasons.push(reason);
 				}
-				if(member.prequalified_j) {
+				if (member.prequalified_j) {
 					let reason = {
 						criterion: criterion,
 						event: eventIds[member.event_id].slug,
@@ -275,7 +274,9 @@ function pushQualified(qualified, type, criterion, criterion_qualified, eventIds
 }
 
 function unaccent(text) {
-	return text.replace(this.re, function(a){return this.replacemets[a]||a;});
+	return text.replace(this.re, function(a) {
+		return this.replacemets[a] || a;
+	});
 }
 unaccent.prototype = {
 	replacemets: {'À': 'A', 'Á': 'A', 'Â': 'A', 'Ã': 'A', 'Ä': 'A', 'Å': 'A', 'Æ': 'A', 'à': 'a', 'á': 'a', 'â': 'a', 'ã': 'a', 'ä': 'a', 'å': 'a', 'æ': 'a', 'Ā': 'A', 'ā': 'a', 'Ă': 'A', 'ă': 'a', 'Ą': 'A', 'ą': 'a', 'Ç': 'C', 'ç': 'c', 'Ć': 'C', 'ć': 'c', 'Ĉ': 'C', 'ĉ': 'c', 'Ċ': 'C', 'ċ': 'c', 'Č': 'C', 'č': 'c', 'Ď': 'D', 'ď': 'd', 'Đ': 'D', 'đ': 'd', 'È': 'E', 'É': 'E', 'Ê': 'E', 'Ë': 'E', 'è': 'e', 'é': 'e', 'ê': 'e', 'ë': 'e', 'Ē': 'E', 'ē': 'e', 'Ĕ': 'E', 'ĕ': 'e', 'Ė': 'E', 'ė': 'e', 'Ę': 'E', 'ę': 'e', 'Ě': 'E', 'ě': 'e', 'Ĝ': 'G', 'ĝ': 'g', 'Ğ': 'G', 'ğ': 'g', 'Ġ': 'G', 'ġ': 'g', 'Ģ': 'G', 'ģ': 'g', 'Ĥ': 'H', 'ĥ': 'h', 'Ħ': 'H', 'ħ': 'h', 'Ĩ': 'I', 'Ì': 'I', 'Í': 'I', 'Î': 'I', 'Ï': 'I', 'ì': 'i', 'í': 'i', 'î': 'i', 'ï': 'i', 'ĩ': 'i', 'Ī': 'I', 'ī': 'i', 'Ĭ': 'I', 'ĭ': 'i', 'Į': 'I', 'į': 'i', 'İ': 'I', 'ı': 'i', 'Ĳ': 'I', 'ĳ': 'i', 'Ĵ': 'J', 'ĵ': 'j', 'Ķ': 'K', 'ķ': 'k', 'ĸ': 'k', 'Ĺ': 'L', 'ĺ': 'l', 'Ļ': 'L', 'ļ': 'l', 'Ľ': 'L', 'ľ': 'l', 'Ŀ': 'L', 'ŀ': 'l', 'Ł': 'L', 'ł': 'l', 'Ñ': 'N', 'ñ': 'n', 'Ń': 'N', 'ń': 'n', 'Ņ': 'N', 'ņ': 'n', 'Ň': 'N', 'ň': 'n', 'ŉ': 'n', 'Ŋ': 'N', 'ŋ': 'n', 'Ò': 'O', 'Ó': 'O', 'Ô': 'O', 'Õ': 'O', 'Ö': 'O', 'ò': 'o', 'ó': 'o', 'ô': 'o', 'õ': 'o', 'ö': 'o', 'Ō': 'O', 'ō': 'o', 'Ŏ': 'O', 'ŏ': 'o', 'Ő': 'O', 'ő': 'o', 'Œ': 'E', 'œ': 'e', 'Ø': 'O', 'ø': 'o', 'Ŕ': 'R', 'ŕ': 'r', 'Ŗ': 'R', 'ŗ': 'r', 'Ř': 'R', 'ř': 'r', 'ß': 'S', 'Ś': 'S', 'ś': 's', 'Ŝ': 'S', 'ŝ': 's', 'Ş': 'S', 'ş': 's', 'Š': 'S', 'š': 's', 'Ţ': 'T', 'ţ': 't', 'Ť': 'T', 'ť': 't', 'Ŧ': 'T', 'ŧ': 't', 'Ù': 'U', 'Ú': 'U', 'Û': 'U', 'Ü': 'U', 'ù': 'u', 'ú': 'u', 'û': 'u', 'ü': 'u', 'Ũ': 'U', 'ũ': 'u', 'Ū': 'U', 'ū': 'u', 'Ŭ': 'U', 'ŭ': 'u', 'Ů': 'U', 'ů': 'u', 'Ű': 'U', 'ű': 'u', 'Ų': 'U', 'ų': 'u', 'Ŵ': 'W', 'ŵ': 'w', 'Ý': 'Y', 'ý': 'y', 'ÿ': 'y', 'Ŷ': 'Y', 'ŷ': 'y', 'Ÿ': 'Y', 'Ź': 'Z', 'ź': 'z', 'Ż': 'Z', 'ż': 'z', 'Ž': 'Z', 'ž': 'z', 'ё': 'е', 'Ё': 'Е'},
@@ -335,7 +336,7 @@ router.get('/qualified', async function(req, res) {
 
 		// criterion 1.4
 		let criterion_qualified14 = await db.query(
-			"select * from councillor;"
+			'select * from councillor;'
 		);
 		pushQualified(qualified, 'auto', '1.4', criterion_qualified14);
 
@@ -370,16 +371,16 @@ router.get('/qualified', async function(req, res) {
 		pushQualified(qualified, 'preferred', '2.4b', criterion_qualified24b, eventIds);
 
 		let types = ['auto', 'preferred'];
-		for(let type in types) {
+		for (let type in types) {
 			let type = types[type];
 			let countries = Object.keys(qualified[type]).sort();
 			let temporary = {};
-			for(let country in countries) {
-				if(countries.hasOwnProperty(country)) {
+			for (let country in countries) {
+				if (countries.hasOwnProperty(country)) {
 					let country = countries[country];
 					let persons = [];
-					for(let person in qualified[type][country]) {
-						if(qualified[type][country].hasOwnProperty(person)) {
+					for (let person in qualified[type][country]) {
+						if (qualified[type][country].hasOwnProperty(person)) {
 							persons.push(qualified[type][country][person]);
 						}
 					}
@@ -405,13 +406,13 @@ function addMembers(members, teams) {
 router.get('/events/:event/results', async function(req, res) {
 	let eventdata = await db.query('select * from event where slug=$1 limit 1', [req.params.event]);
 
-	if(eventdata.rowCount === 0) {
+	if (eventdata.rowCount === 0) {
 		res.status(404);
 		res.render('error/404', {body: 'Sorry, this event is not in our database, we may be working on it.'});
 		return;
 	}
 	let event = eventdata.rows[0];
-	if(!event.complete) {
+	if (!event.complete) {
 		res.status(404);
 		res.render('error/404', {body: 'Sorry, this event has no results (yet). We are working on it in this very moment.'});
 		return;
@@ -420,13 +421,13 @@ router.get('/events/:event/results', async function(req, res) {
 	let members = await db.query('select * from member where event_id=$1', [event.id]);
 	members = members.rows;
 	let openCategories = helpers.getCategoryDescendants('open').join('\',\'');
-	let moquery = await db.query('select * from team where event_id=$1 and gender=$2 and age in (\''+openCategories+'\') order by status=\'finished\' desc, score desc, time asc limit 3', [event.id, 'men']);
+	let moquery = await db.query('select * from team where event_id=$1 and gender=$2 and age in (\'' + openCategories + '\') order by status=\'finished\' desc, score desc, time asc limit 3', [event.id, 'men']);
 	addMembers(members, moquery.rows);
 	let mo = moquery.rows;
-	let xoquery = await db.query('select * from team where event_id=$1 and gender=$2 and age in (\''+openCategories+'\') order by status=\'finished\' desc, score desc, time asc limit 3', [event.id, 'mixed']);
+	let xoquery = await db.query('select * from team where event_id=$1 and gender=$2 and age in (\'' + openCategories + '\') order by status=\'finished\' desc, score desc, time asc limit 3', [event.id, 'mixed']);
 	addMembers(members, xoquery.rows);
 	let xo = xoquery.rows;
-	let woquery = await db.query('select * from team where event_id=$1 and gender=$2 and age in (\''+openCategories+'\') order by status=\'finished\' desc, score desc, time asc limit 3', [event.id, 'women']);
+	let woquery = await db.query('select * from team where event_id=$1 and gender=$2 and age in (\'' + openCategories + '\') order by status=\'finished\' desc, score desc, time asc limit 3', [event.id, 'women']);
 	addMembers(members, woquery.rows);
 	let wo = woquery.rows;
 
@@ -438,7 +439,7 @@ router.get('/events/:event/results', async function(req, res) {
 	let defaultDuration = 24;
 
 	let teamquery = await db.query('select * from team where event_id=$1 order by status=\'finished\' desc, score desc, time asc', [event.id]);
-	if(teamquery.rowCount === 0) {
+	if (teamquery.rowCount === 0) {
 		res.status(404);
 		res.render('error/404', {body: 'Sorry, this event has no results (yet). We are working on it in this very moment.'});
 		return;
@@ -447,33 +448,34 @@ router.get('/events/:event/results', async function(req, res) {
 	teamquery.rows.forEach(row => {
 		let gender = helpers.genderclass(row.gender);
 		let age = helpers.ageclass(row.age);
-		row.category = gender+age;
+		row.category = gender + age;
 
-		if(durations.indexOf(row.duration) < 0) {
+		if (durations.indexOf(row.duration) < 0) {
 			durations.push(row.duration);
 		}
-		if(categories.indexOf(row.category) < 0) {
+		if (categories.indexOf(row.category) < 0) {
 			categories.push(row.category);
 		}
 
 		let countToCategories = helpers.getCategoryParents(row.age, row.gender);
-		for(let i = 0; i < countToCategories.length; i++) {
+		for (let i = 0; i < countToCategories.length; i++) {
 			let countToCategory = countToCategories[i];
 			row[countToCategory] = increment(counters, row.duration, countToCategory);
 		}
 		row['place'] = increment(counters, row.duration, 'all');
 
-		if(req.query.category) {
+		let currentCategoryIsActive;
+		if (req.query.category) {
 			let categoryDescendants = helpers.getCategoryDescendants(helpers.categoriesToObject[req.query.category].age, helpers.categoriesToObject[req.query.category].gender);
 			let availableCategories = categoryDescendants.slice();
 			Array.prototype.push.apply(availableCategories, helpers.getCategoryParents(helpers.categoriesToObject[req.query.category].age, helpers.categoriesToObject[req.query.category].gender));
-			let currentCategoryIsActive = (categoryDescendants.indexOf(row.category) > -1);
+			currentCategoryIsActive = (categoryDescendants.indexOf(row.category) > -1);
 		} else {
-			let currentCategoryIsActive = true;
+			currentCategoryIsActive = true;
 		}
 		let currentDurationIsDefault = (!req.query.duration && defaultDuration === row.duration);
 		let currentDurationIsActive = (parseInt(req.query.duration) === row.duration);
-		if((!req.query.category || currentCategoryIsActive) && (currentDurationIsDefault || currentDurationIsActive)) {
+		if ((!req.query.category || currentCategoryIsActive) && (currentDurationIsDefault || currentDurationIsActive)) {
 			if (usedCategories.indexOf(row.category) < 0) {
 				usedCategories.push(row.category);
 			}
@@ -510,17 +512,17 @@ router.get('/events/:event/results', async function(req, res) {
 	});
 
 	let query = {};
-	if(isCategoryDefault || isDurationDefault) {
-		if(req.query.hasOwnProperty('duration') && !isDurationDefault) {
+	if (isCategoryDefault || isDurationDefault) {
+		if (req.query.hasOwnProperty('duration') && !isDurationDefault) {
 			query.duration = req.query.duration;
 		}
-		if(req.query.hasOwnProperty('category') && !isCategoryDefault) {
+		if (req.query.hasOwnProperty('category') && !isCategoryDefault) {
 			query.category = req.query.category;
 		}
 		res.redirect(url.format({pathname: req._parsedUrl.pathname, query: query}));
 		return;
 	}
-	if(isDurationInvalid || isCategoryInvalid) {
+	if (isDurationInvalid || isCategoryInvalid) {
 		res.status(404);
 		res.render('error/404');
 		return;
