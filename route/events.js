@@ -152,7 +152,7 @@ module.exports.upload = async function(req, res) {
 							res.redirect('/events/' + req.params.event + '/results');
 						} catch (err) {
 							console.error(err);
-							req.flash('error', err.detail ? `${err} (${err.detail})` : `${err}`);
+							req.flash('danger', err.detail ? `${err} (${err.detail})` : `${err}`);
 							res.render('events_upload', {identity: req.user, values: values});
 						}
 					});

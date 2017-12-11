@@ -16,7 +16,7 @@
 		<div class="irf-link"><img src="/irf-logo.png" alt="" width="50" height="50"><span>(<a href="http://www.rogaining.org">back to IRF</a>)</span></div>
 		<h1><a href="/">WRC Agenda</a></h1>
 	</header>
-	{{#each messages}}{{#each this}}<p class="alert alert-{{#equals @key 'error'}}danger{{else}}{{@key}}{{/equals}}">{{this}}</p>{{/each}}{{/each}}
+	{{#each messages}}{{#each this}}<p class="alert alert-{{@../key}}">{{this}}</p>{{/each}}{{/each}}
 
 	{{{body}}}
 
