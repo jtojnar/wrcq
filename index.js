@@ -191,83 +191,80 @@ router.get('/events/:event/upload', eventsRoute.upload);
 router.post('/events/:event/upload', multipart(), eventsRoute.upload);
 
 function pushQualified(qualified, type, criterion, criterion_qualified, eventIds) {
-	for (member in criterion_qualified.rows) {
-		if (criterion_qualified.rows.hasOwnProperty(member)) {
-			let member = criterion_qualified.rows[member];
-			if (!qualified[type].hasOwnProperty(member.country_code)) {
-				qualified[type][member.country_code] = {};
-			}
-			if (!qualified[type][member.country_code].hasOwnProperty(member.person_id)) {
-				qualified[type][member.country_code][member.person_id] = {firstname: member.firstname, lastname: member.lastname, country_code: member.country_code, reasons: []};
-			}
-			if (criterion === '1.1' || criterion === '1.3') {
+	for (let member of criterion_qualified.rows) {
+		if (!qualified[type].hasOwnProperty(member.country_code)) {
+			qualified[type][member.country_code] = {};
+		}
+		if (!qualified[type][member.country_code].hasOwnProperty(member.person_id)) {
+			qualified[type][member.country_code][member.person_id] = {firstname: member.firstname, lastname: member.lastname, country_code: member.country_code, reasons: []};
+		}
+		if (criterion === '1.1' || criterion === '1.3') {
+			let reason = {
+				criterion: criterion,
+				event: eventIds[member.event_id].slug,
+				gender: member.gender,
+				position: member.position,
+				age: 'open'
+			};
+			qualified[type][member.country_code][member.person_id].reasons.push(reason);
+		} else if (criterion === '1.4') {
+			qualified[type][member.country_code][member.person_id].reasons.push({criterion: criterion});
+		} else {
+			let starWarning = criterion === '2.1' ? member.star_warning : false;
+			if (member.prequalified_uv) {
 				let reason = {
 					criterion: criterion,
 					event: eventIds[member.event_id].slug,
 					gender: member.gender,
-					position: member.position,
-					age: 'open'
+					position: member.position_uv,
+					age: 'ultraveteran',
+					starWarning: starWarning
 				};
 				qualified[type][member.country_code][member.person_id].reasons.push(reason);
-			} else if (criterion === '1.4') {
-				qualified[type][member.country_code][member.person_id].reasons.push({criterion: criterion});
-			} else {
-				let starWarning = criterion === '2.1' ? member.star_warning : false;
-				if (member.prequalified_uv) {
-					let reason = {
-						criterion: criterion,
-						event: eventIds[member.event_id].slug,
-						gender: member.gender,
-						position: member.position_uv,
-						age: 'ultraveteran',
-						starWarning: starWarning
-					};
-					qualified[type][member.country_code][member.person_id].reasons.push(reason);
-				}
-				if (member.prequalified_sv) {
-					let reason = {
-						criterion: criterion,
-						event: eventIds[member.event_id].slug,
-						gender: member.gender,
-						position: member.position_sv,
-						age: 'superveteran',
-						starWarning: starWarning
-					};
-					qualified[type][member.country_code][member.person_id].reasons.push(reason);
-				}
-				if (member.prequalified_v) {
-					let reason = {
-						criterion: criterion,
-						event: eventIds[member.event_id].slug,
-						gender: member.gender,
-						position: member.position_v,
-						age: 'veteran',
-						starWarning: starWarning
-					};
-					qualified[type][member.country_code][member.person_id].reasons.push(reason);
-				}
-				if (member.prequalified_o) {
-					let reason = {
-						criterion: criterion,
-						event: eventIds[member.event_id].slug,
-						gender: member.gender,
-						position: member.position_o,
-						age: 'open',
-						starWarning: starWarning
-					};
-					qualified[type][member.country_code][member.person_id].reasons.push(reason);
-				}
-				if (member.prequalified_j) {
-					let reason = {
-						criterion: criterion,
-						event: eventIds[member.event_id].slug,
-						gender: member.gender,
-						position: member.position_j,
-						age: 'youth',
-						starWarning: starWarning
-					};
-					qualified[type][member.country_code][member.person_id].reasons.push(reason);
-				}
+			}
+			if (member.prequalified_sv) {
+				let reason = {
+					criterion: criterion,
+					event: eventIds[member.event_id].slug,
+					gender: member.gender,
+					position: member.position_sv,
+					age: 'superveteran',
+					starWarning: starWarning
+				};
+				qualified[type][member.country_code][member.person_id].reasons.push(reason);
+			}
+			if (member.prequalified_v) {
+				let reason = {
+					criterion: criterion,
+					event: eventIds[member.event_id].slug,
+					gender: member.gender,
+					position: member.position_v,
+					age: 'veteran',
+					starWarning: starWarning
+				};
+				qualified[type][member.country_code][member.person_id].reasons.push(reason);
+			}
+			if (member.prequalified_o) {
+				let reason = {
+					criterion: criterion,
+					event: eventIds[member.event_id].slug,
+					gender: member.gender,
+					position: member.position_o,
+					age: 'open',
+					starWarning: starWarning
+				};
+				qualified[type][member.country_code][member.person_id].reasons.push(reason);
+			}
+			if (member.prequalified_j) {
+				let reason = {
+					criterion: criterion,
+					event: eventIds[member.event_id].slug,
+					gender: member.gender,
+					position: member.position_j,
+					age: 'youth',
+					starWarning: starWarning
+				};
+				qualified[type][member.country_code][member.person_id].reasons.push(reason);
 			}
 		}
 	}
@@ -371,22 +368,16 @@ router.get('/qualified', async function(req, res) {
 		pushQualified(qualified, 'preferred', '2.4b', criterion_qualified24b, eventIds);
 
 		let types = ['auto', 'preferred'];
-		for (let type in types) {
-			let type = types[type];
+		for (let type of types) {
 			let countries = Object.keys(qualified[type]).sort();
 			let temporary = {};
-			for (let country in countries) {
-				if (countries.hasOwnProperty(country)) {
-					let country = countries[country];
-					let persons = [];
-					for (let person in qualified[type][country]) {
-						if (qualified[type][country].hasOwnProperty(person)) {
-							persons.push(qualified[type][country][person]);
-						}
-					}
-					persons.sort(compare_member);
-					temporary[country] = persons;
+			for (let country of countries) {
+				let persons = [];
+				for (let person of Object.values(qualified[type][country])) {
+					persons.push(person);
 				}
+				persons.sort(compare_member);
+				temporary[country] = persons;
 			}
 			qualified[type] = temporary;
 		}

@@ -126,10 +126,8 @@ module.exports = helpers = {
 		let ret = [];
 		ret.push(gender ? helpers.genderclass(gender) + helpers.ageclass(age) : age);
 		if (categories.hasOwnProperty(age)) {
-			for (let subage in categories[age]) {
-				if (categories[age].hasOwnProperty(subage)) {
-					ret.push.apply(ret, helpers.getCategoryDescendants(categories[age][subage], gender));
-				}
+			for (let subage of categories[age]) {
+				ret.push.apply(ret, helpers.getCategoryDescendants(subage, gender));
 			}
 		}
 		return ret;
