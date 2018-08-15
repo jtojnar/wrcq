@@ -459,13 +459,16 @@ router.get('/events/:event/results', async function(req, res) {
 		let currentDurationIsDefault = (!req.query.duration && defaultDuration === row.duration);
 		let currentDurationIsActive = (parseInt(req.query.duration) === row.duration);
 		if ((!req.query.category || currentCategoryIsActive) && (currentDurationIsDefault || currentDurationIsActive)) {
+			row.visible = true;
 			if (usedCategories.indexOf(row.category) < 0) {
 				usedCategories.push(row.category);
 			}
+		} else {
+			row.visible = false;
 		}
 	});
 	addMembers(members, teamquery.rows);
-	let teams = teamquery.rows;
+	let teams = teamquery.rows.filter(team => team.visible);
 
 	let isCategoryInvalid = (req.query.hasOwnProperty('category') && categories.indexOf(req.query.category) < 0);
 	let isDurationInvalid = (req.query.hasOwnProperty('duration') && durations.indexOf(parseInt(req.query.duration)) < 0);
