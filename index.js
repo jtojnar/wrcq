@@ -433,10 +433,10 @@ router.get('/events/:event/results', async function(req, res) {
 		let age = helpers.ageclass(row.age);
 		row.category = gender + age;
 
-		if (durations.indexOf(row.duration) < 0) {
+		if (!durations.includes(row.duration)) {
 			durations.push(row.duration);
 		}
-		if (categories.indexOf(row.category) < 0) {
+		if (!categories.includes(row.category)) {
 			categories.push(row.category);
 		}
 
@@ -452,7 +452,7 @@ router.get('/events/:event/results', async function(req, res) {
 			let categoryDescendants = helpers.getCategoryDescendants(helpers.categoriesToObject[req.query.category].age, helpers.categoriesToObject[req.query.category].gender);
 			let availableCategories = categoryDescendants.slice();
 			Array.prototype.push.apply(availableCategories, helpers.getCategoryParents(helpers.categoriesToObject[req.query.category].age, helpers.categoriesToObject[req.query.category].gender));
-			currentCategoryIsActive = (categoryDescendants.indexOf(row.category) > -1);
+			currentCategoryIsActive = categoryDescendants.includes(row.category);
 		} else {
 			currentCategoryIsActive = true;
 		}
@@ -460,7 +460,7 @@ router.get('/events/:event/results', async function(req, res) {
 		let currentDurationIsActive = (parseInt(req.query.duration) === row.duration);
 		if ((!req.query.category || currentCategoryIsActive) && (currentDurationIsDefault || currentDurationIsActive)) {
 			row.visible = true;
-			if (usedCategories.indexOf(row.category) < 0) {
+			if (!usedCategories.includes(row.category)) {
 				usedCategories.push(row.category);
 			}
 		} else {
@@ -470,8 +470,8 @@ router.get('/events/:event/results', async function(req, res) {
 	addMembers(members, teamquery.rows);
 	let teams = teamquery.rows.filter(team => team.visible);
 
-	let isCategoryInvalid = (req.query.hasOwnProperty('category') && categories.indexOf(req.query.category) < 0);
-	let isDurationInvalid = (req.query.hasOwnProperty('duration') && durations.indexOf(parseInt(req.query.duration)) < 0);
+	let isCategoryInvalid = (req.query.hasOwnProperty('category') && !categories.includes(req.query.category));
+	let isDurationInvalid = (req.query.hasOwnProperty('duration') && !durations.includes(parseInt(req.query.duration)));
 	let isCategoryDefault = (req.query.hasOwnProperty('category') && req.query.category === '');
 	let isDurationDefault = (req.query.hasOwnProperty('duration') && parseInt(req.query.duration) === defaultDuration);
 
@@ -491,7 +491,7 @@ router.get('/events/:event/results', async function(req, res) {
 		cat = helpers.decodeCategory(cat);
 		let parents = helpers.getCategoryParents(cat.age, cat.gender);
 		parents.forEach(function(parent) {
-			if (allCategories.indexOf(parent) < 0) {
+			if (!allCategories.includes(parent)) {
 				allCategories.push(parent);
 			}
 		});
@@ -532,7 +532,7 @@ router.get('/events/:event/results', async function(req, res) {
 
 				if (aAge === bAge) {
 					return 0;
-				} else if (helpers.categorySorting[aAge].indexOf(bAge) < 0) {
+				} else if (!helpers.categorySorting[aAge].includes(bAge)) {
 					return 1;
 				} else {
 					return -1;
