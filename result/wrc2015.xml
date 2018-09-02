@@ -4177,7 +4177,7 @@
 			<TeamMemberResult>
 				<Person sex="M">
 					<Name>
-						<Family>Herrero</Family>
+						<Family>Herrero Casas</Family>
 						<Given>Albert</Given>
 					</Name>
 					<Nationality code="ESP"/>
@@ -4188,7 +4188,7 @@
 				<Person sex="M">
 					<Name>
 						<Family>Folguera</Family>
-						<Given>Jaume</Given>
+						<Given>Jaume Robert</Given>
 					</Name>
 					<Nationality code="ESP"/>
 					<BirthDate>1977-10-09</BirthDate>
@@ -29548,7 +29548,7 @@
 				<Person sex="M">
 					<Name>
 						<Family>Nurm</Family>
-						<Given>Tonu</Given>
+						<Given>Tõnu</Given>
 					</Name>
 					<Nationality code="EST"/>
 					<BirthDate>1947-11-03</BirthDate>
@@ -33163,7 +33163,7 @@
 				<Person sex="F">
 					<Name>
 						<Family>Abramova</Family>
-						<Given>Natalya</Given>
+						<Given>Natalia</Given>
 					</Name>
 					<Nationality code="RUS"/>
 					<BirthDate>1975-07-03</BirthDate>
@@ -41127,8 +41127,8 @@
 			<TeamMemberResult>
 				<Person sex="F">
 					<Name>
-						<Family>Saima</Family>
-						<Given>Värton</Given>
+						<Family>Värton</Family>
+						<Given>Saima</Given>
 					</Name>
 					<Nationality code="EST"/>
 					<BirthDate>1958-09-11</BirthDate>

@@ -33,7 +33,7 @@ name;penalty;score;km;time;gender;age;id;member1firstname;member1lastname;member
 ;0;2580;58.5;23:34:23;women;open;57;Gill;FOWLER;AUS;Jess;BAKER;AUS
 ;0;2570;54.1;23:05:39;men;superveteran;9;Andy;MACQUEEN;AUS;Ian;BROWN;AUS
 ;0;2550;58.7;23:22:06;mixed;veteran;249;Lauri;LEPPIK;EST;Lea;LEPPIK;EST
-;0;2550;68.3;23:42:54;mixed;youth;311;Volodymyr;BEZDITNIY;UKR;Sergey;NAGORNYUK;UKR;Anastasia;BASYUK;UKR
+;0;2550;68.3;23:42:54;mixed;youth;311;Volodymyr;BEZDITNIY;UKR;Serhiy;Nahorniyuk;UKR;Anastasia;BASYUK;UKR
 ;0;2530;58.3;23:31:22;men;veteran;13;Gary;CARROLL;AUS;Owen;HORTON;AUS
 ;0;2520;58.9;23:44:37;men;veteran;179;Steve;COOPER;AUS;David;NICOLSON;AUS
 ;0;2490;62.6;23:31:26;men;veteran;48;Darren;SMITH;AUS;Paul;ELBY;NZL
@@ -67,7 +67,7 @@ name;penalty;score;km;time;gender;age;id;member1firstname;member1lastname;member
 ;0;2290;48.0;23:53:02;mixed;veteran;256;Aleksander;PRITSIK;EST;Heidi;SILD;EST
 ;0;2280;53.3;23:23:02;women;veteran;24;Thorlene;EGERTON;AUS;Linda;DAVIS;AUS
 ;0;2270;58.8;22:59:48;men;superveteran;317;Imants;CAKLIS;LAT;Varis;PEISENIEKS;LAT
-;0;2270;50.4;23:47:22;men;ultraveteran;257;Johannes;TASA;EST;Arvo;KIVIKAS;EST;Tonu;NURN;EST
+;0;2270;50.4;23:47:22;men;ultraveteran;257;Johannes;TASA;EST;Arvo;KIVIKAS;EST;Tõnu;Nurm;EST
 ;0;2260;53.7;23:23:16;men;open;20;Lee;COADY;AUS;James;MCQUILLAN;AUS
 ;0;2250;58.5;23:41:05;men;veteran;318;Federico;CALDINI;ITA;Marco;CASTAGNERI;ITA
 ;0;2230;53.0;23:24:22;mixed;superveteran;151;Rolands;LAVEIKIS;LAT;Ligita;GRUNDE;LAT
