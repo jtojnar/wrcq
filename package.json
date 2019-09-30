@@ -28,6 +28,7 @@
 		"xml2js": "^0.4.19"
 	},
 	"scripts": {
-		"postinstall": "./node_modules/bower/bin/bower install"
+		"postinstall": "./node_modules/bower/bin/bower install",
+		"start": "node index.js"
 	}
 }
