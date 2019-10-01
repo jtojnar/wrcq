@@ -26,16 +26,16 @@ function increment(obj, alpha, beta) {
 }
 
 passport.serializeUser(function(user, done) {
-	done(null, user.id);
+	return done(null, user.id);
 });
 passport.deserializeUser(async function(id, done) {
 	let result = await db.query('select * from "user" where "id"=$1', [id]);
 	if (result.rowCount === 0) {
-		done(null, false);
+		return done(null, false);
 	}
 
 	let user = result.rows[0];
-	done(null, user);
+	return done(null, user);
 });
 
 
@@ -45,14 +45,14 @@ passport.use(new LocalStrategy(
 		process.nextTick(function() {
 			db.query('select * from "user" where "email"=$1', [email]).then(async (result) => {
 				if (result.rowCount === 0) {
-					done(null, false, {message: 'Unknown user ' + email});
+					return done(null, false, {message: 'Unknown user ' + email});
 				}
 				let user = result.rows[0];
 				const passwordCorrect = await bcrypt.compare(password, user.password);
 				if (!passwordCorrect) {
-					done(null, false, {message: 'Invalid password'});
+					return done(null, false, {message: 'Invalid password'});
 				}
-				done(null, user);
+				return done(null, user);
 			});
 		});
 	}
