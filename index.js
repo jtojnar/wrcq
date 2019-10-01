@@ -7,17 +7,13 @@ const db = require('./db');
 
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
-const crypto = require('crypto');
+const bcrypt = require('bcryptjs');
 
 const Router = require('express-promise-router');
 const session = require('express-session');
 const pgSession = require('connect-pg-simple')(session);
 
 const router = new Router();
-
-const sha1 = function(d) {
-	return crypto.createHash('sha1').update(d).digest('hex');
-};
 
 function increment(obj, alpha, beta) {
 	if (!obj.hasOwnProperty(alpha)) {
@@ -47,12 +43,13 @@ passport.deserializeUser(async function(id, done) {
 passport.use(new LocalStrategy(
 	function(email, password, done) {
 		process.nextTick(function() {
-			db.query('select * from "user" where "email"=$1', [email]).then(result => {
+			db.query('select * from "user" where "email"=$1', [email]).then(async (result) => {
 				if (result.rowCount === 0) {
 					done(null, false, {message: 'Unknown user ' + email});
 				}
 				let user = result.rows[0];
-				if (user.password != sha1(password + user.salt)) {
+				const passwordCorrect = await bcrypt.compare(password, user.password);
+				if (!passwordCorrect) {
 					done(null, false, {message: 'Invalid password'});
 				}
 				done(null, user);

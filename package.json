@@ -2,6 +2,7 @@
 	"name": "wrcQ",
 	"version": "0.0.2",
 	"dependencies": {
+		"bcryptjs": "^2.4.3",
 		"body-parser": "^1.19.0",
 		"bower": "^1.8.8",
 		"connect-multiparty": "^2.2.0",
