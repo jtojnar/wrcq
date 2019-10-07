@@ -101,7 +101,7 @@ app.use(passport.session());
 app.use(require('serve-favicon')(__dirname + '/public/favicon.ico'));
 app.use(allowCrossDomain);
 app.use(serveStatic(publicDir));
-app.use('/bower_components', serveStatic(path.join(__dirname, 'bower_components')));
+app.use('/node_modules', serveStatic(path.join(__dirname, 'node_modules')));
 
 const env = process.env.NODE_ENV || 'development';
 if (env === 'development') {
