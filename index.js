@@ -169,7 +169,7 @@ router.get('/archive', updatesRoute.archive);
 
 const eventsRoute = require('./route/events');
 
-const statuteOfLimitations = '2015-01-01';
+const statuteOfLimitations = '2016-01-01';
 
 router.get('/events', async function(req, res) {
 	let links = await db.query('select * from link');
