@@ -78,7 +78,7 @@ module.exports = helpers = {
 		return val;
 	},
 
-	title: function(value, context) {
+	setTitle: function(value, context) {
 		blocks.title = [value];
 		return value;
 	},

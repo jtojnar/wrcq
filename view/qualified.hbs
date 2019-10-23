@@ -1,9 +1,10 @@
-<h1>{{title 'Preliminary list of pre-qualified entrants for WRC 2020 – report any mistake to: jan.tojnar@rogaining.cz'}}</h1>
-<h2>Automatic pre-qualified entrants for WRC 2020</h2>
+<h1>{{setTitle title}}</h1>
+{{#if preliminary}}<p class="alert alert-info">This list is preliminary, please report any mistake to <a href="mailto:{{managerEmail}}">{{managerEmail}}</a>.</p>{{/if}}
+<h2>Automatic pre-qualified entrants for WRC {{upcomingYear}}</h2>
 {{#each qualified.auto}}
 {{> 'qualified'}}
 {{/each}}
-<h2>Preferred pre-qualified entrants for WRC 2020</h2>
+<h2>Preferred pre-qualified entrants for WRC {{upcomingYear}}</h2>
 {{#each qualified.preferred}}
 {{> 'qualified'}}
 {{/each}}
