@@ -17,8 +17,8 @@ const pgSession = require('connect-pg-simple')(session);
 // TODO: move this into a database
 const MANAGER_EMAIL = 'jan.tojnar@rogaining.cz';
 const LIST_IS_PRELIMINARY = true;
-const UPCOMING_WRC_YEAR = '2020';
-const STATUTE_OF_LIMITATIONS = '2016-01-01'; // three years before the event
+const UPCOMING_WRC_YEAR = '2022';
+const STATUTE_OF_LIMITATIONS = '2019-01-01'; // three years before the event
 
 const router = new Router();
 
