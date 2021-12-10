@@ -384,7 +384,7 @@ router.get('/qualified', async function(req, res) {
 			qualified[type] = temporary;
 		}
 
-		res.render('qualified', {
+		const data = {
 			title: `List of pre-qualified entrants for WRC ${UPCOMING_WRC_YEAR}`,
 			qualified: qualified,
 			identity: req.user,
@@ -392,6 +392,15 @@ router.get('/qualified', async function(req, res) {
 			preliminary: LIST_IS_PRELIMINARY,
 			upcomingYear: UPCOMING_WRC_YEAR,
 			datetime: (new Date()).toUTCString(),
+		};
+
+		res.format({
+			html: () => {
+				res.render('qualified', data);
+			},
+			json: () => {
+				res.json(data);
+			},
 		});
 	} catch (err) {
 		console.log(err);
