@@ -375,7 +375,8 @@ router.get('/qualified', async function(req, res) {
 			let temporary = {};
 			for (let country of countries) {
 				let persons = [];
-				for (let person of Object.values(qualified[type][country])) {
+				for (let [personId, person] of Object.entries(qualified[type][country])) {
+					person['personId'] = parseInt(personId, 10);
 					persons.push(person);
 				}
 				persons.sort(compare_member);
