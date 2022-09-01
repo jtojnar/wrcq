@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'path';
 import url from 'url';
 import * as db from './db.js';
+import pify from 'pify';
 
 import passport from 'passport';
 import PassportLocal from 'passport-local';
@@ -585,8 +586,8 @@ router.post('/login', passport.authenticate('local', {successRedirect: '/', fail
 	return res.render('login', {identity: req.user, values: req.body});
 });
 
-router.get('/logout', function(req, res) {
-	req.logout();
+router.get('/logout', async function(req, res) {
+	await pify(req.logout.bind(req))();
 	res.redirect('/');
 });
 
