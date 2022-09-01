@@ -8,73 +8,42 @@ if (process.argv.length < 4) {
 
 const _dbUri = process.env.DATABASE_URL;
 
-const pg = require('pg');
-const fs = require('fs');
+const db = require('./db');
+const fs = require('fs-extra');
 
 const moment = require('moment');
-const parseString = require('xml2js').parseString;
+const { parseStringPromise } = require('xml2js');
 
-let event = { id: process.argv[2] };
-let teamI = 0;
-let memberI = 0;
+async function main() {
+	const eventId = parseInt(process.argv[2], 10);
 
-function recursive(teams, client, done) {
-	let team = teams[teamI].$;
-	team.event_id = event.id;
-	team.duration = team.duration ? team.duration : 24;
-	let members = teams[teamI].member;
-	client.query('insert into team(id, event_id, score, time, penalty, duration, gender, age, status, name) values($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)', [team.id, team.event_id, team.score, team.time, team.penalty, team.duration, team.gender, team.age, team.status || 'finished', team.name || ''], function(err) {
-		if (err) {
-			console.log(err);
-			client.query('rollback');
-			return done();
-		}
-		memberI = 0;
-		if (teamI < teams.length) {
-			return mrecursive(teams, client, done, team, members);
-		}
-	});
-}
-function mrecursive(teams, client, done, team, members) {
-	let member = members[memberI].$;
-	member.team_id = team.id;
-	member.event_id = event.id;
-	client.query('insert into member(team_id, event_id, firstname, lastname, country_code) values($1, $2, $3, $4, $5)', [member.team_id, member.event_id, member.firstname, member.lastname, member.country], function(err) {
-		if (err) {
-			console.log(err);
-			client.query('rollback');
-			return done();
-		}
-		if (memberI < members.length - 1) {
-			memberI++;
-			return mrecursive(teams, client, done, team, members);
-		} else if (teamI < teams.length - 1) {
-			teamI++;
-			memberI = 0;
-			return recursive(teams, client, done, team, members);
-		} else {
-			client.query('commit');
-			return done();
-		}
-	});
-}
+	await db.query('begin');
 
-pg.connect(_dbUri, function(err, client, done) {
-	client.query('begin');
+	try {
+		const data = await fs.readFile(process.cwd() + '/' + process.argv[3]);
 
-	fs.readFile(process.cwd() + '/' + process.argv[3], function(err, data) {
-		if (err) {
-			console.log(err);
-			return done();
-		}
-		parseString(data, function(err, results) {
-			if (err) {
-				console.log(err);
-				return done();
+		const results = await parseStringPromise(data);
+		const teams = results.results.team;
+
+		for (const teamElement of teams) {
+			const team = teamElement.$;
+			const duration = team.duration ? team.duration : 24;
+			const members = teamElement.member;
+
+			await db.query('insert into team(id, event_id, score, time, penalty, duration, gender, age, status, name) values($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)', [team.id, eventId, team.score, team.time, team.penalty, duration, team.gender, team.age, team.status || 'finished', team.name || '']);
+
+			for (const memberElement of members) {
+				const member = memberElement.$;
+
+				await db.query('insert into member(team_id, event_id, firstname, lastname, country_code) values($1, $2, $3, $4, $5)', [team.id, eventId, member.firstname, member.lastname, member.country]);
 			}
-			let teams = results.results.team;
-			return recursive(teams, client, done);
-		});
-	});
-});
-pg.end();
+		}
+
+		db.query('commit');
+	} catch(err) {
+		console.log(err);
+		db.query('rollback');
+	}
+}
+
+main();
