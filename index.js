@@ -14,7 +14,7 @@ import session from 'express-session';
 import connectPgSimple from 'connect-pg-simple';
 const pgSession = connectPgSimple(session);
 
-import hbs from 'express-handlebars';
+import { engine as hbs } from 'express-handlebars';
 import * as helpers from './helpers.js';
 import serveStatic from 'serve-static';
 import bodyParser from 'body-parser';
