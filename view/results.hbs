@@ -30,19 +30,8 @@
 {{#extend 'bottom'}}
 <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="/js/table-fixed-header.js"></script>
 <script>
 (function() {
-	var overallShown = false;
-	$('#tabs a[href=#all]').on('shown.bs.tab', function (e) {
-		if(!overallShown) {
-			$(document).ready(function() {
-				$('.table-fixed-header').fixedHeader();
-				overallShown = true;
-			})
-		}
-	});
-
 	var hash = document.location.hash;
 	if(hash) {
 		$('#tabs a[href='+hash+']').tab('show') ;

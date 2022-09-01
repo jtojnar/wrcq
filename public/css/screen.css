@@ -50,3 +50,9 @@ textarea {
 	border-color: transparent;
 	padding: 1px;
 }
+
+.table-fixed-header thead.header {
+	position: sticky;
+	top: 0;
+	z-index: 2;
+}
