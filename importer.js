@@ -1,18 +1,16 @@
-'use strict';
-
 if (process.argv.length < 4) {
 	console.log('Please provide sufficient number of arguments:̈́');
 	console.log('node importer <event_id> <xml_file>');
-	return;
+	process.exit(1);
 }
 
 const _dbUri = process.env.DATABASE_URL;
 
-const db = require('./db');
-const fs = require('fs-extra');
+import * as db from './db.js';
+import fs from 'fs-extra';
 
-const moment = require('moment');
-const { parseStringPromise } = require('xml2js');
+import moment from 'moment';
+import { parseStringPromise } from 'xml2js';
 
 async function main() {
 	const eventId = parseInt(process.argv[2], 10);

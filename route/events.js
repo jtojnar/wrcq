@@ -1,11 +1,12 @@
-const sql = require('sql');
-const model = require('../model')(sql);
-const helpers = require('../helpers');
-const db = require('../db');
-const fs = require('fs-extra');
-const neatCsv = require('neat-csv');
+import * as model from '../model.js';
+import * as helpers from '../helpers.js';
+import * as db from '../db.js';
+import fs from 'fs-extra';
+import neatCsv from 'neat-csv';
+import sanitizer from 'sanitizer';
+import xml2js from 'xml2js';
 
-module.exports.add = async function(req, res) {
+export async function add(req, res) {
 	if (!req.user) {
 		res.status(403);
 		req.flash('danger', 'You need to be logged in to create an event.');
@@ -61,7 +62,7 @@ module.exports.add = async function(req, res) {
 };
 
 
-module.exports.upload = async function(req, res) {
+export async function upload(req, res) {
 	if (!req.user) {
 		res.status(403);
 		req.flash('danger', 'You need to be logged in to upload an event results.');
@@ -93,7 +94,6 @@ module.exports.upload = async function(req, res) {
 
 						let xml = ['<results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="results.xsd">'];
 
-						let sanitizer = require('sanitizer');
 						let lineno = 2;
 						let teamData = await fs.createReadStream(req.files.data.path);
 						let teams = await neatCsv(teamData, options);
@@ -170,7 +170,6 @@ module.exports.upload = async function(req, res) {
 	}
 };
 
-const xml2js = require('xml2js');
 const parseString = function(data) {
 	return new Promise((resolve, reject) => {
 		xml2js.parseString(data, (err, res) => {

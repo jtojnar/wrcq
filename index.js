@@ -1,17 +1,33 @@
-'use strict';
+import express from 'express';
+import path from 'path';
+import url from 'url';
+import * as db from './db.js';
 
-const express = require('express');
-const path = require('path');
-const url = require('url');
-const db = require('./db');
+import passport from 'passport';
+import PassportLocal from 'passport-local';
+const LocalStrategy = PassportLocal.Strategy;
+import bcrypt from 'bcryptjs';
 
-const passport = require('passport');
-const LocalStrategy = require('passport-local').Strategy;
-const bcrypt = require('bcryptjs');
+import Router from 'express-promise-router';
+import session from 'express-session';
+import connectPgSimple from 'connect-pg-simple';
+const pgSession = connectPgSimple(session);
 
-const Router = require('express-promise-router');
-const session = require('express-session');
-const pgSession = require('connect-pg-simple')(session);
+import hbs from 'express-handlebars';
+import * as helpers from './helpers.js';
+import serveStatic from 'serve-static';
+import bodyParser from 'body-parser';
+import cookieParser from 'cookie-parser';
+import multipart from 'connect-multiparty';
+import methodOverride from 'method-override';
+import expressFlash from 'express-flash';
+import serveFavicon from 'serve-favicon';
+import morgan from 'morgan';
+import * as updatesRoute from './route/updates.js';
+import * as eventsRoute from './route/events.js';
+import { remove as unaccent } from 'diacritics';
+
+const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
 // configuration
 // TODO: move this into a database
@@ -65,10 +81,6 @@ passport.use(new LocalStrategy(
 	}
 ));
 
-const hbs = require('express-handlebars');
-
-const helpers = require('./helpers');
-
 const publicDir = path.join(__dirname, 'public');
 
 const app = express();
@@ -81,19 +93,15 @@ const allowCrossDomain = function(req, res, next) {
 
 app.set('views', path.join(__dirname, 'view'));
 app.set('port', process.env.PORT || 5000);
-const serveStatic = require('serve-static');
 app.engine('hbs', hbs({defaultLayout: 'layout', extname: '.hbs', layoutsDir: 'view', partialsDir: path.join(__dirname, 'view', 'partial'), helpers: helpers}));
 app.set('view engine', 'hbs');
 
-app.use(require('cookie-parser')());
+app.use(cookieParser());
 
-const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-const multipart = require('connect-multiparty');
-
-app.use(require('method-override')());
+app.use(methodOverride());
 app.use(session({
 	store: new pgSession({pool: db.pool}),
 	secret: 'too much to bear',
@@ -101,18 +109,18 @@ app.use(session({
 	saveUninitialized: true,
 	cookie: {maxAge: 30 * 24 * 60 * 60 * 1000}
 }));
-app.use(require('express-flash')());
+app.use(expressFlash());
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use(require('serve-favicon')(__dirname + '/public/favicon.ico'));
+app.use(serveFavicon(__dirname + '/public/favicon.ico'));
 app.use(allowCrossDomain);
 app.use(serveStatic(publicDir));
 app.use('/node_modules', serveStatic(path.join(__dirname, 'node_modules')));
 
 const env = process.env.NODE_ENV || 'development';
 if (env === 'development') {
-	app.use(require('morgan')('common'));
+	app.use(morgan('common'));
 }
 
 function addEventLinks(links, events) {
@@ -160,8 +168,6 @@ router.post('/api/update/edit', async function(req, res) {
 	}
 });
 
-const updatesRoute = require('./route/updates');
-
 router.get('/', async function(req, res) {
 	let updates = await db.query('select * from update order by timestamp desc limit 5');
 	let links = await db.query('select * from link');
@@ -173,9 +179,6 @@ router.get('/', async function(req, res) {
 });
 
 router.get('/archive', updatesRoute.archive);
-
-const eventsRoute = require('./route/events');
-
 
 router.get('/events', async function(req, res) {
 	let links = await db.query('select * from link');
@@ -279,8 +282,6 @@ function pushQualified(qualified, type, criterion, criterion_qualified, eventIds
 		}
 	}
 }
-
-const unaccent = require('diacritics').remove;
 
 function compare_member(a, b) {
 	return unaccent((a.lastname + ' ' + a.firstname).toLowerCase()).localeCompare(unaccent((b.lastname + ' ' + b.firstname).toLowerCase()));
