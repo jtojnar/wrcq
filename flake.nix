@@ -17,10 +17,12 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
       in {
-        devShell = pkgs.mkShell {
-          nativeBuildInputs = [
-            pkgs.nodejs_latest
-          ];
+        devShells = {
+          default = pkgs.mkShell {
+            nativeBuildInputs = [
+              pkgs.nodejs_latest
+            ];
+          };
         };
       }
     );
