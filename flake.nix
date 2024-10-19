@@ -21,6 +21,10 @@
           default = pkgs.mkShell {
             nativeBuildInputs = [
               pkgs.nodejs_latest
+              (pkgs.python3.withPackages (pp: [
+                pp.beautifulsoup4
+                pp.requests
+              ]))
             ];
           };
         };
