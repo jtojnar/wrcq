@@ -17,3 +17,5 @@ test:
 	cat scripts/samples/rogain-manager/lvrc2024.html | tidy -q | python3 scripts/html2json.py | jq -L scripts --from-file scripts/lvrc2024.jq > /dev/null
 
 	cat scripts/samples/rogain-manager/frc2024.html | tidy -q | python3 scripts/html2json.py | jq -L scripts --from-file scripts/lvrc2024.jq > /dev/null
+
+	cat scripts/samples/aurc2023.html | python3 scripts/html2json.py | jq -L scripts --from-file scripts/aurc2023.jq > /dev/null

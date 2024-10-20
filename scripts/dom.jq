@@ -74,17 +74,6 @@ def lines:
   ;
 
 
-# Asserts the list contains only a single element and returns it.
-def singular:
-  if length == 1 then
-    .[0]
-  elif length == 0 then
-    error("No value found")
-  else
-    error("More than one value found")
-  end;
-
-
 # Extracts table cells.
 def cells:
   find_elements(.tag? == "td" or .tag? == "th");

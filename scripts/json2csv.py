@@ -75,7 +75,7 @@ def write_to_csv(results: list[TeamResult], output_path: Path) -> None:
             writer.writerow(
                 [
                     result["team_id"],
-                    result["team_name"],
+                    result.get("team_name", ""),
                     result["category"]["gender"],
                     result["category"]["age"],
                     result.get("time", "0:00:00"),
