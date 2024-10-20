@@ -75,5 +75,5 @@ If the results are only available as HTML file, you can use the scripts in the s
 
 ```sh
 wget https://erc2024.rogain.ee/results24/results.htm -O scripts/samples/rogain-manager/erc2024.html
-cat scripts/samples/rogain-manager/erc2024.html | python3 scripts/html2json.py | jq -L scripts --from-file scripts/erc2024.jq | python3 scripts/json2csv.py result/erc2024.csv
+cat scripts/samples/rogain-manager/erc2024.html | tidy -q | python3 scripts/html2json.py | jq -L scripts --from-file scripts/erc2024.jq | python3 scripts/json2csv.py result/erc2024.csv
 ```
