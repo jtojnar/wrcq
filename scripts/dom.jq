@@ -15,6 +15,9 @@
 # ```
 
 
+include "utils";
+
+
 # Finds all elements matching given predicate.
 # Though it will only extract the ancestor if matched elements are nested.
 def find_elements(pred):
@@ -59,6 +62,15 @@ def text_contents:
   _text
   | flatten
   | join("")
+  | gsub("\n"; " ")
+  ;
+
+
+# Extracts text nodes separated by <br> into a list.
+def lines:
+  .children
+  | chunks(type == "object" and .tag == "br")
+  | map(text_contents | trim)
   ;
 
 
