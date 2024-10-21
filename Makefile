@@ -1,3 +1,7 @@
+.PHONY: test
+
+all:
+
 test:
 	python3 -m unittest scripts/html2json.py
 
