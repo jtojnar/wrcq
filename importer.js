@@ -4,12 +4,9 @@ if (process.argv.length < 4) {
 	process.exit(1);
 }
 
-const _dbUri = process.env.DATABASE_URL;
-
 import * as db from './db.js';
 import fs from 'fs-extra';
 
-import moment from 'moment';
 import { parseStringPromise } from 'xml2js';
 
 async function main() {
