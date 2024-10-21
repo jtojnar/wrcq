@@ -34,8 +34,8 @@ const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 // TODO: move this into a database
 const MANAGER_EMAIL = 'jan.tojnar@rogaining.cz';
 const LIST_IS_PRELIMINARY = true;
-const UPCOMING_WRC_YEAR = '2022';
-const STATUTE_OF_LIMITATIONS = '2019-01-01'; // three years before the event
+const UPCOMING_WRC_YEAR = '2025';
+const STATUTE_OF_LIMITATIONS = '2022-01-01'; // three years before the event
 
 const router = new Router();
 
