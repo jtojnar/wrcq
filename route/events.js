@@ -1,10 +1,9 @@
-import * as model from '../model.js';
 import * as helpers from '../helpers.js';
 import * as db from '../db.js';
 import fs from 'fs-extra';
 import neatCsv from 'neat-csv';
 import sanitizer from 'sanitizer';
-import sql from "sql-template-tag";
+import sql, { bulk } from "sql-template-tag";
 import xml2js from 'xml2js';
 
 export async function add(req, res) {
@@ -210,9 +209,11 @@ async function processIRF(event, data) {
 	}
 
 	await db.query(sql`delete from team where event_id = ${event.id}`);
-	await db.query(model.team.insert(teams).toQuery());
-	await db.query(model.member.insert(members).toQuery());
-	await db.query(model.event.update({complete: true}).where(model.event.id.equals(event.id)).toQuery());
+	const teamRows = teams.map((team) => [team.id, team.event_id, team.score, team.time, team.penalty, team.duration, team.gender, team.age, team.status, team.name]);
+	await db.query(sql`INSERT INTO "team" ("id", "event_id", "score", "time", "penalty", "duration", "gender", "age", "status", "name") VALUES ${bulk(teamRows)}`);
+	const memberRows = members.map((member) => [member.team_id, member.event_id, member.firstname, member.lastname, member.country_code]);
+	await db.query(sql`INSERT INTO "member" ("team_id", "event_id", "firstname", "lastname", "country_code") VALUES ${bulk(memberRows)}`);
+	await db.query(sql`UPDATE "event" SET "complete" = ${true} WHERE "id" = ${event.id}`);
 }
 
 
@@ -292,7 +293,9 @@ async function processIOF(event, data) {
 	}
 
 	await db.query(sql`delete from team where event_id = ${event.id}`);
-	await db.query(model.team.insert(teams).toQuery());
-	await db.query(model.member.insert(members).toQuery());
-	await db.query(model.event.update({complete: true}).where(model.event.id.equals(event.id)).toQuery());
+	const teamRows = teams.map((team) => [team.id, team.event_id, team.score, team.time, team.penalty, team.duration, team.gender, team.age, team.status, team.name]);
+	await db.query(sql`INSERT INTO "team" ("id", "event_id", "score", "time", "penalty", "duration", "gender", "age", "status", "name") VALUES ${bulk(teamRows)}`);
+	const memberRows = members.map((member) => [member.team_id, member.event_id, member.firstname, member.lastname, member.country_code]);
+	await db.query(sql`INSERT INTO "member" ("team_id", "event_id", "firstname", "lastname", "country_code") VALUES ${bulk(memberRows)}`);
+	await db.query(sql`UPDATE "event" SET "complete" = ${true} WHERE "id" = ${event.id}`);
 }
