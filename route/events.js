@@ -4,6 +4,7 @@ import * as db from '../db.js';
 import fs from 'fs-extra';
 import neatCsv from 'neat-csv';
 import sanitizer from 'sanitizer';
+import sql from "sql-template-tag";
 import xml2js from 'xml2js';
 
 export async function add(req, res) {
@@ -41,7 +42,7 @@ export async function add(req, res) {
 			values.complete = values.hasOwnProperty('complete');
 
 			try {
-				await db.query('insert into event(name, start, "end", location, organizer, level, website, results, media, slug, complete) values($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)', [values.name, values.start, values.end, values.location, values.organizer, values.level, values.website, values.results, values.media, values.slug, values.complete]);
+				await db.query(sql`insert into event(name, start, "end", location, organizer, level, website, results, media, slug, complete) values(${values.name}, ${values.start}, ${values.end}, ${values.location}, ${values.organizer}, ${values.level}, ${values.website}, ${values.results}, ${values.media}, ${values.slug}, ${values.complete})`);
 
 				req.flash('success', 'Event was successfully created.');
 				return res.redirect('/events');
@@ -68,7 +69,7 @@ export async function upload(req, res) {
 		req.flash('danger', 'You need to be logged in to upload an event results.');
 		res.render('login');
 	} else {
-		let eventdata = await db.query('select * from event where slug=$1 limit 1', [req.params.event]);
+		let eventdata = await db.query(sql`select * from event where slug=${req.params.event} limit 1`);
 		if (eventdata.rows.length == 0) {
 			res.status(404);
 			res.render('error/404', {body: 'Sorry, this event is not in our database, we may be working on it.'});
@@ -208,7 +209,7 @@ async function processIRF(event, data) {
 		}
 	}
 
-	await db.query('delete from team where event_id = $1', [event.id]);
+	await db.query(sql`delete from team where event_id = ${event.id}`);
 	await db.query(model.team.insert(teams).toQuery());
 	await db.query(model.member.insert(members).toQuery());
 	await db.query(model.event.update({complete: true}).where(model.event.id.equals(event.id)).toQuery());
@@ -290,7 +291,7 @@ async function processIOF(event, data) {
 		}
 	}
 
-	await db.query('delete from team where event_id = $1', [event.id]);
+	await db.query(sql`delete from team where event_id = ${event.id}`);
 	await db.query(model.team.insert(teams).toQuery());
 	await db.query(model.member.insert(members).toQuery());
 	await db.query(model.event.update({complete: true}).where(model.event.id.equals(event.id)).toQuery());
