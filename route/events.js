@@ -137,6 +137,7 @@ export async function upload(req, res) {
 						await processIRF(eventdata.rows[0], xml);
 						res.redirect('/events/' + req.params.event + '/results');
 					} catch (err) {
+						console.log(err);
 						req.flash('danger', err.detail ? `${err} (${err.detail})` : `${err}`);
 						res.render('events_upload', {identity: req.user, values: values});
 					}
