@@ -1143,8 +1143,8 @@ router.get('/events/:event/results', async function(req, res) {
 				event_id=${event.id}
 				and gender='men'
 				and age in (${join(openCategories)})
+				and status = 'finished'
 			order by
-				status='finished' desc,
 				score desc,
 				time asc
 			limit 3
@@ -1161,8 +1161,8 @@ router.get('/events/:event/results', async function(req, res) {
 				event_id=${event.id}
 				and gender='mixed'
 				and age in (${join(openCategories)})
+				and status = 'finished'
 			order by
-				status='finished' desc,
 				score desc,
 				time asc
 			limit 3
@@ -1179,8 +1179,8 @@ router.get('/events/:event/results', async function(req, res) {
 				event_id=${event.id}
 				and gender='women'
 				and age in (${join(openCategories)})
+				and status = 'finished'
 			order by
-				status='finished' desc,
 				score desc,
 				time asc
 			limit 3
@@ -1227,12 +1227,14 @@ router.get('/events/:event/results', async function(req, res) {
 			categories.push(row.category);
 		}
 
-		let countToCategories = helpers.getCategoryParents(row.age, row.gender);
-		for (let i = 0; i < countToCategories.length; i++) {
-			let countToCategory = countToCategories[i];
-			row[countToCategory] = increment(counters, row.duration, countToCategory);
+		if (row.status === 'finished') {
+			let countToCategories = helpers.getCategoryParents(row.age, row.gender);
+			for (let i = 0; i < countToCategories.length; i++) {
+				let countToCategory = countToCategories[i];
+				row[countToCategory] = increment(counters, row.duration, countToCategory);
+			}
+			row['place'] = increment(counters, row.duration, 'all');
 		}
-		row['place'] = increment(counters, row.duration, 'all');
 
 		let currentCategoryIsActive;
 		if (req.query.category) {
