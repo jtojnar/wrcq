@@ -174,7 +174,20 @@ router.get('/', async function(req, res) {
 	let updates = await db.query(sql`select * from update order by timestamp desc limit 5`);
 	let links = await db.query(sql`select * from link`);
 	links = links.rows;
-	let eventsQuery = await db.query(sql`select * from event left join (select event_id from team group by event_id) as team on team.event_id = event.id where level='world' order by start asc`);
+	let eventsQuery = await db.query(
+		sql`
+			select
+				*
+			from event
+			left join (
+				select
+					event_id
+				from team
+				group by event_id
+			) as team
+			on team.event_id = event.id
+			where level='world'
+			order by start asc`);
 	addEventLinks(links, eventsQuery.rows);
 	let events = eventsQuery.rows;
 	res.render('index', {updates: updates.rows, events: events, identity: req.user, last: true});
@@ -185,10 +198,68 @@ router.get('/archive', updatesRoute.archive);
 router.get('/events', async function(req, res) {
 	let links = await db.query(sql`select * from link`);
 	links = links.rows;
-	let eventsQuery = await db.query(sql`with latest as (select *, row_number() over(partition by level order by start desc) as rk from event where "end" > ${STATUTE_OF_LIMITATIONS}) select * from latest left join (select event_id from team group by event_id) as team on team.event_id = latest.id where rk <= 2 order by level='world' desc, level::text like 'regional%' desc, level::text like 'national%' desc, start desc`);
+	let eventsQuery = await db.query(
+		sql`
+			with
+				latest as (
+					select
+						*,
+						row_number() over(partition by level order by start desc) as rk
+					from event
+					where
+						"end" > ${STATUTE_OF_LIMITATIONS}
+				)
+
+			select
+				*
+			from latest
+			left join (
+				select
+					event_id
+				from team
+				group by event_id
+			) as team
+			on team.event_id = latest.id
+			where rk <= 2
+			order by
+				level='world' desc,
+				level::text like 'regional%' desc,
+				level::text like 'national%' desc,
+				start desc
+		`
+	);
 	addEventLinks(links, eventsQuery.rows);
 	let events = eventsQuery.rows;
-	let pastEventsQuery = await db.query(sql`with latest as (select *, row_number() over(partition by level order by start desc) as rk from event) select * from latest left join (select event_id from team group by event_id) as team on team.event_id = latest.id where rk > 2 or "end" <= ${STATUTE_OF_LIMITATIONS} order by level='world' desc, level::text like 'regional%' desc, level::text like 'national%' desc, start desc`);
+	let pastEventsQuery = await db.query(
+		sql`
+			with
+				latest as (
+					select
+						*,
+						row_number() over(partition by level order by start desc) as rk
+					from event
+				)
+
+			select
+				*
+			from latest
+			left join (
+				select
+					event_id
+				from team
+				group by event_id
+			) as team
+			on team.event_id = latest.id
+			where
+				rk > 2
+				or "end" <= ${STATUTE_OF_LIMITATIONS}
+			order by
+				level='world' desc,
+				level::text like 'regional%' desc,
+				level::text like 'national%' desc,
+				start desc
+		`
+	);
 	addEventLinks(links, pastEventsQuery.rows);
 	let pastEvents = pastEventsQuery.rows;
 	res.render('events', {
@@ -302,73 +373,692 @@ router.get('/qualified', async function(req, res) {
 
 		// criterion 1.1
 		let criterion_qualified11 = await db.query(
-			sql`with past_event as (select id from event where level = 'world'), past_team as (select *, count(*) over w as "limit", row_number() over (w order by score desc, time asc) as position from team where event_id in (select * from past_event) window w as (partition by event_id, gender)), recent_event as (select id from event where level = 'world' and "end" < current_date order by "end" desc limit 2), recent_event_attendee as (select person_id from member where (event_id, team_id) in (select event_id, id from team where event_id in (select * from recent_event))) select *, true as prequalified_o from member left join past_team on member.event_id = past_team.event_id and member.team_id = past_team.id where position = 1 and person_id in (select person_id from recent_event_attendee);`
+			sql`
+				with
+					past_event as (
+						select
+							id
+						from event
+						where
+							level = 'world'
+					),
+					past_team as (
+						select
+							*,
+							count(*) over w as "limit",
+							row_number() over (w order by score desc, time asc) as position
+						from team
+						where
+							event_id in (select * from past_event)
+						window w as (partition by event_id, gender)
+					),
+					recent_event as (
+						select
+							id
+						from event
+						where
+							level = 'world'
+							and "end" < current_date
+						order by "end" desc
+						limit 2
+					),
+					recent_event_attendee as (
+						select
+							person_id
+						from member
+						where
+							(event_id, team_id) in (select event_id, id from team where event_id in (select * from recent_event))
+					)
+
+				select
+					*,
+					true as prequalified_o
+				from member
+				left join past_team
+					on
+						member.event_id = past_team.event_id
+						and member.team_id = past_team.id
+				where
+					position = 1
+					and person_id in (select person_id from recent_event_attendee);
+			`
 		);
 		pushQualified(qualified, 'auto', '1.1', criterion_qualified11, eventIds);
 
 		// criterion 1.2a
 		let criterion_qualified12a = await db.query(
-			sql`with recent_event as (select id from event where level = 'world' and "end" < current_date and "end" > ${STATUTE_OF_LIMITATIONS} order by "end" desc limit 2), past_team as (select *, 0.5 as coef, 6 as ceiling, position_in_class(age, 'ultraveteran') over (w order by score desc, time asc) as position_uv, count(nullif(is_in_class(age, 'ultraveteran'), false)) over w as limit_uv, position_in_class(age, 'superveteran') over (w order by score desc, time asc) as position_sv, count(nullif(is_in_class(age, 'superveteran'), false)) over w as limit_sv, position_in_class(age, 'veteran') over (w order by score desc, time asc) as position_v, count(nullif(is_in_class(age, 'veteran'), false)) over w as limit_v, position_in_class(age, 'open') over (w order by score desc, time asc) as position_o, count(nullif(is_in_class(age, 'open'), false)) over w as limit_o, position_in_class(age, 'junior') over (w order by score desc, time asc) as position_j, count(nullif(is_in_class(age, 'junior'), false)) over w as limit_j from team where event_id in (select * from recent_event) window w as (partition by event_id, gender)), past_team_crit as (select *, (position_uv <= ceiling and position_uv <= ceil(limit_uv*coef)) as prequalified_uv, (position_sv <= ceiling and position_sv <= ceil(limit_sv*coef)) as prequalified_sv, (position_v <= ceiling and position_v <= ceil(limit_v*coef)) as prequalified_v, (position_o <= ceiling and position_o <= ceil(limit_o*coef)) as prequalified_o, (position_j <= ceiling and position_j <= ceil(limit_j*coef)) as prequalified_j from past_team) select * from member left join past_team_crit on member.event_id = past_team_crit.event_id and member.team_id = past_team_crit.id where prequalified_uv or prequalified_sv or prequalified_v or prequalified_o or prequalified_j;`
+			sql`
+				with
+					recent_event as (
+						select
+							id
+						from event
+						where
+							level = 'world'
+							and "end" < current_date
+							and "end" > ${STATUTE_OF_LIMITATIONS}
+						order by "end" desc
+						limit 2
+					),
+					past_team as (
+						select
+							*,
+							0.5 as coef,
+							6 as ceiling,
+							position_in_class(age, 'ultraveteran') over (w order by score desc, time asc) as position_uv,
+							count(nullif(is_in_class(age, 'ultraveteran'), false)) over w as limit_uv,
+							position_in_class(age, 'superveteran') over (w order by score desc, time asc) as position_sv,
+							count(nullif(is_in_class(age, 'superveteran'), false)) over w as limit_sv,
+							position_in_class(age, 'veteran') over (w order by score desc, time asc) as position_v,
+							count(nullif(is_in_class(age, 'veteran'), false)) over w as limit_v,
+							position_in_class(age, 'open') over (w order by score desc, time asc) as position_o,
+							count(nullif(is_in_class(age, 'open'), false)) over w as limit_o,
+							position_in_class(age, 'junior') over (w order by score desc, time asc) as position_j,
+							count(nullif(is_in_class(age, 'junior'), false)) over w as limit_j
+						from team
+						where
+							event_id in (select * from recent_event)
+						window w as (partition by event_id, gender)
+					),
+					past_team_crit as (
+						select
+							*,
+							(position_uv <= ceiling and position_uv <= ceil(limit_uv*coef)) as prequalified_uv,
+							(position_sv <= ceiling and position_sv <= ceil(limit_sv*coef)) as prequalified_sv,
+							(position_v <= ceiling and position_v <= ceil(limit_v*coef)) as prequalified_v,
+							(position_o <= ceiling and position_o <= ceil(limit_o*coef)) as prequalified_o,
+							(position_j <= ceiling and position_j <= ceil(limit_j*coef)) as prequalified_j
+						from past_team
+					)
+
+				select
+					*
+				from member
+				left join past_team_crit
+					on
+						member.event_id = past_team_crit.event_id
+						and member.team_id = past_team_crit.id
+				where
+					prequalified_uv
+					or prequalified_sv
+					or prequalified_v
+					or prequalified_o
+					or prequalified_j;
+			`
 		);
 		pushQualified(qualified, 'auto', '1.2a', criterion_qualified12a, eventIds);
 
 		// criterion 1.2b
 		let criterion_qualified12b = await db.query(
-			sql`with recent_event as (select id from event where level = 'regional-e' and "end" < current_date and "end" > ${STATUTE_OF_LIMITATIONS} order by "end" desc limit 2), past_team as (select *, 0.5 as coef, 3 as ceiling, position_in_class(age, 'ultraveteran') over (w order by score desc, time asc) as position_uv, count(nullif(is_in_class(age, 'ultraveteran'), false)) over w as limit_uv, position_in_class(age, 'superveteran') over (w order by score desc, time asc) as position_sv, count(nullif(is_in_class(age, 'superveteran'), false)) over w as limit_sv, position_in_class(age, 'veteran') over (w order by score desc, time asc) as position_v, count(nullif(is_in_class(age, 'veteran'), false)) over w as limit_v, position_in_class(age, 'open') over (w order by score desc, time asc) as position_o, count(nullif(is_in_class(age, 'open'), false)) over w as limit_o, position_in_class(age, 'junior') over (w order by score desc, time asc) as position_j, count(nullif(is_in_class(age, 'junior'), false)) over w as limit_j from team where event_id in (select * from recent_event) window w as (partition by event_id, gender)), past_team_crit as (select *, (position_uv <= ceiling and position_uv <= ceil(limit_uv*coef)) as prequalified_uv, (position_sv <= ceiling and position_sv <= ceil(limit_sv*coef)) as prequalified_sv, (position_v <= ceiling and position_v <= ceil(limit_v*coef)) as prequalified_v, (position_o <= ceiling and position_o <= ceil(limit_o*coef)) as prequalified_o, (position_j <= ceiling and position_j <= ceil(limit_j*coef)) as prequalified_j from past_team) select * from member left join past_team_crit on member.event_id = past_team_crit.event_id and member.team_id = past_team_crit.id where prequalified_uv or prequalified_sv or prequalified_v or prequalified_o or prequalified_j;`
+			sql`
+				with
+					recent_event as (
+						select
+							id
+						from event
+						where
+							level = 'regional-e'
+							and "end" < current_date
+							and "end" > ${STATUTE_OF_LIMITATIONS}
+						order by "end" desc
+						limit 2
+					),
+					past_team as (
+						select
+							*,
+							0.5 as coef,
+							3 as ceiling,
+							position_in_class(age, 'ultraveteran') over (w order by score desc, time asc) as position_uv,
+							count(nullif(is_in_class(age, 'ultraveteran'), false)) over w as limit_uv,
+							position_in_class(age, 'superveteran') over (w order by score desc, time asc) as position_sv,
+							count(nullif(is_in_class(age, 'superveteran'), false)) over w as limit_sv,
+							position_in_class(age, 'veteran') over (w order by score desc, time asc) as position_v,
+							count(nullif(is_in_class(age, 'veteran'), false)) over w as limit_v,
+							position_in_class(age, 'open') over (w order by score desc, time asc) as position_o,
+							count(nullif(is_in_class(age, 'open'), false)) over w as limit_o,
+							position_in_class(age, 'junior') over (w order by score desc, time asc) as position_j,
+							count(nullif(is_in_class(age, 'junior'), false)) over w as limit_j
+						from team
+						where
+							event_id in (select * from recent_event)
+						window w as (partition by event_id, gender)
+					),
+					past_team_crit as (
+						select
+							*,
+							(position_uv <= ceiling and position_uv <= ceil(limit_uv*coef)) as prequalified_uv,
+							(position_sv <= ceiling and position_sv <= ceil(limit_sv*coef)) as prequalified_sv,
+							(position_v <= ceiling and position_v <= ceil(limit_v*coef)) as prequalified_v,
+							(position_o <= ceiling and position_o <= ceil(limit_o*coef)) as prequalified_o,
+							(position_j <= ceiling and position_j <= ceil(limit_j*coef)) as prequalified_j
+						from past_team
+					)
+
+				select
+					*
+				from member
+				left join past_team_crit
+					on
+						member.event_id = past_team_crit.event_id
+						and member.team_id = past_team_crit.id
+				where
+					prequalified_uv
+					or prequalified_sv
+					or prequalified_v
+					or prequalified_o
+					or prequalified_j;
+			`
 		);
 		pushQualified(qualified, 'auto', '1.2b', criterion_qualified12b, eventIds);
 
 		// criterion 1.2c
 		let criterion_qualified12c = await db.query(
-			sql`with recent_event as (select id from event where level = 'regional-na' and "end" < current_date and "end" > ${STATUTE_OF_LIMITATIONS} order by "end" desc limit 2), past_team as (select *, 0.5 as coef, 2 as ceiling, position_in_class(age, 'ultraveteran') over (w order by score desc, time asc) as position_uv, count(nullif(is_in_class(age, 'ultraveteran'), false)) over w as limit_uv, position_in_class(age, 'superveteran') over (w order by score desc, time asc) as position_sv, count(nullif(is_in_class(age, 'superveteran'), false)) over w as limit_sv, position_in_class(age, 'veteran') over (w order by score desc, time asc) as position_v, count(nullif(is_in_class(age, 'veteran'), false)) over w as limit_v, position_in_class(age, 'open') over (w order by score desc, time asc) as position_o, count(nullif(is_in_class(age, 'open'), false)) over w as limit_o, position_in_class(age, 'junior') over (w order by score desc, time asc) as position_j, count(nullif(is_in_class(age, 'junior'), false)) over w as limit_j from team where event_id in (select * from recent_event) window w as (partition by event_id, gender)), past_team_crit as (select *, (position_uv <= ceiling and position_uv <= ceil(limit_uv*coef)) as prequalified_uv, (position_sv <= ceiling and position_sv <= ceil(limit_sv*coef)) as prequalified_sv, (position_v <= ceiling and position_v <= ceil(limit_v*coef)) as prequalified_v, (position_o <= ceiling and position_o <= ceil(limit_o*coef)) as prequalified_o, (position_j <= ceiling and position_j <= ceil(limit_j*coef)) as prequalified_j from past_team) select * from member left join past_team_crit on member.event_id = past_team_crit.event_id and member.team_id = past_team_crit.id where prequalified_uv or prequalified_sv or prequalified_v or prequalified_o or prequalified_j;`
+			sql`
+				with
+					recent_event as (
+						select
+							id
+						from event
+						where
+							level = 'regional-na'
+							and "end" < current_date
+							and "end" > ${STATUTE_OF_LIMITATIONS}
+						order by "end" desc
+						limit 2
+					),
+					past_team as (
+						select
+							*,
+							0.5 as coef,
+							2 as ceiling,
+							position_in_class(age, 'ultraveteran') over (w order by score desc, time asc) as position_uv,
+							count(nullif(is_in_class(age, 'ultraveteran'), false)) over w as limit_uv,
+							position_in_class(age, 'superveteran') over (w order by score desc, time asc) as position_sv,
+							count(nullif(is_in_class(age, 'superveteran'), false)) over w as limit_sv,
+							position_in_class(age, 'veteran') over (w order by score desc, time asc) as position_v,
+							count(nullif(is_in_class(age, 'veteran'), false)) over w as limit_v,
+							position_in_class(age, 'open') over (w order by score desc, time asc) as position_o,
+							count(nullif(is_in_class(age, 'open'), false)) over w as limit_o,
+							position_in_class(age, 'junior') over (w order by score desc, time asc) as position_j,
+							count(nullif(is_in_class(age, 'junior'), false)) over w as limit_j
+						from team
+						where
+							event_id in (select * from recent_event)
+						window w as (partition by event_id, gender)
+					),
+					past_team_crit as (
+						select
+							*,
+							(position_uv <= ceiling and position_uv <= ceil(limit_uv*coef)) as prequalified_uv,
+							(position_sv <= ceiling and position_sv <= ceil(limit_sv*coef)) as prequalified_sv,
+							(position_v <= ceiling and position_v <= ceil(limit_v*coef)) as prequalified_v,
+							(position_o <= ceiling and position_o <= ceil(limit_o*coef)) as prequalified_o,
+							(position_j <= ceiling and position_j <= ceil(limit_j*coef)) as prequalified_j
+						from past_team
+					)
+
+				select
+					*
+				from member
+				left join past_team_crit
+					on
+						member.event_id = past_team_crit.event_id
+						and member.team_id = past_team_crit.id
+				where
+					prequalified_uv
+					or prequalified_sv
+					or prequalified_v
+					or prequalified_o
+					or prequalified_j;
+			`
 		);
 		pushQualified(qualified, 'auto', '1.2c', criterion_qualified12c, eventIds);
 
 		// criterion 1.2d
 		let criterion_qualified12d = await db.query(
-			sql`with recent_event as (select id from event where level = 'regional-a' and "end" < current_date and "end" > ${STATUTE_OF_LIMITATIONS} order by "end" desc limit 2), past_team as (select *, 0.5 as coef, 2 as ceiling, position_in_class(age, 'ultraveteran') over (w order by score desc, time asc) as position_uv, count(nullif(is_in_class(age, 'ultraveteran'), false)) over w as limit_uv, position_in_class(age, 'superveteran') over (w order by score desc, time asc) as position_sv, count(nullif(is_in_class(age, 'superveteran'), false)) over w as limit_sv, position_in_class(age, 'veteran') over (w order by score desc, time asc) as position_v, count(nullif(is_in_class(age, 'veteran'), false)) over w as limit_v, position_in_class(age, 'open') over (w order by score desc, time asc) as position_o, count(nullif(is_in_class(age, 'open'), false)) over w as limit_o, position_in_class(age, 'junior') over (w order by score desc, time asc) as position_j, count(nullif(is_in_class(age, 'junior'), false)) over w as limit_j from team where event_id in (select * from recent_event) window w as (partition by event_id, gender)), past_team_crit as (select *, (position_uv <= ceiling and position_uv <= ceil(limit_uv*coef)) as prequalified_uv, (position_sv <= ceiling and position_sv <= ceil(limit_sv*coef)) as prequalified_sv, (position_v <= ceiling and position_v <= ceil(limit_v*coef)) as prequalified_v, (position_o <= ceiling and position_o <= ceil(limit_o*coef)) as prequalified_o, (position_j <= ceiling and position_j <= ceil(limit_j*coef)) as prequalified_j from past_team) select * from member left join past_team_crit on member.event_id = past_team_crit.event_id and member.team_id = past_team_crit.id where prequalified_uv or prequalified_sv or prequalified_v or prequalified_o or prequalified_j;`
+			sql`
+				with
+					recent_event as (
+						select
+							id
+						from event
+						where
+							level = 'regional-a'
+							and "end" < current_date
+							and "end" > ${STATUTE_OF_LIMITATIONS}
+						order by "end" desc
+						limit 2
+					),
+					past_team as (
+						select
+							*,
+							0.5 as coef,
+							2 as ceiling,
+							position_in_class(age, 'ultraveteran') over (w order by score desc, time asc) as position_uv,
+							count(nullif(is_in_class(age, 'ultraveteran'), false)) over w as limit_uv,
+							position_in_class(age, 'superveteran') over (w order by score desc, time asc) as position_sv,
+							count(nullif(is_in_class(age, 'superveteran'), false)) over w as limit_sv,
+							position_in_class(age, 'veteran') over (w order by score desc, time asc) as position_v,
+							count(nullif(is_in_class(age, 'veteran'), false)) over w as limit_v,
+							position_in_class(age, 'open') over (w order by score desc, time asc) as position_o,
+							count(nullif(is_in_class(age, 'open'), false)) over w as limit_o,
+							position_in_class(age, 'junior') over (w order by score desc, time asc) as position_j,
+							count(nullif(is_in_class(age, 'junior'), false)) over w as limit_j
+						from team
+						where
+							event_id in (select * from recent_event)
+						window w as (partition by event_id, gender)
+					),
+					past_team_crit as (
+						select
+							*,
+							(position_uv <= ceiling and position_uv <= ceil(limit_uv*coef)) as prequalified_uv,
+							(position_sv <= ceiling and position_sv <= ceil(limit_sv*coef)) as prequalified_sv,
+							(position_v <= ceiling and position_v <= ceil(limit_v*coef)) as prequalified_v,
+							(position_o <= ceiling and position_o <= ceil(limit_o*coef)) as prequalified_o,
+							(position_j <= ceiling and position_j <= ceil(limit_j*coef)) as prequalified_j
+						from past_team
+					)
+
+				select
+					*
+				from member
+				left join past_team_crit
+					on
+						member.event_id = past_team_crit.event_id
+						and member.team_id = past_team_crit.id
+				where
+					prequalified_uv
+					or prequalified_sv
+					or prequalified_v
+					or prequalified_o
+					or prequalified_j;
+			`
 		);
 		pushQualified(qualified, 'auto', '1.2d', criterion_qualified12d, eventIds);
 
 		// criterion 1.3
 		let criterion_qualified13 = await db.query(
-			sql`with national as (select id, "end", row_number() over (partition by level order by "end" desc) as position from event where level in ('national-c', 'national-f', 'national-lv', 'national-r', 'national-nz', 'national-a', 'national-uk', 'national-us')), qualifying_national as (select id from national where "end" > ${STATUTE_OF_LIMITATIONS} and position <= 2), past_team as (select *, 0.5 as coef, 2 as ceiling, count(*) over w as "limit", row_number() over (w order by score desc, time asc) as position from team where event_id in (select * from qualifying_national) window w as (partition by event_id, gender)), past_team_crit as (select *, (position <= ceiling and position <= ceil("limit"*coef)) as prequalified_o from past_team) select * from member left join past_team_crit on member.event_id = past_team_crit.event_id and member.team_id = past_team_crit.id where prequalified_o;`
+			sql`
+				with
+					national as (
+						select
+							id,
+							"end",
+							row_number() over (partition by level order by "end" desc) as position
+						from event
+						where
+							level in ('national-c', 'national-f', 'national-lv', 'national-r', 'national-nz', 'national-a', 'national-uk', 'national-us')
+					),
+					qualifying_national as (
+						select
+							id
+						from national
+						where
+							"end" > ${STATUTE_OF_LIMITATIONS}
+							and position <= 2
+					),
+					past_team as (
+						select
+							*,
+							0.5 as coef,
+							2 as ceiling,
+							count(*) over w as "limit",
+							row_number() over (w order by score desc, time asc) as position
+						from team
+						where
+							event_id in (select * from qualifying_national)
+						window w as (partition by event_id, gender)
+					),
+					past_team_crit as (
+						select
+							*,
+							(position <= ceiling and position <= ceil("limit"*coef)) as prequalified_o
+						from past_team
+					)
+
+				select
+					*
+				from member
+				left join past_team_crit
+					on
+						member.event_id = past_team_crit.event_id
+						and member.team_id = past_team_crit.id
+				where prequalified_o;
+			`
 		);
 		pushQualified(qualified, 'auto', '1.3', criterion_qualified13, eventIds);
 
 		// criterion 1.4
 		let criterion_qualified14 = await db.query(
-			'select * from councillor;'
+			sql`
+				select
+					*
+				from councillor;
+			`
 		);
 		pushQualified(qualified, 'auto', '1.4', criterion_qualified14);
 
 		// criterion 2.1
 		let criterion_qualified21 = await db.query(
-			sql`with past_event as (select id from event where level = 'world'), past_team as (select *, count(*) over w as "limit", row_number() over (w order by score desc, time asc) as position from team where event_id in (select * from past_event) window w as (partition by event_id, gender)), recent_event as (select id from event where level = 'world' and "end" < current_date order by "end" desc limit 2), recent_event_attendee as (select person_id from member where (event_id, team_id) in (select event_id, id from team where event_id in (select * from recent_event))), all_recent_event as (select id from event where "end" > (current_date - INTERVAL '2 years') and "end" < current_date), all_recent_event_attendee as (select person_id from member where event_id in (select id from all_recent_event)) select *, (person_id not in (select * from all_recent_event_attendee)) as star_warning, true as prequalified_o from member left join past_team on member.event_id = past_team.event_id and member.team_id = past_team.id where position = 1 and person_id not in (select person_id from recent_event_attendee); `
+			sql`
+				with
+					past_event as (
+						select
+							id
+						from event
+						where
+							level = 'world'
+					),
+					past_team as (
+						select
+							*,
+							count(*) over w as "limit",
+							row_number() over (w order by score desc, time asc) as position
+						from team
+						where
+							event_id in (select * from past_event)
+						window w as (partition by event_id, gender)
+					),
+					recent_event as (
+						select
+							id
+						from event
+						where
+							level = 'world'
+							and "end" < current_date
+						order by "end" desc
+						limit 2
+					),
+					recent_event_attendee as (
+						select
+							person_id
+						from member
+						where
+							(event_id, team_id) in (select event_id, id from team where event_id in (select * from recent_event))
+					),
+					all_recent_event as (
+						select
+							id
+						from event
+						where
+							"end" > (current_date - INTERVAL '2 years')
+							and "end" < current_date
+					),
+					all_recent_event_attendee as (
+						select
+							person_id
+						from member
+						where
+							event_id in (select id from all_recent_event)
+					)
+
+				select
+					*,
+					(person_id not in (select * from all_recent_event_attendee)) as star_warning,
+					true as prequalified_o
+				from member
+				left join past_team
+					on
+						member.event_id = past_team.event_id
+						and member.team_id = past_team.id
+				where
+					position = 1
+					and person_id not in (select person_id from recent_event_attendee);
+			`
 		);
 		pushQualified(qualified, 'preferred', '2.1', criterion_qualified21, eventIds);
 
 		// criterion 2.2
 		let criterion_qualified22 = await db.query(
-			sql`with recent_event as (select id from event where level = 'world' and "end" < current_date order by "end" desc limit 2), past_team as (select *, 0.3 as coef, 7 as floor, 10 as ceiling, position_in_class(age, 'ultraveteran') over (w order by score desc, time asc) as position_uv, count(nullif(is_in_class(age, 'ultraveteran'), false)) over w as limit_uv, position_in_class(age, 'superveteran') over (w order by score desc, time asc) as position_sv, count(nullif(is_in_class(age, 'superveteran'), false)) over w as limit_sv, position_in_class(age, 'veteran') over (w order by score desc, time asc) as position_v, count(nullif(is_in_class(age, 'veteran'), false)) over w as limit_v, position_in_class(age, 'open') over (w order by score desc, time asc) as position_o, count(nullif(is_in_class(age, 'open'), false)) over w as limit_o, position_in_class(age, 'junior') over (w order by score desc, time asc) as position_j, count(nullif(is_in_class(age, 'junior'), false)) over w as limit_j from team where event_id in (select * from recent_event) window w as (partition by event_id, gender)), past_team_crit as (select *, (position_uv >= floor and position_uv <= ceiling and position_uv <= ceil(limit_uv*coef)) as prequalified_uv, (position_sv >= floor and position_sv <= ceiling and position_sv <= ceil(limit_sv*coef)) as prequalified_sv, (position_v >= floor and position_v <= ceiling and position_v <= ceil(limit_v*coef)) as prequalified_v, (position_o >= floor and position_o <= ceiling and position_o <= ceil(limit_o*coef)) as prequalified_o, (position_j >= floor and position_j <= ceiling and position_j <= ceil(limit_j*coef)) as prequalified_j from past_team) select * from member left join past_team_crit on member.event_id = past_team_crit.event_id and member.team_id = past_team_crit.id where prequalified_uv or prequalified_sv or prequalified_v or prequalified_o or prequalified_j;`
+			sql`
+				with
+					recent_event as (
+						select
+							id
+						from event
+						where
+							level = 'world'
+							and "end" < current_date
+						order by "end" desc
+						limit 2
+					),
+					past_team as (
+						select
+							*,
+							0.3 as coef,
+							7 as floor,
+							10 as ceiling,
+							position_in_class(age, 'ultraveteran') over (w order by score desc, time asc) as position_uv,
+							count(nullif(is_in_class(age, 'ultraveteran'), false)) over w as limit_uv,
+							position_in_class(age, 'superveteran') over (w order by score desc, time asc) as position_sv,
+							count(nullif(is_in_class(age, 'superveteran'), false)) over w as limit_sv,
+							position_in_class(age, 'veteran') over (w order by score desc, time asc) as position_v,
+							count(nullif(is_in_class(age, 'veteran'), false)) over w as limit_v,
+							position_in_class(age, 'open') over (w order by score desc, time asc) as position_o,
+							count(nullif(is_in_class(age, 'open'), false)) over w as limit_o,
+							position_in_class(age, 'junior') over (w order by score desc, time asc) as position_j,
+							count(nullif(is_in_class(age, 'junior'), false)) over w as limit_j
+						from team
+						where
+							event_id in (select * from recent_event)
+						window w as (partition by event_id, gender)
+					),
+					past_team_crit as (
+						select
+							*,
+							(position_uv >= floor and position_uv <= ceiling and position_uv <= ceil(limit_uv*coef)) as prequalified_uv,
+							(position_sv >= floor and position_sv <= ceiling and position_sv <= ceil(limit_sv*coef)) as prequalified_sv,
+							(position_v >= floor and position_v <= ceiling and position_v <= ceil(limit_v*coef)) as prequalified_v,
+							(position_o >= floor and position_o <= ceiling and position_o <= ceil(limit_o*coef)) as prequalified_o,
+							(position_j >= floor and position_j <= ceiling and position_j <= ceil(limit_j*coef)) as prequalified_j
+						from past_team
+					)
+
+				select
+					*
+				from member
+				left join past_team_crit
+					on
+						member.event_id = past_team_crit.event_id
+						and member.team_id = past_team_crit.id
+				where
+					prequalified_uv
+					or prequalified_sv
+					or prequalified_v
+					or prequalified_o
+					or prequalified_j;
+			`
 		);
 		pushQualified(qualified, 'preferred', '2.2', criterion_qualified22, eventIds);
 
 		// criterion 2.3
 		let criterion_qualified23 = await db.query(
-			sql`with recent_event as (select id from event where level = 'regional-e' and "end" < current_date and "end" > ${STATUTE_OF_LIMITATIONS} order by "end" desc limit 2), past_team as (select *, 0.3 as coef, 4 as floor, 5 as ceiling, position_in_class(age, 'ultraveteran') over (w order by score desc, time asc) as position_uv, count(nullif(is_in_class(age, 'ultraveteran'), false)) over w as limit_uv, position_in_class(age, 'superveteran') over (w order by score desc, time asc) as position_sv, count(nullif(is_in_class(age, 'superveteran'), false)) over w as limit_sv, position_in_class(age, 'veteran') over (w order by score desc, time asc) as position_v, count(nullif(is_in_class(age, 'veteran'), false)) over w as limit_v, position_in_class(age, 'open') over (w order by score desc, time asc) as position_o, count(nullif(is_in_class(age, 'open'), false)) over w as limit_o, position_in_class(age, 'junior') over (w order by score desc, time asc) as position_j, count(nullif(is_in_class(age, 'junior'), false)) over w as limit_j from team where event_id in (select * from recent_event) window w as (partition by event_id, gender)), past_team_crit as (select *, (position_uv >= floor and position_uv <= ceiling and position_uv <= ceil(limit_uv*coef)) as prequalified_uv, (position_sv >= floor and position_sv <= ceiling and position_sv <= ceil(limit_sv*coef)) as prequalified_sv, (position_v >= floor and position_v <= ceiling and position_v <= ceil(limit_v*coef)) as prequalified_v, (position_o >= floor and position_o <= ceiling and position_o <= ceil(limit_o*coef)) as prequalified_o, (position_j >= floor and position_j <= ceiling and position_j <= ceil(limit_j*coef)) as prequalified_j from past_team) select * from member left join past_team_crit on member.event_id = past_team_crit.event_id and member.team_id = past_team_crit.id where prequalified_uv or prequalified_sv or prequalified_v or prequalified_o or prequalified_j;`
+			sql`
+				with
+					recent_event as (
+						select
+							id
+						from event
+						where
+							level = 'regional-e'
+							and "end" < current_date
+							and "end" > ${STATUTE_OF_LIMITATIONS}
+						order by "end" desc
+						limit 2
+					),
+					past_team as (
+						select
+							*,
+							0.3 as coef,
+							4 as floor,
+							5 as ceiling,
+							position_in_class(age, 'ultraveteran') over (w order by score desc, time asc) as position_uv,
+							count(nullif(is_in_class(age, 'ultraveteran'), false)) over w as limit_uv,
+							position_in_class(age, 'superveteran') over (w order by score desc, time asc) as position_sv,
+							count(nullif(is_in_class(age, 'superveteran'), false)) over w as limit_sv,
+							position_in_class(age, 'veteran') over (w order by score desc, time asc) as position_v,
+							count(nullif(is_in_class(age, 'veteran'), false)) over w as limit_v,
+							position_in_class(age, 'open') over (w order by score desc, time asc) as position_o,
+							count(nullif(is_in_class(age, 'open'), false)) over w as limit_o,
+							position_in_class(age, 'junior') over (w order by score desc, time asc) as position_j,
+							count(nullif(is_in_class(age, 'junior'), false)) over w as limit_j
+						from team
+						where
+							event_id in (select * from recent_event)
+						window w as (partition by event_id, gender)
+					),
+					past_team_crit as (
+						select
+							*,
+							(position_uv >= floor and position_uv <= ceiling and position_uv <= ceil(limit_uv*coef)) as prequalified_uv,
+							(position_sv >= floor and position_sv <= ceiling and position_sv <= ceil(limit_sv*coef)) as prequalified_sv,
+							(position_v >= floor and position_v <= ceiling and position_v <= ceil(limit_v*coef)) as prequalified_v,
+							(position_o >= floor and position_o <= ceiling and position_o <= ceil(limit_o*coef)) as prequalified_o,
+							(position_j >= floor and position_j <= ceiling and position_j <= ceil(limit_j*coef)) as prequalified_j
+						from past_team
+					)
+
+				select
+					*
+				from member
+				left join past_team_crit
+					on
+						member.event_id = past_team_crit.event_id
+						and member.team_id = past_team_crit.id
+				where
+					prequalified_uv
+					or prequalified_sv
+					or prequalified_v
+					or prequalified_o
+					or prequalified_j;
+			`
 		);
 		pushQualified(qualified, 'preferred', '2.3', criterion_qualified23, eventIds);
 
 		// criterion 2.4a
 		let criterion_qualified24a = await db.query(
-			sql`with recent_event as (select id from event where level = 'regional-na' and "end" < current_date and "end" > ${STATUTE_OF_LIMITATIONS} order by "end" desc limit 2), past_team as (select *, 0.3 as coef, 3 as ceiling, position_in_class(age, 'ultraveteran') over (w order by score desc, time asc) as position_uv, count(nullif(is_in_class(age, 'ultraveteran'), false)) over w as limit_uv, position_in_class(age, 'superveteran') over (w order by score desc, time asc) as position_sv, count(nullif(is_in_class(age, 'superveteran'), false)) over w as limit_sv, position_in_class(age, 'veteran') over (w order by score desc, time asc) as position_v, count(nullif(is_in_class(age, 'veteran'), false)) over w as limit_v, position_in_class(age, 'open') over (w order by score desc, time asc) as position_o, count(nullif(is_in_class(age, 'open'), false)) over w as limit_o, position_in_class(age, 'junior') over (w order by score desc, time asc) as position_j, count(nullif(is_in_class(age, 'junior'), false)) over w as limit_j from team where event_id in (select * from recent_event) window w as (partition by event_id, gender)), past_team_crit as (select *, (position_uv = ceiling and position_uv <= ceil(limit_uv*coef)) as prequalified_uv, (position_sv = ceiling and position_sv <= ceil(limit_sv*coef)) as prequalified_sv, (position_v = ceiling and position_v <= ceil(limit_v*coef)) as prequalified_v, (position_o = ceiling and position_o <= ceil(limit_o*coef)) as prequalified_o, (position_j = ceiling and position_j <= ceil(limit_j*coef)) as prequalified_j from past_team) select * from member left join past_team_crit on member.event_id = past_team_crit.event_id and member.team_id = past_team_crit.id where prequalified_uv or prequalified_sv or prequalified_v or prequalified_o or prequalified_j;`
+			sql`
+				with
+					recent_event as (
+						select
+							id
+						from event
+						where
+							level = 'regional-na'
+							and "end" < current_date
+							and "end" > ${STATUTE_OF_LIMITATIONS}
+						order by "end" desc
+						limit 2
+					),
+					past_team as (
+						select
+							*,
+							0.3 as coef,
+							3 as ceiling,
+							position_in_class(age, 'ultraveteran') over (w order by score desc, time asc) as position_uv,
+							count(nullif(is_in_class(age, 'ultraveteran'), false)) over w as limit_uv,
+							position_in_class(age, 'superveteran') over (w order by score desc, time asc) as position_sv,
+							count(nullif(is_in_class(age, 'superveteran'), false)) over w as limit_sv,
+							position_in_class(age, 'veteran') over (w order by score desc, time asc) as position_v,
+							count(nullif(is_in_class(age, 'veteran'), false)) over w as limit_v,
+							position_in_class(age, 'open') over (w order by score desc, time asc) as position_o,
+							count(nullif(is_in_class(age, 'open'), false)) over w as limit_o,
+							position_in_class(age, 'junior') over (w order by score desc, time asc) as position_j,
+							count(nullif(is_in_class(age, 'junior'), false)) over w as limit_j
+						from team
+						where
+							event_id in (select * from recent_event)
+						window w as (partition by event_id, gender)
+					),
+					past_team_crit as (
+						select
+							*,
+							(position_uv = ceiling and position_uv <= ceil(limit_uv*coef)) as prequalified_uv,
+							(position_sv = ceiling and position_sv <= ceil(limit_sv*coef)) as prequalified_sv,
+							(position_v = ceiling and position_v <= ceil(limit_v*coef)) as prequalified_v,
+							(position_o = ceiling and position_o <= ceil(limit_o*coef)) as prequalified_o,
+							(position_j = ceiling and position_j <= ceil(limit_j*coef)) as prequalified_j
+						from past_team
+					)
+
+				select
+					*
+				from member
+				left join past_team_crit
+					on
+						member.event_id = past_team_crit.event_id
+						and member.team_id = past_team_crit.id
+				where
+					prequalified_uv
+					or prequalified_sv
+					or prequalified_v
+					or prequalified_o
+					or prequalified_j;
+			`
 		);
 		pushQualified(qualified, 'preferred', '2.4a', criterion_qualified24a, eventIds);
 
 		// criterion 2.4b
 		let criterion_qualified24b = await db.query(
-			sql`with recent_event as (select id from event where level = 'regional-a' and "end" < current_date and "end" > ${STATUTE_OF_LIMITATIONS} order by "end" desc limit 2), past_team as (select *, 1 as coef, 3 as ceiling, position_in_class(age, 'ultraveteran') over (w order by score desc, time asc) as position_uv, count(nullif(is_in_class(age, 'ultraveteran'), false)) over w as limit_uv, position_in_class(age, 'superveteran') over (w order by score desc, time asc) as position_sv, count(nullif(is_in_class(age, 'superveteran'), false)) over w as limit_sv, position_in_class(age, 'veteran') over (w order by score desc, time asc) as position_v, count(nullif(is_in_class(age, 'veteran'), false)) over w as limit_v, position_in_class(age, 'open') over (w order by score desc, time asc) as position_o, count(nullif(is_in_class(age, 'open'), false)) over w as limit_o, position_in_class(age, 'junior') over (w order by score desc, time asc) as position_j, count(nullif(is_in_class(age, 'junior'), false)) over w as limit_j from team where event_id in (select * from recent_event) window w as (partition by event_id, gender)), past_team_crit as (select *, (position_uv = ceiling and position_uv <= ceil(limit_uv*coef)) as prequalified_uv, (position_sv = ceiling and position_sv <= ceil(limit_sv*coef)) as prequalified_sv, (position_v = ceiling and position_v <= ceil(limit_v*coef)) as prequalified_v, (position_o = ceiling and position_o <= ceil(limit_o*coef)) as prequalified_o, (position_j = ceiling and position_j <= ceil(limit_j*coef)) as prequalified_j from past_team) select * from member left join past_team_crit on member.event_id = past_team_crit.event_id and member.team_id = past_team_crit.id where prequalified_uv or prequalified_sv or prequalified_v or prequalified_o or prequalified_j;`
+			sql`
+				with
+					recent_event as (
+						select
+							id
+						from event
+						where
+							level = 'regional-a'
+							and "end" < current_date
+							and "end" > ${STATUTE_OF_LIMITATIONS}
+						order by "end" desc
+						limit 2
+					),
+					past_team as (
+						select
+							*,
+							1 as coef,
+							3 as ceiling,
+							position_in_class(age, 'ultraveteran') over (w order by score desc, time asc) as position_uv,
+							count(nullif(is_in_class(age, 'ultraveteran'), false)) over w as limit_uv,
+							position_in_class(age, 'superveteran') over (w order by score desc, time asc) as position_sv,
+							count(nullif(is_in_class(age, 'superveteran'), false)) over w as limit_sv,
+							position_in_class(age, 'veteran') over (w order by score desc, time asc) as position_v,
+							count(nullif(is_in_class(age, 'veteran'), false)) over w as limit_v,
+							position_in_class(age, 'open') over (w order by score desc, time asc) as position_o,
+							count(nullif(is_in_class(age, 'open'), false)) over w as limit_o,
+							position_in_class(age, 'junior') over (w order by score desc, time asc) as position_j,
+							count(nullif(is_in_class(age, 'junior'), false)) over w as limit_j
+						from team
+						where
+							event_id in (select * from recent_event)
+						window w as (partition by event_id, gender)
+					),
+					past_team_crit as (
+						select
+							*,
+							(position_uv = ceiling and position_uv <= ceil(limit_uv*coef)) as prequalified_uv,
+							(position_sv = ceiling and position_sv <= ceil(limit_sv*coef)) as prequalified_sv,
+							(position_v = ceiling and position_v <= ceil(limit_v*coef)) as prequalified_v,
+							(position_o = ceiling and position_o <= ceil(limit_o*coef)) as prequalified_o,
+							(position_j = ceiling and position_j <= ceil(limit_j*coef)) as prequalified_j
+						from past_team
+					)
+
+				select
+					*
+				from member
+				left join past_team_crit
+					on
+						member.event_id = past_team_crit.event_id
+						and member.team_id = past_team_crit.id
+				where
+					prequalified_uv
+					or prequalified_sv
+					or prequalified_v
+					or prequalified_o
+					or prequalified_j;
+			`
 		);
 		pushQualified(qualified, 'preferred', '2.4b', criterion_qualified24b, eventIds);
 
@@ -433,16 +1123,69 @@ router.get('/events/:event/results', async function(req, res) {
 		return;
 	}
 
-	let members = await db.query(sql`select * from member where event_id=${event.id}`);
+	let members = await db.query(
+		sql`
+			select
+				*
+			from member
+			where
+				event_id=${event.id}
+		`
+	);
 	members = members.rows;
 	let openCategories = helpers.getCategoryDescendants('open');
-	let moquery = await db.query(sql`select * from team where event_id=${event.id} and gender='men' and age in (${join(openCategories)}) order by status='finished' desc, score desc, time asc limit 3`);
+	let moquery = await db.query(
+		sql`
+			select
+				*
+			from team
+			where
+				event_id=${event.id}
+				and gender='men'
+				and age in (${join(openCategories)})
+			order by
+				status='finished' desc,
+				score desc,
+				time asc
+			limit 3
+		`
+	);
 	addMembers(members, moquery.rows);
 	let mo = moquery.rows;
-	let xoquery = await db.query(sql`select * from team where event_id=${event.id} and gender='mixed' and age in (${join(openCategories)}) order by status='finished' desc, score desc, time asc limit 3`);
+	let xoquery = await db.query(
+		sql`
+			select
+				*
+			from team
+			where
+				event_id=${event.id}
+				and gender='mixed'
+				and age in (${join(openCategories)})
+			order by
+				status='finished' desc,
+				score desc,
+				time asc
+			limit 3
+		`
+	);
 	addMembers(members, xoquery.rows);
 	let xo = xoquery.rows;
-	let woquery = await db.query(sql`select * from team where event_id=${event.id} and gender='women' and age in (${join(openCategories)}) order by status='finished' desc, score desc, time asc limit 3`);
+	let woquery = await db.query(
+		sql`
+			select
+				*
+			from team
+			where
+				event_id=${event.id}
+				and gender='women'
+				and age in (${join(openCategories)})
+			order by
+				status='finished' desc,
+				score desc,
+				time asc
+			limit 3
+		`
+	);
 	addMembers(members, woquery.rows);
 	let wo = woquery.rows;
 
@@ -453,7 +1196,19 @@ router.get('/events/:event/results', async function(req, res) {
 
 	let defaultDuration = 24;
 
-	let teamquery = await db.query(sql`select * from team where event_id=${event.id} order by status='finished' desc, score desc, time asc`);
+	let teamquery = await db.query(
+		sql`
+			select
+				*
+			from team
+			where
+				event_id=${event.id}
+			order by
+				status='finished' desc,
+				score desc,
+				time asc
+		`
+	);
 	if (teamquery.rowCount === 0) {
 		res.status(404);
 		res.render('error/404', {body: 'Sorry, this event has no results (yet). We are working on it in this very moment.'});
