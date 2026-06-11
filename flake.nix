@@ -21,6 +21,13 @@
           default = pkgs.mkShell {
             nativeBuildInputs = [
               pkgs.html-tidy
+              pkgs.rustc
+              pkgs.evcxr
+              pkgs.cargo
+              pkgs.clippy
+              pkgs.rust-analyzer
+              pkgs.rustfmt
+              pkgs.taplo
               pkgs.nodejs_latest
               (pkgs.python3.withPackages (pp: [
                 pp.beautifulsoup4
