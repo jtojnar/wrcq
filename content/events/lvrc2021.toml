@@ -1,0 +1,9 @@
+name = 'Latvian Rogaining Championships 2021'
+start = 2021-08-14
+end = 2021-08-15
+location = 'Mordanga, Latvia'
+organizer = 'OK Ziemeļkurzeme and LOF'
+level = 'national-lv'
+website = 'https://www.rogaining.lv/jaunumi/data/augsuplades/files/2021/lc2021/1_biletens_LC_roganings_2021-1.pdf'
+results = 'https://www.rogaining.lv/jaunumi/data/augsuplades/files/rezultati/2021/LRC2021/web/results.htm'
+complete = true

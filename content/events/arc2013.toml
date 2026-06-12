@@ -1,0 +1,12 @@
+name = '1st Australasian Rogaining Championships 2013'
+start = 2013-06-22
+end = 2013-06-23
+location = 'Cairns, North Queensland, Australia'
+organizer = 'Qld Rogaine Association'
+level = 'regional-a'
+website = 'http://adventuresportnq.info/arc2013'
+complete = true
+
+[[links]]
+title = 'Original results'
+url = 'http://adventuresportnq.info/events/results/2013-results'

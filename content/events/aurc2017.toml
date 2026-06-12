@@ -1,0 +1,9 @@
+name = 'Australian Rogaining Championships 2017'
+start = 2017-05-06
+end = 2017-05-07
+location = 'Chakola area, Canberra, Australia'
+organizer = 'ACT Rogaining Association'
+level = 'national-a'
+website = 'http://arc2017.act.rogaining.org.au/'
+results = 'http://act.rogaine.asn.au/navlight/ACTRA/17AusChamps/html/results.html'
+complete = true

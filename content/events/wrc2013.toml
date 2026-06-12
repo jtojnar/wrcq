@@ -1,0 +1,16 @@
+name = '11th World Rogaining Championships 2013'
+start = 2013-07-26
+end = 2013-07-27
+location = 'Pustoshka, Pskov region, Russian Federation'
+organizer = 'Russian Rogaining Federation'
+level = 'world'
+website = 'http://wrc2013.com'
+complete = true
+
+[[links]]
+title = 'Original results & splits'
+url = 'http://wrc2013.com/results/wrc2013_results.htm'
+
+[[links]]
+title = 'Map & routes'
+url = 'http://wrc2013.com/gadget/cgi-bin/reitti.cgi?act=map&id=3&kieli='

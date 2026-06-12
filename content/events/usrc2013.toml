@@ -1,0 +1,12 @@
+name = 'US Rogaining Championships 2013'
+start = 2013-07-13
+end = 2013-07-14
+location = 'Connecticut Hill Wildlife Management Area, Newfield, NY, USA'
+organizer = 'Central New York Orienteering'
+level = 'national-us'
+website = 'http://cnyo.us.orienteering.org/2013/html/ROGAINE_XXIII.html'
+complete = true
+
+[[links]]
+title = 'Original results'
+url = 'http://cnyo.us.orienteering.org/2013/results/ROGAINE_XXIII_Results.xls'

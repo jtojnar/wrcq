@@ -1,0 +1,13 @@
+name = 'Finnish Rogaining Championships 2017'
+start = 2017-07-08
+end = 2017-07-09
+location = 'Vuokatti, Finland'
+organizer = 'Sotkamon Jymy Ry'
+level = 'national-f'
+website = 'https://www.sotkamonjymy.fi/kilpailut/8-9-7-2017-vuokatti-rogaining-se/'
+results = 'https://www.sotkamonjymy.fi/@Bin/480509/24H.pdf'
+complete = true
+
+[[links]]
+title = 'Map'
+url = 'https://sotkamonjymy-fi-bin.directo.fi/@Bin/7caedb7edba7010a85fe35ddba4f003a/1533739657/application/pdf/479627/SMrogaining2017Valmis.pdf'

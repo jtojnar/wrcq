@@ -1,0 +1,12 @@
+name = 'North American Rogaining Championships 2012'
+start = 2012-09-29
+end = 2012-09-30
+location = 'Naches, Washington, USA'
+organizer = 'Three15th Rogaine'
+level = 'regional-na'
+website = 'http://www.three15er.com'
+complete = true
+
+[[links]]
+title = 'Original results'
+url = 'http://www.three15er.com/2012-three15er-results.pdf'

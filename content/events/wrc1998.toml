@@ -1,0 +1,8 @@
+name = '3rd World Rogaining Championships 1998'
+start = 1998-08-04
+end = 1998-08-05
+location = 'Kamloops, British Columbia, Canada'
+organizer = 'Sage Orienteering and Rogaining Club'
+level = 'world'
+results = 'http://rogaining.org/index.php?option=com_content&view=article&id=17:3wrc-results&catid=12&Itemid=193'
+complete = true

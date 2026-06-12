@@ -1,0 +1,15 @@
+name = '10th European Rogaining Championships 2013'
+start = 2013-01-26
+end = 2013-01-27
+location = 'La Llacuna, Catalonia, Spain'
+organizer = 'TWBR'
+level = 'regional-e'
+complete = true
+
+[[links]]
+title = 'Original results'
+url = 'http://thewildboar.org/results%2010th%20erc%202013%20la%20llacuna%20%20irf.pdf'
+
+[[links]]
+title = 'Map'
+url = 'http://thewildboar.org/la%20llacuna%20cursa%20erc%2013c.jpg'

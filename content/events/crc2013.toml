@@ -1,0 +1,24 @@
+name = '17th Czech Rogaining Championships 2013'
+start = 2013-06-29
+end = 2013-06-30
+location = 'Broumy, Czech Republic'
+organizer = 'Loko Beroun'
+level = 'national-c'
+website = 'http://www.rogaining2013.cz/en/'
+complete = true
+
+[[links]]
+title = 'Original results'
+url = 'http://www.rogaining2013.cz/en/results/'
+
+[[links]]
+title = 'Splits'
+url = 'http://www.rogaining2013.cz/en/splits'
+
+[[links]]
+title = 'Map 300 DPI (8 MB)'
+url = 'http://www.rogaining2013.cz/download/Rog2013_300.jpg'
+
+[[links]]
+title = 'Map 600 DPI (24 MB)'
+url = 'http://www.rogaining2013.cz/download/Rog2013_600.jpg'

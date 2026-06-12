@@ -1,0 +1,17 @@
+name = 'Russian Rogaining Championships 2014'
+start = 2014-09-13
+end = 2014-09-14
+location = 'Alfyorovo village, Moscow District, Russia'
+organizer = 'Tourist Club Robinzonada'
+level = 'national-r'
+website = 'http://rrc2014.rogaining.ru/'
+results = 'http://rrc2014.rogaining.ru/results/results24.htm'
+complete = true
+
+[[links]]
+title = 'Splits'
+url = 'http://rrc2014.rogaining.ru/results/splits/results24_s.htm'
+
+[[links]]
+title = 'Map'
+url = 'http://rrc2014.rogaining.ru/results/rrc2014_map.jpg'

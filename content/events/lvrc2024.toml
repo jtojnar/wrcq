@@ -1,0 +1,9 @@
+name = 'Latvian rogaining championships 2024'
+start = 2024-05-04
+end = 2024-05-05
+location = 'Jaunkalsnava, Madonas región, Latvia'
+organizer = 'Orientēšanās klubs MEŽMALAS, Latvian Rogaining'
+level = 'national-lv'
+website = 'https://www.rogaining.lv/jaunumi/data/augsuplades/files/2024/LCH2024/LCR2024_B1_pdf.pdf'
+results = 'https://rogaining.lv/jaunumi/data/augsuplades/files/rezultati/2024/LCH2024/results.htm?fbclid=IwZXh0bgNhZW0CMTAAAR2rrXL-3EvCtyJeEFeF2kTcpYlytHbxb64QZoTQkEnmaaPgg0SFRzdMfgg_aem_3zy4OEk0zYwzFHHuayRT8g'
+complete = true

@@ -1,0 +1,9 @@
+name = 'Ukrainian Rogaining Championships 2021'
+start = 2021-07-17
+end = 2021-07-18
+location = 'Krasnogorivka, Poltavskaya oblast, Ukraine'
+organizer = 'Ukrainian Orienteering Federation (UOF)'
+level = 'national-uk'
+website = 'http://orientsumy.com.ua/index.php'
+results = 'http://orientsumy.com.ua/prot/OPEN_SOR-24_2021_(signet).pdf'
+complete = true

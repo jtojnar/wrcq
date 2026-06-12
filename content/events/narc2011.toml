@@ -1,0 +1,11 @@
+name = 'North American Rogaining Championships 2011'
+start = 2011-09-10
+end = 2011-09-11
+location = 'Lundbom Lake, British Columbia, Canada'
+organizer = 'Sage O&R Club'
+level = 'regional-na'
+complete = true
+
+[[links]]
+title = 'Original results'
+url = 'http://www.orienteeringbc.ca/sage/2011Rogaine/NARC%202011%20results.pdf'

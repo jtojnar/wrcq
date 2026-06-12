@@ -1,0 +1,16 @@
+name = 'Russian Rogaining Championships 2012'
+start = 2012-07-21
+end = 2012-07-22
+location = 'Olshaniki village, Pervomayskoe municipality, Leningrad region, Russia'
+organizer = 'Orienteering club Gulf Stream'
+level = 'national-r'
+website = 'http://rrc2012.rogaining.ru/'
+complete = true
+
+[[links]]
+title = 'Original results & splits'
+url = 'http://rrc2012.rogaining.ru/results/results24.htm'
+
+[[links]]
+title = 'Map & routes'
+url = 'http://rogaining.ru/routegadget/cgi-bin/reitti.cgi?act=map&id=65&kieli='

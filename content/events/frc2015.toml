@@ -1,0 +1,9 @@
+name = 'Finnish Rogaining Championships 2015'
+start = 2015-05-16
+end = 2015-05-17
+location = 'Jyväskylä, Finland'
+organizer = 'Kalke Ry'
+level = 'national-f'
+website = 'http://retki.rogaining.fi/?page=2015-jyvaskyla&hl=en'
+results = 'http://retki.rogaining.fi/uploads/2015/24h_result_nojs.html'
+complete = true

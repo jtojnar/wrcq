@@ -1,0 +1,9 @@
+name = 'Latvian Rogaining Championships 2016'
+start = 2016-06-04
+end = 2016-06-05
+location = 'Kosa, Amata parish, Latvia'
+organizer = 'LOF, SK R24.LV'
+level = 'national-lv'
+website = 'http://www.rogaining.lv'
+results = 'http://www.rogaining.lv/jaunumi/data/augsuplades/files/LRC2016/24h_results.html'
+complete = true

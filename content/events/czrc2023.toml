@@ -1,0 +1,9 @@
+name = '27th Czech Rogaining Championships'
+start = 2023-06-25
+end = 2023-06-26
+location = 'Vejvanov, Rokycany district, Czech Republic'
+organizer = 'Loko Beroun Orienteering Club'
+level = 'national-c'
+website = 'https://rogaining2023.ob-lbe.cz/'
+results = 'https://rogaining2023.ob-lbe.cz/vysledky23.pdf'
+complete = true

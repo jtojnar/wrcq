@@ -1,0 +1,12 @@
+name = '16th Czech Rogaining Championships 2012'
+start = 2012-06-23
+end = 2012-06-24
+location = 'Hvězdov, Czech Republic'
+organizer = 'OK Roztoky'
+level = 'national-c'
+website = 'http://roz.ini.cz/rog12/'
+complete = true
+
+[[links]]
+title = 'Original results'
+url = 'http://roz.ini.cz/rog12/konecne-vysledky.pdf'

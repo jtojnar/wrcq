@@ -1,0 +1,9 @@
+name = '16th World Rogaining Championships 2019'
+start = 2019-07-27
+end = 2019-07-28
+location = 'La Molina, Catalunya, Spain'
+organizer = 'IbeRogaine, Federació de Curses d’Orientació de Catalunya (FCOC)'
+level = 'world'
+website = 'https://www.wrc2019.cat/en/'
+results = 'https://www.wrc2019.cat/en/results/'
+complete = true

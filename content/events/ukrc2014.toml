@@ -1,0 +1,17 @@
+name = 'Ukrainian Rogaining Championships 2014'
+start = 2014-05-02
+end = 2014-05-03
+location = 'Prosykuriany, Hlyboka, Ukraine'
+organizer = 'Orienteering club MIDIZ'
+level = 'national-uk'
+website = 'http://midiz.org/images/stories/241-bulleten%203%20uk.doc'
+results = 'http://midiz.org/images/stories/242-resalty%202-3%20maia%202014.doc'
+complete = true
+
+[[links]]
+title = 'Splits'
+url = 'http://midiz.org/images/stories/splity.doc'
+
+[[links]]
+title = 'Map'
+url = 'http://midiz.org/images/dist%202-3-04-2014.jpg'

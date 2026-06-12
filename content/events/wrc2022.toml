@@ -1,0 +1,9 @@
+name = '17th World Rogaining Championships 2022'
+start = 2022-08-26
+end = 2022-08-27
+location = 'Paprsek ski-resort, Czech Republic'
+organizer = 'Czech Rogaining Association'
+level = 'world'
+website = 'https://wrc2022.rogaining.cz/'
+results = 'https://wrc2022.rogaining.cz/live-centrum/'
+complete = true

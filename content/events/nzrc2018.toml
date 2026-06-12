@@ -1,0 +1,9 @@
+name = 'New Zealand Rogaining Championships 2018'
+start = 2018-11-24
+end = 2018-11-25
+location = 'Waiora, Dunedin, New Zealand'
+organizer = 'New Zealand Rogaining Association'
+level = 'national-nz'
+website = 'http://www.rogaine.org.nz/'
+results = 'http://www.rogaine.org.nz/main/Results/NZChamps2018_Results.pdf'
+complete = true

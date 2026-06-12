@@ -1,0 +1,9 @@
+name = '18th Russian Rogaining Championships 2021'
+start = 2021-05-08
+end = 2021-05-09
+location = 'Zalesie, Vladimirskaja oblast, Russia'
+organizer = 'Russian Rogaining Association'
+level = 'national-r'
+website = 'https://zalesye2021.ru/'
+results = 'https://rogaining.ru/download/doc/rrc_2021_results.xlsx'
+complete = true

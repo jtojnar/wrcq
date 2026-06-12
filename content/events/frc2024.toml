@@ -1,0 +1,9 @@
+name = 'Finnish Rogaining Championships 2024'
+start = 2024-09-08
+end = 2024-09-09
+location = 'Ylämaa, Lappeenranta, Finland'
+organizer = 'Rogaining Finland'
+level = 'national-f'
+website = 'https://lappeenriento.fi/suunnistus/suunnistuskilpailut/sm-roga-2024/?fbclid=IwY2xjawGAh-5leHRuA2FlbQIxMAABHdr7t0lJTKcZtJwiJzVA4rHwKFeej4Kis6hNSPfEmwjo78CC0CAHukvPrw_aem_UwGA1D5gRbCAk9LO4GHXqw'
+results = 'https://lappeenriento.fi/wp-content/uploads/2024/09/24h-results.htm'
+complete = true

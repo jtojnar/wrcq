@@ -1,0 +1,9 @@
+name = 'Russian Rogaining Championships 2019'
+start = 2019-08-24
+end = 2019-08-25
+location = 'Verkh-Neyvinsky, Novouralsk, Sverdlovsk region, Russia'
+organizer = 'Sverdlovsk Section of the Russian Rogaining Association'
+level = 'national-r'
+website = 'https://rogaining-ural.ru/'
+results = 'https://rogaining-ural.ru/upload/results/rrc20190824/results_total.html'
+complete = true

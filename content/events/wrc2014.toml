@@ -1,0 +1,25 @@
+name = '12th World Rogaining Championships 2014'
+start = 2014-08-16
+end = 2014-08-17
+location = 'Black Hills, South Dakota, USA'
+organizer = 'Orienteering USA, Black Hills OC, and Peak Assurance, Inc.'
+level = 'world'
+website = 'http://peakassurance.net/12WRC_2014.html'
+results = 'http://peakassurance.net/Results.html'
+complete = true
+
+[[links]]
+title = 'Splits'
+url = 'http://peakassurance.net/Results_files/splits_v8.pdf'
+
+[[links]]
+title = 'WRC 2014 Assessment'
+url = 'http://pqe.rogaining.org/files/events/wrc2014/WRC_2014_Assessment.pdf'
+
+[[links]]
+title = 'Map of WRC Champions'
+url = 'http://www.tak-soft.com/teenused/ajavott/wrc2014/ACELog.jpg'
+
+[[links]]
+title = 'Express of Interest'
+url = 'http://pqe.rogaining.org/files/events/wrc2014/BHOC_WRC_2014_Bid.pdf'

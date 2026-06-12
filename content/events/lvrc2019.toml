@@ -1,0 +1,9 @@
+name = 'Latvian Rogaining Championships 2019'
+start = 2019-06-08
+end = 2019-06-09
+location = 'Inčukalns, Latvia'
+organizer = 'OK Ziemeļkurzeme'
+level = 'national-lv'
+website = 'http://www.rogaining.lv/index.php?subaction=showfull&id=1560159047&archive=&start_from=&ucat=1&include_id=news_id#pilnais'
+results = 'http://www.rogaining.lv/jaunumi/data/augsuplades/files/rezultati/2019/LC/results_.htm'
+complete = true

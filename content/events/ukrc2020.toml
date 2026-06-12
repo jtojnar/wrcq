@@ -1,0 +1,9 @@
+name = 'Ukrainian Rogaining Championships 2020'
+start = 2020-10-31
+end = 2020-11-01
+location = 'Poljanica, Kharkhivskaja oblast, Ukraine'
+organizer = 'Ukrainian Orienteering Federation (UOF)'
+level = 'national-uk'
+website = 'http://orienteering.kh.ua/images/events/885_bulletin2.pdf'
+results = 'http://orientsumy.com.ua/index.php'
+complete = true

@@ -1,0 +1,20 @@
+name = 'Russian Rogaining Championships 2013'
+start = 2013-10-05
+end = 2013-10-06
+location = 'Khvalynsky Alpine Ski Resort, Khvalynsky Municipal District of Saratov, Russia'
+organizer = 'Saratov Rogain'
+level = 'national-r'
+website = 'http://rrc2013.rogaining.ru/'
+complete = true
+
+[[links]]
+title = 'Original results'
+url = 'http://rrc2013.rogaining.ru/results/results.htm'
+
+[[links]]
+title = 'Splits'
+url = 'http://rrc2013.rogaining.ru/results/splits/results.htm'
+
+[[links]]
+title = 'Map & routes'
+url = 'http://rogaining.ru/routegadget/cgi-bin/reitti.cgi?act=map&id=72&kieli='

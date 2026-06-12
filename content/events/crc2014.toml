@@ -1,0 +1,17 @@
+name = '18th Czech Rogaining Championships 2014'
+start = 2014-06-28
+end = 2014-06-29
+location = 'Velke Karlovice, Czech Republic'
+organizer = 'SKOB Zlin'
+level = 'national-c'
+website = 'http://rogaining2014.skob-zlin.cz/'
+results = 'http://rogaining2014.skob-zlin.cz/wp-content/uploads/2014/07/mcr2014_results_all.pdf'
+complete = true
+
+[[links]]
+title = 'Splits'
+url = 'http://rogaining2014.skob-zlin.cz/wp-content/uploads/2014/07/mezicasy_abs.html'
+
+[[links]]
+title = 'Map & routes'
+url = 'http://play-map.com/draw.php?id=67'

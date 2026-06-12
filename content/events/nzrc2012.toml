@@ -1,0 +1,16 @@
+name = 'New Zealand Rogaining Championships 2012'
+start = 2012-11-24
+end = 2012-11-25
+location = 'Dunedin, New Zealand'
+organizer = 'New Zealand Rogaining Association'
+level = 'national-nz'
+website = 'http://www.rogaine.org.nz/nzchamps2012/eventinfo.htm'
+complete = true
+
+[[links]]
+title = 'Original results & splits'
+url = 'http://www.rogaine.org.nz/nzchamps2012/results.htm'
+
+[[links]]
+title = "Map & winners' route"
+url = 'http://www.rogaine.org.nz/nzchamps2012/NZChamps2012_WinnersRoute.pdf'

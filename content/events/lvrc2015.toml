@@ -1,0 +1,13 @@
+name = 'Latvian Rogaining Championships 2015'
+start = 2015-07-18
+end = 2015-07-19
+location = 'Ranka, Lizums and Jaunpiebalga parish, Gulbene county, Latvia'
+organizer = 'Latvian Orienteering Federation'
+level = 'national-lv'
+website = 'http://rogaining.lv/jaunumi/data/augsuplades/files/2.%20bulletin%202015%281%29.pdf'
+results = 'http://rogaining.lv/jaunumi/data/augsuplades/files/rezultati/2015/LCR/rez/ALL_24h.htm'
+complete = true
+
+[[links]]
+title = 'Event map'
+url = 'http://rogaining.lv/jaunumi/data/augsuplades/files/LRC2015/lcr2015.jpg'

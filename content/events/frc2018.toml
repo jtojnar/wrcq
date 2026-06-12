@@ -1,0 +1,9 @@
+name = 'Finnish Rogaining Championships 2018'
+start = 2018-09-08
+end = 2018-09-09
+location = 'Jämi, Finland'
+organizer = 'ACT Ry, Finnish Rogaining Association'
+level = 'national-f'
+website = 'http://retki.rogaining.fi'
+results = 'http://retki.rogaining.fi/index.php?page=results-3&hl=en'
+complete = true

@@ -1,0 +1,13 @@
+name = '10th World Rogaining Championships 2012'
+start = 2012-08-31
+end = 2012-09-01
+location = 'Prebuz, Czech Republic'
+organizer = 'Czech Rogaining Association'
+level = 'world'
+website = 'http://www.rogaining.cz/wrc2012/en/'
+media = '<a href="http://rogaining.com/wrcs/10wrc2012-estonian-tv-interview-with-open-male-winners">TV Interview with WRC2012 Champions Rain and Silver Eensaar</a>'
+complete = true
+
+[[links]]
+title = 'Original results & splits'
+url = 'http://www.rogaining.cz/wrc2012/en/results.html'

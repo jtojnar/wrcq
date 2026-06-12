@@ -1,0 +1,16 @@
+name = 'Australian Rogaining Championships 2012'
+start = 2012-05-05
+end = 2012-05-06
+location = 'Angorichina Village, South Australia, Australia'
+organizer = 'South Australian Rogaining Association'
+level = 'regional-a'
+website = 'http://sa.rogaine.asn.au/index.php?option=com_content&view=article&id=77&Itemid=71'
+complete = true
+
+[[links]]
+title = 'Original results & splits'
+url = 'http://act.rogaine.asn.au/navlight/SARA/AusChamps2012/html/'
+
+[[links]]
+title = 'Map with checkpoints on Google Earth'
+url = 'http://act.rogaine.asn.au/navlight/SARA/AusChamps2012/html/event.kml'

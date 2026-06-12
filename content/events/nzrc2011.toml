@@ -1,0 +1,16 @@
+name = 'New Zealand Rogaining Championships 2011'
+start = 2011-03-19
+end = 2011-03-20
+location = 'Meadowbank Woolshed, Blenheim, New Zealand'
+organizer = 'New Zealand Rogaining Association'
+level = 'national-nz'
+website = 'http://rogaine.org.nz/nzchamps2011/eventinfo.htm'
+complete = true
+
+[[links]]
+title = 'Original results & splits'
+url = 'http://rogaine.org.nz/nzchamps2011/results.htm'
+
+[[links]]
+title = "Map & winners' route"
+url = 'http://rogaine.org.nz/nzchamps2011/nzchamps2011_map.jpg'

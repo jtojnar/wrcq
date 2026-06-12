@@ -1,0 +1,12 @@
+name = '11th European Rogaining Championships 2014'
+start = 2014-06-07
+end = 2014-06-08
+location = 'Põlva County, Estonia'
+organizer = 'XT Sport Estonia'
+level = 'regional-e'
+results = 'http://xtsport.ee/ftp/erc2014/EMRogain_web_eng/results.htm'
+complete = true
+
+[[links]]
+title = 'Map & routes'
+url = 'http://www.srd.ee/rg/cgi-bin/reitti.cgi?act=map&id=9&kieli='

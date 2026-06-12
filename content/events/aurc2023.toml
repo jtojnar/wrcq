@@ -1,0 +1,9 @@
+name = 'Australian Rogaining Championships'
+start = 2023-09-30
+end = 2023-10-01
+location = 'Goobang National Park, NSW, Australia'
+organizer = 'NSW Rogaining Association'
+level = 'national-a'
+website = 'https://nswrogaining.org/2023-aus-champs/'
+results = 'https://rogaine.asn.au/results/43rd-2023-30-september-1-october-the-edge-parkes-nsw'
+complete = true

@@ -1,0 +1,16 @@
+name = '9th European Rogaining Championships 2012'
+start = 2012-05-06
+end = 2012-05-07
+location = 'Moletai, Lithuania'
+organizer = 'G-Sportas – endurance sport club\r\nJalle – orienteering club'
+level = 'regional-e'
+website = 'http://erc2012.g-sportas.lt'
+complete = true
+
+[[links]]
+title = 'Original results & splits'
+url = 'http://erc2012.g-sportas.lt/index.php/results'
+
+[[links]]
+title = '4 best route choices'
+url = 'http://erc2012.g-sportas.lt/data/WO.jpg'

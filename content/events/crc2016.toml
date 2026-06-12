@@ -1,0 +1,9 @@
+name = '20th Czech Rogaining Championships 2016'
+start = 2016-07-02
+end = 2016-07-03
+location = 'Orlicke Zahori, Czech Republic'
+organizer = 'KOB Dobruska, Czech Rogaining Association'
+level = 'national-c'
+website = 'http://www.dobruska.cz/kob/rogaining2016/'
+results = 'http://www.dobruska.cz/kob/rogaining2016/index.php?stranka=vysledky'
+complete = true

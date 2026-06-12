@@ -1,0 +1,9 @@
+name = '24th Czech Rogaining Championships 2020'
+start = 2020-06-20
+end = 2020-06-21
+location = 'Dubenec, Příbram District, Czech Republic'
+organizer = 'Czech Rogaining Association'
+level = 'national-c'
+website = 'https://mcr2020.rogaining.cz/cs/'
+results = 'https://mcr2020.rogaining.cz/en/results.html'
+complete = true

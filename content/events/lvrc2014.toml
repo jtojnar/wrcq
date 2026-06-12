@@ -1,0 +1,13 @@
+name = 'Latvian Rogaining Championships 2014'
+start = 2014-06-12
+end = 2014-06-13
+location = 'Lejasciema, Gulbene county, Latvia'
+organizer = 'OK Pūznis'
+level = 'national-lv'
+website = 'http://rogaining.lv/'
+results = 'http://rogaining.lv/jaunumi/data/augsuplades/files/rezultati/2014/LRC9/rez/ALL_24.htm'
+complete = true
+
+[[links]]
+title = 'Map & routes'
+url = 'http://rogaining.lv/jaunumi/data/augsuplades/files/rezultati/2014/LRC9/rez/route_choice24.jpg'

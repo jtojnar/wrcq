@@ -1,0 +1,9 @@
+name = 'US Rogaining Championships 2021'
+start = 2021-05-29
+end = 2021-05-30
+location = 'Sprague Washington, USA'
+organizer = 'Northwest Nav Races and Cascade Orienteering Club'
+level = 'national-us'
+website = 'https://navraces.com/events/scablands/'
+results = 'https://navraces.com/wp-content/uploads/2021/04/Scablands-Navigation-Race-2021-Results-v20210603.pdf'
+complete = true

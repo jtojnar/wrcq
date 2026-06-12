@@ -1,0 +1,13 @@
+name = 'Russian Rogaining Championships 2017'
+start = 2017-09-23
+end = 2017-09-24
+location = 'Bogorodskiy region, Russia'
+organizer = 'Nizhegorodsk Section of the Russian Rogaining Association'
+level = 'national-r'
+website = 'http://nn.rogaine.ru/championshiprogeining2017'
+results = 'http://rogaining.ru/en/news/rrc2017-results'
+complete = true
+
+[[links]]
+title = 'Map'
+url = 'http://nn.rogaine.ru/images/maps/map_rrc2017_final.jpg'

@@ -1,0 +1,9 @@
+name = '18th World Rogaining Championships'
+start = 2023-06-29
+end = 2023-06-30
+location = 'Northstar Resort, Lake Tahoe in California, USA'
+organizer = 'Orienteering USA'
+level = 'world'
+website = 'https://cal-o-fest.com/stage_10'
+results = 'https://cal-o-fest.com/results?stage=10&display=class'
+complete = true

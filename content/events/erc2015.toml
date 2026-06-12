@@ -1,0 +1,17 @@
+name = '12th European Rogaining Championships 2015'
+start = 2015-06-27
+end = 2015-06-28
+location = 'Černé Údolí, Novohradské hory, Czech Republic'
+organizer = 'FS Praha & Czech Rogaining Association'
+level = 'regional-e'
+website = 'http://www.erc2015.cz/'
+results = 'http://www.erc2015.cz/results.html'
+complete = true
+
+[[links]]
+title = 'Event map'
+url = 'http://www.erc2015.cz/assets/files/documents/Map_erc2015_small.jpg'
+
+[[links]]
+title = 'Routes (Play-Map)'
+url = 'http://play-map.com/event.php?id=119&lang=english'

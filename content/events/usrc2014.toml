@@ -1,0 +1,17 @@
+name = 'US Rogaining Championships 2014'
+start = 2014-09-06
+end = 2014-09-07
+location = 'Panoche Hills, California, USA'
+organizer = 'Get Lost!! Running, Racing, Inc., USA'
+level = 'national-us'
+website = 'http://getlostxx.com/Get_Lost_in/Panoche_Hills/2014'
+results = 'http://getlostxx.com/Get_Lost_in/Panoche_Hills/2014/results'
+complete = true
+
+[[links]]
+title = 'Splits'
+url = 'http://getlostxx.com/Get_Lost_in/Panoche_Hills/2014/splits'
+
+[[links]]
+title = 'Map'
+url = 'http://getlostxx.com/maps/Panoche_Hills_2013.gif'

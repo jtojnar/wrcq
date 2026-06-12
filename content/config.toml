@@ -1,0 +1,5 @@
+manager_email = 'jan.tojnar@rogaining.cz'
+list_is_preliminary = true
+upcoming_wrc_year = 2025
+# Three years before the event
+statute_of_limitations = 2022-01-01

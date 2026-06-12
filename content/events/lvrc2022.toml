@@ -1,0 +1,9 @@
+name = '15th Latvian rogaining championships 2022'
+start = 2022-07-09
+end = 2022-07-10
+location = 'Puša, Latvia'
+organizer = 'Latvian Rogaining Association'
+level = 'national-lv'
+website = 'https://www.rogaining.lv/jaunumi/data/augsuplades/files/2022/LRC2022/Pirmsstarta_info.pdf'
+results = 'https://qrevents.lv/qr/rezultati/docs/rez_LCR22.htm'
+complete = true

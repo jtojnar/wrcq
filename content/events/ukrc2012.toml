@@ -1,0 +1,16 @@
+name = 'Ukrainian Rogaining Championships 2012'
+start = 2012-07-07
+end = 2012-07-08
+location = 'Migovo, Chernivtsi oblast, Ukraine'
+organizer = 'Orienteering club MIDIZ'
+level = 'national-uk'
+website = 'http://midiz.org/index.php?option=com_content&view=article&id=214:rogein&catid=3:new&Itemid=4'
+complete = true
+
+[[links]]
+title = 'Original results'
+url = 'http://www.midiz.org/images/stories/splity.xls'
+
+[[links]]
+title = "Map & winners' route"
+url = 'http://www.midiz.org/images/rondel.jpg'

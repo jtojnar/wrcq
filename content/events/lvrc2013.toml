@@ -1,0 +1,16 @@
+name = 'Latvian Rogaining Championships 2013'
+start = 2013-08-24
+end = 2013-08-25
+location = 'Silisi house, Tome parish, Kegums district, Latvia'
+organizer = 'Latvian Orienteering Federation'
+level = 'national-lv'
+website = 'http://rogaining.lv/jaunumi/data/augsuplades/files/LCR%203%20bulletin%202013%281%29.pdf'
+complete = true
+
+[[links]]
+title = 'Original results & splits'
+url = 'http://rogaining.lv/jaunumi/data/augsuplades/files/rezultati/2013/LRC/rez/ALL24K.htm'
+
+[[links]]
+title = 'Map & routes'
+url = 'http://rogaining.lv/jaunumi/data/augsuplades/files/route_choice(1).jpg'

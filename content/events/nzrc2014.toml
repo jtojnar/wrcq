@@ -1,0 +1,12 @@
+name = 'New Zealand Rogaining Championships 2014'
+start = 2014-12-06
+end = 2014-12-07
+location = 'Nevis valley, Central Otago, New Zealand'
+organizer = 'New Zealand Rogaining Association'
+level = 'national-nz'
+website = 'http://www.rogaine.org.nz/'
+complete = true
+
+[[links]]
+title = 'Original results'
+url = 'http://www.rogaine.org.nz/main/Results/NZChamps2014Results.htm'

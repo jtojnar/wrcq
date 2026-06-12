@@ -1,0 +1,9 @@
+name = 'Finnish Rogaining Championships 2021'
+start = 2021-07-15
+end = 2021-07-16
+location = 'Ylläs, Finland'
+organizer = 'Finnish Rogaining Association'
+level = 'national-f'
+website = 'https://suuretseikkailijat.com/2021/01/16/rogaining-finnish-championships-2021/'
+results = 'https://kisa.maailmasta.fi/Races/1012/xtulosluettelo.php?RID=1012'
+complete = true

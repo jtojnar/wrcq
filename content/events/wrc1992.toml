@@ -1,0 +1,8 @@
+name = '1st World Rogaining Championships 1992'
+start = 1992-10-09
+end = 1992-10-10
+location = 'Beechworth, Victoria, Australia'
+organizer = 'Australian Rogaining Association'
+level = 'world'
+results = 'http://rogaining.org/index.php?option=com_content&view=article&id=15:1wrc-results&catid=12&Itemid=193'
+complete = false

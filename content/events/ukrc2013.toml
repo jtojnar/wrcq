@@ -1,0 +1,12 @@
+name = 'Ukrainian Rogaining Championships 2013'
+start = 2013-05-25
+end = 2013-05-26
+location = 'Bukovina, Chernivtsi oblast, Ukraine'
+organizer = 'Orienteering club MIDIZ'
+level = 'national-uk'
+website = 'http://www.midiz.org/images/stories/bulleten%201-3%20uk%202013-7-05-13.doc'
+complete = true
+
+[[links]]
+title = 'Original results'
+url = 'http://www.midiz.org/images/stories/protokolydoc.doc'

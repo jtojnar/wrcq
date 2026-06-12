@@ -1,0 +1,20 @@
+name = 'US Rogaining Championships 2011'
+start = 2011-11-05
+end = 2011-11-06
+location = 'Henry Coe State Park, California, USA'
+organizer = 'Get Lost!! Running, Racing, Inc.'
+level = 'national-us'
+website = 'http://getlostxx.com/Get_Lost_in/Henry_Coe/2011'
+complete = true
+
+[[links]]
+title = 'Original results'
+url = 'http://getlostxx.com/Get_Lost_in/Henry_Coe/2011/results'
+
+[[links]]
+title = 'Splits'
+url = 'http://getlostxx.com/Get_Lost_in/Henry_Coe/2011/splits'
+
+[[links]]
+title = 'Map & routes'
+url = 'http://getlostxx.com/cgi-bin/gadget/reitti.cgi?act=map&id=6&kieli='
