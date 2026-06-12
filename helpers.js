@@ -78,11 +78,6 @@ export function block(name) {
 	return val;
 }
 
-export function setTitle(value, context) {
-	blocks.title = [value];
-	return value;
-}
-
 export function index(index, context) {
 	return index + 1;
 }

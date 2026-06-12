@@ -95,7 +95,16 @@ const allowCrossDomain = function(req, res, next) {
 
 app.set('views', path.join(__dirname, 'view'));
 app.set('port', process.env.PORT || 5000);
-app.engine('hbs', hbs({defaultLayout: 'layout', extname: '.hbs', layoutsDir: 'view', partialsDir: path.join(__dirname, 'view', 'partial'), helpers: helpers}));
+app.engine('hbs', hbs({
+	defaultLayout: false,
+	extname: '.hbs',
+	partialsDir: [
+		// For layout
+		path.join(__dirname, 'view'),
+		path.join(__dirname, 'view', 'partial'),
+	],
+	helpers: helpers,
+}));
 app.set('view engine', 'hbs');
 
 app.use(cookieParser());

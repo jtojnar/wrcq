@@ -1,4 +1,6 @@
-<h1>{{setTitle 'Page Not Found'}}</h1>
+{{#> layout}}
+{{#*inline 'title'}}Page Not Found{{/inline}}
+<h1>{{> title}}</h1>
 {{#unless body}}
 <p>The page you requested could not be found. It is possible that the address is
 incorrect, or that the page no longer exists. Please use a search engine to find
@@ -8,3 +10,4 @@ what you are looking for.</p>
 {{/unless}}
 
 <p><small>error 404</small></p>
+{{/layout}}

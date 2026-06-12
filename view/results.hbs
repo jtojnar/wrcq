@@ -1,4 +1,6 @@
-<h1>{{setTitle title}}</h1>
+{{#> layout}}
+{{#*inline 'title'}}{{title}}{{/inline}}
+<h1>{{> title}}</h1>
 <ul class="nav nav-tabs" id="tabs">
 <li class="active"><a href="#main" data-toggle="tab">Main categories</a></li>
 <li><a href="#all" data-toggle="tab">Overall results</a></li>
@@ -26,7 +28,8 @@
 <br class="clearfix">
 {{> result}}
 </div>
-</div> 
+</div>
+
 {{#extend 'bottom'}}
 <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -97,3 +100,4 @@ thead {
 }
 </style>
 {{/extend}}
+{{/layout}}

@@ -1,7 +1,10 @@
+{{#> layout}}
+{{#*inline 'title'}}{{title}}{{/inline}}
 <p class="pull-right"><a class="btn btn-info" href="#past">Jump to past prequalifying events ↓</a></p>
-<h1 id="current">{{setTitle title}}</h1>
+<h1 id="current">{{> title}}</h1>
 {{> event events identity=identity}}
 
 <p class="pull-right"><a class="btn btn-info" href="#current">Jump to current prequalifying events ↑</a></p>
 <h1 id="past">Past prequalifying events</h1>
 {{> event pastEvents identity=identity}}
+{{/layout}}
