@@ -48,10 +48,10 @@ class TeamResult:
     nr: str
     team_class: str
     team_name: str
-    members: list[Member] = field(default_factory=list)
-    time: str = ""
-    points: str = ""
-    penalty: str = ""
+    members: list[Member]
+    time: str
+    points: str
+    penalty: str
 
 
 def parse_html(html_content: bytes) -> tuple[list[str], list[list[str]]]:
