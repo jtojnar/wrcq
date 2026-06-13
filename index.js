@@ -188,13 +188,6 @@ router.get('/', async function(req, res) {
 			select
 				*
 			from event
-			left join (
-				select
-					event_id
-				from team
-				group by event_id
-			) as team
-			on team.event_id = event.id
 			where level='world'
 			order by start asc`);
 	addEventLinks(links, eventsQuery.rows);
@@ -222,13 +215,6 @@ router.get('/events', async function(req, res) {
 			select
 				*
 			from latest
-			left join (
-				select
-					event_id
-				from team
-				group by event_id
-			) as team
-			on team.event_id = latest.id
 			where rk <= 2
 			order by
 				level='world' desc,
@@ -252,13 +238,6 @@ router.get('/events', async function(req, res) {
 			select
 				*
 			from latest
-			left join (
-				select
-					event_id
-				from team
-				group by event_id
-			) as team
-			on team.event_id = latest.id
 			where
 				rk > 2
 				or "end" <= ${STATUTE_OF_LIMITATIONS}
