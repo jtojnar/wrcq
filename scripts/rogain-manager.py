@@ -111,9 +111,9 @@ def process_results(rows: list[list[str]], headers: list[str]) -> list[TeamResul
         members_raw = row[members_idx].split("<br/>")
         time_points_penalty = row[time_idx].split("<br/>")
 
-        time = time_points_penalty[0]
-        points = time_points_penalty[1]
-        penalty = time_points_penalty[2]
+        time = time_points_penalty[0] or "0"
+        points = time_points_penalty[1] or "0"
+        penalty = time_points_penalty[2] or "0"
 
         members = [m for member in members_raw if (m := parse_member(member))]
 
