@@ -10,18 +10,8 @@
 	<td>{{location}}</td>
 	<td>{{organizer}}</td>
 	<td><ul class="list-unstyled">
-		{{#if event_id}}
-			{{#if complete}}
-				<li><a href="/events/{{slug}}/results">PQE Results</a></li>
-			{{else}}
-				{{#if ../identity}}
-					<li><a href="/events/{{slug}}/upload"><span class="glyphicon glyphicon-upload"></span> Upload PQE Results</a></li>
-				{{/if}}
-			{{/if}}
-		{{else}}
-			{{#if ../identity}}
-				<li><a href="/events/{{slug}}/upload"><span class="glyphicon glyphicon-upload"></span> Upload PQE Results</a></li>
-			{{/if}}
+		{{#if complete}}
+			<li><a href="/events/{{slug}}/results">PQE Results</a></li>
 		{{/if}}
 		{{#if results}}
 			<li><a href="{{results}}">Original results</a></li>
