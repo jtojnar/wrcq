@@ -16,7 +16,7 @@ test:
 	# Check that the following build.
 	cat scripts/samples/rogain-manager/erc2024.html | python3 scripts/html2json.py | jq -L scripts --from-file scripts/erc2024.jq > /dev/null
 
-	cat scripts/samples/rogain-manager/lvrc2022.html | python3 scripts/html2json.py | jq -L scripts --from-file scripts/lvrc2022.jq > /dev/null
+	cat scripts/samples/rogain-manager/lvrc2022.html | tidy -q | python3 scripts/html2json.py | jq -L scripts --from-file scripts/lvrc2022.jq > /dev/null
 
 	cat scripts/samples/rogain-manager/lvrc2024.html | tidy -q | python3 scripts/html2json.py | jq -L scripts --from-file scripts/lvrc2024.jq > /dev/null
 
