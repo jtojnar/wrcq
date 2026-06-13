@@ -54,7 +54,7 @@ class TeamResult:
     penalty: str = ""
 
 
-def parse_html(html_content: str) -> tuple[list[str], list[list[str]]]:
+def parse_html(html_content: bytes) -> tuple[list[str], list[list[str]]]:
     soup = BeautifulSoup(html_content, "html.parser")
 
     table = soup.find("table")
@@ -130,14 +130,14 @@ def process_results(rows: list[list[str]], headers: list[str]) -> list[TeamResul
     return results
 
 
-def fetch_html(url: str) -> str:
+def fetch_html(url: str) -> bytes:
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
     }
 
     response = requests.get(url, headers=headers)
     response.raise_for_status()
-    return response.text
+    return response.content
 
 
 def extract_gender_age(category: str) -> tuple[str, str]:
