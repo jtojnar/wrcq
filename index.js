@@ -104,6 +104,9 @@ app.engine('hbs', hbs({
 		path.join(__dirname, 'view', 'partial'),
 	],
 	helpers: helpers,
+	compilerOptions: {
+		preventIndent: true,
+	}
 }));
 app.set('view engine', 'hbs');
 
