@@ -2245,9 +2245,8 @@
       <TeamMemberResult>
         <Person>
           <Name>
-            <Family>
-            </Family>
-            <Given>Jukka Toivari</Given>
+            <Family>Toivari</Family>
+            <Given>Jukka</Given>
           </Name>
           <Nationality code="FIN"/>
           <BirthDate>1976-04-15</BirthDate>
@@ -8749,18 +8748,6 @@
         <Country code="FIN"/>
       </Organisation>
       <BibNumber>66</BibNumber>
-      <TeamMemberResult>
-        <Person>
-          <Name>
-            <Family>
-            </Family>
-            <Given>
-            </Given>
-          </Name>
-          <Nationality code="FIN"/>
-          <BirthDate>1972-05-20</BirthDate>
-        </Person>
-      </TeamMemberResult>
       <TeamMemberResult>
         <Person>
           <Name>
