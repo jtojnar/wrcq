@@ -37,7 +37,7 @@
  gender="men" age="superveteran" duration="24">
     <member firstname="Jan" lastname="Marek" country="CZE" />
     <member firstname="Vláďa" lastname="Mezník" country="CZE" />
-  </team>&amp;
+  </team>
   <team id="7" score="1810" time="23:48:30" penalty="0" name="chromajzl &amp; vožungr"
  gender="men" age="open" duration="24">
     <member firstname="Michal" lastname="Škroch" country="CZE" />
