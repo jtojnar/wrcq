@@ -20,7 +20,7 @@ name;penalty;score;km;time;gender;age;id;member1firstname;member1lastname;member
 ;0;2870;63.0;23:54:39;men;superveteran;180;Mike;HOTCHKIS;AUS;Neil;HAWTHORNE;AUS
 ;0;2740;62.5;23:38:10;men;open;207;Paul;GUARD;AUS;Tony;SCOTT;AUS
 ;0;2690;61.0;23:40:02;women;open;202;Katie;BOLT;NZL;Emily;FORNE;NZL
-;0;2690;57.9;23:56:08;mixed;veteran;31;Andrew;SMITH;NZL;Toni;BACHVAROVA;NZL
+;0;2690;57.9;23:56:08;mixed;veteran;31;Andrew;SMITH;AUS;Antonia;BACHVAROVA;AUS
 ;0;2680;62.7;23:43:57;men;superveteran;215;David;ROWLANDS;AUS;James;RUSSELL;AUS
 ;0;2670;61.5;23:37:28;men;open;185;Robb;SIMPSON;NZL;Nick;HARRIS;NZL
 ;0;2650;63.7;23:20:51;mixed;open;218;Jacobus;VAN ZYL;RSA;Janneke;LEASK;RSA
@@ -44,7 +44,7 @@ name;penalty;score;km;time;gender;age;id;member1firstname;member1lastname;member
 ;0;2450;60.7;23:50:14;men;open;359;Martin;DENT;AUS;Brad;WHITE;AUS
 ;0;2440;54.0;23:40:25;women;open;219;Susie;SPRAGUE;AUS;Selina;STOUTE;AUS
 ;0;2430;53.6;23:35:34;men;ultraveteran;177;Merv;TREASE;AUS;Vic;SEDUNARY;AUS
-;0;2430;52.3;23:52:30;men;youth;351;Levi;HIBBERT;NZL;Tom;SPENCER;NZL
+;0;2430;52.3;23:52:30;men;youth;351;Levi;HIBBERT;NZL;Thomas;SPENCER;NZL
 ;0;2420;62.4;23:16:29;men;youth;211;Tristan;WHITE;AUS;Mitchell;LINDBECK;AUS
 ;0;2400;56.8;23:25:21;women;open;146;Nicki;REHN;CAN;Linda;KILPATRICK;AUS
 ;0;2400;55.3;23:35:55;mixed;veteran;349;Jenni;BLYLEVEN;NZL;Peter;MONTGOMERY;NZL

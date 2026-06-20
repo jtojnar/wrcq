@@ -1,8 +1,8 @@
 id;name;gender;age;member1lastname;member1firstname;member1country;member2lastname;member2firstname;member2country;member3lastname;member3firstname;member3country;member4lastname;member4firstname;member4country;member5lastname;member5firstname;member5country;time;original_score;penalty;score;status
 49; Santa and his Reindeer ;men;open;Forne;Chris;NZL;Hamilton;Greig;NZL;;;;;;;;;;23:43:24;3590;0;3590;
-41; Team Tumeke ;men;open;Thompson;Ryan;NZL;Farrant;Tim;NZL;;;;;;;;;;23:53:25;3010;0;3010;
+41; Team Tumeke ;men;open;Thompson;Ryan;NZL;Farrant;Timothy;NZL;;;;;;;;;;23:53:25;3010;0;3010;
 28; Georgia and Lara ;women;open;Prince;Lara;NZL;Whitla;Georgia;NZL;;;;;;;;;;23:40:19;3000;0;3000;
-22; Stumbleweed ;mixed;veteran;Devine;Keri;NZL;Smith;Rob;NZL;;;;;;;;;;23:35:37;2620;0;2620;
+22; Stumbleweed ;mixed;veteran;Devine;Keri;NZL;Smith;Robert;NZL;;;;;;;;;;23:35:37;2620;0;2620;
 45; Late Wakatipu ;men;open;Lucas;Tom;NZL;Kelly;Mike;NZL;;;;;;;;;;23:52:17;2530;0;2530;
 60; Theo and Selena ;mixed;open;Metherell;Selena;NZL;Wordsworth;Theo;NZL;;;;;;;;;;23:39:32;2440;0;2440;
 43; kelly + aaron ;mixed;open;Scott;Aaron;NZL;Mabbett;Kelly;NZL;;;;;;;;;;22:10:00;2330;0;2330;

@@ -4,7 +4,7 @@ id;name;gender;age;member1lastname;member1firstname;member1country;member2lastna
 154;Team Salomon;men;open;Jürgen;Einpaul;EST;Tammemäe;Timmo;EST;;;;;;;;;;23:50:21;3760;0;3760;
 153;Team France Rogaining;men;open;COCHEY;BENOIT;FRA;PLAGNOL;Francois;FRA;;;;;;;;;;23:23:38;3710;0;3710;
 342;ISOSTAR LATVIA;mixed;veteran;Mankus;Guntars;LAT;PUKITE;IRITA;LAT;;;;;;;;;;23:54:51;3330;0;3330;
-122;Fuby Sport;men;open;JAUME FOLGUERA;Robert;ESP;Herrero Casas;Albert;ESP;Olivar Roldán;Aurelio Antonio;ESP;;;;;;;23:49:20;3240;0;3240;
+122;Fuby Sport;men;open;Folguera;Jaume Robert;ESP;Herrero Casas;Albert;ESP;Olivar Roldán;Aurelio Antonio;ESP;;;;;;;23:49:20;3240;0;3240;
 198;Rogain and co;mixed;open;Chatelon;David;FRA;Chatelon;Lucile;FRA;Roux;Nicolas;FRA;;;;;;;23:48:54;3170;0;3170;
 311;MARMOT-CATALUNYA;men;veteran;MASSAGUÉ MIR;SEBASTIÁ;ESP;MAYOLAS;PEP;ESP;Doménech Amorós;Jordi;ESP;;;;;;;23:38:55;2970;0;2970;
 115;EUSKAT;men;open;Otamendi Zurutuza;Aitor;ESP;Tarrés Villegas;David;ESP;;;;;;;;;;23:52:08;2960;0;2960;
@@ -124,7 +124,7 @@ id;name;gender;age;member1lastname;member1firstname;member1country;member2lastna
 124;HinoCat Team;men;open;Fargas Vila;Jordi;ESP;Yañez Vallverdu;Adrian;ESP;;;;;;;;;;23:22:43;1310;0;1310;
 113;EatLyo.com Xixonets;men;open;Gelabert Ponsdomenech;Aleix;ESP;Pla;Xavier Julia;ESP;;;;;;;;;;21:26:31;1300;0;1300;
 106;Bitxos team;men;open;Zapata Grisales;Jorge;ESP;Perez Lopez;Marcos;ESP;Herrero herrera;Asier;ESP;;;;;;;23:27:27;1300;0;1300;
-411;KOBRAS DUO;women;superveteran;JOHANSON;REET;EST;Vaerton;Saima;EST;;;;;;;;;;23:47:01;1300;0;1300;
+411;KOBRAS DUO;women;superveteran;REET;JOHANSON;EST;Värton;Saima;EST;;;;;;;;;;23:47:01;1300;0;1300;
 159;Vallmoranta;men;open;Ciriza Istúriz;Alex;ESP;Ventura Via;Josep;ESP;;;;;;;;;;23:43:06;1290;0;1290;
 321;THE WILD BOAR;men;veteran;Gili Ribes;Felip;ESP;RODRÍGUEZ RODRÍGUEZ;DANI;ESP;;;;;;;;;;23:30:12;1250;0;1250;
 182;Els Coxinets - EV TEAM;mixed;open;Azorin Subira;Jordi;ESP;Subirà Garcia;Anna;ESP;;;;;;;;;;23:43:53;1230;0;1230;
