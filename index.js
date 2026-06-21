@@ -2,13 +2,7 @@ import express from 'express';
 import path from 'path';
 import url from 'url';
 import * as db from './db.js';
-import pify from 'pify';
 import sql, { join } from "sql-template-tag";
-
-import passport from 'passport';
-import PassportLocal from 'passport-local';
-const LocalStrategy = PassportLocal.Strategy;
-import bcrypt from 'bcryptjs';
 
 import Router from 'express-promise-router';
 import session from 'express-session';
@@ -18,15 +12,9 @@ const pgSession = connectPgSimple(session);
 import { engine as hbs } from 'express-handlebars';
 import * as helpers from './helpers.js';
 import serveStatic from 'serve-static';
-import bodyParser from 'body-parser';
-import cookieParser from 'cookie-parser';
-import multipart from 'connect-multiparty';
-import methodOverride from 'method-override';
-import expressFlash from 'express-flash';
 import serveFavicon from 'serve-favicon';
 import morgan from 'morgan';
 import * as updatesRoute from './route/updates.js';
-import * as eventsRoute from './route/events.js';
 import { remove as unaccent } from 'diacritics';
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
@@ -50,38 +38,6 @@ function increment(obj, alpha, beta) {
 	return ++obj[alpha][beta];
 }
 
-passport.serializeUser(function(user, done) {
-	return done(null, user.id);
-});
-passport.deserializeUser(async function(id, done) {
-	let result = await db.query(sql`select * from "user" where "id"=${id}`);
-	if (result.rowCount === 0) {
-		return done(null, false);
-	}
-
-	let user = result.rows[0];
-	return done(null, user);
-});
-
-
-// thisisdangerous
-passport.use(new LocalStrategy(
-	function(email, password, done) {
-		process.nextTick(function() {
-			db.query(sql`select * from "user" where "email"=${email}`).then(async (result) => {
-				if (result.rowCount === 0) {
-					return done(null, false, {message: 'Unknown user ' + email});
-				}
-				let user = result.rows[0];
-				const passwordCorrect = await bcrypt.compare(password, user.password);
-				if (!passwordCorrect) {
-					return done(null, false, {message: 'Invalid password'});
-				}
-				return done(null, user);
-			});
-		});
-	}
-));
 
 const publicDir = path.join(__dirname, 'public');
 
@@ -110,12 +66,6 @@ app.engine('hbs', hbs({
 }));
 app.set('view engine', 'hbs');
 
-app.use(cookieParser());
-
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
-
-app.use(methodOverride());
 app.use(session({
 	store: new pgSession({pool: db.pool}),
 	secret: 'too much to bear',
@@ -123,9 +73,6 @@ app.use(session({
 	saveUninitialized: true,
 	cookie: {maxAge: 30 * 24 * 60 * 60 * 1000}
 }));
-app.use(expressFlash());
-app.use(passport.initialize());
-app.use(passport.session());
 
 app.use(serveFavicon(__dirname + '/public/favicon.ico'));
 app.use(allowCrossDomain);
@@ -195,7 +142,7 @@ router.get('/', async function(req, res) {
 			order by start asc`);
 	addEventLinks(links, eventsQuery.rows);
 	let events = eventsQuery.rows;
-	res.render('index', {updates: updates.rows, events: events, identity: req.user, last: true});
+	res.render('index', {updates: updates.rows, events: events, last: true});
 });
 
 router.get('/archive', updatesRoute.archive);
@@ -257,15 +204,8 @@ router.get('/events', async function(req, res) {
 		title: `List of current prequalifying events for WRC ${UPCOMING_WRC_YEAR}`,
 		events: {events: events},
 		pastEvents: {events: pastEvents},
-		identity: req.user,
 	});
 });
-
-router.get('/events/add', eventsRoute.add);
-router.post('/events/add', eventsRoute.add);
-
-router.get('/events/:event/upload', eventsRoute.upload);
-router.post('/events/:event/upload', multipart(), eventsRoute.upload);
 
 function pushQualified(qualified, type, criterion, criterion_qualified, eventIds) {
 	for (let member of criterion_qualified.rows) {
@@ -1072,7 +1012,6 @@ router.get('/qualified', async function(req, res) {
 		const data = {
 			title: `List of pre-qualified entrants for WRC ${UPCOMING_WRC_YEAR}`,
 			qualified: qualified,
-			identity: req.user,
 			managerEmail: MANAGER_EMAIL,
 			preliminary: LIST_IS_PRELIMINARY,
 			upcomingYear: UPCOMING_WRC_YEAR,
@@ -1302,7 +1241,6 @@ router.get('/events/:event/results', async function(req, res) {
 		mo: {teams: mo},
 		xo: {teams: xo},
 		wo: {teams: wo},
-		identity: req.user,
 		is: displayedCategories,
 		activeCategory: req.query.hasOwnProperty('category') && req.query.category != '' ? req.query.category : null,
 		categories: allCategories.sort(function(a, b) {
@@ -1325,20 +1263,6 @@ router.get('/events/:event/results', async function(req, res) {
 		activeDuration: activeDuration,
 		durations: durations.length > 1 ? durations : null
 	});
-});
-
-router.get('/login', function(req, res) {
-	res.render('login', {identity: req.user, values: req.body});
-});
-
-router.post('/login', passport.authenticate('local', {successRedirect: '/', failureFlash: true, failWithError: true}), function(err, req, res, next) {
-	console.log(err);
-	return res.render('login', {identity: req.user, values: req.body});
-});
-
-router.get('/logout', async function(req, res) {
-	await pify(req.logout.bind(req))();
-	res.redirect('/');
 });
 
 app.use(router);

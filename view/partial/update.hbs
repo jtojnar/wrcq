@@ -1,14 +1,7 @@
 <dl class="dl-horizontal news">
-{{#if identity}}<dt></dt><dd><form action="" method="post" id="update-form"><textarea name="content" id="content" class="form-control"></textarea><button class="btn btn-primary btn-block" id="update-add" type="submit" title="Update"><span class="glyphicon glyphicon-plus"></span></button></form></dd>{{/if}}
 {{#each updates}}
-<dt>{{#if ../identity}}<button class="btn btn-xs edit-update" data-id="{{{id}}}" type="button" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>{{/if}}{{date timestamp}}</dt><dd>{{{text}}}</dd>
+<dt>{{date timestamp}}</dt><dd>{{{text}}}</dd>
 {{/each}}
 </dl>
 {{#unless first}}<p><a href="/archive">Older updates</a></p>{{/unless}}
 {{#unless last}}<p><a href="/archive">Newer updates</a></p>{{/unless}}
-{{#if identity}}
-{{#extend 'bottom'}}
-<script src="/node_modules/jquery/dist/jquery.min.js"></script>
-<script src="/js/updates.js"></script>
-{{/extend}}
-{{/if}}
