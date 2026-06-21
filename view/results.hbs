@@ -35,6 +35,7 @@
 			{{/each}}
 		</select>
 		{{/if}}
+		{{#if false}}
 		<select name="category" id="category" class="input-small">
 			<option value=""{{#unless activeCategory}} selected="selected"{{/unless}}>all</option>
 			{{#each categories as |category|}}
@@ -43,6 +44,7 @@
 			</option>
 			{{/each}}
 		</select>
+		{{/if}}
 		<noscript><button type="submit" class="btn btn-default btn-small">Filter</button></noscript>
 	</form>
 </div>
