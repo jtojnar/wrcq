@@ -1,0 +1,82 @@
+id,name,gender,age,time,score,penalty,status,member1country,member1firstname,member1lastname,member2country,member2firstname,member2lastname,member3country,member3firstname,member3lastname
+1,coury.cz záskok,women,open,15:45:36,880,0,finished,CZE,Jana,Fejfar,CZE,Mirka,Linda
+2,Cookies & Pancakes,mixed,open,23:28:00,2250,0,finished,CZE,Dan,Dvořáček,CZE,Pavlína,Pecoldová
+3,Krušnohorský Expres,men,veteran,23:31:16,2160,0,finished,CZE,Jirka,Hájek,CZE,Jindra,Kovář
+4,Seskočil z rudé skály a vyrazil si dech,men,veteran,23:12:40,2820,0,finished,CZE,Martin,Šebánek,CZE,Hynek,Urban
+5,Košířské šlapky,mixed,veteran,23:48:52,1850,0,finished,CZE,Libor,Pavlík,CZE,Klára,Pavlíková
+6,FraPa,men,open,11:37:41,1210,0,finished,CZE,František,Bartoš,CZE,Pavel,Krajča
+7,Kandjoktjo,women,superveteran,23:44:24,1940,0,finished,CZE,Věra,Hájková,CZE,Zuzana,Setínková
+8,Don Quijote,men,open,11:31:46,1300,0,finished,CZE,Jan,Czagan,CZE,Tomáš,Číhař
+9,Kolmo na vrstevnice!,men,open,22:34:34,1430,0,finished,CZE,Vladimír,Hamáček,CZE,Milan,Kynzl
+10,WITaj,men,superveteran,21:51:20,1550,0,finished,CZE,Zbyněk,Krejčík,CZE,Marian,Lanc
+11,WITaj Baby,women,veteran,23:20:17,1150,0,finished,CZE,Monika,Krejčíková,CZE,Jana,Kundratová
+12,FBA team,mixed,veteran,16:15:57,1400,0,finished,SVK,Dušan,Furucz,SVK,Jela,Furuczová
+13,Ať žijí mimiňáci,mixed,open,22:52:27,2540,0,finished,CZE,Aleš,Balcar,CZE,Jana,Balcarová
+14,Věříšovi,mixed,open,05:16:18,360,0,finished,CZE,Jan,Věříš,CZE,Lenka,Věříšová
+15,SOOBí KRK,mixed,open,11:44:37,1150,0,finished,CZE,Pavla,Jirásková,CZE,Lubomír,Pavlíček
+16,Kadlecovi,women,open,10:58:37,390,0,finished,CZE,Adéla,Kadlecová,CZE,Gabriela,Kadlecová
+17,OB Říčany,men,veteran,23:39:01,2300,0,finished,CZE,Pavel,Koten,CZE,David,Rožek
+18,Čerpa,men,open,23:39:16,2720,0,finished,CZE,Jan,Čermák,CZE,Václav,Papeš
+19,Není kam spěchat,women,open,23:36:14,1750,0,finished,CZE,Lenka,Stolinová,CZE,Kamila,Trojtlová
+20,Počkaj na mňa,mixed,open,11:12:43,940,0,finished,SVK,Martin,Borský,SVK,Lenka,Mullerová
+21,Gazely ze Žižkova,women,open,20:19:34,950,0,finished,CZE,Jana,Vacíková,CZE,Dana,Votavová
+22,Plavoj,men,open,11:25:38,1440,0,finished,CZE,Jaroslav,Plachý,CZE,Petr,Vojtík
+23,Bludné balvany,mixed,superveteran,23:30:22,1740,0,finished,CZE,Vladimír,Hora,CZE,Magdalena,Horová
+24,Lochnesky,mixed,open,11:51:52,1400,0,finished,CZE,Tomáš,Honzák,CZE,Jana,Honzáková
+25,Lochnesky a Sýček jdou na výletíček,mixed,open,05:55:40,400,0,finished,CZE,Lenka,Honzáková,CZE,Nelka,Honzáková,CZE,Vilém,Plaček
+26,MaPa,women,open,05:43:12,730,0,finished,CZE,Marta,Dlouhá,CZE,Pavla,Svítilová
+27,Losíci,mixed,open,22:34:03,880,0,finished,CZE,Miroslav,Šimek,CZE,Anežka,Šimková
+28,Hoptrop,women,superveteran,21:08:00,1540,0,finished,CZE,Věra,Krajčová,CZE,Anna,Stackeová
+29,ToTo jede,men,veteran,23:22:09,2110,0,finished,CZE,Tomáš,Bartaloš,CZE,Tomáš,Švihla
+30,EM team,mixed,open,23:56:48,1090,0,finished,CZE,Eva,Rydlová,CZE,Martin,Žáček
+31,Kuřata a slimák,mixed,open,05:46:47,580,0,finished,CZE,Martin,Morávek,CZE,Zuzana,Morávková,CZE,Anna,Tomášová
+32,Jahody v betonu,mixed,veteran,22:49:08,1530,0,finished,CZE,Jaroslav,Kupka,CZE,Dita,Štěpánová
+33,TAJFUN Litomyšl / OB Kotlářka,men,veteran,23:41:12,1730,0,finished,CZE,Martin,Jílek,CZE,Daniel,Kratochvíl
+34,Nejkulaťoulinkatější πr^2,women,open,05:53:53,530,0,finished,CZE,Šárka,Míchalová,CZE,Linda,Sedláčková
+35,Loko Boys,men,superveteran,23:21:19,2330,0,finished,CZE,Jan,Marek,CZE,Vláďa,Mezník
+36,Běhej Poděbrady,mixed,open,05:42:39,500,0,finished,CZE,Iva,Nedomová,CZE,Mojmír,Pavlík,CZE,Jiří,Švec
+37,Šternberské hvězdy,women,open,05:57:55,540,0,finished,CZE,Eva,Lubrichová,CZE,Veronika,Lubrichová
+38,OK Tesil,men,open,23:38:11,1630,0,finished,CZE,Ladislav,Mareš,CZE,Jiří,Pešta
+39,Štika a Drak eXtreme Team,men,open,23:45:25,2360,0,finished,CZE,Jan,Fukátko,CZE,Vladimír,Ježek
+40,OB Chrast (#botasseblizi),men,open,19:51:56,2040,0,finished,CZE,Milan,Klvaňa,CZE,Jan,Krejsa
+41,Stříbrná svatba,mixed,open,05:46:21,830,0,finished,CZE,Jan,Šklíba,CZE,Jana,Šklíbová
+42,Historici,mixed,superveteran,23:28:20,2180,0,finished,CZE,Michal,Klapka,CZE,Milada,Klapková
+43,Krokouši,mixed,open,05:41:16,840,0,finished,CZE,Jakub,Illner,CZE,Daniela,Illnerová
+44,Píďalky,men,open,11:36:36,1150,0,finished,CZE,Vladimír,Marek,CZE,Honza,Prášil
+45,GiL Poland,men,superveteran,23:54:14,2410,0,finished,POL,Gabriel,Bujakiewicz,POL,Leszek,Herman-Iżycki
+46,"KUA, to je kopec !",mixed,veteran,22:59:08,1770,0,finished,CZE,Tomáš,Brožek,CZE,Květa,Brožková
+48,Jeleni,men,open,23:08:36,1960,0,finished,CZE,Jaromír,Jelínek
+49,Bludičky s medvědem,mixed,open,16:04:07,880,0,finished,CZE,Hana,Jelínková,CZE,Michaela,Jelínková,CZE,Josef,Meduna
+50,Brambory,mixed,open,23:27:19,1730,0,finished,GBR,Václav,Paris,CZE,Alena,Vencovská
+51,Run The World,mixed,open,11:46:42,1050,0,finished,CZE,Kateřina,Švihlová,CZE,Pavel,Vabroušek
+52,PoloMáci,men,open,05:39:23,490,0,finished,CZE,Jakub,Sýkora,CZE,Jan,Sýkora
+53,Valaši revival,men,open,09:05:54,770,0,finished,CZE,Otto,Riessler,CZE,Martin,Sadílek
+54,Na limit,mixed,open,06:03:14,400,80,finished,CZE,Milan,Nechuta,CZE,Alena,Nechutová
+55,KUAKUO,men,veteran,22:58:55,1770,0,finished,CZE,Pavel,Procházka,CZE,Jiří,Štancl
+56,Mauersegler Berlin,mixed,veteran,19:35:55,1100,0,finished,GER,Katrin,Charlet,GER,Norbert,Charlet
+57,Nutný zlo,women,open,23:50:45,1980,0,finished,CZE,Anežka,Králová,CZE,Vanda,Králová
+58,špunti z Přepalova,men,open,05:35:11,970,0,finished,CZE,Vilém,Bednařík,CZE,Adam,Zřídkaveselý
+59,a spol.,women,open,23:45:59,1720,0,finished,CZE,Monika,Čížková,CZE,Markéta,Procházková
+60,Krizáci,mixed,open,11:30:46,1030,0,finished,CZE,Veronika,Bohuňková,CZE,Jiří,Petřivalský
+61,Don't worry be happy,mixed,open,05:52:59,230,0,finished,CZE,Eva,Kruse,CZE,Roderic,Kruse
+62,Alpsport,mixed,open,23:49:12,2720,0,finished,CZE,Jaroslav,Najman,CZE,Marie,Zelená
+63,Krasotinky,women,superveteran,23:32:49,1320,0,finished,CZE,Alena,Krausová,CZE,Alžběta,Veverková
+64,Quo Vadis,men,open,06:01:14,0,40,out of competition,RUS,Maxim,Sukhov
+65,100klaßa,mixed,open,23:55:52,2240,0,finished,CZE,Tomáš,Brabec,CZE,Monika,Doležalová
+66,chromajzl & vožungr,men,veteran,23:45:28,1650,0,finished,CZE,Michal,Škroch,CZE,Vojtěch,Šrejber
+67,Klusík,women,open,05:44:18,840,0,finished,CZE,Eliška,Hájková,CZE,Karolína,Švecová
+69,Hyeny bez koček,mixed,open,05:57:11,760,0,finished,CZE,Jan,Fátor,CZE,Anežka,Pokorná
+70,Skauti Rychnov,men,open,11:38:33,1370,0,finished,CZE,Aleš,Fleischmann,CZE,Jan,Hulec
+71,Tvoje máma,mixed,open,05:57:35,510,0,finished,CZE,Eliáš,Kosák,CZE,Berenika,Kučerová
+72,Bratři na stopované,men,open,07:14:51,0,0,overtime,CZE,PETR,SOBOTKA,CZE,RADEK,SOBOTKA
+73,Stíhačky dorost 2,women,open,10:42:26,750,0,finished,CZE,Barbora,Seidlová,CZE,Magdalena,Seidlová
+74,HAFYK,men,open,04:32:52,320,0,finished,CZE,Karel,Nitsch,CZE,Lukáš,Nitsch
+75,Se hledá,women,superveteran,17:48:30,920,0,finished,CZE,Tereza,Pavlišová,CZE,Veronika,Tojnarová
+76,Lopourovic,mixed,open,00:00:00,0,0,not finished,CZE,Miroslav,Lopour,CZE,Hana,Lopourová
+77,Rybízák,women,open,11:52:40,840,0,finished,CZE,Jana,Lučanská,CZE,Olga,Procházková
+79,Holky Myslivcovy,women,open,05:52:51,400,0,finished,CZE,Lenka,Myslivcová,CZE,Pavla,Myslivcová
+80,Horníci z Adršpachu,men,open,11:46:12,1430,0,finished,CZE,Milan,Důrek,CZE,Tomáš,Myslivec
+82,Ztracené existence,men,open,05:44:35,840,0,finished,CZE,Josef,Kolman,CZE,Jindřich,Švorc
+83,Roztočtí tygři,mixed,open,05:37:05,560,0,finished,CZE,Jitka,Klinkerová,CZE,Jan,Valenta
+84,Vyslanci Larse Heletága,mixed,open,06:50:53,0,0,finished,CZE,Johana,Jeligová,CZE,Petr,Soukup
+100,Kotyk,men,open,22:08:45,0,0,out of competition,CZE,Jan,Kotyk

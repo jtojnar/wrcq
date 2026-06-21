@@ -1,0 +1,4 @@
+id,gender,age,time,score,penalty,status,member1country,member1firstname,member1lastname,member2country,member2firstname,member2lastname,member3country,member3firstname,member3lastname
+1,men,open,23:59:59,1,0,finished,NZL,Dennis,de Monchy,NZL,Chris,Forne
+2,mixed,open,23:59:59,1,0,finished,LAT,Raimonds,Lapins,LAT,Anita,Liepina,LAT,Guntars,Mankus
+3,women,open,23:59:59,1,0,finished,AUS,Heather,Logie,AUS,Julie,Quinn

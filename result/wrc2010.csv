@@ -1,0 +1,4 @@
+id,gender,age,time,score,penalty,status,member1country,member1firstname,member1lastname,member2country,member2firstname,member2lastname
+1,men,open,23:59:59,1,0,finished,NZL,Marcel,Hagener,NZL,Chris,Forne
+2,mixed,open,23:59:59,1,0,finished,FIN,Seppo,Mäkinen,FIN,Ulla,Silventoinen
+3,women,open,23:59:59,1,0,finished,AUS,Gill,Fowler,AUS,Alexa,McAuley
