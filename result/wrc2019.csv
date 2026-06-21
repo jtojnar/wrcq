@@ -7,7 +7,7 @@ id,status,age,gender,member1country,member1firstname,member1lastname,member2coun
 6,,veteran,men,RUS,SERGEY,KONSTANTINOV,RUS,OLEG,KALININ,,,,388,23:59:00,0
 7,,open,men,ITA,ANDREA,VILLA,ITA,EMILIANO,CORONA,,,,384,23:45:27,0
 8,,open,men,LAT,ALBERTS,JASĀNS,LAT,ZIGMUNDS,BĪBERS,,,,382,23:37:28,0
-9,,veteran,men,EST,AIN,FJODOROV,EST,RAIT,PALLO,,,,375,23:49:17,0
+9,,veteran,men,EST,Ain,Fjodorov,EST,Rait,Pallo,,,,375,23:49:17,0
 10,,open,mixed,UKR,Yevgeniy,Tsyren,UKR,Artem,Gorodynets,UKR,Polina,Zakharova,363,23:41:42,0
 11,,veteran,men,GBR,PETER,JAMES,GBR,TOM,GIBBS,,,,361,23:37:54,0
 12,,open,men,RUS,IGOR,MANZHAY,RUS,SEMYON,YAKIMOV,,,,360,23:37:10,0

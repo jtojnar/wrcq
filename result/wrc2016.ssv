@@ -1,5 +1,5 @@
 name;penalty;score;km;time;gender;age;id;member1firstname;member1lastname;member1country;member2firstname;member2lastname;member2country;member3firstname;member3lastname;member3country;status
-;0;4400;90.3;23:51:43;men;open;209;Greig;HAMILTON;NZL;Chris;FORNE;NZL
+;0;4400;90.3;23:51:43;men;open;209;Greig;Hamilton;NZL;Chris;Forne;NZL
 ;0;3880;80.8;23:32:41;mixed;open;44;Rob;PRESTON;AUS;Kathryn;PRESTON;AUS
 ;0;3650;79.8;23:58:54;men;open;115;Nicholas;MULDER;RSA;Shane;THROWER;NZL
 ;0;3570;80.8;23:43:20;men;veteran;326;Oleg;KALININ;RUS;Andrey;SHVEDOV;RUS
@@ -10,7 +10,7 @@ name;penalty;score;km;time;gender;age;id;member1firstname;member1lastname;member
 ;0;3270;67.4;23:37:34;men;veteran;250;Andre;MORKEL;AUS;Paul;WILLIAMS;AUS
 ;0;3250;70.4;23:45:36;men;open;172;David;WILLIAMS;AUS;Ronnie;TAIB;AUS
 ;0;3240;66.0;23:17:54;mixed;open;187;Grace;CRANE;AUS;Matthew;CRANE;AUS
-;0;3210;74.2;23:16:23;women;open;164;Georgia;WHITLA;NZL;Lara;PRINCE;NZL
+;0;3210;74.2;23:16:23;women;open;164;Georgia;Whitla;NZL;Lara;Prince;NZL
 ;0;3210;68.6;23:45:07;men;veteran;145;Bruce;ARTHUR;AUS;Craig;FEUERHERDT;AUS
 ;0;2970;68.1;23:55:31;men;veteran;296;Ben;CORRY;AUS;Shane;LEWIS;AUS
 ;0;2930;67.1;23:34:09;men;veteran;39;Matt;BIXLEY;NZL;Martin;LUKES;NZL

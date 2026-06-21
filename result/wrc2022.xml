@@ -287,7 +287,7 @@
 	</team>
 	<team age="veteran" duration="24" gender="men" id="78" name="Juusa Seiklushunt." penalty="10" score="3610" time="24:00:10">
 		<member country="EST" firstname="Rain" lastname="Eensaar"/>
-		<member country="EST" firstname="AIN" lastname="Fjodorov"/>
+		<member country="EST" firstname="Ain" lastname="Fjodorov"/>
 	</team>
 	<team age="superveteran" duration="24" gender="mixed" id="79" name="Rick Cavicchioli" penalty="0" score="990" time="16:24:30">
 		<member country="AUS" firstname="Rick" lastname="Cavicchioli"/>
