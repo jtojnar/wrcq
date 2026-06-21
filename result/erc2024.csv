@@ -14,7 +14,7 @@ id,name,gender,age,time,score,penalty,status,member1country,member1firstname,mem
 188,ASA Tel Aviv OC,mixed,open,23:49:47,530,0,finished,ISR,Aleksandr,Ramazanov,ISR,Svetlana,Ezhunova,ISR,Georgii,Ilgach
 56,Onud,men,veteran,23:27:17,529,0,finished,LAT,Einars,Masteiko,LAT,Janis,Viškers,,,
 203,Vigadeparandus,mixed,open,23:49:29,511,0,finished,EST,Laidy,Proosväli,EST,Jano,Järvelaid,,,
-157,Vyshnivka,mixed,open,23:43:17,503,0,finished,UKR,Irina,Trukhnii,UKR,Olexsandr,Trukhnii,UKR,Bohdan,Vorobets
+157,Vyshnivka,mixed,open,23:43:17,503,0,finished,UKR,Irina,Trukhnii,UKR,Oleksandr,Trukhnii,UKR,Bohdan,Vorobets
 28,Õnnevalem,men,veteran,23:29:40,502,0,finished,EST,Kaido,Hallik,EST,Eduard,Taivere,,,
 90,100 km purva,mixed,veteran,23:53:01,488,0,finished,LAT,Ildze,Straume,LAT,Gunars,Ikaunieks,,,
 159,Raket?,mixed,open,22:35:36,483,0,finished,UKR,Andrii,Marchuk,UKR,Oleksandr,Oryshko,UKR,Anna,Shumakova
@@ -44,9 +44,9 @@ id,name,gender,age,time,score,penalty,status,member1country,member1firstname,mem
 161,WRC 2025 SPAIN,men,superveteran,23:38:21,440,0,finished,ESP,Roberto Pascual,Orcajo,ESP,Aurelio Antonio Olivar,Roldán,,,
 111,B3/O3,women,veteran,23:46:17,439,0,finished,LAT,Ieva,Godina,LAT,Aiva,Jakovela,,,
 131,Czech veteran 1,men,veteran,23:50:48,437,0,finished,CZE,Miroslav,Seidl,CZE,Martin,Sadilek,,,
-16,Transcarpathia,mixed,youth,23:43:02,436,0,finished,UKR,Oleksandr,Zheliznyak,UKR,Oleksandra,Zhynkevych,,,
+16,Transcarpathia,mixed,youth,23:43:02,436,0,finished,UKR,Oleksandr,Zhelizniak,UKR,Oleksandra,Zhynkevych,,,
 206,Sirius,women,veteran,23:48:52,429,0,finished,UKR,Daria,Tomash,EST,Imbi,Soome,,,
-163,I can as much as I need,men,youth,23:37:19,427,0,finished,UKR,Pohrebets,Danylo,UKR,Andrii,Andrusiak,,,
+163,I can as much as I need,men,youth,23:37:19,427,0,finished,UKR,Danylo,Pohrebets,UKR,Andrii,Andrusiak,,,
 147,NO STRES,men,veteran,23:51:10,427,0,finished,LAT,Viesturs,Šlosbergs,LAT,Renars,Skudra,,,
 150,Just the 2 of Us,mixed,youth,23:46:09,425,0,finished,UKR,Ivan,Romanenko,UKR,Yelyzaveta,Zaitseva,,,
 191,Roadwolf,men,open,23:49:18,425,0,finished,EST,Kristo,Proosväli,EST,Riivo,Kiljak,,,

@@ -23,7 +23,7 @@
 		<member country="SVK" firstname="Dušan" lastname="Furucz"/>
 		<member country="SVK" firstname="Jela" lastname="Furuczová"/>
 	</team>
-	<team age="superveteran" duration="24" gender="men" id="6" name="Eureka" penalty="0" score="2250" time="23:38:21">
+	<team age="ultraveteran" duration="24" gender="men" id="6" name="Eureka" penalty="0" score="2250" time="23:38:21">
 		<member country="AUS" firstname="Rod" lastname="Gray"/>
 		<member country="AUS" firstname="Geoff" lastname="Lawford"/>
 	</team>
@@ -56,7 +56,7 @@
 		<member country="LAT" firstname="Sniedze" lastname="Brakovska"/>
 		<member country="LAT" firstname="Eduards" lastname="Pakis"/>
 	</team>
-	<team age="superveteran" duration="24" gender="women" id="15" name="Fel-le-gekben" penalty="0" score="890" time="23:47:25">
+	<team age="ultraveteran" duration="24" gender="women" id="15" name="Fel-le-gekben" penalty="0" score="890" time="23:47:25">
 		<member country="HUN" firstname="Orsolya" lastname="Harrach"/>
 		<member country="HUN" firstname="Ágnes" lastname="Morandininé Harrach"/>
 	</team>
@@ -68,9 +68,9 @@
 		<member country="EST" firstname="Tarvo" lastname="Joeste"/>
 		<member country="EST" firstname="Merle" lastname="Lilleoru"/>
 	</team>
-	<team age="superveteran" duration="24" gender="mixed" id="18" name="Ukraine Ultra" penalty="0" score="2070" time="21:42:18">
+	<team age="ultraveteran" duration="24" gender="mixed" id="18" name="Ukraine Ultra" penalty="0" score="2070" time="21:42:18">
 		<member country="UKR" firstname="Tetiana" lastname="Hutsalenko"/>
-		<member country="UKR" firstname="Tumak" lastname="Ivan"/>
+		<member country="UKR" firstname="Ivan" lastname="Tumak"/>
 	</team>
 	<team age="veteran" duration="24" gender="men" id="19" name="Pūpēži" penalty="0" score="1790" time="22:44:28">
 		<member country="LAT" firstname="Raimonds" lastname="Bricis"/>
@@ -93,9 +93,9 @@
 		<member country="LAT" firstname="Normunds" lastname="Baķis"/>
 		<member country="LAT" firstname="Jānis" lastname="Ģirnis"/>
 	</team>
-	<team age="superveteran" duration="24" gender="women" id="25" name="Proceeding On" penalty="0" score="1420" time="23:39:37">
+	<team age="ultraveteran" duration="24" gender="women" id="25" name="Proceeding On" penalty="0" score="1420" time="23:39:37">
 		<member country="USA" firstname="Sharon" lastname="Crawford"/>
-		<member country="AUS" firstname="Robin" lastname="Spriggs"/>
+		<member country="USA" firstname="Robin" lastname="Spriggs"/>
 	</team>
 	<team age="veteran" duration="24" gender="mixed" id="26" name="Hakuna matata" penalty="0" score="1250" time="23:03:27">
 		<member country="LAT" firstname="Gundega" lastname="Bruņeniece"/>
@@ -235,7 +235,7 @@
 		<member country="CZE" firstname="Martin" lastname="Pešek"/>
 		<member country="CZE" firstname="František" lastname="Sova"/>
 	</team>
-	<team age="superveteran" duration="24" gender="mixed" id="65" name="Megvan!" penalty="0" score="1230" time="23:31:44">
+	<team age="ultraveteran" duration="24" gender="mixed" id="65" name="Megvan!" penalty="0" score="1230" time="23:31:44">
 		<member country="AUS" firstname="Sue" lastname="Clarke"/>
 		<member country="AUS" firstname="Walter" lastname="Kelemen"/>
 		<member country="AUS" firstname="Julian" lastname="Ledger"/>
@@ -248,7 +248,7 @@
 		<member country="LAT" firstname="Aija" lastname="Orniņa"/>
 		<member country="LAT" firstname="Marita" lastname="Šalta"/>
 	</team>
-	<team age="superveteran" duration="24" gender="men" id="68" name="Turkuciems" penalty="0" score="2440" time="23:48:14">
+	<team age="ultraveteran" duration="24" gender="men" id="68" name="Turkuciems" penalty="0" score="2440" time="23:48:14">
 		<member country="LAT" firstname="Varis" lastname="Peisenieks"/>
 		<member country="LAT" firstname="Jānis" lastname="Turks"/>
 	</team>
@@ -310,7 +310,7 @@
 		<member country="ITA" firstname="Federico" lastname="Caldini"/>
 		<member country="ITA" firstname="Marco" lastname="Castagneri"/>
 	</team>
-	<team age="superveteran" duration="24" gender="mixed" id="84" name="Zutsakad" penalty="0" score="2390" time="23:50:59">
+	<team age="youth" duration="24" gender="mixed" id="84" name="Zutsakad" penalty="0" score="2390" time="23:50:59">
 		<member country="EST" firstname="Hannes" lastname="Kuslap"/>
 		<member country="EST" firstname="Liis" lastname="Siigur"/>
 		<member country="EST" firstname="Karl-Martin" lastname="Voovere"/>
@@ -355,7 +355,7 @@
 		<member country="CZE" firstname="Pavel" lastname="Koten"/>
 		<member country="CZE" firstname="David" lastname="Rožek"/>
 	</team>
-	<team age="superveteran" duration="24" gender="men" id="97" name="ignis fatuus" penalty="0" score="990" time="23:41:00">
+	<team age="ultraveteran" duration="24" gender="men" id="97" name="ignis fatuus" penalty="0" score="990" time="23:41:00">
 		<member country="CZE" firstname="Zdeněk" lastname="Fiala"/>
 		<member country="CZE" firstname="Roman" lastname="Kotecký"/>
 	</team>
@@ -379,7 +379,7 @@
 		<member country="UKR" firstname="Svitlana" lastname="Martynova"/>
 		<member country="UKR" firstname="Tetiana" lastname="Perevalova"/>
 	</team>
-	<team age="superveteran" duration="24" gender="mixed" id="104" name="Nightcrawlers" penalty="70" score="1360" time="24:06:31">
+	<team age="ultraveteran" duration="24" gender="mixed" id="104" name="Nightcrawlers" penalty="70" score="1360" time="24:06:31">
 		<member country="USA" firstname="Eric" lastname="Smith"/>
 		<member country="USA" firstname="Mary" lastname="Smith"/>
 	</team>
@@ -407,7 +407,7 @@
 		<member country="USA" firstname="Ashley" lastname="Blake"/>
 		<member country="USA" firstname="Nikolay" lastname="Nachev"/>
 	</team>
-	<team age="superveteran" duration="24" gender="men" id="113" name="Bukovyna Juniors" penalty="0" score="2680" time="23:34:17">
+	<team age="youth" duration="24" gender="men" id="113" name="Bukovyna Juniors" penalty="0" score="2680" time="23:34:17">
 		<member country="UKR" firstname="Andrii" lastname="Andrusiak"/>
 		<member country="UKR" firstname="Volodymyr" lastname="Balovsiak"/>
 		<member country="UKR" firstname="Oleksandr" lastname="Hreshnov"/>
@@ -438,7 +438,7 @@
 		<member country="USA" firstname="Ron" lastname="Birks"/>
 		<member country="USA" firstname="Mike" lastname="Wilke"/>
 	</team>
-	<team age="superveteran" duration="24" gender="women" id="121" name="OZO" penalty="0" score="1990" time="23:43:33">
+	<team age="ultraveteran" duration="24" gender="women" id="121" name="OZO" penalty="0" score="1990" time="23:43:33">
 		<member country="LAT" firstname="Alīda" lastname="Ābola"/>
 		<member country="LAT" firstname="Ligita" lastname="Grunde"/>
 	</team>
@@ -458,7 +458,7 @@
 		<member country="EST" firstname="Toomas" lastname="Laur"/>
 		<member country="EST" firstname="Antti" lastname="Roose"/>
 	</team>
-	<team age="superveteran" duration="24" gender="men" id="126" name="Latvju dēli" penalty="0" score="930" time="18:27:36">
+	<team age="youth" duration="24" gender="men" id="126" name="Latvju dēli" penalty="0" score="930" time="18:27:36">
 		<member country="LAT" firstname="Tomass" lastname="Neuss-Lucs"/>
 		<member country="LAT" firstname="Reinis" lastname="Tīss Tomass"/>
 	</team>
@@ -470,7 +470,7 @@
 		<member country="LAT" firstname="Aleksandra" lastname="Fjodorova"/>
 		<member country="LAT" firstname="Ieva" lastname="Grauduma"/>
 	</team>
-	<team age="superveteran" duration="24" gender="women" id="129" name="Dream Team" penalty="0" score="2460" time="23:14:02">
+	<team age="youth" duration="24" gender="women" id="129" name="Dream Team" penalty="0" score="2460" time="23:14:02">
 		<member country="AUS" firstname="Abigail" lastname="George"/>
 		<member country="AUS" firstname="Joanna" lastname="George"/>
 		<member country="AUS" firstname="Meredith" lastname="Norman"/>
@@ -484,7 +484,7 @@
 		<member country="LAT" firstname="Einārs" lastname="Masteiko"/>
 		<member country="LAT" firstname="Jānis" lastname="Viškers"/>
 	</team>
-	<team age="superveteran" duration="24" gender="mixed" id="132" name="Bison and Mole" penalty="0" score="1290" time="23:17:41">
+	<team age="ultraveteran" duration="24" gender="mixed" id="132" name="Bison and Mole" penalty="0" score="1290" time="23:17:41">
 		<member country="LAT" firstname="Gunta" lastname="Lebedoka"/>
 		<member country="LAT" firstname="Māris" lastname="Penkulis"/>
 	</team>
@@ -496,7 +496,7 @@
 		<member country="LAT" firstname="Līga" lastname="Zariņa"/>
 		<member country="LAT" firstname="Juris" lastname="Zariņš"/>
 	</team>
-	<team age="superveteran" duration="24" gender="mixed" id="135" name="Transcarpathian" penalty="0" score="0" time="0:00:00" status="not finished">
+	<team age="youth" duration="24" gender="mixed" id="135" name="Transcarpathian" penalty="0" score="0" time="0:00:00" status="not finished">
 		<member country="UKR" firstname="Oleksandr" lastname="Zhelizniak"/>
 		<member country="UKR" firstname="Oleksandra" lastname="Zhynkevych"/>
 	</team>
@@ -504,7 +504,7 @@
 		<member country="USA" firstname="Dmitry" lastname="Lavrov"/>
 		<member country="USA" firstname="Diana" lastname="Serebryanik"/>
 	</team>
-	<team age="superveteran" duration="24" gender="men" id="137" name="StepByStep" penalty="0" score="1780" time="23:59:59">
+	<team age="ultraveteran" duration="24" gender="men" id="137" name="StepByStep" penalty="0" score="1780" time="23:59:59">
 		<member country="EST" firstname="Peep" lastname="Eomois"/>
 		<member country="EST" firstname="Jyri" lastname="Rokko"/>
 	</team>
@@ -512,7 +512,7 @@
 		<member country="EST" firstname="Jaana" lastname="Olvet"/>
 		<member country="EST" firstname="Liis" lastname="Uusküla"/>
 	</team>
-	<team age="superveteran" duration="24" gender="mixed" id="139" name="Kralicky Snežnik Summit" penalty="0" score="1690" time="22:02:46">
+	<team age="ultraveteran" duration="24" gender="mixed" id="139" name="Kralicky Snežnik Summit" penalty="0" score="1690" time="22:02:46">
 		<member country="EST" firstname="Sulev" lastname="Kuiv"/>
 		<member country="EST" firstname="Ene" lastname="Sulg"/>
 	</team>
@@ -525,7 +525,7 @@
 		<member country="EST" firstname="Andrus" lastname="Rämmann"/>
 		<member country="EST" firstname="Anneli" lastname="Rämmann"/>
 	</team>
-	<team age="superveteran" duration="24" gender="men" id="142" name="Eksperiments" penalty="0" score="1850" time="23:43:38">
+	<team age="ultraveteran" duration="24" gender="men" id="142" name="Eksperiments" penalty="0" score="1850" time="23:43:38">
 		<member country="LAT" firstname="Juris" lastname="Drunka"/>
 		<member country="LAT" firstname="Jānis" lastname="Eglītis"/>
 	</team>
@@ -557,13 +557,13 @@
 		<member country="AUT" firstname="Andreas" lastname="Cziferszky"/>
 		<member country="AUT" firstname="Roland" lastname="Cziferszky"/>
 	</team>
-	<team age="superveteran" duration="24" gender="women" id="150" name="Turbolenochodi" penalty="0" score="1850" time="23:36:26">
+	<team age="youth" duration="24" gender="women" id="150" name="Turbolenochodi" penalty="0" score="1850" time="23:36:26">
 		<member country="CZE" firstname="Radka" lastname="Křížová"/>
 		<member country="CZE" firstname="Lucie" lastname="Kundratová"/>
 	</team>
 	<team age="superveteran" duration="24" gender="men" id="151" name="SILVA CATALUNYA" penalty="0" score="2830" time="23:40:06">
-		<member country="CAT" firstname="Sebastià" lastname="Massagué Mir"/>
-		<member country="CAT" firstname="Pep" lastname="Mayolas Casas"/>
+		<member country="ESP" firstname="Sebastià" lastname="Massagué"/>
+		<member country="ESP" firstname="Pep" lastname="Mayolas Casas"/>
 	</team>
 	<team age="veteran" duration="24" gender="men" id="153" name="Inov-8 klacky" penalty="0" score="3830" time="23:35:27">
 		<member country="CZE" firstname="Radovan" lastname="Čech"/>
@@ -573,11 +573,11 @@
 		<member country="GBR" firstname="Charmian" lastname="Heaton"/>
 		<member country="CZE" firstname="Alena" lastname="Vencovska"/>
 	</team>
-	<team age="superveteran" duration="24" gender="women" id="155" name="Krasotinky" penalty="0" score="1650" time="22:50:57">
+	<team age="youth" duration="24" gender="women" id="155" name="Krasotinky" penalty="0" score="1650" time="22:50:57">
 		<member country="CZE" firstname="Alena" lastname="Krausová"/>
 		<member country="CZE" firstname="Alžběta" lastname="Veverková"/>
 	</team>
-	<team age="superveteran" duration="24" gender="women" id="156" name="Kanďjokťjo" penalty="0" score="2010" time="23:17:59">
+	<team age="ultraveteran" duration="24" gender="women" id="156" name="Kanďjokťjo" penalty="0" score="2010" time="23:17:59">
 		<member country="CZE" firstname="Věra" lastname="Hájková"/>
 		<member country="CZE" firstname="Zuzana" lastname="Setínková"/>
 	</team>
@@ -593,7 +593,7 @@
 		<member country="EST" firstname="Mehis" lastname="Muru"/>
 		<member country="EST" firstname="Martin" lastname="Vilismäe"/>
 	</team>
-	<team age="superveteran" duration="24" gender="mixed" id="161" name="Põrgupõhja/ Rakvere OK" penalty="0" score="2360" time="23:37:16">
+	<team age="youth" duration="24" gender="mixed" id="161" name="Põrgupõhja/ Rakvere OK" penalty="0" score="2360" time="23:37:16">
 		<member country="EST" firstname="Brita" lastname="Ploompuu"/>
 		<member country="EST" firstname="Sander" lastname="Pritsik"/>
 		<member country="EST" firstname="Jaan" lastname="Viirmann"/>
@@ -602,7 +602,7 @@
 		<member country="EST" firstname="Aleksander" lastname="Pritsik"/>
 		<member country="EST" firstname="Jaak" lastname="Rohtsalu"/>
 	</team>
-	<team age="superveteran" duration="24" gender="mixed" id="163" name="SUVOROVETS" penalty="0" score="1720" time="23:28:35">
+	<team age="youth" duration="24" gender="mixed" id="163" name="SUVOROVETS" penalty="0" score="1720" time="23:28:35">
 		<member country="UKR" firstname="Ivan" lastname="Romanenko"/>
 		<member country="UKR" firstname="Yelizaveta" lastname="Zaitseva"/>
 	</team>
@@ -635,57 +635,57 @@
 		<member country="LAT" firstname="Jānis" lastname="Blūzmanis Ilmārs"/>
 	</team>
 	<team age="veteran" duration="24" gender="mixed" id="171" name="ICEBUG CATALUNYA XV 2" penalty="0" score="1770" time="23:48:38">
-		<member country="CAT" firstname="Lourdes" lastname="Gelada Astor"/>
-		<member country="CAT" firstname="Maria" lastname="Santiago Gonzalez Josep"/>
+		<member country="ESP" firstname="Lourdes" lastname="Gelada Astor"/>
+		<member country="ESP" firstname="Maria" lastname="Santiago Gonzalez Josep"/>
 	</team>
 	<team age="veteran" duration="24" gender="mixed" id="172" name="ICEBUG CATALUNYA XV BUSCAFITES" penalty="0" score="1570" time="23:37:22">
-		<member country="CAT" firstname="Toni" lastname="Serrallonga Gash"/>
-		<member country="CAT" firstname="Maida" lastname="Serrallonga"/>
-		<member country="CAT" firstname="Jordi" lastname="Virgili"/>
+		<member country="ESP" firstname="Toni" lastname="Serrallonga Gash"/>
+		<member country="ESP" firstname="Maida" lastname="Serrallonga"/>
+		<member country="ESP" firstname="Jordi" lastname="Virgili"/>
 	</team>
-	<team age="superveteran" duration="24" gender="men" id="173" name="ICEBUG CATALUNYA MUV" penalty="0" score="1460" time="23:52:01">
-		<member country="CAT" firstname="Ricard" lastname="Masferrer Clarà"/>
-		<member country="CAT" firstname="Joan" lastname="Sanchez de las Heras"/>
+	<team age="ultraveteran" duration="24" gender="men" id="173" name="ICEBUG CATALUNYA MUV" penalty="0" score="1460" time="23:52:01">
+		<member country="ESP" firstname="Ricard" lastname="Masferrer Clarà"/>
+		<member country="ESP" firstname="Joan" lastname="Sanchez de las Heras"/>
 	</team>
 	<team age="veteran" duration="24" gender="mixed" id="174" name="ICEBUG CATALUNYA XV 3" penalty="0" score="1580" time="21:25:52">
 		<member country="FIN" firstname="Paivi" lastname="Linna"/>
-		<member country="CAT" firstname="Jordi" lastname="Sucarrats i Lloses"/>
+		<member country="ESP" firstname="Jordi" lastname="Sucarrats i Lloses"/>
 	</team>
 	<team age="veteran" duration="24" gender="men" id="176" name="TanZ Navigation" penalty="0" score="3030" time="23:44:42">
 		<member country="USA" firstname="Mark" lastname="Lattanzi"/>
 		<member country="USA" firstname="Dennis" lastname="Wilkinson"/>
 	</team>
 	<team age="veteran" duration="24" gender="women" id="177" name="ICEBUG CATALUNYA WV" penalty="0" score="870" time="22:59:51">
-		<member country="CAT" firstname="Victòria" lastname="Diaz Manero"/>
-		<member country="CAT" firstname="Isabel" lastname="Escayola Gimeno"/>
+		<member country="ESP" firstname="Victòria" lastname="Diaz Manero"/>
+		<member country="ESP" firstname="Isabel" lastname="Escayola Gimeno"/>
 	</team>
 	<team age="open" duration="24" gender="men" id="178" name="ICEBUG CATALUNYA MO" penalty="0" score="1550" time="21:52:45">
-		<member country="CAT" firstname="Blai" lastname="Hermoso Torne"/>
-		<member country="CAT" firstname="Albert" lastname="Sola Colomera"/>
+		<member country="ESP" firstname="Blai" lastname="Hermoso Torne"/>
+		<member country="ESP" firstname="Albert" lastname="Sola Colomera"/>
 	</team>
 	<team age="veteran" duration="24" gender="women" id="180" name="Desperado" penalty="0" score="1830" time="23:25:04">
 		<member country="UKR" firstname="Yuliia" lastname="Buhaiets"/>
 		<member country="UKR" firstname="Olena" lastname="Kapara"/>
 		<member country="UKR" firstname="Olha" lastname="Sobchuk"/>
 	</team>
-	<team age="superveteran" duration="24" gender="men" id="181" name="True Story" penalty="0" score="2200" time="23:34:29">
+	<team age="ultraveteran" duration="24" gender="men" id="181" name="True Story" penalty="0" score="2200" time="23:34:29">
 		<member country="LAT" firstname="Imants" lastname="Caklis"/>
 		<member country="LAT" firstname="Rolands" lastname="Laveikis"/>
 	</team>
 	<team age="open" duration="24" gender="mixed" id="182" name="ICEBUG CATALUNYA XO" penalty="0" score="2170" time="23:37:43">
-		<member country="CAT" firstname="Laura" lastname="Escola Ferran"/>
-		<member country="CAT" firstname="Magi" lastname="Llaveria Grau"/>
+		<member country="ESP" firstname="Laura" lastname="Escola Ferran"/>
+		<member country="ESP" firstname="Magi" lastname="Llaveria Grau"/>
 	</team>
 	<team age="veteran" duration="24" gender="mixed" id="183" name="ICEBUG CATALUNYA XV" penalty="0" score="1870" time="23:47:21">
-		<member country="CAT" firstname="Raquel" lastname="Font Lladó"/>
-		<member country="CAT" firstname="Guillem" lastname="Garcia de Marina"/>
-		<member country="CAT" firstname="Marta" lastname="Planas Roca"/>
+		<member country="ESP" firstname="Raquel" lastname="Font Lladó"/>
+		<member country="ESP" firstname="Guillem" lastname="Garcia de Marina"/>
+		<member country="ESP" firstname="Marta" lastname="Planas Roca"/>
 	</team>
 	<team age="open" duration="24" gender="men" id="184" name="ICEBUG CATALUNYA MO" penalty="0" score="4420" time="23:54:50">
 		<member country="LAT" firstname="Andris" lastname="Ansabergs"/>
-		<member country="CAT" firstname="Albert" lastname="Herrero Casas"/>
+		<member country="ESP" firstname="Albert" lastname="Herrero Casas"/>
 	</team>
-	<team age="superveteran" duration="24" gender="men" id="185" name="PawJerJer" penalty="0" score="1640" time="23:27:44">
+	<team age="ultraveteran" duration="24" gender="men" id="185" name="PawJerJer" penalty="0" score="1640" time="23:27:44">
 		<member country="POL" firstname="Jerzy" lastname="Ścibisz"/>
 		<member country="POL" firstname="Jerzy" lastname="Sokulski"/>
 		<member country="POL" firstname="Paweł" lastname="Szpak"/>
@@ -714,12 +714,12 @@
 		<member country="CZE" firstname="Martin" lastname="Nedvídek"/>
 		<member country="CZE" firstname="Michal" lastname="Šandera"/>
 	</team>
-	<team age="superveteran" duration="24" gender="mixed" id="193" name="Dreamers" penalty="0" score="1340" time="23:51:58">
+	<team age="ultraveteran" duration="24" gender="mixed" id="193" name="Dreamers" penalty="0" score="1340" time="23:51:58">
 		<member country="UKR" firstname="Valentyna" lastname="Lytvyn"/>
 		<member country="UKR" firstname="Mykola" lastname="Opanasenko"/>
 		<member country="UKR" firstname="Vasyl" lastname="Rublevskyi"/>
 	</team>
-	<team age="superveteran" duration="24" gender="women" id="194" name="Quo vadis" penalty="0" score="1420" time="23:08:07">
+	<team age="youth" duration="24" gender="women" id="194" name="Quo vadis" penalty="0" score="1420" time="23:08:07">
 		<member country="CZE" firstname="Tereza" lastname="Brožková"/>
 		<member country="CZE" firstname="Kateřina" lastname="Koberová"/>
 	</team>
@@ -739,15 +739,15 @@
 		<member country="UKR" firstname="Anton" lastname="Puhovkin"/>
 		<member country="UKR" firstname="Kseniia" lastname="Puhovkina"/>
 	</team>
-	<team age="superveteran" duration="24" gender="women" id="200" name="UKRAINIAN FOXES" penalty="0" score="0" time="24:34:12" status="overtime">
+	<team age="youth" duration="24" gender="women" id="200" name="UKRAINIAN FOXES" penalty="0" score="0" time="24:34:12" status="overtime">
 		<member country="UKR" firstname="Olha" lastname="Ilkova"/>
 		<member country="UKR" firstname="Alina" lastname="Myroniuk"/>
 	</team>
-	<team age="superveteran" duration="24" gender="mixed" id="201" name="Team Meridians" penalty="0" score="910" time="20:55:03">
+	<team age="youth" duration="24" gender="mixed" id="201" name="Team Meridians" penalty="0" score="910" time="20:55:03">
 		<member country="LAT" firstname="Jekabs" lastname="Petersons"/>
 		<member country="LAT" firstname="Lauma" lastname="Simsone"/>
 	</team>
-	<team age="superveteran" duration="24" gender="mixed" id="202" name="Alchevsk Wanderers" penalty="0" score="920" time="23:35:57">
+	<team age="ultraveteran" duration="24" gender="mixed" id="202" name="Alchevsk Wanderers" penalty="0" score="920" time="23:35:57">
 		<member country="UKR" firstname="Tetiana" lastname="Drytova"/>
 		<member country="UKR" firstname="Yuriy" lastname="Shur"/>
 	</team>
@@ -779,12 +779,12 @@
 		<member country="POL" firstname="Tomasz" lastname="Paluchowski"/>
 		<member country="POL" firstname="Piotr" lastname="Perucki"/>
 	</team>
-	<team age="superveteran" duration="24" gender="women" id="211" name="ZENIT KRAMATORSK" penalty="0" score="880" time="15:56:06">
+	<team age="youth" duration="24" gender="women" id="211" name="ZENIT KRAMATORSK" penalty="0" score="880" time="15:56:06">
 		<member country="UKR" firstname="Adelaida" lastname="Kolmohorova"/>
 		<member country="UKR" firstname="Olesia" lastname="Kotenko"/>
 		<member country="UKR" firstname="Violeta" lastname="Ovcharenko"/>
 	</team>
-	<team age="superveteran" duration="24" gender="women" id="212" name="ZENIT" penalty="0" score="1820" time="23:40:10">
+	<team age="youth" duration="24" gender="women" id="212" name="ZENIT" penalty="0" score="1820" time="23:40:10">
 		<member country="UKR" firstname="Kateryna" lastname="Rak"/>
 		<member country="UKR" firstname="Alina" lastname="Yefimenkova"/>
 	</team>
@@ -792,7 +792,7 @@
 		<member country="LAT" firstname="Jānis" lastname="Nāgelis"/>
 		<member country="LAT" firstname="Ēvalds" lastname="Žogla"/>
 	</team>
-	<team age="superveteran" duration="24" gender="men" id="214" name="Black Jack team" penalty="0" score="3180" time="23:41:58">
+	<team age="youth" duration="24" gender="men" id="214" name="Black Jack team" penalty="0" score="3180" time="23:41:58">
 		<member country="UKR" firstname="Yevhenii" lastname="Bryndak"/>
 		<member country="UKR" firstname="Danylo" lastname="Pohrebets"/>
 		<member country="UKR" firstname="Bohdan" lastname="Zacheshyhryva"/>
@@ -806,15 +806,15 @@
 		<member country="LAT" firstname="Aiga" lastname="Tora"/>
 	</team>
 	<team age="veteran" duration="24" gender="mixed" id="217" name="SILVA MALLORCA" penalty="0" score="2470" time="23:55:04">
-		<member country="CAT" firstname="Bernat" lastname="Bestard"/>
-		<member country="CAT" firstname="Jordi" lastname="Domenech"/>
-		<member country="CAT" firstname="Barbara" lastname="Martinez"/>
+		<member country="ESP" firstname="Bernat" lastname="Bestard"/>
+		<member country="ESP" firstname="Jordi" lastname="Domenech"/>
+		<member country="ESP" firstname="Barbara" lastname="Martinez"/>
 	</team>
-	<team age="superveteran" duration="24" gender="women" id="218" name="Velmara" penalty="0" score="800" time="23:24:52">
+	<team age="ultraveteran" duration="24" gender="women" id="218" name="Velmara" penalty="0" score="800" time="23:24:52">
 		<member country="LAT" firstname="Māra" lastname="Bolšteina"/>
 		<member country="LAT" firstname="Velta" lastname="Zjatkova"/>
 	</team>
-	<team age="superveteran" duration="24" gender="men" id="219" name="ASIE PIPARI" penalty="0" score="2040" time="23:20:37">
+	<team age="ultraveteran" duration="24" gender="men" id="219" name="ASIE PIPARI" penalty="0" score="2040" time="23:20:37">
 		<member country="LAT" firstname="Aivars" lastname="Druvenieks"/>
 		<member country="LAT" firstname="Ilmārs" lastname="Kaulakans"/>
 	</team>
@@ -851,7 +851,7 @@
 		<member country="EST" firstname="Reet" lastname="Johanson"/>
 		<member country="EST" firstname="Saima" lastname="Värton"/>
 	</team>
-	<team age="superveteran" duration="24" gender="men" id="231" name="BUKOVYNA" penalty="250" score="910" time="24:24:36">
+	<team age="ultraveteran" duration="24" gender="men" id="231" name="BUKOVYNA" penalty="250" score="910" time="24:24:36">
 		<member country="UKR" firstname="Heorhii" lastname="Bordian"/>
 		<member country="UKR" firstname="Tanasii" lastname="Makoviichuk"/>
 	</team>
@@ -883,11 +883,11 @@
 		<member country="EST" firstname="Tiit" lastname="Tali"/>
 		<member country="EST" firstname="Ilves" lastname="Tõnu"/>
 	</team>
-	<team age="superveteran" duration="24" gender="mixed" id="240" name="Fenri 1" penalty="0" score="1980" time="23:44:27">
+	<team age="youth" duration="24" gender="mixed" id="240" name="Fenri 1" penalty="0" score="1980" time="23:44:27">
 		<member country="CZE" firstname="Nikola" lastname="Skripnik"/>
 		<member country="CZE" firstname="Adriana" lastname="Svobodová"/>
 	</team>
-	<team age="superveteran" duration="24" gender="mixed" id="241" name="Fenri 2" penalty="0" score="2050" time="23:51:46">
+	<team age="youth" duration="24" gender="mixed" id="241" name="Fenri 2" penalty="0" score="2050" time="23:51:46">
 		<member country="CZE" firstname="Agáta" lastname="Geffertová"/>
 		<member country="CZE" firstname="Matouš" lastname="Skripnik"/>
 		<member country="CZE" firstname="Matyáš" lastname="Vrba"/>
@@ -904,9 +904,9 @@
 		<member country="CZE" firstname="Jan" lastname="Kočíb"/>
 		<member country="CZE" firstname="Jiří" lastname="Kočíb"/>
 	</team>
-	<team age="superveteran" duration="24" gender="men" id="249" name="ICEBUG CATALUNYA MY" penalty="0" score="2230" time="23:58:32">
-		<member country="CAT" firstname="Pol" lastname="Canosa Vidal"/>
-		<member country="CAT" firstname="Roger" lastname="Virgili Serrallonga"/>
+	<team age="youth" duration="24" gender="men" id="249" name="ICEBUG CATALUNYA MY" penalty="0" score="2230" time="23:58:32">
+		<member country="ESP" firstname="Pol" lastname="Canosa Vidal"/>
+		<member country="ESP" firstname="Roger" lastname="Virgili Serrallonga"/>
 	</team>
 	<team age="veteran" duration="24" gender="men" id="250" name="Värska Originaal" penalty="0" score="1350" time="18:04:19">
 		<member country="EST" firstname="Lauri" lastname="Kikerpill"/>
@@ -933,7 +933,7 @@
 		<member country="POL" firstname="Hubert" lastname="Puka"/>
 		<member country="POL" firstname="Ewa" lastname="Skubida"/>
 	</team>
-	<team age="superveteran" duration="24" gender="men" id="258" name="PRIVĀTBŪVE21" penalty="0" score="1820" time="22:43:57">
+	<team age="ultraveteran" duration="24" gender="men" id="258" name="PRIVĀTBŪVE21" penalty="0" score="1820" time="22:43:57">
 		<member country="LAT" firstname="Jānis" lastname="Biezais"/>
 		<member country="LAT" firstname="Vairis" lastname="Krauklis"/>
 	</team>
@@ -969,7 +969,7 @@
 		<member country="LAT" firstname="Zane" lastname="Gruberte"/>
 		<member country="LAT" firstname="Jānis" lastname="Pētersons"/>
 	</team>
-	<team age="superveteran" duration="24" gender="mixed" id="271" name="Couple of Antipodes" penalty="0" score="1530" time="23:55:32">
+	<team age="youth" duration="24" gender="mixed" id="271" name="Couple of Antipodes" penalty="0" score="1530" time="23:55:32">
 		<member country="AUS" firstname="Max" lastname="Grivell"/>
 		<member country="CZE" firstname="Veronika" lastname="Tojnarová"/>
 	</team>
@@ -1059,8 +1059,8 @@
 		<member country="LTU" firstname="Regimantas" lastname="Januskevicius"/>
 	</team>
 	<team age="veteran" duration="24" gender="mixed" id="298" name="Last call to the party" penalty="0" score="2570" time="23:56:28">
-		<member country="LAT" firstname="Liepina" lastname="Anita"/>
-		<member country="LAT" firstname="Kaminskis" lastname="Valteri"/>
+		<member country="LAT" firstname="Anita" lastname="Liepina"/>
+		<member country="LAT" firstname="Valters" lastname="Kaminskis"/>
 	</team>
 	<team age="open" duration="6" gender="mixed" id="601" name="P.R.D. (Poděbradské Reprezentační Družstvo)" penalty="0" score="760" time="5:46:40">
 		<member country="CZE" firstname="Iva" lastname="Nedomová"/>
