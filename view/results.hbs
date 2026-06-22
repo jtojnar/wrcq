@@ -28,18 +28,18 @@
 	<form class="form-inline sort-form" action="">
 		{{#if durations}}
 		<select name="duration" id="duration" class="input-small">
-			{{#each durations}}
-			<option value="{{this}}"{{#equals ../activeDuration this}} selected="selected"{{/equals}}>
-				{{this}} hours
+			{{#each durations as |duration|}}
+			<option value="{{duration}}"{{#equals ../activeDuration duration}} selected="selected"{{/equals}}>
+				{{duration}} hours
 			</option>
 			{{/each}}
 		</select>
 		{{/if}}
 		<select name="category" id="category" class="input-small">
 			<option value=""{{#unless activeCategory}} selected="selected"{{/unless}}>all</option>
-			{{#each categories}}
-			<option value="{{this}}"{{#equals ../activeCategory this}} selected="selected"{{/equals}}>
-				{{this}}
+			{{#each categories as |category|}}
+			<option value="{{category}}"{{#equals ../activeCategory category}} selected="selected"{{/equals}}>
+				{{category}}
 			</option>
 			{{/each}}
 		</select>
